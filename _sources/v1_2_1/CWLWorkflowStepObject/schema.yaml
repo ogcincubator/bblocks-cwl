@@ -1,3 +1,86 @@
 allOf:
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowStepDefinition
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowStepScatter
+- properties:
+    in:
+      $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowStepIn
+    out:
+      $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowStepOut
+    run:
+      description: Nested CWL definition to run as Workflow step.
+      oneOf:
+        - description: File or URL reference to a CWL tool definition.
+          type: string
+        - $ref: bblocks://ogc.cwl.v1_2_1.CWLAtomicNested
+          description: Nested CWL tool definition for the step.
+        - $comment: Same as 'CWLWorkflow', but 'cwlVersion' not repeated (only at root).
+          allOf:
+            - $ref: bblocks://ogc.cwl.v1_2_1.CWLMetadata
+            - $ref: bblocks://ogc.cwl.v1_2_1.CWLDocumentation
+            - $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowClass
+            - $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowBase
+          description: Nested CWL Workflow definition for the step.
+    when:
+      $ref: bblocks://ogc.cwl.v1_2_1.CWLExpression
+      description: Condition to execute a step that must evaluate to a boolean-like value.
+  required:
+    - in
+    - run
+    - out
+  type: object
+
+- properties:
+    scatter:
+      description: 'The scatter field specifies one or more input parameters which will
+        be scattered.
+
+
+        An input parameter may be listed more than once. The declared type of each
+
+        input parameter implicitly becomes an array of items of the input parameter type.
+
+        If a parameter is listed more than once, it becomes a nested array. As a result,
+
+        upstream parameters which are connected to scattered parameters must be arrays.
+
+
+        All output parameter types are also implicitly wrapped in arrays. Each job
+
+        in the scatter results in an entry in the output array.
+
+
+        If any scattered parameter runtime value is an empty array, all outputs are
+
+        set to empty arrays and no work is done for the step, according to applicable scattering
+        rules.
+
+        '
+      oneOf:
+        - $ref: bblocks://ogc.cwl.v1_2_1.CWLTextPatternID
+        - $ref: bblocks://ogc.cwl.v1_2_1.IdentifierArray
+      title: Scatter
+
+    scatterMethod:
+      additionalProperties: false
+      default: dotproduct
+      description: "If 'scatter' declares more than one input parameter, 'scatterMethod'\n\
+        describes how to decompose the input into a discrete set of jobs.\n\n- dotproduct:\
+        \ specifies that each of the input arrays are aligned and\n  one element taken from\
+        \ each array to construct each job. It is an\n  error if all input arrays are not\
+        \ the same length.\n\n- nested_crossproduct: specifies the Cartesian product of\
+        \ the inputs, producing \n  a job for every combination of the scattered inputs.\
+        \ The output must be nested \n  arrays for each level of scattering, in the order\
+        \ that the input arrays\n  are listed in the 'scatter' field.\n\n- flat_crossproduct:\
+        \ specifies the Cartesian product of the inputs, producing a \n  job for every combination\
+        \ of the scattered inputs. The output arrays must be \n  flattened to a single level,\
+        \ but otherwise listed in the order that the input \n  arrays are listed in the\
+        \ 'scatter' field.\n"
+      enum:
+        - dotproduct
+        - nested_crossproduct
+        - flat_crossproduct
+      required:
+        - timelimit
+        - class
+      title: scatterMethod
+      type: string
+
+  type: object

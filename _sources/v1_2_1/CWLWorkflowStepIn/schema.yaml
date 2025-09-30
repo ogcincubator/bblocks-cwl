@@ -8,7 +8,9 @@ $defs:
         - items:
             type: string
           type: array
-        - $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowStepInput
+        - allOf:
+            - $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowStepInputBase
+            - $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowStepInputDefault
     type: object
   CWLWorkflowStepInList:
     items:

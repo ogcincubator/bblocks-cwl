@@ -8,5 +8,11 @@ description: 'Command called in the docker image or on shell according to requir
 oneOf:
 - title: String command.
   type: string
-- $ref: bblocks://ogc.cwl.v1_2_1.CommandParts
+- additionalProperties: false
+  items:
+    title: cmd
+    type: string
+  title: Command Parts
+  type: array
+
 title: CWLCommand

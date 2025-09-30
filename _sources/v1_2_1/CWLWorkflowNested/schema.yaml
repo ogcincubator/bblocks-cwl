@@ -1,6 +1,0 @@
-$comment: Same as 'CWLWorkflow', but 'cwlVersion' not repeated (only at root).
-allOf:
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLMetadata
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLDocumentation
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowClass
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowBase

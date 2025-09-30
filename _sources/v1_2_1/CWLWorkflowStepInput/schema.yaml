@@ -1,3 +1,0 @@
-allOf:
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowStepInputBase
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowStepInputDefault

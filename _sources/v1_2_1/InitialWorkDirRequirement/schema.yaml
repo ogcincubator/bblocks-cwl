@@ -6,14 +6,48 @@ $defs:
           oneOf:
             - type: 'null'
             - $ref: bblocks://ogc.cwl.v1_2_1.CWLExpression
-            - $ref: bblocks://ogc.cwl.v1_2_1.DirectoryListingDirent
-            - $ref: bblocks://ogc.cwl.v1_2_1.DirectoryListingFileOrDirectory
+            - $ref: '#/$defs/DirectoryListingDirent'
+            - $ref: '#/$defs/DirectoryListingFileOrDirectory'
             - items:
-                $ref: bblocks://ogc.cwl.v1_2_1.DirectoryListingFileOrDirectory
+                $ref: '#/$defs/DirectoryListingFileOrDirectory'
               type: array
         title: InitialWorkDirListingItems
         type: array
     title: InitialWorkDirListing
+  DirectoryListingDirent:
+    $comment: Called 'Dirent' in documentation.
+    additionalProperties: false
+    properties:
+      entry:
+        $ref: bblocks://ogc.cwl.v1_2_1.CWLExpression
+      entryname:
+        $ref: bblocks://ogc.cwl.v1_2_1.CWLExpression
+      writable:
+        type: boolean
+    required:
+      - entry
+    title: DirectoryListingDirent
+    type: object
+  DirectoryListingFileOrDirectory:
+    additionalProperties: false
+    properties:
+      checksum:
+        $ref: bblocks://ogc.cwl.v1_2_1.Checksum
+      class:
+        enum:
+          - File
+          - Directory
+        type: string
+      location:
+        type: string
+      size:
+        minimum: 0
+        type: integer
+    required:
+      - class
+      - location
+    type: object
+
 
 additionalProperties: false
 properties:

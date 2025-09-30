@@ -1,8 +1,0 @@
-description: Nested CWL definition to run as Workflow step.
-oneOf:
-- description: File or URL reference to a CWL tool definition.
-  type: string
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLAtomicNested
-  description: Nested CWL tool definition for the step.
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowNested
-  description: Nested CWL Workflow definition for the step.
