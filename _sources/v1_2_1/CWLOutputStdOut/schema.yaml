@@ -1,3 +1,9 @@
 oneOf:
 - $ref: bblocks://ogc.cwl.v1_2_1.CWLOutputStdOutDefinition
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLOutputStdOutObjectType
+- properties:
+    type:
+      $ref: bblocks://ogc.cwl.v1_2_1.CWLOutputStdOutDefinition
+  required:
+    - type
+  type: object
+
