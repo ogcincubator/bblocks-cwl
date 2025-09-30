@@ -16,12 +16,12 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLOutputObject",
-    "ogc.cwl.v1_2_1.CWLOutputStdErr",
     "ogc.cwl.v1_2_1.CWLOutputStdOut",
+    "ogc.cwl.v1_2_1.CWLOutputStdErr",
+    "ogc.cwl.v1_2_1.CWLType",
     "ogc.cwl.v1_2_1.CWLImport",
-    "ogc.cwl.v1_2_1.CWLOutputItem",
-    "ogc.cwl.v1_2_1.CWLType"
+    "ogc.cwl.v1_2_1.CWLOutputObject",
+    "ogc.cwl.v1_2_1.CWLOutputItem"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputsDefinition/schema.yaml",

@@ -16,14 +16,14 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.ResourceOutDirMinimum",
-    "ogc.cwl.v1_2_1.ResourceCoresMinimum",
-    "ogc.cwl.v1_2_1.ResourceCoresMaximum",
-    "ogc.cwl.v1_2_1.ResourceOutDirMaximum",
-    "ogc.cwl.v1_2_1.ResourceTmpDirMinimum",
-    "ogc.cwl.v1_2_1.ResourceRAMMaximum",
     "ogc.cwl.v1_2_1.ResourceRAMMinimum",
-    "ogc.cwl.v1_2_1.ResourceTmpDirMaximum"
+    "ogc.cwl.v1_2_1.ResourceTmpDirMinimum",
+    "ogc.cwl.v1_2_1.ResourceTmpDirMaximum",
+    "ogc.cwl.v1_2_1.ResourceCoresMaximum",
+    "ogc.cwl.v1_2_1.ResourceCoresMinimum",
+    "ogc.cwl.v1_2_1.ResourceOutDirMaximum",
+    "ogc.cwl.v1_2_1.ResourceOutDirMinimum",
+    "ogc.cwl.v1_2_1.ResourceRAMMaximum"
   ],
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ResourceRequirement/context.jsonld",
   "schema": {

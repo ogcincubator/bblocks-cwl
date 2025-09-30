@@ -17,19 +17,19 @@
   "shaclShapes": {},
   "dependsOn": [
     "ogc.cwl.v1_2_1.CWLExpression",
-    "ogc.cwl.v1_2_1.DirectoryListingDirent",
-    "ogc.cwl.v1_2_1.DirectoryListingFileOrDirectory"
+    "ogc.cwl.v1_2_1.Checksum"
   ],
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InitialWorkDirRequirement/context.jsonld",
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InitialWorkDirRequirement/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InitialWorkDirRequirement/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/InitialWorkDirRequirement/schema.yaml",
-  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InitialWorkDirRequirement/context.jsonld",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/InitialWorkDirRequirement/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/InitialWorkDirRequirement/",
   "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "$defs:\n  InitialWorkDirListing:\n    oneOf:\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    - items:\n        oneOf:\n        - type: 'null'\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DirectoryListingDirent/schema.yaml\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DirectoryListingFileOrDirectory/schema.yaml\n        - items:\n            $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DirectoryListingFileOrDirectory/schema.yaml\n          type: array\n      title: InitialWorkDirListingItems\n      type: array\n    title: InitialWorkDirListing\nadditionalProperties: false\nproperties:\n  class:\n    enum:\n    - InitialWorkDirRequirement\n    type: string\n  listing:\n    $ref: '#/$defs/InitialWorkDirListing'\nrequired:\n- listing\ntitle: InitialWorkDirRequirement\ntype: object\n",
+  "annotatedSchema": "$defs:\n  InitialWorkDirListing:\n    oneOf:\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    - items:\n        oneOf:\n        - type: 'null'\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n        - $ref: '#/$defs/DirectoryListingDirent'\n        - $ref: '#/$defs/DirectoryListingFileOrDirectory'\n        - items:\n            $ref: '#/$defs/DirectoryListingFileOrDirectory'\n          type: array\n      title: InitialWorkDirListingItems\n      type: array\n    title: InitialWorkDirListing\n  DirectoryListingDirent:\n    $comment: Called 'Dirent' in documentation.\n    additionalProperties: false\n    properties:\n      entry:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n      entryname:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n      writable:\n        type: boolean\n        x-jsonld-id: https://w3id.org/cwl/cwl#Dirent/writable\n    required:\n    - entry\n    title: DirectoryListingDirent\n    type: object\n  DirectoryListingFileOrDirectory:\n    additionalProperties: false\n    properties:\n      checksum:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/Checksum/schema.yaml\n        x-jsonld-id: https://w3id.org/cwl/cwl#File/checksum\n      class:\n        enum:\n        - File\n        - Directory\n        type: string\n      location:\n        type: string\n      size:\n        minimum: 0\n        type: integer\n        x-jsonld-id: https://w3id.org/cwl/cwl#File/size\n    required:\n    - class\n    - location\n    type: object\nadditionalProperties: false\nproperties:\n  class:\n    enum:\n    - InitialWorkDirRequirement\n    type: string\n  listing:\n    $ref: '#/$defs/InitialWorkDirListing'\nrequired:\n- listing\ntitle: InitialWorkDirRequirement\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/InitialWorkDirRequirement"
 }

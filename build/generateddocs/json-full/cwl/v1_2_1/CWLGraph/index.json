@@ -16,10 +16,10 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLDocumentation",
+    "ogc.cwl.v1_2_1.CWLVersion",
     "ogc.cwl.v1_2_1.CWLMetadata",
-    "ogc.cwl.v1_2_1.CWLGraphItem",
-    "ogc.cwl.v1_2_1.CWLVersion"
+    "ogc.cwl.v1_2_1.CWLDocumentation",
+    "ogc.cwl.v1_2_1.CWLGraphItem"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLGraph/schema.yaml",

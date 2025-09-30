@@ -16,10 +16,10 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLTypeRecordSchema",
     "ogc.cwl.v1_2_1.CWLTypeEnum",
     "ogc.cwl.v1_2_1.CWLTypeRecordRef",
     "ogc.cwl.v1_2_1.CWLType",
+    "ogc.cwl.v1_2_1.CWLTypeRecordSchema",
     "ogc.cwl.v1_2_1.CWLTypeDefinition"
   ],
   "schema": {

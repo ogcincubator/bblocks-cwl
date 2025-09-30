@@ -1,7 +1,13 @@
+$defs:
+  AnyLiteralList:
+    items:
+      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/AnyLiteralType/schema.yaml
+    title: AnyLiteralList
+    type: array
 description: Default value of input if not provided for task execution.
 oneOf:
 - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/AnyLiteralType/schema.yaml
-- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/AnyLiteralList/schema.yaml
+- $ref: '#/$defs/AnyLiteralList'
 - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultLocation/schema.yaml
 - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultObject/schema.yaml
 - items:

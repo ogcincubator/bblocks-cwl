@@ -27,14 +27,22 @@ $comment: 'Validate that the ''default'' value, if specified, is of same type as
   Nested type and multi-type definitions will validate against ''Any''.
 
   '
+$defs:
+  AnyType:
+    type:
+    - boolean
+    - number
+    - string
+    - array
+    - object
 allOf:
 - $comment: Object structure with minimally 'type' and 'default'. Otherwise, no point
     to continue testing.
   properties:
     default:
-      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/AnyType/schema.yaml
+      $ref: '#/$defs/AnyType'
     type:
-      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/AnyType/schema.yaml
+      $ref: '#/$defs/AnyType'
   required:
   - type
   type: object
@@ -240,7 +248,7 @@ allOf:
     properties:
       default:
         $comment: Match anything.
-        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/AnyType/schema.yaml
+        $ref: '#/$defs/AnyType'
 - $comment: Required array of anything.
   if:
     properties:
@@ -251,7 +259,7 @@ allOf:
       default:
         $comment: Match anything as long as under array.
         items:
-          $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/AnyType/schema.yaml
+          $ref: '#/$defs/AnyType'
         type: array
 
 ```

@@ -1,9 +1,0 @@
-{
-  "type": [
-    "boolean",
-    "number",
-    "string",
-    "array",
-    "object"
-  ]
-}

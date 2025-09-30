@@ -16,8 +16,8 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLOutputStdOutDefinition",
-    "ogc.cwl.v1_2_1.CWLOutputStdOutObjectType"
+    "ogc.cwl.v1_2_1.CWLOutputStdOutObjectType",
+    "ogc.cwl.v1_2_1.CWLOutputStdOutDefinition"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputStdOut/schema.yaml",

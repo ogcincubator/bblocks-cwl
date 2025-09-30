@@ -18,8 +18,8 @@
   "dependsOn": [
     "ogc.cwl.v1_2_1.CWLTypeEnum",
     "ogc.cwl.v1_2_1.CWLImport",
-    "ogc.cwl.v1_2_1.CWLTypeRecordSchema",
-    "ogc.cwl.v1_2_1.CWLTypeRecordArray"
+    "ogc.cwl.v1_2_1.CWLTypeRecordArray",
+    "ogc.cwl.v1_2_1.CWLTypeRecordSchema"
   ],
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/SchemaDefRequirement/context.jsonld",
   "schema": {

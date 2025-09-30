@@ -6,7 +6,13 @@
       "type": "string"
     },
     {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CommandParts/schema.json"
+      "additionalProperties": false,
+      "items": {
+        "title": "cmd",
+        "type": "string"
+      },
+      "title": "Command Parts",
+      "type": "array"
     }
   ],
   "title": "CWLCommand"

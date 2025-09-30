@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.cwl.v1_2_1.ScatterFeatureRequirement - ScatterFeatureRequirement",
   "bblockName": "ScatterFeatureRequirement",
   "bblockId": "ogc.cwl.v1_2_1.ScatterFeatureRequirement",
-  "generated": "2025-09-30T12:25:35.123424+00:00",
+  "generated": "2025-09-30T12:41:30.460634+00:00",
   "result": true,
   "items": [],
   "globalErrors": {},

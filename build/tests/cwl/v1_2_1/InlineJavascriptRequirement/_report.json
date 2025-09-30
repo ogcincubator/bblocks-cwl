@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.cwl.v1_2_1.InlineJavascriptRequirement - InlineJavascriptRequirement",
   "bblockName": "InlineJavascriptRequirement",
   "bblockId": "ogc.cwl.v1_2_1.InlineJavascriptRequirement",
-  "generated": "2025-09-30T12:25:35.642625+00:00",
+  "generated": "2025-09-30T12:41:30.915885+00:00",
   "result": true,
   "items": [],
   "globalErrors": {},

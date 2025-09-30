@@ -16,19 +16,28 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLWorkflowStepScatter",
-    "ogc.cwl.v1_2_1.CWLWorkflowStepDefinition"
+    "ogc.cwl.v1_2_1.CWLExpression",
+    "ogc.cwl.v1_2_1.CWLAtomicNested",
+    "ogc.cwl.v1_2_1.IdentifierArray",
+    "ogc.cwl.v1_2_1.CWLWorkflowBase",
+    "ogc.cwl.v1_2_1.CWLTextPatternID",
+    "ogc.cwl.v1_2_1.CWLWorkflowStepOut",
+    "ogc.cwl.v1_2_1.CWLDocumentation",
+    "ogc.cwl.v1_2_1.CWLWorkflowClass",
+    "ogc.cwl.v1_2_1.CWLWorkflowStepIn",
+    "ogc.cwl.v1_2_1.CWLMetadata"
   ],
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepObject/context.jsonld",
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepObject/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepObject/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepObject/schema.yaml",
-  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepObject/context.jsonld",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepObject/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepObject/",
   "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "allOf:\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepDefinition/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepScatter/schema.yaml\n",
+  "annotatedSchema": "allOf:\n- properties:\n    in:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepIn/schema.yaml\n    out:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepOut/schema.yaml\n    run:\n      description: Nested CWL definition to run as Workflow step.\n      oneOf:\n      - description: File or URL reference to a CWL tool definition.\n        type: string\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLAtomicNested/schema.yaml\n        description: Nested CWL tool definition for the step.\n      - $comment: Same as 'CWLWorkflow', but 'cwlVersion' not repeated (only at root).\n        allOf:\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLMetadata/schema.yaml\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/schema.yaml\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowClass/schema.yaml\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowBase/schema.yaml\n        description: Nested CWL Workflow definition for the step.\n    when:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n      description: Condition to execute a step that must evaluate to a boolean-like\n        value.\n      x-jsonld-id: https://w3id.org/cwl/cwl#when\n  required:\n  - in\n  - run\n  - out\n  type: object\n- properties:\n    scatter:\n      description: 'The scatter field specifies one or more input parameters which\n        will be scattered.\n\n\n        An input parameter may be listed more than once. The declared type of each\n\n        input parameter implicitly becomes an array of items of the input parameter\n        type.\n\n        If a parameter is listed more than once, it becomes a nested array. As a result,\n\n        upstream parameters which are connected to scattered parameters must be arrays.\n\n\n        All output parameter types are also implicitly wrapped in arrays. Each job\n\n        in the scatter results in an entry in the output array.\n\n\n        If any scattered parameter runtime value is an empty array, all outputs are\n\n        set to empty arrays and no work is done for the step, according to applicable\n        scattering rules.\n\n        '\n      oneOf:\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTextPatternID/schema.yaml\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/IdentifierArray/schema.yaml\n      title: Scatter\n    scatterMethod:\n      additionalProperties: false\n      default: dotproduct\n      description: \"If 'scatter' declares more than one input parameter, 'scatterMethod'\\ndescribes\n        how to decompose the input into a discrete set of jobs.\\n\\n- dotproduct: specifies\n        that each of the input arrays are aligned and\\n  one element taken from each\n        array to construct each job. It is an\\n  error if all input arrays are not\n        the same length.\\n\\n- nested_crossproduct: specifies the Cartesian product\n        of the inputs, producing \\n  a job for every combination of the scattered\n        inputs. The output must be nested \\n  arrays for each level of scattering,\n        in the order that the input arrays\\n  are listed in the 'scatter' field.\\n\\n-\n        flat_crossproduct: specifies the Cartesian product of the inputs, producing\n        a \\n  job for every combination of the scattered inputs. The output arrays\n        must be \\n  flattened to a single level, but otherwise listed in the order\n        that the input \\n  arrays are listed in the 'scatter' field.\\n\"\n      enum:\n      - dotproduct\n      - nested_crossproduct\n      - flat_crossproduct\n      required:\n      - timelimit\n      - class\n      title: scatterMethod\n      type: string\n  type: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLWorkflowStepObject"
 }

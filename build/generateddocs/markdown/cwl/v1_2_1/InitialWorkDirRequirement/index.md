@@ -18,14 +18,50 @@ $defs:
         oneOf:
         - type: 'null'
         - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml
-        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DirectoryListingDirent/schema.yaml
-        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DirectoryListingFileOrDirectory/schema.yaml
+        - $ref: '#/$defs/DirectoryListingDirent'
+        - $ref: '#/$defs/DirectoryListingFileOrDirectory'
         - items:
-            $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DirectoryListingFileOrDirectory/schema.yaml
+            $ref: '#/$defs/DirectoryListingFileOrDirectory'
           type: array
       title: InitialWorkDirListingItems
       type: array
     title: InitialWorkDirListing
+  DirectoryListingDirent:
+    $comment: Called 'Dirent' in documentation.
+    additionalProperties: false
+    properties:
+      entry:
+        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml
+      entryname:
+        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml
+      writable:
+        type: boolean
+        x-jsonld-id: https://w3id.org/cwl/cwl#Dirent/writable
+    required:
+    - entry
+    title: DirectoryListingDirent
+    type: object
+  DirectoryListingFileOrDirectory:
+    additionalProperties: false
+    properties:
+      checksum:
+        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/Checksum/schema.yaml
+        x-jsonld-id: https://w3id.org/cwl/cwl#File/checksum
+      class:
+        enum:
+        - File
+        - Directory
+        type: string
+      location:
+        type: string
+      size:
+        minimum: 0
+        type: integer
+        x-jsonld-id: https://w3id.org/cwl/cwl#File/size
+    required:
+    - class
+    - location
+    type: object
 additionalProperties: false
 properties:
   class:
@@ -38,6 +74,8 @@ required:
 - listing
 title: InitialWorkDirRequirement
 type: object
+x-jsonld-prefixes:
+  cwl: https://w3id.org/cwl/cwl#
 
 ```
 

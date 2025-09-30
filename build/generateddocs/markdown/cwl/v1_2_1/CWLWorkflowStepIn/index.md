@@ -20,7 +20,9 @@ $defs:
       - items:
           type: string
         type: array
-      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepInput/schema.yaml
+      - allOf:
+        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepInputBase/schema.yaml
+        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepInputDefault/schema.yaml
     type: object
   CWLWorkflowStepInList:
     items:

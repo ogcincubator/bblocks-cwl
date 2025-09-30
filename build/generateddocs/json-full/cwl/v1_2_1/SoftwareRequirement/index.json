@@ -16,8 +16,8 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.SoftwarePackage",
-    "ogc.cwl.v1_2_1.SoftwarePackageSpecs"
+    "ogc.cwl.v1_2_1.SoftwarePackageSpecs",
+    "ogc.cwl.v1_2_1.SoftwarePackage"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/SoftwareRequirement/schema.yaml",

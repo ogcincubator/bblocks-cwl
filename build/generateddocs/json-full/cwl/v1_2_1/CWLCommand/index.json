@@ -15,9 +15,6 @@
     "cwl"
   ],
   "shaclShapes": {},
-  "dependsOn": [
-    "ogc.cwl.v1_2_1.CommandParts"
-  ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLCommand/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLCommand/schema.json"
@@ -26,7 +23,7 @@
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLCommand/",
   "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "description: 'Command called in the docker image or on shell according to requirements\n\n  and hints specifications. Can be omitted if already defined in the docker\n\n  image.\n\n  '\noneOf:\n- title: String command.\n  type: string\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CommandParts/schema.yaml\ntitle: CWLCommand\n",
+  "annotatedSchema": "description: 'Command called in the docker image or on shell according to requirements\n\n  and hints specifications. Can be omitted if already defined in the docker\n\n  image.\n\n  '\noneOf:\n- title: String command.\n  type: string\n- additionalProperties: false\n  items:\n    title: cmd\n    type: string\n  title: Command Parts\n  type: array\ntitle: CWLCommand\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLCommand"
 }

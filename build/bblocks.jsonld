@@ -112,7 +112,7 @@
   "name": "Building Blocks - Common Workflow Language building blocks",
   "abstract": "Common Workflow Language (CWL) is an open standard for describing how to run command line tools and connect them to create workflows.\n",
   "description": "Tools and workflows described using CWL are portable across a variety of platforms that support the CWL standards. \nUsing CWL, it is easy to scale complex data analysis and machine learning workflows from a single\ndeveloper's laptop up to massively parallel cluster, cloud and high performance computing environments.\n\nMore information at [the Common Workflow Language website](https://www.commonwl.org/).\n",
-  "modified": "2025-09-30T12:25:11.945701",
+  "modified": "2025-09-30T12:41:09.441518",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"cbdf0741daa8bb5e8edcce157ff8f4bb6d0d71fa",
@@ -170,49 +170,6 @@
         "bblocks-viewer": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.AnyLiteralType"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
-      "itemIdentifier": "ogc.cwl.v1_2_1.AnyType",
-      "name": "AnyType",
-      "itemClass": "schema",
-      "abstract": "AnyType",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.706428",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/AnyType/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/AnyType/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/AnyType/schema.yaml",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/AnyType/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/AnyType/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/AnyType/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.AnyType"
         }
       },
       "@type": [
@@ -308,51 +265,6 @@
       ]
     },
     {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLDocumentation",
-      "name": "CWLDocumentation",
-      "itemClass": "schema",
-      "abstract": "CWLDocumentation",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.673945",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/context.jsonld",
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDocumentation/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDocumentation/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDocumentation/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLDocumentation/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLDocumentation/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLDocumentation"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
       "itemIdentifier": "ogc.cwl.v1_2_1.CWLVersion",
       "name": "CWLVersion",
       "itemClass": "schema",
@@ -396,12 +308,12 @@
       ]
     },
     {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLIntent",
-      "name": "CWLIntent",
+      "itemIdentifier": "ogc.cwl.v1_2_1.CWLDocumentation",
+      "name": "CWLDocumentation",
       "itemClass": "schema",
-      "abstract": "CWLIntent",
+      "abstract": "CWLDocumentation",
       "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.676051",
+      "dateTimeAddition": "2025-09-29T14:14:37.673945",
       "dateOfLastChange": "2025-09-30",
       "register": "ogc-building-block-register",
       "link": "https://www.commonwl.org/v1.2/Workflow.html",
@@ -410,26 +322,28 @@
         "cwl"
       ],
       "shaclShapes": {},
+      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/context.jsonld",
       "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLIntent/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLIntent/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/schema.json"
       },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLIntent/schema.yaml",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLIntent/",
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDocumentation/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDocumentation/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDocumentation/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLIntent/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLDocumentation/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLIntent/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLDocumentation/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLIntent"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLDocumentation"
         }
       },
       "@type": [
@@ -482,6 +396,92 @@
       ]
     },
     {
+      "itemIdentifier": "ogc.cwl.v1_2_1.CWLIntent",
+      "name": "CWLIntent",
+      "itemClass": "schema",
+      "abstract": "CWLIntent",
+      "status": "under-development",
+      "dateTimeAddition": "2025-09-29T14:14:37.676051",
+      "dateOfLastChange": "2025-09-30",
+      "register": "ogc-building-block-register",
+      "link": "https://www.commonwl.org/v1.2/Workflow.html",
+      "version": "1.2.1",
+      "tags": [
+        "cwl"
+      ],
+      "shaclShapes": {},
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLIntent/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLIntent/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLIntent/schema.yaml",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLIntent/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLIntent/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLIntent/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLIntent"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.cwl.v1_2_1.CWLCommand",
+      "name": "CWLCommand",
+      "itemClass": "schema",
+      "abstract": "Command called in the docker image or on shell according to requirements\nand hints specifications. Can be omitted if already defined in the docker\nimage.\n",
+      "status": "under-development",
+      "dateTimeAddition": "2025-09-29T14:14:37.676693",
+      "dateOfLastChange": "2025-09-30",
+      "register": "ogc-building-block-register",
+      "link": "https://www.commonwl.org/v1.2/Workflow.html",
+      "version": "1.2.1",
+      "tags": [
+        "cwl"
+      ],
+      "shaclShapes": {},
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLCommand/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLCommand/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLCommand/schema.yaml",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLCommand/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLCommand/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLCommand/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLCommand"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
       "itemIdentifier": "ogc.cwl.v1_2_1.CWLScatterMethod",
       "name": "CWLScatterMethod",
       "itemClass": "schema",
@@ -516,92 +516,6 @@
         "bblocks-viewer": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLScatterMethod"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CommandParts",
-      "name": "CommandParts",
-      "itemClass": "schema",
-      "abstract": "CommandParts",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.680673",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CommandParts/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CommandParts/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CommandParts/schema.yaml",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CommandParts/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CommandParts/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CommandParts/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CommandParts"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLDefaultObject",
-      "name": "CWLDefaultObject",
-      "itemClass": "schema",
-      "abstract": "CWLDefaultObject",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.715515",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultObject/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultObject/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDefaultObject/schema.yaml",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDefaultObject/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLDefaultObject/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLDefaultObject/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLDefaultObject"
         }
       },
       "@type": [
@@ -647,6 +561,49 @@
         "bblocks-viewer": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLDefaultLocation"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.cwl.v1_2_1.CWLDefaultObject",
+      "name": "CWLDefaultObject",
+      "itemClass": "schema",
+      "abstract": "CWLDefaultObject",
+      "status": "under-development",
+      "dateTimeAddition": "2025-09-29T14:14:37.715515",
+      "dateOfLastChange": "2025-09-30",
+      "register": "ogc-building-block-register",
+      "link": "https://www.commonwl.org/v1.2/Workflow.html",
+      "version": "1.2.1",
+      "tags": [
+        "cwl"
+      ],
+      "shaclShapes": {},
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultObject/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultObject/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDefaultObject/schema.yaml",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDefaultObject/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLDefaultObject/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLDefaultObject/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLDefaultObject"
         }
       },
       "@type": [
@@ -828,53 +785,6 @@
       ]
     },
     {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLType",
-      "name": "CWLType",
-      "itemClass": "schema",
-      "abstract": "CWLType",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.690093",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLTypeBase"
-      ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLType/schema.yaml",
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLType/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLType/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLType/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLType"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
       "itemIdentifier": "ogc.cwl.v1_2_1.CWLInputStdInDefinition",
       "name": "CWLInputStdInDefinition",
       "itemClass": "schema",
@@ -1047,6 +957,139 @@
       ]
     },
     {
+      "itemIdentifier": "ogc.cwl.v1_2_1.DockerRequirement",
+      "name": "DockerRequirement",
+      "itemClass": "schema",
+      "abstract": "DockerRequirement",
+      "status": "under-development",
+      "dateTimeAddition": "2025-09-29T14:14:37.683513",
+      "dateOfLastChange": "2025-09-30",
+      "register": "ogc-building-block-register",
+      "link": "https://www.commonwl.org/v1.2/Workflow.html",
+      "version": "1.2.1",
+      "tags": [
+        "cwl"
+      ],
+      "shaclShapes": {},
+      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DockerRequirement/context.jsonld",
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DockerRequirement/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DockerRequirement/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/DockerRequirement/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/DockerRequirement/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/DockerRequirement/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/DockerRequirement/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/DockerRequirement/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.DockerRequirement"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.cwl.v1_2_1.ShellCommandRequirement",
+      "name": "ShellCommandRequirement",
+      "itemClass": "schema",
+      "abstract": "ShellCommandRequirement",
+      "status": "under-development",
+      "dateTimeAddition": "2025-09-29T14:14:37.684354",
+      "dateOfLastChange": "2025-09-30",
+      "register": "ogc-building-block-register",
+      "link": "https://www.commonwl.org/v1.2/Workflow.html",
+      "version": "1.2.1",
+      "tags": [
+        "cwl"
+      ],
+      "shaclShapes": {},
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ShellCommandRequirement/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ShellCommandRequirement/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/ShellCommandRequirement/schema.yaml",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/ShellCommandRequirement/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/ShellCommandRequirement/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/ShellCommandRequirement/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.ShellCommandRequirement"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.cwl.v1_2_1.InplaceUpdateRequirement",
+      "name": "InplaceUpdateRequirement",
+      "itemClass": "schema",
+      "abstract": "If 'inplaceUpdate' is true, then an implementation supporting this feature may permit tools to directly\nupdate files with 'writable: true' in 'InitialWorkDirRequirement'. That is, as an optimization,\nfiles may be destructively modified in place as opposed to copied and updated\n(see also: https://www.commonwl.org/v1.2/CommandLineTool.html#InplaceUpdateRequirement).\n",
+      "status": "under-development",
+      "dateTimeAddition": "2025-09-29T14:14:37.685745",
+      "dateOfLastChange": "2025-09-30",
+      "register": "ogc-building-block-register",
+      "link": "https://www.commonwl.org/v1.2/Workflow.html",
+      "version": "1.2.1",
+      "tags": [
+        "cwl"
+      ],
+      "shaclShapes": {},
+      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InplaceUpdateRequirement/context.jsonld",
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InplaceUpdateRequirement/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InplaceUpdateRequirement/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/InplaceUpdateRequirement/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/InplaceUpdateRequirement/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/InplaceUpdateRequirement/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/InplaceUpdateRequirement/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/InplaceUpdateRequirement/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.InplaceUpdateRequirement"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
       "itemIdentifier": "ogc.cwl.v1_2_1.ScatterFeatureRequirement",
       "name": "ScatterFeatureRequirement",
       "itemClass": "schema",
@@ -1133,51 +1176,6 @@
       ]
     },
     {
-      "itemIdentifier": "ogc.cwl.v1_2_1.InplaceUpdateRequirement",
-      "name": "InplaceUpdateRequirement",
-      "itemClass": "schema",
-      "abstract": "If 'inplaceUpdate' is true, then an implementation supporting this feature may permit tools to directly\nupdate files with 'writable: true' in 'InitialWorkDirRequirement'. That is, as an optimization,\nfiles may be destructively modified in place as opposed to copied and updated\n(see also: https://www.commonwl.org/v1.2/CommandLineTool.html#InplaceUpdateRequirement).\n",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.685745",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InplaceUpdateRequirement/context.jsonld",
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InplaceUpdateRequirement/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InplaceUpdateRequirement/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/InplaceUpdateRequirement/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/InplaceUpdateRequirement/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/InplaceUpdateRequirement/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/InplaceUpdateRequirement/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/InplaceUpdateRequirement/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.InplaceUpdateRequirement"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
       "itemIdentifier": "ogc.cwl.v1_2_1.MultipleInputFeatureRequirement",
       "name": "MultipleInputFeatureRequirement",
       "itemClass": "schema",
@@ -1212,94 +1210,6 @@
         "bblocks-viewer": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.MultipleInputFeatureRequirement"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
-      "itemIdentifier": "ogc.cwl.v1_2_1.ShellCommandRequirement",
-      "name": "ShellCommandRequirement",
-      "itemClass": "schema",
-      "abstract": "ShellCommandRequirement",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.684354",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ShellCommandRequirement/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ShellCommandRequirement/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/ShellCommandRequirement/schema.yaml",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/ShellCommandRequirement/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/ShellCommandRequirement/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/ShellCommandRequirement/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.ShellCommandRequirement"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
-      "itemIdentifier": "ogc.cwl.v1_2_1.DockerRequirement",
-      "name": "DockerRequirement",
-      "itemClass": "schema",
-      "abstract": "DockerRequirement",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.683513",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DockerRequirement/context.jsonld",
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DockerRequirement/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DockerRequirement/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/DockerRequirement/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/DockerRequirement/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/DockerRequirement/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/DockerRequirement/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/DockerRequirement/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.DockerRequirement"
         }
       },
       "@type": [
@@ -1395,12 +1305,12 @@
       ]
     },
     {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLTypeRecordFieldsList",
-      "name": "CWLTypeRecordFieldsList",
+      "itemIdentifier": "ogc.cwl.v1_2_1.CWLTypeRecordFieldsMap",
+      "name": "CWLTypeRecordFieldsMap",
       "itemClass": "schema",
-      "abstract": "CWLTypeRecordFieldsList",
+      "abstract": "CWLTypeRecordFieldsMap",
       "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.709848",
+      "dateTimeAddition": "2025-09-29T14:14:37.709682",
       "dateOfLastChange": "2025-09-30",
       "register": "ogc-building-block-register",
       "link": "https://www.commonwl.org/v1.2/Workflow.html",
@@ -1410,29 +1320,77 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLTypeRecordFieldsItem"
+        "ogc.cwl.v1_2_1.CWLTypeRecordFieldDef",
+        "ogc.cwl.v1_2_1.CWLType"
       ],
       "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsList/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsList/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsMap/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsMap/schema.json"
       },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordFieldsList/schema.yaml",
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsList/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordFieldsList/",
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordFieldsMap/schema.yaml",
+      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsMap/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordFieldsMap/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeRecordFieldsList/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeRecordFieldsMap/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeRecordFieldsList/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeRecordFieldsMap/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeRecordFieldsList"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeRecordFieldsMap"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.cwl.v1_2_1.CWLTypeRecordFieldsItem",
+      "name": "CWLTypeRecordFieldsItem",
+      "itemClass": "schema",
+      "abstract": "CWLTypeRecordFieldsItem",
+      "status": "under-development",
+      "dateTimeAddition": "2025-09-29T14:14:37.711647",
+      "dateOfLastChange": "2025-09-30",
+      "register": "ogc-building-block-register",
+      "link": "https://www.commonwl.org/v1.2/Workflow.html",
+      "version": "1.2.1",
+      "tags": [
+        "cwl"
+      ],
+      "shaclShapes": {},
+      "dependsOn": [
+        "ogc.cwl.v1_2_1.CWLTypeRecordFieldDef"
+      ],
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsItem/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsItem/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordFieldsItem/schema.yaml",
+      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsItem/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordFieldsItem/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeRecordFieldsItem/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeRecordFieldsItem/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeRecordFieldsItem"
         }
       },
       "@type": [
@@ -1786,52 +1744,6 @@
       ]
     },
     {
-      "itemIdentifier": "ogc.cwl.v1_2_1.AnyLiteralList",
-      "name": "AnyLiteralList",
-      "itemClass": "schema",
-      "abstract": "AnyLiteralList",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.715378",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "dependsOn": [
-        "ogc.cwl.v1_2_1.AnyLiteralType"
-      ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/AnyLiteralList/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/AnyLiteralList/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/AnyLiteralList/schema.yaml",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/AnyLiteralList/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/AnyLiteralList/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/AnyLiteralList/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.AnyLiteralList"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
       "itemIdentifier": "ogc.cwl.v1_2_1.BuiltinRequirement",
       "name": "BuiltinRequirement",
       "itemClass": "schema",
@@ -2055,100 +1967,6 @@
         "bblocks-viewer": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLFileOnlyParameters"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLWorkflowStepWhen",
-      "name": "CWLWorkflowStepWhen",
-      "itemClass": "schema",
-      "abstract": "Condition to execute a step that must evaluate to a boolean-like value.",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.708576",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLExpression"
-      ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepWhen/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepWhen/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepWhen/schema.yaml",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepWhen/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLWorkflowStepWhen/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLWorkflowStepWhen/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLWorkflowStepWhen"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
-      "itemIdentifier": "ogc.cwl.v1_2_1.DirectoryListingDirent",
-      "name": "DirectoryListingDirent",
-      "itemClass": "schema",
-      "abstract": "DirectoryListingDirent",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.705519",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLExpression"
-      ],
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DirectoryListingDirent/context.jsonld",
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DirectoryListingDirent/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DirectoryListingDirent/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/DirectoryListingDirent/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/DirectoryListingDirent/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/DirectoryListingDirent/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/DirectoryListingDirent/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/DirectoryListingDirent/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.DirectoryListingDirent"
         }
       },
       "@type": [
@@ -2446,12 +2264,12 @@
       ]
     },
     {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLCommand",
-      "name": "CWLCommand",
+      "itemIdentifier": "ogc.cwl.v1_2_1.CWLDefault",
+      "name": "CWLDefault",
       "itemClass": "schema",
-      "abstract": "Command called in the docker image or on shell according to requirements\nand hints specifications. Can be omitted if already defined in the docker\nimage.\n",
+      "abstract": "Default value of input if not provided for task execution.",
       "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.676693",
+      "dateTimeAddition": "2025-09-29T14:14:37.714555",
       "dateOfLastChange": "2025-09-30",
       "register": "ogc-building-block-register",
       "link": "https://www.commonwl.org/v1.2/Workflow.html",
@@ -2461,28 +2279,31 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.cwl.v1_2_1.CommandParts"
+        "ogc.cwl.v1_2_1.CWLDefaultLocation",
+        "ogc.cwl.v1_2_1.CWLDefaultObject",
+        "ogc.cwl.v1_2_1.AnyLiteralType"
       ],
       "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLCommand/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLCommand/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefault/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefault/schema.json"
       },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLCommand/schema.yaml",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLCommand/",
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDefault/schema.yaml",
+      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefault/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDefault/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLCommand/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLDefault/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLCommand/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLDefault/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLCommand"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLDefault"
         }
       },
       "@type": [
@@ -2625,100 +2446,6 @@
         "bblocks-viewer": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.LoadListingRequirement"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLTypeRecordArray",
-      "name": "CWLTypeRecordArray",
-      "itemClass": "schema",
-      "abstract": "CWLTypeRecordArray",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.693637",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLType"
-      ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordArray/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordArray/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordArray/schema.yaml",
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordArray/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordArray/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeRecordArray/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeRecordArray/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeRecordArray"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLTypeRecordFieldDefBase",
-      "name": "CWLTypeRecordFieldDefBase",
-      "itemClass": "schema",
-      "abstract": "CWLTypeRecordFieldDefBase",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.712109",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLType"
-      ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldDefBase/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldDefBase/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordFieldDefBase/schema.yaml",
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldDefBase/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordFieldDefBase/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeRecordFieldDefBase/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeRecordFieldDefBase/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeRecordFieldDefBase"
         }
       },
       "@type": [
@@ -2914,6 +2641,53 @@
       ]
     },
     {
+      "itemIdentifier": "ogc.cwl.v1_2_1.CWLTypeRecordFieldsList",
+      "name": "CWLTypeRecordFieldsList",
+      "itemClass": "schema",
+      "abstract": "CWLTypeRecordFieldsList",
+      "status": "under-development",
+      "dateTimeAddition": "2025-09-29T14:14:37.709848",
+      "dateOfLastChange": "2025-09-30",
+      "register": "ogc-building-block-register",
+      "link": "https://www.commonwl.org/v1.2/Workflow.html",
+      "version": "1.2.1",
+      "tags": [
+        "cwl"
+      ],
+      "shaclShapes": {},
+      "dependsOn": [
+        "ogc.cwl.v1_2_1.CWLTypeRecordFieldsItem"
+      ],
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsList/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsList/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordFieldsList/schema.yaml",
+      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsList/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordFieldsList/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeRecordFieldsList/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeRecordFieldsList/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeRecordFieldsList"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
       "itemIdentifier": "ogc.cwl.v1_2_1.CWLTypeRecordRef",
       "name": "CWLTypeRecordRef",
       "itemClass": "schema",
@@ -2929,11 +2703,11 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLOutputStdErrDefinition",
         "ogc.cwl.v1_2_1.CWLInputStdInDefinition",
         "ogc.cwl.v1_2_1.CWLOutputStdOutDefinition",
         "ogc.cwl.v1_2_1.CWLTypeDefinition",
-        "ogc.cwl.v1_2_1.CWLTypeRecordRefPattern"
+        "ogc.cwl.v1_2_1.CWLTypeRecordRefPattern",
+        "ogc.cwl.v1_2_1.CWLOutputStdErrDefinition"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordRef/schema.yaml",
@@ -3013,12 +2787,12 @@
       ]
     },
     {
-      "itemIdentifier": "ogc.cwl.v1_2_1.DirectoryListingFileOrDirectory",
-      "name": "DirectoryListingFileOrDirectory",
+      "itemIdentifier": "ogc.cwl.v1_2_1.InitialWorkDirRequirement",
+      "name": "InitialWorkDirRequirement",
       "itemClass": "schema",
-      "abstract": "DirectoryListingFileOrDirectory",
+      "abstract": "InitialWorkDirRequirement",
       "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.705782",
+      "dateTimeAddition": "2025-09-29T14:14:37.685221",
       "dateOfLastChange": "2025-09-30",
       "register": "ogc-building-block-register",
       "link": "https://www.commonwl.org/v1.2/Workflow.html",
@@ -3028,30 +2802,31 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
+        "ogc.cwl.v1_2_1.CWLExpression",
         "ogc.cwl.v1_2_1.Checksum"
       ],
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DirectoryListingFileOrDirectory/context.jsonld",
+      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InitialWorkDirRequirement/context.jsonld",
       "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DirectoryListingFileOrDirectory/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DirectoryListingFileOrDirectory/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InitialWorkDirRequirement/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InitialWorkDirRequirement/schema.json"
       },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/DirectoryListingFileOrDirectory/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/DirectoryListingFileOrDirectory/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/DirectoryListingFileOrDirectory/",
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/InitialWorkDirRequirement/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/InitialWorkDirRequirement/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/InitialWorkDirRequirement/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/DirectoryListingFileOrDirectory/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/InitialWorkDirRequirement/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/DirectoryListingFileOrDirectory/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/InitialWorkDirRequirement/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.DirectoryListingFileOrDirectory"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.InitialWorkDirRequirement"
         }
       },
       "@type": [
@@ -3624,56 +3399,6 @@
       ]
     },
     {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLDefault",
-      "name": "CWLDefault",
-      "itemClass": "schema",
-      "abstract": "Default value of input if not provided for task execution.",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.714555",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLDefaultObject",
-        "ogc.cwl.v1_2_1.CWLDefaultLocation",
-        "ogc.cwl.v1_2_1.AnyLiteralType",
-        "ogc.cwl.v1_2_1.AnyLiteralList"
-      ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefault/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefault/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDefault/schema.yaml",
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefault/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDefault/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLDefault/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLDefault/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLDefault"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
       "itemIdentifier": "ogc.cwl.v1_2_1.CWLScatter",
       "name": "CWLScatter",
       "itemClass": "schema",
@@ -3757,53 +3482,6 @@
         "bblocks-viewer": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLWorkflowStepId"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLWorkflowStepScatter",
-      "name": "CWLWorkflowStepScatter",
-      "itemClass": "schema",
-      "abstract": "CWLWorkflowStepScatter",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.704593",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLTextPatternID",
-        "ogc.cwl.v1_2_1.IdentifierArray"
-      ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepScatter/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepScatter/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepScatter/schema.yaml",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepScatter/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLWorkflowStepScatter/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLWorkflowStepScatter/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLWorkflowStepScatter"
         }
       },
       "@type": [
@@ -3954,12 +3632,12 @@
       ]
     },
     {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLOutputObjectBase",
-      "name": "CWLOutputObjectBase",
+      "itemIdentifier": "ogc.cwl.v1_2_1.CWLWorkflowStepInputDefault",
+      "name": "CWLWorkflowStepInputDefault",
       "itemClass": "schema",
-      "abstract": "CWLOutputObjectBase",
+      "abstract": "CWLWorkflowStepInputDefault",
       "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.703374",
+      "dateTimeAddition": "2025-09-29T14:14:37.713753",
       "dateOfLastChange": "2025-09-30",
       "register": "ogc-building-block-register",
       "link": "https://www.commonwl.org/v1.2/Workflow.html",
@@ -3969,31 +3647,29 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLType",
-        "ogc.cwl.v1_2_1.OutputBinding"
+        "ogc.cwl.v1_2_1.CWLDefault"
       ],
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputObjectBase/context.jsonld",
       "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputObjectBase/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputObjectBase/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepInputDefault/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepInputDefault/schema.json"
       },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputObjectBase/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputObjectBase/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputObjectBase/",
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepInputDefault/schema.yaml",
+      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepInputDefault/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepInputDefault/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLOutputObjectBase/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLWorkflowStepInputDefault/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLOutputObjectBase/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLWorkflowStepInputDefault/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLOutputObjectBase"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLWorkflowStepInputDefault"
         }
       },
       "@type": [
@@ -4018,10 +3694,9 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLTypeSymbols",
-        "ogc.cwl.v1_2_1.CWLTypeSymbolValues",
         "ogc.cwl.v1_2_1.CWLDefaultLocation",
-        "ogc.cwl.v1_2_1.AnyType"
+        "ogc.cwl.v1_2_1.CWLTypeSymbols",
+        "ogc.cwl.v1_2_1.CWLTypeSymbolValues"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultTypedConditional/schema.yaml",
@@ -4162,8 +3837,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLInputStdInObjectType",
-        "ogc.cwl.v1_2_1.CWLInputStdInDefinition"
+        "ogc.cwl.v1_2_1.CWLInputStdInDefinition",
+        "ogc.cwl.v1_2_1.CWLInputStdInObjectType"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputStdIn/schema.yaml",
@@ -4209,8 +3884,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLOutputStdOutDefinition",
-        "ogc.cwl.v1_2_1.CWLOutputStdOutObjectType"
+        "ogc.cwl.v1_2_1.CWLOutputStdOutObjectType",
+        "ogc.cwl.v1_2_1.CWLOutputStdOutDefinition"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputStdOut/schema.yaml",
@@ -4241,12 +3916,12 @@
       ]
     },
     {
-      "itemIdentifier": "ogc.cwl.v1_2_1.InitialWorkDirRequirement",
-      "name": "InitialWorkDirRequirement",
+      "itemIdentifier": "ogc.cwl.v1_2_1.CWLTypeRecordFields",
+      "name": "CWLTypeRecordFields",
       "itemClass": "schema",
-      "abstract": "InitialWorkDirRequirement",
+      "abstract": "CWLTypeRecordFields",
       "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.685221",
+      "dateTimeAddition": "2025-09-29T14:14:37.705381",
       "dateOfLastChange": "2025-09-30",
       "register": "ogc-building-block-register",
       "link": "https://www.commonwl.org/v1.2/Workflow.html",
@@ -4256,31 +3931,30 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLExpression",
-        "ogc.cwl.v1_2_1.DirectoryListingDirent",
-        "ogc.cwl.v1_2_1.DirectoryListingFileOrDirectory"
+        "ogc.cwl.v1_2_1.CWLTypeRecordFieldsList",
+        "ogc.cwl.v1_2_1.CWLTypeRecordFieldsMap"
       ],
       "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InitialWorkDirRequirement/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InitialWorkDirRequirement/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFields/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFields/schema.json"
       },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/InitialWorkDirRequirement/schema.yaml",
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InitialWorkDirRequirement/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/InitialWorkDirRequirement/",
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordFields/schema.yaml",
+      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFields/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordFields/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/InitialWorkDirRequirement/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeRecordFields/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/InitialWorkDirRequirement/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeRecordFields/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.InitialWorkDirRequirement"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeRecordFields"
         }
       },
       "@type": [
@@ -4351,8 +4025,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.cwl.v1_2_1.SoftwarePackage",
-        "ogc.cwl.v1_2_1.SoftwarePackageSpecs"
+        "ogc.cwl.v1_2_1.SoftwarePackageSpecs",
+        "ogc.cwl.v1_2_1.SoftwarePackage"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/SoftwareRequirement/schema.yaml",
@@ -4399,10 +4073,10 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.cwl.v1_2_1.BuiltinRequirement",
-        "ogc.cwl.v1_2_1.OGCAPIRequirement",
+        "ogc.cwl.v1_2_1.UnknownRequirement",
         "ogc.cwl.v1_2_1.WPS1Requirement",
-        "ogc.cwl.v1_2_1.UnknownRequirement"
+        "ogc.cwl.v1_2_1.OGCAPIRequirement",
+        "ogc.cwl.v1_2_1.BuiltinRequirement"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLHintsItemExtras/schema.yaml",
@@ -4448,9 +4122,9 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
+        "ogc.cwl.v1_2_1.UnknownRequirement",
         "ogc.cwl.v1_2_1.WPS1Requirement",
         "ogc.cwl.v1_2_1.OGCAPIRequirement",
-        "ogc.cwl.v1_2_1.UnknownRequirement",
         "ogc.cwl.v1_2_1.BuiltinRequirement"
       ],
       "schema": {
@@ -4497,14 +4171,14 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.cwl.v1_2_1.ResourceOutDirMinimum",
-        "ogc.cwl.v1_2_1.ResourceCoresMinimum",
-        "ogc.cwl.v1_2_1.ResourceCoresMaximum",
-        "ogc.cwl.v1_2_1.ResourceOutDirMaximum",
-        "ogc.cwl.v1_2_1.ResourceTmpDirMinimum",
-        "ogc.cwl.v1_2_1.ResourceRAMMaximum",
         "ogc.cwl.v1_2_1.ResourceRAMMinimum",
-        "ogc.cwl.v1_2_1.ResourceTmpDirMaximum"
+        "ogc.cwl.v1_2_1.ResourceTmpDirMinimum",
+        "ogc.cwl.v1_2_1.ResourceTmpDirMaximum",
+        "ogc.cwl.v1_2_1.ResourceCoresMaximum",
+        "ogc.cwl.v1_2_1.ResourceCoresMinimum",
+        "ogc.cwl.v1_2_1.ResourceOutDirMaximum",
+        "ogc.cwl.v1_2_1.ResourceOutDirMinimum",
+        "ogc.cwl.v1_2_1.ResourceRAMMaximum"
       ],
       "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ResourceRequirement/context.jsonld",
       "schema": {
@@ -4537,12 +4211,12 @@
       ]
     },
     {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLWorkflowStepInputDefault",
-      "name": "CWLWorkflowStepInputDefault",
+      "itemIdentifier": "ogc.cwl.v1_2_1.CWLWorkflowStepItem",
+      "name": "CWLWorkflowStepItem",
       "itemClass": "schema",
-      "abstract": "CWLWorkflowStepInputDefault",
+      "abstract": "CWLWorkflowStepItem",
       "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.713753",
+      "dateTimeAddition": "2025-09-29T14:14:37.692088",
       "dateOfLastChange": "2025-09-30",
       "register": "ogc-building-block-register",
       "link": "https://www.commonwl.org/v1.2/Workflow.html",
@@ -4552,29 +4226,30 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLDefault"
+        "ogc.cwl.v1_2_1.CWLWorkflowStepObject",
+        "ogc.cwl.v1_2_1.CWLWorkflowStepId"
       ],
       "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepInputDefault/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepInputDefault/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepItem/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepItem/schema.json"
       },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepInputDefault/schema.yaml",
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepInputDefault/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepInputDefault/",
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepItem/schema.yaml",
+      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepItem/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepItem/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLWorkflowStepInputDefault/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLWorkflowStepItem/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLWorkflowStepInputDefault/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLWorkflowStepItem/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLWorkflowStepInputDefault"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLWorkflowStepItem"
         }
       },
       "@type": [
@@ -4599,8 +4274,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLIdentifier",
-        "ogc.cwl.v1_2_1.CWLWorkflowStepId"
+        "ogc.cwl.v1_2_1.CWLWorkflowStepId",
+        "ogc.cwl.v1_2_1.CWLIdentifier"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepOut/schema.yaml",
@@ -4622,305 +4297,6 @@
         "bblocks-viewer": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLWorkflowStepOut"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLOutputObject",
-      "name": "CWLOutputObject",
-      "itemClass": "schema",
-      "abstract": "CWLOutputObject",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.690989",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLDocumentation",
-        "ogc.cwl.v1_2_1.CWLOutputObjectBase"
-      ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputObject/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputObject/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputObject/schema.yaml",
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputObject/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputObject/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLOutputObject/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLOutputObject/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLOutputObject"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLInputObject",
-      "name": "CWLInputObject",
-      "itemClass": "schema",
-      "abstract": "CWLInputObject",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.690237",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLType",
-        "ogc.cwl.v1_2_1.InputBinding",
-        "ogc.cwl.v1_2_1.CWLDefaultTypedConditional",
-        "ogc.cwl.v1_2_1.CWLDocumentation"
-      ],
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputObject/context.jsonld",
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputObject/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputObject/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputObject/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputObject/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputObject/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLInputObject/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLInputObject/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLInputObject"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLTypeRecordFieldDef",
-      "name": "CWLTypeRecordFieldDef",
-      "itemClass": "schema",
-      "abstract": "CWLTypeRecordFieldDef",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.711487",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLTypeRecordFieldDefBase",
-        "ogc.cwl.v1_2_1.CWLDirectoryOnlyParametersConditional",
-        "ogc.cwl.v1_2_1.CWLFileOnlyParametersConditional"
-      ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldDef/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldDef/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordFieldDef/schema.yaml",
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldDef/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordFieldDef/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeRecordFieldDef/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeRecordFieldDef/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeRecordFieldDef"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLInputItemBase",
-      "name": "CWLInputItemBase",
-      "itemClass": "schema",
-      "abstract": "CWLInputItemBase",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.698935",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLType",
-        "ogc.cwl.v1_2_1.InputBinding",
-        "ogc.cwl.v1_2_1.CWLInputStdIn",
-        "ogc.cwl.v1_2_1.CWLIdentifier"
-      ],
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputItemBase/context.jsonld",
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputItemBase/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputItemBase/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputItemBase/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputItemBase/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputItemBase/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLInputItemBase/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLInputItemBase/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLInputItemBase"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLOutputItem",
-      "name": "CWLOutputItem",
-      "itemClass": "schema",
-      "abstract": "Output specification. Note that multiple formats are supported\nand not all specification variants or parameters are presented here. Please\nrefer to official CWL documentation for more details (https://www.commonwl.org).\n",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.690602",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLOutputStdErr",
-        "ogc.cwl.v1_2_1.CWLIdentifier",
-        "ogc.cwl.v1_2_1.CWLOutputStdOut",
-        "ogc.cwl.v1_2_1.CWLType",
-        "ogc.cwl.v1_2_1.OutputBinding"
-      ],
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputItem/context.jsonld",
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputItem/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputItem/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputItem/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputItem/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputItem/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLOutputItem/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLOutputItem/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLOutputItem"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
-      "itemIdentifier": "ogc.cwl.v1_2_1.InlineJavascriptRequirement",
-      "name": "InlineJavascriptRequirement",
-      "itemClass": "schema",
-      "abstract": "Indicates that the workflow platform must support inline Javascript expressions.\n\nIf this requirement is not present, the workflow platform must not perform expression interpolation\n(see also: https://www.commonwl.org/v1.2/CommandLineTool.html#InlineJavascriptRequirement).\n",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.685446",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "dependsOn": [
-        "ogc.cwl.v1_2_1.InlineJavascriptLibraries"
-      ],
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InlineJavascriptRequirement/context.jsonld",
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InlineJavascriptRequirement/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InlineJavascriptRequirement/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/InlineJavascriptRequirement/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/InlineJavascriptRequirement/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/InlineJavascriptRequirement/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/InlineJavascriptRequirement/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/InlineJavascriptRequirement/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.InlineJavascriptRequirement"
         }
       },
       "@type": [
@@ -4979,448 +4355,6 @@
       ]
     },
     {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLWorkflowStepInput",
-      "name": "CWLWorkflowStepInput",
-      "itemClass": "schema",
-      "abstract": "CWLWorkflowStepInput",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.711780",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLWorkflowStepInputBase",
-        "ogc.cwl.v1_2_1.CWLWorkflowStepInputDefault"
-      ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepInput/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepInput/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepInput/schema.yaml",
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepInput/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepInput/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLWorkflowStepInput/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLWorkflowStepInput/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLWorkflowStepInput"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLTypeRecordFieldsItem",
-      "name": "CWLTypeRecordFieldsItem",
-      "itemClass": "schema",
-      "abstract": "CWLTypeRecordFieldsItem",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.711647",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLTypeRecordFieldDef"
-      ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsItem/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsItem/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordFieldsItem/schema.yaml",
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsItem/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordFieldsItem/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeRecordFieldsItem/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeRecordFieldsItem/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeRecordFieldsItem"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLTypeRecordFieldsMap",
-      "name": "CWLTypeRecordFieldsMap",
-      "itemClass": "schema",
-      "abstract": "CWLTypeRecordFieldsMap",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.709682",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLType",
-        "ogc.cwl.v1_2_1.CWLTypeRecordFieldDef"
-      ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsMap/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsMap/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordFieldsMap/schema.yaml",
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsMap/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordFieldsMap/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeRecordFieldsMap/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeRecordFieldsMap/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeRecordFieldsMap"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLInputItem",
-      "name": "CWLInputItem",
-      "itemClass": "schema",
-      "abstract": "Input specification. Note that multiple formats are supported and\nnot all specification variants or parameters are presented here. Please refer\nto official CWL documentation for more details (https://www.commonwl.org).\n",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.689863",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLDocumentation",
-        "ogc.cwl.v1_2_1.CWLInputItemBase",
-        "ogc.cwl.v1_2_1.CWLDefaultTypedConditional"
-      ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputItem/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputItem/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputItem/schema.yaml",
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputItem/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputItem/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLInputItem/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLInputItem/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLInputItem"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLOutputsDefinition",
-      "name": "CWLOutputsDefinition",
-      "itemClass": "schema",
-      "abstract": "All outputs produced by the Application Package.",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.677375",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLOutputObject",
-        "ogc.cwl.v1_2_1.CWLOutputStdErr",
-        "ogc.cwl.v1_2_1.CWLOutputStdOut",
-        "ogc.cwl.v1_2_1.CWLImport",
-        "ogc.cwl.v1_2_1.CWLOutputItem",
-        "ogc.cwl.v1_2_1.CWLType"
-      ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputsDefinition/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputsDefinition/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputsDefinition/schema.yaml",
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputsDefinition/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputsDefinition/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLOutputsDefinition/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLOutputsDefinition/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLOutputsDefinition"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLWorkflowStepIn",
-      "name": "CWLWorkflowStepIn",
-      "itemClass": "schema",
-      "abstract": "Mapping of Workflow step inputs to nested CWL tool definitions inputs or outputs.",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.708164",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLWorkflowStepInItem",
-        "ogc.cwl.v1_2_1.CWLWorkflowStepInput"
-      ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepIn/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepIn/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepIn/schema.yaml",
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepIn/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepIn/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLWorkflowStepIn/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLWorkflowStepIn/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLWorkflowStepIn"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLTypeRecordFields",
-      "name": "CWLTypeRecordFields",
-      "itemClass": "schema",
-      "abstract": "CWLTypeRecordFields",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.705381",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLTypeRecordFieldsMap",
-        "ogc.cwl.v1_2_1.CWLTypeRecordFieldsList"
-      ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFields/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFields/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordFields/schema.yaml",
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFields/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordFields/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeRecordFields/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeRecordFields/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeRecordFields"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLInputsDefinition",
-      "name": "CWLInputsDefinition",
-      "itemClass": "schema",
-      "abstract": "All inputs available to the Application Package.",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.677093",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLInputItem",
-        "ogc.cwl.v1_2_1.CWLImport",
-        "ogc.cwl.v1_2_1.CWLType",
-        "ogc.cwl.v1_2_1.CWLInputStdIn",
-        "ogc.cwl.v1_2_1.CWLInputObject"
-      ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputsDefinition/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputsDefinition/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputsDefinition/schema.yaml",
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputsDefinition/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputsDefinition/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLInputsDefinition/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLInputsDefinition/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLInputsDefinition"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLWorkflowStepDefinition",
-      "name": "CWLWorkflowStepDefinition",
-      "itemClass": "schema",
-      "abstract": "CWLWorkflowStepDefinition",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.704342",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLWorkflowStepOut",
-        "ogc.cwl.v1_2_1.CWLWorkflowStepWhen",
-        "ogc.cwl.v1_2_1.CWLWorkflowStepRun",
-        "ogc.cwl.v1_2_1.CWLWorkflowStepIn"
-      ],
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepDefinition/context.jsonld",
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepDefinition/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepDefinition/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepDefinition/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepDefinition/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepDefinition/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLWorkflowStepDefinition/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLWorkflowStepDefinition/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLWorkflowStepDefinition"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
       "itemIdentifier": "ogc.cwl.v1_2_1.CWLTypeRecordSchema",
       "name": "CWLTypeRecordSchema",
       "itemClass": "schema",
@@ -5468,12 +4402,12 @@
       ]
     },
     {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLWorkflowStepObject",
-      "name": "CWLWorkflowStepObject",
+      "itemIdentifier": "ogc.cwl.v1_2_1.InlineJavascriptRequirement",
+      "name": "InlineJavascriptRequirement",
       "itemClass": "schema",
-      "abstract": "CWLWorkflowStepObject",
+      "abstract": "Indicates that the workflow platform must support inline Javascript expressions.\n\nIf this requirement is not present, the workflow platform must not perform expression interpolation\n(see also: https://www.commonwl.org/v1.2/CommandLineTool.html#InlineJavascriptRequirement).\n",
       "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.691949",
+      "dateTimeAddition": "2025-09-29T14:14:37.685446",
       "dateOfLastChange": "2025-09-30",
       "register": "ogc-building-block-register",
       "link": "https://www.commonwl.org/v1.2/Workflow.html",
@@ -5483,30 +4417,79 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLWorkflowStepScatter",
-        "ogc.cwl.v1_2_1.CWLWorkflowStepDefinition"
+        "ogc.cwl.v1_2_1.InlineJavascriptLibraries"
       ],
+      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InlineJavascriptRequirement/context.jsonld",
       "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepObject/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepObject/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InlineJavascriptRequirement/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InlineJavascriptRequirement/schema.json"
       },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepObject/schema.yaml",
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepObject/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepObject/",
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/InlineJavascriptRequirement/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/InlineJavascriptRequirement/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/InlineJavascriptRequirement/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLWorkflowStepObject/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/InlineJavascriptRequirement/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLWorkflowStepObject/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/InlineJavascriptRequirement/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLWorkflowStepObject"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.InlineJavascriptRequirement"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.cwl.v1_2_1.CWLWorkflowStepIn",
+      "name": "CWLWorkflowStepIn",
+      "itemClass": "schema",
+      "abstract": "Mapping of Workflow step inputs to nested CWL tool definitions inputs or outputs.",
+      "status": "under-development",
+      "dateTimeAddition": "2025-09-29T14:14:37.708164",
+      "dateOfLastChange": "2025-09-30",
+      "register": "ogc-building-block-register",
+      "link": "https://www.commonwl.org/v1.2/Workflow.html",
+      "version": "1.2.1",
+      "tags": [
+        "cwl"
+      ],
+      "shaclShapes": {},
+      "dependsOn": [
+        "ogc.cwl.v1_2_1.CWLWorkflowStepInItem",
+        "ogc.cwl.v1_2_1.CWLWorkflowStepInputBase",
+        "ogc.cwl.v1_2_1.CWLWorkflowStepInputDefault"
+      ],
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepIn/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepIn/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepIn/schema.yaml",
+      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepIn/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepIn/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLWorkflowStepIn/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLWorkflowStepIn/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLWorkflowStepIn"
         }
       },
       "@type": [
@@ -5531,10 +4514,10 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLTypeRecordSchema",
         "ogc.cwl.v1_2_1.CWLTypeEnum",
         "ogc.cwl.v1_2_1.CWLTypeRecordRef",
         "ogc.cwl.v1_2_1.CWLType",
+        "ogc.cwl.v1_2_1.CWLTypeRecordSchema",
         "ogc.cwl.v1_2_1.CWLTypeDefinition"
       ],
       "schema": {
@@ -5567,6 +4550,447 @@
       ]
     },
     {
+      "itemIdentifier": "ogc.cwl.v1_2_1.CWLType",
+      "name": "CWLType",
+      "itemClass": "schema",
+      "abstract": "CWLType",
+      "status": "under-development",
+      "dateTimeAddition": "2025-09-29T14:14:37.690093",
+      "dateOfLastChange": "2025-09-30",
+      "register": "ogc-building-block-register",
+      "link": "https://www.commonwl.org/v1.2/Workflow.html",
+      "version": "1.2.1",
+      "tags": [
+        "cwl"
+      ],
+      "shaclShapes": {},
+      "dependsOn": [
+        "ogc.cwl.v1_2_1.CWLTypeBase"
+      ],
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLType/schema.yaml",
+      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLType/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLType/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLType/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLType"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.cwl.v1_2_1.CWLInputItemBase",
+      "name": "CWLInputItemBase",
+      "itemClass": "schema",
+      "abstract": "CWLInputItemBase",
+      "status": "under-development",
+      "dateTimeAddition": "2025-09-29T14:14:37.698935",
+      "dateOfLastChange": "2025-09-30",
+      "register": "ogc-building-block-register",
+      "link": "https://www.commonwl.org/v1.2/Workflow.html",
+      "version": "1.2.1",
+      "tags": [
+        "cwl"
+      ],
+      "shaclShapes": {},
+      "dependsOn": [
+        "ogc.cwl.v1_2_1.InputBinding",
+        "ogc.cwl.v1_2_1.CWLInputStdIn",
+        "ogc.cwl.v1_2_1.CWLType",
+        "ogc.cwl.v1_2_1.CWLIdentifier"
+      ],
+      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputItemBase/context.jsonld",
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputItemBase/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputItemBase/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputItemBase/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputItemBase/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputItemBase/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLInputItemBase/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLInputItemBase/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLInputItemBase"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.cwl.v1_2_1.CWLInputObject",
+      "name": "CWLInputObject",
+      "itemClass": "schema",
+      "abstract": "CWLInputObject",
+      "status": "under-development",
+      "dateTimeAddition": "2025-09-29T14:14:37.690237",
+      "dateOfLastChange": "2025-09-30",
+      "register": "ogc-building-block-register",
+      "link": "https://www.commonwl.org/v1.2/Workflow.html",
+      "version": "1.2.1",
+      "tags": [
+        "cwl"
+      ],
+      "shaclShapes": {},
+      "dependsOn": [
+        "ogc.cwl.v1_2_1.InputBinding",
+        "ogc.cwl.v1_2_1.CWLDefaultTypedConditional",
+        "ogc.cwl.v1_2_1.CWLType",
+        "ogc.cwl.v1_2_1.CWLDocumentation"
+      ],
+      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputObject/context.jsonld",
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputObject/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputObject/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputObject/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputObject/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputObject/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLInputObject/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLInputObject/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLInputObject"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.cwl.v1_2_1.CWLOutputItem",
+      "name": "CWLOutputItem",
+      "itemClass": "schema",
+      "abstract": "Output specification. Note that multiple formats are supported\nand not all specification variants or parameters are presented here. Please\nrefer to official CWL documentation for more details (https://www.commonwl.org).\n",
+      "status": "under-development",
+      "dateTimeAddition": "2025-09-29T14:14:37.690602",
+      "dateOfLastChange": "2025-09-30",
+      "register": "ogc-building-block-register",
+      "link": "https://www.commonwl.org/v1.2/Workflow.html",
+      "version": "1.2.1",
+      "tags": [
+        "cwl"
+      ],
+      "shaclShapes": {},
+      "dependsOn": [
+        "ogc.cwl.v1_2_1.CWLOutputStdOut",
+        "ogc.cwl.v1_2_1.OutputBinding",
+        "ogc.cwl.v1_2_1.CWLType",
+        "ogc.cwl.v1_2_1.CWLOutputStdErr",
+        "ogc.cwl.v1_2_1.CWLIdentifier"
+      ],
+      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputItem/context.jsonld",
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputItem/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputItem/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputItem/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputItem/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputItem/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLOutputItem/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLOutputItem/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLOutputItem"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.cwl.v1_2_1.CWLOutputObjectBase",
+      "name": "CWLOutputObjectBase",
+      "itemClass": "schema",
+      "abstract": "CWLOutputObjectBase",
+      "status": "under-development",
+      "dateTimeAddition": "2025-09-29T14:14:37.703374",
+      "dateOfLastChange": "2025-09-30",
+      "register": "ogc-building-block-register",
+      "link": "https://www.commonwl.org/v1.2/Workflow.html",
+      "version": "1.2.1",
+      "tags": [
+        "cwl"
+      ],
+      "shaclShapes": {},
+      "dependsOn": [
+        "ogc.cwl.v1_2_1.OutputBinding",
+        "ogc.cwl.v1_2_1.CWLType"
+      ],
+      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputObjectBase/context.jsonld",
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputObjectBase/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputObjectBase/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputObjectBase/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputObjectBase/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputObjectBase/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLOutputObjectBase/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLOutputObjectBase/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLOutputObjectBase"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.cwl.v1_2_1.CWLTypeRecordArray",
+      "name": "CWLTypeRecordArray",
+      "itemClass": "schema",
+      "abstract": "CWLTypeRecordArray",
+      "status": "under-development",
+      "dateTimeAddition": "2025-09-29T14:14:37.693637",
+      "dateOfLastChange": "2025-09-30",
+      "register": "ogc-building-block-register",
+      "link": "https://www.commonwl.org/v1.2/Workflow.html",
+      "version": "1.2.1",
+      "tags": [
+        "cwl"
+      ],
+      "shaclShapes": {},
+      "dependsOn": [
+        "ogc.cwl.v1_2_1.CWLType"
+      ],
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordArray/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordArray/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordArray/schema.yaml",
+      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordArray/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordArray/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeRecordArray/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeRecordArray/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeRecordArray"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.cwl.v1_2_1.CWLTypeRecordFieldDefBase",
+      "name": "CWLTypeRecordFieldDefBase",
+      "itemClass": "schema",
+      "abstract": "CWLTypeRecordFieldDefBase",
+      "status": "under-development",
+      "dateTimeAddition": "2025-09-29T14:14:37.712109",
+      "dateOfLastChange": "2025-09-30",
+      "register": "ogc-building-block-register",
+      "link": "https://www.commonwl.org/v1.2/Workflow.html",
+      "version": "1.2.1",
+      "tags": [
+        "cwl"
+      ],
+      "shaclShapes": {},
+      "dependsOn": [
+        "ogc.cwl.v1_2_1.CWLType"
+      ],
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldDefBase/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldDefBase/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordFieldDefBase/schema.yaml",
+      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldDefBase/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordFieldDefBase/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeRecordFieldDefBase/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeRecordFieldDefBase/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeRecordFieldDefBase"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.cwl.v1_2_1.CWLInputItem",
+      "name": "CWLInputItem",
+      "itemClass": "schema",
+      "abstract": "Input specification. Note that multiple formats are supported and\nnot all specification variants or parameters are presented here. Please refer\nto official CWL documentation for more details (https://www.commonwl.org).\n",
+      "status": "under-development",
+      "dateTimeAddition": "2025-09-29T14:14:37.689863",
+      "dateOfLastChange": "2025-09-30",
+      "register": "ogc-building-block-register",
+      "link": "https://www.commonwl.org/v1.2/Workflow.html",
+      "version": "1.2.1",
+      "tags": [
+        "cwl"
+      ],
+      "shaclShapes": {},
+      "dependsOn": [
+        "ogc.cwl.v1_2_1.CWLDefaultTypedConditional",
+        "ogc.cwl.v1_2_1.CWLDocumentation",
+        "ogc.cwl.v1_2_1.CWLInputItemBase"
+      ],
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputItem/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputItem/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputItem/schema.yaml",
+      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputItem/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputItem/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLInputItem/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLInputItem/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLInputItem"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.cwl.v1_2_1.CWLOutputObject",
+      "name": "CWLOutputObject",
+      "itemClass": "schema",
+      "abstract": "CWLOutputObject",
+      "status": "under-development",
+      "dateTimeAddition": "2025-09-29T14:14:37.690989",
+      "dateOfLastChange": "2025-09-30",
+      "register": "ogc-building-block-register",
+      "link": "https://www.commonwl.org/v1.2/Workflow.html",
+      "version": "1.2.1",
+      "tags": [
+        "cwl"
+      ],
+      "shaclShapes": {},
+      "dependsOn": [
+        "ogc.cwl.v1_2_1.CWLOutputObjectBase",
+        "ogc.cwl.v1_2_1.CWLDocumentation"
+      ],
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputObject/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputObject/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputObject/schema.yaml",
+      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputObject/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputObject/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLOutputObject/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLOutputObject/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLOutputObject"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
       "itemIdentifier": "ogc.cwl.v1_2_1.SchemaDefRequirement",
       "name": "SchemaDefRequirement",
       "itemClass": "schema",
@@ -5584,8 +5008,8 @@
       "dependsOn": [
         "ogc.cwl.v1_2_1.CWLTypeEnum",
         "ogc.cwl.v1_2_1.CWLImport",
-        "ogc.cwl.v1_2_1.CWLTypeRecordSchema",
-        "ogc.cwl.v1_2_1.CWLTypeRecordArray"
+        "ogc.cwl.v1_2_1.CWLTypeRecordArray",
+        "ogc.cwl.v1_2_1.CWLTypeRecordSchema"
       ],
       "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/SchemaDefRequirement/context.jsonld",
       "schema": {
@@ -5618,12 +5042,12 @@
       ]
     },
     {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLWorkflowStepItem",
-      "name": "CWLWorkflowStepItem",
+      "itemIdentifier": "ogc.cwl.v1_2_1.CWLTypeRecordFieldDef",
+      "name": "CWLTypeRecordFieldDef",
       "itemClass": "schema",
-      "abstract": "CWLWorkflowStepItem",
+      "abstract": "CWLTypeRecordFieldDef",
       "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.692088",
+      "dateTimeAddition": "2025-09-29T14:14:37.711487",
       "dateOfLastChange": "2025-09-30",
       "register": "ogc-building-block-register",
       "link": "https://www.commonwl.org/v1.2/Workflow.html",
@@ -5633,30 +5057,134 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLWorkflowStepId",
-        "ogc.cwl.v1_2_1.CWLWorkflowStepObject"
+        "ogc.cwl.v1_2_1.CWLTypeRecordFieldDefBase",
+        "ogc.cwl.v1_2_1.CWLFileOnlyParametersConditional",
+        "ogc.cwl.v1_2_1.CWLDirectoryOnlyParametersConditional"
       ],
       "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepItem/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepItem/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldDef/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldDef/schema.json"
       },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepItem/schema.yaml",
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepItem/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepItem/",
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordFieldDef/schema.yaml",
+      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldDef/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordFieldDef/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLWorkflowStepItem/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeRecordFieldDef/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLWorkflowStepItem/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeRecordFieldDef/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLWorkflowStepItem"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeRecordFieldDef"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.cwl.v1_2_1.CWLInputsDefinition",
+      "name": "CWLInputsDefinition",
+      "itemClass": "schema",
+      "abstract": "All inputs available to the Application Package.",
+      "status": "under-development",
+      "dateTimeAddition": "2025-09-29T14:14:37.677093",
+      "dateOfLastChange": "2025-09-30",
+      "register": "ogc-building-block-register",
+      "link": "https://www.commonwl.org/v1.2/Workflow.html",
+      "version": "1.2.1",
+      "tags": [
+        "cwl"
+      ],
+      "shaclShapes": {},
+      "dependsOn": [
+        "ogc.cwl.v1_2_1.CWLType",
+        "ogc.cwl.v1_2_1.CWLImport",
+        "ogc.cwl.v1_2_1.CWLInputItem",
+        "ogc.cwl.v1_2_1.CWLInputStdIn",
+        "ogc.cwl.v1_2_1.CWLInputObject"
+      ],
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputsDefinition/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputsDefinition/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputsDefinition/schema.yaml",
+      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputsDefinition/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputsDefinition/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLInputsDefinition/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLInputsDefinition/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLInputsDefinition"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.cwl.v1_2_1.CWLOutputsDefinition",
+      "name": "CWLOutputsDefinition",
+      "itemClass": "schema",
+      "abstract": "All outputs produced by the Application Package.",
+      "status": "under-development",
+      "dateTimeAddition": "2025-09-29T14:14:37.677375",
+      "dateOfLastChange": "2025-09-30",
+      "register": "ogc-building-block-register",
+      "link": "https://www.commonwl.org/v1.2/Workflow.html",
+      "version": "1.2.1",
+      "tags": [
+        "cwl"
+      ],
+      "shaclShapes": {},
+      "dependsOn": [
+        "ogc.cwl.v1_2_1.CWLOutputStdOut",
+        "ogc.cwl.v1_2_1.CWLOutputStdErr",
+        "ogc.cwl.v1_2_1.CWLType",
+        "ogc.cwl.v1_2_1.CWLImport",
+        "ogc.cwl.v1_2_1.CWLOutputObject",
+        "ogc.cwl.v1_2_1.CWLOutputItem"
+      ],
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputsDefinition/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputsDefinition/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputsDefinition/schema.yaml",
+      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputsDefinition/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputsDefinition/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLOutputsDefinition/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLOutputsDefinition/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLOutputsDefinition"
         }
       },
       "@type": [
@@ -5681,23 +5209,23 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.cwl.v1_2_1.ToolTimeLimitRequirement",
         "ogc.cwl.v1_2_1.SchemaDefRequirement",
-        "ogc.cwl.v1_2_1.InitialWorkDirRequirement",
-        "ogc.cwl.v1_2_1.ScatterFeatureRequirement",
-        "ogc.cwl.v1_2_1.EnvVarRequirement",
-        "ogc.cwl.v1_2_1.WorkReuseRequirement",
-        "ogc.cwl.v1_2_1.cwltool-CUDARequirement",
-        "ogc.cwl.v1_2_1.SubworkflowFeatureRequirement",
-        "ogc.cwl.v1_2_1.NetworkAccessRequirement",
         "ogc.cwl.v1_2_1.InlineJavascriptRequirement",
-        "ogc.cwl.v1_2_1.ResourceRequirement",
+        "ogc.cwl.v1_2_1.DockerRequirement",
+        "ogc.cwl.v1_2_1.WorkReuseRequirement",
+        "ogc.cwl.v1_2_1.ToolTimeLimitRequirement",
+        "ogc.cwl.v1_2_1.ShellCommandRequirement",
         "ogc.cwl.v1_2_1.InplaceUpdateRequirement",
+        "ogc.cwl.v1_2_1.ScatterFeatureRequirement",
+        "ogc.cwl.v1_2_1.NetworkAccessRequirement",
+        "ogc.cwl.v1_2_1.SubworkflowFeatureRequirement",
         "ogc.cwl.v1_2_1.MultipleInputFeatureRequirement",
         "ogc.cwl.v1_2_1.SoftwareRequirement",
-        "ogc.cwl.v1_2_1.ShellCommandRequirement",
-        "ogc.cwl.v1_2_1.DockerRequirement",
+        "ogc.cwl.v1_2_1.cwltool-CUDARequirement",
         "ogc.cwl.v1_2_1.LoadListingRequirement",
+        "ogc.cwl.v1_2_1.EnvVarRequirement",
+        "ogc.cwl.v1_2_1.ResourceRequirement",
+        "ogc.cwl.v1_2_1.InitialWorkDirRequirement",
         "ogc.cwl.v1_2_1.StepInputExpressionRequirement"
       ],
       "schema": {
@@ -5745,23 +5273,23 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.cwl.v1_2_1.ToolTimeLimitRequirement",
-        "ogc.cwl.v1_2_1.InitialWorkDirRequirement",
-        "ogc.cwl.v1_2_1.SchemaDefRequirement",
-        "ogc.cwl.v1_2_1.DockerRequirement",
-        "ogc.cwl.v1_2_1.EnvVarRequirement",
-        "ogc.cwl.v1_2_1.ScatterFeatureRequirement",
-        "ogc.cwl.v1_2_1.WorkReuseRequirement",
-        "ogc.cwl.v1_2_1.cwltool-CUDARequirement",
-        "ogc.cwl.v1_2_1.NetworkAccessRequirement",
         "ogc.cwl.v1_2_1.InlineJavascriptRequirement",
+        "ogc.cwl.v1_2_1.DockerRequirement",
+        "ogc.cwl.v1_2_1.WorkReuseRequirement",
+        "ogc.cwl.v1_2_1.ToolTimeLimitRequirement",
         "ogc.cwl.v1_2_1.ResourceRequirement",
+        "ogc.cwl.v1_2_1.ShellCommandRequirement",
         "ogc.cwl.v1_2_1.InplaceUpdateRequirement",
+        "ogc.cwl.v1_2_1.ScatterFeatureRequirement",
+        "ogc.cwl.v1_2_1.NetworkAccessRequirement",
+        "ogc.cwl.v1_2_1.SubworkflowFeatureRequirement",
         "ogc.cwl.v1_2_1.MultipleInputFeatureRequirement",
         "ogc.cwl.v1_2_1.SoftwareRequirement",
-        "ogc.cwl.v1_2_1.ShellCommandRequirement",
-        "ogc.cwl.v1_2_1.SubworkflowFeatureRequirement",
+        "ogc.cwl.v1_2_1.cwltool-CUDARequirement",
         "ogc.cwl.v1_2_1.LoadListingRequirement",
+        "ogc.cwl.v1_2_1.EnvVarRequirement",
+        "ogc.cwl.v1_2_1.SchemaDefRequirement",
+        "ogc.cwl.v1_2_1.InitialWorkDirRequirement",
         "ogc.cwl.v1_2_1.StepInputExpressionRequirement"
       ],
       "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLRequirementsMap/context.jsonld",
@@ -5810,8 +5338,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLRequirementsItem",
-        "ogc.cwl.v1_2_1.CWLHintsItemExtras"
+        "ogc.cwl.v1_2_1.CWLHintsItemExtras",
+        "ogc.cwl.v1_2_1.CWLRequirementsItem"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLHintsItem/schema.yaml",
@@ -5859,8 +5387,8 @@
       "shaclShapes": {},
       "dependsOn": [
         "ogc.cwl.v1_2_1.CWLImport",
-        "ogc.cwl.v1_2_1.CWLRequirementsItem",
-        "ogc.cwl.v1_2_1.CWLRequirementsMap"
+        "ogc.cwl.v1_2_1.CWLRequirementsMap",
+        "ogc.cwl.v1_2_1.CWLRequirementsItem"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLRequirements/schema.yaml",
@@ -5908,9 +5436,9 @@
       "shaclShapes": {},
       "dependsOn": [
         "ogc.cwl.v1_2_1.CWLImport",
+        "ogc.cwl.v1_2_1.CWLRequirementsMap",
         "ogc.cwl.v1_2_1.CWLHintsItem",
-        "ogc.cwl.v1_2_1.CWLHintsMapExtras",
-        "ogc.cwl.v1_2_1.CWLRequirementsMap"
+        "ogc.cwl.v1_2_1.CWLHintsMapExtras"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLHints/schema.yaml",
@@ -5957,17 +5485,17 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLIntent",
-        "ogc.cwl.v1_2_1.CWLIdentifier",
-        "ogc.cwl.v1_2_1.CWLInputsDefinition",
-        "ogc.cwl.v1_2_1.CWLCommand",
         "ogc.cwl.v1_2_1.CWLExpression",
+        "ogc.cwl.v1_2_1.CWLIdentifier",
+        "ogc.cwl.v1_2_1.CWLHints",
+        "ogc.cwl.v1_2_1.CWLIntent",
+        "ogc.cwl.v1_2_1.CWLOutputsDefinition",
+        "ogc.cwl.v1_2_1.CWLCommand",
+        "ogc.cwl.v1_2_1.CWLInputsDefinition",
+        "ogc.cwl.v1_2_1.CWLRequirements",
         "ogc.cwl.v1_2_1.CWLScatterMethod",
         "ogc.cwl.v1_2_1.CWLArguments",
-        "ogc.cwl.v1_2_1.CWLScatter",
-        "ogc.cwl.v1_2_1.CWLHints",
-        "ogc.cwl.v1_2_1.CWLRequirements",
-        "ogc.cwl.v1_2_1.CWLOutputsDefinition"
+        "ogc.cwl.v1_2_1.CWLScatter"
       ],
       "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLAtomicBase/context.jsonld",
       "schema": {
@@ -6015,16 +5543,16 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLIntent",
         "ogc.cwl.v1_2_1.CWLIdentifier",
-        "ogc.cwl.v1_2_1.CWLInputsDefinition",
+        "ogc.cwl.v1_2_1.CWLHints",
+        "ogc.cwl.v1_2_1.CWLIntent",
+        "ogc.cwl.v1_2_1.CWLOutputsDefinition",
         "ogc.cwl.v1_2_1.CWLCommand",
+        "ogc.cwl.v1_2_1.CWLInputsDefinition",
+        "ogc.cwl.v1_2_1.CWLRequirements",
         "ogc.cwl.v1_2_1.CWLScatterMethod",
         "ogc.cwl.v1_2_1.CWLArguments",
-        "ogc.cwl.v1_2_1.CWLScatter",
-        "ogc.cwl.v1_2_1.CWLHints",
-        "ogc.cwl.v1_2_1.CWLRequirements",
-        "ogc.cwl.v1_2_1.CWLOutputsDefinition"
+        "ogc.cwl.v1_2_1.CWLScatter"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLGraphItemBase/schema.yaml",
@@ -6071,12 +5599,12 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLInputsDefinition",
         "ogc.cwl.v1_2_1.CWLWorkflowStepItem",
-        "ogc.cwl.v1_2_1.CWLWorkflowStepObject",
         "ogc.cwl.v1_2_1.CWLHints",
-        "ogc.cwl.v1_2_1.CWLRequirements",
-        "ogc.cwl.v1_2_1.CWLOutputsDefinition"
+        "ogc.cwl.v1_2_1.CWLOutputsDefinition",
+        "ogc.cwl.v1_2_1.CWLWorkflowStepObject",
+        "ogc.cwl.v1_2_1.CWLInputsDefinition",
+        "ogc.cwl.v1_2_1.CWLRequirements"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowBase/schema.yaml",
@@ -6123,10 +5651,10 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLDocumentation",
-        "ogc.cwl.v1_2_1.CWLMetadata",
+        "ogc.cwl.v1_2_1.CWLVersion",
         "ogc.cwl.v1_2_1.CWLAtomicBase",
-        "ogc.cwl.v1_2_1.CWLVersion"
+        "ogc.cwl.v1_2_1.CWLDocumentation",
+        "ogc.cwl.v1_2_1.CWLMetadata"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLAtomic/schema.yaml",
@@ -6173,9 +5701,9 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
+        "ogc.cwl.v1_2_1.CWLAtomicBase",
         "ogc.cwl.v1_2_1.CWLDocumentation",
-        "ogc.cwl.v1_2_1.CWLMetadata",
-        "ogc.cwl.v1_2_1.CWLAtomicBase"
+        "ogc.cwl.v1_2_1.CWLMetadata"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLAtomicNested/schema.yaml",
@@ -6222,9 +5750,9 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
+        "ogc.cwl.v1_2_1.CWLGraphItemBase",
         "ogc.cwl.v1_2_1.CWLDocumentation",
-        "ogc.cwl.v1_2_1.CWLMetadata",
-        "ogc.cwl.v1_2_1.CWLGraphItemBase"
+        "ogc.cwl.v1_2_1.CWLMetadata"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLGraphItem/schema.yaml",
@@ -6271,11 +5799,11 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLDocumentation",
+        "ogc.cwl.v1_2_1.CWLVersion",
         "ogc.cwl.v1_2_1.CWLWorkflowBase",
-        "ogc.cwl.v1_2_1.CWLMetadata",
         "ogc.cwl.v1_2_1.CWLWorkflowClass",
-        "ogc.cwl.v1_2_1.CWLVersion"
+        "ogc.cwl.v1_2_1.CWLDocumentation",
+        "ogc.cwl.v1_2_1.CWLMetadata"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflow/schema.yaml",
@@ -6307,12 +5835,12 @@
       ]
     },
     {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLWorkflowNested",
-      "name": "CWLWorkflowNested",
+      "itemIdentifier": "ogc.cwl.v1_2_1.CWLWorkflowStepObject",
+      "name": "CWLWorkflowStepObject",
       "itemClass": "schema",
-      "abstract": "CWLWorkflowNested",
+      "abstract": "CWLWorkflowStepObject",
       "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.710969",
+      "dateTimeAddition": "2025-09-29T14:14:37.691949",
       "dateOfLastChange": "2025-09-30",
       "register": "ogc-building-block-register",
       "link": "https://www.commonwl.org/v1.2/Workflow.html",
@@ -6322,32 +5850,39 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
+        "ogc.cwl.v1_2_1.CWLExpression",
+        "ogc.cwl.v1_2_1.CWLAtomicNested",
+        "ogc.cwl.v1_2_1.IdentifierArray",
         "ogc.cwl.v1_2_1.CWLWorkflowBase",
-        "ogc.cwl.v1_2_1.CWLMetadata",
+        "ogc.cwl.v1_2_1.CWLTextPatternID",
+        "ogc.cwl.v1_2_1.CWLWorkflowStepOut",
         "ogc.cwl.v1_2_1.CWLDocumentation",
-        "ogc.cwl.v1_2_1.CWLWorkflowClass"
+        "ogc.cwl.v1_2_1.CWLWorkflowClass",
+        "ogc.cwl.v1_2_1.CWLWorkflowStepIn",
+        "ogc.cwl.v1_2_1.CWLMetadata"
       ],
+      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepObject/context.jsonld",
       "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowNested/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowNested/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepObject/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepObject/schema.json"
       },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowNested/schema.yaml",
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowNested/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowNested/",
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepObject/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepObject/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepObject/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLWorkflowNested/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLWorkflowStepObject/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLWorkflowNested/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLWorkflowStepObject/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLWorkflowNested"
+          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLWorkflowStepObject"
         }
       },
       "@type": [
@@ -6372,10 +5907,10 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLDocumentation",
+        "ogc.cwl.v1_2_1.CWLVersion",
         "ogc.cwl.v1_2_1.CWLMetadata",
-        "ogc.cwl.v1_2_1.CWLGraphItem",
-        "ogc.cwl.v1_2_1.CWLVersion"
+        "ogc.cwl.v1_2_1.CWLDocumentation",
+        "ogc.cwl.v1_2_1.CWLGraphItem"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLGraph/schema.yaml",
@@ -6407,54 +5942,6 @@
       ]
     },
     {
-      "itemIdentifier": "ogc.cwl.v1_2_1.CWLWorkflowStepRun",
-      "name": "CWLWorkflowStepRun",
-      "itemClass": "schema",
-      "abstract": "Nested CWL definition to run as Workflow step.",
-      "status": "under-development",
-      "dateTimeAddition": "2025-09-29T14:14:37.708331",
-      "dateOfLastChange": "2025-09-30",
-      "register": "ogc-building-block-register",
-      "link": "https://www.commonwl.org/v1.2/Workflow.html",
-      "version": "1.2.1",
-      "tags": [
-        "cwl"
-      ],
-      "shaclShapes": {},
-      "dependsOn": [
-        "ogc.cwl.v1_2_1.CWLAtomicNested",
-        "ogc.cwl.v1_2_1.CWLWorkflowNested"
-      ],
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepRun/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepRun/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepRun/schema.yaml",
-      "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepRun/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepRun/",
-      "rdfData": [],
-      "validationPassed": true,
-      "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLWorkflowStepRun/index.md"
-        },
-        "json-full": {
-          "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLWorkflowStepRun/index.json"
-        },
-        "bblocks-viewer": {
-          "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLWorkflowStepRun"
-        }
-      },
-      "@type": [
-        "bblocks:Schema",
-        "skos:Concept",
-        "dcat:Dataset"
-      ]
-    },
-    {
       "itemIdentifier": "ogc.cwl.v1_2_1.CWL",
       "name": "CWL",
       "itemClass": "schema",
@@ -6472,8 +5959,8 @@
       "shaclShapes": {},
       "dependsOn": [
         "ogc.cwl.v1_2_1.CWLWorkflow",
-        "ogc.cwl.v1_2_1.CWLAtomic",
-        "ogc.cwl.v1_2_1.CWLGraph"
+        "ogc.cwl.v1_2_1.CWLGraph",
+        "ogc.cwl.v1_2_1.CWLAtomic"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWL/schema.yaml",
