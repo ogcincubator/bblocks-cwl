@@ -1,4 +1,18 @@
 allOf:
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLTypeRecordFieldDefBase
+- properties:
+    name:
+      $comment: 'Required if list item. Otherwise, optional since it is the mapping
+        key.
+
+        This requirement is defined in ''CWLTypeRecordFieldsItem'' to allow reuse of
+        this schema.
+
+        '
+      type: string
+    type:
+      $ref: bblocks://ogc.cwl.v1_2_1.CWLType
+  required:
+    - type
+  type: object
 - $ref: bblocks://ogc.cwl.v1_2_1.CWLFileOnlyParametersConditional
 - $ref: bblocks://ogc.cwl.v1_2_1.CWLDirectoryOnlyParametersConditional
