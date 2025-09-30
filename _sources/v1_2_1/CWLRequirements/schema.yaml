@@ -1,5 +1,23 @@
+$defs:
+  CWLRequirementsList:
+    items:
+      oneOf:
+        - allOf:
+            - $comment: 'When using the list representation, ''class'' is required to indicate
+            which one is being represented.
+
+            When using the mapping representation, ''class'' is optional since it''s the
+            key, but it must match by name.
+
+            '
+              required:
+                - class
+            - $ref: bblocks://ogc.cwl.v1_2_1.CWLRequirementsItem
+        - $ref: bblocks://ogc.cwl.v1_2_1.CWLImport
+    title: CWLRequirementsList
+    type: array
 description: Explicit requirement to execute the application package.
 oneOf:
 - $ref: bblocks://ogc.cwl.v1_2_1.CWLRequirementsMap
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLRequirementsList
+- $ref: '#/$defs/CWLRequirementsList'
 title: CWLRequirements

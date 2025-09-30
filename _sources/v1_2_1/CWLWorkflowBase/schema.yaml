@@ -1,3 +1,12 @@
+$defs:
+  CWLWorkflowStepMap:
+    additionalProperties:
+      $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowStepObject
+    type: object
+  CWLWorkflowStepList:
+    items:
+      $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowStepItem
+    type: array
 properties:
   hints:
     $comment: Technically a different subset, but lots of redefinitions to be done.
@@ -10,5 +19,7 @@ properties:
     $comment: Technically a different subset, but lots of redefinitions to be done.
     $ref: bblocks://ogc.cwl.v1_2_1.CWLRequirements
   steps:
-    $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowSteps
+    oneOf:
+      - $ref: '#/$defs/CWLWorkflowStepMap'
+      - $ref: '#/$defs/CWLWorkflowStepList'
 type: object

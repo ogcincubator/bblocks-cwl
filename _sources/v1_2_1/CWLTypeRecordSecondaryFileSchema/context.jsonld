@@ -1,7 +1,0 @@
-{
-  "@context": {
-    "cwl": "https://w3id.org/cwl/cwl#",
-    "pattern": "https://w3id.org/cwl/cwl#SecondaryFileSchema/pattern",
-    "required": "https://w3id.org/cwl/cwl#SecondaryFileSchema/required"
-  }
-}

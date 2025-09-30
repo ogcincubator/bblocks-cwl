@@ -1,10 +1,41 @@
+$defs:
+  CWLTypeRecordSecondaryFiles:
+    oneOf:
+      - $comment: Either an expression or the regex pattern directly.
+        $ref: bblocks://ogc.cwl.v1_2_1.CWLExpression
+      - $ref: '#/$defs/CWLTypeRecordSecondaryFileSchema'
+      - items:
+          $comment: Either an expression or the regex pattern directly.
+          $ref: bblocks://ogc.cwl.v1_2_1.CWLExpression
+        type: array
+      - items:
+          $ref: '#/$defs/CWLTypeRecordSecondaryFileSchema'
+        type: array
+  CWLTypeRecordSecondaryFileSchema:
+    additionalProperties: false
+    properties:
+      pattern:
+        $comment: Either an expression or the regex pattern directly.
+        $ref: bblocks://ogc.cwl.v1_2_1.CWLExpression
+      required:
+        oneOf:
+          - type: boolean
+          - $ref: bblocks://ogc.cwl.v1_2_1.CWLExpression
+    required:
+      - pattern
+    type: object
+
 properties:
   format:
-    $ref: bblocks://ogc.cwl.v1_2_1.CWLFormat
+    oneOf:
+      - $ref: bblocks://ogc.cwl.v1_2_1.CWLExpression
+      - items:
+          $ref: bblocks://ogc.cwl.v1_2_1.CWLExpression
+        type: array
   loadContents:
     type: boolean
   secondaryFiles:
-    $ref: bblocks://ogc.cwl.v1_2_1.CWLTypeRecordSecondaryFiles
+    $ref: '#/$defs/CWLTypeRecordSecondaryFiles'
   streamable:
     type: boolean
 type: object

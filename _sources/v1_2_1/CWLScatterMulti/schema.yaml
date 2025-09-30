@@ -1,4 +1,0 @@
-items:
-  $ref: bblocks://ogc.cwl.v1_2_1.CWLIdentifier
-title: CWLScatterMulti
-type: array

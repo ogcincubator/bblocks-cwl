@@ -6,7 +6,7 @@ $comment: 'For any new items added, ensure they are added under ''class'' of ''U
 
   '
 oneOf:
-- $ref: bblocks://ogc.cwl.v1_2_1.cwltool:CUDARequirement
+- $ref: bblocks://ogc.cwl.v1_2_1.cwltool-CUDARequirement
 - $ref: bblocks://ogc.cwl.v1_2_1.DockerRequirement
 - $ref: bblocks://ogc.cwl.v1_2_1.SoftwareRequirement
 - $ref: bblocks://ogc.cwl.v1_2_1.ShellCommandRequirement

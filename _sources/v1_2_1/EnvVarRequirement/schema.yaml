@@ -1,3 +1,16 @@
+$defs:
+  EnvironmentDef:
+    additionalProperties: false
+    properties:
+      envName:
+        minLength: 1
+        type: string
+      envValue:
+        $ref: bblocks://ogc.cwl.v1_2_1.CWLExpression
+    required:
+      - envName
+      - envValue
+    type: object
 additionalProperties: false
 properties:
   class:
@@ -7,13 +20,13 @@ properties:
   envDef:
     oneOf:
     - items:
-        $ref: bblocks://ogc.cwl.v1_2_1.EnvironmentDef
+        $ref: '#/$defs/EnvironmentDef'
       type: array
     - additionalProperties:
         oneOf:
         - $ref: bblocks://ogc.cwl.v1_2_1.CWLExpression
           description: The 'envValue' specified directly
-        - $ref: bblocks://ogc.cwl.v1_2_1.EnvironmentDef
+        - $ref: '#/$defs/EnvironmentDef'
       description: Mapping of 'envName' to environment value or definition.
       type: object
 required:

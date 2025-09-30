@@ -21,7 +21,19 @@ properties:
     - ToolTimeLimit
     type: string
   timelimit:
-    $ref: bblocks://ogc.cwl.v1_2_1.TimeLimitValue
+    description: 'The time limit, in seconds.
+
+
+      A time limit of zero means no time limit.
+
+      Negative time limits are an error.
+
+      '
+    oneOf:
+      - minimum: 0.0
+        type: number
+      - $ref: bblocks://ogc.cwl.v1_2_1.CWLExpression
+    title: TimeLimitValue
 required:
 - timelimit
 title: ToolTimeLimitRequirement
