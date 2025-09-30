@@ -12,7 +12,17 @@ CWLOutputObject
 ```yaml
 allOf:
 - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/schema.yaml
-- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputObjectBase/schema.yaml
+- additionalProperties: {}
+  properties:
+    outputBinding:
+      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/OutputBinding/schema.yaml
+    type:
+      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml
+  required:
+  - type
+  summary: CWL type definition with parameters.
+  title: CWLOutputObject
+  type: object
 
 ```
 
@@ -28,12 +38,7 @@ Links to the schema:
 {
   "@context": {
     "label": "http://www.w3.org/2000/01/rdf-schema#label",
-    "outputBinding": {
-      "@context": {
-        "glob": "cwl:CommandOutputBinding/glob"
-      },
-      "@id": "cwl:outputBinding"
-    },
+    "glob": "cwl:CommandOutputBinding/glob",
     "loadContents": "cwl:loadContents",
     "streamable": "cwl:FieldBase/streamable",
     "loadListing": "cwl:loadListing",

@@ -16,10 +16,10 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.InputBinding",
-    "ogc.cwl.v1_2_1.CWLDocumentation",
     "ogc.cwl.v1_2_1.CWLDefaultTypedConditional",
-    "ogc.cwl.v1_2_1.CWLType"
+    "ogc.cwl.v1_2_1.CWLType",
+    "ogc.cwl.v1_2_1.CWLDocumentation",
+    "ogc.cwl.v1_2_1.InputBinding"
   ],
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputObject/context.jsonld",
   "schema": {

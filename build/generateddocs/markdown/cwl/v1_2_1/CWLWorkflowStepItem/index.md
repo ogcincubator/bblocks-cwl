@@ -82,12 +82,8 @@ Links to the schema:
     "timelimit": "cwl:ToolTimeLimit/timelimit",
     "enableReuse": "cwl:WorkReuse/enableReuse",
     "inputBinding": "cwl:inputBinding",
-    "outputBinding": {
-      "@context": {
-        "glob": "cwl:CommandOutputBinding/glob"
-      },
-      "@id": "cwl:outputBinding"
-    },
+    "outputBinding": "cwl:outputBinding",
+    "glob": "cwl:CommandOutputBinding/glob",
     "stderr": "cwl:stderr",
     "stdin": "cwl:stdin",
     "stdout": "cwl:stdout",

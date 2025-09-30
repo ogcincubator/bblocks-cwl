@@ -98,12 +98,8 @@ Links to the schema:
     "basename": "cwl:basename",
     "nameroot": "cwl:File/nameroot",
     "label": "http://www.w3.org/2000/01/rdf-schema#label",
-    "outputBinding": {
-      "@context": {
-        "glob": "cwl:CommandOutputBinding/glob"
-      },
-      "@id": "cwl:outputBinding"
-    },
+    "outputBinding": "cwl:outputBinding",
+    "glob": "cwl:CommandOutputBinding/glob",
     "linkMerge": "cwl:linkMerge",
     "valueFrom": "cwl:valueFrom",
     "itemSeparator": "cwl:CommandLineBinding/itemSeparator",

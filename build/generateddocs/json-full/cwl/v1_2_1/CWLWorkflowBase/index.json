@@ -16,12 +16,12 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLInputsDefinition",
-    "ogc.cwl.v1_2_1.CWLWorkflowStepObject",
     "ogc.cwl.v1_2_1.CWLRequirements",
-    "ogc.cwl.v1_2_1.CWLHints",
+    "ogc.cwl.v1_2_1.CWLOutputsDefinition",
     "ogc.cwl.v1_2_1.CWLWorkflowStepItem",
-    "ogc.cwl.v1_2_1.CWLOutputsDefinition"
+    "ogc.cwl.v1_2_1.CWLHints",
+    "ogc.cwl.v1_2_1.CWLInputsDefinition",
+    "ogc.cwl.v1_2_1.CWLWorkflowStepObject"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowBase/schema.yaml",

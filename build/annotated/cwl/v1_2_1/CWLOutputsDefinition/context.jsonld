@@ -1,15 +1,11 @@
 {
   "@context": {
-    "outputBinding": {
-      "@context": {
-        "glob": "cwl:CommandOutputBinding/glob"
-      },
-      "@id": "cwl:outputBinding"
-    },
+    "outputBinding": "cwl:outputBinding",
     "loadContents": "cwl:loadContents",
     "streamable": "cwl:FieldBase/streamable",
     "loadListing": "cwl:loadListing",
     "label": "http://www.w3.org/2000/01/rdf-schema#label",
+    "glob": "cwl:CommandOutputBinding/glob",
     "cwl": "https://w3id.org/cwl/cwl#",
     "@version": 1.1
   }

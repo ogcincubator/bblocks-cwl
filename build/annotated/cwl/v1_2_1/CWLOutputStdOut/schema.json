@@ -4,7 +4,15 @@
       "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputStdOutDefinition/schema.json"
     },
     {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputStdOutObjectType/schema.json"
+      "properties": {
+        "type": {
+          "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputStdOutDefinition/schema.json"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "type": "object"
     }
   ]
 }

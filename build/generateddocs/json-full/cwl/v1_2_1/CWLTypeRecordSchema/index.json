@@ -17,8 +17,8 @@
   "shaclShapes": {},
   "dependsOn": [
     "ogc.cwl.v1_2_1.CWLTypeRecordFieldsItem",
-    "ogc.cwl.v1_2_1.CWLTypeRecordFieldDef",
-    "ogc.cwl.v1_2_1.CWLType"
+    "ogc.cwl.v1_2_1.CWLType",
+    "ogc.cwl.v1_2_1.CWLTypeRecordFieldDef"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordSchema/schema.yaml",

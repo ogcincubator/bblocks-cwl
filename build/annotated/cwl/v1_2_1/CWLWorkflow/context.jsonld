@@ -49,12 +49,8 @@
     "inputBinding": "cwl:inputBinding",
     "basename": "cwl:basename",
     "nameroot": "cwl:File/nameroot",
-    "outputBinding": {
-      "@context": {
-        "glob": "cwl:CommandOutputBinding/glob"
-      },
-      "@id": "cwl:outputBinding"
-    },
+    "outputBinding": "cwl:outputBinding",
+    "glob": "cwl:CommandOutputBinding/glob",
     "linkMerge": "cwl:linkMerge",
     "valueFrom": "cwl:valueFrom",
     "itemSeparator": "cwl:CommandLineBinding/itemSeparator",

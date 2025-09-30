@@ -54,12 +54,8 @@
     "inputBinding": "cwl:inputBinding",
     "basename": "cwl:basename",
     "nameroot": "cwl:File/nameroot",
-    "outputBinding": {
-      "@context": {
-        "glob": "cwl:CommandOutputBinding/glob"
-      },
-      "@id": "cwl:outputBinding"
-    },
+    "outputBinding": "cwl:outputBinding",
+    "glob": "cwl:CommandOutputBinding/glob",
     "loadContents": "cwl:loadContents",
     "streamable": "cwl:FieldBase/streamable",
     "cwl": "https://w3id.org/cwl/cwl#",

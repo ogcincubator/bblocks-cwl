@@ -16,10 +16,10 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
+    "ogc.cwl.v1_2_1.BuiltinRequirement",
     "ogc.cwl.v1_2_1.OGCAPIRequirement",
-    "ogc.cwl.v1_2_1.UnknownRequirement",
     "ogc.cwl.v1_2_1.WPS1Requirement",
-    "ogc.cwl.v1_2_1.BuiltinRequirement"
+    "ogc.cwl.v1_2_1.UnknownRequirement"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLHintsMapExtras/schema.yaml",

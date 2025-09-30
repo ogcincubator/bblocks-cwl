@@ -16,8 +16,8 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLExpression",
-    "ogc.cwl.v1_2_1.ResourceQuantityOrFractional"
+    "ogc.cwl.v1_2_1.ResourceQuantityOrFractional",
+    "ogc.cwl.v1_2_1.CWLExpression"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ResourceOutDirMaximum/schema.yaml",

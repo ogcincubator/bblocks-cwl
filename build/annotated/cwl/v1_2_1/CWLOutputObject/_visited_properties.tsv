@@ -1,7 +1,7 @@
 path	@id
 /doc	
 /label	http://www.w3.org/2000/01/rdf-schema#label
-/outputBinding	https://w3id.org/cwl/cwl#outputBinding
+/outputBinding	
 /outputBinding/glob	https://w3id.org/cwl/cwl#CommandOutputBinding/glob
 /type	
 /type/items	

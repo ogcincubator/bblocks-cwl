@@ -16,8 +16,8 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.ReferenceURL",
-    "ogc.cwl.v1_2_1.CWLTextPatternID"
+    "ogc.cwl.v1_2_1.CWLTextPatternID",
+    "ogc.cwl.v1_2_1.ReferenceURL"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/WPS1Requirement/schema.yaml",

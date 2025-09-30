@@ -82,12 +82,8 @@ Links to the schema:
     "inputBinding": "cwl:inputBinding",
     "basename": "cwl:basename",
     "nameroot": "cwl:File/nameroot",
-    "outputBinding": {
-      "@context": {
-        "glob": "cwl:CommandOutputBinding/glob"
-      },
-      "@id": "cwl:outputBinding"
-    },
+    "outputBinding": "cwl:outputBinding",
+    "glob": "cwl:CommandOutputBinding/glob",
     "stderr": "cwl:stderr",
     "stdin": "cwl:stdin",
     "stdout": "cwl:stdout",

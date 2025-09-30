@@ -16,8 +16,8 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLExpression",
-    "ogc.cwl.v1_2_1.LinkMergeMethod"
+    "ogc.cwl.v1_2_1.LinkMergeMethod",
+    "ogc.cwl.v1_2_1.CWLExpression"
   ],
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepInputBase/context.jsonld",
   "schema": {

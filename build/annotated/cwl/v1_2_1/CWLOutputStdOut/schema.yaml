@@ -1,3 +1,8 @@
 oneOf:
 - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputStdOutDefinition/schema.yaml
-- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputStdOutObjectType/schema.yaml
+- properties:
+    type:
+      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputStdOutDefinition/schema.yaml
+  required:
+  - type
+  type: object

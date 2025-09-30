@@ -4,7 +4,21 @@
       "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/schema.json"
     },
     {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputObjectBase/schema.json"
+      "additionalProperties": {},
+      "properties": {
+        "outputBinding": {
+          "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/OutputBinding/schema.json"
+        },
+        "type": {
+          "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.json"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "summary": "CWL type definition with parameters.",
+      "title": "CWLOutputObject",
+      "type": "object"
     }
   ]
 }
