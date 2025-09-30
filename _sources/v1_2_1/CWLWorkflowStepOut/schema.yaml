@@ -3,5 +3,5 @@ description: Mapping of Workflow step inputs to nested CWL tool definitions inpu
 items:
   oneOf:
   - $ref: bblocks://ogc.cwl.v1_2_1.CWLIdentifier
-  - $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowStepOutId
+  - $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowStepId
 type: array

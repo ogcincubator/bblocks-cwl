@@ -1,3 +1,12 @@
+$defs:
+  CWLWorkflowStepMap:
+    additionalProperties:
+      $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowStepObject
+    type: object
+  CWLWorkflowStepList:
+    items:
+      $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowStepItem
+    type: array
 oneOf:
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowStepMap
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowStepList
+- $ref: '#/$defs/CWLWorkflowStepMap'
+- $ref: '#/$defs/CWLWorkflowStepList'

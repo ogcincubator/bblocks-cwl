@@ -1,6 +1,18 @@
 allOf:
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLVersion
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLMetadata
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLDocumentation
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLGraphBase
+  - $ref: bblocks://ogc.cwl.v1_2_1.CWLVersion
+  - $ref: bblocks://ogc.cwl.v1_2_1.CWLMetadata
+  - $ref: bblocks://ogc.cwl.v1_2_1.CWLDocumentation
+  - additionalProperties: { }
+    properties:
+      $graph:
+        type: array
+        items:
+          $ref: bblocks://ogc.cwl.v1_2_1.CWLGraphItem
+        maxItems: 1
+        minItems: 1
+        title: CWLGraphList
+    required:
+      - $graph
+    type: object
+
 title: CWLGraph

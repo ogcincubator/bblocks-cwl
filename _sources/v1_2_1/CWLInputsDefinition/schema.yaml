@@ -1,10 +1,29 @@
 description: All inputs available to the Application Package.
+$defs:
+  CWLInputMap:
+    additionalProperties:
+      oneOf:
+        - $ref: bblocks://ogc.cwl.v1_2_1.CWLType
+        - $ref: bblocks://ogc.cwl.v1_2_1.CWLInputObject
+        - $ref: bblocks://ogc.cwl.v1_2_1.CWLInputStdIn
+        - $ref: bblocks://ogc.cwl.v1_2_1.CWLImport
+    description: Package inputs defined as mapping.
+    properties: { }
+    required: [ ]
+    title: CWLInputMap
+    type: object
+  CWLInputList:
+    description: Package inputs defined as items.
+    items:
+      $ref: bblocks://ogc.cwl.v1_2_1.CWLInputItem
+    title: CWLInputList
+    type: array
 oneOf:
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLInputList
+- $ref: '#/$defs/CWLInputList'
 - $comment: Avoid 'oneOf' conflict of generic mapping key strings as input identifier
     matching against '$import'.
   allOf:
-  - $ref: bblocks://ogc.cwl.v1_2_1.CWLInputMap
+  - $ref: '#/$defs/CWLInputMap'
   - not:
       $ref: bblocks://ogc.cwl.v1_2_1.CWLImport
 - $ref: bblocks://ogc.cwl.v1_2_1.CWLImport

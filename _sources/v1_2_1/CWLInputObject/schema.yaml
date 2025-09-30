@@ -1,5 +1,17 @@
+$defs:
+  CWLInputObjectBase:
+    additionalProperties: { }
+    properties:
+      inputBinding:
+        $ref: bblocks://ogc.cwl.v1_2_1.InputBinding
+        additionalProperties: { }
+      type:
+        $ref: bblocks://ogc.cwl.v1_2_1.CWLType
+    required:
+      - type
+    type: object
 allOf:
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLInputObjectBase
+- $ref: '#/$defs/CWLInputObjectBase'
 - $ref: bblocks://ogc.cwl.v1_2_1.CWLDefaultTypedConditional
 - $ref: bblocks://ogc.cwl.v1_2_1.CWLDocumentation
 summary: CWL type definition with parameters.

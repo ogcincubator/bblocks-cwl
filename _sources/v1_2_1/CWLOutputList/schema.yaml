@@ -1,5 +1,0 @@
-description: Package outputs defined as items.
-items:
-  $ref: bblocks://ogc.cwl.v1_2_1.CWLOutputItem
-title: CWLOutputList
-type: array

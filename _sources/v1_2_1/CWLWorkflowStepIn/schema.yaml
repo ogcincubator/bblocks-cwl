@@ -1,5 +1,20 @@
 description: Mapping of Workflow step inputs to nested CWL tool definitions inputs
   or outputs.
+$defs:
+  CWLWorkflowStepInMap:
+    additionalProperties:
+      oneOf:
+        - type: string
+        - items:
+            type: string
+          type: array
+        - $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowStepInput
+    type: object
+  CWLWorkflowStepInList:
+    items:
+      $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowStepInItem
+    type: array
+
 oneOf:
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowStepInMap
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLWorkflowStepInList
+- $ref: '#/$defs/CWLWorkflowStepInMap'
+- $ref: '#/$defs/CWLWorkflowStepInList'
