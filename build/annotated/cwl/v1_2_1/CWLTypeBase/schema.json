@@ -1,10 +1,35 @@
 {
+  "$defs": {
+    "CWLTypeArray": {
+      "additionalProperties": {},
+      "properties": {
+        "items": {
+          "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.json"
+        },
+        "type": {
+          "enum": [
+            "array"
+          ],
+          "example": "array",
+          "title": "type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "items"
+      ],
+      "summary": "CWL type as list of items.",
+      "title": "CWLTypeArray",
+      "type": "object"
+    }
+  },
   "oneOf": [
     {
       "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeDefinition/schema.json"
     },
     {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeArray/schema.json"
+      "$ref": "#/$defs/CWLTypeArray"
     },
     {
       "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeEnum/schema.json"

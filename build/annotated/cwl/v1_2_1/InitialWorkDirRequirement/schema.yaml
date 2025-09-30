@@ -1,3 +1,19 @@
+$defs:
+  InitialWorkDirListing:
+    oneOf:
+    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml
+    - items:
+        oneOf:
+        - type: 'null'
+        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml
+        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DirectoryListingDirent/schema.yaml
+        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DirectoryListingFileOrDirectory/schema.yaml
+        - items:
+            $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DirectoryListingFileOrDirectory/schema.yaml
+          type: array
+      title: InitialWorkDirListingItems
+      type: array
+    title: InitialWorkDirListing
 additionalProperties: false
 properties:
   class:
@@ -5,7 +21,7 @@ properties:
     - InitialWorkDirRequirement
     type: string
   listing:
-    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InitialWorkDirListing/schema.yaml
+    $ref: '#/$defs/InitialWorkDirListing'
 required:
 - listing
 title: InitialWorkDirRequirement

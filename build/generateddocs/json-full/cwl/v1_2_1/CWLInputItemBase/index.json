@@ -7,7 +7,7 @@
   "abstract": "CWLInputItemBase",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.698935",
-  "dateOfLastChange": "2025-09-29",
+  "dateOfLastChange": "2025-09-30",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -17,9 +17,9 @@
   "shaclShapes": {},
   "dependsOn": [
     "ogc.cwl.v1_2_1.CWLType",
-    "ogc.cwl.v1_2_1.CWLIdentifier",
     "ogc.cwl.v1_2_1.InputBinding",
-    "ogc.cwl.v1_2_1.CWLInputStdIn"
+    "ogc.cwl.v1_2_1.CWLInputStdIn",
+    "ogc.cwl.v1_2_1.CWLIdentifier"
   ],
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputItemBase/context.jsonld",
   "schema": {

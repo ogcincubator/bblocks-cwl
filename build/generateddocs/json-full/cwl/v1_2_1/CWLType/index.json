@@ -7,7 +7,7 @@
   "abstract": "CWLType",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.690093",
-  "dateOfLastChange": "2025-09-29",
+  "dateOfLastChange": "2025-09-30",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -16,8 +16,7 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLTypeBase",
-    "ogc.cwl.v1_2_1.CWLTypeList"
+    "ogc.cwl.v1_2_1.CWLTypeBase"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml",
@@ -28,7 +27,7 @@
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLType/",
   "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "oneOf:\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeBase/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeList/schema.yaml\ntitle: CWL Type\n",
+  "annotatedSchema": "$defs:\n  CWLTypeList:\n    items:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeBase/schema.yaml\n    summary: Combination of allowed CWL types.\n    title: CWLTypeList\n    type: array\noneOf:\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeBase/schema.yaml\n- $ref: '#/$defs/CWLTypeList'\ntitle: CWL Type\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLType"
 }

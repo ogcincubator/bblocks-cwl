@@ -5,7 +5,11 @@
       "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLIdentifier/schema.json"
     },
     {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLScatterMulti/schema.json"
+      "items": {
+        "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLIdentifier/schema.json"
+      },
+      "title": "CWLScatterMulti",
+      "type": "array"
     }
   ],
   "title": "CWLScatter"

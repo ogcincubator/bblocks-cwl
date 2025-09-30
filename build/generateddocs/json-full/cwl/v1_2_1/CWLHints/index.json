@@ -7,7 +7,7 @@
   "abstract": "Non-failing additional hints that can help resolve extra requirements.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.676493",
-  "dateOfLastChange": "2025-09-29",
+  "dateOfLastChange": "2025-09-30",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -16,8 +16,10 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLHintsList",
-    "ogc.cwl.v1_2_1.CWLHintsMap"
+    "ogc.cwl.v1_2_1.CWLImport",
+    "ogc.cwl.v1_2_1.CWLHintsItem",
+    "ogc.cwl.v1_2_1.CWLHintsMapExtras",
+    "ogc.cwl.v1_2_1.CWLRequirementsMap"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLHints/schema.yaml",
@@ -28,7 +30,7 @@
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLHints/",
   "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "description: Non-failing additional hints that can help resolve extra requirements.\noneOf:\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLHintsMap/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLHintsList/schema.yaml\ntitle: CWLHints\n",
+  "annotatedSchema": "description: Non-failing additional hints that can help resolve extra requirements.\n$defs:\n  CWLHintsMap:\n    anyOf:\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLRequirementsMap/schema.yaml\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLHintsMapExtras/schema.yaml\n    title: CWLHintsMap\n  CWLHintsList:\n    items:\n      oneOf:\n      - allOf:\n        - $comment: 'When using the list representation, ''class'' is required to\n            indicate which one is being represented.\n\n            When using the mapping representation, ''class'' is optional since it''s\n            the key, but it must match by name.\n\n            '\n          required:\n          - class\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLHintsItem/schema.yaml\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLImport/schema.yaml\n    title: CWLHintsList\n    type: array\noneOf:\n- $ref: '#/$defs/CWLHintsMap'\n- $ref: '#/$defs/CWLHintsList'\ntitle: CWLHints\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLHints"
 }

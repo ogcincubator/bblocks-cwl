@@ -1,4 +1,0 @@
-anyOf:
-- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLRequirementsMap/schema.yaml
-- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLHintsMapExtras/schema.yaml
-title: CWLHintsMap

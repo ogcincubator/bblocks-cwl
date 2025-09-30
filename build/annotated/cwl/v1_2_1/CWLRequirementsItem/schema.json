@@ -2,7 +2,7 @@
   "$comment": "For any new items added, ensure they are added under 'class' of 'UnknownRequirement' as well.\nOtherwise, insufficiently restrictive classes could cause multiple matches, failing the 'oneOf' condition.\n",
   "oneOf": [
     {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/cwltool:CUDARequirement/schema.json"
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/cwltool-CUDARequirement/schema.json"
     },
     {
       "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DockerRequirement/schema.json"

@@ -10,7 +10,17 @@
       "type": "string"
     },
     "timelimit": {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/TimeLimitValue/schema.json",
+      "description": "The time limit, in seconds.\n\nA time limit of zero means no time limit.\nNegative time limits are an error.\n",
+      "oneOf": [
+        {
+          "minimum": 0.0,
+          "type": "number"
+        },
+        {
+          "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.json"
+        }
+      ],
+      "title": "TimeLimitValue",
       "x-jsonld-id": "https://w3id.org/cwl/cwl#ToolTimeLimit/timelimit"
     }
   },

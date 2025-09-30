@@ -1,8 +1,0 @@
-path	@id
-/entry	
-/entryname	
-/writable	https://w3id.org/cwl/cwl#Dirent/writable
-/checksum	https://w3id.org/cwl/cwl#File/checksum
-/class	
-/location	
-/size	https://w3id.org/cwl/cwl#File/size

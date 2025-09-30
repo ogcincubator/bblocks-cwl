@@ -86,29 +86,25 @@ path	@id
 /run/hints/SchemaDefRequirement/types/fields/type	
 /run/hints/SchemaDefRequirement/types/fields/symbols	
 /run/hints/SchemaDefRequirement/types/fields/name	
-/run/hints/SchemaDefRequirement/types/fields/type/items	
-/run/hints/SchemaDefRequirement/types/fields/type/type	
 /run/hints/SchemaDefRequirement/types/fields/type/symbols	
+/run/hints/SchemaDefRequirement/types/fields/type/type	
 /run/hints/SchemaDefRequirement/types/fields/format	
 /run/hints/SchemaDefRequirement/types/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
 /run/hints/SchemaDefRequirement/types/fields/secondaryFiles	
-/run/hints/SchemaDefRequirement/types/fields/secondaryFiles/pattern	https://w3id.org/cwl/cwl#SecondaryFileSchema/pattern
-/run/hints/SchemaDefRequirement/types/fields/secondaryFiles/required	https://w3id.org/cwl/cwl#SecondaryFileSchema/required
+/run/hints/SchemaDefRequirement/types/fields/secondaryFiles/pattern	
+/run/hints/SchemaDefRequirement/types/fields/secondaryFiles/required	
 /run/hints/SchemaDefRequirement/types/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
 /run/hints/SchemaDefRequirement/types/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /run/hints/SchemaDefRequirement/types/name	
 /run/hints/SchemaDefRequirement/types/items	
-/run/hints/SchemaDefRequirement/types/items/items	
-/run/hints/SchemaDefRequirement/types/items/type	
 /run/hints/SchemaDefRequirement/types/items/symbols	
+/run/hints/SchemaDefRequirement/types/items/type	
 /run/hints/SchemaDefRequirement/types/items/fields	
 /run/hints/SchemaDefRequirement/types/items/fields/name	
 /run/hints/SchemaDefRequirement/types/items/fields/type	
 /run/hints/SchemaDefRequirement/types/items/fields/format	
 /run/hints/SchemaDefRequirement/types/items/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
 /run/hints/SchemaDefRequirement/types/items/fields/secondaryFiles	
-/run/hints/SchemaDefRequirement/types/items/fields/secondaryFiles/pattern	https://w3id.org/cwl/cwl#SecondaryFileSchema/pattern
-/run/hints/SchemaDefRequirement/types/items/fields/secondaryFiles/required	https://w3id.org/cwl/cwl#SecondaryFileSchema/required
 /run/hints/SchemaDefRequirement/types/items/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
 /run/hints/SchemaDefRequirement/types/items/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /run/hints/SchemaDefRequirement/types/items/name	
@@ -137,6 +133,7 @@ path	@id
 /run/hints/cwltool:CUDARequirement/cudaDeviceCountMax	
 /run/hints/cwltool:CUDARequirement/cudaDeviceCountMin	
 /run/hints/cwltool:CUDARequirement/cudaVersionMin	
+/run/hints/class	
 /run/hints/BuiltinRequirement	
 /run/hints/BuiltinRequirement/class	
 /run/hints/BuiltinRequirement/process	
@@ -147,7 +144,6 @@ path	@id
 /run/hints/WPS1Requirement/class	
 /run/hints/WPS1Requirement/process	
 /run/hints/WPS1Requirement/provider	
-/run/hints/class	
 /run/hints/cudaComputeCapability	
 /run/hints/cudaDeviceCountMax	
 /run/hints/cudaDeviceCountMin	
@@ -163,51 +159,35 @@ path	@id
 /run/hints/packages/specs	
 /run/hints/packages/version	https://w3id.org/cwl/cwl#SoftwarePackage/version
 /run/hints/envDef	
-/run/hints/envDef/envName	https://w3id.org/cwl/cwl#EnvironmentDef/envName
-/run/hints/envDef/envValue	https://w3id.org/cwl/cwl#EnvironmentDef/envValue
 /run/hints/types	https://w3id.org/cwl/cwl#SchemaDefRequirement/types
 /run/hints/types/symbols	
 /run/hints/types/type	
 /run/hints/types/fields	
-/run/hints/types/fields/items	
-/run/hints/types/fields/type	
 /run/hints/types/fields/symbols	
+/run/hints/types/fields/type	
 /run/hints/types/fields/name	
-/run/hints/types/fields/type/items	
-/run/hints/types/fields/type/type	
 /run/hints/types/fields/type/symbols	
+/run/hints/types/fields/type/type	
 /run/hints/types/fields/format	
 /run/hints/types/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
 /run/hints/types/fields/secondaryFiles	
-/run/hints/types/fields/secondaryFiles/pattern	https://w3id.org/cwl/cwl#SecondaryFileSchema/pattern
-/run/hints/types/fields/secondaryFiles/required	https://w3id.org/cwl/cwl#SecondaryFileSchema/required
 /run/hints/types/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
 /run/hints/types/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /run/hints/types/name	
 /run/hints/types/items	
-/run/hints/types/items/items	
-/run/hints/types/items/type	
 /run/hints/types/items/symbols	
+/run/hints/types/items/type	
 /run/hints/types/items/fields	
 /run/hints/types/items/fields/name	
 /run/hints/types/items/fields/type	
 /run/hints/types/items/fields/format	
 /run/hints/types/items/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
 /run/hints/types/items/fields/secondaryFiles	
-/run/hints/types/items/fields/secondaryFiles/pattern	https://w3id.org/cwl/cwl#SecondaryFileSchema/pattern
-/run/hints/types/items/fields/secondaryFiles/required	https://w3id.org/cwl/cwl#SecondaryFileSchema/required
 /run/hints/types/items/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
 /run/hints/types/items/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /run/hints/types/items/name	
 /run/hints/types/$import	
 /run/hints/listing	
-/run/hints/listing/entry	
-/run/hints/listing/entryname	
-/run/hints/listing/writable	https://w3id.org/cwl/cwl#Dirent/writable
-/run/hints/listing/checksum	https://w3id.org/cwl/cwl#File/checksum
-/run/hints/listing/class	
-/run/hints/listing/location	
-/run/hints/listing/size	https://w3id.org/cwl/cwl#File/size
 /run/hints/expressionLib	https://w3id.org/cwl/cwl#InlineJavascriptRequirement/expressionLib
 /run/hints/expressionLib/$include	
 /run/hints/inplaceUpdate	https://w3id.org/cwl/cwl#InplaceUpdateRequirement/inplaceUpdate
@@ -236,17 +216,14 @@ path	@id
 /run/inputs/inputBinding/shellQuote	https://w3id.org/cwl/cwl#CommandLineBinding/shellQuote
 /run/inputs/inputBinding/valueFrom	https://w3id.org/cwl/cwl#valueFrom
 /run/inputs/type	
-/run/inputs/type/items	
-/run/inputs/type/type	
 /run/inputs/type/symbols	
+/run/inputs/type/type	
 /run/inputs/type/fields	
 /run/inputs/type/fields/name	
 /run/inputs/type/fields/type	
 /run/inputs/type/fields/format	
 /run/inputs/type/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
 /run/inputs/type/fields/secondaryFiles	
-/run/inputs/type/fields/secondaryFiles/pattern	https://w3id.org/cwl/cwl#SecondaryFileSchema/pattern
-/run/inputs/type/fields/secondaryFiles/required	https://w3id.org/cwl/cwl#SecondaryFileSchema/required
 /run/inputs/type/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
 /run/inputs/type/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /run/inputs/type/name	
@@ -258,7 +235,6 @@ path	@id
 /run/inputs/default/path	
 /run/inputs/doc	
 /run/inputs/label	http://www.w3.org/2000/01/rdf-schema#label
-/run/inputs/items	
 /run/inputs/symbols	
 /run/inputs/fields	
 /run/inputs/fields/name	
@@ -266,8 +242,6 @@ path	@id
 /run/inputs/fields/format	
 /run/inputs/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
 /run/inputs/fields/secondaryFiles	
-/run/inputs/fields/secondaryFiles/pattern	https://w3id.org/cwl/cwl#SecondaryFileSchema/pattern
-/run/inputs/fields/secondaryFiles/required	https://w3id.org/cwl/cwl#SecondaryFileSchema/required
 /run/inputs/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
 /run/inputs/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /run/inputs/name	
@@ -278,21 +252,17 @@ path	@id
 /run/outputs/outputBinding	https://w3id.org/cwl/cwl#outputBinding
 /run/outputs/outputBinding/glob	https://w3id.org/cwl/cwl#CommandOutputBinding/glob
 /run/outputs/type	
-/run/outputs/type/items	
-/run/outputs/type/type	
 /run/outputs/type/symbols	
+/run/outputs/type/type	
 /run/outputs/type/fields	
 /run/outputs/type/fields/name	
 /run/outputs/type/fields/type	
 /run/outputs/type/fields/format	
 /run/outputs/type/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
 /run/outputs/type/fields/secondaryFiles	
-/run/outputs/type/fields/secondaryFiles/pattern	https://w3id.org/cwl/cwl#SecondaryFileSchema/pattern
-/run/outputs/type/fields/secondaryFiles/required	https://w3id.org/cwl/cwl#SecondaryFileSchema/required
 /run/outputs/type/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
 /run/outputs/type/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /run/outputs/type/name	
-/run/outputs/items	
 /run/outputs/symbols	
 /run/outputs/fields	
 /run/outputs/fields/name	
@@ -300,8 +270,6 @@ path	@id
 /run/outputs/fields/format	
 /run/outputs/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
 /run/outputs/fields/secondaryFiles	
-/run/outputs/fields/secondaryFiles/pattern	https://w3id.org/cwl/cwl#SecondaryFileSchema/pattern
-/run/outputs/fields/secondaryFiles/required	https://w3id.org/cwl/cwl#SecondaryFileSchema/required
 /run/outputs/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
 /run/outputs/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /run/outputs/name	
@@ -320,18 +288,9 @@ path	@id
 /run/requirements/EnvVarRequirement	https://w3id.org/cwl/cwl#EnvVarRequirement
 /run/requirements/EnvVarRequirement/class	
 /run/requirements/EnvVarRequirement/envDef	
-/run/requirements/EnvVarRequirement/envDef/envName	https://w3id.org/cwl/cwl#EnvironmentDef/envName
-/run/requirements/EnvVarRequirement/envDef/envValue	https://w3id.org/cwl/cwl#EnvironmentDef/envValue
 /run/requirements/InitialWorkDirRequirement	https://w3id.org/cwl/cwl#InitialWorkDirRequirement
 /run/requirements/InitialWorkDirRequirement/class	
 /run/requirements/InitialWorkDirRequirement/listing	
-/run/requirements/InitialWorkDirRequirement/listing/entry	
-/run/requirements/InitialWorkDirRequirement/listing/entryname	
-/run/requirements/InitialWorkDirRequirement/listing/writable	https://w3id.org/cwl/cwl#Dirent/writable
-/run/requirements/InitialWorkDirRequirement/listing/checksum	https://w3id.org/cwl/cwl#File/checksum
-/run/requirements/InitialWorkDirRequirement/listing/class	
-/run/requirements/InitialWorkDirRequirement/listing/location	
-/run/requirements/InitialWorkDirRequirement/listing/size	https://w3id.org/cwl/cwl#File/size
 /run/requirements/InlineJavascriptRequirement	https://w3id.org/cwl/cwl#InlineJavascriptRequirement
 /run/requirements/InlineJavascriptRequirement/class	
 /run/requirements/InlineJavascriptRequirement/expressionLib	https://w3id.org/cwl/cwl#InlineJavascriptRequirement/expressionLib
@@ -365,33 +324,26 @@ path	@id
 /run/requirements/SchemaDefRequirement/types/symbols	
 /run/requirements/SchemaDefRequirement/types/type	
 /run/requirements/SchemaDefRequirement/types/fields	
-/run/requirements/SchemaDefRequirement/types/fields/items	
-/run/requirements/SchemaDefRequirement/types/fields/type	
 /run/requirements/SchemaDefRequirement/types/fields/symbols	
+/run/requirements/SchemaDefRequirement/types/fields/type	
 /run/requirements/SchemaDefRequirement/types/fields/name	
-/run/requirements/SchemaDefRequirement/types/fields/type/items	
-/run/requirements/SchemaDefRequirement/types/fields/type/type	
 /run/requirements/SchemaDefRequirement/types/fields/type/symbols	
+/run/requirements/SchemaDefRequirement/types/fields/type/type	
 /run/requirements/SchemaDefRequirement/types/fields/format	
 /run/requirements/SchemaDefRequirement/types/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
 /run/requirements/SchemaDefRequirement/types/fields/secondaryFiles	
-/run/requirements/SchemaDefRequirement/types/fields/secondaryFiles/pattern	https://w3id.org/cwl/cwl#SecondaryFileSchema/pattern
-/run/requirements/SchemaDefRequirement/types/fields/secondaryFiles/required	https://w3id.org/cwl/cwl#SecondaryFileSchema/required
 /run/requirements/SchemaDefRequirement/types/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
 /run/requirements/SchemaDefRequirement/types/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /run/requirements/SchemaDefRequirement/types/name	
 /run/requirements/SchemaDefRequirement/types/items	
-/run/requirements/SchemaDefRequirement/types/items/items	
-/run/requirements/SchemaDefRequirement/types/items/type	
 /run/requirements/SchemaDefRequirement/types/items/symbols	
+/run/requirements/SchemaDefRequirement/types/items/type	
 /run/requirements/SchemaDefRequirement/types/items/fields	
 /run/requirements/SchemaDefRequirement/types/items/fields/name	
 /run/requirements/SchemaDefRequirement/types/items/fields/type	
 /run/requirements/SchemaDefRequirement/types/items/fields/format	
 /run/requirements/SchemaDefRequirement/types/items/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
 /run/requirements/SchemaDefRequirement/types/items/fields/secondaryFiles	
-/run/requirements/SchemaDefRequirement/types/items/fields/secondaryFiles/pattern	https://w3id.org/cwl/cwl#SecondaryFileSchema/pattern
-/run/requirements/SchemaDefRequirement/types/items/fields/secondaryFiles/required	https://w3id.org/cwl/cwl#SecondaryFileSchema/required
 /run/requirements/SchemaDefRequirement/types/items/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
 /run/requirements/SchemaDefRequirement/types/items/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /run/requirements/SchemaDefRequirement/types/items/name	
@@ -436,51 +388,35 @@ path	@id
 /run/requirements/packages/specs	
 /run/requirements/packages/version	https://w3id.org/cwl/cwl#SoftwarePackage/version
 /run/requirements/envDef	
-/run/requirements/envDef/envName	https://w3id.org/cwl/cwl#EnvironmentDef/envName
-/run/requirements/envDef/envValue	https://w3id.org/cwl/cwl#EnvironmentDef/envValue
 /run/requirements/types	https://w3id.org/cwl/cwl#SchemaDefRequirement/types
 /run/requirements/types/symbols	
 /run/requirements/types/type	
 /run/requirements/types/fields	
-/run/requirements/types/fields/items	
-/run/requirements/types/fields/type	
 /run/requirements/types/fields/symbols	
+/run/requirements/types/fields/type	
 /run/requirements/types/fields/name	
-/run/requirements/types/fields/type/items	
-/run/requirements/types/fields/type/type	
 /run/requirements/types/fields/type/symbols	
+/run/requirements/types/fields/type/type	
 /run/requirements/types/fields/format	
 /run/requirements/types/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
 /run/requirements/types/fields/secondaryFiles	
-/run/requirements/types/fields/secondaryFiles/pattern	https://w3id.org/cwl/cwl#SecondaryFileSchema/pattern
-/run/requirements/types/fields/secondaryFiles/required	https://w3id.org/cwl/cwl#SecondaryFileSchema/required
 /run/requirements/types/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
 /run/requirements/types/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /run/requirements/types/name	
 /run/requirements/types/items	
-/run/requirements/types/items/items	
-/run/requirements/types/items/type	
 /run/requirements/types/items/symbols	
+/run/requirements/types/items/type	
 /run/requirements/types/items/fields	
 /run/requirements/types/items/fields/name	
 /run/requirements/types/items/fields/type	
 /run/requirements/types/items/fields/format	
 /run/requirements/types/items/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
 /run/requirements/types/items/fields/secondaryFiles	
-/run/requirements/types/items/fields/secondaryFiles/pattern	https://w3id.org/cwl/cwl#SecondaryFileSchema/pattern
-/run/requirements/types/items/fields/secondaryFiles/required	https://w3id.org/cwl/cwl#SecondaryFileSchema/required
 /run/requirements/types/items/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
 /run/requirements/types/items/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /run/requirements/types/items/name	
 /run/requirements/types/$import	
 /run/requirements/listing	
-/run/requirements/listing/entry	
-/run/requirements/listing/entryname	
-/run/requirements/listing/writable	https://w3id.org/cwl/cwl#Dirent/writable
-/run/requirements/listing/checksum	https://w3id.org/cwl/cwl#File/checksum
-/run/requirements/listing/class	
-/run/requirements/listing/location	
-/run/requirements/listing/size	https://w3id.org/cwl/cwl#File/size
 /run/requirements/expressionLib	https://w3id.org/cwl/cwl#InlineJavascriptRequirement/expressionLib
 /run/requirements/expressionLib/$include	
 /run/requirements/inplaceUpdate	https://w3id.org/cwl/cwl#InplaceUpdateRequirement/inplaceUpdate

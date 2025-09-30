@@ -1,4 +1,0 @@
-items:
-  $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLIdentifier/schema.yaml
-title: CWLScatterMulti
-type: array

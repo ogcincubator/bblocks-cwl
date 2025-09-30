@@ -84,8 +84,6 @@ Links to the schema:
 {
   "@context": {
     "loadContents": "cwl:loadContents",
-    "pattern": "cwl:SecondaryFileSchema/pattern",
-    "required": "cwl:SecondaryFileSchema/required",
     "streamable": "cwl:FieldBase/streamable",
     "cwl": "https://w3id.org/cwl/cwl#",
     "@version": 1.1

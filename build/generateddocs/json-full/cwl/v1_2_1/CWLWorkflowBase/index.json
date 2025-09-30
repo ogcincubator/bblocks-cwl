@@ -7,7 +7,7 @@
   "abstract": "CWLWorkflowBase",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.675327",
-  "dateOfLastChange": "2025-09-29",
+  "dateOfLastChange": "2025-09-30",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -16,10 +16,11 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLRequirements",
-    "ogc.cwl.v1_2_1.CWLHints",
-    "ogc.cwl.v1_2_1.CWLWorkflowSteps",
     "ogc.cwl.v1_2_1.CWLInputsDefinition",
+    "ogc.cwl.v1_2_1.CWLWorkflowStepItem",
+    "ogc.cwl.v1_2_1.CWLWorkflowStepObject",
+    "ogc.cwl.v1_2_1.CWLHints",
+    "ogc.cwl.v1_2_1.CWLRequirements",
     "ogc.cwl.v1_2_1.CWLOutputsDefinition"
   ],
   "schema": {
@@ -31,7 +32,7 @@
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowBase/",
   "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "properties:\n  hints:\n    $comment: Technically a different subset, but lots of redefinitions to be done.\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLHints/schema.yaml\n  inputs:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputsDefinition/schema.yaml\n  outputs:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputsDefinition/schema.yaml\n  requirements:\n    $comment: Technically a different subset, but lots of redefinitions to be done.\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLRequirements/schema.yaml\n  steps:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowSteps/schema.yaml\ntype: object\n",
+  "annotatedSchema": "$defs:\n  CWLWorkflowStepMap:\n    additionalProperties:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepObject/schema.yaml\n    type: object\n  CWLWorkflowStepList:\n    items:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepItem/schema.yaml\n    type: array\nproperties:\n  hints:\n    $comment: Technically a different subset, but lots of redefinitions to be done.\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLHints/schema.yaml\n  inputs:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputsDefinition/schema.yaml\n  outputs:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputsDefinition/schema.yaml\n  requirements:\n    $comment: Technically a different subset, but lots of redefinitions to be done.\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLRequirements/schema.yaml\n  steps:\n    oneOf:\n    - $ref: '#/$defs/CWLWorkflowStepMap'\n    - $ref: '#/$defs/CWLWorkflowStepList'\ntype: object\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLWorkflowBase"
 }

@@ -7,8 +7,6 @@
       "@id": "cwl:outputBinding"
     },
     "loadContents": "cwl:loadContents",
-    "pattern": "cwl:SecondaryFileSchema/pattern",
-    "required": "cwl:SecondaryFileSchema/required",
     "streamable": "cwl:FieldBase/streamable",
     "loadListing": "cwl:loadListing",
     "label": "http://www.w3.org/2000/01/rdf-schema#label",

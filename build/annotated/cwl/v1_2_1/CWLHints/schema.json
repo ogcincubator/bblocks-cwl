@@ -1,11 +1,48 @@
 {
   "description": "Non-failing additional hints that can help resolve extra requirements.",
+  "$defs": {
+    "CWLHintsMap": {
+      "anyOf": [
+        {
+          "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLRequirementsMap/schema.json"
+        },
+        {
+          "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLHintsMapExtras/schema.json"
+        }
+      ],
+      "title": "CWLHintsMap"
+    },
+    "CWLHintsList": {
+      "items": {
+        "oneOf": [
+          {
+            "allOf": [
+              {
+                "$comment": "When using the list representation, 'class' is required to indicate which one is being represented.\nWhen using the mapping representation, 'class' is optional since it's the key, but it must match by name.\n",
+                "required": [
+                  "class"
+                ]
+              },
+              {
+                "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLHintsItem/schema.json"
+              }
+            ]
+          },
+          {
+            "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLImport/schema.json"
+          }
+        ]
+      },
+      "title": "CWLHintsList",
+      "type": "array"
+    }
+  },
   "oneOf": [
     {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLHintsMap/schema.json"
+      "$ref": "#/$defs/CWLHintsMap"
     },
     {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLHintsList/schema.json"
+      "$ref": "#/$defs/CWLHintsList"
     }
   ],
   "title": "CWLHints"

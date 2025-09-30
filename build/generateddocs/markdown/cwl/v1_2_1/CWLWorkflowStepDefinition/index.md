@@ -97,8 +97,6 @@ Links to the schema:
     "enableReuse": "cwl:WorkReuse/enableReuse",
     "inputBinding": "cwl:inputBinding",
     "loadContents": "cwl:loadContents",
-    "pattern": "cwl:SecondaryFileSchema/pattern",
-    "required": "cwl:SecondaryFileSchema/required",
     "streamable": "cwl:FieldBase/streamable",
     "outputBinding": {
       "@context": {

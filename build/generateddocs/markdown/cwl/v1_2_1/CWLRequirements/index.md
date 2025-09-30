@@ -10,10 +10,28 @@ Explicit requirement to execute the application package.
 ## Schema
 
 ```yaml
+$defs:
+  CWLRequirementsList:
+    items:
+      oneOf:
+      - allOf:
+        - $comment: 'When using the list representation, ''class'' is required to
+            indicate which one is being represented.
+
+            When using the mapping representation, ''class'' is optional since it''s
+            the key, but it must match by name.
+
+            '
+          required:
+          - class
+        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLRequirementsItem/schema.yaml
+      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLImport/schema.yaml
+    title: CWLRequirementsList
+    type: array
 description: Explicit requirement to execute the application package.
 oneOf:
 - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLRequirementsMap/schema.yaml
-- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLRequirementsList/schema.yaml
+- $ref: '#/$defs/CWLRequirementsList'
 title: CWLRequirements
 
 ```
@@ -56,13 +74,7 @@ Links to the schema:
     "version": "cwl:SoftwarePackage/version",
     "envName": "cwl:EnvironmentDef/envName",
     "envValue": "cwl:EnvironmentDef/envValue",
-    "types": {
-      "@context": {
-        "pattern": "cwl:SecondaryFileSchema/pattern",
-        "required": "cwl:SecondaryFileSchema/required"
-      },
-      "@id": "cwl:SchemaDefRequirement/types"
-    },
+    "types": "cwl:SchemaDefRequirement/types",
     "writable": "cwl:Dirent/writable",
     "checksum": "cwl:File/checksum",
     "size": "cwl:File/size",

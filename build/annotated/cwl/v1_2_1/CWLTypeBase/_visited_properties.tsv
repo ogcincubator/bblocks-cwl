@@ -1,33 +1,30 @@
 path	@id
 /items	
-/items/symbols	
+/items/items	
 /items/type	
+/items/symbols	
 /items/fields	
 /items/fields/name	
 /items/fields/type	
 /items/fields/format	
 /items/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
 /items/fields/secondaryFiles	
-/items/fields/secondaryFiles/pattern	https://w3id.org/cwl/cwl#SecondaryFileSchema/pattern
-/items/fields/secondaryFiles/required	https://w3id.org/cwl/cwl#SecondaryFileSchema/required
+/items/fields/secondaryFiles/pattern	
+/items/fields/secondaryFiles/required	
 /items/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
 /items/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /items/name	
 /type	
 /symbols	
 /fields	
-/fields/items	
-/fields/type	
 /fields/symbols	
+/fields/type	
 /fields/name	
-/fields/type/items	
-/fields/type/type	
 /fields/type/symbols	
+/fields/type/type	
 /fields/format	
 /fields/loadContents	https://w3id.org/cwl/cwl#loadContents
 /fields/secondaryFiles	
-/fields/secondaryFiles/pattern	https://w3id.org/cwl/cwl#SecondaryFileSchema/pattern
-/fields/secondaryFiles/required	https://w3id.org/cwl/cwl#SecondaryFileSchema/required
 /fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
 /fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /name	

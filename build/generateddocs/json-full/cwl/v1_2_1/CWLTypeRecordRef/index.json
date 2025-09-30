@@ -7,7 +7,7 @@
   "abstract": "An IRI with minimally a '{Record}' identifier to look for a schema definition locally or remotely.\n\nThe identifier resolution is performed accordingly to the specified reference and as described in\nhttps://www.commonwl.org/v1.2/SchemaSalad.html#Identifier_resolution.\n",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.707771",
-  "dateOfLastChange": "2025-09-29",
+  "dateOfLastChange": "2025-09-30",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -16,11 +16,11 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLOutputStdOutDefinition",
     "ogc.cwl.v1_2_1.CWLOutputStdErrDefinition",
-    "ogc.cwl.v1_2_1.CWLTypeRecordRefPattern",
     "ogc.cwl.v1_2_1.CWLInputStdInDefinition",
-    "ogc.cwl.v1_2_1.CWLTypeDefinition"
+    "ogc.cwl.v1_2_1.CWLOutputStdOutDefinition",
+    "ogc.cwl.v1_2_1.CWLTypeDefinition",
+    "ogc.cwl.v1_2_1.CWLTypeRecordRefPattern"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordRef/schema.yaml",

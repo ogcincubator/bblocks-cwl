@@ -1,4 +1,40 @@
 {
+  "$defs": {
+    "InitialWorkDirListing": {
+      "oneOf": [
+        {
+          "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.json"
+        },
+        {
+          "items": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.json"
+              },
+              {
+                "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DirectoryListingDirent/schema.json"
+              },
+              {
+                "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DirectoryListingFileOrDirectory/schema.json"
+              },
+              {
+                "items": {
+                  "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DirectoryListingFileOrDirectory/schema.json"
+                },
+                "type": "array"
+              }
+            ]
+          },
+          "title": "InitialWorkDirListingItems",
+          "type": "array"
+        }
+      ],
+      "title": "InitialWorkDirListing"
+    }
+  },
   "additionalProperties": false,
   "properties": {
     "class": {
@@ -8,7 +44,7 @@
       "type": "string"
     },
     "listing": {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InitialWorkDirListing/schema.json"
+      "$ref": "#/$defs/InitialWorkDirListing"
     }
   },
   "required": [

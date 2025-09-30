@@ -7,7 +7,7 @@
   "abstract": "Set an upper limit on the execution time of a CommandLineTool.\n\nA CommandLineTool whose execution duration exceeds the time limit may be preemptively\nterminated and considered failed. May also be used by batch systems to make scheduling decisions.\n\nThe execution duration excludes external operations, such as staging of files,\npulling a docker image etc., and only counts wall-time for the execution of the command line itself.\n",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.687380",
-  "dateOfLastChange": "2025-09-29",
+  "dateOfLastChange": "2025-09-30",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -16,7 +16,7 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.TimeLimitValue"
+    "ogc.cwl.v1_2_1.CWLExpression"
   ],
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ToolTimeLimitRequirement/context.jsonld",
   "schema": {
@@ -28,7 +28,7 @@
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/ToolTimeLimitRequirement/",
   "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "additionalProperties: false\ndescription: 'Set an upper limit on the execution time of a CommandLineTool.\n\n\n  A CommandLineTool whose execution duration exceeds the time limit may be preemptively\n\n  terminated and considered failed. May also be used by batch systems to make scheduling\n  decisions.\n\n\n  The execution duration excludes external operations, such as staging of files,\n\n  pulling a docker image etc., and only counts wall-time for the execution of the\n  command line itself.\n\n  '\nproperties:\n  class:\n    $comment: not 'ToolTimeLimitRequirement'\n    enum:\n    - ToolTimeLimit\n    type: string\n  timelimit:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/TimeLimitValue/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#ToolTimeLimit/timelimit\nrequired:\n- timelimit\ntitle: ToolTimeLimitRequirement\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
+  "annotatedSchema": "additionalProperties: false\ndescription: 'Set an upper limit on the execution time of a CommandLineTool.\n\n\n  A CommandLineTool whose execution duration exceeds the time limit may be preemptively\n\n  terminated and considered failed. May also be used by batch systems to make scheduling\n  decisions.\n\n\n  The execution duration excludes external operations, such as staging of files,\n\n  pulling a docker image etc., and only counts wall-time for the execution of the\n  command line itself.\n\n  '\nproperties:\n  class:\n    $comment: not 'ToolTimeLimitRequirement'\n    enum:\n    - ToolTimeLimit\n    type: string\n  timelimit:\n    description: 'The time limit, in seconds.\n\n\n      A time limit of zero means no time limit.\n\n      Negative time limits are an error.\n\n      '\n    oneOf:\n    - minimum: 0.0\n      type: number\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    title: TimeLimitValue\n    x-jsonld-id: https://w3id.org/cwl/cwl#ToolTimeLimit/timelimit\nrequired:\n- timelimit\ntitle: ToolTimeLimitRequirement\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/ToolTimeLimitRequirement"
 }

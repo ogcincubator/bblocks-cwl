@@ -7,7 +7,7 @@
   "abstract": "Explicit requirement to execute the application package.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.676308",
-  "dateOfLastChange": "2025-09-29",
+  "dateOfLastChange": "2025-09-30",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -16,7 +16,8 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLRequirementsList",
+    "ogc.cwl.v1_2_1.CWLImport",
+    "ogc.cwl.v1_2_1.CWLRequirementsItem",
     "ogc.cwl.v1_2_1.CWLRequirementsMap"
   ],
   "schema": {
@@ -28,7 +29,7 @@
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLRequirements/",
   "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "description: Explicit requirement to execute the application package.\noneOf:\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLRequirementsMap/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLRequirementsList/schema.yaml\ntitle: CWLRequirements\n",
+  "annotatedSchema": "$defs:\n  CWLRequirementsList:\n    items:\n      oneOf:\n      - allOf:\n        - $comment: 'When using the list representation, ''class'' is required to\n            indicate which one is being represented.\n\n            When using the mapping representation, ''class'' is optional since it''s\n            the key, but it must match by name.\n\n            '\n          required:\n          - class\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLRequirementsItem/schema.yaml\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLImport/schema.yaml\n    title: CWLRequirementsList\n    type: array\ndescription: Explicit requirement to execute the application package.\noneOf:\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLRequirementsMap/schema.yaml\n- $ref: '#/$defs/CWLRequirementsList'\ntitle: CWLRequirements\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLRequirements"
 }

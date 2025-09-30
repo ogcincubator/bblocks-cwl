@@ -10,6 +10,21 @@ EnvVarRequirement
 ## Schema
 
 ```yaml
+$defs:
+  EnvironmentDef:
+    additionalProperties: false
+    properties:
+      envName:
+        minLength: 1
+        type: string
+        x-jsonld-id: https://w3id.org/cwl/cwl#EnvironmentDef/envName
+      envValue:
+        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml
+        x-jsonld-id: https://w3id.org/cwl/cwl#EnvironmentDef/envValue
+    required:
+    - envName
+    - envValue
+    type: object
 additionalProperties: false
 properties:
   class:
@@ -19,18 +34,20 @@ properties:
   envDef:
     oneOf:
     - items:
-        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/EnvironmentDef/schema.yaml
+        $ref: '#/$defs/EnvironmentDef'
       type: array
     - additionalProperties:
         oneOf:
         - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml
           description: The 'envValue' specified directly
-        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/EnvironmentDef/schema.yaml
+        - $ref: '#/$defs/EnvironmentDef'
       description: Mapping of 'envName' to environment value or definition.
       type: object
 required:
 - envDef
 type: object
+x-jsonld-prefixes:
+  cwl: https://w3id.org/cwl/cwl#
 
 ```
 

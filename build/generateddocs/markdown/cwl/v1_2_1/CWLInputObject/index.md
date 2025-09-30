@@ -10,12 +10,27 @@ CWLInputObject
 ## Schema
 
 ```yaml
+$defs:
+  CWLInputObjectBase:
+    additionalProperties: {}
+    properties:
+      inputBinding:
+        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InputBinding/schema.yaml
+        additionalProperties: {}
+        x-jsonld-id: https://w3id.org/cwl/cwl#inputBinding
+      type:
+        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml
+    required:
+    - type
+    type: object
 allOf:
-- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputObjectBase/schema.yaml
+- $ref: '#/$defs/CWLInputObjectBase'
 - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultTypedConditional/schema.yaml
 - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/schema.yaml
 summary: CWL type definition with parameters.
 title: CWLInputObject
+x-jsonld-prefixes:
+  cwl: https://w3id.org/cwl/cwl#
 
 ```
 
@@ -41,8 +56,6 @@ Links to the schema:
       "@id": "cwl:inputBinding"
     },
     "loadContents": "cwl:loadContents",
-    "pattern": "cwl:SecondaryFileSchema/pattern",
-    "required": "cwl:SecondaryFileSchema/required",
     "streamable": "cwl:FieldBase/streamable",
     "loadListing": "cwl:loadListing",
     "basename": "cwl:basename",

@@ -14,7 +14,18 @@ allOf:
 - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLVersion/schema.yaml
 - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLMetadata/schema.yaml
 - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/schema.yaml
-- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLGraphBase/schema.yaml
+- additionalProperties: {}
+  properties:
+    $graph:
+      type: array
+      items:
+        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLGraphItem/schema.yaml
+      maxItems: 1
+      minItems: 1
+      title: CWLGraphList
+  required:
+  - $graph
+  type: object
 title: CWLGraph
 
 ```
@@ -83,8 +94,6 @@ Links to the schema:
     "enableReuse": "cwl:WorkReuse/enableReuse",
     "inputBinding": "cwl:inputBinding",
     "loadContents": "cwl:loadContents",
-    "pattern": "cwl:SecondaryFileSchema/pattern",
-    "required": "cwl:SecondaryFileSchema/required",
     "streamable": "cwl:FieldBase/streamable",
     "basename": "cwl:basename",
     "nameroot": "cwl:File/nameroot",

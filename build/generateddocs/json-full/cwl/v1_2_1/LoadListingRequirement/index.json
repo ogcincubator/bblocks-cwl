@@ -7,7 +7,7 @@
   "abstract": "Specify the desired behavior for loading the listing field of a 'Directory' object for use by expressions\n(see also: https://www.commonwl.org/v1.2/CommandLineTool.html#LoadListingRequirement).\n",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.686079",
-  "dateOfLastChange": "2025-09-29",
+  "dateOfLastChange": "2025-09-30",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",

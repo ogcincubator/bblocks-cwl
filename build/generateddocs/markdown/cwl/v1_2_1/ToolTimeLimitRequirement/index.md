@@ -40,7 +40,19 @@ properties:
     - ToolTimeLimit
     type: string
   timelimit:
-    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/TimeLimitValue/schema.yaml
+    description: 'The time limit, in seconds.
+
+
+      A time limit of zero means no time limit.
+
+      Negative time limits are an error.
+
+      '
+    oneOf:
+    - minimum: 0.0
+      type: number
+    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml
+    title: TimeLimitValue
     x-jsonld-id: https://w3id.org/cwl/cwl#ToolTimeLimit/timelimit
 required:
 - timelimit

@@ -7,7 +7,7 @@
   "abstract": "Minimum reserved filesystem based storage for the designated temporary\ndirectory in mebibytes (2**20).\n\nMay be a fractional value. If so, the actual storage request must be rounded\nup to the next whole number.\n\nThe reported amount of storage reserved for the process, which is available\nto expressions on the 'CommandLineTool' as 'runtime.tmpdirSize', must be a non-zero integer.\n",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.695871",
-  "dateOfLastChange": "2025-09-29",
+  "dateOfLastChange": "2025-09-30",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -16,8 +16,8 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.ResourceQuantityOrFractional",
-    "ogc.cwl.v1_2_1.CWLExpression"
+    "ogc.cwl.v1_2_1.CWLExpression",
+    "ogc.cwl.v1_2_1.ResourceQuantityOrFractional"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ResourceTmpDirMinimum/schema.yaml",

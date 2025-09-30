@@ -1,4 +1,18 @@
 {
+  "$defs": {
+    "CWLWorkflowStepMap": {
+      "additionalProperties": {
+        "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepObject/schema.json"
+      },
+      "type": "object"
+    },
+    "CWLWorkflowStepList": {
+      "items": {
+        "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepItem/schema.json"
+      },
+      "type": "array"
+    }
+  },
   "properties": {
     "hints": {
       "$comment": "Technically a different subset, but lots of redefinitions to be done.",
@@ -15,7 +29,14 @@
       "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLRequirements/schema.json"
     },
     "steps": {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowSteps/schema.json"
+      "oneOf": [
+        {
+          "$ref": "#/$defs/CWLWorkflowStepMap"
+        },
+        {
+          "$ref": "#/$defs/CWLWorkflowStepList"
+        }
+      ]
     }
   },
   "type": "object"

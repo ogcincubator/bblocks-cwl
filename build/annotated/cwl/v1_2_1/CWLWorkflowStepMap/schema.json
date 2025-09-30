@@ -1,6 +1,0 @@
-{
-  "additionalProperties": {
-    "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepObject/schema.json"
-  },
-  "type": "object"
-}

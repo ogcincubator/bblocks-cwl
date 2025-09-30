@@ -1,8 +1,0 @@
-description: Graph definition that defines *exactly one* CWL application package represented
-  as list. Multiple definitions simultaneously deployed is NOT supported currently.
-items:
-  $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLGraphItem/schema.yaml
-maxItems: 1
-minItems: 1
-title: CWLGraphList
-type: array

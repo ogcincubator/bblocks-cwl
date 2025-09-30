@@ -1,14 +1,73 @@
 {
+  "$defs": {
+    "CWLTypeRecordSecondaryFiles": {
+      "oneOf": [
+        {
+          "$comment": "Either an expression or the regex pattern directly.",
+          "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.json"
+        },
+        {
+          "$ref": "#/$defs/CWLTypeRecordSecondaryFileSchema"
+        },
+        {
+          "items": {
+            "$comment": "Either an expression or the regex pattern directly.",
+            "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.json"
+          },
+          "type": "array"
+        },
+        {
+          "items": {
+            "$ref": "#/$defs/CWLTypeRecordSecondaryFileSchema"
+          },
+          "type": "array"
+        }
+      ]
+    },
+    "CWLTypeRecordSecondaryFileSchema": {
+      "additionalProperties": false,
+      "properties": {
+        "pattern": {
+          "$comment": "Either an expression or the regex pattern directly.",
+          "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.json"
+        },
+        "required": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.json"
+            }
+          ]
+        }
+      },
+      "required": [
+        "pattern"
+      ],
+      "type": "object"
+    }
+  },
   "properties": {
     "format": {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLFormat/schema.json"
+      "oneOf": [
+        {
+          "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.json"
+        },
+        {
+          "items": {
+            "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.json"
+          },
+          "type": "array"
+        }
+      ]
     },
     "loadContents": {
       "type": "boolean",
       "x-jsonld-id": "https://w3id.org/cwl/cwl#loadContents"
     },
     "secondaryFiles": {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordSecondaryFiles/schema.json"
+      "$ref": "#/$defs/CWLTypeRecordSecondaryFiles"
     },
     "streamable": {
       "type": "boolean",

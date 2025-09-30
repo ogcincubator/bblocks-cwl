@@ -7,7 +7,7 @@
   "abstract": "Describes how to decompose the scattered input into a discrete\nset of jobs. When 'dotproduct', specifies that each of the input arrays\nare aligned and one element taken from each array to construct each job.\nIt is an error if all input arrays are of different length. When 'nested_crossproduct',\nspecifies the Cartesian product of the inputs, producing a job for every\ncombination of the scattered inputs. The output must be nested arrays\nfor each level of scattering, in the order that the input arrays are listed\nin the scatter field. When 'flat_crossproduct', specifies the Cartesian\nproduct of the inputs, producing a job for every combination of the scattered\ninputs. The output arrays must be flattened to a single level, but otherwise\nlisted in the order that the input arrays are listed in the scatter field.\n",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.678164",
-  "dateOfLastChange": "2025-09-29",
+  "dateOfLastChange": "2025-09-30",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",

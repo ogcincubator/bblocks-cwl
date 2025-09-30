@@ -10,9 +10,16 @@ CWLType
 ## Schema
 
 ```yaml
+$defs:
+  CWLTypeList:
+    items:
+      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeBase/schema.yaml
+    summary: Combination of allowed CWL types.
+    title: CWLTypeList
+    type: array
 oneOf:
 - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeBase/schema.yaml
-- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeList/schema.yaml
+- $ref: '#/$defs/CWLTypeList'
 title: CWL Type
 
 ```
@@ -29,8 +36,6 @@ Links to the schema:
 {
   "@context": {
     "loadContents": "cwl:loadContents",
-    "pattern": "cwl:SecondaryFileSchema/pattern",
-    "required": "cwl:SecondaryFileSchema/required",
     "streamable": "cwl:FieldBase/streamable",
     "loadListing": "cwl:loadListing",
     "cwl": "https://w3id.org/cwl/cwl#",

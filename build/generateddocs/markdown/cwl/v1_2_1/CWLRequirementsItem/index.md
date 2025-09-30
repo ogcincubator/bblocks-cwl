@@ -23,7 +23,7 @@ $comment: 'For any new items added, ensure they are added under ''class'' of ''U
 
   '
 oneOf:
-- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/cwltool:CUDARequirement/schema.yaml
+- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/cwltool-CUDARequirement/schema.yaml
 - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DockerRequirement/schema.yaml
 - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/SoftwareRequirement/schema.yaml
 - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ShellCommandRequirement/schema.yaml
@@ -66,13 +66,7 @@ Links to the schema:
     "version": "cwl:SoftwarePackage/version",
     "envName": "cwl:EnvironmentDef/envName",
     "envValue": "cwl:EnvironmentDef/envValue",
-    "types": {
-      "@context": {
-        "pattern": "cwl:SecondaryFileSchema/pattern",
-        "required": "cwl:SecondaryFileSchema/required"
-      },
-      "@id": "cwl:SchemaDefRequirement/types"
-    },
+    "types": "cwl:SchemaDefRequirement/types",
     "writable": "cwl:Dirent/writable",
     "checksum": "cwl:File/checksum",
     "size": "cwl:File/size",

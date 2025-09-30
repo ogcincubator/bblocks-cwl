@@ -1,10 +1,32 @@
 {
   "properties": {
     "scatter": {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/Scatter/schema.json"
+      "description": "The scatter field specifies one or more input parameters which will be scattered.\n\nAn input parameter may be listed more than once. The declared type of each\ninput parameter implicitly becomes an array of items of the input parameter type.\nIf a parameter is listed more than once, it becomes a nested array. As a result,\nupstream parameters which are connected to scattered parameters must be arrays.\n\nAll output parameter types are also implicitly wrapped in arrays. Each job\nin the scatter results in an entry in the output array.\n\nIf any scattered parameter runtime value is an empty array, all outputs are\nset to empty arrays and no work is done for the step, according to applicable scattering rules.\n",
+      "oneOf": [
+        {
+          "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTextPatternID/schema.json"
+        },
+        {
+          "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/IdentifierArray/schema.json"
+        }
+      ],
+      "title": "Scatter"
     },
     "scatterMethod": {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ScatterMethod/schema.json"
+      "additionalProperties": false,
+      "default": "dotproduct",
+      "description": "If 'scatter' declares more than one input parameter, 'scatterMethod'\ndescribes how to decompose the input into a discrete set of jobs.\n\n- dotproduct: specifies that each of the input arrays are aligned and\n  one element taken from each array to construct each job. It is an\n  error if all input arrays are not the same length.\n\n- nested_crossproduct: specifies the Cartesian product of the inputs, producing \n  a job for every combination of the scattered inputs. The output must be nested \n  arrays for each level of scattering, in the order that the input arrays\n  are listed in the 'scatter' field.\n\n- flat_crossproduct: specifies the Cartesian product of the inputs, producing a \n  job for every combination of the scattered inputs. The output arrays must be \n  flattened to a single level, but otherwise listed in the order that the input \n  arrays are listed in the 'scatter' field.\n",
+      "enum": [
+        "dotproduct",
+        "nested_crossproduct",
+        "flat_crossproduct"
+      ],
+      "required": [
+        "timelimit",
+        "class"
+      ],
+      "title": "scatterMethod",
+      "type": "string"
     }
   },
   "type": "object"

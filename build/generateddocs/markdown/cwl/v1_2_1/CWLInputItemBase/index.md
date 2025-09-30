@@ -53,8 +53,6 @@ Links to the schema:
       "@id": "cwl:inputBinding"
     },
     "loadContents": "cwl:loadContents",
-    "pattern": "cwl:SecondaryFileSchema/pattern",
-    "required": "cwl:SecondaryFileSchema/required",
     "streamable": "cwl:FieldBase/streamable",
     "loadListing": "cwl:loadListing",
     "cwl": "https://w3id.org/cwl/cwl#",

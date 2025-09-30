@@ -44,13 +44,7 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "types": {
-      "@context": {
-        "pattern": "cwl:SecondaryFileSchema/pattern",
-        "required": "cwl:SecondaryFileSchema/required"
-      },
-      "@id": "cwl:SchemaDefRequirement/types"
-    },
+    "types": "cwl:SchemaDefRequirement/types",
     "loadContents": "cwl:loadContents",
     "streamable": "cwl:FieldBase/streamable",
     "loadListing": "cwl:loadListing",

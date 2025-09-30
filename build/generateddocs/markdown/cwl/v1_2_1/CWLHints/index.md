@@ -11,9 +11,32 @@ Non-failing additional hints that can help resolve extra requirements.
 
 ```yaml
 description: Non-failing additional hints that can help resolve extra requirements.
+$defs:
+  CWLHintsMap:
+    anyOf:
+    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLRequirementsMap/schema.yaml
+    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLHintsMapExtras/schema.yaml
+    title: CWLHintsMap
+  CWLHintsList:
+    items:
+      oneOf:
+      - allOf:
+        - $comment: 'When using the list representation, ''class'' is required to
+            indicate which one is being represented.
+
+            When using the mapping representation, ''class'' is optional since it''s
+            the key, but it must match by name.
+
+            '
+          required:
+          - class
+        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLHintsItem/schema.yaml
+      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLImport/schema.yaml
+    title: CWLHintsList
+    type: array
 oneOf:
-- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLHintsMap/schema.yaml
-- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLHintsList/schema.yaml
+- $ref: '#/$defs/CWLHintsMap'
+- $ref: '#/$defs/CWLHintsList'
 title: CWLHints
 
 ```
@@ -56,13 +79,7 @@ Links to the schema:
     "version": "cwl:SoftwarePackage/version",
     "envName": "cwl:EnvironmentDef/envName",
     "envValue": "cwl:EnvironmentDef/envValue",
-    "types": {
-      "@context": {
-        "pattern": "cwl:SecondaryFileSchema/pattern",
-        "required": "cwl:SecondaryFileSchema/required"
-      },
-      "@id": "cwl:SchemaDefRequirement/types"
-    },
+    "types": "cwl:SchemaDefRequirement/types",
     "writable": "cwl:Dirent/writable",
     "checksum": "cwl:File/checksum",
     "size": "cwl:File/size",

@@ -59,29 +59,25 @@ path	@id
 /SchemaDefRequirement/types/fields/type	
 /SchemaDefRequirement/types/fields/symbols	
 /SchemaDefRequirement/types/fields/name	
-/SchemaDefRequirement/types/fields/type/items	
-/SchemaDefRequirement/types/fields/type/type	
 /SchemaDefRequirement/types/fields/type/symbols	
+/SchemaDefRequirement/types/fields/type/type	
 /SchemaDefRequirement/types/fields/format	
 /SchemaDefRequirement/types/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
 /SchemaDefRequirement/types/fields/secondaryFiles	
-/SchemaDefRequirement/types/fields/secondaryFiles/pattern	https://w3id.org/cwl/cwl#SecondaryFileSchema/pattern
-/SchemaDefRequirement/types/fields/secondaryFiles/required	https://w3id.org/cwl/cwl#SecondaryFileSchema/required
+/SchemaDefRequirement/types/fields/secondaryFiles/pattern	
+/SchemaDefRequirement/types/fields/secondaryFiles/required	
 /SchemaDefRequirement/types/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
 /SchemaDefRequirement/types/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /SchemaDefRequirement/types/name	
 /SchemaDefRequirement/types/items	
-/SchemaDefRequirement/types/items/items	
-/SchemaDefRequirement/types/items/type	
 /SchemaDefRequirement/types/items/symbols	
+/SchemaDefRequirement/types/items/type	
 /SchemaDefRequirement/types/items/fields	
 /SchemaDefRequirement/types/items/fields/name	
 /SchemaDefRequirement/types/items/fields/type	
 /SchemaDefRequirement/types/items/fields/format	
 /SchemaDefRequirement/types/items/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
 /SchemaDefRequirement/types/items/fields/secondaryFiles	
-/SchemaDefRequirement/types/items/fields/secondaryFiles/pattern	https://w3id.org/cwl/cwl#SecondaryFileSchema/pattern
-/SchemaDefRequirement/types/items/fields/secondaryFiles/required	https://w3id.org/cwl/cwl#SecondaryFileSchema/required
 /SchemaDefRequirement/types/items/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
 /SchemaDefRequirement/types/items/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /SchemaDefRequirement/types/items/name	

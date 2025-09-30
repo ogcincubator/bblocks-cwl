@@ -10,6 +10,15 @@ CWLWorkflowBase
 ## Schema
 
 ```yaml
+$defs:
+  CWLWorkflowStepMap:
+    additionalProperties:
+      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepObject/schema.yaml
+    type: object
+  CWLWorkflowStepList:
+    items:
+      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepItem/schema.yaml
+    type: array
 properties:
   hints:
     $comment: Technically a different subset, but lots of redefinitions to be done.
@@ -22,7 +31,9 @@ properties:
     $comment: Technically a different subset, but lots of redefinitions to be done.
     $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLRequirements/schema.yaml
   steps:
-    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowSteps/schema.yaml
+    oneOf:
+    - $ref: '#/$defs/CWLWorkflowStepMap'
+    - $ref: '#/$defs/CWLWorkflowStepList'
 type: object
 
 ```
@@ -85,8 +96,6 @@ Links to the schema:
     "enableReuse": "cwl:WorkReuse/enableReuse",
     "inputBinding": "cwl:inputBinding",
     "loadContents": "cwl:loadContents",
-    "pattern": "cwl:SecondaryFileSchema/pattern",
-    "required": "cwl:SecondaryFileSchema/required",
     "streamable": "cwl:FieldBase/streamable",
     "basename": "cwl:basename",
     "nameroot": "cwl:File/nameroot",

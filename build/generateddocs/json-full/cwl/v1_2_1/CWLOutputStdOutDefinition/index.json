@@ -7,7 +7,7 @@
   "abstract": "Indicates that the data pushed to the standard output stream by the command will be redirected to this CWL output.\nCan be defined for only one output. If combined with 'stdout' at the root of the CWL document, that definition\nwill indicate the desired name of the output file where the output stream will be written to. A random name will\nbe applied for the file of this output unless otherwise specified.\n",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.703603",
-  "dateOfLastChange": "2025-09-29",
+  "dateOfLastChange": "2025-09-30",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",

@@ -10,7 +10,22 @@
       "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/schema.json"
     },
     {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLGraphBase/schema.json"
+      "additionalProperties": {},
+      "properties": {
+        "$graph": {
+          "type": "array",
+          "items": {
+            "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLGraphItem/schema.json"
+          },
+          "maxItems": 1,
+          "minItems": 1,
+          "title": "CWLGraphList"
+        }
+      },
+      "required": [
+        "$graph"
+      ],
+      "type": "object"
     }
   ],
   "title": "CWLGraph"

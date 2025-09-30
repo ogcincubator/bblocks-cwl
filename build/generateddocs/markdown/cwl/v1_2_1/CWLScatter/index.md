@@ -22,7 +22,10 @@ description: 'One or more input identifier of an application step within a Workf
   '
 oneOf:
 - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLIdentifier/schema.yaml
-- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLScatterMulti/schema.yaml
+- items:
+    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLIdentifier/schema.yaml
+  title: CWLScatterMulti
+  type: array
 title: CWLScatter
 
 ```

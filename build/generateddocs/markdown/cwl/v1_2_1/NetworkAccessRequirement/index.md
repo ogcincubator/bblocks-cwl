@@ -18,7 +18,12 @@ properties:
     - NetworkAccess
     type: string
   networkAccess:
-    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/NetworkAccess/schema.yaml
+    description: Indicate whether a process requires outgoing IPv4/IPv6 network access.
+    example: true
+    oneOf:
+    - type: boolean
+    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml
+    title: NetworkAccess
     x-jsonld-id: https://w3id.org/cwl/cwl#NetworkAccess/networkAccess
 required:
 - networkAccess

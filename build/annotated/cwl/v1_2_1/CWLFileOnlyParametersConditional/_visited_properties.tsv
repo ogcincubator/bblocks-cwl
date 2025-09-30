@@ -2,6 +2,6 @@ path	@id
 /format	
 /loadContents	https://w3id.org/cwl/cwl#loadContents
 /secondaryFiles	
-/secondaryFiles/pattern	https://w3id.org/cwl/cwl#SecondaryFileSchema/pattern
-/secondaryFiles/required	https://w3id.org/cwl/cwl#SecondaryFileSchema/required
+/secondaryFiles/pattern	
+/secondaryFiles/required	
 /streamable	https://w3id.org/cwl/cwl#FieldBase/streamable

@@ -7,7 +7,7 @@
   "abstract": "Hint indicating that the Application Package corresponds to a\nbuiltin process of this instance. (note: can only be an 'hint'\nas it is unofficial CWL specification).\n",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.697405",
-  "dateOfLastChange": "2025-09-29",
+  "dateOfLastChange": "2025-09-30",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",

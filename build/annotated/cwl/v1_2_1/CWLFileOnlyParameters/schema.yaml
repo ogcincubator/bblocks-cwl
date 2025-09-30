@@ -1,11 +1,41 @@
+$defs:
+  CWLTypeRecordSecondaryFiles:
+    oneOf:
+    - $comment: Either an expression or the regex pattern directly.
+      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml
+    - $ref: '#/$defs/CWLTypeRecordSecondaryFileSchema'
+    - items:
+        $comment: Either an expression or the regex pattern directly.
+        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml
+      type: array
+    - items:
+        $ref: '#/$defs/CWLTypeRecordSecondaryFileSchema'
+      type: array
+  CWLTypeRecordSecondaryFileSchema:
+    additionalProperties: false
+    properties:
+      pattern:
+        $comment: Either an expression or the regex pattern directly.
+        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml
+      required:
+        oneOf:
+        - type: boolean
+        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml
+    required:
+    - pattern
+    type: object
 properties:
   format:
-    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLFormat/schema.yaml
+    oneOf:
+    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml
+    - items:
+        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml
+      type: array
   loadContents:
     type: boolean
     x-jsonld-id: https://w3id.org/cwl/cwl#loadContents
   secondaryFiles:
-    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordSecondaryFiles/schema.yaml
+    $ref: '#/$defs/CWLTypeRecordSecondaryFiles'
   streamable:
     type: boolean
     x-jsonld-id: https://w3id.org/cwl/cwl#FieldBase/streamable

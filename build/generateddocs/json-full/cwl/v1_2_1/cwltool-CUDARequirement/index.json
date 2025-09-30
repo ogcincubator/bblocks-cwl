@@ -1,0 +1,32 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.cwltool-CUDARequirement",
+  "name": "cwltool:CUDARequirement",
+  "itemClass": "schema",
+  "abstract": "cwltool:CUDARequirement",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.682851",
+  "dateOfLastChange": "2025-09-30",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.CUDAComputeCapability"
+  ],
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/cwltool-CUDARequirement/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/cwltool-CUDARequirement/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/cwltool-CUDARequirement/schema.yaml",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/cwltool-CUDARequirement/",
+  "rdfData": [],
+  "validationPassed": true,
+  "annotatedSchema": "additionalProperties: false\nproperties:\n  class:\n    enum:\n    - cwltool:CUDARequirement\n    type: string\n  cudaComputeCapability:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CUDAComputeCapability/schema.yaml\n  cudaDeviceCountMax:\n    default: 1\n    description: The maximum amount of devices required.\n    example: 8\n    minimum: 1\n    title: CUDA device count maximum\n    type: integer\n  cudaDeviceCountMin:\n    default: 1\n    description: The minimum amount of devices required.\n    example: 1\n    minimum: 1\n    title: CUDA device count minimum\n    type: integer\n  cudaVersionMin:\n    description: 'The minimum CUDA version required to run the software. This corresponds\n      to a CUDA SDK release.\n\n\n      When run in a container, the container image should provide the CUDA runtime,\n\n      and the host driver is injected into the container.  In this case, because CUDA\n      drivers\n\n      are backwards compatible, it is possible to use an older SDK with a newer driver\n      across major versions.\n\n\n      See https://docs.nvidia.com/deploy/cuda-compatibility/ for details.\n\n      '\n    example: '11.4'\n    pattern: ^\\d+\\.\\d+$\n    title: CUDA version minimum\n    type: string\nrequired:\n- cudaVersionMin\n- cudaComputeCapability\ntitle: cwltool:CUDARequirement\ntype: object\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/cwltool-CUDARequirement"
+}

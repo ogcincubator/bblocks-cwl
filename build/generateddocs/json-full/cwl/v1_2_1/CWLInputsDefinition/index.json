@@ -7,7 +7,7 @@
   "abstract": "All inputs available to the Application Package.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.677093",
-  "dateOfLastChange": "2025-09-29",
+  "dateOfLastChange": "2025-09-30",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -16,9 +16,11 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLInputMap",
-    "ogc.cwl.v1_2_1.CWLInputList",
-    "ogc.cwl.v1_2_1.CWLImport"
+    "ogc.cwl.v1_2_1.CWLInputItem",
+    "ogc.cwl.v1_2_1.CWLImport",
+    "ogc.cwl.v1_2_1.CWLType",
+    "ogc.cwl.v1_2_1.CWLInputStdIn",
+    "ogc.cwl.v1_2_1.CWLInputObject"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputsDefinition/schema.yaml",
@@ -29,7 +31,7 @@
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputsDefinition/",
   "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "description: All inputs available to the Application Package.\noneOf:\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputList/schema.yaml\n- $comment: Avoid 'oneOf' conflict of generic mapping key strings as input identifier\n    matching against '$import'.\n  allOf:\n  - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputMap/schema.yaml\n  - not:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLImport/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLImport/schema.yaml\ntitle: CWLInputsDefinition\n",
+  "annotatedSchema": "description: All inputs available to the Application Package.\n$defs:\n  CWLInputMap:\n    additionalProperties:\n      oneOf:\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputObject/schema.yaml\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputStdIn/schema.yaml\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLImport/schema.yaml\n    description: Package inputs defined as mapping.\n    properties: {}\n    required: []\n    title: CWLInputMap\n    type: object\n  CWLInputList:\n    description: Package inputs defined as items.\n    items:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputItem/schema.yaml\n    title: CWLInputList\n    type: array\noneOf:\n- $ref: '#/$defs/CWLInputList'\n- $comment: Avoid 'oneOf' conflict of generic mapping key strings as input identifier\n    matching against '$import'.\n  allOf:\n  - $ref: '#/$defs/CWLInputMap'\n  - not:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLImport/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLImport/schema.yaml\ntitle: CWLInputsDefinition\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLInputsDefinition"
 }

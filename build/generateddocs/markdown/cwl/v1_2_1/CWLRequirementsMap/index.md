@@ -67,7 +67,7 @@ properties:
     $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/WorkReuseRequirement/schema.yaml
     x-jsonld-id: https://w3id.org/cwl/cwl#WorkReuse
   cwltool:CUDARequirement:
-    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/cwltool:CUDARequirement/schema.yaml
+    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/cwltool-CUDARequirement/schema.yaml
 title: CWLRequirementsMap
 type: object
 x-jsonld-prefixes:
@@ -148,13 +148,7 @@ Links to the schema:
     "ScatterFeatureRequirement": "cwl:ScatterFeatureRequirement",
     "SchemaDefRequirement": {
       "@context": {
-        "types": {
-          "@context": {
-            "pattern": "cwl:SecondaryFileSchema/pattern",
-            "required": "cwl:SecondaryFileSchema/required"
-          },
-          "@id": "cwl:SchemaDefRequirement/types"
-        }
+        "types": "cwl:SchemaDefRequirement/types"
       },
       "@id": "cwl:SchemaDefRequirement"
     },

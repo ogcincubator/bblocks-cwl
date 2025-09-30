@@ -9,8 +9,8 @@ path	@id
 /items/fields/format	
 /items/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
 /items/fields/secondaryFiles	
-/items/fields/secondaryFiles/pattern	https://w3id.org/cwl/cwl#SecondaryFileSchema/pattern
-/items/fields/secondaryFiles/required	https://w3id.org/cwl/cwl#SecondaryFileSchema/required
+/items/fields/secondaryFiles/pattern	
+/items/fields/secondaryFiles/required	
 /items/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
 /items/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /items/name	

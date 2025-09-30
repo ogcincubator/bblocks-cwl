@@ -7,7 +7,7 @@
   "abstract": "Indicates that the value passed to this CWL input will be redirected to the standard input stream of the command.\nCan be defined for only one input and must not be combined with 'stdin' at the root of the CWL document.\n",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.702775",
-  "dateOfLastChange": "2025-09-29",
+  "dateOfLastChange": "2025-09-30",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",

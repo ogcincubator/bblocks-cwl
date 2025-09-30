@@ -7,7 +7,7 @@
   "abstract": "CWLOutputStdOut",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.691121",
-  "dateOfLastChange": "2025-09-29",
+  "dateOfLastChange": "2025-09-30",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -16,8 +16,8 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLOutputStdOutObjectType",
-    "ogc.cwl.v1_2_1.CWLOutputStdOutDefinition"
+    "ogc.cwl.v1_2_1.CWLOutputStdOutDefinition",
+    "ogc.cwl.v1_2_1.CWLOutputStdOutObjectType"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputStdOut/schema.yaml",

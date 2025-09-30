@@ -1,10 +1,22 @@
 {
   "oneOf": [
     {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputStdErrDefinition/schema.json"
+      "description": "Indicates that the data pushed to the standard error stream by the command will be redirected to this CWL output.\nCan be defined for only one output. If combined with 'stderr' at the root of the CWL document, that definition\nwill indicate the desired name of the output file where the error stream will be written to.  A random name will\nbe applied for the file of this output unless otherwise specified.\n",
+      "enum": [
+        "stderr"
+      ],
+      "type": "string"
     },
     {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputStdErrObjectType/schema.json"
+      "properties": {
+        "type": {
+          "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputStdErrDefinition/schema.json"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "type": "object"
     }
   ]
 }

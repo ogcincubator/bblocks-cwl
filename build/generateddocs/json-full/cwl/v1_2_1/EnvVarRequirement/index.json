@@ -7,7 +7,7 @@
   "abstract": "EnvVarRequirement",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.684530",
-  "dateOfLastChange": "2025-09-29",
+  "dateOfLastChange": "2025-09-30",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -16,19 +16,19 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.EnvironmentDef",
     "ogc.cwl.v1_2_1.CWLExpression"
   ],
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/EnvVarRequirement/context.jsonld",
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/EnvVarRequirement/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/EnvVarRequirement/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/EnvVarRequirement/schema.yaml",
-  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/EnvVarRequirement/context.jsonld",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/EnvVarRequirement/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/EnvVarRequirement/",
   "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "additionalProperties: false\nproperties:\n  class:\n    enum:\n    - EnvVarRequirement\n    type: string\n  envDef:\n    oneOf:\n    - items:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/EnvironmentDef/schema.yaml\n      type: array\n    - additionalProperties:\n        oneOf:\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n          description: The 'envValue' specified directly\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/EnvironmentDef/schema.yaml\n      description: Mapping of 'envName' to environment value or definition.\n      type: object\nrequired:\n- envDef\ntype: object\n",
+  "annotatedSchema": "$defs:\n  EnvironmentDef:\n    additionalProperties: false\n    properties:\n      envName:\n        minLength: 1\n        type: string\n        x-jsonld-id: https://w3id.org/cwl/cwl#EnvironmentDef/envName\n      envValue:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n        x-jsonld-id: https://w3id.org/cwl/cwl#EnvironmentDef/envValue\n    required:\n    - envName\n    - envValue\n    type: object\nadditionalProperties: false\nproperties:\n  class:\n    enum:\n    - EnvVarRequirement\n    type: string\n  envDef:\n    oneOf:\n    - items:\n        $ref: '#/$defs/EnvironmentDef'\n      type: array\n    - additionalProperties:\n        oneOf:\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n          description: The 'envValue' specified directly\n        - $ref: '#/$defs/EnvironmentDef'\n      description: Mapping of 'envName' to environment value or definition.\n      type: object\nrequired:\n- envDef\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/EnvVarRequirement"
 }

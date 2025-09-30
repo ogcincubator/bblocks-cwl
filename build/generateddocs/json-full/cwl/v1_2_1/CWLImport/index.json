@@ -7,7 +7,7 @@
   "abstract": "Represents an '$import' directive that should point toward another compatible CWL file to import where specified.\nThe contents of the imported file should be relevant contextually where it is being imported.\n",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.681564",
-  "dateOfLastChange": "2025-09-29",
+  "dateOfLastChange": "2025-09-30",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",

@@ -10,7 +10,16 @@
       "type": "string"
     },
     "enableReuse": {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/EnableReuseValue/schema.json",
+      "description": "Indicates if reuse is enabled for this tool.\n\nCan be an expression when combined with 'InlineJavascriptRequirement'\n(see also: https://www.commonwl.org/v1.2/CommandLineTool.html#Expression).\n",
+      "oneOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.json"
+        }
+      ],
+      "title": "EnableReuseValue",
       "x-jsonld-id": "https://w3id.org/cwl/cwl#WorkReuse/enableReuse"
     }
   },

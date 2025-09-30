@@ -7,7 +7,7 @@
   "abstract": "Specify basic hardware resource requirements\n(see also: https://www.commonwl.org/v1.2/CommandLineTool.html#ResourceRequirement).\n",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.686613",
-  "dateOfLastChange": "2025-09-29",
+  "dateOfLastChange": "2025-09-30",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -16,14 +16,14 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.ResourceRAMMaximum",
-    "ogc.cwl.v1_2_1.ResourceTmpDirMinimum",
-    "ogc.cwl.v1_2_1.ResourceCoresMaximum",
-    "ogc.cwl.v1_2_1.ResourceRAMMinimum",
+    "ogc.cwl.v1_2_1.ResourceOutDirMinimum",
     "ogc.cwl.v1_2_1.ResourceCoresMinimum",
+    "ogc.cwl.v1_2_1.ResourceCoresMaximum",
     "ogc.cwl.v1_2_1.ResourceOutDirMaximum",
-    "ogc.cwl.v1_2_1.ResourceTmpDirMaximum",
-    "ogc.cwl.v1_2_1.ResourceOutDirMinimum"
+    "ogc.cwl.v1_2_1.ResourceTmpDirMinimum",
+    "ogc.cwl.v1_2_1.ResourceRAMMaximum",
+    "ogc.cwl.v1_2_1.ResourceRAMMinimum",
+    "ogc.cwl.v1_2_1.ResourceTmpDirMaximum"
   ],
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ResourceRequirement/context.jsonld",
   "schema": {

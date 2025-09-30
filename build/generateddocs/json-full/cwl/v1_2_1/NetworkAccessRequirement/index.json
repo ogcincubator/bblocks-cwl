@@ -7,7 +7,7 @@
   "abstract": "NetworkAccessRequirement",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.686363",
-  "dateOfLastChange": "2025-09-29",
+  "dateOfLastChange": "2025-09-30",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -16,7 +16,7 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.NetworkAccess"
+    "ogc.cwl.v1_2_1.CWLExpression"
   ],
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/NetworkAccessRequirement/context.jsonld",
   "schema": {
@@ -28,7 +28,7 @@
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/NetworkAccessRequirement/",
   "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "additionalProperties: false\nproperties:\n  class:\n    $comment: Not 'NetworkAccessRequirement'\n    enum:\n    - NetworkAccess\n    type: string\n  networkAccess:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/NetworkAccess/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#NetworkAccess/networkAccess\nrequired:\n- networkAccess\ntitle: NetworkAccessRequirement\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
+  "annotatedSchema": "additionalProperties: false\nproperties:\n  class:\n    $comment: Not 'NetworkAccessRequirement'\n    enum:\n    - NetworkAccess\n    type: string\n  networkAccess:\n    description: Indicate whether a process requires outgoing IPv4/IPv6 network access.\n    example: true\n    oneOf:\n    - type: boolean\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    title: NetworkAccess\n    x-jsonld-id: https://w3id.org/cwl/cwl#NetworkAccess/networkAccess\nrequired:\n- networkAccess\ntitle: NetworkAccessRequirement\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/NetworkAccessRequirement"
 }

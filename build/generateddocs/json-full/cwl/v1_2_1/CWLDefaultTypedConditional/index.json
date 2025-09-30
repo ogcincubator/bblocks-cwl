@@ -7,7 +7,7 @@
   "abstract": "CWLDefaultTypedConditional",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.699245",
-  "dateOfLastChange": "2025-09-29",
+  "dateOfLastChange": "2025-09-30",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -16,10 +16,10 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLDefaultLocation",
-    "ogc.cwl.v1_2_1.AnyType",
+    "ogc.cwl.v1_2_1.CWLTypeSymbols",
     "ogc.cwl.v1_2_1.CWLTypeSymbolValues",
-    "ogc.cwl.v1_2_1.CWLTypeSymbols"
+    "ogc.cwl.v1_2_1.CWLDefaultLocation",
+    "ogc.cwl.v1_2_1.AnyType"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultTypedConditional/schema.yaml",

@@ -7,7 +7,7 @@
   "abstract": "Default value of input if not provided for task execution.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.714555",
-  "dateOfLastChange": "2025-09-29",
+  "dateOfLastChange": "2025-09-30",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -16,10 +16,10 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLDefaultLocation",
     "ogc.cwl.v1_2_1.CWLDefaultObject",
-    "ogc.cwl.v1_2_1.AnyLiteralList",
-    "ogc.cwl.v1_2_1.AnyLiteralType"
+    "ogc.cwl.v1_2_1.CWLDefaultLocation",
+    "ogc.cwl.v1_2_1.AnyLiteralType",
+    "ogc.cwl.v1_2_1.AnyLiteralList"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefault/schema.yaml",

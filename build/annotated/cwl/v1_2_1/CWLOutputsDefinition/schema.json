@@ -1,14 +1,50 @@
 {
   "description": "All outputs produced by the Application Package.",
+  "$defs": {
+    "CWLOutputList": {
+      "description": "Package outputs defined as items.",
+      "items": {
+        "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputItem/schema.json"
+      },
+      "title": "CWLOutputList",
+      "type": "array"
+    },
+    "CWLOutputMap": {
+      "additionalProperties": {
+        "oneOf": [
+          {
+            "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.json"
+          },
+          {
+            "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputObject/schema.json"
+          },
+          {
+            "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputStdOut/schema.json"
+          },
+          {
+            "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputStdErr/schema.json"
+          },
+          {
+            "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLImport/schema.json"
+          }
+        ]
+      },
+      "description": "Package outputs defined as mapping.",
+      "properties": {},
+      "required": [],
+      "title": "CWLOutputMap",
+      "type": "object"
+    }
+  },
   "oneOf": [
     {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputList/schema.json"
+      "$ref": "#/$defs/CWLOutputList"
     },
     {
       "$comment": "Avoid 'oneOf' conflict of generic mapping key strings as output identifier matching against '$import'.",
       "allOf": [
         {
-          "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputMap/schema.json"
+          "$ref": "#/$defs/CWLOutputMap"
         },
         {
           "not": {

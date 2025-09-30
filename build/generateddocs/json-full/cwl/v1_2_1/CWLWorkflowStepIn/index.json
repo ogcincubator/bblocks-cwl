@@ -7,7 +7,7 @@
   "abstract": "Mapping of Workflow step inputs to nested CWL tool definitions inputs or outputs.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.708164",
-  "dateOfLastChange": "2025-09-29",
+  "dateOfLastChange": "2025-09-30",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -16,8 +16,8 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLWorkflowStepInMap",
-    "ogc.cwl.v1_2_1.CWLWorkflowStepInList"
+    "ogc.cwl.v1_2_1.CWLWorkflowStepInItem",
+    "ogc.cwl.v1_2_1.CWLWorkflowStepInput"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepIn/schema.yaml",
@@ -28,7 +28,7 @@
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowStepIn/",
   "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "description: Mapping of Workflow step inputs to nested CWL tool definitions inputs\n  or outputs.\noneOf:\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepInMap/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepInList/schema.yaml\n",
+  "annotatedSchema": "description: Mapping of Workflow step inputs to nested CWL tool definitions inputs\n  or outputs.\n$defs:\n  CWLWorkflowStepInMap:\n    additionalProperties:\n      oneOf:\n      - type: string\n      - items:\n          type: string\n        type: array\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepInput/schema.yaml\n    type: object\n  CWLWorkflowStepInList:\n    items:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepInItem/schema.yaml\n    type: array\noneOf:\n- $ref: '#/$defs/CWLWorkflowStepInMap'\n- $ref: '#/$defs/CWLWorkflowStepInList'\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLWorkflowStepIn"
 }

@@ -5,16 +5,15 @@ path	@id
 /fields/symbols	
 /fields/fields	
 /fields/name	
-/fields/type/items	
-/fields/type/type	
 /fields/type/symbols	
+/fields/type/type	
 /fields/type/fields	
 /fields/type/name	
 /fields/format	
 /fields/loadContents	https://w3id.org/cwl/cwl#loadContents
 /fields/secondaryFiles	
-/fields/secondaryFiles/pattern	https://w3id.org/cwl/cwl#SecondaryFileSchema/pattern
-/fields/secondaryFiles/required	https://w3id.org/cwl/cwl#SecondaryFileSchema/required
+/fields/secondaryFiles/pattern	
+/fields/secondaryFiles/required	
 /fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
 /fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /name	

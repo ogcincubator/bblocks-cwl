@@ -15,7 +15,7 @@ description: Mapping of Workflow step inputs to nested CWL tool definitions inpu
 items:
   oneOf:
   - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLIdentifier/schema.yaml
-  - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepOutId/schema.yaml
+  - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepId/schema.yaml
 type: array
 
 ```

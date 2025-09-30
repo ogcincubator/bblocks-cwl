@@ -7,7 +7,7 @@
   "abstract": "The compute capability supported by the GPU hardware.\n\n* If this is a single value, it defines only the minimum compute capability.\n  GPUs with higher capability are also accepted.\n* If it is an array value, then only select GPUs with compute capabilities that explicitly\n  appear in the array.\n  See https://docs.nvidia.com/deploy/cuda-compatibility/#faq and\n  https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#cuda-compute-capability\n  for details.\n",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.692222",
-  "dateOfLastChange": "2025-09-29",
+  "dateOfLastChange": "2025-09-30",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",

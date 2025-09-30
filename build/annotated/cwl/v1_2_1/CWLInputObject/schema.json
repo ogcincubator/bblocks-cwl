@@ -1,7 +1,26 @@
 {
+  "$defs": {
+    "CWLInputObjectBase": {
+      "additionalProperties": {},
+      "properties": {
+        "inputBinding": {
+          "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InputBinding/schema.json",
+          "additionalProperties": {},
+          "x-jsonld-id": "https://w3id.org/cwl/cwl#inputBinding"
+        },
+        "type": {
+          "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.json"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "type": "object"
+    }
+  },
   "allOf": [
     {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputObjectBase/schema.json"
+      "$ref": "#/$defs/CWLInputObjectBase"
     },
     {
       "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultTypedConditional/schema.json"
@@ -11,5 +30,8 @@
     }
   ],
   "summary": "CWL type definition with parameters.",
-  "title": "CWLInputObject"
+  "title": "CWLInputObject",
+  "x-jsonld-prefixes": {
+    "cwl": "https://w3id.org/cwl/cwl#"
+  }
 }

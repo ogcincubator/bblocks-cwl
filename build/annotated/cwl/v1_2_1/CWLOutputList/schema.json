@@ -1,8 +1,0 @@
-{
-  "description": "Package outputs defined as items.",
-  "items": {
-    "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputItem/schema.json"
-  },
-  "title": "CWLOutputList",
-  "type": "array"
-}

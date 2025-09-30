@@ -7,7 +7,7 @@
   "abstract": "InitialWorkDirRequirement",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.685221",
-  "dateOfLastChange": "2025-09-29",
+  "dateOfLastChange": "2025-09-30",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -16,7 +16,9 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.InitialWorkDirListing"
+    "ogc.cwl.v1_2_1.CWLExpression",
+    "ogc.cwl.v1_2_1.DirectoryListingDirent",
+    "ogc.cwl.v1_2_1.DirectoryListingFileOrDirectory"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InitialWorkDirRequirement/schema.yaml",
@@ -27,7 +29,7 @@
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/InitialWorkDirRequirement/",
   "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "additionalProperties: false\nproperties:\n  class:\n    enum:\n    - InitialWorkDirRequirement\n    type: string\n  listing:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InitialWorkDirListing/schema.yaml\nrequired:\n- listing\ntitle: InitialWorkDirRequirement\ntype: object\n",
+  "annotatedSchema": "$defs:\n  InitialWorkDirListing:\n    oneOf:\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    - items:\n        oneOf:\n        - type: 'null'\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DirectoryListingDirent/schema.yaml\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DirectoryListingFileOrDirectory/schema.yaml\n        - items:\n            $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/DirectoryListingFileOrDirectory/schema.yaml\n          type: array\n      title: InitialWorkDirListingItems\n      type: array\n    title: InitialWorkDirListing\nadditionalProperties: false\nproperties:\n  class:\n    enum:\n    - InitialWorkDirRequirement\n    type: string\n  listing:\n    $ref: '#/$defs/InitialWorkDirListing'\nrequired:\n- listing\ntitle: InitialWorkDirRequirement\ntype: object\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/InitialWorkDirRequirement"
 }

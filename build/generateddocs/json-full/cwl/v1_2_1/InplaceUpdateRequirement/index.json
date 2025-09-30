@@ -7,7 +7,7 @@
   "abstract": "If 'inplaceUpdate' is true, then an implementation supporting this feature may permit tools to directly\nupdate files with 'writable: true' in 'InitialWorkDirRequirement'. That is, as an optimization,\nfiles may be destructively modified in place as opposed to copied and updated\n(see also: https://www.commonwl.org/v1.2/CommandLineTool.html#InplaceUpdateRequirement).\n",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.685745",
-  "dateOfLastChange": "2025-09-29",
+  "dateOfLastChange": "2025-09-30",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",

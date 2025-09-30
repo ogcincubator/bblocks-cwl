@@ -8,29 +8,25 @@ path	@id
 /types/fields/type	
 /types/fields/symbols	
 /types/fields/name	
-/types/fields/type/items	
-/types/fields/type/type	
 /types/fields/type/symbols	
+/types/fields/type/type	
 /types/fields/format	
 /types/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
 /types/fields/secondaryFiles	
-/types/fields/secondaryFiles/pattern	https://w3id.org/cwl/cwl#SecondaryFileSchema/pattern
-/types/fields/secondaryFiles/required	https://w3id.org/cwl/cwl#SecondaryFileSchema/required
+/types/fields/secondaryFiles/pattern	
+/types/fields/secondaryFiles/required	
 /types/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
 /types/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /types/name	
 /types/items	
-/types/items/items	
-/types/items/type	
 /types/items/symbols	
+/types/items/type	
 /types/items/fields	
 /types/items/fields/name	
 /types/items/fields/type	
 /types/items/fields/format	
 /types/items/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
 /types/items/fields/secondaryFiles	
-/types/items/fields/secondaryFiles/pattern	https://w3id.org/cwl/cwl#SecondaryFileSchema/pattern
-/types/items/fields/secondaryFiles/required	https://w3id.org/cwl/cwl#SecondaryFileSchema/required
 /types/items/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
 /types/items/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /types/items/name	
