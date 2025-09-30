@@ -31,7 +31,25 @@ properties:
     - InlineJavascriptRequirement
     type: string
   expressionLib:
-    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InlineJavascriptLibraries/schema.yaml
+    description: 'Additional code fragments that will also be inserted before executing
+      the expression code.
+
+      Allows for function definitions that may be called from CWL expressions.
+
+      '
+    items:
+      oneOf:
+      - type: string
+      - additionalProperties: false
+        properties:
+          $include:
+            type: string
+        required:
+        - $include
+        type: object
+      title: exp_lib
+    title: InlineJavascriptLibraries
+    type: array
     x-jsonld-id: https://w3id.org/cwl/cwl#InlineJavascriptRequirement/expressionLib
 required:
 - expressionLib

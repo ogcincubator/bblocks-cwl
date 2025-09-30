@@ -80,8 +80,6 @@ Links to the schema:
     "timelimit": "cwl:ToolTimeLimit/timelimit",
     "enableReuse": "cwl:WorkReuse/enableReuse",
     "inputBinding": "cwl:inputBinding",
-    "loadContents": "cwl:loadContents",
-    "streamable": "cwl:FieldBase/streamable",
     "basename": "cwl:basename",
     "nameroot": "cwl:File/nameroot",
     "outputBinding": {
@@ -90,6 +88,8 @@ Links to the schema:
       },
       "@id": "cwl:outputBinding"
     },
+    "loadContents": "cwl:loadContents",
+    "streamable": "cwl:FieldBase/streamable",
     "cwl": "https://w3id.org/cwl/cwl#",
     "@version": 1.1
   }

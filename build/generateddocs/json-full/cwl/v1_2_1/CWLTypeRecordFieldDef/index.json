@@ -16,9 +16,9 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLTypeRecordFieldDefBase",
     "ogc.cwl.v1_2_1.CWLFileOnlyParametersConditional",
-    "ogc.cwl.v1_2_1.CWLDirectoryOnlyParametersConditional"
+    "ogc.cwl.v1_2_1.CWLDirectoryOnlyParametersConditional",
+    "ogc.cwl.v1_2_1.CWLType"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldDef/schema.yaml",
@@ -29,7 +29,7 @@
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeRecordFieldDef/",
   "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "allOf:\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldDefBase/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLFileOnlyParametersConditional/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDirectoryOnlyParametersConditional/schema.yaml\n",
+  "annotatedSchema": "allOf:\n- properties:\n    name:\n      $comment: 'Required if list item. Otherwise, optional since it is the mapping\n        key.\n\n        This requirement is defined in ''CWLTypeRecordFieldsItem'' to allow reuse\n        of this schema.\n\n        '\n      type: string\n    type:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml\n  required:\n  - type\n  type: object\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLFileOnlyParametersConditional/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDirectoryOnlyParametersConditional/schema.yaml\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLTypeRecordFieldDef"
 }

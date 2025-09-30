@@ -29,14 +29,4 @@ path	@id
 /default/path	
 /doc	
 /label	http://www.w3.org/2000/01/rdf-schema#label
-/symbols	
-/fields	
-/fields/name	
-/fields/type	
-/fields/format	
-/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
-/fields/secondaryFiles	
-/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
-/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
-/name	
 /$import	

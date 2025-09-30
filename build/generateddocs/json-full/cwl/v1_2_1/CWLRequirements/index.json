@@ -17,8 +17,8 @@
   "shaclShapes": {},
   "dependsOn": [
     "ogc.cwl.v1_2_1.CWLImport",
-    "ogc.cwl.v1_2_1.CWLRequirementsMap",
-    "ogc.cwl.v1_2_1.CWLRequirementsItem"
+    "ogc.cwl.v1_2_1.CWLRequirementsItem",
+    "ogc.cwl.v1_2_1.CWLRequirementsMap"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLRequirements/schema.yaml",

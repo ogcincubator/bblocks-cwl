@@ -16,9 +16,9 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLDefaultTypedConditional",
+    "ogc.cwl.v1_2_1.CWLInputItemBase",
     "ogc.cwl.v1_2_1.CWLDocumentation",
-    "ogc.cwl.v1_2_1.CWLInputItemBase"
+    "ogc.cwl.v1_2_1.CWLDefaultTypedConditional"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputItem/schema.yaml",

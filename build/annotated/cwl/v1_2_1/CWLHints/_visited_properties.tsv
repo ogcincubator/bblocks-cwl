@@ -59,8 +59,6 @@ path	@id
 /SchemaDefRequirement/types/fields/type	
 /SchemaDefRequirement/types/fields/symbols	
 /SchemaDefRequirement/types/fields/name	
-/SchemaDefRequirement/types/fields/type/symbols	
-/SchemaDefRequirement/types/fields/type/type	
 /SchemaDefRequirement/types/fields/format	
 /SchemaDefRequirement/types/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
 /SchemaDefRequirement/types/fields/secondaryFiles	
@@ -70,17 +68,6 @@ path	@id
 /SchemaDefRequirement/types/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /SchemaDefRequirement/types/name	
 /SchemaDefRequirement/types/items	
-/SchemaDefRequirement/types/items/symbols	
-/SchemaDefRequirement/types/items/type	
-/SchemaDefRequirement/types/items/fields	
-/SchemaDefRequirement/types/items/fields/name	
-/SchemaDefRequirement/types/items/fields/type	
-/SchemaDefRequirement/types/items/fields/format	
-/SchemaDefRequirement/types/items/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
-/SchemaDefRequirement/types/items/fields/secondaryFiles	
-/SchemaDefRequirement/types/items/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
-/SchemaDefRequirement/types/items/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
-/SchemaDefRequirement/types/items/name	
 /SchemaDefRequirement/types/$import	
 /ShellCommandRequirement	https://w3id.org/cwl/cwl#ShellCommandRequirement
 /ShellCommandRequirement/class	
@@ -136,29 +123,8 @@ path	@id
 /types/symbols	
 /types/type	
 /types/fields	
-/types/fields/symbols	
-/types/fields/type	
-/types/fields/name	
-/types/fields/type/symbols	
-/types/fields/type/type	
-/types/fields/format	
-/types/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
-/types/fields/secondaryFiles	
-/types/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
-/types/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /types/name	
 /types/items	
-/types/items/symbols	
-/types/items/type	
-/types/items/fields	
-/types/items/fields/name	
-/types/items/fields/type	
-/types/items/fields/format	
-/types/items/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
-/types/items/fields/secondaryFiles	
-/types/items/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
-/types/items/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
-/types/items/name	
 /types/$import	
 /listing	
 /expressionLib	https://w3id.org/cwl/cwl#InlineJavascriptRequirement/expressionLib

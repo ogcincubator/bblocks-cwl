@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.cwl.v1_2_1.CWLDirectoryOnlyParametersConditional - CWLDirectoryOnlyParametersConditional",
   "bblockName": "CWLDirectoryOnlyParametersConditional",
   "bblockId": "ogc.cwl.v1_2_1.CWLDirectoryOnlyParametersConditional",
-  "generated": "2025-09-30T12:41:30.833578+00:00",
+  "generated": "2025-09-30T12:50:22.990479+00:00",
   "result": true,
   "items": [],
   "globalErrors": {},

@@ -136,8 +136,6 @@ Links to the schema:
     "timelimit": "cwl:ToolTimeLimit/timelimit",
     "enableReuse": "cwl:WorkReuse/enableReuse",
     "inputBinding": "cwl:inputBinding",
-    "loadContents": "cwl:loadContents",
-    "streamable": "cwl:FieldBase/streamable",
     "basename": "cwl:basename",
     "nameroot": "cwl:File/nameroot",
     "label": "http://www.w3.org/2000/01/rdf-schema#label",
@@ -150,6 +148,8 @@ Links to the schema:
     "stderr": "cwl:stderr",
     "stdin": "cwl:stdin",
     "stdout": "cwl:stdout",
+    "loadContents": "cwl:loadContents",
+    "streamable": "cwl:FieldBase/streamable",
     "cwl": "https://w3id.org/cwl/cwl#",
     "@version": 1.1
   }

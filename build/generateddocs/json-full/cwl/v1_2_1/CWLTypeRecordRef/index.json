@@ -16,10 +16,10 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLInputStdInDefinition",
-    "ogc.cwl.v1_2_1.CWLOutputStdOutDefinition",
-    "ogc.cwl.v1_2_1.CWLTypeDefinition",
     "ogc.cwl.v1_2_1.CWLTypeRecordRefPattern",
+    "ogc.cwl.v1_2_1.CWLInputStdInDefinition",
+    "ogc.cwl.v1_2_1.CWLTypeDefinition",
+    "ogc.cwl.v1_2_1.CWLOutputStdOutDefinition",
     "ogc.cwl.v1_2_1.CWLOutputStdErrDefinition"
   ],
   "schema": {

@@ -68,8 +68,6 @@ path	@id
 /hints/SchemaDefRequirement/types/fields/type	
 /hints/SchemaDefRequirement/types/fields/symbols	
 /hints/SchemaDefRequirement/types/fields/name	
-/hints/SchemaDefRequirement/types/fields/type/symbols	
-/hints/SchemaDefRequirement/types/fields/type/type	
 /hints/SchemaDefRequirement/types/fields/format	
 /hints/SchemaDefRequirement/types/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
 /hints/SchemaDefRequirement/types/fields/secondaryFiles	
@@ -79,17 +77,6 @@ path	@id
 /hints/SchemaDefRequirement/types/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /hints/SchemaDefRequirement/types/name	
 /hints/SchemaDefRequirement/types/items	
-/hints/SchemaDefRequirement/types/items/symbols	
-/hints/SchemaDefRequirement/types/items/type	
-/hints/SchemaDefRequirement/types/items/fields	
-/hints/SchemaDefRequirement/types/items/fields/name	
-/hints/SchemaDefRequirement/types/items/fields/type	
-/hints/SchemaDefRequirement/types/items/fields/format	
-/hints/SchemaDefRequirement/types/items/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
-/hints/SchemaDefRequirement/types/items/fields/secondaryFiles	
-/hints/SchemaDefRequirement/types/items/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
-/hints/SchemaDefRequirement/types/items/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
-/hints/SchemaDefRequirement/types/items/name	
 /hints/SchemaDefRequirement/types/$import	
 /hints/ShellCommandRequirement	https://w3id.org/cwl/cwl#ShellCommandRequirement
 /hints/ShellCommandRequirement/class	
@@ -145,29 +132,8 @@ path	@id
 /hints/types/symbols	
 /hints/types/type	
 /hints/types/fields	
-/hints/types/fields/symbols	
-/hints/types/fields/type	
-/hints/types/fields/name	
-/hints/types/fields/type/symbols	
-/hints/types/fields/type/type	
-/hints/types/fields/format	
-/hints/types/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
-/hints/types/fields/secondaryFiles	
-/hints/types/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
-/hints/types/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /hints/types/name	
 /hints/types/items	
-/hints/types/items/symbols	
-/hints/types/items/type	
-/hints/types/items/fields	
-/hints/types/items/fields/name	
-/hints/types/items/fields/type	
-/hints/types/items/fields/format	
-/hints/types/items/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
-/hints/types/items/fields/secondaryFiles	
-/hints/types/items/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
-/hints/types/items/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
-/hints/types/items/name	
 /hints/types/$import	
 /hints/listing	
 /hints/expressionLib	https://w3id.org/cwl/cwl#InlineJavascriptRequirement/expressionLib
@@ -198,17 +164,7 @@ path	@id
 /inputs/inputBinding/shellQuote	https://w3id.org/cwl/cwl#CommandLineBinding/shellQuote
 /inputs/inputBinding/valueFrom	https://w3id.org/cwl/cwl#valueFrom
 /inputs/type	
-/inputs/type/symbols	
 /inputs/type/type	
-/inputs/type/fields	
-/inputs/type/fields/name	
-/inputs/type/fields/type	
-/inputs/type/fields/format	
-/inputs/type/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
-/inputs/type/fields/secondaryFiles	
-/inputs/type/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
-/inputs/type/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
-/inputs/type/name	
 /inputs/default	
 /inputs/default/basename	https://w3id.org/cwl/cwl#basename
 /inputs/default/class	
@@ -217,16 +173,6 @@ path	@id
 /inputs/default/path	
 /inputs/doc	
 /inputs/label	http://www.w3.org/2000/01/rdf-schema#label
-/inputs/symbols	
-/inputs/fields	
-/inputs/fields/name	
-/inputs/fields/type	
-/inputs/fields/format	
-/inputs/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
-/inputs/fields/secondaryFiles	
-/inputs/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
-/inputs/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
-/inputs/name	
 /inputs/$import	
 /intent	
 /outputs	
@@ -234,27 +180,7 @@ path	@id
 /outputs/outputBinding	https://w3id.org/cwl/cwl#outputBinding
 /outputs/outputBinding/glob	https://w3id.org/cwl/cwl#CommandOutputBinding/glob
 /outputs/type	
-/outputs/type/symbols	
 /outputs/type/type	
-/outputs/type/fields	
-/outputs/type/fields/name	
-/outputs/type/fields/type	
-/outputs/type/fields/format	
-/outputs/type/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
-/outputs/type/fields/secondaryFiles	
-/outputs/type/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
-/outputs/type/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
-/outputs/type/name	
-/outputs/symbols	
-/outputs/fields	
-/outputs/fields/name	
-/outputs/fields/type	
-/outputs/fields/format	
-/outputs/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
-/outputs/fields/secondaryFiles	
-/outputs/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
-/outputs/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
-/outputs/name	
 /outputs/doc	
 /outputs/label	http://www.w3.org/2000/01/rdf-schema#label
 /outputs/$import	
@@ -306,29 +232,8 @@ path	@id
 /requirements/SchemaDefRequirement/types/symbols	
 /requirements/SchemaDefRequirement/types/type	
 /requirements/SchemaDefRequirement/types/fields	
-/requirements/SchemaDefRequirement/types/fields/symbols	
-/requirements/SchemaDefRequirement/types/fields/type	
-/requirements/SchemaDefRequirement/types/fields/name	
-/requirements/SchemaDefRequirement/types/fields/type/symbols	
-/requirements/SchemaDefRequirement/types/fields/type/type	
-/requirements/SchemaDefRequirement/types/fields/format	
-/requirements/SchemaDefRequirement/types/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
-/requirements/SchemaDefRequirement/types/fields/secondaryFiles	
-/requirements/SchemaDefRequirement/types/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
-/requirements/SchemaDefRequirement/types/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /requirements/SchemaDefRequirement/types/name	
 /requirements/SchemaDefRequirement/types/items	
-/requirements/SchemaDefRequirement/types/items/symbols	
-/requirements/SchemaDefRequirement/types/items/type	
-/requirements/SchemaDefRequirement/types/items/fields	
-/requirements/SchemaDefRequirement/types/items/fields/name	
-/requirements/SchemaDefRequirement/types/items/fields/type	
-/requirements/SchemaDefRequirement/types/items/fields/format	
-/requirements/SchemaDefRequirement/types/items/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
-/requirements/SchemaDefRequirement/types/items/fields/secondaryFiles	
-/requirements/SchemaDefRequirement/types/items/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
-/requirements/SchemaDefRequirement/types/items/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
-/requirements/SchemaDefRequirement/types/items/name	
 /requirements/SchemaDefRequirement/types/$import	
 /requirements/ShellCommandRequirement	https://w3id.org/cwl/cwl#ShellCommandRequirement
 /requirements/ShellCommandRequirement/class	
@@ -374,29 +279,8 @@ path	@id
 /requirements/types/symbols	
 /requirements/types/type	
 /requirements/types/fields	
-/requirements/types/fields/symbols	
-/requirements/types/fields/type	
-/requirements/types/fields/name	
-/requirements/types/fields/type/symbols	
-/requirements/types/fields/type/type	
-/requirements/types/fields/format	
-/requirements/types/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
-/requirements/types/fields/secondaryFiles	
-/requirements/types/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
-/requirements/types/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /requirements/types/name	
 /requirements/types/items	
-/requirements/types/items/symbols	
-/requirements/types/items/type	
-/requirements/types/items/fields	
-/requirements/types/items/fields/name	
-/requirements/types/items/fields/type	
-/requirements/types/items/fields/format	
-/requirements/types/items/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
-/requirements/types/items/fields/secondaryFiles	
-/requirements/types/items/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
-/requirements/types/items/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
-/requirements/types/items/name	
 /requirements/types/$import	
 /requirements/listing	
 /requirements/expressionLib	https://w3id.org/cwl/cwl#InlineJavascriptRequirement/expressionLib

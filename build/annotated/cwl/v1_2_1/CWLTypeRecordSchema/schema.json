@@ -1,7 +1,35 @@
 {
+  "$defs": {
+    "CWLTypeRecordFieldsMap": {
+      "additionalProperties": {
+        "oneOf": [
+          {
+            "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.json"
+          },
+          {
+            "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldDef/schema.json"
+          }
+        ]
+      },
+      "type": "object"
+    },
+    "CWLTypeRecordFieldsList": {
+      "items": {
+        "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsItem/schema.json"
+      },
+      "type": "array"
+    }
+  },
   "properties": {
     "fields": {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFields/schema.json"
+      "oneOf": [
+        {
+          "$ref": "#/$defs/CWLTypeRecordFieldsMap"
+        },
+        {
+          "$ref": "#/$defs/CWLTypeRecordFieldsList"
+        }
+      ]
     },
     "name": {
       "type": "string"

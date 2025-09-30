@@ -5,6 +5,8 @@ path	@id
 /type/type	
 /type/symbols	
 /type/fields	
+/type/fields/name	
+/type/fields/type	
 /type/fields/format	
 /type/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
 /type/fields/secondaryFiles	

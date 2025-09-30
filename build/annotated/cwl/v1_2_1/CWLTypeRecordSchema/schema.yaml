@@ -1,6 +1,19 @@
+$defs:
+  CWLTypeRecordFieldsMap:
+    additionalProperties:
+      oneOf:
+      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml
+      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldDef/schema.yaml
+    type: object
+  CWLTypeRecordFieldsList:
+    items:
+      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsItem/schema.yaml
+    type: array
 properties:
   fields:
-    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFields/schema.yaml
+    oneOf:
+    - $ref: '#/$defs/CWLTypeRecordFieldsMap'
+    - $ref: '#/$defs/CWLTypeRecordFieldsList'
   name:
     type: string
   type:

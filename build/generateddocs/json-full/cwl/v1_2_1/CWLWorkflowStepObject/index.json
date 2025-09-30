@@ -16,16 +16,16 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLExpression",
+    "ogc.cwl.v1_2_1.CWLMetadata",
+    "ogc.cwl.v1_2_1.CWLDocumentation",
     "ogc.cwl.v1_2_1.CWLAtomicNested",
     "ogc.cwl.v1_2_1.IdentifierArray",
-    "ogc.cwl.v1_2_1.CWLWorkflowBase",
-    "ogc.cwl.v1_2_1.CWLTextPatternID",
-    "ogc.cwl.v1_2_1.CWLWorkflowStepOut",
-    "ogc.cwl.v1_2_1.CWLDocumentation",
     "ogc.cwl.v1_2_1.CWLWorkflowClass",
+    "ogc.cwl.v1_2_1.CWLWorkflowBase",
     "ogc.cwl.v1_2_1.CWLWorkflowStepIn",
-    "ogc.cwl.v1_2_1.CWLMetadata"
+    "ogc.cwl.v1_2_1.CWLExpression",
+    "ogc.cwl.v1_2_1.CWLWorkflowStepOut",
+    "ogc.cwl.v1_2_1.CWLTextPatternID"
   ],
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepObject/context.jsonld",
   "schema": {

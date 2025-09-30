@@ -16,9 +16,9 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLDefaultLocation",
+    "ogc.cwl.v1_2_1.CWLTypeSymbolValues",
     "ogc.cwl.v1_2_1.CWLTypeSymbols",
-    "ogc.cwl.v1_2_1.CWLTypeSymbolValues"
+    "ogc.cwl.v1_2_1.CWLDefaultLocation"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultTypedConditional/schema.yaml",

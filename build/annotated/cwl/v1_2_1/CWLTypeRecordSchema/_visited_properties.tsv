@@ -4,16 +4,19 @@ path	@id
 /fields/type	
 /fields/symbols	
 /fields/fields	
+/fields/fields/name	
+/fields/fields/type	
+/fields/fields/format	
+/fields/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
+/fields/fields/secondaryFiles	
+/fields/fields/secondaryFiles/pattern	
+/fields/fields/secondaryFiles/required	
+/fields/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
+/fields/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /fields/name	
-/fields/type/symbols	
-/fields/type/type	
-/fields/type/fields	
-/fields/type/name	
 /fields/format	
 /fields/loadContents	https://w3id.org/cwl/cwl#loadContents
 /fields/secondaryFiles	
-/fields/secondaryFiles/pattern	
-/fields/secondaryFiles/required	
 /fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
 /fields/loadListing	https://w3id.org/cwl/cwl#loadListing
 /name	

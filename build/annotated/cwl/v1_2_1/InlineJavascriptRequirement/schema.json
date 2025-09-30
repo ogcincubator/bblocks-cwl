@@ -9,7 +9,29 @@
       "type": "string"
     },
     "expressionLib": {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InlineJavascriptLibraries/schema.json",
+      "description": "Additional code fragments that will also be inserted before executing the expression code.\nAllows for function definitions that may be called from CWL expressions.\n",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "$include": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "$include"
+            ],
+            "type": "object"
+          }
+        ],
+        "title": "exp_lib"
+      },
+      "title": "InlineJavascriptLibraries",
+      "type": "array",
       "x-jsonld-id": "https://w3id.org/cwl/cwl#InlineJavascriptRequirement/expressionLib"
     }
   },

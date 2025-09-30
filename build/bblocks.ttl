@@ -9,18 +9,18 @@
 
 <https://ogcincubator.github.io/bblocks-cwl/build/bblocks.ttl> a prov:Entity ;
     dct:format "text/turtle" ;
-    prov:wasAttributedTo _:N952a3eddc37d461a8b103437b29a64e8 ;
+    prov:wasAttributedTo _:Nc746346ead85429e89afc65da2e48887 ;
     prov:wasGeneratedBy [ a prov:Activity ;
-            prov:endedAtTime "2025-09-30T12:41:31.449149"^^xsd:dateTime ;
-            prov:startedAtTime "2025-09-30T12:41:31.186971"^^xsd:dateTime ;
+            prov:endedAtTime "2025-09-30T12:50:23.577460"^^xsd:dateTime ;
+            prov:startedAtTime "2025-09-30T12:50:23.326669"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
                     dct:format "application/json" ;
-                    dct:hasVersion "git:27b1dec7632ed65b9b7509d2b8964540669a00e1" ;
+                    dct:hasVersion "git:bb163693bca62702b5560dd032d3afc26a7abfce" ;
                     rdfs:seeAlso <https://ogcincubator.github.io/bblocks-cwl/build/register.json> ],
                 [ a prov:Entity ;
                     dct:format "application/yaml" ;
                     rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
-            prov:wasAssociatedWith _:N952a3eddc37d461a8b103437b29a64e8 ] .
+            prov:wasAssociatedWith _:Nc746346ead85429e89afc65da2e48887 ] .
 
 <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWL> a skos:Concept,
         dcat:Dataset,
@@ -28,12 +28,12 @@
     rdfs:label "CWL" ;
     dct:abstract "CWL"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.672484"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWL/index.md" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWL" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWL/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWL/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWL/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -81,12 +81,12 @@
   for details.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.692222"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CUDAComputeCapability/index.md" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CUDAComputeCapability/index.json" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CUDAComputeCapability" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CUDAComputeCapability/index.json" ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CUDAComputeCapability/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -102,12 +102,12 @@
     rdfs:label "CUDAComputeCapabilityArray" ;
     dct:abstract "CUDAComputeCapabilityArray"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.704903"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CUDAComputeCapabilityArray" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CUDAComputeCapabilityArray/index.json" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CUDAComputeCapabilityArray/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CUDAComputeCapabilityArray/index.json" ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CUDAComputeCapabilityArray" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -122,12 +122,12 @@
     rdfs:label "CWLAtomic" ;
     dct:abstract "CWLAtomic"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.672835"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLAtomic" ],
+        [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLAtomic/index.md" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLAtomic/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLAtomic" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLAtomic/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -171,10 +171,10 @@
     rdfs:label "CWLDefault" ;
     dct:abstract "Default value of input if not provided for task execution."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.714555"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLDefault/index.md" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLDefault" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLDefault/index.md" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLDefault/index.json" ] ;
     dct:hasVersion "1.2.1" ;
@@ -195,10 +195,10 @@
     rdfs:label "CWLDefaultObject" ;
     dct:abstract "CWLDefaultObject"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.715515"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLDefaultObject/index.json" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLDefaultObject/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLDefaultObject/index.json" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLDefaultObject" ] ;
     dct:hasVersion "1.2.1" ;
@@ -215,12 +215,12 @@
     rdfs:label "CWLDirectoryOnlyParameters" ;
     dct:abstract "CWLDirectoryOnlyParameters"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.714311"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLDirectoryOnlyParameters/index.md" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLDirectoryOnlyParameters/index.json" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLDirectoryOnlyParameters" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLDirectoryOnlyParameters" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLDirectoryOnlyParameters/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -238,12 +238,12 @@
     rdfs:label "CWLDirectoryOnlyParametersConditional" ;
     dct:abstract "Parameters that are only valid when 'type' or 'items' evaluates to 'Directory'."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.712940"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLDirectoryOnlyParametersConditional/index.md" ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLDirectoryOnlyParametersConditional" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLDirectoryOnlyParametersConditional/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLDirectoryOnlyParametersConditional/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLDirectoryOnlyParametersConditional/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -261,12 +261,12 @@
     rdfs:label "CWLFileOnlyParameters" ;
     dct:abstract "CWLFileOnlyParameters"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.714105"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLFileOnlyParameters/index.json" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLFileOnlyParameters" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLFileOnlyParameters/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLFileOnlyParameters" ] ;
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLFileOnlyParameters/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -284,10 +284,10 @@
     rdfs:label "CWLFileOnlyParametersConditional" ;
     dct:abstract "Parameters that are only valid when 'type' or 'items' evaluates to 'File'."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.712331"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLFileOnlyParametersConditional" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLFileOnlyParametersConditional/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLFileOnlyParametersConditional" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLFileOnlyParametersConditional/index.json" ] ;
     dct:hasVersion "1.2.1" ;
@@ -307,10 +307,10 @@
     rdfs:label "CWLGraph" ;
     dct:abstract "CWLGraph"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.673077"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLGraph/index.json" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLGraph/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLGraph/index.json" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLGraph" ] ;
     dct:hasVersion "1.2.1" ;
@@ -356,10 +356,10 @@
     rdfs:label "CWLGraphItemBase" ;
     dct:abstract "CWLGraphItemBase"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.691398"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLGraphItemBase/index.md" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLGraphItemBase/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLGraphItemBase/index.md" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLGraphItemBase" ] ;
     dct:hasVersion "1.2.1" ;
@@ -387,12 +387,12 @@
     rdfs:label "CWLHintsItem" ;
     dct:abstract "CWLHintsItem"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.689639"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLHintsItem/index.md" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLHintsItem" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLHintsItem/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLHintsItem" ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLHintsItem/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -412,10 +412,10 @@
     dct:created "2025-09-29T14:14:37.698749"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLHintsItemExtras" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLHintsItemExtras/index.md" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLHintsItemExtras/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLHintsItemExtras/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLHintsItemExtras/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -434,10 +434,10 @@
     rdfs:label "CWLHintsMapExtras" ;
     dct:abstract "CWLHintsMapExtras"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.689418"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLHintsMapExtras" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLHintsMapExtras/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLHintsMapExtras" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLHintsMapExtras/index.json" ] ;
     dct:hasVersion "1.2.1" ;
@@ -485,10 +485,10 @@ to official CWL documentation for more details (https://www.commonwl.org).
     rdfs:label "CWLInputItemBase" ;
     dct:abstract "CWLInputItemBase"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.698935"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLInputItemBase/index.md" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLInputItemBase" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLInputItemBase/index.md" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLInputItemBase/index.json" ] ;
     dct:hasVersion "1.2.1" ;
@@ -511,12 +511,12 @@ to official CWL documentation for more details (https://www.commonwl.org).
     rdfs:label "CWLInputObject" ;
     dct:abstract "CWLInputObject"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.690237"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLInputObject/index.md" ],
+        [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLInputObject/index.json" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLInputObject" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLInputObject/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLInputObject" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -558,12 +558,12 @@ to official CWL documentation for more details (https://www.commonwl.org).
     rdfs:label "CWLKeywordList" ;
     dct:abstract "Keywords applied to the process for search and categorization purposes."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.675647"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLKeywordList/index.json" ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLKeywordList" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLKeywordList/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLKeywordList/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLKeywordList/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -583,10 +583,10 @@ refer to official CWL documentation for more details (https://www.commonwl.org).
     dct:created "2025-09-29T14:14:37.690602"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLOutputItem" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLOutputItem/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLOutputItem/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLOutputItem/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLOutputItem/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -608,12 +608,12 @@ refer to official CWL documentation for more details (https://www.commonwl.org).
     rdfs:label "CWLOutputObject" ;
     dct:abstract "CWLOutputObject"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.690989"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLOutputObject/index.md" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLOutputObject/index.json" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLOutputObject" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLOutputObject" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLOutputObject/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -631,12 +631,12 @@ refer to official CWL documentation for more details (https://www.commonwl.org).
     rdfs:label "CWLOutputObjectBase" ;
     dct:abstract "CWLOutputObjectBase"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.703374"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLOutputObjectBase" ],
+        [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLOutputObjectBase/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLOutputObjectBase/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLOutputObjectBase" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLOutputObjectBase/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -655,12 +655,12 @@ refer to official CWL documentation for more details (https://www.commonwl.org).
     rdfs:label "CWLOutputStdOutObjectType" ;
     dct:abstract "CWLOutputStdOutObjectType"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.703827"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLOutputStdOutObjectType/index.md" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLOutputStdOutObjectType" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLOutputStdOutObjectType/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLOutputStdOutObjectType/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLOutputStdOutObjectType/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -668,32 +668,6 @@ refer to official CWL documentation for more details (https://www.commonwl.org).
     bblocks:dependsOn <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLOutputStdOutDefinition> ;
     bblocks:hasSchema <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputStdOutObjectType/schema.json>,
         <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputStdOutObjectType/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
-
-<https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLTypeBase> a skos:Concept,
-        dcat:Dataset,
-        bblocks:Schema ;
-    rdfs:label "CWLTypeBase" ;
-    dct:abstract "CWLTypeBase"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:created "2025-09-29T14:14:37.702178"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeBase/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeBase" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeBase/index.md" ] ;
-    dct:hasVersion "1.2.1" ;
-    dct:modified "2025-09-30"^^xsd:date ;
-    skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
-    dcat:keyword "cwl" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLType>,
-        <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLTypeDefinition>,
-        <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLTypeEnum>,
-        <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLTypeRecordRef>,
-        <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLTypeRecordSchema> ;
-    bblocks:hasJsonLdContext <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeBase/context.jsonld> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeBase/schema.json>,
-        <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeBase/schema.yaml> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
 <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLTypeRecordArray> a skos:Concept,
@@ -718,51 +692,6 @@ refer to official CWL documentation for more details (https://www.commonwl.org).
         <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordArray/schema.yaml> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
-<https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLTypeRecordFieldDefBase> a skos:Concept,
-        dcat:Dataset,
-        bblocks:Schema ;
-    rdfs:label "CWLTypeRecordFieldDefBase" ;
-    dct:abstract "CWLTypeRecordFieldDefBase"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:created "2025-09-29T14:14:37.712109"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeRecordFieldDefBase/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeRecordFieldDefBase/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeRecordFieldDefBase" ] ;
-    dct:hasVersion "1.2.1" ;
-    dct:modified "2025-09-30"^^xsd:date ;
-    skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
-    dcat:keyword "cwl" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLType> ;
-    bblocks:hasJsonLdContext <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldDefBase/context.jsonld> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldDefBase/schema.json>,
-        <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldDefBase/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
-
-<https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLTypeRecordFields> a skos:Concept,
-        dcat:Dataset,
-        bblocks:Schema ;
-    rdfs:label "CWLTypeRecordFields" ;
-    dct:abstract "CWLTypeRecordFields"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:created "2025-09-29T14:14:37.705381"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeRecordFields/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeRecordFields" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeRecordFields/index.json" ] ;
-    dct:hasVersion "1.2.1" ;
-    dct:modified "2025-09-30"^^xsd:date ;
-    skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
-    dcat:keyword "cwl" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLTypeRecordFieldsList>,
-        <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLTypeRecordFieldsMap> ;
-    bblocks:hasJsonLdContext <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFields/context.jsonld> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFields/schema.json>,
-        <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFields/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
-
 <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLTypeRecordFieldsItem> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
@@ -771,10 +700,10 @@ refer to official CWL documentation for more details (https://www.commonwl.org).
     dct:created "2025-09-29T14:14:37.711647"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeRecordFieldsItem" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeRecordFieldsItem/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeRecordFieldsItem/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeRecordFieldsItem/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeRecordFieldsItem/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -783,51 +712,6 @@ refer to official CWL documentation for more details (https://www.commonwl.org).
     bblocks:hasJsonLdContext <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsItem/context.jsonld> ;
     bblocks:hasSchema <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsItem/schema.json>,
         <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsItem/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
-
-<https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLTypeRecordFieldsList> a skos:Concept,
-        dcat:Dataset,
-        bblocks:Schema ;
-    rdfs:label "CWLTypeRecordFieldsList" ;
-    dct:abstract "CWLTypeRecordFieldsList"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:created "2025-09-29T14:14:37.709848"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeRecordFieldsList/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeRecordFieldsList/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeRecordFieldsList" ] ;
-    dct:hasVersion "1.2.1" ;
-    dct:modified "2025-09-30"^^xsd:date ;
-    skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
-    dcat:keyword "cwl" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLTypeRecordFieldsItem> ;
-    bblocks:hasJsonLdContext <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsList/context.jsonld> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsList/schema.json>,
-        <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsList/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
-
-<https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLTypeRecordFieldsMap> a skos:Concept,
-        dcat:Dataset,
-        bblocks:Schema ;
-    rdfs:label "CWLTypeRecordFieldsMap" ;
-    dct:abstract "CWLTypeRecordFieldsMap"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:created "2025-09-29T14:14:37.709682"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeRecordFieldsMap/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeRecordFieldsMap/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeRecordFieldsMap" ] ;
-    dct:hasVersion "1.2.1" ;
-    dct:modified "2025-09-30"^^xsd:date ;
-    skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
-    dcat:keyword "cwl" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLType>,
-        <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLTypeRecordFieldDef> ;
-    bblocks:hasJsonLdContext <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsMap/context.jsonld> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsMap/schema.json>,
-        <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldsMap/schema.yaml> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
 <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLTypeRecordRef> a skos:Concept,
@@ -865,12 +749,12 @@ https://www.commonwl.org/v1.2/SchemaSalad.html#Identifier_resolution.
     rdfs:label "CWLTypeRecordRefPattern" ;
     dct:abstract "CWLTypeRecordRefPattern"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.710298"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeRecordRefPattern" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeRecordRefPattern/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeRecordRefPattern/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeRecordRefPattern/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeRecordRefPattern" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -913,10 +797,10 @@ https://www.commonwl.org/v1.2/SchemaSalad.html#Identifier_resolution.
     dct:created "2025-09-29T14:14:37.708164"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLWorkflowStepIn/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLWorkflowStepIn/index.json" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLWorkflowStepIn" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLWorkflowStepIn" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLWorkflowStepIn/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -959,12 +843,12 @@ https://www.commonwl.org/v1.2/SchemaSalad.html#Identifier_resolution.
     rdfs:label "CWLWorkflowStepItem" ;
     dct:abstract "CWLWorkflowStepItem"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.692088"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLWorkflowStepItem/index.json" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLWorkflowStepItem/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLWorkflowStepItem" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLWorkflowStepItem" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLWorkflowStepItem/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -1004,12 +888,12 @@ https://www.commonwl.org/v1.2/SchemaSalad.html#Identifier_resolution.
     rdfs:label "Checksum" ;
     dct:abstract "Checksum"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.709969"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/Checksum/index.json" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/Checksum/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.Checksum" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.Checksum" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/Checksum/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -1024,10 +908,10 @@ https://www.commonwl.org/v1.2/SchemaSalad.html#Identifier_resolution.
     rdfs:label "IdentifierArray" ;
     dct:abstract "IdentifierArray"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.711343"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.IdentifierArray" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/IdentifierArray/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.IdentifierArray" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/IdentifierArray/index.json" ] ;
     dct:hasVersion "1.2.1" ;
@@ -1037,70 +921,6 @@ https://www.commonwl.org/v1.2/SchemaSalad.html#Identifier_resolution.
     bblocks:dependsOn <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLTextPatternID> ;
     bblocks:hasSchema <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/IdentifierArray/schema.json>,
         <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/IdentifierArray/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
-
-<https://ogcincubator.github.io/ogc.cwl.v1_2_1.InlineJavascriptLibItem> a skos:Concept,
-        dcat:Dataset,
-        bblocks:Schema ;
-    rdfs:label "InlineJavascriptLibItem" ;
-    dct:abstract "InlineJavascriptLibItem"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:created "2025-09-29T14:14:37.706055"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.InlineJavascriptLibItem" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/InlineJavascriptLibItem/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/InlineJavascriptLibItem/index.md" ] ;
-    dct:hasVersion "1.2.1" ;
-    dct:modified "2025-09-30"^^xsd:date ;
-    skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
-    dcat:keyword "cwl" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.cwl.v1_2_1.InlineJavascriptLibObject> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InlineJavascriptLibItem/schema.json>,
-        <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InlineJavascriptLibItem/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
-
-<https://ogcincubator.github.io/ogc.cwl.v1_2_1.InlineJavascriptLibObject> a skos:Concept,
-        dcat:Dataset,
-        bblocks:Schema ;
-    rdfs:label "InlineJavascriptLibObject" ;
-    dct:abstract "InlineJavascriptLibObject"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:created "2025-09-29T14:14:37.710139"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/InlineJavascriptLibObject/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.InlineJavascriptLibObject" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/InlineJavascriptLibObject/index.json" ] ;
-    dct:hasVersion "1.2.1" ;
-    dct:modified "2025-09-30"^^xsd:date ;
-    skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
-    dcat:keyword "cwl" ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InlineJavascriptLibObject/schema.json>,
-        <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InlineJavascriptLibObject/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
-
-<https://ogcincubator.github.io/ogc.cwl.v1_2_1.InlineJavascriptLibraries> a skos:Concept,
-        dcat:Dataset,
-        bblocks:Schema ;
-    rdfs:label "InlineJavascriptLibraries" ;
-    dct:abstract """Additional code fragments that will also be inserted before executing the expression code.
-Allows for function definitions that may be called from CWL expressions.
-"""^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:created "2025-09-29T14:14:37.694148"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/InlineJavascriptLibraries/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/InlineJavascriptLibraries/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.InlineJavascriptLibraries" ] ;
-    dct:hasVersion "1.2.1" ;
-    dct:modified "2025-09-30"^^xsd:date ;
-    skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
-    dcat:keyword "cwl" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.cwl.v1_2_1.InlineJavascriptLibItem> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InlineJavascriptLibraries/schema.json>,
-        <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InlineJavascriptLibraries/schema.yaml> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
 <https://ogcincubator.github.io/ogc.cwl.v1_2_1.LinkMergeMethod> a skos:Concept,
@@ -1131,10 +951,10 @@ Allows for function definitions that may be called from CWL expressions.
 See 'coresMin' for discussion about fractional CPU requests.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.695158"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/ResourceCoresMaximum/index.json" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.ResourceCoresMaximum" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/ResourceCoresMaximum/index.json" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/ResourceCoresMaximum/index.md" ] ;
     dct:hasVersion "1.2.1" ;
@@ -1174,10 +994,10 @@ Scheduling systems that do not support fractional CPUs may round up the request 
     dct:created "2025-09-29T14:14:37.694654"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.ResourceCoresMinimum" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/ResourceCoresMinimum/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/ResourceCoresMinimum/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/ResourceCoresMinimum/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/ResourceCoresMinimum/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -1199,10 +1019,10 @@ See 'outdirMin' for discussion about fractional storage requests.
     dct:created "2025-09-29T14:14:37.696756"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/ResourceOutDirMaximum/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/ResourceOutDirMaximum/index.json" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.ResourceOutDirMaximum" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.ResourceOutDirMaximum" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/ResourceOutDirMaximum/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -1227,12 +1047,12 @@ The reported amount of storage reserved for the process, which is available
 to expressions on the 'CommandLineTool' as 'runtime.outdirSize', must be a non-zero integer.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.696453"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/ResourceOutDirMinimum/index.md" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.ResourceOutDirMinimum" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/ResourceOutDirMinimum/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.ResourceOutDirMinimum" ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/ResourceOutDirMinimum/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -1251,12 +1071,12 @@ to expressions on the 'CommandLineTool' as 'runtime.outdirSize', must be a non-z
 See 'ramMin' for discussion about fractional RAM requests.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.695657"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/ResourceRAMMaximum/index.md" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.ResourceRAMMaximum" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/ResourceRAMMaximum/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.ResourceRAMMaximum" ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/ResourceRAMMaximum/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -1282,10 +1102,10 @@ expressions on the 'CommandLineTool' as 'runtime.ram', must be a non-zero intege
     dct:created "2025-09-29T14:14:37.695361"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/ResourceRAMMinimum/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.ResourceRAMMinimum" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/ResourceRAMMinimum/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/ResourceRAMMinimum/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.ResourceRAMMinimum" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -1356,12 +1176,12 @@ to expressions on the 'CommandLineTool' as 'runtime.tmpdirSize', must be a non-z
     rdfs:label "SoftwarePackage" ;
     dct:abstract "SoftwarePackage"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.692582"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.SoftwarePackage" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/SoftwarePackage/index.json" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/SoftwarePackage/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/SoftwarePackage/index.json" ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.SoftwarePackage" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -1381,10 +1201,10 @@ to expressions on the 'CommandLineTool' as 'runtime.tmpdirSize', must be a non-z
     dct:created "2025-09-29T14:14:37.692836"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/SoftwarePackageSpecs/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.SoftwarePackageSpecs" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/SoftwarePackageSpecs/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/SoftwarePackageSpecs/index.json" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.SoftwarePackageSpecs" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -1402,12 +1222,12 @@ builtin process of this instance. (note: can only be an 'hint'
 as it is unofficial CWL specification).
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.697405"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/BuiltinRequirement/index.md" ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.BuiltinRequirement" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/BuiltinRequirement/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/BuiltinRequirement/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/BuiltinRequirement/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -1425,10 +1245,10 @@ as it is unofficial CWL specification).
     dct:created "2025-09-29T14:14:37.676906"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLArguments/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLArguments" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLArguments/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLArguments/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLArguments" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -1445,10 +1265,10 @@ as it is unofficial CWL specification).
     rdfs:label "CWLAtomicBase" ;
     dct:abstract "Direct CWL definition instead of the graph representation."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.674167"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLAtomicBase/index.md" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLAtomicBase" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLAtomicBase/index.md" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLAtomicBase/index.json" ] ;
     dct:hasVersion "1.2.1" ;
@@ -1481,12 +1301,12 @@ and hints specifications. Can be omitted if already defined in the docker
 image.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.676693"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLCommand/index.md" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLCommand" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLCommand/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLCommand" ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLCommand/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -1501,12 +1321,12 @@ image.
     rdfs:label "CWLDefaultLocation" ;
     dct:abstract "CWLDefaultLocation"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.706716"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLDefaultLocation/index.md" ],
+        [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLDefaultLocation/index.json" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLDefaultLocation" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLDefaultLocation/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLDefaultLocation" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -1523,12 +1343,12 @@ image.
     rdfs:label "CWLDefaultTypedConditional" ;
     dct:abstract "CWLDefaultTypedConditional"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.699245"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLDefaultTypedConditional/index.md" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLDefaultTypedConditional" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLDefaultTypedConditional/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLDefaultTypedConditional" ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLDefaultTypedConditional/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -1547,12 +1367,12 @@ image.
     rdfs:label "CWLInputStdIn" ;
     dct:abstract "CWLInputStdIn"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.690466"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLInputStdIn/index.json" ],
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLInputStdIn/index.md" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLInputStdIn" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLInputStdIn/index.md" ] ;
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLInputStdIn/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -1569,12 +1389,12 @@ image.
     rdfs:label "CWLIntent" ;
     dct:abstract "CWLIntent"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.676051"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLIntent/index.json" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLIntent" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLIntent/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLIntent" ] ;
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLIntent/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -1589,12 +1409,12 @@ image.
     rdfs:label "CWLOutputStdErr" ;
     dct:abstract "CWLOutputStdErr"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.691253"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLOutputStdErr" ],
+        [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLOutputStdErr/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLOutputStdErr/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLOutputStdErr" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLOutputStdErr/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -1614,12 +1434,12 @@ will indicate the desired name of the output file where the error stream will be
 be applied for the file of this output unless otherwise specified.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.703971"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLOutputStdErrDefinition" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLOutputStdErrDefinition/index.json" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLOutputStdErrDefinition/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLOutputStdErrDefinition/index.json" ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLOutputStdErrDefinition" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -1634,10 +1454,10 @@ be applied for the file of this output unless otherwise specified.
     rdfs:label "CWLOutputStdOut" ;
     dct:abstract "CWLOutputStdOut"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.691121"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLOutputStdOut/index.md" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLOutputStdOut" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLOutputStdOut/index.md" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLOutputStdOut/index.json" ] ;
     dct:hasVersion "1.2.1" ;
@@ -1656,12 +1476,12 @@ be applied for the file of this output unless otherwise specified.
     rdfs:label "CWLRequirementsItem" ;
     dct:abstract "CWLRequirementsItem"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.688820"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLRequirementsItem" ],
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLRequirementsItem/index.md" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLRequirementsItem/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLRequirementsItem/index.md" ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLRequirementsItem" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -1738,12 +1558,12 @@ were an array-based input to that Workflow should be scattered across multiple
 instances of the step application.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.677961"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLScatter/index.json" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLScatter" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLScatter/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLScatter/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLScatter/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -1792,10 +1612,10 @@ listed in the order that the input arrays are listed in the scatter field.
     dct:created "2025-09-29T14:14:37.707051"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeDefinition/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeDefinition" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeDefinition/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeDefinition/index.json" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeDefinition" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -1810,12 +1630,12 @@ listed in the order that the input arrays are listed in the scatter field.
     rdfs:label "CWLTypeEnum" ;
     dct:abstract "CWLTypeEnum"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.693164"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeEnum/index.md" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeEnum/index.json" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeEnum" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeEnum/index.json" ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeEnum/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -1833,17 +1653,17 @@ listed in the order that the input arrays are listed in the scatter field.
     dct:created "2025-09-29T14:14:37.711487"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeRecordFieldDef/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeRecordFieldDef/index.json" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeRecordFieldDef" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeRecordFieldDef" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeRecordFieldDef/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
     dcat:keyword "cwl" ;
     bblocks:dependsOn <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLDirectoryOnlyParametersConditional>,
         <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLFileOnlyParametersConditional>,
-        <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLTypeRecordFieldDefBase> ;
+        <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLType> ;
     bblocks:hasJsonLdContext <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldDef/context.jsonld> ;
     bblocks:hasSchema <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldDef/schema.json>,
         <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordFieldDef/schema.yaml> ;
@@ -1855,17 +1675,19 @@ listed in the order that the input arrays are listed in the scatter field.
     rdfs:label "CWLTypeRecordSchema" ;
     dct:abstract "CWLTypeRecordSchema"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.693426"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeRecordSchema/index.json" ],
+        [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeRecordSchema/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeRecordSchema" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeRecordSchema/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeRecordSchema" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
     dcat:keyword "cwl" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLTypeRecordFields> ;
+    bblocks:dependsOn <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLType>,
+        <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLTypeRecordFieldDef>,
+        <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLTypeRecordFieldsItem> ;
     bblocks:hasJsonLdContext <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordSchema/context.jsonld> ;
     bblocks:hasSchema <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordSchema/schema.json>,
         <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordSchema/schema.yaml> ;
@@ -1879,10 +1701,10 @@ listed in the order that the input arrays are listed in the scatter field.
     dct:created "2025-09-29T14:14:37.706542"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeSymbolValues" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeSymbolValues/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeSymbolValues/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeSymbolValues/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeSymbolValues/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -1897,12 +1719,12 @@ listed in the order that the input arrays are listed in the scatter field.
     rdfs:label "CWLTypeSymbols" ;
     dct:abstract "CWLTypeSymbols"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.705236"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeSymbols/index.md" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeSymbols" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLTypeSymbols/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLTypeSymbols" ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLTypeSymbols/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -1947,10 +1769,10 @@ listed in the order that the input arrays are listed in the scatter field.
     dct:created "2025-09-29T14:14:37.675173"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLWorkflowClass/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLWorkflowClass" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLWorkflowClass/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLWorkflowClass/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLWorkflowClass" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -1967,10 +1789,10 @@ listed in the order that the input arrays are listed in the scatter field.
     dct:created "2025-09-29T14:14:37.713509"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLWorkflowStepInputBase" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLWorkflowStepInputBase/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLWorkflowStepInputBase/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLWorkflowStepInputBase/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLWorkflowStepInputBase/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2011,12 +1833,12 @@ listed in the order that the input arrays are listed in the scatter field.
     rdfs:label "CWLWorkflowStepObject" ;
     dct:abstract "CWLWorkflowStepObject"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.691949"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLWorkflowStepObject/index.md" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLWorkflowStepObject/index.json" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLWorkflowStepObject" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLWorkflowStepObject" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLWorkflowStepObject/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2043,10 +1865,10 @@ listed in the order that the input arrays are listed in the scatter field.
     rdfs:label "DockerRequirement" ;
     dct:abstract "DockerRequirement"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.683513"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.DockerRequirement" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/DockerRequirement/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.DockerRequirement" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/DockerRequirement/index.json" ] ;
     dct:hasVersion "1.2.1" ;
@@ -2065,12 +1887,12 @@ listed in the order that the input arrays are listed in the scatter field.
     rdfs:label "EnvVarRequirement" ;
     dct:abstract "EnvVarRequirement"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.684530"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.EnvVarRequirement" ],
+        [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/EnvVarRequirement/index.md" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/EnvVarRequirement/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.EnvVarRequirement" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/EnvVarRequirement/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2088,12 +1910,12 @@ listed in the order that the input arrays are listed in the scatter field.
     rdfs:label "InitialWorkDirRequirement" ;
     dct:abstract "InitialWorkDirRequirement"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.685221"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/InitialWorkDirRequirement/index.md" ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.InitialWorkDirRequirement" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/InitialWorkDirRequirement/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/InitialWorkDirRequirement/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/InitialWorkDirRequirement/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2116,17 +1938,16 @@ If this requirement is not present, the workflow platform must not perform expre
 (see also: https://www.commonwl.org/v1.2/CommandLineTool.html#InlineJavascriptRequirement).
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.685446"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/InlineJavascriptRequirement/index.json" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.InlineJavascriptRequirement" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/InlineJavascriptRequirement/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.InlineJavascriptRequirement" ] ;
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/InlineJavascriptRequirement/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
     dcat:keyword "cwl" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.cwl.v1_2_1.InlineJavascriptLibraries> ;
     bblocks:hasJsonLdContext <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InlineJavascriptRequirement/context.jsonld> ;
     bblocks:hasSchema <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InlineJavascriptRequirement/schema.json>,
         <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InlineJavascriptRequirement/schema.yaml> ;
@@ -2143,10 +1964,10 @@ files may be destructively modified in place as opposed to copied and updated
 (see also: https://www.commonwl.org/v1.2/CommandLineTool.html#InplaceUpdateRequirement).
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.685745"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.InplaceUpdateRequirement" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/InplaceUpdateRequirement/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.InplaceUpdateRequirement" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/InplaceUpdateRequirement/index.json" ] ;
     dct:hasVersion "1.2.1" ;
@@ -2165,12 +1986,12 @@ files may be destructively modified in place as opposed to copied and updated
     rdfs:label "LoadListingEnum" ;
     dct:abstract "LoadListingEnum"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.694340"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/LoadListingEnum/index.md" ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.LoadListingEnum" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/LoadListingEnum/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/LoadListingEnum/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/LoadListingEnum/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2187,12 +2008,12 @@ files may be destructively modified in place as opposed to copied and updated
 (see also: https://www.commonwl.org/v1.2/CommandLineTool.html#LoadListingRequirement).
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.686079"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/LoadListingRequirement/index.json" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.LoadListingRequirement" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/LoadListingRequirement/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/LoadListingRequirement/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/LoadListingRequirement/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2212,12 +2033,12 @@ files may be destructively modified in place as opposed to copied and updated
 field of 'WorkflowStepInput'.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.688115"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/MultipleInputFeatureRequirement/index.json" ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.MultipleInputFeatureRequirement" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/MultipleInputFeatureRequirement/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/MultipleInputFeatureRequirement/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/MultipleInputFeatureRequirement/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2232,12 +2053,12 @@ field of 'WorkflowStepInput'.
     rdfs:label "NetworkAccessRequirement" ;
     dct:abstract "NetworkAccessRequirement"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.686363"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.NetworkAccessRequirement" ],
+        [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/NetworkAccessRequirement/index.md" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/NetworkAccessRequirement/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.NetworkAccessRequirement" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/NetworkAccessRequirement/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2258,12 +2079,12 @@ OGC API - Processes provider that should be remotely executed and monitored
 by this instance. (note: can only be an 'hint' as it is unofficial CWL specification).
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.697699"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.OGCAPIRequirement" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/OGCAPIRequirement/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/OGCAPIRequirement/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/OGCAPIRequirement/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.OGCAPIRequirement" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2279,12 +2100,12 @@ by this instance. (note: can only be an 'hint' as it is unofficial CWL specifica
     rdfs:label "OutputBinding" ;
     dct:abstract "Defines how to retrieve the output result from the command."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.703103"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/OutputBinding/index.json" ],
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/OutputBinding/index.md" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.OutputBinding" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/OutputBinding/index.md" ] ;
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/OutputBinding/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2337,10 +2158,10 @@ input elements. Each job making up a scatter operation is independent and may be
 (see also: https://www.commonwl.org/v1.2/Workflow.html#WorkflowStep).
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.687057"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.ScatterFeatureRequirement" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/ScatterFeatureRequirement/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.ScatterFeatureRequirement" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/ScatterFeatureRequirement/index.json" ] ;
     dct:hasVersion "1.2.1" ;
@@ -2383,12 +2204,12 @@ input elements. Each job making up a scatter operation is independent and may be
     rdfs:label "ShellCommandRequirement" ;
     dct:abstract "ShellCommandRequirement"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.684354"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/ShellCommandRequirement/index.md" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/ShellCommandRequirement/index.json" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.ShellCommandRequirement" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.ShellCommandRequirement" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/ShellCommandRequirement/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2405,10 +2226,10 @@ input elements. Each job making up a scatter operation is independent and may be
     dct:created "2025-09-29T14:14:37.683997"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/SoftwareRequirement/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.SoftwareRequirement" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/SoftwareRequirement/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/SoftwareRequirement/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.SoftwareRequirement" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2428,10 +2249,10 @@ input elements. Each job making up a scatter operation is independent and may be
     dct:created "2025-09-29T14:14:37.688357"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.StepInputExpressionRequirement" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/StepInputExpressionRequirement/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/StepInputExpressionRequirement/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/StepInputExpressionRequirement/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/StepInputExpressionRequirement/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2446,12 +2267,12 @@ input elements. Each job making up a scatter operation is independent and may be
     rdfs:label "SubworkflowFeatureRequirement" ;
     dct:abstract "Indicates that the 'Workflow' must support nested workflows in the 'run' field of 'WorkflowStep'."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.688588"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/SubworkflowFeatureRequirement/index.md" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.SubworkflowFeatureRequirement" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/SubworkflowFeatureRequirement/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/SubworkflowFeatureRequirement/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/SubworkflowFeatureRequirement/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2473,12 +2294,12 @@ The execution duration excludes external operations, such as staging of files,
 pulling a docker image etc., and only counts wall-time for the execution of the command line itself.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.687380"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.ToolTimeLimitRequirement" ],
+        [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/ToolTimeLimitRequirement/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/ToolTimeLimitRequirement/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.ToolTimeLimitRequirement" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/ToolTimeLimitRequirement/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2496,12 +2317,12 @@ pulling a docker image etc., and only counts wall-time for the execution of the 
     rdfs:label "UnknownRequirement" ;
     dct:abstract "Generic schema to allow alternative CWL requirements/hints not explicitly defined in schemas."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.698355"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/UnknownRequirement/index.md" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/UnknownRequirement/index.json" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.UnknownRequirement" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/UnknownRequirement/index.json" ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/UnknownRequirement/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2519,12 +2340,12 @@ WPS-1 provider process that should be remotely executed and monitored by this
 instance. (note: can only be an ''hint'' as it is unofficial CWL specification).
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.698000"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/WPS1Requirement/index.json" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/WPS1Requirement/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.WPS1Requirement" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.WPS1Requirement" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/WPS1Requirement/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2549,12 +2370,12 @@ A reused step is not executed but instead returns the same output as the origina
 If 'WorkReuse' is not specified, correct tools should assume it is enabled by default.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.687743"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/WorkReuseRequirement/index.md" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.WorkReuseRequirement" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/WorkReuseRequirement/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.WorkReuseRequirement" ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/WorkReuseRequirement/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2572,12 +2393,12 @@ If 'WorkReuse' is not specified, correct tools should assume it is enabled by de
     rdfs:label "cwltool:CUDARequirement" ;
     dct:abstract "cwltool:CUDARequirement"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.682851"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/cwltool-CUDARequirement/index.md" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/cwltool-CUDARequirement/index.json" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.cwltool-CUDARequirement" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.cwltool-CUDARequirement" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/cwltool-CUDARequirement/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2595,10 +2416,10 @@ If 'WorkReuse' is not specified, correct tools should assume it is enabled by de
     dct:created "2025-09-29T14:14:37.676493"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLHints" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLHints/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLHints/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLHints/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLHints/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2620,12 +2441,12 @@ If 'WorkReuse' is not specified, correct tools should assume it is enabled by de
 Can be defined for only one input and must not be combined with 'stdin' at the root of the CWL document.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.702775"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLInputStdInDefinition/index.md" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLInputStdInDefinition/index.json" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLInputStdInDefinition" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLInputStdInDefinition/index.json" ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLInputStdInDefinition/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2640,10 +2461,10 @@ Can be defined for only one input and must not be combined with 'stdin' at the r
     rdfs:label "CWLInputsDefinition" ;
     dct:abstract "All inputs available to the Application Package."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.677093"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLInputsDefinition/index.json" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLInputsDefinition" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLInputsDefinition/index.json" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLInputsDefinition/index.md" ] ;
     dct:hasVersion "1.2.1" ;
@@ -2670,12 +2491,12 @@ will indicate the desired name of the output file where the output stream will b
 be applied for the file of this output unless otherwise specified.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.703603"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLOutputStdOutDefinition/index.json" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLOutputStdOutDefinition" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLOutputStdOutDefinition/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLOutputStdOutDefinition/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLOutputStdOutDefinition/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2692,10 +2513,10 @@ be applied for the file of this output unless otherwise specified.
     dct:created "2025-09-29T14:14:37.677375"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLOutputsDefinition" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLOutputsDefinition/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLOutputsDefinition/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLOutputsDefinition/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLOutputsDefinition/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2741,12 +2562,12 @@ be applied for the file of this output unless otherwise specified.
     rdfs:label "CWLVersion" ;
     dct:abstract "CWLVersion"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.673508"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLVersion/index.json" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLVersion/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLVersion" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLVersion" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLVersion/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2761,10 +2582,10 @@ be applied for the file of this output unless otherwise specified.
     rdfs:label "CWLWorkflowStepId" ;
     dct:abstract "CWLWorkflowStepId"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.704756"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLWorkflowStepId/index.md" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLWorkflowStepId/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLWorkflowStepId/index.md" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLWorkflowStepId" ] ;
     dct:hasVersion "1.2.1" ;
@@ -2782,12 +2603,12 @@ be applied for the file of this output unless otherwise specified.
     rdfs:label "InputBinding" ;
     dct:abstract "Defines how to specify the input for the command."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.680825"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/InputBinding/index.json" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/InputBinding/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.InputBinding" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.InputBinding" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/InputBinding/index.json" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2805,10 +2626,10 @@ be applied for the file of this output unless otherwise specified.
     rdfs:label "ReferenceURL" ;
     dct:abstract "ReferenceURL"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.705091"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.ReferenceURL" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/ReferenceURL/index.json" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.ReferenceURL" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/ReferenceURL/index.md" ] ;
     dct:hasVersion "1.2.1" ;
@@ -2869,10 +2690,10 @@ The contents of the imported file should be relevant contextually where it is be
     dct:created "2025-09-29T14:14:37.673719"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLMetadata/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLMetadata" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLMetadata/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLMetadata/index.json" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLMetadata" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2890,12 +2711,12 @@ The contents of the imported file should be relevant contextually where it is be
     rdfs:label "CWLIdentifier" ;
     dct:abstract "Reference to the process identifier."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.675825"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLIdentifier/index.md" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLIdentifier" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLIdentifier/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLIdentifier/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLIdentifier/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2911,10 +2732,10 @@ The contents of the imported file should be relevant contextually where it is be
     rdfs:label "ResourceQuantityOrFractional" ;
     dct:abstract "An item quantity that can also represent a proportion of use by resources."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.706192"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/ResourceQuantityOrFractional/index.json" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.ResourceQuantityOrFractional" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/ResourceQuantityOrFractional/index.json" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/ResourceQuantityOrFractional/index.md" ] ;
     dct:hasVersion "1.2.1" ;
@@ -2931,12 +2752,12 @@ The contents of the imported file should be relevant contextually where it is be
     rdfs:label "CWLDocumentation" ;
     dct:abstract "CWLDocumentation"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.673945"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLDocumentation/index.json" ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLDocumentation" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLDocumentation/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLDocumentation/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLDocumentation/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -2955,15 +2776,18 @@ The contents of the imported file should be relevant contextually where it is be
     dct:created "2025-09-29T14:14:37.690093"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLType" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLType/index.md" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLType/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLType/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLType/index.md" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
     dcat:keyword "cwl" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLTypeBase> ;
+    bblocks:dependsOn <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLTypeDefinition>,
+        <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLTypeEnum>,
+        <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLTypeRecordRef>,
+        <https://ogcincubator.github.io/ogc.cwl.v1_2_1.CWLTypeRecordSchema> ;
     bblocks:hasJsonLdContext <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/context.jsonld> ;
     bblocks:hasSchema <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.json>,
         <https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml> ;
@@ -2977,12 +2801,12 @@ The contents of the imported file should be relevant contextually where it is be
 (see also: https://www.commonwl.org/v1.2/CommandLineTool.html#Expression).
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-09-29T14:14:37.677718"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLExpression/index.json" ],
+        [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/markdown/cwl/v1_2_1/CWLExpression/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLExpression" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/build/generateddocs/json-full/cwl/v1_2_1/CWLExpression/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-cwl/bblock/ogc.cwl.v1_2_1.CWLExpression" ] ;
     dct:hasVersion "1.2.1" ;
     dct:modified "2025-09-30"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-cwl/> ;
@@ -3006,7 +2830,7 @@ More information at [the Common Workflow Language website](https://www.commonwl.
     bblocks:hasValidationReport <https://ogcincubator.github.io/bblocks-cwl/build/tests/report.html> ;
     bblocks:imports <https://opengeospatial.github.io/bblocks/register.json> .
 
-_:N952a3eddc37d461a8b103437b29a64e8 a prov:Agent,
+_:Nc746346ead85429e89afc65da2e48887 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
     dct:hasVersion "0.4.4" ;
