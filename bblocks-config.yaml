@@ -4,18 +4,10 @@ name: Common Workflow Language building blocks
 # Short abstract for this collection (optional)
 abstract: |
   Common Workflow Language (CWL) is an open standard for describing how to run command line tools and connect them to create workflows.
-
 # Description for this collection (optional)
-description: |
-  Tools and workflows described using CWL are portable across a variety of platforms that support the CWL standards. 
-  Using CWL, it is easy to scale complex data analysis and machine learning workflows from a single
-  developer's laptop up to massively parallel cluster, cloud and high performance computing environments.
-  
-  More information at [the Common Workflow Language website](https://www.commonwl.org/).
-
+description: "Tools and workflows described using CWL are portable across a variety of platforms that support the CWL standards. \nUsing CWL, it is easy to scale complex data analysis and machine learning workflows from a single\ndeveloper's laptop up to massively parallel cluster, cloud and high performance computing environments.\n\nMore information at [the Common Workflow Language website](https://www.commonwl.org/).\n"
 # Customize the following prefix (will be prepended to the path of the building blocks):
 identifier-prefix: ogc.cwl.
-
 # List of imports ("default" is an alias for the main OGC Building Blocks Register)
 imports:
   - default
@@ -23,7 +15,9 @@ imports:
 # Whether to enable the (highly experimental) downcompiling of JSON schemas to an OpenAPI 3.0-compatible
 # version
 schema-oas30-downcompile: False
-
+sparql:
+  push: https://defs-dev.opengis.net/fuseki/data
+  query: https://defs-dev.opengis.net/fuseki/query
 # SPARQL configuration (optional)
 #   Authentication can be set through the sparql_username and sparql_password GitHub Workflow inputs
 #   (see .github/workflow/process-bblocks.yml)
