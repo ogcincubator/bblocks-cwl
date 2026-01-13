@@ -38,10 +38,6 @@ Links to the schema:
 {
   "@context": {
     "label": "http://www.w3.org/2000/01/rdf-schema#label",
-    "glob": "cwl:CommandOutputBinding/glob",
-    "loadContents": "cwl:loadContents",
-    "streamable": "cwl:FieldBase/streamable",
-    "loadListing": "cwl:loadListing",
     "cwl": "https://w3id.org/cwl/cwl#",
     "@version": 1.1
   }

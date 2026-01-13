@@ -55,12 +55,10 @@ Links to the schema:
       },
       "@id": "cwl:inputBinding"
     },
+    "label": "http://www.w3.org/2000/01/rdf-schema#label",
     "loadContents": "cwl:loadContents",
     "streamable": "cwl:FieldBase/streamable",
     "loadListing": "cwl:loadListing",
-    "basename": "cwl:basename",
-    "nameroot": "cwl:File/nameroot",
-    "label": "http://www.w3.org/2000/01/rdf-schema#label",
     "cwl": "https://w3id.org/cwl/cwl#",
     "@version": 1.1
   }

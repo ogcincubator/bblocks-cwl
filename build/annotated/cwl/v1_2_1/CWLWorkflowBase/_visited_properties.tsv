@@ -1,294 +1,8 @@
 path	@id
 /hints	
-/hints/DockerRequirement	https://w3id.org/cwl/cwl#DockerRequirement
-/hints/DockerRequirement/class	
-/hints/DockerRequirement/dockerFile	https://w3id.org/cwl/cwl#DockerRequirement/dockerFile
-/hints/DockerRequirement/dockerImageId	https://w3id.org/cwl/cwl#DockerRequirement/dockerImageId
-/hints/DockerRequirement/dockerImport	https://w3id.org/cwl/cwl#DockerRequirement/dockerImport
-/hints/DockerRequirement/dockerLoad	https://w3id.org/cwl/cwl#DockerRequirement/dockerLoad
-/hints/DockerRequirement/dockerOutputDirectory	https://w3id.org/cwl/cwl#DockerRequirement/dockerOutputDirectory
-/hints/DockerRequirement/dockerPull	https://w3id.org/cwl/cwl#DockerRequirement/dockerPull
-/hints/EnvVarRequirement	https://w3id.org/cwl/cwl#EnvVarRequirement
-/hints/EnvVarRequirement/class	
-/hints/EnvVarRequirement/envDef	
-/hints/EnvVarRequirement/envDef/envName	https://w3id.org/cwl/cwl#EnvironmentDef/envName
-/hints/EnvVarRequirement/envDef/envValue	https://w3id.org/cwl/cwl#EnvironmentDef/envValue
-/hints/InitialWorkDirRequirement	https://w3id.org/cwl/cwl#InitialWorkDirRequirement
-/hints/InitialWorkDirRequirement/class	
-/hints/InitialWorkDirRequirement/listing	
-/hints/InitialWorkDirRequirement/listing/entry	
-/hints/InitialWorkDirRequirement/listing/entryname	
-/hints/InitialWorkDirRequirement/listing/writable	https://w3id.org/cwl/cwl#Dirent/writable
-/hints/InitialWorkDirRequirement/listing/checksum	https://w3id.org/cwl/cwl#File/checksum
-/hints/InitialWorkDirRequirement/listing/class	
-/hints/InitialWorkDirRequirement/listing/location	
-/hints/InitialWorkDirRequirement/listing/size	https://w3id.org/cwl/cwl#File/size
-/hints/InlineJavascriptRequirement	https://w3id.org/cwl/cwl#InlineJavascriptRequirement
-/hints/InlineJavascriptRequirement/class	
-/hints/InlineJavascriptRequirement/expressionLib	https://w3id.org/cwl/cwl#InlineJavascriptRequirement/expressionLib
-/hints/InlineJavascriptRequirement/expressionLib/$include	
-/hints/InplaceUpdateRequirement	https://w3id.org/cwl/cwl#InplaceUpdateRequirement
-/hints/InplaceUpdateRequirement/class	
-/hints/InplaceUpdateRequirement/inplaceUpdate	https://w3id.org/cwl/cwl#InplaceUpdateRequirement/inplaceUpdate
-/hints/LoadListingRequirement	https://w3id.org/cwl/cwl#LoadListingRequirement
-/hints/LoadListingRequirement/class	
-/hints/LoadListingRequirement/loadListing	https://w3id.org/cwl/cwl#loadListing
-/hints/MultipleInputFeatureRequirement	https://w3id.org/cwl/cwl#MultipleInputFeatureRequirement
-/hints/MultipleInputFeatureRequirement/class	
-/hints/NetworkAccess	https://w3id.org/cwl/cwl#NetworkAccess
-/hints/NetworkAccess/class	
-/hints/NetworkAccess/networkAccess	https://w3id.org/cwl/cwl#NetworkAccess/networkAccess
-/hints/ResourceRequirement	https://w3id.org/cwl/cwl#ResourceRequirement
-/hints/ResourceRequirement/class	
-/hints/ResourceRequirement/coresMax	https://w3id.org/cwl/cwl#ResourceRequirement/coresMax
-/hints/ResourceRequirement/coresMin	https://w3id.org/cwl/cwl#ResourceRequirement/coresMin
-/hints/ResourceRequirement/outdirMax	https://w3id.org/cwl/cwl#ResourceRequirement/outdirMax
-/hints/ResourceRequirement/outdirMin	https://w3id.org/cwl/cwl#ResourceRequirement/outdirMin
-/hints/ResourceRequirement/ramMax	https://w3id.org/cwl/cwl#ResourceRequirement/ramMax
-/hints/ResourceRequirement/ramMin	https://w3id.org/cwl/cwl#ResourceRequirement/ramMin
-/hints/ResourceRequirement/tmpdirMax	https://w3id.org/cwl/cwl#ResourceRequirement/tmpdirMax
-/hints/ResourceRequirement/tmpdirMin	https://w3id.org/cwl/cwl#ResourceRequirement/tmpdirMin
-/hints/ScatterFeatureRequirement	https://w3id.org/cwl/cwl#ScatterFeatureRequirement
-/hints/ScatterFeatureRequirement/class	
-/hints/SchemaDefRequirement	https://w3id.org/cwl/cwl#SchemaDefRequirement
-/hints/SchemaDefRequirement/class	
-/hints/SchemaDefRequirement/types	https://w3id.org/cwl/cwl#SchemaDefRequirement/types
-/hints/SchemaDefRequirement/types/symbols	
-/hints/SchemaDefRequirement/types/type	
-/hints/SchemaDefRequirement/types/fields	
-/hints/SchemaDefRequirement/types/fields/items	
-/hints/SchemaDefRequirement/types/fields/type	
-/hints/SchemaDefRequirement/types/fields/symbols	
-/hints/SchemaDefRequirement/types/fields/name	
-/hints/SchemaDefRequirement/types/fields/format	
-/hints/SchemaDefRequirement/types/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
-/hints/SchemaDefRequirement/types/fields/secondaryFiles	
-/hints/SchemaDefRequirement/types/fields/secondaryFiles/pattern	
-/hints/SchemaDefRequirement/types/fields/secondaryFiles/required	
-/hints/SchemaDefRequirement/types/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
-/hints/SchemaDefRequirement/types/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
-/hints/SchemaDefRequirement/types/name	
-/hints/SchemaDefRequirement/types/items	
-/hints/SchemaDefRequirement/types/$import	
-/hints/ShellCommandRequirement	https://w3id.org/cwl/cwl#ShellCommandRequirement
-/hints/ShellCommandRequirement/class	
-/hints/SoftwareRequirement	https://w3id.org/cwl/cwl#SoftwareRequirement
-/hints/SoftwareRequirement/class	
-/hints/SoftwareRequirement/packages	
-/hints/SoftwareRequirement/packages/package	https://w3id.org/cwl/cwl#SoftwarePackage/package
-/hints/SoftwareRequirement/packages/specs	
-/hints/SoftwareRequirement/packages/version	https://w3id.org/cwl/cwl#SoftwarePackage/version
-/hints/StepInputExpressionRequirement	https://w3id.org/cwl/cwl#StepInputExpressionRequirement
-/hints/StepInputExpressionRequirement/class	
-/hints/SubworkflowFeatureRequirement	https://w3id.org/cwl/cwl#SubworkflowFeatureRequirement
-/hints/SubworkflowFeatureRequirement/class	
-/hints/ToolTimeLimit	https://w3id.org/cwl/cwl#ToolTimeLimit
-/hints/ToolTimeLimit/class	
-/hints/ToolTimeLimit/timelimit	https://w3id.org/cwl/cwl#ToolTimeLimit/timelimit
-/hints/WorkReuse	https://w3id.org/cwl/cwl#WorkReuse
-/hints/WorkReuse/class	
-/hints/WorkReuse/enableReuse	https://w3id.org/cwl/cwl#WorkReuse/enableReuse
-/hints/cwltool:CUDARequirement	
-/hints/cwltool:CUDARequirement/class	
-/hints/cwltool:CUDARequirement/cudaComputeCapability	
-/hints/cwltool:CUDARequirement/cudaDeviceCountMax	
-/hints/cwltool:CUDARequirement/cudaDeviceCountMin	
-/hints/cwltool:CUDARequirement/cudaVersionMin	
-/hints/class	
-/hints/BuiltinRequirement	
-/hints/BuiltinRequirement/class	
-/hints/BuiltinRequirement/process	
-/hints/OGCAPIRequirement	
-/hints/OGCAPIRequirement/class	
-/hints/OGCAPIRequirement/process	
-/hints/WPS1Requirement	
-/hints/WPS1Requirement/class	
-/hints/WPS1Requirement/process	
-/hints/WPS1Requirement/provider	
-/hints/cudaComputeCapability	
-/hints/cudaDeviceCountMax	
-/hints/cudaDeviceCountMin	
-/hints/cudaVersionMin	
-/hints/dockerFile	https://w3id.org/cwl/cwl#DockerRequirement/dockerFile
-/hints/dockerImageId	https://w3id.org/cwl/cwl#DockerRequirement/dockerImageId
-/hints/dockerImport	https://w3id.org/cwl/cwl#DockerRequirement/dockerImport
-/hints/dockerLoad	https://w3id.org/cwl/cwl#DockerRequirement/dockerLoad
-/hints/dockerOutputDirectory	https://w3id.org/cwl/cwl#DockerRequirement/dockerOutputDirectory
-/hints/dockerPull	https://w3id.org/cwl/cwl#DockerRequirement/dockerPull
-/hints/packages	
-/hints/packages/package	https://w3id.org/cwl/cwl#SoftwarePackage/package
-/hints/packages/specs	
-/hints/packages/version	https://w3id.org/cwl/cwl#SoftwarePackage/version
-/hints/envDef	
-/hints/types	https://w3id.org/cwl/cwl#SchemaDefRequirement/types
-/hints/types/symbols	
-/hints/types/type	
-/hints/types/fields	
-/hints/types/name	
-/hints/types/items	
-/hints/types/$import	
-/hints/listing	
-/hints/expressionLib	https://w3id.org/cwl/cwl#InlineJavascriptRequirement/expressionLib
-/hints/expressionLib/$include	
-/hints/inplaceUpdate	https://w3id.org/cwl/cwl#InplaceUpdateRequirement/inplaceUpdate
-/hints/loadListing	https://w3id.org/cwl/cwl#loadListing
-/hints/networkAccess	https://w3id.org/cwl/cwl#NetworkAccess/networkAccess
-/hints/coresMax	https://w3id.org/cwl/cwl#ResourceRequirement/coresMax
-/hints/coresMin	https://w3id.org/cwl/cwl#ResourceRequirement/coresMin
-/hints/outdirMax	https://w3id.org/cwl/cwl#ResourceRequirement/outdirMax
-/hints/outdirMin	https://w3id.org/cwl/cwl#ResourceRequirement/outdirMin
-/hints/ramMax	https://w3id.org/cwl/cwl#ResourceRequirement/ramMax
-/hints/ramMin	https://w3id.org/cwl/cwl#ResourceRequirement/ramMin
-/hints/tmpdirMax	https://w3id.org/cwl/cwl#ResourceRequirement/tmpdirMax
-/hints/tmpdirMin	https://w3id.org/cwl/cwl#ResourceRequirement/tmpdirMin
-/hints/timelimit	https://w3id.org/cwl/cwl#ToolTimeLimit/timelimit
-/hints/enableReuse	https://w3id.org/cwl/cwl#WorkReuse/enableReuse
-/hints/process	
-/hints/provider	
-/hints/$import	
 /inputs	
-/inputs/id	
-/inputs/inputBinding	https://w3id.org/cwl/cwl#inputBinding
-/inputs/inputBinding/itemSeparator	https://w3id.org/cwl/cwl#CommandLineBinding/itemSeparator
-/inputs/inputBinding/position	https://w3id.org/cwl/cwl#CommandLineBinding/position
-/inputs/inputBinding/prefix	https://w3id.org/cwl/cwl#CommandLineBinding/prefix
-/inputs/inputBinding/shellQuote	https://w3id.org/cwl/cwl#CommandLineBinding/shellQuote
-/inputs/inputBinding/valueFrom	https://w3id.org/cwl/cwl#valueFrom
-/inputs/type	
-/inputs/type/type	
-/inputs/default	
-/inputs/default/basename	https://w3id.org/cwl/cwl#basename
-/inputs/default/class	
-/inputs/default/location	
-/inputs/default/nameroot	https://w3id.org/cwl/cwl#File/nameroot
-/inputs/default/path	
-/inputs/doc	
-/inputs/label	http://www.w3.org/2000/01/rdf-schema#label
-/inputs/$import	
 /outputs	
-/outputs/id	
-/outputs/outputBinding	https://w3id.org/cwl/cwl#outputBinding
-/outputs/outputBinding/glob	https://w3id.org/cwl/cwl#CommandOutputBinding/glob
-/outputs/type	
-/outputs/type/type	
-/outputs/doc	
-/outputs/label	http://www.w3.org/2000/01/rdf-schema#label
-/outputs/$import	
 /requirements	
-/requirements/DockerRequirement	https://w3id.org/cwl/cwl#DockerRequirement
-/requirements/DockerRequirement/class	
-/requirements/DockerRequirement/dockerFile	https://w3id.org/cwl/cwl#DockerRequirement/dockerFile
-/requirements/DockerRequirement/dockerImageId	https://w3id.org/cwl/cwl#DockerRequirement/dockerImageId
-/requirements/DockerRequirement/dockerImport	https://w3id.org/cwl/cwl#DockerRequirement/dockerImport
-/requirements/DockerRequirement/dockerLoad	https://w3id.org/cwl/cwl#DockerRequirement/dockerLoad
-/requirements/DockerRequirement/dockerOutputDirectory	https://w3id.org/cwl/cwl#DockerRequirement/dockerOutputDirectory
-/requirements/DockerRequirement/dockerPull	https://w3id.org/cwl/cwl#DockerRequirement/dockerPull
-/requirements/EnvVarRequirement	https://w3id.org/cwl/cwl#EnvVarRequirement
-/requirements/EnvVarRequirement/class	
-/requirements/EnvVarRequirement/envDef	
-/requirements/InitialWorkDirRequirement	https://w3id.org/cwl/cwl#InitialWorkDirRequirement
-/requirements/InitialWorkDirRequirement/class	
-/requirements/InitialWorkDirRequirement/listing	
-/requirements/InlineJavascriptRequirement	https://w3id.org/cwl/cwl#InlineJavascriptRequirement
-/requirements/InlineJavascriptRequirement/class	
-/requirements/InlineJavascriptRequirement/expressionLib	https://w3id.org/cwl/cwl#InlineJavascriptRequirement/expressionLib
-/requirements/InlineJavascriptRequirement/expressionLib/$include	
-/requirements/InplaceUpdateRequirement	https://w3id.org/cwl/cwl#InplaceUpdateRequirement
-/requirements/InplaceUpdateRequirement/class	
-/requirements/InplaceUpdateRequirement/inplaceUpdate	https://w3id.org/cwl/cwl#InplaceUpdateRequirement/inplaceUpdate
-/requirements/LoadListingRequirement	https://w3id.org/cwl/cwl#LoadListingRequirement
-/requirements/LoadListingRequirement/class	
-/requirements/LoadListingRequirement/loadListing	https://w3id.org/cwl/cwl#loadListing
-/requirements/MultipleInputFeatureRequirement	https://w3id.org/cwl/cwl#MultipleInputFeatureRequirement
-/requirements/MultipleInputFeatureRequirement/class	
-/requirements/NetworkAccess	https://w3id.org/cwl/cwl#NetworkAccess
-/requirements/NetworkAccess/class	
-/requirements/NetworkAccess/networkAccess	https://w3id.org/cwl/cwl#NetworkAccess/networkAccess
-/requirements/ResourceRequirement	https://w3id.org/cwl/cwl#ResourceRequirement
-/requirements/ResourceRequirement/class	
-/requirements/ResourceRequirement/coresMax	https://w3id.org/cwl/cwl#ResourceRequirement/coresMax
-/requirements/ResourceRequirement/coresMin	https://w3id.org/cwl/cwl#ResourceRequirement/coresMin
-/requirements/ResourceRequirement/outdirMax	https://w3id.org/cwl/cwl#ResourceRequirement/outdirMax
-/requirements/ResourceRequirement/outdirMin	https://w3id.org/cwl/cwl#ResourceRequirement/outdirMin
-/requirements/ResourceRequirement/ramMax	https://w3id.org/cwl/cwl#ResourceRequirement/ramMax
-/requirements/ResourceRequirement/ramMin	https://w3id.org/cwl/cwl#ResourceRequirement/ramMin
-/requirements/ResourceRequirement/tmpdirMax	https://w3id.org/cwl/cwl#ResourceRequirement/tmpdirMax
-/requirements/ResourceRequirement/tmpdirMin	https://w3id.org/cwl/cwl#ResourceRequirement/tmpdirMin
-/requirements/ScatterFeatureRequirement	https://w3id.org/cwl/cwl#ScatterFeatureRequirement
-/requirements/ScatterFeatureRequirement/class	
-/requirements/SchemaDefRequirement	https://w3id.org/cwl/cwl#SchemaDefRequirement
-/requirements/SchemaDefRequirement/class	
-/requirements/SchemaDefRequirement/types	https://w3id.org/cwl/cwl#SchemaDefRequirement/types
-/requirements/SchemaDefRequirement/types/symbols	
-/requirements/SchemaDefRequirement/types/type	
-/requirements/SchemaDefRequirement/types/fields	
-/requirements/SchemaDefRequirement/types/name	
-/requirements/SchemaDefRequirement/types/items	
-/requirements/SchemaDefRequirement/types/$import	
-/requirements/ShellCommandRequirement	https://w3id.org/cwl/cwl#ShellCommandRequirement
-/requirements/ShellCommandRequirement/class	
-/requirements/SoftwareRequirement	https://w3id.org/cwl/cwl#SoftwareRequirement
-/requirements/SoftwareRequirement/class	
-/requirements/SoftwareRequirement/packages	
-/requirements/SoftwareRequirement/packages/package	https://w3id.org/cwl/cwl#SoftwarePackage/package
-/requirements/SoftwareRequirement/packages/specs	
-/requirements/SoftwareRequirement/packages/version	https://w3id.org/cwl/cwl#SoftwarePackage/version
-/requirements/StepInputExpressionRequirement	https://w3id.org/cwl/cwl#StepInputExpressionRequirement
-/requirements/StepInputExpressionRequirement/class	
-/requirements/SubworkflowFeatureRequirement	https://w3id.org/cwl/cwl#SubworkflowFeatureRequirement
-/requirements/SubworkflowFeatureRequirement/class	
-/requirements/ToolTimeLimit	https://w3id.org/cwl/cwl#ToolTimeLimit
-/requirements/ToolTimeLimit/class	
-/requirements/ToolTimeLimit/timelimit	https://w3id.org/cwl/cwl#ToolTimeLimit/timelimit
-/requirements/WorkReuse	https://w3id.org/cwl/cwl#WorkReuse
-/requirements/WorkReuse/class	
-/requirements/WorkReuse/enableReuse	https://w3id.org/cwl/cwl#WorkReuse/enableReuse
-/requirements/cwltool:CUDARequirement	
-/requirements/cwltool:CUDARequirement/class	
-/requirements/cwltool:CUDARequirement/cudaComputeCapability	
-/requirements/cwltool:CUDARequirement/cudaDeviceCountMax	
-/requirements/cwltool:CUDARequirement/cudaDeviceCountMin	
-/requirements/cwltool:CUDARequirement/cudaVersionMin	
-/requirements/class	
-/requirements/cudaComputeCapability	
-/requirements/cudaDeviceCountMax	
-/requirements/cudaDeviceCountMin	
-/requirements/cudaVersionMin	
-/requirements/dockerFile	https://w3id.org/cwl/cwl#DockerRequirement/dockerFile
-/requirements/dockerImageId	https://w3id.org/cwl/cwl#DockerRequirement/dockerImageId
-/requirements/dockerImport	https://w3id.org/cwl/cwl#DockerRequirement/dockerImport
-/requirements/dockerLoad	https://w3id.org/cwl/cwl#DockerRequirement/dockerLoad
-/requirements/dockerOutputDirectory	https://w3id.org/cwl/cwl#DockerRequirement/dockerOutputDirectory
-/requirements/dockerPull	https://w3id.org/cwl/cwl#DockerRequirement/dockerPull
-/requirements/packages	
-/requirements/packages/package	https://w3id.org/cwl/cwl#SoftwarePackage/package
-/requirements/packages/specs	
-/requirements/packages/version	https://w3id.org/cwl/cwl#SoftwarePackage/version
-/requirements/envDef	
-/requirements/types	https://w3id.org/cwl/cwl#SchemaDefRequirement/types
-/requirements/types/symbols	
-/requirements/types/type	
-/requirements/types/fields	
-/requirements/types/name	
-/requirements/types/items	
-/requirements/types/$import	
-/requirements/listing	
-/requirements/expressionLib	https://w3id.org/cwl/cwl#InlineJavascriptRequirement/expressionLib
-/requirements/expressionLib/$include	
-/requirements/inplaceUpdate	https://w3id.org/cwl/cwl#InplaceUpdateRequirement/inplaceUpdate
-/requirements/loadListing	https://w3id.org/cwl/cwl#loadListing
-/requirements/networkAccess	https://w3id.org/cwl/cwl#NetworkAccess/networkAccess
-/requirements/coresMax	https://w3id.org/cwl/cwl#ResourceRequirement/coresMax
-/requirements/coresMin	https://w3id.org/cwl/cwl#ResourceRequirement/coresMin
-/requirements/outdirMax	https://w3id.org/cwl/cwl#ResourceRequirement/outdirMax
-/requirements/outdirMin	https://w3id.org/cwl/cwl#ResourceRequirement/outdirMin
-/requirements/ramMax	https://w3id.org/cwl/cwl#ResourceRequirement/ramMax
-/requirements/ramMin	https://w3id.org/cwl/cwl#ResourceRequirement/ramMin
-/requirements/tmpdirMax	https://w3id.org/cwl/cwl#ResourceRequirement/tmpdirMax
-/requirements/tmpdirMin	https://w3id.org/cwl/cwl#ResourceRequirement/tmpdirMin
-/requirements/timelimit	https://w3id.org/cwl/cwl#ToolTimeLimit/timelimit
-/requirements/enableReuse	https://w3id.org/cwl/cwl#WorkReuse/enableReuse
-/requirements/$import	
 /steps	
 /steps/in	
 /steps/in/linkMerge	https://w3id.org/cwl/cwl#linkMerge
@@ -317,11 +31,181 @@ path	@id
 /steps/run/baseCommand	
 /steps/run/class	
 /steps/run/hints	
+/steps/run/hints/DockerRequirement	https://w3id.org/cwl/cwl#DockerRequirement
+/steps/run/hints/DockerRequirement/class	
+/steps/run/hints/DockerRequirement/dockerFile	https://w3id.org/cwl/cwl#DockerRequirement/dockerFile
+/steps/run/hints/DockerRequirement/dockerImageId	https://w3id.org/cwl/cwl#DockerRequirement/dockerImageId
+/steps/run/hints/DockerRequirement/dockerImport	https://w3id.org/cwl/cwl#DockerRequirement/dockerImport
+/steps/run/hints/DockerRequirement/dockerLoad	https://w3id.org/cwl/cwl#DockerRequirement/dockerLoad
+/steps/run/hints/DockerRequirement/dockerOutputDirectory	https://w3id.org/cwl/cwl#DockerRequirement/dockerOutputDirectory
+/steps/run/hints/DockerRequirement/dockerPull	https://w3id.org/cwl/cwl#DockerRequirement/dockerPull
+/steps/run/hints/EnvVarRequirement	https://w3id.org/cwl/cwl#EnvVarRequirement
+/steps/run/hints/EnvVarRequirement/class	
+/steps/run/hints/EnvVarRequirement/envDef	
+/steps/run/hints/EnvVarRequirement/envDef/envName	https://w3id.org/cwl/cwl#EnvironmentDef/envName
+/steps/run/hints/EnvVarRequirement/envDef/envValue	https://w3id.org/cwl/cwl#EnvironmentDef/envValue
+/steps/run/hints/InitialWorkDirRequirement	https://w3id.org/cwl/cwl#InitialWorkDirRequirement
+/steps/run/hints/InitialWorkDirRequirement/class	
+/steps/run/hints/InitialWorkDirRequirement/listing	
+/steps/run/hints/InitialWorkDirRequirement/listing/entry	
+/steps/run/hints/InitialWorkDirRequirement/listing/entryname	
+/steps/run/hints/InitialWorkDirRequirement/listing/writable	https://w3id.org/cwl/cwl#Dirent/writable
+/steps/run/hints/InitialWorkDirRequirement/listing/checksum	https://w3id.org/cwl/cwl#File/checksum
+/steps/run/hints/InitialWorkDirRequirement/listing/class	
+/steps/run/hints/InitialWorkDirRequirement/listing/location	
+/steps/run/hints/InitialWorkDirRequirement/listing/size	https://w3id.org/cwl/cwl#File/size
+/steps/run/hints/InlineJavascriptRequirement	https://w3id.org/cwl/cwl#InlineJavascriptRequirement
+/steps/run/hints/InlineJavascriptRequirement/class	
+/steps/run/hints/InlineJavascriptRequirement/expressionLib	https://w3id.org/cwl/cwl#InlineJavascriptRequirement/expressionLib
+/steps/run/hints/InlineJavascriptRequirement/expressionLib/$include	
+/steps/run/hints/InplaceUpdateRequirement	https://w3id.org/cwl/cwl#InplaceUpdateRequirement
+/steps/run/hints/InplaceUpdateRequirement/class	
+/steps/run/hints/InplaceUpdateRequirement/inplaceUpdate	https://w3id.org/cwl/cwl#InplaceUpdateRequirement/inplaceUpdate
+/steps/run/hints/LoadListingRequirement	https://w3id.org/cwl/cwl#LoadListingRequirement
+/steps/run/hints/LoadListingRequirement/class	
+/steps/run/hints/LoadListingRequirement/loadListing	https://w3id.org/cwl/cwl#loadListing
+/steps/run/hints/MultipleInputFeatureRequirement	https://w3id.org/cwl/cwl#MultipleInputFeatureRequirement
+/steps/run/hints/MultipleInputFeatureRequirement/class	
+/steps/run/hints/NetworkAccess	https://w3id.org/cwl/cwl#NetworkAccess
+/steps/run/hints/NetworkAccess/class	
+/steps/run/hints/NetworkAccess/networkAccess	https://w3id.org/cwl/cwl#NetworkAccess/networkAccess
+/steps/run/hints/ResourceRequirement	https://w3id.org/cwl/cwl#ResourceRequirement
+/steps/run/hints/ResourceRequirement/class	
+/steps/run/hints/ResourceRequirement/coresMax	https://w3id.org/cwl/cwl#ResourceRequirement/coresMax
+/steps/run/hints/ResourceRequirement/coresMin	https://w3id.org/cwl/cwl#ResourceRequirement/coresMin
+/steps/run/hints/ResourceRequirement/outdirMax	https://w3id.org/cwl/cwl#ResourceRequirement/outdirMax
+/steps/run/hints/ResourceRequirement/outdirMin	https://w3id.org/cwl/cwl#ResourceRequirement/outdirMin
+/steps/run/hints/ResourceRequirement/ramMax	https://w3id.org/cwl/cwl#ResourceRequirement/ramMax
+/steps/run/hints/ResourceRequirement/ramMin	https://w3id.org/cwl/cwl#ResourceRequirement/ramMin
+/steps/run/hints/ResourceRequirement/tmpdirMax	https://w3id.org/cwl/cwl#ResourceRequirement/tmpdirMax
+/steps/run/hints/ResourceRequirement/tmpdirMin	https://w3id.org/cwl/cwl#ResourceRequirement/tmpdirMin
+/steps/run/hints/ScatterFeatureRequirement	https://w3id.org/cwl/cwl#ScatterFeatureRequirement
+/steps/run/hints/ScatterFeatureRequirement/class	
+/steps/run/hints/SchemaDefRequirement	https://w3id.org/cwl/cwl#SchemaDefRequirement
+/steps/run/hints/SchemaDefRequirement/class	
+/steps/run/hints/SchemaDefRequirement/types	https://w3id.org/cwl/cwl#SchemaDefRequirement/types
+/steps/run/hints/SchemaDefRequirement/types/symbols	
+/steps/run/hints/SchemaDefRequirement/types/type	
+/steps/run/hints/SchemaDefRequirement/types/fields	
+/steps/run/hints/SchemaDefRequirement/types/fields/items	
+/steps/run/hints/SchemaDefRequirement/types/fields/type	
+/steps/run/hints/SchemaDefRequirement/types/fields/symbols	
+/steps/run/hints/SchemaDefRequirement/types/fields/name	
+/steps/run/hints/SchemaDefRequirement/types/fields/format	
+/steps/run/hints/SchemaDefRequirement/types/fields/loadContents	https://w3id.org/cwl/cwl#loadContents
+/steps/run/hints/SchemaDefRequirement/types/fields/secondaryFiles	
+/steps/run/hints/SchemaDefRequirement/types/fields/secondaryFiles/pattern	
+/steps/run/hints/SchemaDefRequirement/types/fields/secondaryFiles/required	
+/steps/run/hints/SchemaDefRequirement/types/fields/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
+/steps/run/hints/SchemaDefRequirement/types/fields/loadListing	https://w3id.org/cwl/cwl#loadListing
+/steps/run/hints/SchemaDefRequirement/types/name	
+/steps/run/hints/SchemaDefRequirement/types/items	
+/steps/run/hints/SchemaDefRequirement/types/$import	
+/steps/run/hints/ShellCommandRequirement	https://w3id.org/cwl/cwl#ShellCommandRequirement
+/steps/run/hints/ShellCommandRequirement/class	
+/steps/run/hints/SoftwareRequirement	https://w3id.org/cwl/cwl#SoftwareRequirement
+/steps/run/hints/SoftwareRequirement/class	
+/steps/run/hints/SoftwareRequirement/packages	
+/steps/run/hints/SoftwareRequirement/packages/package	https://w3id.org/cwl/cwl#SoftwarePackage/package
+/steps/run/hints/SoftwareRequirement/packages/specs	
+/steps/run/hints/SoftwareRequirement/packages/version	https://w3id.org/cwl/cwl#SoftwarePackage/version
+/steps/run/hints/StepInputExpressionRequirement	https://w3id.org/cwl/cwl#StepInputExpressionRequirement
+/steps/run/hints/StepInputExpressionRequirement/class	
+/steps/run/hints/SubworkflowFeatureRequirement	https://w3id.org/cwl/cwl#SubworkflowFeatureRequirement
+/steps/run/hints/SubworkflowFeatureRequirement/class	
+/steps/run/hints/ToolTimeLimit	https://w3id.org/cwl/cwl#ToolTimeLimit
+/steps/run/hints/ToolTimeLimit/class	
+/steps/run/hints/ToolTimeLimit/timelimit	https://w3id.org/cwl/cwl#ToolTimeLimit/timelimit
+/steps/run/hints/WorkReuse	https://w3id.org/cwl/cwl#WorkReuse
+/steps/run/hints/WorkReuse/class	
+/steps/run/hints/WorkReuse/enableReuse	https://w3id.org/cwl/cwl#WorkReuse/enableReuse
+/steps/run/hints/cwltool:CUDARequirement	
+/steps/run/hints/cwltool:CUDARequirement/class	
+/steps/run/hints/cwltool:CUDARequirement/cudaComputeCapability	
+/steps/run/hints/cwltool:CUDARequirement/cudaDeviceCountMax	
+/steps/run/hints/cwltool:CUDARequirement/cudaDeviceCountMin	
+/steps/run/hints/cwltool:CUDARequirement/cudaVersionMin	
+/steps/run/hints/class	
+/steps/run/hints/BuiltinRequirement	
+/steps/run/hints/BuiltinRequirement/class	
+/steps/run/hints/BuiltinRequirement/process	
+/steps/run/hints/OGCAPIRequirement	
+/steps/run/hints/OGCAPIRequirement/class	
+/steps/run/hints/OGCAPIRequirement/process	
+/steps/run/hints/WPS1Requirement	
+/steps/run/hints/WPS1Requirement/class	
+/steps/run/hints/WPS1Requirement/process	
+/steps/run/hints/WPS1Requirement/provider	
+/steps/run/hints/cudaComputeCapability	
+/steps/run/hints/cudaDeviceCountMax	
+/steps/run/hints/cudaDeviceCountMin	
+/steps/run/hints/cudaVersionMin	
+/steps/run/hints/dockerFile	https://w3id.org/cwl/cwl#DockerRequirement/dockerFile
+/steps/run/hints/dockerImageId	https://w3id.org/cwl/cwl#DockerRequirement/dockerImageId
+/steps/run/hints/dockerImport	https://w3id.org/cwl/cwl#DockerRequirement/dockerImport
+/steps/run/hints/dockerLoad	https://w3id.org/cwl/cwl#DockerRequirement/dockerLoad
+/steps/run/hints/dockerOutputDirectory	https://w3id.org/cwl/cwl#DockerRequirement/dockerOutputDirectory
+/steps/run/hints/dockerPull	https://w3id.org/cwl/cwl#DockerRequirement/dockerPull
+/steps/run/hints/packages	
+/steps/run/hints/packages/package	https://w3id.org/cwl/cwl#SoftwarePackage/package
+/steps/run/hints/packages/specs	
+/steps/run/hints/packages/version	https://w3id.org/cwl/cwl#SoftwarePackage/version
+/steps/run/hints/envDef	
+/steps/run/hints/types	https://w3id.org/cwl/cwl#SchemaDefRequirement/types
+/steps/run/hints/types/symbols	
+/steps/run/hints/types/type	
+/steps/run/hints/types/fields	
+/steps/run/hints/types/name	
+/steps/run/hints/types/items	
+/steps/run/hints/types/$import	
+/steps/run/hints/listing	
+/steps/run/hints/expressionLib	https://w3id.org/cwl/cwl#InlineJavascriptRequirement/expressionLib
+/steps/run/hints/expressionLib/$include	
+/steps/run/hints/inplaceUpdate	https://w3id.org/cwl/cwl#InplaceUpdateRequirement/inplaceUpdate
+/steps/run/hints/loadListing	https://w3id.org/cwl/cwl#loadListing
+/steps/run/hints/networkAccess	https://w3id.org/cwl/cwl#NetworkAccess/networkAccess
+/steps/run/hints/coresMax	https://w3id.org/cwl/cwl#ResourceRequirement/coresMax
+/steps/run/hints/coresMin	https://w3id.org/cwl/cwl#ResourceRequirement/coresMin
+/steps/run/hints/outdirMax	https://w3id.org/cwl/cwl#ResourceRequirement/outdirMax
+/steps/run/hints/outdirMin	https://w3id.org/cwl/cwl#ResourceRequirement/outdirMin
+/steps/run/hints/ramMax	https://w3id.org/cwl/cwl#ResourceRequirement/ramMax
+/steps/run/hints/ramMin	https://w3id.org/cwl/cwl#ResourceRequirement/ramMin
+/steps/run/hints/tmpdirMax	https://w3id.org/cwl/cwl#ResourceRequirement/tmpdirMax
+/steps/run/hints/tmpdirMin	https://w3id.org/cwl/cwl#ResourceRequirement/tmpdirMin
+/steps/run/hints/timelimit	https://w3id.org/cwl/cwl#ToolTimeLimit/timelimit
+/steps/run/hints/enableReuse	https://w3id.org/cwl/cwl#WorkReuse/enableReuse
+/steps/run/hints/process	
+/steps/run/hints/provider	
+/steps/run/hints/$import	
 /steps/run/id	
 /steps/run/inputs	
+/steps/run/inputs/id	
+/steps/run/inputs/inputBinding	https://w3id.org/cwl/cwl#inputBinding
+/steps/run/inputs/inputBinding/itemSeparator	https://w3id.org/cwl/cwl#CommandLineBinding/itemSeparator
+/steps/run/inputs/inputBinding/position	https://w3id.org/cwl/cwl#CommandLineBinding/position
+/steps/run/inputs/inputBinding/prefix	https://w3id.org/cwl/cwl#CommandLineBinding/prefix
+/steps/run/inputs/inputBinding/shellQuote	https://w3id.org/cwl/cwl#CommandLineBinding/shellQuote
+/steps/run/inputs/inputBinding/valueFrom	https://w3id.org/cwl/cwl#valueFrom
+/steps/run/inputs/type	
+/steps/run/inputs/type/type	
+/steps/run/inputs/default	
+/steps/run/inputs/default/basename	https://w3id.org/cwl/cwl#basename
+/steps/run/inputs/default/class	
+/steps/run/inputs/default/location	
+/steps/run/inputs/default/nameroot	https://w3id.org/cwl/cwl#File/nameroot
+/steps/run/inputs/default/path	
+/steps/run/inputs/doc	
+/steps/run/inputs/label	http://www.w3.org/2000/01/rdf-schema#label
 /steps/run/inputs/$import	
 /steps/run/intent	
 /steps/run/outputs	
+/steps/run/outputs/id	
+/steps/run/outputs/outputBinding	https://w3id.org/cwl/cwl#outputBinding
+/steps/run/outputs/outputBinding/glob	https://w3id.org/cwl/cwl#CommandOutputBinding/glob
+/steps/run/outputs/type	
+/steps/run/outputs/type/type	
+/steps/run/outputs/doc	
+/steps/run/outputs/label	http://www.w3.org/2000/01/rdf-schema#label
 /steps/run/outputs/$import	
 /steps/run/requirements	
 /steps/run/requirements/DockerRequirement	https://w3id.org/cwl/cwl#DockerRequirement
@@ -398,6 +282,46 @@ path	@id
 /steps/run/requirements/cwltool:CUDARequirement/cudaDeviceCountMax	
 /steps/run/requirements/cwltool:CUDARequirement/cudaDeviceCountMin	
 /steps/run/requirements/cwltool:CUDARequirement/cudaVersionMin	
+/steps/run/requirements/class	
+/steps/run/requirements/cudaComputeCapability	
+/steps/run/requirements/cudaDeviceCountMax	
+/steps/run/requirements/cudaDeviceCountMin	
+/steps/run/requirements/cudaVersionMin	
+/steps/run/requirements/dockerFile	https://w3id.org/cwl/cwl#DockerRequirement/dockerFile
+/steps/run/requirements/dockerImageId	https://w3id.org/cwl/cwl#DockerRequirement/dockerImageId
+/steps/run/requirements/dockerImport	https://w3id.org/cwl/cwl#DockerRequirement/dockerImport
+/steps/run/requirements/dockerLoad	https://w3id.org/cwl/cwl#DockerRequirement/dockerLoad
+/steps/run/requirements/dockerOutputDirectory	https://w3id.org/cwl/cwl#DockerRequirement/dockerOutputDirectory
+/steps/run/requirements/dockerPull	https://w3id.org/cwl/cwl#DockerRequirement/dockerPull
+/steps/run/requirements/packages	
+/steps/run/requirements/packages/package	https://w3id.org/cwl/cwl#SoftwarePackage/package
+/steps/run/requirements/packages/specs	
+/steps/run/requirements/packages/version	https://w3id.org/cwl/cwl#SoftwarePackage/version
+/steps/run/requirements/envDef	
+/steps/run/requirements/types	https://w3id.org/cwl/cwl#SchemaDefRequirement/types
+/steps/run/requirements/types/symbols	
+/steps/run/requirements/types/type	
+/steps/run/requirements/types/fields	
+/steps/run/requirements/types/name	
+/steps/run/requirements/types/items	
+/steps/run/requirements/types/$import	
+/steps/run/requirements/listing	
+/steps/run/requirements/expressionLib	https://w3id.org/cwl/cwl#InlineJavascriptRequirement/expressionLib
+/steps/run/requirements/expressionLib/$include	
+/steps/run/requirements/inplaceUpdate	https://w3id.org/cwl/cwl#InplaceUpdateRequirement/inplaceUpdate
+/steps/run/requirements/loadListing	https://w3id.org/cwl/cwl#loadListing
+/steps/run/requirements/networkAccess	https://w3id.org/cwl/cwl#NetworkAccess/networkAccess
+/steps/run/requirements/coresMax	https://w3id.org/cwl/cwl#ResourceRequirement/coresMax
+/steps/run/requirements/coresMin	https://w3id.org/cwl/cwl#ResourceRequirement/coresMin
+/steps/run/requirements/outdirMax	https://w3id.org/cwl/cwl#ResourceRequirement/outdirMax
+/steps/run/requirements/outdirMin	https://w3id.org/cwl/cwl#ResourceRequirement/outdirMin
+/steps/run/requirements/ramMax	https://w3id.org/cwl/cwl#ResourceRequirement/ramMax
+/steps/run/requirements/ramMin	https://w3id.org/cwl/cwl#ResourceRequirement/ramMin
+/steps/run/requirements/tmpdirMax	https://w3id.org/cwl/cwl#ResourceRequirement/tmpdirMax
+/steps/run/requirements/tmpdirMin	https://w3id.org/cwl/cwl#ResourceRequirement/tmpdirMin
+/steps/run/requirements/timelimit	https://w3id.org/cwl/cwl#ToolTimeLimit/timelimit
+/steps/run/requirements/enableReuse	https://w3id.org/cwl/cwl#WorkReuse/enableReuse
+/steps/run/requirements/$import	
 /steps/run/scatter	
 /steps/run/scatterMethod	
 /steps/run/stderr	https://w3id.org/cwl/cwl#stderr

@@ -97,21 +97,8 @@ Links to the schema:
       },
       "@id": "cwl:DockerRequirement"
     },
-    "EnvVarRequirement": {
-      "@context": {
-        "envName": "cwl:EnvironmentDef/envName",
-        "envValue": "cwl:EnvironmentDef/envValue"
-      },
-      "@id": "cwl:EnvVarRequirement"
-    },
-    "InitialWorkDirRequirement": {
-      "@context": {
-        "writable": "cwl:Dirent/writable",
-        "checksum": "cwl:File/checksum",
-        "size": "cwl:File/size"
-      },
-      "@id": "cwl:InitialWorkDirRequirement"
-    },
+    "EnvVarRequirement": "cwl:EnvVarRequirement",
+    "InitialWorkDirRequirement": "cwl:InitialWorkDirRequirement",
     "InlineJavascriptRequirement": {
       "@context": {
         "expressionLib": "cwl:InlineJavascriptRequirement/expressionLib"
@@ -153,13 +140,7 @@ Links to the schema:
       "@id": "cwl:SchemaDefRequirement"
     },
     "ShellCommandRequirement": "cwl:ShellCommandRequirement",
-    "SoftwareRequirement": {
-      "@context": {
-        "package": "cwl:SoftwarePackage/package",
-        "version": "cwl:SoftwarePackage/version"
-      },
-      "@id": "cwl:SoftwareRequirement"
-    },
+    "SoftwareRequirement": "cwl:SoftwareRequirement",
     "StepInputExpressionRequirement": "cwl:StepInputExpressionRequirement",
     "SubworkflowFeatureRequirement": "cwl:SubworkflowFeatureRequirement",
     "ToolTimeLimit": {
@@ -174,6 +155,9 @@ Links to the schema:
       },
       "@id": "cwl:WorkReuse"
     },
+    "writable": "cwl:Dirent/writable",
+    "checksum": "cwl:File/checksum",
+    "size": "cwl:File/size",
     "loadContents": "cwl:loadContents",
     "streamable": "cwl:FieldBase/streamable",
     "loadListing": "cwl:loadListing",

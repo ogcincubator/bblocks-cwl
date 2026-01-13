@@ -1,0 +1,1606 @@
+{
+  "summary": {
+    "total": 114,
+    "passed": 114,
+    "failed": 0,
+    "result": true
+  },
+  "bblocks": {
+    "ogc.cwl.v1_2_1.AnyLiteralType": {
+      "title": "Validation report for ogc.cwl.v1_2_1.AnyLiteralType - AnyLiteralType",
+      "bblockName": "AnyLiteralType",
+      "bblockId": "ogc.cwl.v1_2_1.AnyLiteralType",
+      "generated": "2026-01-13T22:40:56.568333+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLTextPatternID": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLTextPatternID - CWLTextPatternID",
+      "bblockName": "CWLTextPatternID",
+      "bblockId": "ogc.cwl.v1_2_1.CWLTextPatternID",
+      "generated": "2026-01-13T22:40:56.573697+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CUDAComputeCapabilityArray": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CUDAComputeCapabilityArray - CUDAComputeCapabilityArray",
+      "bblockName": "CUDAComputeCapabilityArray",
+      "bblockId": "ogc.cwl.v1_2_1.CUDAComputeCapabilityArray",
+      "generated": "2026-01-13T22:40:56.579394+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLVersion": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLVersion - CWLVersion",
+      "bblockName": "CWLVersion",
+      "bblockId": "ogc.cwl.v1_2_1.CWLVersion",
+      "generated": "2026-01-13T22:40:56.584673+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLDocumentation": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLDocumentation - CWLDocumentation",
+      "bblockName": "CWLDocumentation",
+      "bblockId": "ogc.cwl.v1_2_1.CWLDocumentation",
+      "generated": "2026-01-13T22:40:56.591218+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLIntent": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLIntent - CWLIntent",
+      "bblockName": "CWLIntent",
+      "bblockId": "ogc.cwl.v1_2_1.CWLIntent",
+      "generated": "2026-01-13T22:40:56.596490+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLScatterMethod": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLScatterMethod - CWLScatterMethod",
+      "bblockName": "CWLScatterMethod",
+      "bblockId": "ogc.cwl.v1_2_1.CWLScatterMethod",
+      "generated": "2026-01-13T22:40:56.601503+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLCommand": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLCommand - CWLCommand",
+      "bblockName": "CWLCommand",
+      "bblockId": "ogc.cwl.v1_2_1.CWLCommand",
+      "generated": "2026-01-13T22:40:56.607413+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLExpression": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLExpression - CWLExpression",
+      "bblockName": "CWLExpression",
+      "bblockId": "ogc.cwl.v1_2_1.CWLExpression",
+      "generated": "2026-01-13T22:40:56.612215+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLDefaultObject": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLDefaultObject - CWLDefaultObject",
+      "bblockName": "CWLDefaultObject",
+      "bblockId": "ogc.cwl.v1_2_1.CWLDefaultObject",
+      "generated": "2026-01-13T22:40:56.617846+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLDefaultLocation": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLDefaultLocation - CWLDefaultLocation",
+      "bblockName": "CWLDefaultLocation",
+      "bblockId": "ogc.cwl.v1_2_1.CWLDefaultLocation",
+      "generated": "2026-01-13T22:40:56.625469+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLTypeSymbolValues": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLTypeSymbolValues - CWLTypeSymbolValues",
+      "bblockName": "CWLTypeSymbolValues",
+      "bblockId": "ogc.cwl.v1_2_1.CWLTypeSymbolValues",
+      "generated": "2026-01-13T22:40:56.631070+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.LoadListingEnum": {
+      "title": "Validation report for ogc.cwl.v1_2_1.LoadListingEnum - LoadListingEnum",
+      "bblockName": "LoadListingEnum",
+      "bblockId": "ogc.cwl.v1_2_1.LoadListingEnum",
+      "generated": "2026-01-13T22:40:56.635840+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLImport": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLImport - CWLImport",
+      "bblockName": "CWLImport",
+      "bblockId": "ogc.cwl.v1_2_1.CWLImport",
+      "generated": "2026-01-13T22:40:56.641264+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.UnknownRequirement": {
+      "title": "Validation report for ogc.cwl.v1_2_1.UnknownRequirement - UnknownRequirement",
+      "bblockName": "UnknownRequirement",
+      "bblockId": "ogc.cwl.v1_2_1.UnknownRequirement",
+      "generated": "2026-01-13T22:40:56.647363+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLInputStdInDefinition": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLInputStdInDefinition - CWLInputStdInDefinition",
+      "bblockName": "CWLInputStdInDefinition",
+      "bblockId": "ogc.cwl.v1_2_1.CWLInputStdInDefinition",
+      "generated": "2026-01-13T22:40:56.652258+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLKeywordList": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLKeywordList - CWLKeywordList",
+      "bblockName": "CWLKeywordList",
+      "bblockId": "ogc.cwl.v1_2_1.CWLKeywordList",
+      "generated": "2026-01-13T22:40:56.657742+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLOutputStdErrDefinition": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLOutputStdErrDefinition - CWLOutputStdErrDefinition",
+      "bblockName": "CWLOutputStdErrDefinition",
+      "bblockId": "ogc.cwl.v1_2_1.CWLOutputStdErrDefinition",
+      "generated": "2026-01-13T22:40:56.662609+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLOutputStdOutDefinition": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLOutputStdOutDefinition - CWLOutputStdOutDefinition",
+      "bblockName": "CWLOutputStdOutDefinition",
+      "bblockId": "ogc.cwl.v1_2_1.CWLOutputStdOutDefinition",
+      "generated": "2026-01-13T22:40:56.667666+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.InlineJavascriptRequirement": {
+      "title": "Validation report for ogc.cwl.v1_2_1.InlineJavascriptRequirement - InlineJavascriptRequirement",
+      "bblockName": "InlineJavascriptRequirement",
+      "bblockId": "ogc.cwl.v1_2_1.InlineJavascriptRequirement",
+      "generated": "2026-01-13T22:40:56.675306+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.ShellCommandRequirement": {
+      "title": "Validation report for ogc.cwl.v1_2_1.ShellCommandRequirement - ShellCommandRequirement",
+      "bblockName": "ShellCommandRequirement",
+      "bblockId": "ogc.cwl.v1_2_1.ShellCommandRequirement",
+      "generated": "2026-01-13T22:40:56.680931+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.MultipleInputFeatureRequirement": {
+      "title": "Validation report for ogc.cwl.v1_2_1.MultipleInputFeatureRequirement - MultipleInputFeatureRequirement",
+      "bblockName": "MultipleInputFeatureRequirement",
+      "bblockId": "ogc.cwl.v1_2_1.MultipleInputFeatureRequirement",
+      "generated": "2026-01-13T22:40:56.686331+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.InplaceUpdateRequirement": {
+      "title": "Validation report for ogc.cwl.v1_2_1.InplaceUpdateRequirement - InplaceUpdateRequirement",
+      "bblockName": "InplaceUpdateRequirement",
+      "bblockId": "ogc.cwl.v1_2_1.InplaceUpdateRequirement",
+      "generated": "2026-01-13T22:40:56.692664+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.StepInputExpressionRequirement": {
+      "title": "Validation report for ogc.cwl.v1_2_1.StepInputExpressionRequirement - StepInputExpressionRequirement",
+      "bblockName": "StepInputExpressionRequirement",
+      "bblockId": "ogc.cwl.v1_2_1.StepInputExpressionRequirement",
+      "generated": "2026-01-13T22:40:56.698015+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.DockerRequirement": {
+      "title": "Validation report for ogc.cwl.v1_2_1.DockerRequirement - DockerRequirement",
+      "bblockName": "DockerRequirement",
+      "bblockId": "ogc.cwl.v1_2_1.DockerRequirement",
+      "generated": "2026-01-13T22:40:56.706312+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.ScatterFeatureRequirement": {
+      "title": "Validation report for ogc.cwl.v1_2_1.ScatterFeatureRequirement - ScatterFeatureRequirement",
+      "bblockName": "ScatterFeatureRequirement",
+      "bblockId": "ogc.cwl.v1_2_1.ScatterFeatureRequirement",
+      "generated": "2026-01-13T22:40:56.711518+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.SubworkflowFeatureRequirement": {
+      "title": "Validation report for ogc.cwl.v1_2_1.SubworkflowFeatureRequirement - SubworkflowFeatureRequirement",
+      "bblockName": "SubworkflowFeatureRequirement",
+      "bblockId": "ogc.cwl.v1_2_1.SubworkflowFeatureRequirement",
+      "generated": "2026-01-13T22:40:56.717557+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLTypeDefinition": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLTypeDefinition - CWLTypeDefinition",
+      "bblockName": "CWLTypeDefinition",
+      "bblockId": "ogc.cwl.v1_2_1.CWLTypeDefinition",
+      "generated": "2026-01-13T22:40:56.722464+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLTypeRecordFieldsItem": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLTypeRecordFieldsItem - CWLTypeRecordFieldsItem",
+      "bblockName": "CWLTypeRecordFieldsItem",
+      "bblockId": "ogc.cwl.v1_2_1.CWLTypeRecordFieldsItem",
+      "generated": "2026-01-13T22:40:56.728289+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLTypeRecordRefPattern": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLTypeRecordRefPattern - CWLTypeRecordRefPattern",
+      "bblockName": "CWLTypeRecordRefPattern",
+      "bblockId": "ogc.cwl.v1_2_1.CWLTypeRecordRefPattern",
+      "generated": "2026-01-13T22:40:56.733018+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLWorkflowClass": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLWorkflowClass - CWLWorkflowClass",
+      "bblockName": "CWLWorkflowClass",
+      "bblockId": "ogc.cwl.v1_2_1.CWLWorkflowClass",
+      "generated": "2026-01-13T22:40:56.738196+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.LinkMergeMethod": {
+      "title": "Validation report for ogc.cwl.v1_2_1.LinkMergeMethod - LinkMergeMethod",
+      "bblockName": "LinkMergeMethod",
+      "bblockId": "ogc.cwl.v1_2_1.LinkMergeMethod",
+      "generated": "2026-01-13T22:40:56.742808+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.Checksum": {
+      "title": "Validation report for ogc.cwl.v1_2_1.Checksum - Checksum",
+      "bblockName": "Checksum",
+      "bblockId": "ogc.cwl.v1_2_1.Checksum",
+      "generated": "2026-01-13T22:40:56.747381+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.ReferenceURL": {
+      "title": "Validation report for ogc.cwl.v1_2_1.ReferenceURL - ReferenceURL",
+      "bblockName": "ReferenceURL",
+      "bblockId": "ogc.cwl.v1_2_1.ReferenceURL",
+      "generated": "2026-01-13T22:40:56.751989+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.ResourceQuantityOrFractional": {
+      "title": "Validation report for ogc.cwl.v1_2_1.ResourceQuantityOrFractional - ResourceQuantityOrFractional",
+      "bblockName": "ResourceQuantityOrFractional",
+      "bblockId": "ogc.cwl.v1_2_1.ResourceQuantityOrFractional",
+      "generated": "2026-01-13T22:40:56.756765+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.SoftwarePackageSpecs": {
+      "title": "Validation report for ogc.cwl.v1_2_1.SoftwarePackageSpecs - SoftwarePackageSpecs",
+      "bblockName": "SoftwarePackageSpecs",
+      "bblockId": "ogc.cwl.v1_2_1.SoftwarePackageSpecs",
+      "generated": "2026-01-13T22:40:56.761648+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.BuiltinRequirement": {
+      "title": "Validation report for ogc.cwl.v1_2_1.BuiltinRequirement - BuiltinRequirement",
+      "bblockName": "BuiltinRequirement",
+      "bblockId": "ogc.cwl.v1_2_1.BuiltinRequirement",
+      "generated": "2026-01-13T22:40:56.767344+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLIdentifier": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLIdentifier - CWLIdentifier",
+      "bblockName": "CWLIdentifier",
+      "bblockId": "ogc.cwl.v1_2_1.CWLIdentifier",
+      "generated": "2026-01-13T22:40:56.772784+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.IdentifierArray": {
+      "title": "Validation report for ogc.cwl.v1_2_1.IdentifierArray - IdentifierArray",
+      "bblockName": "IdentifierArray",
+      "bblockId": "ogc.cwl.v1_2_1.IdentifierArray",
+      "generated": "2026-01-13T22:40:56.778209+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CUDAComputeCapability": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CUDAComputeCapability - CUDAComputeCapability",
+      "bblockName": "CUDAComputeCapability",
+      "bblockId": "ogc.cwl.v1_2_1.CUDAComputeCapability",
+      "generated": "2026-01-13T22:40:56.783670+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLFileOnlyParameters": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLFileOnlyParameters - CWLFileOnlyParameters",
+      "bblockName": "CWLFileOnlyParameters",
+      "bblockId": "ogc.cwl.v1_2_1.CWLFileOnlyParameters",
+      "generated": "2026-01-13T22:40:56.793988+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.EnvVarRequirement": {
+      "title": "Validation report for ogc.cwl.v1_2_1.EnvVarRequirement - EnvVarRequirement",
+      "bblockName": "EnvVarRequirement",
+      "bblockId": "ogc.cwl.v1_2_1.EnvVarRequirement",
+      "generated": "2026-01-13T22:40:56.803067+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.InputBinding": {
+      "title": "Validation report for ogc.cwl.v1_2_1.InputBinding - InputBinding",
+      "bblockName": "InputBinding",
+      "bblockId": "ogc.cwl.v1_2_1.InputBinding",
+      "generated": "2026-01-13T22:40:56.810481+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.NetworkAccessRequirement": {
+      "title": "Validation report for ogc.cwl.v1_2_1.NetworkAccessRequirement - NetworkAccessRequirement",
+      "bblockName": "NetworkAccessRequirement",
+      "bblockId": "ogc.cwl.v1_2_1.NetworkAccessRequirement",
+      "generated": "2026-01-13T22:40:56.817338+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.OutputBinding": {
+      "title": "Validation report for ogc.cwl.v1_2_1.OutputBinding - OutputBinding",
+      "bblockName": "OutputBinding",
+      "bblockId": "ogc.cwl.v1_2_1.OutputBinding",
+      "generated": "2026-01-13T22:40:56.824235+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.ToolTimeLimitRequirement": {
+      "title": "Validation report for ogc.cwl.v1_2_1.ToolTimeLimitRequirement - ToolTimeLimitRequirement",
+      "bblockName": "ToolTimeLimitRequirement",
+      "bblockId": "ogc.cwl.v1_2_1.ToolTimeLimitRequirement",
+      "generated": "2026-01-13T22:40:56.831140+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.WorkReuseRequirement": {
+      "title": "Validation report for ogc.cwl.v1_2_1.WorkReuseRequirement - WorkReuseRequirement",
+      "bblockName": "WorkReuseRequirement",
+      "bblockId": "ogc.cwl.v1_2_1.WorkReuseRequirement",
+      "generated": "2026-01-13T22:40:56.837956+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLDefault": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLDefault - CWLDefault",
+      "bblockName": "CWLDefault",
+      "bblockId": "ogc.cwl.v1_2_1.CWLDefault",
+      "generated": "2026-01-13T22:40:56.845151+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLTypeSymbols": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLTypeSymbols - CWLTypeSymbols",
+      "bblockName": "CWLTypeSymbols",
+      "bblockId": "ogc.cwl.v1_2_1.CWLTypeSymbols",
+      "generated": "2026-01-13T22:40:56.850406+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLDirectoryOnlyParameters": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLDirectoryOnlyParameters - CWLDirectoryOnlyParameters",
+      "bblockName": "CWLDirectoryOnlyParameters",
+      "bblockId": "ogc.cwl.v1_2_1.CWLDirectoryOnlyParameters",
+      "generated": "2026-01-13T22:40:56.855987+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.LoadListingRequirement": {
+      "title": "Validation report for ogc.cwl.v1_2_1.LoadListingRequirement - LoadListingRequirement",
+      "bblockName": "LoadListingRequirement",
+      "bblockId": "ogc.cwl.v1_2_1.LoadListingRequirement",
+      "generated": "2026-01-13T22:40:56.862193+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLInputStdInObjectType": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLInputStdInObjectType - CWLInputStdInObjectType",
+      "bblockName": "CWLInputStdInObjectType",
+      "bblockId": "ogc.cwl.v1_2_1.CWLInputStdInObjectType",
+      "generated": "2026-01-13T22:40:56.867381+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLMetadata": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLMetadata - CWLMetadata",
+      "bblockName": "CWLMetadata",
+      "bblockId": "ogc.cwl.v1_2_1.CWLMetadata",
+      "generated": "2026-01-13T22:40:56.873290+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLOutputStdErr": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLOutputStdErr - CWLOutputStdErr",
+      "bblockName": "CWLOutputStdErr",
+      "bblockId": "ogc.cwl.v1_2_1.CWLOutputStdErr",
+      "generated": "2026-01-13T22:40:56.879229+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLOutputStdOut": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLOutputStdOut - CWLOutputStdOut",
+      "bblockName": "CWLOutputStdOut",
+      "bblockId": "ogc.cwl.v1_2_1.CWLOutputStdOut",
+      "generated": "2026-01-13T22:40:56.885072+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLTypeRecordSchema": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLTypeRecordSchema - CWLTypeRecordSchema",
+      "bblockName": "CWLTypeRecordSchema",
+      "bblockId": "ogc.cwl.v1_2_1.CWLTypeRecordSchema",
+      "generated": "2026-01-13T22:40:56.893352+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLTypeRecordRef": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLTypeRecordRef - CWLTypeRecordRef",
+      "bblockName": "CWLTypeRecordRef",
+      "bblockId": "ogc.cwl.v1_2_1.CWLTypeRecordRef",
+      "generated": "2026-01-13T22:40:56.900312+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLWorkflowStepInputBase": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLWorkflowStepInputBase - CWLWorkflowStepInputBase",
+      "bblockName": "CWLWorkflowStepInputBase",
+      "bblockId": "ogc.cwl.v1_2_1.CWLWorkflowStepInputBase",
+      "generated": "2026-01-13T22:40:56.907185+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.InitialWorkDirRequirement": {
+      "title": "Validation report for ogc.cwl.v1_2_1.InitialWorkDirRequirement - InitialWorkDirRequirement",
+      "bblockName": "InitialWorkDirRequirement",
+      "bblockId": "ogc.cwl.v1_2_1.InitialWorkDirRequirement",
+      "generated": "2026-01-13T22:40:56.918516+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.OGCAPIRequirement": {
+      "title": "Validation report for ogc.cwl.v1_2_1.OGCAPIRequirement - OGCAPIRequirement",
+      "bblockName": "OGCAPIRequirement",
+      "bblockId": "ogc.cwl.v1_2_1.OGCAPIRequirement",
+      "generated": "2026-01-13T22:40:56.924252+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.SoftwarePackage": {
+      "title": "Validation report for ogc.cwl.v1_2_1.SoftwarePackage - SoftwarePackage",
+      "bblockName": "SoftwarePackage",
+      "bblockId": "ogc.cwl.v1_2_1.SoftwarePackage",
+      "generated": "2026-01-13T22:40:56.930894+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.WPS1Requirement": {
+      "title": "Validation report for ogc.cwl.v1_2_1.WPS1Requirement - WPS1Requirement",
+      "bblockName": "WPS1Requirement",
+      "bblockId": "ogc.cwl.v1_2_1.WPS1Requirement",
+      "generated": "2026-01-13T22:40:56.936960+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.ResourceCoresMaximum": {
+      "title": "Validation report for ogc.cwl.v1_2_1.ResourceCoresMaximum - ResourceCoresMaximum",
+      "bblockName": "ResourceCoresMaximum",
+      "bblockId": "ogc.cwl.v1_2_1.ResourceCoresMaximum",
+      "generated": "2026-01-13T22:40:56.942385+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.ResourceCoresMinimum": {
+      "title": "Validation report for ogc.cwl.v1_2_1.ResourceCoresMinimum - ResourceCoresMinimum",
+      "bblockName": "ResourceCoresMinimum",
+      "bblockId": "ogc.cwl.v1_2_1.ResourceCoresMinimum",
+      "generated": "2026-01-13T22:40:56.947684+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.ResourceOutDirMaximum": {
+      "title": "Validation report for ogc.cwl.v1_2_1.ResourceOutDirMaximum - ResourceOutDirMaximum",
+      "bblockName": "ResourceOutDirMaximum",
+      "bblockId": "ogc.cwl.v1_2_1.ResourceOutDirMaximum",
+      "generated": "2026-01-13T22:40:56.953080+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.ResourceOutDirMinimum": {
+      "title": "Validation report for ogc.cwl.v1_2_1.ResourceOutDirMinimum - ResourceOutDirMinimum",
+      "bblockName": "ResourceOutDirMinimum",
+      "bblockId": "ogc.cwl.v1_2_1.ResourceOutDirMinimum",
+      "generated": "2026-01-13T22:40:56.958509+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.ResourceRAMMaximum": {
+      "title": "Validation report for ogc.cwl.v1_2_1.ResourceRAMMaximum - ResourceRAMMaximum",
+      "bblockName": "ResourceRAMMaximum",
+      "bblockId": "ogc.cwl.v1_2_1.ResourceRAMMaximum",
+      "generated": "2026-01-13T22:40:56.963994+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.ResourceRAMMinimum": {
+      "title": "Validation report for ogc.cwl.v1_2_1.ResourceRAMMinimum - ResourceRAMMinimum",
+      "bblockName": "ResourceRAMMinimum",
+      "bblockId": "ogc.cwl.v1_2_1.ResourceRAMMinimum",
+      "generated": "2026-01-13T22:40:56.969348+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.ResourceTmpDirMaximum": {
+      "title": "Validation report for ogc.cwl.v1_2_1.ResourceTmpDirMaximum - ResourceTmpDirMaximum",
+      "bblockName": "ResourceTmpDirMaximum",
+      "bblockId": "ogc.cwl.v1_2_1.ResourceTmpDirMaximum",
+      "generated": "2026-01-13T22:40:56.974932+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.ResourceTmpDirMinimum": {
+      "title": "Validation report for ogc.cwl.v1_2_1.ResourceTmpDirMinimum - ResourceTmpDirMinimum",
+      "bblockName": "ResourceTmpDirMinimum",
+      "bblockId": "ogc.cwl.v1_2_1.ResourceTmpDirMinimum",
+      "generated": "2026-01-13T22:40:56.980295+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLScatter": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLScatter - CWLScatter",
+      "bblockName": "CWLScatter",
+      "bblockId": "ogc.cwl.v1_2_1.CWLScatter",
+      "generated": "2026-01-13T22:40:56.986443+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLWorkflowStepId": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLWorkflowStepId - CWLWorkflowStepId",
+      "bblockName": "CWLWorkflowStepId",
+      "bblockId": "ogc.cwl.v1_2_1.CWLWorkflowStepId",
+      "generated": "2026-01-13T22:40:56.991741+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.cwltool-CUDARequirement": {
+      "title": "Validation report for ogc.cwl.v1_2_1.cwltool-CUDARequirement - cwltool:CUDARequirement",
+      "bblockName": "cwltool:CUDARequirement",
+      "bblockId": "ogc.cwl.v1_2_1.cwltool-CUDARequirement",
+      "generated": "2026-01-13T22:40:56.998272+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLFileOnlyParametersConditional": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLFileOnlyParametersConditional - CWLFileOnlyParametersConditional",
+      "bblockName": "CWLFileOnlyParametersConditional",
+      "bblockId": "ogc.cwl.v1_2_1.CWLFileOnlyParametersConditional",
+      "generated": "2026-01-13T22:40:57.007687+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLArguments": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLArguments - CWLArguments",
+      "bblockName": "CWLArguments",
+      "bblockId": "ogc.cwl.v1_2_1.CWLArguments",
+      "generated": "2026-01-13T22:40:57.013947+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLWorkflowStepInputDefault": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLWorkflowStepInputDefault - CWLWorkflowStepInputDefault",
+      "bblockName": "CWLWorkflowStepInputDefault",
+      "bblockId": "ogc.cwl.v1_2_1.CWLWorkflowStepInputDefault",
+      "generated": "2026-01-13T22:40:57.019086+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLDefaultTypedConditional": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLDefaultTypedConditional - CWLDefaultTypedConditional",
+      "bblockName": "CWLDefaultTypedConditional",
+      "bblockId": "ogc.cwl.v1_2_1.CWLDefaultTypedConditional",
+      "generated": "2026-01-13T22:40:57.047538+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLTypeEnum": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLTypeEnum - CWLTypeEnum",
+      "bblockName": "CWLTypeEnum",
+      "bblockId": "ogc.cwl.v1_2_1.CWLTypeEnum",
+      "generated": "2026-01-13T22:40:57.053743+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLDirectoryOnlyParametersConditional": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLDirectoryOnlyParametersConditional - CWLDirectoryOnlyParametersConditional",
+      "bblockName": "CWLDirectoryOnlyParametersConditional",
+      "bblockId": "ogc.cwl.v1_2_1.CWLDirectoryOnlyParametersConditional",
+      "generated": "2026-01-13T22:40:57.062026+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLInputStdIn": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLInputStdIn - CWLInputStdIn",
+      "bblockName": "CWLInputStdIn",
+      "bblockId": "ogc.cwl.v1_2_1.CWLInputStdIn",
+      "generated": "2026-01-13T22:40:57.067393+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.SoftwareRequirement": {
+      "title": "Validation report for ogc.cwl.v1_2_1.SoftwareRequirement - SoftwareRequirement",
+      "bblockName": "SoftwareRequirement",
+      "bblockId": "ogc.cwl.v1_2_1.SoftwareRequirement",
+      "generated": "2026-01-13T22:40:57.075166+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLHintsItemExtras": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLHintsItemExtras - CWLHintsItemExtras",
+      "bblockName": "CWLHintsItemExtras",
+      "bblockId": "ogc.cwl.v1_2_1.CWLHintsItemExtras",
+      "generated": "2026-01-13T22:40:57.080999+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLHintsMapExtras": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLHintsMapExtras - CWLHintsMapExtras",
+      "bblockName": "CWLHintsMapExtras",
+      "bblockId": "ogc.cwl.v1_2_1.CWLHintsMapExtras",
+      "generated": "2026-01-13T22:40:57.086896+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.ResourceRequirement": {
+      "title": "Validation report for ogc.cwl.v1_2_1.ResourceRequirement - ResourceRequirement",
+      "bblockName": "ResourceRequirement",
+      "bblockId": "ogc.cwl.v1_2_1.ResourceRequirement",
+      "generated": "2026-01-13T22:40:57.094782+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLWorkflowStepOut": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLWorkflowStepOut - CWLWorkflowStepOut",
+      "bblockName": "CWLWorkflowStepOut",
+      "bblockId": "ogc.cwl.v1_2_1.CWLWorkflowStepOut",
+      "generated": "2026-01-13T22:40:57.100479+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLWorkflowStepInItem": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLWorkflowStepInItem - CWLWorkflowStepInItem",
+      "bblockName": "CWLWorkflowStepInItem",
+      "bblockId": "ogc.cwl.v1_2_1.CWLWorkflowStepInItem",
+      "generated": "2026-01-13T22:40:57.106293+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLType": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLType - CWLType",
+      "bblockName": "CWLType",
+      "bblockId": "ogc.cwl.v1_2_1.CWLType",
+      "generated": "2026-01-13T22:40:57.115188+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLWorkflowStepIn": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLWorkflowStepIn - CWLWorkflowStepIn",
+      "bblockName": "CWLWorkflowStepIn",
+      "bblockId": "ogc.cwl.v1_2_1.CWLWorkflowStepIn",
+      "generated": "2026-01-13T22:40:57.123272+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLInputItemBase": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLInputItemBase - CWLInputItemBase",
+      "bblockName": "CWLInputItemBase",
+      "bblockId": "ogc.cwl.v1_2_1.CWLInputItemBase",
+      "generated": "2026-01-13T22:40:57.130476+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLInputObject": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLInputObject - CWLInputObject",
+      "bblockName": "CWLInputObject",
+      "bblockId": "ogc.cwl.v1_2_1.CWLInputObject",
+      "generated": "2026-01-13T22:40:57.138296+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLOutputItem": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLOutputItem - CWLOutputItem",
+      "bblockName": "CWLOutputItem",
+      "bblockId": "ogc.cwl.v1_2_1.CWLOutputItem",
+      "generated": "2026-01-13T22:40:57.145793+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLOutputObject": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLOutputObject - CWLOutputObject",
+      "bblockName": "CWLOutputObject",
+      "bblockId": "ogc.cwl.v1_2_1.CWLOutputObject",
+      "generated": "2026-01-13T22:40:57.152486+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLTypeRecordArray": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLTypeRecordArray - CWLTypeRecordArray",
+      "bblockName": "CWLTypeRecordArray",
+      "bblockId": "ogc.cwl.v1_2_1.CWLTypeRecordArray",
+      "generated": "2026-01-13T22:40:57.158080+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLTypeRecordFieldDef": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLTypeRecordFieldDef - CWLTypeRecordFieldDef",
+      "bblockName": "CWLTypeRecordFieldDef",
+      "bblockId": "ogc.cwl.v1_2_1.CWLTypeRecordFieldDef",
+      "generated": "2026-01-13T22:40:57.164963+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLInputItem": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLInputItem - CWLInputItem",
+      "bblockName": "CWLInputItem",
+      "bblockId": "ogc.cwl.v1_2_1.CWLInputItem",
+      "generated": "2026-01-13T22:40:57.171759+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLOutputsDefinition": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLOutputsDefinition - CWLOutputsDefinition",
+      "bblockName": "CWLOutputsDefinition",
+      "bblockId": "ogc.cwl.v1_2_1.CWLOutputsDefinition",
+      "generated": "2026-01-13T22:40:57.181689+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.SchemaDefRequirement": {
+      "title": "Validation report for ogc.cwl.v1_2_1.SchemaDefRequirement - SchemaDefRequirement",
+      "bblockName": "SchemaDefRequirement",
+      "bblockId": "ogc.cwl.v1_2_1.SchemaDefRequirement",
+      "generated": "2026-01-13T22:40:57.189577+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLInputsDefinition": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLInputsDefinition - CWLInputsDefinition",
+      "bblockName": "CWLInputsDefinition",
+      "bblockId": "ogc.cwl.v1_2_1.CWLInputsDefinition",
+      "generated": "2026-01-13T22:40:57.198712+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLRequirementsItem": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLRequirementsItem - CWLRequirementsItem",
+      "bblockName": "CWLRequirementsItem",
+      "bblockId": "ogc.cwl.v1_2_1.CWLRequirementsItem",
+      "generated": "2026-01-13T22:40:57.208655+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLRequirementsMap": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLRequirementsMap - CWLRequirementsMap",
+      "bblockName": "CWLRequirementsMap",
+      "bblockId": "ogc.cwl.v1_2_1.CWLRequirementsMap",
+      "generated": "2026-01-13T22:40:57.219457+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLHintsItem": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLHintsItem - CWLHintsItem",
+      "bblockName": "CWLHintsItem",
+      "bblockId": "ogc.cwl.v1_2_1.CWLHintsItem",
+      "generated": "2026-01-13T22:40:57.225618+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLRequirements": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLRequirements - CWLRequirements",
+      "bblockName": "CWLRequirements",
+      "bblockId": "ogc.cwl.v1_2_1.CWLRequirements",
+      "generated": "2026-01-13T22:40:57.234070+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLHints": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLHints - CWLHints",
+      "bblockName": "CWLHints",
+      "bblockId": "ogc.cwl.v1_2_1.CWLHints",
+      "generated": "2026-01-13T22:40:57.242868+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLAtomicBase": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLAtomicBase - CWLAtomicBase",
+      "bblockName": "CWLAtomicBase",
+      "bblockId": "ogc.cwl.v1_2_1.CWLAtomicBase",
+      "generated": "2026-01-13T22:40:57.252860+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLGraphItemBase": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLGraphItemBase - CWLGraphItemBase",
+      "bblockName": "CWLGraphItemBase",
+      "bblockId": "ogc.cwl.v1_2_1.CWLGraphItemBase",
+      "generated": "2026-01-13T22:40:57.261995+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLAtomic": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLAtomic - CWLAtomic",
+      "bblockName": "CWLAtomic",
+      "bblockId": "ogc.cwl.v1_2_1.CWLAtomic",
+      "generated": "2026-01-13T22:40:57.269157+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLAtomicNested": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLAtomicNested - CWLAtomicNested",
+      "bblockName": "CWLAtomicNested",
+      "bblockId": "ogc.cwl.v1_2_1.CWLAtomicNested",
+      "generated": "2026-01-13T22:40:57.276064+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLGraphItem": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLGraphItem - CWLGraphItem",
+      "bblockName": "CWLGraphItem",
+      "bblockId": "ogc.cwl.v1_2_1.CWLGraphItem",
+      "generated": "2026-01-13T22:40:57.282959+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLWorkflowStepObject": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLWorkflowStepObject - CWLWorkflowStepObject",
+      "bblockName": "CWLWorkflowStepObject",
+      "bblockId": "ogc.cwl.v1_2_1.CWLWorkflowStepObject",
+      "generated": "2026-01-13T22:40:57.295020+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLGraph": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLGraph - CWLGraph",
+      "bblockName": "CWLGraph",
+      "bblockId": "ogc.cwl.v1_2_1.CWLGraph",
+      "generated": "2026-01-13T22:40:57.303519+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLWorkflowStepItem": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLWorkflowStepItem - CWLWorkflowStepItem",
+      "bblockName": "CWLWorkflowStepItem",
+      "bblockId": "ogc.cwl.v1_2_1.CWLWorkflowStepItem",
+      "generated": "2026-01-13T22:40:57.311178+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLWorkflowBase": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLWorkflowBase - CWLWorkflowBase",
+      "bblockName": "CWLWorkflowBase",
+      "bblockId": "ogc.cwl.v1_2_1.CWLWorkflowBase",
+      "generated": "2026-01-13T22:40:57.322307+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLWorkflow": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLWorkflow - CWLWorkflow",
+      "bblockName": "CWLWorkflow",
+      "bblockId": "ogc.cwl.v1_2_1.CWLWorkflow",
+      "generated": "2026-01-13T22:40:57.331770+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWL": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWL - CWL",
+      "bblockName": "CWL",
+      "bblockId": "ogc.cwl.v1_2_1.CWL",
+      "generated": "2026-01-13T22:40:57.342497+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    }
+  }
+}

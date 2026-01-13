@@ -7,7 +7,7 @@
   "abstract": "Set an upper limit on the execution time of a CommandLineTool.\n\nA CommandLineTool whose execution duration exceeds the time limit may be preemptively\nterminated and considered failed. May also be used by batch systems to make scheduling decisions.\n\nThe execution duration excludes external operations, such as staging of files,\npulling a docker image etc., and only counts wall-time for the execution of the command line itself.\n",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.687380",
-  "dateOfLastChange": "2025-09-30",
+  "dateOfLastChange": "2026-01-13",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",

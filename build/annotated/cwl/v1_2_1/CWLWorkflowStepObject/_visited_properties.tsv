@@ -1,17 +1,6 @@
 path	@id
 /in	
-/in/linkMerge	https://w3id.org/cwl/cwl#linkMerge
-/in/source	
-/in/valueFrom	https://w3id.org/cwl/cwl#valueFrom
-/in/default	
-/in/default/basename	https://w3id.org/cwl/cwl#basename
-/in/default/class	
-/in/default/location	
-/in/default/nameroot	https://w3id.org/cwl/cwl#File/nameroot
-/in/default/path	
-/in/id	
 /out	
-/out/id	
 /run	
 /run/s:keywords	
 /run/version	https://w3id.org/cwl/cwl#SoftwarePackage/version
@@ -324,6 +313,16 @@ path	@id
 /run/stdout	https://w3id.org/cwl/cwl#stdout
 /run/steps	
 /run/steps/in	
+/run/steps/in/linkMerge	https://w3id.org/cwl/cwl#linkMerge
+/run/steps/in/source	
+/run/steps/in/valueFrom	https://w3id.org/cwl/cwl#valueFrom
+/run/steps/in/default	
+/run/steps/in/default/basename	https://w3id.org/cwl/cwl#basename
+/run/steps/in/default/class	
+/run/steps/in/default/location	
+/run/steps/in/default/nameroot	https://w3id.org/cwl/cwl#File/nameroot
+/run/steps/in/default/path	
+/run/steps/in/id	
 /run/steps/out	
 /run/steps/out/id	
 /run/steps/run	

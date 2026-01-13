@@ -7,7 +7,7 @@
   "abstract": "One or more input identifier of an application step within a Workflow\nwere an array-based input to that Workflow should be scattered across multiple\ninstances of the step application.\n",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.677961",
-  "dateOfLastChange": "2025-09-30",
+  "dateOfLastChange": "2026-01-13",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",

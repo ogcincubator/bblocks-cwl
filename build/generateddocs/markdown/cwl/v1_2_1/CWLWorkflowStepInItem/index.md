@@ -30,8 +30,6 @@ Links to the schema:
   "@context": {
     "linkMerge": "cwl:linkMerge",
     "valueFrom": "cwl:valueFrom",
-    "basename": "cwl:basename",
-    "nameroot": "cwl:File/nameroot",
     "cwl": "https://w3id.org/cwl/cwl#",
     "@version": 1.1
   }

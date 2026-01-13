@@ -88,8 +88,3 @@ path	@id
 /WorkReuse/class	
 /WorkReuse/enableReuse	https://w3id.org/cwl/cwl#WorkReuse/enableReuse
 /cwltool:CUDARequirement	
-/cwltool:CUDARequirement/class	
-/cwltool:CUDARequirement/cudaComputeCapability	
-/cwltool:CUDARequirement/cudaDeviceCountMax	
-/cwltool:CUDARequirement/cudaDeviceCountMin	
-/cwltool:CUDARequirement/cudaVersionMin	
