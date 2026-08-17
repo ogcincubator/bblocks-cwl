@@ -55,7 +55,7 @@ allOf:
         '
       oneOf:
         - $ref: bblocks://ogc.cwl.v1_2_1.CWLTextPatternID
-        - $ref: bblocks://ogc.cwl.v1_2_1.IdentifierArray
+        - $ref: bblocks://ogc.cwl.v1_2_1.type-system.IdentifierArray
       title: Scatter
 
     scatterMethod:

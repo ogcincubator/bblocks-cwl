@@ -15,7 +15,7 @@ allOf:
     enum:
     - stderr
     type: string
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLTypeRecordRefPattern
+- $ref: bblocks://ogc.cwl.v1_2_1.type-system.CWLTypeRecordRefPattern
 description: 'An IRI with minimally a ''{Record}'' identifier to look for a schema
   definition locally or remotely.
 

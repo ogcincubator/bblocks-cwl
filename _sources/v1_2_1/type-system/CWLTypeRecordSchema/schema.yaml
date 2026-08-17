@@ -3,13 +3,13 @@ $defs:
     additionalProperties:
       oneOf:
         - $ref: bblocks://ogc.cwl.v1_2_1.CWLType
-        - $ref: bblocks://ogc.cwl.v1_2_1.CWLTypeRecordFieldDef
+        - $ref: bblocks://ogc.cwl.v1_2_1.type-system.CWLTypeRecordFieldDef
     type: object
 
   CWLTypeRecordFieldsList:
     items:
       allOf:
-        - $ref: bblocks://ogc.cwl.v1_2_1.CWLTypeRecordFieldDef
+        - $ref: bblocks://ogc.cwl.v1_2_1.type-system.CWLTypeRecordFieldDef
         - required:
             - name
     type: array
