@@ -1,7 +1,7 @@
 {
   "name": "CWL",
   "itemClass": "schema",
-  "abstract": "CWL",
+  "abstract": "The root of the register: a Common Workflow Language v1.2.1 Application Package document.\n\nA CWL document is one of three top-level forms: a single CommandLineTool/ExpressionTool/Workflow\ndefinition (`CWLAtomic`), the same wrapped as a nested `run` definition inside a Workflow step\n(`CWLAtomicNested`), or a `$graph`-wrapped document (`CWLGraph`).",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.672484",
   "dateOfLastChange": "2025-09-29",

@@ -1,7 +1,7 @@
 {
   "name": "CWLWorkflowStepObject",
   "itemClass": "schema",
-  "abstract": "CWLWorkflowStepObject",
+  "abstract": "The executable shape of a single Workflow step: how its\nunderlying process is invoked (`run`), how workflow parameters are wired to and from it (`in`,\n`out`), an optional guard condition (`when`), and scatter/gather behavior (`scatter`,\n`scatterMethod`) for fanning the step out over array inputs. Used directly as the value type when\n`steps` is given as a map keyed by step id; see `CWLWorkflowStepItem` for the list form, where the\nid is an explicit field instead.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.691949",
   "dateOfLastChange": "2025-09-29",

@@ -1,7 +1,7 @@
 {
   "name": "CWLTypeSymbols",
   "itemClass": "schema",
-  "abstract": "CWLTypeSymbols",
+  "abstract": "The `symbols` list of an `enum` type: the set of allowed\nvalues composing the enum.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.705236",
   "dateOfLastChange": "2025-09-29",

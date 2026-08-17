@@ -1,7 +1,7 @@
 {
   "name": "InitialWorkDirRequirement",
   "itemClass": "schema",
-  "abstract": "InitialWorkDirRequirement",
+  "abstract": "Defines a list of files and subdirectories that must be\nstaged by the workflow platform prior to executing the command line tool, normally within the\ndesignated output directory (though containers may stage them elsewhere).",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.685221",
   "dateOfLastChange": "2025-09-29",

@@ -1,7 +1,7 @@
 {
   "name": "CWLDefaultLocation",
   "itemClass": "schema",
-  "abstract": "CWLDefaultLocation",
+  "abstract": "The shape of a `default` value for a File- or Directory-typed\ninput: a literal File or Directory object, identified by a `path` or `location` and optionally\n`basename`/`nameroot`, used when no value is provided for the input at execution time.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.706716",
   "dateOfLastChange": "2025-09-29",

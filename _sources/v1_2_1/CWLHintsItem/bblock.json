@@ -1,7 +1,7 @@
 {
   "name": "CWLHintsItem",
   "itemClass": "schema",
-  "abstract": "CWLHintsItem",
+  "abstract": "A single entry of a process's `hints` list: any one of the\nrequirement/hint classes this register models (the standard CWL requirements, plus the\nOGC-AP/WPS1/builtin hint classes), or `UnknownRequirement` as a fallback for any other\n`class`-discriminated hint not otherwise recognized. Unlike `requirements`, an unsatisfied hint\nmust not cause a workflow engine to reject the process. Kept as its own reusable, `$ref`-able union\nso downstream profiles can narrow the set of accepted hint classes without depending on\n`extensionPoints`.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.689639",
   "dateOfLastChange": "2025-09-29",

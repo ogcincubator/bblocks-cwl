@@ -1,7 +1,7 @@
 {
   "name": "CWLInputObject",
   "itemClass": "schema",
-  "abstract": "CWLInputObject",
+  "abstract": "The type/parameter definition of a single CWL input when expressed\nas a nested object (as opposed to a bare type shorthand): `type`, an optional `inputBinding`, plus\nthe shared default-type-consistency and documentation fields.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.690237",
   "dateOfLastChange": "2025-09-29",

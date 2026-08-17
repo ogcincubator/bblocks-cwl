@@ -1,7 +1,7 @@
 {
   "name": "CWLTypeRecordArray",
   "itemClass": "schema",
-  "abstract": "CWLTypeRecordArray",
+  "abstract": "A CWL type definition for an array whose elements\nare all of the same, further-specified CWL type: `type: array` plus an `items` type.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.693637",
   "dateOfLastChange": "2025-09-29",

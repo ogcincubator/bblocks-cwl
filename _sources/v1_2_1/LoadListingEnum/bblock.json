@@ -1,7 +1,7 @@
 {
   "name": "LoadListingEnum",
   "itemClass": "schema",
-  "abstract": "LoadListingEnum",
+  "abstract": "The allowed values for `loadListing`, controlling how deeply a\nDirectory's contents are enumerated for use in expressions: `no_listing` (don't load it),\n`shallow_listing` (top level only), or `deep_listing` (recurse into subdirectories).",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.694340",
   "dateOfLastChange": "2025-09-29",

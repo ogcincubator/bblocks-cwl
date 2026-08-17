@@ -1,7 +1,7 @@
 {
   "name": "CWLOutputObject",
   "itemClass": "schema",
-  "abstract": "CWLOutputObject",
+  "abstract": "The type/parameter definition of a single CWL output when\nexpressed as a nested object (as opposed to a bare type shorthand): `type`, an optional\n`outputBinding`, plus the shared documentation fields.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.690989",
   "dateOfLastChange": "2025-09-29",

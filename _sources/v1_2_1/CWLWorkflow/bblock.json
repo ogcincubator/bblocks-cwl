@@ -1,7 +1,7 @@
 {
   "name": "CWLWorkflow",
   "itemClass": "schema",
-  "abstract": "CWLWorkflow",
+  "abstract": "A complete, top-level CWL Workflow document (`class: Workflow`).\nCombines the `Workflow`-specific structure (steps, inputs, outputs, requirements, hints) with the\ndocument-level fields that only apply at the root of a CWL file: `cwlVersion`, metadata, and\ndocumentation.",
   "isProfileOf": "bblocks://ogc.cwl.v1_2_1.CWLWorkflowBase",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.673295",

@@ -1,7 +1,7 @@
 {
   "name": "CWLTypeSymbolValues",
   "itemClass": "schema",
-  "abstract": "CWLTypeSymbolValues",
+  "abstract": "A single allowed value of an `enum` type's\n`symbols` list: a string or number literal.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.706542",
   "dateOfLastChange": "2025-09-29",

@@ -1,7 +1,7 @@
 {
   "name": "EnvVarRequirement",
   "itemClass": "schema",
-  "abstract": "EnvVarRequirement",
+  "abstract": "Defines a list of environment variables to set in the tool's\nexecution environment.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.684530",
   "dateOfLastChange": "2025-09-29",

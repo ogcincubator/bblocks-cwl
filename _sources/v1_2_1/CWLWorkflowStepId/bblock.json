@@ -1,7 +1,7 @@
 {
   "name": "CWLWorkflowStepId",
   "itemClass": "schema",
-  "abstract": "CWLWorkflowStepId",
+  "abstract": "The `id` field required on a Workflow step when `steps` is given\nas a list rather than a map: identifies the step within the workflow.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.704756",
   "dateOfLastChange": "2025-09-29",

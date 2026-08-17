@@ -1,7 +1,7 @@
 {
   "name": "CUDAComputeCapabilityArray",
   "itemClass": "schema",
-  "abstract": "CUDAComputeCapabilityArray",
+  "abstract": "An array form of CUDA compute capability values: only\nGPUs whose compute capability explicitly appears in the array are selected, as opposed to a single\nvalue which sets only a minimum.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.704903",
   "dateOfLastChange": "2025-09-29",

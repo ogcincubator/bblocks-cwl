@@ -1,7 +1,7 @@
 {
   "name": "CWLTypeRecordSchema",
   "itemClass": "schema",
-  "abstract": "CWLTypeRecordSchema",
+  "abstract": "An inline CWL `record` type definition: `type:\nrecord`, an optional `name`, and its `fields`, given either as a map keyed by field name or as a\nlist of field definitions (each of which must then carry its own `name`).",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.693426",
   "dateOfLastChange": "2025-09-29",

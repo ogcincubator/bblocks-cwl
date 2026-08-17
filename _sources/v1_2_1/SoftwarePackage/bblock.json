@@ -1,7 +1,7 @@
 {
   "name": "SoftwarePackage",
   "itemClass": "schema",
-  "abstract": "SoftwarePackage",
+  "abstract": "A single software package entry within a `SoftwareRequirement`:\nthe package name, optionally the compatible version(s), and optionally one or more IRIs identifying\nresources for installing or enabling it (e.g. a Debian or Conda package page), which implementations\nmay resolve to a concrete install action.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.692582",
   "dateOfLastChange": "2025-09-29",

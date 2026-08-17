@@ -1,7 +1,7 @@
 {
   "name": "SchemaDefRequirement",
   "itemClass": "schema",
-  "abstract": "SchemaDefRequirement",
+  "abstract": "An array of named `enum`/`record` type definitions available\nfor reuse via IRI reference from `inputs`/`outputs` type fields. Definitions are processed in the\norder listed, so later definitions may refer to earlier ones.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.684906",
   "dateOfLastChange": "2025-09-29",

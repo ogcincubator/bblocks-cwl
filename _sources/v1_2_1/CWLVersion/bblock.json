@@ -1,7 +1,7 @@
 {
   "name": "CWLVersion",
   "itemClass": "schema",
-  "abstract": "CWLVersion",
+  "abstract": "The `cwlVersion` field: declares which published version of the CWL\nstandard a document conforms to. Required once at the root of every CWL document.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.673508",
   "dateOfLastChange": "2025-09-29",

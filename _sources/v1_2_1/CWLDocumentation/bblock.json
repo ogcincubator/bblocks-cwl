@@ -1,7 +1,7 @@
 {
   "name": "CWLDocumentation",
   "itemClass": "schema",
-  "abstract": "CWLDocumentation",
+  "abstract": "Shared human-readable documentation fields: a short `label` and a\nlonger free-text or multi-line `doc` description.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.673945",
   "dateOfLastChange": "2025-09-29",

@@ -1,7 +1,7 @@
 {
   "name": "CWLTypeEnum",
   "itemClass": "schema",
-  "abstract": "CWLTypeEnum",
+  "abstract": "An inline CWL `enum` type definition: `type: enum` plus its\nallowed `symbols`.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.693164",
   "dateOfLastChange": "2025-09-29",

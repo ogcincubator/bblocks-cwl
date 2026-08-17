@@ -1,7 +1,7 @@
 {
   "name": "ShellCommandRequirement",
   "itemClass": "schema",
-  "abstract": "ShellCommandRequirement",
+  "abstract": "Modifies CommandLineTool execution to generate a single\nshell command-line string: each item in `arguments` is joined with spaces and shell-quoted, unless\nits `CommandLineBinding` sets `shellQuote: false` — in which case it is joined unquoted, allowing\nshell metacharacters such as `|` for pipes.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.684354",
   "dateOfLastChange": "2025-09-29",

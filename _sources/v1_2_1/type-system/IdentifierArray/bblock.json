@@ -1,7 +1,7 @@
 {
   "name": "IdentifierArray",
   "itemClass": "schema",
-  "abstract": "IdentifierArray",
+  "abstract": "An array of one or more CWL identifiers, used e.g. when\n`scatter` lists more than one input parameter to fan a Workflow step out over.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.711343",
   "dateOfLastChange": "2025-09-29",

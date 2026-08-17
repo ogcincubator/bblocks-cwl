@@ -1,7 +1,7 @@
 {
   "name": "CWLGraphItem",
   "itemClass": "schema",
-  "abstract": "CWLGraphItem",
+  "abstract": "A single process or workflow definition entry inside a `$graph`-form\nCWL document (see `CWLGraph`): the `class`-discriminated CommandLineTool/ExpressionTool/Workflow\nshape (inputs, outputs, requirements, hints, id, ...), combined with the shared metadata and\ndocumentation fields.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.682457",
   "dateOfLastChange": "2025-09-29",

@@ -1,7 +1,7 @@
 {
   "name": "CWLTypeRecordRefPattern",
   "itemClass": "schema",
-  "abstract": "CWLTypeRecordRefPattern",
+  "abstract": "The URL/fragment syntax for referencing a named\nrecord type by IRI: an optional URL/local path prefix followed by a `#RecordName` fragment\nidentifier, resolved per [CWL's identifier resolution rules](https://www.commonwl.org/v1.2/SchemaSalad.html#Identifier_resolution).",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.710298",
   "dateOfLastChange": "2025-09-29",

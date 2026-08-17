@@ -1,7 +1,7 @@
 {
   "name": "CWLGraph",
   "itemClass": "schema",
-  "abstract": "CWLGraph",
+  "abstract": "A CWL document using the `$graph` form: instead of a single process or\nworkflow definition at the document root, the root carries a `$graph` array (in this register,\nconstrained to exactly one entry) of process/workflow definitions, plus the shared `cwlVersion` and\ndocument-level metadata/documentation fields.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.673077",
   "dateOfLastChange": "2025-09-29",
