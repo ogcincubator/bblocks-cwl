@@ -1,0 +1,15 @@
+examples:
+  - title: Docker and shell command requirements
+    content: |
+      Map-form `requirements`/`hints` declaring both a Docker image to run the tool in
+      and that the tool relies on shell features (redirection, pipes) in its command
+      line.
+    snippets:
+      - language: json
+        code: |
+          {
+            "DockerRequirement": {
+              "dockerPull": "docker.io/debian:stable-slim"
+            },
+            "ShellCommandRequirement": {}
+          }

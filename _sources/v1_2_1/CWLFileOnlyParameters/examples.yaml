@@ -1,0 +1,37 @@
+examples:
+  - title: Indexed FASTA input with required and optional secondary files
+    content: |
+      A `File`-typed input declaring its content format and a list of secondary files with
+      explicit `pattern`/`required` schemas, adapted from the CWL v1.2 conformance test
+      `docker-array-secondaryfiles.cwl`.
+    snippets:
+      - language: json
+        code: |
+          {
+            "format": "http://edamontology.org/format_1929",
+            "streamable": false,
+            "secondaryFiles": [
+              {
+                "pattern": ".fai",
+                "required": true
+              },
+              {
+                "pattern": ".crai",
+                "required": false
+              }
+            ]
+          }
+
+  - title: Streamed file loaded for use in an expression
+    content: |
+      A `File`-typed input whose contents are read (subject to the 64 KiB `loadContents` limit)
+      and made available to CWL expressions, with a single secondary file declared using the
+      shorthand string form (`^` strips one extension, trailing `?` marks it optional).
+    snippets:
+      - language: json
+        code: |
+          {
+            "loadContents": true,
+            "streamable": true,
+            "secondaryFiles": "^.bai?"
+          }

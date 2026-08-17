@@ -1,0 +1,24 @@
+examples:
+  - title: DockerRequirement item
+    content: |
+      A single `requirements` list entry declaring that the tool must run inside a
+      specific Docker image.
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "DockerRequirement",
+            "dockerPull": "docker.io/debian:stable-slim"
+          }
+  - title: ResourceRequirement item
+    content: |
+      A single `requirements` list entry declaring the minimum and maximum number of
+      CPU cores the tool needs.
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "ResourceRequirement",
+            "coresMin": 1.25,
+            "coresMax": 1.75
+          }

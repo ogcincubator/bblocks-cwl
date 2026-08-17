@@ -1,0 +1,10 @@
+examples:
+  - title: Explicit list of accepted compute capabilities
+    content: |
+      An allow-list of exact CUDA compute capabilities — only GPUs whose compute capability
+      appears in this array are selected, unlike a single string value, which sets only a
+      minimum bound.
+    snippets:
+      - language: json
+        code: |
+          ["6.0", "7.0", "7.5", "8.0"]

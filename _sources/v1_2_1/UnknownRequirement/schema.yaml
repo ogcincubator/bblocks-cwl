@@ -25,6 +25,9 @@ properties:
       - MultipleInputFeatureRequirement
       - StepInputExpressionRequirement
       - SubworkflowFeatureRequirement
+      - BuiltinRequirement
+      - OGCAPIRequirement
+      - WPS1Requirement
     title: Requirement Class Identifier
     type: string
 type: object

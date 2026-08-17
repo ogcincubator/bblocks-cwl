@@ -1,0 +1,44 @@
+examples:
+  - title: Inline enum and record type definitions
+    content: |
+      Declares a reusable `Species` enum and a `SequencingRun` record whose `organism` field refers
+      back to it by name; `SequencingRun` can then be used as a `type` elsewhere in the document's
+      `inputs`/`outputs`.
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "SchemaDefRequirement",
+            "types": [
+              {
+                "type": "enum",
+                "name": "Species",
+                "symbols": ["human", "mouse", "zebrafish"]
+              },
+              {
+                "type": "record",
+                "name": "SequencingRun",
+                "fields": {
+                  "organism": "Species",
+                  "reads": {
+                    "type": "File"
+                  }
+                }
+              }
+            ]
+          }
+  - title: Type definitions shared via $import
+    content: |
+      Instead of writing type definitions inline, an entry can be an `$import` directive pointing to
+      a file holding a shared set of `enum`/`record` definitions reused across multiple CWL documents.
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "SchemaDefRequirement",
+            "types": [
+              {
+                "$import": "types/readgroup.yml"
+              }
+            ]
+          }

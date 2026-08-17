@@ -1,0 +1,40 @@
+examples:
+  - title: Two-step counting workflow
+    content: |
+      A minimal workflow that runs a nested sub-workflow to count lines in the input
+      file, then exposes that count as a workflow output, adapted from the CWL v1.2
+      conformance test suite.
+    snippets:
+      - language: json
+        code: |
+          {
+            "cwlVersion": "v1.2",
+            "class": "Workflow",
+            "label": "Count lines via a nested sub-workflow",
+            "doc": "Runs a nested sub-workflow that counts lines in the input file.",
+            "requirements": [
+              {
+                "class": "SubworkflowFeatureRequirement"
+              }
+            ],
+            "inputs": {
+              "file1": "File"
+            },
+            "outputs": {
+              "count_output": {
+                "type": "int",
+                "outputSource": "step1/count_output"
+              }
+            },
+            "steps": {
+              "step1": {
+                "run": "count-lines1-wf.cwl",
+                "in": {
+                  "file1": "file1"
+                },
+                "out": [
+                  "count_output"
+                ]
+              }
+            }
+          }

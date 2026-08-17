@@ -1,0 +1,27 @@
+examples:
+  - title: Label and single-string doc
+    content: |
+      A short `label` alongside a single-string `doc`, adapted from the CWL conformance test
+      `cat3-nodocker.cwl`.
+    snippets:
+      - language: json
+        code: |
+          {
+            "label": "cat3-nodocker.cwl",
+            "doc": "Print the contents of a file to stdout using 'cat'."
+          }
+
+  - title: Doc as an array of strings
+    content: |
+      `doc` may instead be given as an array of strings, rendered as separate paragraphs — useful
+      when documentation is authored in multiple parts.
+    snippets:
+      - language: json
+        code: |
+          {
+            "label": "align-and-sort",
+            "doc": [
+              "Aligns reads against a reference genome using bwa-mem.",
+              "Sorts the resulting alignment with samtools sort before returning it."
+            ]
+          }

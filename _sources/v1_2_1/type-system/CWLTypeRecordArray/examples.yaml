@@ -1,0 +1,23 @@
+examples:
+  - title: Array of File inputs
+    content: |
+      A CWL `CommandLineTool` input declared as an array of `File` items, adapted from the
+      `reads` input of [bwa-mem-tool.cwl](https://github.com/common-workflow-language/common-workflow-language/blob/main/v1.2/v1.2/bwa-mem-tool.cwl).
+    snippets:
+      - language: json
+        code: |
+          {
+            "type": "array",
+            "items": "File"
+          }
+  - title: Array of integer values
+    content: |
+      A CWL input declared as an array of `int` items, adapted from the `min_std_max_min`
+      input of [bwa-mem-tool.cwl](https://github.com/common-workflow-language/common-workflow-language/blob/main/v1.2/v1.2/bwa-mem-tool.cwl).
+    snippets:
+      - language: json
+        code: |
+          {
+            "type": "array",
+            "items": "int"
+          }

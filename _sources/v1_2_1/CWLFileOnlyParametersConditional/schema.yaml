@@ -5,12 +5,11 @@ $comment: 'Explicitly disallow these parameters when non-File type is detected.
   '
 description: Parameters that are only valid when 'type' or 'items' evaluates to 'File'.
 else:
-  not:
-    properties:
-      format: {}
-      loadContents: {}
-      secondaryFiles: {}
-      streamable: {}
+  properties:
+    format: false
+    loadContents: false
+    secondaryFiles: false
+    streamable: false
 if:
   oneOf:
   - $comment: Single required or optional 'File'.

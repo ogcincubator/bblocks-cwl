@@ -1,0 +1,11 @@
+examples:
+  - title: Enabling subworkflows on a Workflow
+    content: |
+      A `Workflow` declares `SubworkflowFeatureRequirement` so that one of its steps may use
+      another `Workflow` document as its `run` process, i.e. a nested subworkflow.
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "SubworkflowFeatureRequirement"
+          }

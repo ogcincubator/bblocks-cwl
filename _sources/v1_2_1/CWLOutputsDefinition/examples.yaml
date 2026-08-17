@@ -1,0 +1,32 @@
+examples:
+  - title: Outputs as a list
+    content: |
+      Outputs written in list form, where each entry is a
+      [CWLOutputItem](bblocks://ogc.cwl.v1_2_1.CWLOutputItem) with its own `id`.
+    snippets:
+      - language: json
+        code: |
+          [
+            {
+              "id": "output_file",
+              "type": "File",
+              "outputBinding": {
+                "glob": "output.txt"
+              }
+            }
+          ]
+  - title: Outputs as a map
+    content: |
+      The same outputs written in the more compact map form, keyed by output identifier. Values may
+      be a bare type shorthand, as with `classification` below, or a full
+      [CWLOutputObject](bblocks://ogc.cwl.v1_2_1.CWLOutputObject), as with `count_output`.
+    snippets:
+      - language: json
+        code: |
+          {
+            "count_output": {
+              "type": "int",
+              "outputSource": "step2/output"
+            },
+            "classification": "string"
+          }

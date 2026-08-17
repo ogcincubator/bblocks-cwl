@@ -1,0 +1,16 @@
+examples:
+  - title: Local fragment identifier
+    content: |
+      A short local identifier, as used for an `id` field within a single (non-packed) CWL document.
+    snippets:
+      - language: json
+        code: |
+          "main"
+  - title: Fragment reference into a sub-part
+    content: |
+      An identifier referencing a sub-part definition through a `#` fragment prefix, such as an entry
+      defined under `SchemaDefRequirement`.
+    snippets:
+      - language: json
+        code: |
+          "sub/part#ref"

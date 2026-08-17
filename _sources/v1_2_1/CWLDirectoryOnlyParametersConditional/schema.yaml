@@ -5,9 +5,8 @@ $comment: 'Explicitly disallow these parameters when non-Directory type is detec
   '
 description: Parameters that are only valid when 'type' or 'items' evaluates to 'Directory'.
 else:
-  not:
-    properties:
-      loadListing: {}
+  properties:
+    loadListing: false
 if:
   oneOf:
   - $comment: Single required or optional 'Directory'.
@@ -22,9 +21,11 @@ if:
     items:
       oneOf:
       - type: object
-        enum:
-          - Directory
-          - Directory?
+        properties:
+          type:
+            enum:
+              - Directory
+              - Directory?
       - contains:
           properties:
             type:

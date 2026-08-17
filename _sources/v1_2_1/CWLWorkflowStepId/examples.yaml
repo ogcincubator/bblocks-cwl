@@ -1,0 +1,10 @@
+examples:
+  - title: Step identifier
+    content: |
+      The `id` field of a workflow step given in the list form of `steps`.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "step1"
+          }

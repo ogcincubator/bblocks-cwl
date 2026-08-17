@@ -1,0 +1,39 @@
+examples:
+  - title: Map form, with plain and object-valued sources
+    content: |
+      A step's `in` written as a map: `file1` is wired with a bare `source` string, while `file2`
+      and `file3` are wired with full input objects that also request how multiple inbound links
+      are merged. Adapted from CWL's `count-lines12-wf.cwl` and `conflict-wf.cwl` test fixtures.
+    snippets:
+      - language: json
+        code: |
+          {
+            "file1": "input_file",
+            "file2": {
+              "source": ["step_a/out", "step_b/out"],
+              "linkMerge": "merge_flattened"
+            },
+            "file3": {
+              "source": "step_c/out",
+              "valueFrom": "$(self.basename)"
+            }
+          }
+  - title: List form, one entry per step input
+    content: |
+      The same kind of wiring expressed as a list, where each entry supplies its own `id` alongside
+      `source`/`linkMerge`/`default`.
+    snippets:
+      - language: json
+        code: |
+          [
+            {
+              "id": "file1",
+              "source": "input_file"
+            },
+            {
+              "id": "file2",
+              "source": ["step_a/out", "step_b/out"],
+              "linkMerge": "merge_flattened",
+              "default": "fallback.txt"
+            }
+          ]

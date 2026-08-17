@@ -1,0 +1,31 @@
+examples:
+  - title: Fixed numeric resource limits
+    content: |
+      A `ResourceRequirement` reserving between 2 and 4 CPU cores, at least 512 MiB of RAM, and up
+      to 1 GiB of temporary directory storage, adapted from the CWL conformance tests
+      `bwa-mem-tool.cwl` and `storage_float.cwl`.
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "ResourceRequirement",
+            "coresMin": 2,
+            "coresMax": 4,
+            "ramMin": 512,
+            "tmpdirMax": 1024
+          }
+
+  - title: Resource limits computed from an expression
+    content: |
+      Adapted from the CWL conformance test `dynresreq.cwl`. `coresMin` and `coresMax` are
+      computed at runtime with a parameter reference expression instead of a fixed number, here
+      sizing the reservation to the size of an input file (requires
+      `InlineJavascriptRequirement` to be in effect for expression evaluation).
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "ResourceRequirement",
+            "coresMin": "$(inputs.special_file.size)",
+            "coresMax": "$(inputs.special_file.size)"
+          }

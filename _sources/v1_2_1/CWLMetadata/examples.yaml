@@ -1,0 +1,25 @@
+examples:
+  - title: Keywords and version on a workflow
+    content: |
+      Document-level metadata attached to a `Workflow`, giving reviewers a way to search and
+      categorize it and to track the workflow author's own release of it, independent of which
+      version of the CWL standard it is written against.
+    snippets:
+      - language: json
+        code: |
+          {
+            "s:keywords": ["geospatial", "reprojection", "raster"],
+            "version": "1.2.0"
+          }
+
+  - title: Version only
+    content: |
+      Both fields are optional and independent — a process may declare only its own release
+      version without keywords. The `version` pattern also accepts a dotted pre-release/build
+      suffix, as in `1.4.2.rc1`.
+    snippets:
+      - language: json
+        code: |
+          {
+            "version": "1.4.2.rc1"
+          }

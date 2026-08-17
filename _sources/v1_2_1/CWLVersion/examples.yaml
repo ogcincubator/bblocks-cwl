@@ -1,0 +1,21 @@
+examples:
+  - title: CWL v1.2 document
+    content: |
+      The `cwlVersion` field as it appears at the root of a CWL v1.2 document, adapted from the CWL
+      conformance test `count-lines7-wf.cwl`.
+    snippets:
+      - language: json
+        code: |
+          {
+            "cwlVersion": "v1.2"
+          }
+
+  - title: CWL v1.0 document
+    content: |
+      A document declaring conformance to an earlier published CWL standard version.
+    snippets:
+      - language: json
+        code: |
+          {
+            "cwlVersion": "v1.0"
+          }

@@ -1,0 +1,28 @@
+examples:
+  - title: Pulling a published image
+    content: |
+      A `DockerRequirement` that fetches its image with `docker pull`, adapted from the CWL
+      conformance test `bwa-mem-tool.cwl`. This is the most common form: `dockerPull` is the only
+      one of the four mutually exclusive image-source fields (`dockerPull`, `dockerImport`,
+      `dockerLoad`, `dockerFile`) present.
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "DockerRequirement",
+            "dockerPull": "docker.io/python:3-slim"
+          }
+
+  - title: Pulling an image with a custom output directory
+    content: |
+      Adapted from the CWL conformance test `docker-output-dir.cwl`. `dockerOutputDirectory`
+      relocates the designated output directory to a specific path inside the container, which the
+      tool's command line can then target directly (here, `touch /other/thing`).
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "DockerRequirement",
+            "dockerPull": "docker.io/debian:stable-slim",
+            "dockerOutputDirectory": "/other"
+          }

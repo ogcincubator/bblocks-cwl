@@ -1,0 +1,11 @@
+examples:
+  - title: Workflow class discriminator
+    content: |
+      The `class` field that identifies a document, or a nested step definition, as a CWL
+      [Workflow](bblocks://ogc.cwl.v1_2_1.CWLWorkflow).
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "Workflow"
+          }

@@ -1,0 +1,25 @@
+examples:
+  - title: Step in list form
+    content: |
+      The same kind of scattered step as in [CWLWorkflowStepObject](bblocks://ogc.cwl.v1_2_1.CWLWorkflowStepObject),
+      but written as an entry of a `steps` list, so the step's `id` is carried as an explicit field
+      rather than being the map key.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "step1",
+            "in": {
+              "echo_in1": "inp1",
+              "echo_in2": "inp2"
+            },
+            "out": [
+              "echo_out"
+            ],
+            "scatter": [
+              "echo_in1",
+              "echo_in2"
+            ],
+            "scatterMethod": "dotproduct",
+            "run": "#echo"
+          }

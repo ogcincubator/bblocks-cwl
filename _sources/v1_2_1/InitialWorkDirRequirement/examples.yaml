@@ -1,0 +1,39 @@
+examples:
+  - title: Stage a generated configuration file
+    content: |
+      A single `Dirent` entry that creates `example.conf` in the designated output directory before
+      the tool runs, with contents built from an input parameter via a
+      [CWLExpression](bblocks://ogc.cwl.v1_2_1.CWLExpression).
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "InitialWorkDirRequirement",
+            "listing": [
+              {
+                "entryname": "example.conf",
+                "entry": "CONFIGVAR=$(inputs.message)\n"
+              }
+            ]
+          }
+  - title: Stage an input file under a new name, writable
+    content: |
+      A `Dirent` that stages an input `File` under a new `entryname`, marked `writable` so the tool
+      may modify it in place, alongside a plain `File` object staged as-is.
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "InitialWorkDirRequirement",
+            "listing": [
+              {
+                "entry": "$(inputs.infile)",
+                "entryname": "bob.txt",
+                "writable": true
+              },
+              {
+                "class": "File",
+                "location": "https://example.org/data/reference.txt"
+              }
+            ]
+          }

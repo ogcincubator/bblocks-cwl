@@ -1,0 +1,27 @@
+examples:
+  - title: Fixed positional argument
+    content: |
+      Binds an input parameter as a positional command-line argument, using `position` to control
+      where it lands among the assembled arguments. This is the most common form, adapted from a CWL
+      conformance test that copies a file with `cat`.
+    snippets:
+      - language: json
+        code: |
+          {
+            "position": 1
+          }
+
+  - title: Prefixed, array-valued argument with a computed position
+    content: |
+      Binds an array-valued input as a single argument by joining its items with `itemSeparator`, adds
+      a `prefix` before it, and computes the argument's `position` with a
+      [CWLExpression](bblocks://ogc.cwl.v1_2_1.CWLExpression) instead of a literal integer.
+    snippets:
+      - language: json
+        code: |
+          {
+            "position": "$(inputs.priority)",
+            "prefix": "-I",
+            "itemSeparator": ",",
+            "valueFrom": "$(self)"
+          }

@@ -1,0 +1,55 @@
+examples:
+  - title: Packed CommandLineTool in $graph form
+    content: |
+      A single `CommandLineTool` packaged using the `$graph` form instead of being declared directly
+      at the document root. The process object still requires an `id`, since it lives inside `$graph`.
+    snippets:
+      - language: json
+        code: |
+          {
+            "cwlVersion": "v1.2",
+            "$graph": [
+              {
+                "class": "CommandLineTool",
+                "id": "main",
+                "inputs": {
+                  "in": {
+                    "type": "Any",
+                    "inputBinding": {}
+                  }
+                },
+                "outputs": {
+                  "out": {
+                    "type": "string",
+                    "outputBinding": {
+                      "glob": "out.txt",
+                      "loadContents": true,
+                      "outputEval": "$(self[0].contents)"
+                    }
+                  }
+                },
+                "baseCommand": "echo",
+                "stdout": "out.txt"
+              }
+            ]
+          }
+  - title: Packed ExpressionTool in $graph form
+    content: |
+      A single `ExpressionTool` packaged using the `$graph` form.
+    snippets:
+      - language: json
+        code: |
+          {
+            "cwlVersion": "v1.2",
+            "$graph": [
+              {
+                "class": "ExpressionTool",
+                "id": "main",
+                "inputs": [],
+                "outputs": {
+                  "output": "Any"
+                },
+                "expression": "$({'output': null})"
+              }
+            ]
+          }

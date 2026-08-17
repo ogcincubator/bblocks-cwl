@@ -1,0 +1,17 @@
+examples:
+  - title: Output identifiers as plain strings
+    content: |
+      The most common form: each entry names an output parameter of the underlying
+      process, using it directly as the step's output identifier.
+    snippets:
+      - language: json
+        code: |
+          ["count_output", "fileout"]
+  - title: Output identifier as an object
+    content: |
+      Instead of a bare string, an output entry may be given as an object carrying an
+      `id` field, allowing further properties to be attached to it.
+    snippets:
+      - language: json
+        code: |
+          [{"id": "count_output"}]

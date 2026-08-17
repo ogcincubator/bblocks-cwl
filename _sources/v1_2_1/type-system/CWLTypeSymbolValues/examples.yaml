@@ -1,0 +1,16 @@
+examples:
+  - title: String symbol value
+    content: |
+      A `symbols` entry given as a plain string, the common case for CWL `enum` types (e.g. species
+      names in a workflow input).
+    snippets:
+      - language: json
+        code: |
+          "homo_sapiens"
+  - title: Numeric symbol value
+    content: |
+      Schema-salad also allows `symbols` entries to be numeric literals.
+    snippets:
+      - language: json
+        code: |
+          42

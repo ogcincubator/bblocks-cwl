@@ -1,0 +1,9 @@
+examples:
+  - title: SHA-1 checksum of a File
+    content: |
+      The `checksum` field of a `File` object, prefixed with the hash algorithm identifier (`sha1$`)
+      followed by the hexadecimal SHA-1 digest of the file's contents.
+    snippets:
+      - language: json
+        code: |
+          "sha1$959e6b13ecc44e1af7c94cc76ff6a5eb5b4c6f76"

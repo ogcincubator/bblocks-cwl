@@ -1,0 +1,22 @@
+examples:
+  - title: Intent expressed with EDAM Ontology operation concepts
+    content: |
+      A `CommandLineTool` that performs sequence alignment could declare its intent using an
+      [EDAM Ontology](http://edamontology.org/) operation concept IRI.
+    snippets:
+      - language: json
+        code: |
+          [
+            "http://edamontology.org/operation_2928"
+          ]
+  - title: Multiple intents
+    content: |
+      A process may declare more than one operation type if it performs several distinct
+      computational operations.
+    snippets:
+      - language: json
+        code: |
+          [
+            "http://edamontology.org/operation_3199",
+            "http://edamontology.org/operation_3432"
+          ]

@@ -1,0 +1,26 @@
+examples:
+  - title: File input with command-line binding
+    content: |
+      A single required `File` input, positioned on the command line, adapted from the
+      `reference` input of the CWL `binding-test.cwl` conformance test.
+    snippets:
+      - language: json
+        code: |
+          {
+            "type": "File",
+            "inputBinding": {
+              "position": 2
+            }
+          }
+  - title: Optional numeric input with a default
+    content: |
+      An optional integer input with a default value used when the parameter is omitted from
+      the input object. The `default` value's type must be consistent with the declared `type`.
+    snippets:
+      - language: json
+        code: |
+          {
+            "type": "int?",
+            "default": 10,
+            "doc": "Threshold value used to filter results"
+          }

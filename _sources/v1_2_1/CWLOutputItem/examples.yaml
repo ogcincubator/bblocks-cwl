@@ -1,0 +1,26 @@
+examples:
+  - title: File output item with an explicit identifier
+    content: |
+      A single output entry as used in the list form of a `CWLOutputsDefinition`, carrying its own
+      `id` alongside `type` and `outputBinding`.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "output_file",
+            "type": "File",
+            "outputBinding": {
+              "glob": "output.txt"
+            }
+          }
+  - title: Standard output stream captured as an output item
+    content: |
+      An output item using the `stdout` shorthand `type`, redirecting the command's standard output
+      stream to this output without an explicit `outputBinding`.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "result",
+            "type": "stdout"
+          }

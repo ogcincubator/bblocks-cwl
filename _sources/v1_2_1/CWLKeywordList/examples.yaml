@@ -1,0 +1,13 @@
+examples:
+  - title: Keywords for a bioinformatics tool
+    content: |
+      A list of free-text keywords used to categorize a process, similar to the `keywords`
+      property of a `SoftwareSourceCode` record.
+    snippets:
+      - language: json
+        code: |
+          [
+            "bioinformatics",
+            "read alignment",
+            "genomics"
+          ]

@@ -1,0 +1,27 @@
+examples:
+  - title: Single required File parameter with format and secondary file
+    content: |
+      An input/output parameter whose `type` is the literal `File`, so the `if` condition matches
+      and the `format`/`secondaryFiles` constraints from
+      [CWLFileOnlyParameters](bblocks://ogc.cwl.v1_2_1.CWLFileOnlyParameters) apply.
+    snippets:
+      - language: json
+        code: |
+          {
+            "type": "File",
+            "format": "http://edamontology.org/format_2572",
+            "secondaryFiles": ".bai?"
+          }
+
+  - title: Optional array of Files with loadContents and streamable
+    content: |
+      A parameter typed as an optional array of `File` (`File[]?`), which also satisfies the `if`
+      condition, shown with `loadContents` and `streamable` set.
+    snippets:
+      - language: json
+        code: |
+          {
+            "type": "File[]?",
+            "loadContents": true,
+            "streamable": true
+          }

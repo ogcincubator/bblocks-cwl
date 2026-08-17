@@ -1,0 +1,13 @@
+examples:
+  - title: Builtin process hint for a natively-implemented step
+    content: |
+      A `BuiltinRequirement` hint indicating that a workflow step corresponds to a process
+      already implemented natively by this instance, identified by process ID, rather than
+      requiring a container image or delegation to a remote execution backend.
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "BuiltinRequirement",
+            "process": "eoepca.processes.buffer"
+          }

@@ -1,0 +1,9 @@
+examples:
+  - title: Species enum symbols
+    content: |
+      The `symbols` list of an inline `enum` type restricting an input to two species names, adapted
+      from the CWL conformance test `anon_enum_inside_array.cwl`.
+    snippets:
+      - language: json
+        code: |
+          ["homo_sapiens", "mus_musculus"]

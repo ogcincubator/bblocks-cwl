@@ -1,0 +1,84 @@
+examples:
+  - title: Atomic CommandLineTool document
+    content: |
+      A complete, top-level CWL document describing a single `CommandLineTool` — one of the
+      three top-level forms a `CWL` document can take
+      ([CWLAtomic](bblocks://ogc.cwl.v1_2_1.CWLAtomic)). Adapted from the CWL v1.2 conformance
+      test suite.
+    snippets:
+      - language: json
+        code: |
+          {
+            "cwlVersion": "v1.2",
+            "class": "CommandLineTool",
+            "baseCommand": ["cat"],
+            "inputs": [
+              {
+                "id": "file1",
+                "type": "File"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "type": "File",
+                "outputBinding": { "glob": "output" }
+              }
+            ],
+            "stdin": "$(inputs.file1.path)",
+            "stdout": "output"
+          }
+  - title: Workflow document with an embedded step
+    content: |
+      A top-level `Workflow` document ([CWLWorkflow](bblocks://ogc.cwl.v1_2_1.CWLWorkflow)) with
+      a single step whose `run` value is a `CommandLineTool` inlined directly in place
+      ([CWLAtomicNested](bblocks://ogc.cwl.v1_2_1.CWLAtomicNested)), rather than referenced by
+      file or URL.
+    snippets:
+      - language: json
+        code: |
+          {
+            "cwlVersion": "v1.2",
+            "class": "Workflow",
+            "label": "Count lines in a file",
+            "inputs": [
+              {
+                "id": "input_file",
+                "type": "File"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "count_output",
+                "type": "File",
+                "outputSource": "count_lines/output"
+              }
+            ],
+            "steps": {
+              "count_lines": {
+                "in": {
+                  "file1": "input_file"
+                },
+                "out": ["output"],
+                "run": {
+                  "class": "CommandLineTool",
+                  "baseCommand": ["wc", "-l"],
+                  "inputs": [
+                    {
+                      "id": "file1",
+                      "type": "File",
+                      "inputBinding": { "position": 1 }
+                    }
+                  ],
+                  "outputs": [
+                    {
+                      "id": "output",
+                      "type": "File",
+                      "outputBinding": { "glob": "output.txt" }
+                    }
+                  ],
+                  "stdout": "output.txt"
+                }
+              }
+            }
+          }

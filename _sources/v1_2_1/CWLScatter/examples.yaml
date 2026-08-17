@@ -1,0 +1,18 @@
+examples:
+  - title: Scattering over a single input
+    content: |
+      A workflow step scatters over a single input parameter, running one job per
+      element of `file1`.
+    snippets:
+      - language: json
+        code: |
+          "file1"
+  - title: Scattering over multiple inputs
+    content: |
+      A workflow step scatters over two input parameters at once. Combined with a
+      [CWLScatterMethod](bblocks://ogc.cwl.v1_2_1.CWLScatterMethod) of `dotproduct`, the two
+      arrays are aligned and one job is created per pair of elements.
+    snippets:
+      - language: json
+        code: |
+          ["echo_in1", "echo_in2"]

@@ -1,0 +1,18 @@
+examples:
+  - title: Parameter reference
+    content: |
+      A parameter reference resolving to the `basename` field of an input `File` parameter named
+      `myfile`. Since the reference is the field's entire value, the effective value preserves the
+      referenced value's original type rather than being converted to a string.
+    snippets:
+      - language: json
+        code: |
+          "$(inputs.myfile.basename)"
+  - title: Inline JavaScript expression
+    content: |
+      A full JavaScript expression (requires `InlineJavascriptRequirement`) computing a value from
+      two input parameters.
+    snippets:
+      - language: json
+        code: |
+          "$(inputs.a + inputs.b)"

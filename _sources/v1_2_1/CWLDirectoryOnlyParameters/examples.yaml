@@ -1,0 +1,24 @@
+examples:
+  - title: Directory input requesting a shallow listing
+    content: |
+      A `CommandLineTool` input parameter of type `Directory` that requests a shallow
+      (top-level only) directory listing, adapted from the CWL conformance test
+      `listing_shallow2.cwl`.
+    snippets:
+      - language: json
+        code: |
+          {
+            "type": "Directory",
+            "loadListing": "shallow_listing"
+          }
+  - title: Directory input requesting a deep listing
+    content: |
+      A `Directory`-typed input parameter that requests a full recursive listing,
+      adapted from the CWL conformance test `listing_deep2.cwl`.
+    snippets:
+      - language: json
+        code: |
+          {
+            "type": "Directory",
+            "loadListing": "deep_listing"
+          }

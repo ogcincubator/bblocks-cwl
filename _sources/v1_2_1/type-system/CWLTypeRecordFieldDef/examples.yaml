@@ -1,0 +1,27 @@
+examples:
+  - title: File-typed field with secondary files
+    content: |
+      A field definition used in the list form of a record's `fields`, so `name` is required.
+      Because its `type` resolves to `File`, the File-only parameters `secondaryFiles` become
+      available.
+    snippets:
+      - language: json
+        code: |
+          {
+            "name": "ofoo",
+            "type": "File",
+            "secondaryFiles": ".idx"
+          }
+
+  - title: Directory-typed field, map form
+    content: |
+      A field definition used inside the map form of a record's `fields` (so `name` is omitted —
+      it is implied by the map key). Because its `type` resolves to `Directory`, the
+      Directory-only `loadListing` parameter becomes available.
+    snippets:
+      - language: json
+        code: |
+          {
+            "type": "Directory",
+            "loadListing": "deep_listing"
+          }

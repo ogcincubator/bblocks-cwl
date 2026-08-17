@@ -1,0 +1,35 @@
+examples:
+  - title: Environment variable set from an input parameter
+    content: |
+      A single environment variable, `TEST_ENV`, whose value is a
+      [CWLExpression](bblocks://ogc.cwl.v1_2_1.CWLExpression) that forwards an input parameter, using
+      the shorthand mapping form of `envDef` (`envName` -> `envValue`).
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "EnvVarRequirement",
+            "envDef": {
+              "TEST_ENV": "$(inputs.in)"
+            }
+          }
+  - title: Multiple environment variables as an explicit array
+    content: |
+      Two environment variables declared as an array of `EnvironmentDef` objects, mixing a literal
+      value and an expression-derived value.
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "EnvVarRequirement",
+            "envDef": [
+              {
+                "envName": "LC_ALL",
+                "envValue": "en_US.UTF-8"
+              },
+              {
+                "envName": "DATA_DIR",
+                "envValue": "$(inputs.data_dir.path)"
+              }
+            ]
+          }

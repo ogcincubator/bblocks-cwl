@@ -1,0 +1,15 @@
+examples:
+  - title: Vendor-specific extension requirement
+    content: |
+      A vendor-prefixed requirement/hint class (here, an invented `acme:CustomRequirement`)
+      that falls outside the standard CWL requirement classes and this register's own
+      OGC-specific hints. `UnknownRequirement` acts as the catch-all extension point that
+      accepts such vendor-defined classes with arbitrary additional properties.
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "acme:CustomRequirement",
+            "acme:priority": "high",
+            "acme:retries": 3
+          }

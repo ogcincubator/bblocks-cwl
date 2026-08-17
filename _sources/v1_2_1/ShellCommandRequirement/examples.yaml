@@ -1,0 +1,12 @@
+examples:
+  - title: Enabling ShellCommandRequirement on a CommandLineTool
+    content: |
+      A `CommandLineTool` requirements entry that enables shell command-line generation,
+      allowing individual `arguments` items to opt out of quoting via `shellQuote: false`
+      (e.g. to inject a pipe `|` between two commands).
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "ShellCommandRequirement"
+          }

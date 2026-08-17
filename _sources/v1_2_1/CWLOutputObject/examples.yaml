@@ -1,0 +1,28 @@
+examples:
+  - title: File output located with a glob pattern
+    content: |
+      A `File` output whose value is retrieved from disk after the tool runs, using
+      `outputBinding.glob` to locate it.
+    snippets:
+      - language: json
+        code: |
+          {
+            "type": "File",
+            "outputBinding": {
+              "glob": "output.txt"
+            },
+            "doc": "The output file produced by the tool."
+          }
+  - title: Array of Directory outputs
+    content: |
+      An output whose type is an array of `Directory`, matching every directory produced under
+      `outdir/`.
+    snippets:
+      - language: json
+        code: |
+          {
+            "type": "Directory[]",
+            "outputBinding": {
+              "glob": "outdir/*"
+            }
+          }
