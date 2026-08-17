@@ -1,7 +1,7 @@
 {
   "name": "CWLOutputStdOut",
   "itemClass": "schema",
-  "abstract": "CWLOutputStdOut",
+  "abstract": "Redirects the command's standard output stream to a CWL output (the 'stdout' shorthand or its equivalent 'type: stdout' object form).",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.691121",
   "dateOfLastChange": "2025-09-29",

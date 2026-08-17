@@ -1,7 +1,7 @@
 {
   "name": "ResourceRequirement",
   "itemClass": "schema",
-  "abstract": "Specify basic hardware resource requirements\n(see also: https://www.commonwl.org/v1.2/CommandLineTool.html#ResourceRequirement).\n",
+  "abstract": "Specify basic hardware resource requirements for a CommandLineTool: minimum/maximum CPU cores, RAM, and output/temporary directory storage.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.686613",
   "dateOfLastChange": "2025-09-29",
