@@ -2,6 +2,7 @@
   "name": "CWLAtomic",
   "itemClass": "schema",
   "abstract": "CWLAtomic",
+  "isProfileOf": "bblocks://ogc.cwl.v1_2_1.CWLAtomicBase",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.672835",
   "dateOfLastChange": "2025-09-29",

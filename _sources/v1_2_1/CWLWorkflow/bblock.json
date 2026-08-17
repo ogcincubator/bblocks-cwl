@@ -2,6 +2,7 @@
   "name": "CWLWorkflow",
   "itemClass": "schema",
   "abstract": "CWLWorkflow",
+  "isProfileOf": "bblocks://ogc.cwl.v1_2_1.CWLWorkflowBase",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.673295",
   "dateOfLastChange": "2025-09-29",
