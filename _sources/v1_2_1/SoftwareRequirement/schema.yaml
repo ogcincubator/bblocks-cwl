@@ -11,7 +11,9 @@ properties:
       type: array
     - additionalProperties:
         oneOf:
-        - $ref: bblocks://ogc.cwl.v1_2_1.SoftwarePackageSpecs
+        - items:
+            type: string
+          type: array
         - $ref: bblocks://ogc.cwl.v1_2_1.SoftwarePackage
       description: Mapping of 'package' name to its specifications.
       type: object

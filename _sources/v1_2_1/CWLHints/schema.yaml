@@ -3,7 +3,16 @@ $defs:
   CWLHintsMap:
     anyOf:
       - $ref: bblocks://ogc.cwl.v1_2_1.CWLRequirementsMap
-      - $ref: bblocks://ogc.cwl.v1_2_1.CWLHintsMapExtras
+      - additionalProperties:
+          $ref: bblocks://ogc.cwl.v1_2_1.UnknownRequirement
+        properties:
+          BuiltinRequirement:
+            $ref: bblocks://ogc.cwl.v1_2_1.BuiltinRequirement
+          OGCAPIRequirement:
+            $ref: bblocks://ogc.cwl.v1_2_1.OGCAPIRequirement
+          WPS1Requirement:
+            $ref: bblocks://ogc.cwl.v1_2_1.WPS1Requirement
+        type: object
     title: CWLHintsMap
 
   CWLHintsList:

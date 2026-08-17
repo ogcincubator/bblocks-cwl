@@ -1,16 +1,34 @@
 $defs:
+  AnyLiteralType:
+    oneOf:
+    - type: number
+    - type: boolean
+    - type: string
+    title: AnyLiteralType
   AnyLiteralList:
     items:
-      $ref: bblocks://ogc.cwl.v1_2_1.AnyLiteralType
+      $ref: '#/$defs/AnyLiteralType'
     title: AnyLiteralList
     type: array
+  CWLDefaultObject:
+    additionalProperties: {}
+    not:
+      $comment: Avoid false-positive match of default File or Directory location definition.
+      properties:
+        class:
+          enum:
+          - File
+          - Directory
+          type: string
+    title: CWLDefaultObject
+    type: object
 description: Default value of input if not provided for task execution.
 oneOf:
-- $ref: bblocks://ogc.cwl.v1_2_1.AnyLiteralType
+- $ref: '#/$defs/AnyLiteralType'
 - $ref: '#/$defs/AnyLiteralList'
 - $ref: bblocks://ogc.cwl.v1_2_1.CWLDefaultLocation
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLDefaultObject
+- $ref: '#/$defs/CWLDefaultObject'
 - items:
-    $ref: bblocks://ogc.cwl.v1_2_1.CWLDefaultObject
+    $ref: '#/$defs/CWLDefaultObject'
   type: array
 title: CWLDefault

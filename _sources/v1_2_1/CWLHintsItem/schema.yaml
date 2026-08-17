@@ -7,5 +7,8 @@ $comment: 'For any new items added, ensure they are added under ''class'' of ''U
   '
 oneOf:
 - $ref: bblocks://ogc.cwl.v1_2_1.CWLRequirementsItem
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLHintsItemExtras
+- $ref: bblocks://ogc.cwl.v1_2_1.BuiltinRequirement
+- $ref: bblocks://ogc.cwl.v1_2_1.OGCAPIRequirement
+- $ref: bblocks://ogc.cwl.v1_2_1.WPS1Requirement
+- $ref: bblocks://ogc.cwl.v1_2_1.UnknownRequirement
 title: CWLHintsItem
