@@ -1,7 +1,7 @@
 {
   "name": "CWLWorkflowStepInputBase",
   "itemClass": "schema",
-  "abstract": "CWLWorkflowStepInputBase",
+  "abstract": "Common workflow step input properties (source, linkMerge, valueFrom), shared by the step input's list and map representations; not typically profiled on its own.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.713509",
   "dateOfLastChange": "2025-09-29",
@@ -9,6 +9,7 @@
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
   "tags": [
-    "cwl"
+    "cwl",
+    "shared-fragment"
   ]
 }
