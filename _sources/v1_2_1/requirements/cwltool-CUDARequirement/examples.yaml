@@ -1,5 +1,6 @@
 examples:
   - title: Explicit compute capability allow-list
+    base-uri: https://example.org/
     content: |
       A `CUDARequirement` that accepts only GPUs with one of three exact compute capabilities,
       requesting a minimum number of devices bound to an input parameter — adapted from `cwltool`'s
@@ -14,6 +15,7 @@ examples:
             "cudaDeviceCountMin": 2
           }
   - title: Minimum compute capability with a device range
+    base-uri: https://example.org/
     content: |
       A `CUDARequirement` using a single `cudaComputeCapability` value (a minimum bound, accepting
       any GPU with equal or higher capability) together with a device count range.

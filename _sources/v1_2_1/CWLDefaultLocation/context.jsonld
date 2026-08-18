@@ -2,6 +2,12 @@
   "@context": {
     "cwl": "https://w3id.org/cwl/cwl#",
     "basename": "cwl:basename",
-    "nameroot": "https://w3id.org/cwl/cwl#File/nameroot"
+    "class": "@type",
+    "location": "@id",
+    "nameroot": "https://w3id.org/cwl/cwl#File/nameroot",
+    "path": {
+      "@id": "cwl:path",
+      "@type": "@id"
+    }
   }
 }

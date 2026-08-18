@@ -1,0 +1,6 @@
+additionalSteps:
+  - type: jq
+    code: |
+      walk(if type == "object" and has("id") and (has("dct:identifier")|not)
+           then . + {"dct:identifier": .id}
+           else . end)

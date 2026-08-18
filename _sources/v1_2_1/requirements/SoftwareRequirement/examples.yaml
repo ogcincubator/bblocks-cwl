@@ -1,5 +1,6 @@
 examples:
   - title: Packages listed as an array
+    base-uri: https://example.org/
     content: |
       `packages` given as an array of [SoftwarePackage](bblocks://ogc.cwl.v1_2_1.SoftwarePackage)
       objects.
@@ -20,6 +21,7 @@ examples:
             ]
           }
   - title: Packages listed as a name-keyed map
+    base-uri: https://example.org/
     content: |
       `packages` given as an object keyed by package name, where each value is either a bare
       list of specification IRIs/versions or a full

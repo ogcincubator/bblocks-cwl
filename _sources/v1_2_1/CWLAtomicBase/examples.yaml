@@ -1,5 +1,6 @@
 examples:
   - title: CommandLineTool at the document root
+    base-uri: https://example.org/
     content: |
       A `CommandLineTool` defined directly at the document root, without the `$graph` wrapper — the
       typical shape for a single-tool Application Package. No `id` is needed since there is nothing
@@ -28,6 +29,7 @@ examples:
             "stdout": "out.txt"
           }
   - title: ExpressionTool with no inputs
+    base-uri: https://example.org/
     content: |
       An `ExpressionTool` computing its output purely from an inline expression, with an empty
       `inputs` list.

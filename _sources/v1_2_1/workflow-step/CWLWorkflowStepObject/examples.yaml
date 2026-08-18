@@ -1,5 +1,6 @@
 examples:
   - title: Step referencing an external tool
+    base-uri: https://example.org/
     content: |
       A workflow step that runs an external `CommandLineTool` document (`run` given as a relative
       file reference), wiring one workflow-level input to its `file1` input and exposing its
@@ -18,6 +19,7 @@ examples:
           }
 
   - title: Scattered step with dotproduct method
+    base-uri: https://example.org/
     content: |
       A step that scatters over two input parameters using the `dotproduct` method, pairing up
       elements of `inp1` and `inp2` one job at a time, and running a nested tool referenced by a

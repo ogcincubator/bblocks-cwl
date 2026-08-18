@@ -1,5 +1,6 @@
 examples:
   - title: Enabling scatter/gather on a Workflow
+    base-uri: https://example.org/
     content: |
       Adapted from the CWL conformance test `scatter-wf3.cwl`: a `Workflow` declares
       `ScatterFeatureRequirement` in its `requirements` so that one of its steps can use the

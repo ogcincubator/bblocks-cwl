@@ -1,5 +1,6 @@
 examples:
   - title: CWL v1.2 document
+    base-uri: https://example.org/
     content: |
       The `cwlVersion` field as it appears at the root of a CWL v1.2 document, adapted from the CWL
       conformance test `count-lines7-wf.cwl`.
@@ -11,6 +12,7 @@ examples:
           }
 
   - title: CWL v1.0 document
+    base-uri: https://example.org/
     content: |
       A document declaring conformance to an earlier published CWL standard version.
     snippets:

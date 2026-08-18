@@ -1,5 +1,6 @@
 examples:
   - title: Scattering over a single input
+    base-uri: https://example.org/
     content: |
       A workflow step scatters over a single input parameter, running one job per
       element of `file1`.
@@ -8,6 +9,7 @@ examples:
         code: |
           "file1"
   - title: Scattering over multiple inputs
+    base-uri: https://example.org/
     content: |
       A workflow step scatters over two input parameters at once. Combined with a
       [CWLScatterMethod](bblocks://ogc.cwl.v1_2_1.CWLScatterMethod) of `dotproduct`, the two

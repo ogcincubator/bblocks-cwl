@@ -2,6 +2,10 @@
   "@context": {
     "cwl": "https://w3id.org/cwl/cwl#",
     "linkMerge": "cwl:linkMerge",
+    "source": {
+      "@id": "cwl:source",
+      "@type": "@id"
+    },
     "valueFrom": "cwl:valueFrom"
   }
 }

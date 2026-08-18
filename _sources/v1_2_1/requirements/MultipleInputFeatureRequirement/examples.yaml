@@ -1,5 +1,6 @@
 examples:
   - title: Enabling multiple inbound data links
+    base-uri: https://example.org/
     content: |
       Adapted from the CWL conformance test `count-lines7-wf.cwl`: a `Workflow` declares
       `MultipleInputFeatureRequirement` so that a step input's `source` field

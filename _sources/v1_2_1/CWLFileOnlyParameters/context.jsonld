@@ -1,7 +1,12 @@
 {
   "@context": {
     "cwl": "https://w3id.org/cwl/cwl#",
+    "format": {
+      "@id": "cwl:format",
+      "@type": "@id"
+    },
     "loadContents": "cwl:loadContents",
+    "secondaryFiles": "cwl:secondaryFiles",
     "streamable": "https://w3id.org/cwl/cwl#FieldBase/streamable"
   }
 }

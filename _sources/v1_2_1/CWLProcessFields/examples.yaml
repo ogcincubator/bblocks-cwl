@@ -1,5 +1,6 @@
 examples:
   - title: Fields of a command-line process
+    base-uri: https://example.org/
     content: |
       The shared fields as they appear on a `CommandLineTool`-shaped process, regardless of whether
       it ends up validated as a root document, a nested step `run`, or a `$graph` entry — `class` is
@@ -29,6 +30,7 @@ examples:
           }
 
   - title: Fields of a $graph-only process, referenced by id
+    base-uri: https://example.org/
     content: |
       A minimal fragment showing the fields that matter most for a process meant to be referenced by
       `id` from elsewhere in the same document (e.g. a `Workflow` step's `run: "#tool-id"`), such as

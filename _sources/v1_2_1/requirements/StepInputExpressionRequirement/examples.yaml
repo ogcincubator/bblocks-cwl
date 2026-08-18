@@ -1,5 +1,6 @@
 examples:
   - title: Enabling StepInputExpressionRequirement on a Workflow
+    base-uri: https://example.org/
     content: |
       A `Workflow` requirements entry that enables the use of `valueFrom` expressions on
       workflow step inputs, letting a step input's value be computed rather than only ever

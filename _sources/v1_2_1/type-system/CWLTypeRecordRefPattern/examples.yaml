@@ -1,5 +1,6 @@
 examples:
   - title: Record name with a relative document prefix
+    base-uri: https://example.org/
     content: |
       A record reference combining a relative document path with a `#RecordName` fragment,
       adapted from [schemadef-tool.cwl](https://github.com/common-workflow-language/common-workflow-language/blob/main/v1.2/v1.2/schemadef-tool.cwl).
@@ -8,6 +9,7 @@ examples:
         code: |
           "schemadef-type.yml#HelloType"
   - title: Bare fragment identifier
+    base-uri: https://example.org/
     content: |
       A record reference consisting of just the `#RecordName` fragment, with no document
       prefix — resolved relative to the current document per CWL's identifier resolution rules.

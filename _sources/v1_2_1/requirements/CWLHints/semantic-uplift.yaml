@@ -1,0 +1,6 @@
+additionalSteps:
+  - type: jq
+    code: |
+      if type == "object" then
+        to_entries | map({class: .key} + .value)
+      else . end

@@ -1,5 +1,6 @@
 examples:
   - title: File-typed field with secondary files
+    base-uri: https://example.org/
     content: |
       A field definition used in the list form of a record's `fields`, so `name` is required.
       Because its `type` resolves to `File`, the File-only parameters `secondaryFiles` become
@@ -14,6 +15,7 @@ examples:
           }
 
   - title: Directory-typed field, map form
+    base-uri: https://example.org/
     content: |
       A field definition used inside the map form of a record's `fields` (so `name` is omitted —
       it is implied by the map key). Because its `type` resolves to `Directory`, the

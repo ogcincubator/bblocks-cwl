@@ -1,5 +1,6 @@
 examples:
   - title: Package identified by name and version only
+    base-uri: https://example.org/
     content: |
       A `SoftwarePackage` entry naming a tool and the version(s) known to work, with no
       installation IRIs.
@@ -11,6 +12,7 @@ examples:
             "version": [ "1.0" ]
           }
   - title: Package identified by an installation IRI
+    base-uri: https://example.org/
     content: |
       A `SoftwarePackage` entry that pins down an ambiguous package name using a `specs` IRI
       resolving to a package repository entry.

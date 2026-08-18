@@ -1,5 +1,6 @@
 examples:
   - title: SHA-1 checksum of a File
+    base-uri: https://example.org/
     content: |
       The `checksum` field of a `File` object, prefixed with the hash algorithm identifier (`sha1$`)
       followed by the hexadecimal SHA-1 digest of the file's contents.

@@ -1,5 +1,6 @@
 examples:
   - title: Expression library defined inline
+    base-uri: https://example.org/
     content: |
       An `InlineJavascriptRequirement` that supplies a single Javascript function definition as a
       literal string in `expressionLib`, making it callable from later CWL expressions
@@ -15,6 +16,7 @@ examples:
           }
 
   - title: Expression library combining an included file and an inline fragment
+    base-uri: https://example.org/
     content: |
       An `InlineJavascriptRequirement` whose `expressionLib` mixes an external Javascript file,
       referenced via `$include`, with an inline function definition that depends on it

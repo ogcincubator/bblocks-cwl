@@ -1,5 +1,6 @@
 examples:
   - title: Simple string command
+    base-uri: https://example.org/
     content: |
       A `CommandLineTool` invoking a single executable with no arguments baked
       into `baseCommand` itself, e.g. `cat`.
@@ -8,6 +9,7 @@ examples:
         code: |
           "cat"
   - title: Command with mandatory leading arguments
+    base-uri: https://example.org/
     content: |
       A `baseCommand` given as an array. The first element (`cp`) is the
       program to execute, and the remaining element (`-r`) is a mandatory

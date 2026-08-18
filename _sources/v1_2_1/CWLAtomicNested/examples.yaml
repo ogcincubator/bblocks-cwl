@@ -1,5 +1,6 @@
 examples:
   - title: CommandLineTool embedded as a workflow step's run value
+    base-uri: https://example.org/
     content: |
       A `CommandLineTool` definition inlined directly as the `run` value of a Workflow step,
       rather than referenced by file or URL. Note there is no `cwlVersion` field, since it is
@@ -28,6 +29,7 @@ examples:
             "stdout": "output.txt"
           }
   - title: ExpressionTool embedded as a workflow step's run value
+    base-uri: https://example.org/
     content: |
       An `ExpressionTool` inlined as a step's `run` value, used here to pick the first file out
       of an array-typed input.

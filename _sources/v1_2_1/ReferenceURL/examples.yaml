@@ -1,5 +1,6 @@
 examples:
   - title: Package repository URL
+    base-uri: https://example.org/
     content: |
       A URL pointing to a software package's entry in a package repository, as used in the `specs`
       array of [SoftwarePackage](bblocks://ogc.cwl.v1_2_1.SoftwarePackage).
@@ -8,6 +9,7 @@ examples:
         code: |
           "https://anaconda.org/bioconda/samtools"
   - title: Documentation URL
+    base-uri: https://example.org/
     content: |
       A URL pointing to external documentation associated with a requirement.
     snippets:

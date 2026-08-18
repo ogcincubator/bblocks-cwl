@@ -1,5 +1,6 @@
 examples:
   - title: Literal string default
+    base-uri: https://example.org/
     content: |
       A plain string literal used as the `default` value of a `string`-typed input parameter,
       adapted from [`paramref_arguments_inputs.cwl`](https://github.com/common-workflow-language/cwl-v1.2/blob/main/tests/paramref_arguments_inputs.cwl).
@@ -8,6 +9,7 @@ examples:
         code: |
           "z"
   - title: File default identified by location
+    base-uri: https://example.org/
     content: |
       A `default` value for a `File`-typed input, given as a literal File object identified by
       `location`, adapted from

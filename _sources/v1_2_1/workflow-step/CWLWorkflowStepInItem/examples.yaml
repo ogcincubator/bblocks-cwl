@@ -1,5 +1,6 @@
 examples:
   - title: Simple single-source input
+    base-uri: https://example.org/
     content: |
       A step input identified by `id`, wired to a single upstream parameter via `source`.
     snippets:
@@ -10,6 +11,7 @@ examples:
             "source": "input_file"
           }
   - title: Merged multi-source input with a default
+    base-uri: https://example.org/
     content: |
       A step input fed by two upstream data links, flattened via `linkMerge`, with a `default`
       value used when no data is produced by any source.

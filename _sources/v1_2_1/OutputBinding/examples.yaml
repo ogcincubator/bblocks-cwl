@@ -1,5 +1,6 @@
 examples:
   - title: Single glob pattern
+    base-uri: https://example.org/
     content: |
       Captures a single output file by name, adapted from a CWL conformance test that runs `cat` and
       collects its output file.
@@ -11,6 +12,7 @@ examples:
           }
 
   - title: Computed glob with loaded contents and outputEval
+    base-uri: https://example.org/
     content: |
       Uses a [CWLExpression](bblocks://ogc.cwl.v1_2_1.CWLExpression) to compute the glob pattern from
       an input parameter, loads the matched file's contents (`loadContents`), and derives the final

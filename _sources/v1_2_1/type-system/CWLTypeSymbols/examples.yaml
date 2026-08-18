@@ -1,5 +1,6 @@
 examples:
   - title: Species enum symbols
+    base-uri: https://example.org/
     content: |
       The `symbols` list of an inline `enum` type restricting an input to two species names, adapted
       from the CWL conformance test `anon_enum_inside_array.cwl`.

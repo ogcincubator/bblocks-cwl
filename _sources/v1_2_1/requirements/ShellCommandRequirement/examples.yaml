@@ -1,5 +1,6 @@
 examples:
   - title: Enabling ShellCommandRequirement on a CommandLineTool
+    base-uri: https://example.org/
     content: |
       A `CommandLineTool` requirements entry that enables shell command-line generation,
       allowing individual `arguments` items to opt out of quoting via `shellQuote: false`

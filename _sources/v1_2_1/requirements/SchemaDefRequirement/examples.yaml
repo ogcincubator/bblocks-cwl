@@ -1,5 +1,6 @@
 examples:
   - title: Inline enum and record type definitions
+    base-uri: https://example.org/
     content: |
       Declares a reusable `Species` enum and a `SequencingRun` record whose `organism` field refers
       back to it by name; `SequencingRun` can then be used as a `type` elsewhere in the document's
@@ -28,6 +29,7 @@ examples:
             ]
           }
   - title: Type definitions shared via $import
+    base-uri: https://example.org/
     content: |
       Instead of writing type definitions inline, an entry can be an `$import` directive pointing to
       a file holding a shared set of `enum`/`record` definitions reused across multiple CWL documents.

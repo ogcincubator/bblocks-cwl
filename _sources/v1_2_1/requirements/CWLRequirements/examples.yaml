@@ -1,5 +1,6 @@
 examples:
   - title: Requirements as a list
+    base-uri: https://example.org/
     content: |
       A `CommandLineTool` running inside a Docker container, with inline Javascript
       expressions enabled. Each list item names its own `class`.
@@ -19,6 +20,7 @@ examples:
             }
           ]
   - title: Requirements as a map
+    base-uri: https://example.org/
     content: |
       The same kind of declaration, using the equivalent map form: the requirement
       class name becomes the property key, so `class` does not need to be repeated.

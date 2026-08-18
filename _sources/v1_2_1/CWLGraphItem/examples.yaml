@@ -1,5 +1,6 @@
 examples:
   - title: CommandLineTool graph item
+    base-uri: https://example.org/
     content: |
       A `CommandLineTool` process object as it appears inside a `$graph` array — note the required
       `id`, which lets other process objects in the same document reference it (e.g. from a
@@ -35,6 +36,7 @@ examples:
             "stdout": "step1_out"
           }
   - title: Workflow graph item referencing another graph item
+    base-uri: https://example.org/
     content: |
       A `Workflow` process object inside the same `$graph` array as the `echo` `CommandLineTool`
       above, with a step that runs it by reference (`run: "#echo"`) and an output sourced from that

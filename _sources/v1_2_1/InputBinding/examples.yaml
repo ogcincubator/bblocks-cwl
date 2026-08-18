@@ -1,5 +1,6 @@
 examples:
   - title: Fixed positional argument
+    base-uri: https://example.org/
     content: |
       Binds an input parameter as a positional command-line argument, using `position` to control
       where it lands among the assembled arguments. This is the most common form, adapted from a CWL
@@ -12,6 +13,7 @@ examples:
           }
 
   - title: Prefixed, array-valued argument with a computed position
+    base-uri: https://example.org/
     content: |
       Binds an array-valued input as a single argument by joining its items with `itemSeparator`, adds
       a `prefix` before it, and computes the argument's `position` with a

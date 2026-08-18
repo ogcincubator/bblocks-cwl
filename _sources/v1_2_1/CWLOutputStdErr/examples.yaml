@@ -1,5 +1,6 @@
 examples:
   - title: Shorthand string form
+    base-uri: https://example.org/
     content: |
       The `stderr` shorthand, as used for the `output_file` output of the CWL conformance test
       [`stderr-shortcut.cwl`](https://github.com/common-workflow-language/cwl-v1.2/blob/main/tests/stderr-shortcut.cwl),
@@ -9,6 +10,7 @@ examples:
         code: |
           "stderr"
   - title: Object form
+    base-uri: https://example.org/
     content: |
       The equivalent explicit object form of the same `stderr` type declaration.
     snippets:

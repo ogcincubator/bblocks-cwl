@@ -1,5 +1,6 @@
 examples:
   - title: File output item with an explicit identifier
+    base-uri: https://example.org/
     content: |
       A single output entry as used in the list form of a `CWLOutputsDefinition`, carrying its own
       `id` alongside `type` and `outputBinding`.
@@ -14,6 +15,7 @@ examples:
             }
           }
   - title: Standard output stream captured as an output item
+    base-uri: https://example.org/
     content: |
       An output item using the `stdout` shorthand `type`, redirecting the command's standard output
       stream to this output without an explicit `outputBinding`.

@@ -1,6 +1,44 @@
 {
   "@context": {
     "cwl": "https://w3id.org/cwl/cwl#",
+    "arguments": {
+      "@id": "cwl:arguments",
+      "@container": "@list"
+    },
+    "baseCommand": {
+      "@id": "cwl:baseCommand",
+      "@container": "@list"
+    },
+    "hints": {
+      "@id": "cwl:hints",
+      "@container": "@type"
+    },
+    "id": "@id",
+    "inputs": {
+      "@id": "cwl:inputs",
+      "@container": "@id"
+    },
+    "intent": {
+      "@id": "cwl:Process/intent",
+      "@type": "@id"
+    },
+    "outputs": {
+      "@id": "cwl:outputs",
+      "@container": "@id"
+    },
+    "requirements": {
+      "@id": "cwl:requirements",
+      "@container": "@type"
+    },
+    "scatter": {
+      "@id": "cwl:scatter",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "scatterMethod": {
+      "@id": "cwl:scatterMethod",
+      "@type": "@vocab"
+    },
     "stderr": "cwl:stderr",
     "stdin": "cwl:stdin",
     "stdout": "cwl:stdout"

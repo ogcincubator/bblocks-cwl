@@ -1,5 +1,6 @@
 examples:
   - title: Importing a schema definition file
+    base-uri: https://example.org/
     content: |
       A `CommandLineTool` requirement that imports an external schema definition document, as
       used in practice to share custom type definitions across CWL files (e.g. via
@@ -11,6 +12,7 @@ examples:
             "$import": "schemadef-type.yml"
           }
   - title: Importing a set of output parameters
+    base-uri: https://example.org/
     content: |
       An `outputs` section can itself be replaced wholesale by an `$import` directive, pulling
       in a document fragment defined elsewhere.

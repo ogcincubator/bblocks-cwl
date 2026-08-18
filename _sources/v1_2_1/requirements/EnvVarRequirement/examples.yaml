@@ -1,5 +1,6 @@
 examples:
   - title: Environment variable set from an input parameter
+    base-uri: https://example.org/
     content: |
       A single environment variable, `TEST_ENV`, whose value is a
       [CWLExpression](bblocks://ogc.cwl.v1_2_1.CWLExpression) that forwards an input parameter, using
@@ -14,6 +15,7 @@ examples:
             }
           }
   - title: Multiple environment variables as an explicit array
+    base-uri: https://example.org/
     content: |
       Two environment variables declared as an array of `EnvironmentDef` objects, mixing a literal
       value and an expression-derived value.

@@ -1,5 +1,6 @@
 examples:
   - title: File input with command-line binding
+    base-uri: https://example.org/
     content: |
       A single required `File` input, positioned on the command line, adapted from the
       `reference` input of the CWL `binding-test.cwl` conformance test.
@@ -13,6 +14,7 @@ examples:
             }
           }
   - title: Optional numeric input with a default
+    base-uri: https://example.org/
     content: |
       An optional integer input with a default value used when the parameter is omitted from
       the input object. The `default` value's type must be consistent with the declared `type`.

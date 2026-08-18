@@ -1,5 +1,6 @@
 examples:
   - title: String symbol value
+    base-uri: https://example.org/
     content: |
       A `symbols` entry given as a plain string, the common case for CWL `enum` types (e.g. species
       names in a workflow input).
@@ -8,6 +9,7 @@ examples:
         code: |
           "homo_sapiens"
   - title: Numeric symbol value
+    base-uri: https://example.org/
     content: |
       Schema-salad also allows `symbols` entries to be numeric literals.
     snippets:

@@ -1,5 +1,6 @@
 examples:
   - title: Simple CommandLineTool with list-form inputs and outputs
+    base-uri: https://example.org/
     content: |
       A minimal `CommandLineTool` document that pipes a file through `cat`, adapted from the
       CWL v1.2 conformance test suite. `inputs` and `outputs` are given as arrays of items, each
@@ -28,6 +29,7 @@ examples:
             "stdout": "output"
           }
   - title: Dockerized CommandLineTool with mapping-form inputs and outputs
+    base-uri: https://example.org/
     content: |
       The same kind of tool as above, but with `inputs`/`outputs` given as an object keyed by
       identifier instead of an array, and a [DockerRequirement](bblocks://ogc.cwl.v1_2_1.requirements.DockerRequirement)

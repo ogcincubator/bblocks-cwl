@@ -1,5 +1,6 @@
 examples:
   - title: Single source
+    base-uri: https://example.org/
     content: |
       Wiring a step input to one upstream parameter.
     snippets:
@@ -9,6 +10,7 @@ examples:
             "source": "step_a/out"
           }
   - title: Multiple sources with link merging and a value expression
+    base-uri: https://example.org/
     content: |
       Wiring a step input to several upstream parameters, flattening them via `linkMerge`, and
       post-processing the merged value with `valueFrom`.

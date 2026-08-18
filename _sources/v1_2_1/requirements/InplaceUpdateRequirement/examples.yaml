@@ -1,5 +1,6 @@
 examples:
   - title: Enabling in-place updates
+    base-uri: https://example.org/
     content: |
       An `InplaceUpdateRequirement` enabling destructive, in-place modification of a writable file or
       directory staged by `InitialWorkDirRequirement`, as an execution-time optimization

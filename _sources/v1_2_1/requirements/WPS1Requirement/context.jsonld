@@ -1,0 +1,7 @@
+{
+  "@context": {
+    "ogccwl": "https://w3id.org/ogc/cwl/",
+    "class": "@type",
+    "WPS1Requirement": "ogccwl:WPS1Requirement"
+  }
+}

@@ -1,5 +1,6 @@
 examples:
   - title: Disabling work reuse
+    base-uri: https://example.org/
     content: |
       A `CommandLineTool` that disables output reuse, forcing re-execution on every run — adapted
       from the CWL v1.2 conformance test suite, where this is combined with a `ToolTimeLimit` to
@@ -12,6 +13,7 @@ examples:
             "enableReuse": false
           }
   - title: Work reuse controlled by an expression
+    base-uri: https://example.org/
     content: |
       `enableReuse` may also be a [CWLExpression](bblocks://ogc.cwl.v1_2_1.CWLExpression), evaluated
       at runtime, when combined with `InlineJavascriptRequirement`.

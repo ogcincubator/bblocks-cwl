@@ -1,5 +1,6 @@
 examples:
   - title: Flattening two sources into one list
+    base-uri: https://example.org/
     content: |
       A `WorkflowStepInput` receives values from two upstream sources (`file1` and `file2`). Because
       both sources produce array values, `merge_flattened` concatenates them into a single flat list
@@ -9,6 +10,7 @@ examples:
         code: |
           "merge_flattened"
   - title: Wrapping a single source in a list
+    base-uri: https://example.org/
     content: |
       A `WorkflowStepInput` with a single source still produces a list when `merge_nested` is used
       (the default), wrapping that one source's value as the sole entry.

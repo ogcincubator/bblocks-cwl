@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "sld": "https://w3id.org/cwl/salad#",
+    "default": "sld:default",
+    "type": {
+      "@id": "sld:type",
+      "@type": "@vocab"
+    }
+  }
+}

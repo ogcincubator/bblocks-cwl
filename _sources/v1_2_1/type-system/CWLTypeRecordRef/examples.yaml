@@ -1,5 +1,6 @@
 examples:
   - title: Reference to a record type defined in an external schema document
+    base-uri: https://example.org/
     content: |
       A field `type` value referencing the `HelloType` record defined in an external
       `SchemaDefRequirement` document, adapted from
@@ -9,6 +10,7 @@ examples:
         code: |
           "schemadef-type.yml#HelloType"
   - title: Reference to a record type imported from another document
+    base-uri: https://example.org/
     content: |
       A field `type` value referencing the `readgroups_bam_file` record, adapted from
       [schemadef_types_with_import-tool.cwl](https://github.com/common-workflow-language/common-workflow-language/blob/main/v1.2/v1.2/schemadef_types_with_import-tool.cwl).

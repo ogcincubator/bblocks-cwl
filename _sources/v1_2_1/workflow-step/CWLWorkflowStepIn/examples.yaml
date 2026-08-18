@@ -1,5 +1,6 @@
 examples:
   - title: Map form, with plain and object-valued sources
+    base-uri: https://example.org/
     content: |
       A step's `in` written as a map: `file1` is wired with a bare `source` string, while `file2`
       and `file3` are wired with full input objects that also request how multiple inbound links
@@ -19,6 +20,7 @@ examples:
             }
           }
   - title: List form, one entry per step input
+    base-uri: https://example.org/
     content: |
       The same kind of wiring expressed as a list, where each entry supplies its own `id` alongside
       `source`/`linkMerge`/`default`.

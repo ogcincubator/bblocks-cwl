@@ -1,5 +1,6 @@
 examples:
   - title: Vendor-specific extension requirement
+    base-uri: https://example.org/
     content: |
       A vendor-prefixed requirement/hint class (here, an invented `acme:CustomRequirement`)
       that falls outside the standard CWL requirement classes and this register's own

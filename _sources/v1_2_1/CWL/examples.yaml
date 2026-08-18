@@ -1,5 +1,6 @@
 examples:
   - title: Atomic CommandLineTool document
+    base-uri: https://example.org/
     content: |
       A complete, top-level CWL document describing a single `CommandLineTool` — one of the
       three top-level forms a `CWL` document can take
@@ -29,6 +30,7 @@ examples:
             "stdout": "output"
           }
   - title: Workflow document with an embedded step
+    base-uri: https://example.org/
     content: |
       A top-level `Workflow` document ([CWLWorkflow](bblocks://ogc.cwl.v1_2_1.CWLWorkflow)) with
       a single step whose `run` value is a `CommandLineTool` inlined directly in place

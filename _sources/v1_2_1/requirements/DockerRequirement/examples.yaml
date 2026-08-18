@@ -1,5 +1,6 @@
 examples:
   - title: Pulling a published image
+    base-uri: https://example.org/
     content: |
       A `DockerRequirement` that fetches its image with `docker pull`, adapted from the CWL
       conformance test `bwa-mem-tool.cwl`. This is the most common form: `dockerPull` is the only
@@ -14,6 +15,7 @@ examples:
           }
 
   - title: Pulling an image with a custom output directory
+    base-uri: https://example.org/
     content: |
       Adapted from the CWL conformance test `docker-output-dir.cwl`. `dockerOutputDirectory`
       relocates the designated output directory to a specific path inside the container, which the

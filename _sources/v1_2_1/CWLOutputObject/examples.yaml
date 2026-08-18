@@ -1,5 +1,6 @@
 examples:
   - title: File output located with a glob pattern
+    base-uri: https://example.org/
     content: |
       A `File` output whose value is retrieved from disk after the tool runs, using
       `outputBinding.glob` to locate it.
@@ -14,6 +15,7 @@ examples:
             "doc": "The output file produced by the tool."
           }
   - title: Array of Directory outputs
+    base-uri: https://example.org/
     content: |
       An output whose type is an array of `Directory`, matching every directory produced under
       `outdir/`.

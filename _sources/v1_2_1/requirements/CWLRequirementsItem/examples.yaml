@@ -1,5 +1,6 @@
 examples:
   - title: DockerRequirement item
+    base-uri: https://example.org/
     content: |
       A single `requirements` list entry declaring that the tool must run inside a
       specific Docker image.
@@ -11,6 +12,7 @@ examples:
             "dockerPull": "docker.io/debian:stable-slim"
           }
   - title: ResourceRequirement item
+    base-uri: https://example.org/
     content: |
       A single `requirements` list entry declaring the minimum and maximum number of
       CPU cores the tool needs.

@@ -1,5 +1,6 @@
 examples:
   - title: Workflow structure with inputs, outputs and a single step
+    base-uri: https://example.org/
     content: |
       The `inputs`, `outputs` and `steps` fields shared by both a root
       [CWLWorkflow](bblocks://ogc.cwl.v1_2_1.CWLWorkflow) document and a nested workflow

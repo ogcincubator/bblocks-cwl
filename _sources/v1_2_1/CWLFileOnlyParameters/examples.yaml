@@ -1,5 +1,6 @@
 examples:
   - title: Indexed FASTA input with required and optional secondary files
+    base-uri: https://example.org/
     content: |
       A `File`-typed input declaring its content format and a list of secondary files with
       explicit `pattern`/`required` schemas, adapted from the CWL v1.2 conformance test
@@ -23,6 +24,7 @@ examples:
           }
 
   - title: Streamed file loaded for use in an expression
+    base-uri: https://example.org/
     content: |
       A `File`-typed input whose contents are read (subject to the 64 KiB `loadContents` limit)
       and made available to CWL expressions, with a single secondary file declared using the

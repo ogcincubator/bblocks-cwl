@@ -1,5 +1,6 @@
 examples:
   - title: Parameter reference
+    base-uri: https://example.org/
     content: |
       A parameter reference resolving to the `basename` field of an input `File` parameter named
       `myfile`. Since the reference is the field's entire value, the effective value preserves the
@@ -9,6 +10,7 @@ examples:
         code: |
           "$(inputs.myfile.basename)"
   - title: Inline JavaScript expression
+    base-uri: https://example.org/
     content: |
       A full JavaScript expression (requires `InlineJavascriptRequirement`) computing a value from
       two input parameters.

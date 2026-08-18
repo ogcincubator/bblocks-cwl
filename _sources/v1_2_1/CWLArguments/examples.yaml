@@ -1,5 +1,6 @@
 examples:
   - title: Literal string arguments
+    base-uri: https://example.org/
     content: |
       Arguments given as plain strings are used verbatim, in order, as literal
       command line arguments, e.g. invoking `bwa mem` as part of a longer
@@ -9,6 +10,7 @@ examples:
         code: |
           ["bwa", "mem"]
   - title: Positioned argument with a computed value
+    base-uri: https://example.org/
     content: |
       An argument expressed as an [InputBinding](bblocks://ogc.cwl.v1_2_1.InputBinding)
       object, placing a runtime-computed value (the tool's output directory)

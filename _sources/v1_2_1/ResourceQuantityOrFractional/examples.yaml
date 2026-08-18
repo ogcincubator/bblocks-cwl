@@ -1,5 +1,6 @@
 examples:
   - title: Whole number quantity
+    base-uri: https://example.org/
     content: |
       A plain integer quantity, e.g. as used for `ResourceRequirement`'s `ramMin` (in mebibytes).
     snippets:
@@ -8,6 +9,7 @@ examples:
           512
 
   - title: Fractional quantity
+    base-uri: https://example.org/
     content: |
       A fractional quantity, adapted from the CWL conformance test `cores_float.cwl`, where a
       `ResourceRequirement.coresMin` of `1.25` signals a scheduler that up to 3 jobs can share a

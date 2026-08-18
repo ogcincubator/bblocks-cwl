@@ -1,5 +1,6 @@
 examples:
   - title: Deep directory listing requirement
+    base-uri: https://example.org/
     content: |
       A `CommandLineTool` requirement asking the implementation to recursively load the full
       directory listing of every `Directory` input, so nested subdirectories are also enumerated
@@ -12,6 +13,7 @@ examples:
             "loadListing": "deep_listing"
           }
   - title: Shallow directory listing requirement
+    base-uri: https://example.org/
     content: |
       A requirement asking the implementation to load only the top-level entries of each
       `Directory` input's listing, without recursing into subdirectories.

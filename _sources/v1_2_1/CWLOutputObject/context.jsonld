@@ -1,0 +1,11 @@
+{
+  "@context": {
+    "cwl": "https://w3id.org/cwl/cwl#",
+    "sld": "https://w3id.org/cwl/salad#",
+    "outputBinding": "cwl:outputBinding",
+    "type": {
+      "@id": "sld:type",
+      "@type": "@vocab"
+    }
+  }
+}

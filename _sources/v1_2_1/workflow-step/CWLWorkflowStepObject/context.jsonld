@@ -1,6 +1,27 @@
 {
   "@context": {
     "cwl": "https://w3id.org/cwl/cwl#",
+    "in": {
+      "@id": "cwl:in",
+      "@container": "@id"
+    },
+    "out": {
+      "@id": "cwl:out",
+      "@type": "@id"
+    },
+    "run": {
+      "@id": "cwl:run",
+      "@type": "@id"
+    },
+    "scatter": {
+      "@id": "cwl:scatter",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "scatterMethod": {
+      "@id": "cwl:scatterMethod",
+      "@type": "@vocab"
+    },
     "when": "cwl:when"
   }
 }

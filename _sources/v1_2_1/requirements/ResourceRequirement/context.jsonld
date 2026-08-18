@@ -1,6 +1,7 @@
 {
   "@context": {
     "cwl": "https://w3id.org/cwl/cwl#",
+    "class": "@type",
     "coresMax": "https://w3id.org/cwl/cwl#ResourceRequirement/coresMax",
     "coresMin": "https://w3id.org/cwl/cwl#ResourceRequirement/coresMin",
     "outdirMax": "https://w3id.org/cwl/cwl#ResourceRequirement/outdirMax",

@@ -1,5 +1,6 @@
 examples:
   - title: File input, list form
+    base-uri: https://example.org/
     content: |
       A required `File` input with a command-line binding, adapted from the `reference` input
       of the CWL `binding-test.cwl` conformance test's list-form `inputs`.
@@ -14,6 +15,7 @@ examples:
             }
           }
   - title: Optional string input with documentation
+    base-uri: https://example.org/
     content: |
       An optional string input, documented with `doc` and given a `default` that is used when
       the input is omitted.

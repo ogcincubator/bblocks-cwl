@@ -1,5 +1,6 @@
 examples:
   - title: Label and single-string doc
+    base-uri: https://example.org/
     content: |
       A short `label` alongside a single-string `doc`, adapted from the CWL conformance test
       `cat3-nodocker.cwl`.
@@ -12,6 +13,7 @@ examples:
           }
 
   - title: Doc as an array of strings
+    base-uri: https://example.org/
     content: |
       `doc` may instead be given as an array of strings, rendered as separate paragraphs — useful
       when documentation is authored in multiple parts.

@@ -1,0 +1,10 @@
+additionalSteps:
+  - type: jq
+    code: |
+      if (type=="string" or type=="number" or type=="boolean" or type=="null") then
+        {"http://www.w3.org/1999/02/22-rdf-syntax-ns#value": .}
+      elif (type=="array" and all(.[]; type=="string" or type=="number" or type=="boolean" or type=="null")) then
+        {"http://www.w3.org/1999/02/22-rdf-syntax-ns#value": {"@list": .}}
+      else
+        .
+      end

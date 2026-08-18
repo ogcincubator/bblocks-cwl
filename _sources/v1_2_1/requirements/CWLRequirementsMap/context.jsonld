@@ -1,6 +1,7 @@
 {
   "@context": {
     "cwl": "https://w3id.org/cwl/cwl#",
+    "cwltool": "http://commonwl.org/cwltool#",
     "DockerRequirement": "cwl:DockerRequirement",
     "EnvVarRequirement": "cwl:EnvVarRequirement",
     "InitialWorkDirRequirement": "cwl:InitialWorkDirRequirement",

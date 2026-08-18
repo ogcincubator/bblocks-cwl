@@ -1,5 +1,6 @@
 examples:
   - title: Hints as a list
+    base-uri: https://example.org/
     content: |
       A `CommandLineTool`'s `hints` given as a list, adapted from the CWL conformance test
       `bwa-mem-tool.cwl`. Each entry needs an explicit `class` because, unlike the mapping form,
@@ -20,6 +21,7 @@ examples:
           ]
 
   - title: Hints as a map with an OGC-specific hint
+    base-uri: https://example.org/
     content: |
       `hints` given as a mapping keyed by `class`, using this register's non-standard
       [OGCAPIRequirement](bblocks://ogc.cwl.v1_2_1.requirements.OGCAPIRequirement) to hint that the process
