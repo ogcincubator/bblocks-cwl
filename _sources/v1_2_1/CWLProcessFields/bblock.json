@@ -1,0 +1,15 @@
+{
+  "name": "CWLProcessFields",
+  "itemClass": "schema",
+  "abstract": "The process-definition fields (`inputs`, `outputs`, `requirements`, `hints`,\n`baseCommand`, `arguments`, `stdin`/`stdout`/`stderr`, `scatter`, `scatterMethod`, `intent`, `id`)\nshared by every packaging shape a CWL CommandLineTool/ExpressionTool/Workflow can take, excluding\n`class` itself since the legal `class` values differ by packaging. Not typically profiled on its\nown.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-08-18T00:00:00.000000",
+  "dateOfLastChange": "2026-08-18",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl",
+    "shared-fragment"
+  ]
+}

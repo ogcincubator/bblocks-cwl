@@ -1,56 +1,16 @@
 description: Direct CWL definition instead of the graph representation.
-properties:
-  arguments:
-    $ref: bblocks://ogc.cwl.v1_2_1.CWLArguments
-  baseCommand:
-    $ref: bblocks://ogc.cwl.v1_2_1.CWLCommand
-  class:
-    description: CWL class specification. This is used to differentiate between single
-      Application Package (AP)definitions and Workflow that chains multiple packages.
-    enum:
-    - CommandLineTool
-    - ExpressionTool
-    title: Class
-    type: string
-  hints:
-    $ref: bblocks://ogc.cwl.v1_2_1.CWLHints
-  id:
-    $ref: bblocks://ogc.cwl.v1_2_1.CWLIdentifier
-  inputs:
-    $ref: bblocks://ogc.cwl.v1_2_1.CWLInputsDefinition
-  intent:
-    $ref: bblocks://ogc.cwl.v1_2_1.CWLIntent
-  outputs:
-    $ref: bblocks://ogc.cwl.v1_2_1.CWLOutputsDefinition
-  requirements:
-    $ref: bblocks://ogc.cwl.v1_2_1.CWLRequirements
-  scatter:
-    $ref: bblocks://ogc.cwl.v1_2_1.CWLScatter
-  scatterMethod:
-    $ref: bblocks://ogc.cwl.v1_2_1.CWLScatterMethod
-  stderr:
-    $ref: bblocks://ogc.cwl.v1_2_1.CWLExpression
-    description: 'Destination of the error stream.
-
-      Typically, an expression referring to a desired file name or provided by a CWL
-      input reference.
-
-      '
-  stdin:
-    $ref: bblocks://ogc.cwl.v1_2_1.CWLExpression
-    description: "Source of the input stream. \nTypically, an expression referring\
-      \ to an existing file name or an input of the CWL document.\n"
-  stdout:
-    $ref: bblocks://ogc.cwl.v1_2_1.CWLExpression
-    description: 'Destination of the output stream.
-
-      Typically, an expression referring to a desired file name or provided by a CWL
-      input reference.
-
-      '
-required:
-- class
-- inputs
-- outputs
+allOf:
+- $ref: bblocks://ogc.cwl.v1_2_1.CWLProcessFields
+- properties:
+    class:
+      description: CWL class specification. This is used to differentiate between single
+        Application Package (AP)definitions and Workflow that chains multiple packages.
+      enum:
+      - CommandLineTool
+      - ExpressionTool
+      title: Class
+      type: string
+  required:
+  - class
 title: CWL atomic definition
 type: object

@@ -1,7 +1,7 @@
 These four fields only have meaning when the `type` (or `items`, for arrays) of the input/output
 parameter they belong to resolves to `File`; on any other type they are meaningless and should be
 absent. Applying them is enforced separately by
-[CWLFileOnlyParametersConditional](bblocks://ogc.cwl.v1_2_1.CWLFileOnlyParametersConditional), which
+[type-system/CWLTypeRecordFieldDef](bblocks://ogc.cwl.v1_2_1.type-system.CWLTypeRecordFieldDef), which
 uses an `if`/`then`/`else` conditional on the parameter's `type`/`items` to require this schema when
 `File` is detected and forbid these properties otherwise. The directory-typed counterparts —
 `loadListing` (see [LoadListingRequirement](bblocks://ogc.cwl.v1_2_1.LoadListingRequirement)) — are

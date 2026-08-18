@@ -9,8 +9,7 @@ The device count fields work as a pair: if only `cudaDeviceCountMin` is given, i
 maximum; if only `cudaDeviceCountMax` is given, it is also used as the minimum; if neither is given, the
 default is a single device.
 
-`cudaComputeCapability` (see [CUDAComputeCapability](bblocks://ogc.cwl.v1_2_1.CUDAComputeCapability))
-carries the actual GPU capability matching semantics: a single value is a minimum bound, while an array
-value (see
-[CUDAComputeCapabilityArray](bblocks://ogc.cwl.v1_2_1.CUDAComputeCapabilityArray)) is an explicit
-allow-list of exact capabilities.
+`cudaComputeCapability` carries the actual GPU capability matching semantics: a single string value
+(pattern `\d+\.\d+`) is a minimum bound — GPUs with a higher capability are also accepted — while an
+array value is an explicit allow-list of exact capabilities, selecting only GPUs whose compute
+capability appears in the array.

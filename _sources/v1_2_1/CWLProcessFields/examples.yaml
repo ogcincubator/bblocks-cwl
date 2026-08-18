@@ -1,0 +1,56 @@
+examples:
+  - title: Fields of a command-line process
+    content: |
+      The shared fields as they appear on a `CommandLineTool`-shaped process, regardless of whether
+      it ends up validated as a root document, a nested step `run`, or a `$graph` entry — `class` is
+      added separately by whichever of those wraps this block.
+    snippets:
+      - language: json
+        code: |
+          {
+            "baseCommand": ["echo", "first"],
+            "arguments": ["-n", "foo"],
+            "inputs": {
+              "in": {
+                "type": "Any"
+              }
+            },
+            "outputs": {
+              "out": {
+                "type": "string",
+                "outputBinding": {
+                  "glob": "out.txt",
+                  "loadContents": true,
+                  "outputEval": "$(self[0].contents)"
+                }
+              }
+            },
+            "stdout": "out.txt"
+          }
+
+  - title: Fields of a $graph-only process, referenced by id
+    content: |
+      A minimal fragment showing the fields that matter most for a process meant to be referenced by
+      `id` from elsewhere in the same document (e.g. a `Workflow` step's `run: "#tool-id"`), such as
+      inside a [CWLGraphItem](bblocks://ogc.cwl.v1_2_1.CWLGraphItem).
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "tool-id",
+            "inputs": {
+              "in": {
+                "type": "string"
+              }
+            },
+            "outputs": {
+              "out": {
+                "type": "string"
+              }
+            },
+            "hints": {
+              "DockerRequirement": {
+                "dockerPull": "python:3.11-slim"
+              }
+            }
+          }

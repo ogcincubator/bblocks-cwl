@@ -1,0 +1,52 @@
+description: |
+  The process-definition fields shared by every shape a CWL CommandLineTool/ExpressionTool/Workflow
+  document can take, regardless of how the document is packaged (directly at the root, embedded as a
+  step's inline `run`, or as an entry of a `$graph` array) — everything except `class` itself, since
+  which `class` values are legal differs by packaging (a `$graph` entry additionally allows
+  `Workflow`, which a standalone atomic document does not).
+properties:
+  arguments:
+    $ref: bblocks://ogc.cwl.v1_2_1.CWLArguments
+  baseCommand:
+    $ref: bblocks://ogc.cwl.v1_2_1.CWLCommand
+  hints:
+    $ref: bblocks://ogc.cwl.v1_2_1.CWLHints
+  id:
+    $ref: bblocks://ogc.cwl.v1_2_1.CWLIdentifier
+  inputs:
+    $ref: bblocks://ogc.cwl.v1_2_1.CWLInputsDefinition
+  intent:
+    $ref: bblocks://ogc.cwl.v1_2_1.CWLIntent
+  outputs:
+    $ref: bblocks://ogc.cwl.v1_2_1.CWLOutputsDefinition
+  requirements:
+    $ref: bblocks://ogc.cwl.v1_2_1.CWLRequirements
+  scatter:
+    $ref: bblocks://ogc.cwl.v1_2_1.CWLScatter
+  scatterMethod:
+    $ref: bblocks://ogc.cwl.v1_2_1.CWLScatterMethod
+  stderr:
+    $ref: bblocks://ogc.cwl.v1_2_1.CWLExpression
+    description: 'Destination of the error stream.
+
+      Typically, an expression referring to a desired file name or provided by a CWL
+      input reference.
+
+      '
+  stdin:
+    $ref: bblocks://ogc.cwl.v1_2_1.CWLExpression
+    description: "Source of the input stream. \nTypically, an expression referring\
+      \ to an existing file name or an input of the CWL document.\n"
+  stdout:
+    $ref: bblocks://ogc.cwl.v1_2_1.CWLExpression
+    description: 'Destination of the output stream.
+
+      Typically, an expression referring to a desired file name or provided by a CWL
+      input reference.
+
+      '
+required:
+- inputs
+- outputs
+title: CWL process fields
+type: object

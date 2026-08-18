@@ -18,7 +18,9 @@ can take:
 
 Because a record field's `type` may itself resolve to `File` or `Directory` (directly, as an
 optional/array variant such as `File?`/`Directory[]`, or as part of a type union), this schema also
-conditionally admits the File-only parameters (`format`, `loadContents`, `secondaryFiles`,
-`streamable`) and the Directory-only parameter (`loadListing`) — enforced, and disallowed for
-non-matching types, by the `CWLFileOnlyParametersConditional` and `CWLDirectoryOnlyParametersConditional`
-blocks this schema composes.
+conditionally admits the File-only parameters
+([CWLFileOnlyParameters](bblocks://ogc.cwl.v1_2_1.CWLFileOnlyParameters): `format`, `loadContents`,
+`secondaryFiles`, `streamable`) and the Directory-only parameter
+([CWLDirectoryOnlyParameters](bblocks://ogc.cwl.v1_2_1.CWLDirectoryOnlyParameters): `loadListing`) —
+via `if`/`then`/`else` conditional logic built directly into this schema, which disallows them
+outright for non-matching types.

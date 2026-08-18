@@ -17,4 +17,4 @@ precedence:
 
 This block only declares the `loadListing` property itself; the conditional logic that restricts its
 use to `Directory`-typed parameters lives in
-[CWLDirectoryOnlyParametersConditional](bblocks://ogc.cwl.v1_2_1.CWLDirectoryOnlyParametersConditional).
+[type-system/CWLTypeRecordFieldDef](bblocks://ogc.cwl.v1_2_1.type-system.CWLTypeRecordFieldDef).
