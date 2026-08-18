@@ -1,0 +1,19 @@
+{
+  "name": "CWL Ontology",
+  "itemClass": "model",
+  "abstract": "The RDFS vocabulary/ontology for the Common Workflow Language (CWL) v1.2, published by the CWL\nproject at `https://w3id.org/cwl/cwl#` (`cwl:`). It defines an `rdfs:Class` for every CWL document\ntype (`Workflow`, `CommandLineTool`, `DockerRequirement`, ...) and their `rdfs:subClassOf` relations,\nand is the vocabulary the rest of this register's blocks bind their properties to via `context.jsonld`.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-08-18T19:19:38.980748",
+  "dateOfLastChange": "2026-08-18",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/cwl.ttl",
+  "version": "1.2.1",
+  "tags": [
+    "cwl",
+    "ontology",
+    "vocabulary"
+  ],
+  "concept": [
+    "https://w3id.org/cwl/cwl#"
+  ]
+}

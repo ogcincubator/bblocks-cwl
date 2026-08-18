@@ -1,0 +1,19 @@
+examples:
+  - title: DockerRequirement's place in the class hierarchy
+    content: |
+      An excerpt of the ontology showing how `cwl:DockerRequirement` relates to the rest of the
+      vocabulary: it is one of several `rdfs:subClassOf cwl:ProcessRequirement`, the abstract class
+      shared by every `requirements`/`hints` entry.
+    snippets:
+      - language: turtle
+        code: |
+          @prefix cwl: <https://w3id.org/cwl/cwl#> .
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+          cwl:ProcessRequirement a rdfs:Class .
+
+          cwl:DockerRequirement a rdfs:Class ;
+              rdfs:subClassOf cwl:ProcessRequirement .
+
+          cwl:EnvVarRequirement a rdfs:Class ;
+              rdfs:subClassOf cwl:ProcessRequirement .

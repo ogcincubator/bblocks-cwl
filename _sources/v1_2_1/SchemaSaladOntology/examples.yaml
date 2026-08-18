@@ -1,0 +1,21 @@
+examples:
+  - title: RecordSchema and its named-field subtype
+    content: |
+      An excerpt of the metaschema vocabulary: `sld:SaladRecordSchema`, the schema-salad construct
+      used to define CWL's record types (e.g. `DockerRequirement`), is a subclass of the more general
+      `sld:RecordSchema`, and carries an `sld:abstract` property used to mark mixin base types.
+    snippets:
+      - language: turtle
+        code: |
+          @prefix sld: <https://w3id.org/cwl/salad#> .
+          @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+          sld:RecordSchema a rdfs:Class .
+
+          sld:SaladRecordSchema a rdfs:Class ;
+              rdfs:subClassOf sld:RecordSchema,
+                  sld:NamedType .
+
+          <https://w3id.org/cwl/salad#SaladRecordSchema/abstract> a rdf:Property ;
+              rdfs:domain sld:SaladRecordSchema .

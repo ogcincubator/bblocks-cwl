@@ -11,5 +11,8 @@
   "version": "1.2.1",
   "tags": [
     "cwl"
+  ],
+  "dependsOn": [
+    "bblocks://ogc.cwl.v1_2_1.CWLOntology"
   ]
 }
