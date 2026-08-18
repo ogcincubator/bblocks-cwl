@@ -14,4 +14,4 @@ For example, the IRI `https://packages.debian.org/bowtie` could be resolved with
 software concept rather than a particular package manager entry.
 
 A `SoftwarePackage` normally appears as an item of
-[SoftwareRequirement](bblocks://ogc.cwl.v1_2_1.SoftwareRequirement)'s `packages` property.
+[SoftwareRequirement](bblocks://ogc.cwl.v1_2_1.requirements.SoftwareRequirement)'s `packages` property.

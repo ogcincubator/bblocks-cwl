@@ -10,7 +10,7 @@ properties:
   baseCommand:
     $ref: bblocks://ogc.cwl.v1_2_1.CWLCommand
   hints:
-    $ref: bblocks://ogc.cwl.v1_2_1.CWLHints
+    $ref: bblocks://ogc.cwl.v1_2_1.requirements.CWLHints
   id:
     $ref: bblocks://ogc.cwl.v1_2_1.CWLIdentifier
   inputs:
@@ -20,7 +20,7 @@ properties:
   outputs:
     $ref: bblocks://ogc.cwl.v1_2_1.CWLOutputsDefinition
   requirements:
-    $ref: bblocks://ogc.cwl.v1_2_1.CWLRequirements
+    $ref: bblocks://ogc.cwl.v1_2_1.requirements.CWLRequirements
   scatter:
     $ref: bblocks://ogc.cwl.v1_2_1.CWLScatter
   scatterMethod:

@@ -7,4 +7,4 @@ Together with any `inputBinding` declared on the tool's inputs, these bindings a
 numeric `position` (lower values first, default `0`; ties broken by the input's declaration order)
 to build the final command line, after the leading elements from
 [CWLCommand](bblocks://ogc.cwl.v1_2_1.CWLCommand). When a value needs shell metacharacters or
-quoting beyond a plain literal, see [ShellCommandRequirement](bblocks://ogc.cwl.v1_2_1.ShellCommandRequirement).
+quoting beyond a plain literal, see [ShellCommandRequirement](bblocks://ogc.cwl.v1_2_1.requirements.ShellCommandRequirement).

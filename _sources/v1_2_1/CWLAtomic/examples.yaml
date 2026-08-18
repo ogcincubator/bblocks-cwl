@@ -30,7 +30,7 @@ examples:
   - title: Dockerized CommandLineTool with mapping-form inputs and outputs
     content: |
       The same kind of tool as above, but with `inputs`/`outputs` given as an object keyed by
-      identifier instead of an array, and a [DockerRequirement](bblocks://ogc.cwl.v1_2_1.DockerRequirement)
+      identifier instead of an array, and a [DockerRequirement](bblocks://ogc.cwl.v1_2_1.requirements.DockerRequirement)
       declared under `hints` to pin the execution container.
     snippets:
       - language: json

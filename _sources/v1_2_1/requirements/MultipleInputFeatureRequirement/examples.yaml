@@ -1,0 +1,13 @@
+examples:
+  - title: Enabling multiple inbound data links
+    content: |
+      Adapted from the CWL conformance test `count-lines7-wf.cwl`: a `Workflow` declares
+      `MultipleInputFeatureRequirement` so that a step input's `source` field
+      (see [CWLWorkflowStepInputBase](bblocks://ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepInputBase)) can list
+      more than one upstream parameter, merged according to `linkMerge`.
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "MultipleInputFeatureRequirement"
+          }

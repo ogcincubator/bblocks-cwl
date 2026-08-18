@@ -1,4 +1,4 @@
-To use scatter/gather, [ScatterFeatureRequirement](bblocks://ogc.cwl.v1_2_1.ScatterFeatureRequirement)
+To use scatter/gather, [ScatterFeatureRequirement](bblocks://ogc.cwl.v1_2_1.requirements.ScatterFeatureRequirement)
 must be specified in the workflow or workflow step requirements.
 
 A "scatter" operation specifies that the associated workflow step or subworkflow should execute

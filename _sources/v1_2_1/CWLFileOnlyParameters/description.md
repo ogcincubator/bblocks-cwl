@@ -4,7 +4,7 @@ absent. Applying them is enforced separately by
 [type-system/CWLTypeRecordFieldDef](bblocks://ogc.cwl.v1_2_1.type-system.CWLTypeRecordFieldDef), which
 uses an `if`/`then`/`else` conditional on the parameter's `type`/`items` to require this schema when
 `File` is detected and forbid these properties otherwise. The directory-typed counterparts —
-`loadListing` (see [LoadListingRequirement](bblocks://ogc.cwl.v1_2_1.LoadListingRequirement)) — are
+`loadListing` (see [LoadListingRequirement](bblocks://ogc.cwl.v1_2_1.requirements.LoadListingRequirement)) — are
 covered separately by
 [CWLDirectoryOnlyParameters](bblocks://ogc.cwl.v1_2_1.CWLDirectoryOnlyParameters).
 

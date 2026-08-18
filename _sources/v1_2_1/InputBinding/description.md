@@ -38,7 +38,7 @@ type.
   is not evaluated and nothing is added to the command line. This field is required when the binding
   appears under `arguments` rather than under an input parameter.
 - **`shellQuote`** — only meaningful when
-  [ShellCommandRequirement](bblocks://ogc.cwl.v1_2_1.ShellCommandRequirement) is in effect for the
+  [ShellCommandRequirement](bblocks://ogc.cwl.v1_2_1.requirements.ShellCommandRequirement) is in effect for the
   tool; controls whether the value is shell-quoted (default `true`). Set to `false` to deliberately
   inject shell metacharacters, e.g. for pipes and redirections.
 

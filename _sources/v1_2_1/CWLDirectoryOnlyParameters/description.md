@@ -12,7 +12,7 @@ precedence:
 
 1. `loadListing` on the individual parameter itself;
 2. otherwise, the value inherited from a
-   [LoadListingRequirement](bblocks://ogc.cwl.v1_2_1.LoadListingRequirement) in effect for the step;
+   [LoadListingRequirement](bblocks://ogc.cwl.v1_2_1.requirements.LoadListingRequirement) in effect for the step;
 3. otherwise, `no_listing` by default.
 
 This block only declares the `loadListing` property itself; the conditional logic that restricts its

@@ -3,7 +3,7 @@ examples:
     content: |
       A `CommandLineTool` requirement that imports an external schema definition document, as
       used in practice to share custom type definitions across CWL files (e.g. via
-      [SchemaDefRequirement](bblocks://ogc.cwl.v1_2_1.SchemaDefRequirement)).
+      [SchemaDefRequirement](bblocks://ogc.cwl.v1_2_1.requirements.SchemaDefRequirement)).
     snippets:
       - language: json
         code: |

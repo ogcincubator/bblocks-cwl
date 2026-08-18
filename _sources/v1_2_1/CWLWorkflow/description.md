@@ -36,11 +36,11 @@ fields that only apply at the root of a CWL file: `cwlVersion`
 ([CWLMetadata](bblocks://ogc.cwl.v1_2_1.CWLMetadata)), and documentation
 ([CWLDocumentation](bblocks://ogc.cwl.v1_2_1.CWLDocumentation)). A workflow's own steps can, in
 turn, nest another workflow definition in their `run` field — see
-[CWLWorkflowStepObject](bblocks://ogc.cwl.v1_2_1.CWLWorkflowStepObject) — which reuses
+[CWLWorkflowStepObject](bblocks://ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepObject) — which reuses
 `CWLWorkflowClass` and `CWLWorkflowBase` but not `CWLVersion`, since `cwlVersion` is only declared
 once, at the document root.
 
-[ScatterFeatureRequirement](bblocks://ogc.cwl.v1_2_1.ScatterFeatureRequirement) and
-[SubworkflowFeatureRequirement](bblocks://ogc.cwl.v1_2_1.SubworkflowFeatureRequirement) are
+[ScatterFeatureRequirement](bblocks://ogc.cwl.v1_2_1.requirements.ScatterFeatureRequirement) and
+[SubworkflowFeatureRequirement](bblocks://ogc.cwl.v1_2_1.requirements.SubworkflowFeatureRequirement) are
 available as standard extensions to core workflow semantics, letting a step fan out over an array
 input or run a nested workflow, respectively.

@@ -1,0 +1,14 @@
+$comment: 'For any new items added, ensure they are added under ''class'' of ''UnknownRequirement''
+  as well.
+
+  Otherwise, insufficiently restrictive classes could cause multiple matches, failing
+  the ''oneOf'' condition.
+
+  '
+oneOf:
+- $ref: bblocks://ogc.cwl.v1_2_1.requirements.CWLRequirementsItem
+- $ref: bblocks://ogc.cwl.v1_2_1.requirements.BuiltinRequirement
+- $ref: bblocks://ogc.cwl.v1_2_1.requirements.OGCAPIRequirement
+- $ref: bblocks://ogc.cwl.v1_2_1.requirements.WPS1Requirement
+- $ref: bblocks://ogc.cwl.v1_2_1.requirements.UnknownRequirement
+title: CWLHintsItem

@@ -1,0 +1,39 @@
+description: Non-failing additional hints that can help resolve extra requirements.
+$defs:
+  CWLHintsMap:
+    anyOf:
+      - $ref: bblocks://ogc.cwl.v1_2_1.requirements.CWLRequirementsMap
+      - additionalProperties:
+          $ref: bblocks://ogc.cwl.v1_2_1.requirements.UnknownRequirement
+        properties:
+          BuiltinRequirement:
+            $ref: bblocks://ogc.cwl.v1_2_1.requirements.BuiltinRequirement
+          OGCAPIRequirement:
+            $ref: bblocks://ogc.cwl.v1_2_1.requirements.OGCAPIRequirement
+          WPS1Requirement:
+            $ref: bblocks://ogc.cwl.v1_2_1.requirements.WPS1Requirement
+        type: object
+    title: CWLHintsMap
+
+  CWLHintsList:
+    items:
+      oneOf:
+        - allOf:
+            - $comment: 'When using the list representation, ''class'' is required to indicate
+            which one is being represented.
+
+            When using the mapping representation, ''class'' is optional since it''s the
+            key, but it must match by name.
+
+            '
+              required:
+                - class
+            - $ref: bblocks://ogc.cwl.v1_2_1.requirements.CWLHintsItem
+        - $ref: bblocks://ogc.cwl.v1_2_1.CWLImport
+    title: CWLHintsList
+    type: array
+
+oneOf:
+- $ref: '#/$defs/CWLHintsMap'
+- $ref: '#/$defs/CWLHintsList'
+title: CWLHints

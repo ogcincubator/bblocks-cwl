@@ -1,0 +1,27 @@
+$comment: 'For any new items added, ensure they are added under ''class'' of ''UnknownRequirement''
+  as well.
+
+  Otherwise, insufficiently restrictive classes could cause multiple matches, failing
+  the ''oneOf'' condition.
+
+  '
+oneOf:
+- $ref: bblocks://ogc.cwl.v1_2_1.requirements.cwltool-CUDARequirement
+- $ref: bblocks://ogc.cwl.v1_2_1.requirements.DockerRequirement
+- $ref: bblocks://ogc.cwl.v1_2_1.requirements.SoftwareRequirement
+- $ref: bblocks://ogc.cwl.v1_2_1.requirements.ShellCommandRequirement
+- $ref: bblocks://ogc.cwl.v1_2_1.requirements.EnvVarRequirement
+- $ref: bblocks://ogc.cwl.v1_2_1.requirements.SchemaDefRequirement
+- $ref: bblocks://ogc.cwl.v1_2_1.requirements.InitialWorkDirRequirement
+- $ref: bblocks://ogc.cwl.v1_2_1.requirements.InlineJavascriptRequirement
+- $ref: bblocks://ogc.cwl.v1_2_1.requirements.InplaceUpdateRequirement
+- $ref: bblocks://ogc.cwl.v1_2_1.requirements.LoadListingRequirement
+- $ref: bblocks://ogc.cwl.v1_2_1.requirements.NetworkAccessRequirement
+- $ref: bblocks://ogc.cwl.v1_2_1.requirements.ResourceRequirement
+- $ref: bblocks://ogc.cwl.v1_2_1.requirements.ScatterFeatureRequirement
+- $ref: bblocks://ogc.cwl.v1_2_1.requirements.ToolTimeLimitRequirement
+- $ref: bblocks://ogc.cwl.v1_2_1.requirements.WorkReuseRequirement
+- $ref: bblocks://ogc.cwl.v1_2_1.requirements.MultipleInputFeatureRequirement
+- $ref: bblocks://ogc.cwl.v1_2_1.requirements.StepInputExpressionRequirement
+- $ref: bblocks://ogc.cwl.v1_2_1.requirements.SubworkflowFeatureRequirement
+title: CWLRequirementsItem

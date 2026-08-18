@@ -1,5 +1,5 @@
 A `CWLExpression` is a string value that embeds a **parameter reference** (`$(...)`) or, when
-[InlineJavascriptRequirement](bblocks://ogc.cwl.v1_2_1.InlineJavascriptRequirement) is declared, a full
+[InlineJavascriptRequirement](bblocks://ogc.cwl.v1_2_1.requirements.InlineJavascriptRequirement) is declared, a full
 **expression** (`$(...)` or `${...}`), to be resolved by the workflow platform at runtime rather than
 taken as a literal string.
 
@@ -20,7 +20,7 @@ object), `self` (a field-specific contextual value), and `runtime` (execution co
 Expressions (`$(...)` or `${...}`) are arbitrary ECMAScript 5.1 code — an expression or a function body,
 respectively — evaluated in a sandboxed context that must return a JSON-compatible value (`null`,
 string, number, boolean, array, or object). They are an optional CWL feature: a document may only use
-them if it declares [InlineJavascriptRequirement](bblocks://ogc.cwl.v1_2_1.InlineJavascriptRequirement),
+them if it declares [InlineJavascriptRequirement](bblocks://ogc.cwl.v1_2_1.requirements.InlineJavascriptRequirement),
 which is also where any shared `expressionLib` helper code is declared.
 
 ## String interpolation
