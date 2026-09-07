@@ -1,13 +1,4 @@
 additionalProperties: false
-oneOf:
-- required:
-  - dockerPull
-- required:
-  - dockerImport
-- required:
-  - dockerLoad
-- required:
-  - dockerFile
 properties:
   class:
     enum:
