@@ -1,0 +1,10 @@
+path	@id	schema
+/class	@type	/github/workspace/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/schema.yaml
+/listing	https://w3id.org/cwl/cwl#listing	/github/workspace/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/schema.yaml
+/listing/_oneOf/1/_oneOf/2/entry		/github/workspace/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/schema.yaml
+/listing/_oneOf/1/_oneOf/2/entryname		/github/workspace/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/schema.yaml
+/listing/_oneOf/1/_oneOf/2/writable	https://w3id.org/cwl/cwl#Dirent/writable	/github/workspace/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/schema.yaml
+/listing/_oneOf/1/_oneOf/3/checksum	https://w3id.org/cwl/cwl#File/checksum	/github/workspace/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/schema.yaml
+/listing/_oneOf/1/_oneOf/3/class	@type	/github/workspace/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/schema.yaml
+/listing/_oneOf/1/_oneOf/3/location		/github/workspace/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/schema.yaml
+/listing/_oneOf/1/_oneOf/3/size	https://w3id.org/cwl/cwl#File/size	/github/workspace/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/schema.yaml

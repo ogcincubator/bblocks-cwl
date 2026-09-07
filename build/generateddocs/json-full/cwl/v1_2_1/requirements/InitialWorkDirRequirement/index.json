@@ -1,0 +1,90 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.requirements.InitialWorkDirRequirement",
+  "name": "InitialWorkDirRequirement",
+  "itemClass": "schema",
+  "abstract": "Defines a list of files and subdirectories that must be\nstaged by the workflow platform prior to executing the command line tool, normally within the\ndesignated output directory (though containers may stage them elsewhere).",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.685221",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.Checksum",
+    "ogc.cwl.v1_2_1.CWLExpression",
+    "ogc.cwl.v1_2_1.CWLOntology"
+  ],
+  "shaclShapes": {},
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/InitialWorkDirRequirement/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/InitialWorkDirRequirement/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/InitialWorkDirRequirement/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/requirements/InitialWorkDirRequirement/",
+  "description": "Define a list of files and subdirectories that must be staged by the workflow platform prior to\nexecuting the command line tool. Normally files are staged within the designated output directory;\nhowever, when running inside containers, files may be staged at arbitrary locations (see\n`entryname` below). Together with `DockerRequirement.dockerOutputDirectory` this makes it possible to\ncontrol the locations of both input and output files when running in containers.\n\n`listing` may be a single [CWLExpression](bblocks://ogc.cwl.v1_2_1.CWLExpression) that evaluates to\nthe whole list, or an array whose items are each one of: `null` (no effect), a `CWLExpression`, a\n`Dirent` (called `DirectoryListingDirent` in this schema), a `File`/`Directory` object\n(`DirectoryListingFileOrDirectory`), or an array of `File`/`Directory` objects.\n\nThe return type of each expression item must itself validate as `[\"null\", File, Directory, Dirent,\n{type: array, items: [File, Directory]}]`:\n\n- A `File` or `Directory` returned by an expression is added to the designated output directory\n  before the tool runs.\n- A `Dirent` (listed directly or returned by an expression) specifies a file to create or stage in the\n  designated output directory before the tool runs. Its `entry` may be a string literal (staged as\n  the text content of a new file), an expression evaluating to a `File`/`Directory` object or array of\n  such objects (staged as-is), or an expression evaluating to `null` (no effect) or to some other\n  JSON value, which is serialized to JSON text and staged as file content.\n- `entryname` gives the staged file or subdirectory its target name, overriding the `basename` of a\n  `File`/`Directory` `entry`. It is required when `entry` evaluates to file contents only, optional\n  when `entry` evaluates to a `File`/`Directory` object with a `basename`, and invalid when `entry`\n  evaluates to an array of `File`/`Directory` objects. A relative `entryname` names a location inside\n  the designated output directory (one starting with `../`, or resolving above it, is an error); an\n  absolute `entryname` is only valid when `DockerRequirement` is in effect and the tool runs inside a\n  container with its own root filesystem, in which case it names an absolute path inside the\n  container.\n- `writable` (default `false`) marks the staged `File`/`Directory` as writable by the tool, isolated\n  from any other running process; a writable `Directory` implies all of its contents are writable too.\n  Files not marked writable may be made available via bind mount or filesystem link rather than\n  copied. Disruptive in-place changes are otherwise disallowed unless\n  [InplaceUpdateRequirement](bblocks://ogc.cwl.v1_2_1.requirements.InplaceUpdateRequirement)'s `inplaceUpdate` is\n  `true`.\n\n`File`/`Directory` inputs that also appear in the `listing` have their `path` updated to their staged\nlocation; if the same `File`/`Directory` appears more than once in the listing, the implementation may\nchoose any single value for `path`.\n\nSee also: the [CWL v1.2 CommandLineTool spec \u2014 InitialWorkDirRequirement](https://www.commonwl.org/v1.2/CommandLineTool.html#InitialWorkDirRequirement).\n",
+  "examples": [
+    {
+      "title": "Stage a generated configuration file",
+      "base-uri": "https://example.org/",
+      "content": "A single `Dirent` entry that creates `example.conf` in the designated output directory before\nthe tool runs, with contents built from an input parameter via a\n[CWLExpression](bblocks://ogc.cwl.v1_2_1.CWLExpression).\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/InitialWorkDirRequirement/example_1_1.json",
+          "sizeBytes": 157,
+          "code": "{\n  \"class\": \"InitialWorkDirRequirement\",\n  \"listing\": [\n    {\n      \"entryname\": \"example.conf\",\n      \"entry\": \"CONFIGVAR=$(inputs.message)\\n\"\n    }\n  ]\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/InitialWorkDirRequirement/example_1_1.jsonld",
+          "sizeBytes": 297,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/context.jsonld\",\n  \"class\": \"InitialWorkDirRequirement\",\n  \"listing\": [\n    {\n      \"entryname\": \"example.conf\",\n      \"entry\": \"CONFIGVAR=$(inputs.message)\\n\"\n    }\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/InitialWorkDirRequirement/example_1_1.ttl",
+          "sizeBytes": 122,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n\n[] a <https://example.org/InitialWorkDirRequirement> ;\n    cwl:listing [ ] .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Stage an input file under a new name, writable",
+      "base-uri": "https://example.org/",
+      "content": "A `Dirent` that stages an input `File` under a new `entryname`, marked `writable` so the tool\nmay modify it in place, alongside a plain `File` object staged as-is.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/InitialWorkDirRequirement/example_2_1.json",
+          "sizeBytes": 258,
+          "code": "{\n  \"class\": \"InitialWorkDirRequirement\",\n  \"listing\": [\n    {\n      \"entry\": \"$(inputs.infile)\",\n      \"entryname\": \"bob.txt\",\n      \"writable\": true\n    },\n    {\n      \"class\": \"File\",\n      \"location\": \"https://example.org/data/reference.txt\"\n    }\n  ]\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/InitialWorkDirRequirement/example_2_1.jsonld",
+          "sizeBytes": 398,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/context.jsonld\",\n  \"class\": \"InitialWorkDirRequirement\",\n  \"listing\": [\n    {\n      \"entry\": \"$(inputs.infile)\",\n      \"entryname\": \"bob.txt\",\n      \"writable\": true\n    },\n    {\n      \"class\": \"File\",\n      \"location\": \"https://example.org/data/reference.txt\"\n    }\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/InitialWorkDirRequirement/example_2_1.ttl",
+          "sizeBytes": 283,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#Dirent/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a <https://example.org/InitialWorkDirRequirement> ;\n    cwl:listing [ ns1:writable true ],\n        [ a <https://example.org/File> ] .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$defs:\n  InitialWorkDirListing:\n    oneOf:\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    - items:\n        oneOf:\n        - type: 'null'\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n        - $ref: '#/$defs/DirectoryListingDirent'\n        - $ref: '#/$defs/DirectoryListingFileOrDirectory'\n        - items:\n            $ref: '#/$defs/DirectoryListingFileOrDirectory'\n          type: array\n      title: InitialWorkDirListingItems\n      type: array\n    title: InitialWorkDirListing\n  DirectoryListingDirent:\n    $comment: Called 'Dirent' in documentation.\n    additionalProperties: false\n    properties:\n      entry:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n      entryname:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n      writable:\n        type: boolean\n        x-jsonld-id: https://w3id.org/cwl/cwl#Dirent/writable\n    required:\n    - entry\n    title: DirectoryListingDirent\n    type: object\n  DirectoryListingFileOrDirectory:\n    additionalProperties: false\n    properties:\n      checksum:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/Checksum/schema.yaml\n        x-jsonld-id: https://w3id.org/cwl/cwl#File/checksum\n      class:\n        enum:\n        - File\n        - Directory\n        type: string\n        x-jsonld-id: '@type'\n      location:\n        type: string\n      size:\n        minimum: 0\n        type: integer\n        x-jsonld-id: https://w3id.org/cwl/cwl#File/size\n    required:\n    - class\n    - location\n    type: object\nadditionalProperties: false\nproperties:\n  class:\n    enum:\n    - InitialWorkDirRequirement\n    type: string\n    x-jsonld-id: '@type'\n  listing:\n    $ref: '#/$defs/InitialWorkDirListing'\n    x-jsonld-id: https://w3id.org/cwl/cwl#listing\nrequired:\n- listing\ntitle: InitialWorkDirRequirement\ntype: object\nx-jsonld-extra-terms:\n  writable: https://w3id.org/cwl/cwl#Dirent/writable\n  checksum: https://w3id.org/cwl/cwl#File/checksum\n  size: https://w3id.org/cwl/cwl#File/size\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/requirements/InitialWorkDirRequirement"
+}

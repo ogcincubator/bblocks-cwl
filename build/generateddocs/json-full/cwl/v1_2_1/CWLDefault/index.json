@@ -7,7 +7,7 @@
   "abstract": "Default value of input if not provided for task execution.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.714555",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -16,8 +16,6 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLDefaultObject",
-    "ogc.cwl.v1_2_1.AnyLiteralType",
     "ogc.cwl.v1_2_1.CWLDefaultLocation"
   ],
   "schema": {
@@ -26,10 +24,73 @@
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDefault/schema.yaml",
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefault/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefault/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDefault/",
-  "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "$defs:\n  AnyLiteralList:\n    items:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/AnyLiteralType/schema.yaml\n    title: AnyLiteralList\n    type: array\ndescription: Default value of input if not provided for task execution.\noneOf:\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/AnyLiteralType/schema.yaml\n- $ref: '#/$defs/AnyLiteralList'\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultLocation/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultObject/schema.yaml\n- items:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultObject/schema.yaml\n  type: array\ntitle: CWLDefault\n",
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLDefault/",
+  "description": "The `default` field of an [`InputParameter`](https://www.commonwl.org/v1.2/Workflow.html#InputParameter)\nsupplies the value to use for that input when it is missing from the input object, or when its value\nis `null`. Default values are applied before evaluating any expressions that depend on the input\n(e.g. a dependent `valueFrom` field).\n\nThis block enumerates the shapes a `default` value may take:\n\n- a single literal \u2014 number, boolean or string (`AnyLiteralType`);\n- an array of such literals (`AnyLiteralList`);\n- a [`CWLDefaultLocation`](bblocks://ogc.cwl.v1_2_1.CWLDefaultLocation) object \u2014 a literal `File` or\n  `Directory` identified by `path`/`location` \u2014 for File- or Directory-typed inputs;\n- an arbitrary JSON object that does *not* declare a `File`/`Directory` `class` (`CWLDefaultObject`),\n  covering `record`-typed defaults; or\n- an array of such objects.\n\nThe `CWLDefaultObject` branch's `not` constraint exists purely to keep it from swallowing what is\nactually a `File`/`Directory` default, so that shape is unambiguously matched by\n[`CWLDefaultLocation`](bblocks://ogc.cwl.v1_2_1.CWLDefaultLocation) instead. This block does not check\nthe default's shape against the input's declared `type` \u2014 see\n[CWLDefaultTypedConditional](bblocks://ogc.cwl.v1_2_1.CWLDefaultTypedConditional) for that.\n",
+  "examples": [
+    {
+      "title": "Literal string default",
+      "base-uri": "https://example.org/",
+      "content": "A plain string literal used as the `default` value of a `string`-typed input parameter,\nadapted from [`paramref_arguments_inputs.cwl`](https://github.com/common-workflow-language/cwl-v1.2/blob/main/tests/paramref_arguments_inputs.cwl).\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDefault/example_1_1.json",
+          "sizeBytes": 4,
+          "code": "\"z\"\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDefault/example_1_1.jsonld",
+          "sizeBytes": 174,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefault/context.jsonld\",\n  \"http://www.w3.org/1999/02/22-rdf-syntax-ns#value\": \"z\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDefault/example_1_1.ttl",
+          "sizeBytes": 82,
+          "code": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n\n[] rdf:value \"z\" .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "File default identified by location",
+      "base-uri": "https://example.org/",
+      "content": "A `default` value for a `File`-typed input, given as a literal File object identified by\n`location`, adapted from\n[`bwa-mem-tool.cwl`](https://github.com/common-workflow-language/cwl-v1.2/blob/main/tests/bwa-mem-tool.cwl).\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDefault/example_2_1.json",
+          "sizeBytes": 47,
+          "code": "{\n  \"class\": \"File\",\n  \"location\": \"args.py\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDefault/example_2_1.jsonld",
+          "sizeBytes": 159,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefault/context.jsonld\",\n  \"class\": \"File\",\n  \"location\": \"args.py\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDefault/example_2_1.ttl",
+          "sizeBytes": 63,
+          "code": "\n<https://example.org/args.py> a <https://example.org/File> .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$defs:\n  AnyLiteralType:\n    oneOf:\n    - type: number\n    - type: boolean\n    - type: string\n    title: AnyLiteralType\n  AnyLiteralList:\n    items:\n      $ref: '#/$defs/AnyLiteralType'\n    title: AnyLiteralList\n    type: array\n  CWLDefaultObject:\n    additionalProperties: {}\n    not:\n      $comment: Avoid false-positive match of default File or Directory location definition.\n      properties:\n        class:\n          enum:\n          - File\n          - Directory\n          type: string\n    title: CWLDefaultObject\n    type: object\ndescription: Default value of input if not provided for task execution.\noneOf:\n- $ref: '#/$defs/AnyLiteralType'\n- $ref: '#/$defs/AnyLiteralList'\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultLocation/schema.yaml\n- $ref: '#/$defs/CWLDefaultObject'\n- items:\n    $ref: '#/$defs/CWLDefaultObject'\n  type: array\ntitle: CWLDefault\n",
+  "semanticUplift": {
+    "additionalSteps": [
+      {
+        "type": "jq",
+        "code": "if (type==\"string\" or type==\"number\" or type==\"boolean\" or type==\"null\") then\n  {\"http://www.w3.org/1999/02/22-rdf-syntax-ns#value\": .}\nelif (type==\"array\" and all(.[]; type==\"string\" or type==\"number\" or type==\"boolean\" or type==\"null\")) then\n  {\"http://www.w3.org/1999/02/22-rdf-syntax-ns#value\": {\"@list\": .}}\nelse\n  .\nend\n",
+        "stage": "pre"
+      }
+    ]
+  },
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLDefault"
 }

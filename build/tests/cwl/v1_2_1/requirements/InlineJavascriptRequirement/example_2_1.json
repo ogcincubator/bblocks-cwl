@@ -1,0 +1,9 @@
+{
+  "class": "InlineJavascriptRequirement",
+  "expressionLib": [
+    {
+      "$include": "underscore.js"
+    },
+    "var t = function(s) { return _.template(s, {variable: 'data'})({'inputs': inputs}); };"
+  ]
+}

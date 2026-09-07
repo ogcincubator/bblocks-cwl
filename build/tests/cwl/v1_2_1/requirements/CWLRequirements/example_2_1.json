@@ -1,0 +1,9 @@
+{
+  "DockerRequirement": {
+    "dockerPull": "docker.io/debian:stable-slim"
+  },
+  "ResourceRequirement": {
+    "coresMin": 1.25,
+    "coresMax": 1.75
+  }
+}

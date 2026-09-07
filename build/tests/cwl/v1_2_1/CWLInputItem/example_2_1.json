@@ -1,0 +1,6 @@
+{
+  "id": "message",
+  "type": "string?",
+  "default": "hello world",
+  "doc": "Message to print"
+}

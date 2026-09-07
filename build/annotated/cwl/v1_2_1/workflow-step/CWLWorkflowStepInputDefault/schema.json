@@ -1,0 +1,14 @@
+{
+  "$comment": "CWL 'type' is not specified at this level for step inputs\n(it is provided by the mapped input of the nested tool instead).\nTherefore, cannot validate against 'CWLDefaultTypedConditional'.\n",
+  "properties": {
+    "default": {
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefault/schema.json",
+      "x-jsonld-id": "https://w3id.org/cwl/salad#default",
+      "x-jsonld-container": "@list"
+    }
+  },
+  "type": "object",
+  "x-jsonld-prefixes": {
+    "sld": "https://w3id.org/cwl/salad#"
+  }
+}

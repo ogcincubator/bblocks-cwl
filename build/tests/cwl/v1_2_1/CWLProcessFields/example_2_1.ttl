@@ -1,0 +1,14 @@
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+@prefix ns1: <https://w3id.org/cwl/cwl#DockerRequirement/> .
+@prefix sld: <https://w3id.org/cwl/salad#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/tool-id> cwl:hints [ a cwl:DockerRequirement ;
+            ns1:dockerPull "python:3.11-slim" ] ;
+    cwl:inputs <https://example.org/in> ;
+    cwl:outputs <https://example.org/out> .
+
+<https://example.org/in> sld:type xsd:string .
+
+<https://example.org/out> sld:type xsd:string .
+

@@ -4,10 +4,10 @@
   "itemIdentifier": "ogc.cwl.v1_2_1.CWLVersion",
   "name": "CWLVersion",
   "itemClass": "schema",
-  "abstract": "CWLVersion",
+  "abstract": "The `cwlVersion` field: declares which published version of the CWL\nstandard a document conforms to. Required once at the root of every CWL document.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.673508",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -20,10 +20,39 @@
     "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLVersion/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLVersion/schema.yaml",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLVersion/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLVersion/",
-  "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "properties:\n  clwVersion:\n    description: CWL version of the described application package.\n    pattern: ^v\\d+(\\.\\d+(\\.\\d+)*)*$\n    title: cwlVersion\n    type: string\nrequired:\n- cwlVersion\ntype: object\n",
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLVersion/",
+  "examples": [
+    {
+      "title": "CWL v1.2 document",
+      "base-uri": "https://example.org/",
+      "content": "The `cwlVersion` field as it appears at the root of a CWL v1.2 document, adapted from the CWL\nconformance test `count-lines7-wf.cwl`.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLVersion/example_1_1.json",
+          "sizeBytes": 27,
+          "code": "{\n  \"cwlVersion\": \"v1.2\"\n}\n"
+        }
+      ]
+    },
+    {
+      "title": "CWL v1.0 document",
+      "base-uri": "https://example.org/",
+      "content": "A document declaring conformance to an earlier published CWL standard version.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLVersion/example_2_1.json",
+          "sizeBytes": 27,
+          "code": "{\n  \"cwlVersion\": \"v1.0\"\n}\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "properties:\n  cwlVersion:\n    description: CWL version of the described application package.\n    pattern: ^v\\d+(\\.\\d+(\\.\\d+)*)*$\n    title: cwlVersion\n    type: string\nrequired:\n- cwlVersion\ntype: object\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLVersion"
 }

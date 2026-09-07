@@ -1,0 +1,21 @@
+additionalProperties: false
+properties:
+  class:
+    enum:
+    - SchemaDefRequirement
+    type: string
+    x-jsonld-id: '@type'
+  types:
+    items:
+      oneOf:
+      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeEnum/schema.yaml
+      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordSchema/schema.yaml
+      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordArray/schema.yaml
+      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLImport/schema.yaml
+    type: array
+    x-jsonld-id: https://w3id.org/cwl/cwl#SchemaDefRequirement/types
+required:
+- types
+type: object
+x-jsonld-prefixes:
+  cwl: https://w3id.org/cwl/cwl#

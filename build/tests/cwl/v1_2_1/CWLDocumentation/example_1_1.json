@@ -1,0 +1,4 @@
+{
+  "label": "cat3-nodocker.cwl",
+  "doc": "Print the contents of a file to stdout using 'cat'."
+}

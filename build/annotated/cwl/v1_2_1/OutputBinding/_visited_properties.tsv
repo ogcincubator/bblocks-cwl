@@ -1,2 +1,2 @@
-path	@id
-/glob	https://w3id.org/cwl/cwl#CommandOutputBinding/glob
+path	@id	schema
+/glob	https://w3id.org/cwl/cwl#CommandOutputBinding/glob	/github/workspace/build/annotated/cwl/v1_2_1/OutputBinding/schema.yaml

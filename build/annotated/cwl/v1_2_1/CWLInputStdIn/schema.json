@@ -1,10 +1,26 @@
 {
+  "description": "Indicates that the value passed to this CWL input will be redirected to the standard input\nstream of the command.\n\nCan be defined for only one input and must not be combined with 'stdin' at the root of the CWL\ndocument.\n",
   "oneOf": [
     {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputStdInDefinition/schema.json"
+      "enum": [
+        "stdin"
+      ],
+      "type": "string"
     },
     {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputStdInObjectType/schema.json"
+      "properties": {
+        "type": {
+          "enum": [
+            "stdin"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "type": "object"
     }
-  ]
+  ],
+  "title": "CWLInputStdIn"
 }

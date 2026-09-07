@@ -1,0 +1,5 @@
+{
+  "class": "ResourceRequirement",
+  "coresMin": 1.25,
+  "coresMax": 1.75
+}

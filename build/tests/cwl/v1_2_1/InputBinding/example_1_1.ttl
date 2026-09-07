@@ -1,0 +1,5 @@
+@prefix ns1: <https://w3id.org/cwl/cwl#CommandLineBinding/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] ns1:position 1 .
+

@@ -1,4 +1,4 @@
-path	@id
-/package	https://w3id.org/cwl/cwl#SoftwarePackage/package
-/specs	
-/version	https://w3id.org/cwl/cwl#SoftwarePackage/version
+path	@id	schema
+/package	https://w3id.org/cwl/cwl#SoftwarePackage/package	/github/workspace/build/annotated/cwl/v1_2_1/SoftwarePackage/schema.yaml
+/specs	https://w3id.org/cwl/cwl#SoftwarePackage/specs	/github/workspace/build/annotated/cwl/v1_2_1/SoftwarePackage/schema.yaml
+/version	https://w3id.org/cwl/cwl#SoftwarePackage/version	/github/workspace/build/annotated/cwl/v1_2_1/SoftwarePackage/schema.yaml

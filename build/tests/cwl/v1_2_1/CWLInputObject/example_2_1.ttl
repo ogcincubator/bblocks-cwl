@@ -1,0 +1,8 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sld: <https://w3id.org/cwl/salad#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] rdfs:comment "Threshold value used to filter results" ;
+    sld:default 10 ;
+    sld:type <https://example.org/int> .
+

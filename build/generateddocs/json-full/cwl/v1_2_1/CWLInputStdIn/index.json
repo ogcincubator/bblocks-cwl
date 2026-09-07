@@ -4,10 +4,10 @@
   "itemIdentifier": "ogc.cwl.v1_2_1.CWLInputStdIn",
   "name": "CWLInputStdIn",
   "itemClass": "schema",
-  "abstract": "CWLInputStdIn",
+  "abstract": "Redirects the value of a CWL input to the command's standard input stream (the 'stdin' shorthand or its equivalent 'type: stdin' object form).",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.690466",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -15,19 +15,45 @@
     "cwl"
   ],
   "shaclShapes": {},
-  "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLInputStdInObjectType",
-    "ogc.cwl.v1_2_1.CWLInputStdInDefinition"
-  ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputStdIn/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputStdIn/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputStdIn/schema.yaml",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputStdIn/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputStdIn/",
-  "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "oneOf:\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputStdInDefinition/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputStdInObjectType/schema.yaml\n",
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLInputStdIn/",
+  "description": "This type is only valid for a `CommandLineTool` input that has no\n[InputBinding](bblocks://ogc.cwl.v1_2_1.InputBinding) of its own \u2014 `stdin` redirection and an explicit\n`inputBinding` (positional argument, prefix, etc.) are mutually exclusive for the same input, since the\nvalue cannot simultaneously be piped to the command's standard input stream and placed on its command\nline.\n\n```yaml\ninputs:\n  an_input_name:\n    type: stdin\n```\n\nis equivalent to declaring the input as a `File` that is both marked `streamable` and wired to the root\n`CommandLineTool`'s own `stdin` field:\n\n```yaml\ninputs:\n  an_input_name:\n    type: File\n    streamable: true\n\nstdin: $(inputs.an_input_name.path)\n```\n\nwhich is exactly the combination this type's schema forbids being declared explicitly (`stdin` must not\nbe set at the root of the document if it is already implied by an input of this type).\n",
+  "examples": [
+    {
+      "title": "Shorthand string form",
+      "base-uri": "https://example.org/",
+      "content": "The `stdin` shorthand, as used for the `file1` input of the CWL conformance test\n[`cat-tool-shortcut.cwl`](https://github.com/common-workflow-language/cwl-v1.2/blob/main/tests/cat-tool-shortcut.cwl),\nwhich pipes the input file's contents into the command's standard input.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLInputStdIn/example_1_1.json",
+          "sizeBytes": 8,
+          "code": "\"stdin\"\n"
+        }
+      ]
+    },
+    {
+      "title": "Object form",
+      "base-uri": "https://example.org/",
+      "content": "The equivalent explicit object form of the same `stdin` type declaration.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLInputStdIn/example_2_1.json",
+          "sizeBytes": 22,
+          "code": "{\n  \"type\": \"stdin\"\n}\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "description: 'Indicates that the value passed to this CWL input will be redirected\n  to the standard input\n\n  stream of the command.\n\n\n  Can be defined for only one input and must not be combined with ''stdin'' at the\n  root of the CWL\n\n  document.\n\n  '\noneOf:\n- enum:\n  - stdin\n  type: string\n- properties:\n    type:\n      enum:\n      - stdin\n      type: string\n  required:\n  - type\n  type: object\ntitle: CWLInputStdIn\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLInputStdIn"
 }

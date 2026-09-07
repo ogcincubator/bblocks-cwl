@@ -1,0 +1,8 @@
+{
+  "@context": {
+    "OGCAPIRequirement": "ogccwl:OGCAPIRequirement",
+    "class": "@type",
+    "ogccwl": "https://w3id.org/ogc/cwl/",
+    "@version": 1.1
+  }
+}

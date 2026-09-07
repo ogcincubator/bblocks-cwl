@@ -2,13 +2,13 @@
   "$defs": {
     "CWLWorkflowStepMap": {
       "additionalProperties": {
-        "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepObject/schema.json"
+        "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepObject/schema.json"
       },
       "type": "object"
     },
     "CWLWorkflowStepList": {
       "items": {
-        "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepItem/schema.json"
+        "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepItem/schema.json"
       },
       "type": "array"
     }
@@ -16,17 +16,25 @@
   "properties": {
     "hints": {
       "$comment": "Technically a different subset, but lots of redefinitions to be done.",
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLHints/schema.json"
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLHints/schema.json",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#hints",
+      "x-jsonld-container": "@type"
     },
     "inputs": {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputsDefinition/schema.json"
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputsDefinition/schema.json",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#inputs",
+      "x-jsonld-container": "@id"
     },
     "outputs": {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputsDefinition/schema.json"
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputsDefinition/schema.json",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#outputs",
+      "x-jsonld-container": "@id"
     },
     "requirements": {
       "$comment": "Technically a different subset, but lots of redefinitions to be done.",
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLRequirements/schema.json"
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLRequirements/schema.json",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#requirements",
+      "x-jsonld-container": "@type"
     },
     "steps": {
       "oneOf": [
@@ -36,8 +44,13 @@
         {
           "$ref": "#/$defs/CWLWorkflowStepList"
         }
-      ]
+      ],
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#Workflow/steps",
+      "x-jsonld-container": "@id"
     }
   },
-  "type": "object"
+  "type": "object",
+  "x-jsonld-prefixes": {
+    "cwl": "https://w3id.org/cwl/cwl#"
+  }
 }

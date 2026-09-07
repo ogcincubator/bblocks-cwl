@@ -1,8 +1,9 @@
-path	@id
-/default	
-/type	
-/default/basename	https://w3id.org/cwl/cwl#basename
-/default/class	
-/default/location	
-/default/nameroot	https://w3id.org/cwl/cwl#File/nameroot
-/default/path	
+path	@id	schema
+/default	https://w3id.org/cwl/salad#default	/github/workspace/build/annotated/cwl/v1_2_1/CWLDefaultTypedConditional/schema.yaml
+/type	https://w3id.org/cwl/salad#type	/github/workspace/build/annotated/cwl/v1_2_1/CWLDefaultTypedConditional/schema.yaml
+/_then/default	https://w3id.org/cwl/salad#default	/github/workspace/build/annotated/cwl/v1_2_1/CWLDefaultTypedConditional/schema.yaml
+/_then/default/basename	https://w3id.org/cwl/cwl#basename	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultLocation/schema.yaml
+/_then/default/class	@type	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultLocation/schema.yaml
+/_then/default/location	@id	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultLocation/schema.yaml
+/_then/default/nameroot	https://w3id.org/cwl/cwl#File/nameroot	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultLocation/schema.yaml
+/_then/default/path	https://w3id.org/cwl/cwl#path	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultLocation/schema.yaml

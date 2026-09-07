@@ -1,0 +1,25 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLAtomic/context.jsonld",
+  "cwlVersion": "v1.2",
+  "class": "CommandLineTool",
+  "baseCommand": [
+    "cat"
+  ],
+  "inputs": [
+    {
+      "id": "file1",
+      "type": "File"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "output",
+      "type": "File",
+      "outputBinding": {
+        "glob": "output"
+      }
+    }
+  ],
+  "stdin": "$(inputs.file1.path)",
+  "stdout": "output"
+}

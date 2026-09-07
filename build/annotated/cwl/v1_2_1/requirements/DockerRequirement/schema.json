@@ -1,0 +1,44 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "class": {
+      "enum": [
+        "DockerRequirement"
+      ],
+      "type": "string",
+      "x-jsonld-id": "@type"
+    },
+    "dockerFile": {
+      "type": "string",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#DockerRequirement/dockerFile"
+    },
+    "dockerImageId": {
+      "type": "string",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#DockerRequirement/dockerImageId"
+    },
+    "dockerImport": {
+      "type": "string",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#DockerRequirement/dockerImport"
+    },
+    "dockerLoad": {
+      "type": "string",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#DockerRequirement/dockerLoad"
+    },
+    "dockerOutputDirectory": {
+      "type": "string",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#DockerRequirement/dockerOutputDirectory"
+    },
+    "dockerPull": {
+      "description": "Reference package that will be retrieved and executed by CWL.",
+      "example": "docker-registry.host.com/namespace/image:1.2.3",
+      "title": "Docker pull reference",
+      "type": "string",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#DockerRequirement/dockerPull"
+    }
+  },
+  "title": "DockerRequirement",
+  "type": "object",
+  "x-jsonld-prefixes": {
+    "cwl": "https://w3id.org/cwl/cwl#"
+  }
+}

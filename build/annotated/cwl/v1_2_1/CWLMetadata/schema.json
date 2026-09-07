@@ -1,7 +1,15 @@
 {
   "properties": {
     "s:keywords": {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLKeywordList/schema.json"
+      "description": "Keywords applied to the process for search and categorization purposes.",
+      "items": {
+        "minLength": 1,
+        "title": "keyword",
+        "type": "string"
+      },
+      "title": "KeywordList",
+      "type": "array",
+      "x-jsonld-id": "https://schema.org/keywords"
     },
     "version": {
       "description": "Version of the process.",
@@ -14,6 +22,7 @@
   },
   "type": "object",
   "x-jsonld-prefixes": {
+    "s": "https://schema.org/",
     "cwl": "https://w3id.org/cwl/cwl#"
   }
 }

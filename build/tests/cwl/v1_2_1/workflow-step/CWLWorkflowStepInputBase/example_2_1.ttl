@@ -1,0 +1,7 @@
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+
+[] cwl:linkMerge "merge_flattened" ;
+    cwl:source <https://example.org/step_a/out>,
+        <https://example.org/step_b/out> ;
+    cwl:valueFrom "$(self.length)" .
+

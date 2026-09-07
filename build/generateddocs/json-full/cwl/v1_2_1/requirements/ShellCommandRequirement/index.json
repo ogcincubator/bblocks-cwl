@@ -1,0 +1,46 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.requirements.ShellCommandRequirement",
+  "name": "ShellCommandRequirement",
+  "itemClass": "schema",
+  "abstract": "Modifies CommandLineTool execution to generate a single\nshell command-line string: each item in `arguments` is joined with spaces and shell-quoted, unless\nits `CommandLineBinding` sets `shellQuote: false` \u2014 in which case it is joined unquoted, allowing\nshell metacharacters such as `|` for pipes.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.684354",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "shaclShapes": {},
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ShellCommandRequirement/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ShellCommandRequirement/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/ShellCommandRequirement/schema.yaml",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ShellCommandRequirement/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/ShellCommandRequirement/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/requirements/ShellCommandRequirement/",
+  "description": "`ShellCommandRequirement` changes how a `CommandLineTool`'s command line is assembled from\n[`CWLCommand`](bblocks://ogc.cwl.v1_2_1.CWLCommand) and\n[`CWLArguments`](bblocks://ogc.cwl.v1_2_1.CWLArguments): instead of invoking the tool as a plain\nargument vector, the implementation joins every item into a single shell command-line string.\n\nBy default, each argument is shell-quoted before being joined, so shell metacharacters in an\nargument's value (`|`, `>`, `&&`, etc.) are treated as literal text and cannot affect how the\ncommand is parsed. Setting `shellQuote: false` on an individual argument's `CommandLineBinding`\nopts that argument out of quoting, so its literal text is spliced unquoted into the command\nline \u2014 the mechanism CWL uses to express shell constructs such as pipes (`echo foo | wc -l`) or\nredirection between otherwise-independent commands.\n\nBecause unquoted arguments are interpreted by the shell, `shellQuote: false` should only be used\nfor metacharacters under the tool author's control, not for untrusted or dynamically computed\nvalues.\n",
+  "examples": [
+    {
+      "title": "Enabling ShellCommandRequirement on a CommandLineTool",
+      "base-uri": "https://example.org/",
+      "content": "A `CommandLineTool` requirements entry that enables shell command-line generation,\nallowing individual `arguments` items to opt out of quoting via `shellQuote: false`\n(e.g. to inject a pipe `|` between two commands).\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/ShellCommandRequirement/example_1_1.json",
+          "sizeBytes": 41,
+          "code": "{\n  \"class\": \"ShellCommandRequirement\"\n}\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "additionalProperties: false\nproperties:\n  class:\n    enum:\n    - ShellCommandRequirement\n    type: string\ntype: object\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/requirements/ShellCommandRequirement"
+}

@@ -1,0 +1,9 @@
+{
+  "in": {
+    "file1": "file1"
+  },
+  "out": [
+    "output"
+  ],
+  "run": "wc-tool.cwl"
+}

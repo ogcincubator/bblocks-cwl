@@ -1,0 +1,17 @@
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+@prefix ns1: <https://w3id.org/cwl/cwl#CommandOutputBinding/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sld: <https://w3id.org/cwl/salad#> .
+
+<https://example.org/file1> sld:type cwl:File .
+
+<https://example.org/output> cwl:outputBinding [ ns1:glob "output" ] ;
+    sld:type cwl:File .
+
+[] a cwl:CommandLineTool ;
+    cwl:baseCommand ( "cat" ) ;
+    cwl:inputs <https://example.org/file1> ;
+    cwl:outputs <https://example.org/output> ;
+    cwl:stdin "$(inputs.file1.path)" ;
+    cwl:stdout "output" .
+

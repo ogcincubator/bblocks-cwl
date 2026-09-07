@@ -1,0 +1,9 @@
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+@prefix sld: <https://w3id.org/cwl/salad#> .
+
+<https://example.org/main> a cwl:Workflow ;
+    cwl:inputs "string[]" ;
+    cwl:outputs <https://example.org/out> .
+
+<https://example.org/out> sld:type [ sld:type <https://example.org/array> ] .
+

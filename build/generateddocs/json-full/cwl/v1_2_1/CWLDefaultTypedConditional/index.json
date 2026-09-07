@@ -4,33 +4,88 @@
   "itemIdentifier": "ogc.cwl.v1_2_1.CWLDefaultTypedConditional",
   "name": "CWLDefaultTypedConditional",
   "itemClass": "schema",
-  "abstract": "CWLDefaultTypedConditional",
+  "abstract": "Validates that a `default` value, if given alongside a\n`type`, actually matches that declared type (e.g. a `default` for `type: boolean` must be a JSON\nboolean, one for an `enum` type must be one of its `symbols`, one for `File`/`Directory` must be a\nliteral file/directory object). Limits itself to data literals and arrays; nested or multi-type\n`type` definitions validate against `Any` instead of being over-constrained.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.699245",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
   "tags": [
     "cwl"
   ],
-  "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLTypeSymbolValues",
-    "ogc.cwl.v1_2_1.CWLTypeSymbols",
+    "ogc.cwl.v1_2_1.SchemaSaladOntology",
+    "ogc.cwl.v1_2_1.type-system.CWLTypeSymbolValues",
+    "ogc.cwl.v1_2_1.type-system.CWLTypeSymbols",
     "ogc.cwl.v1_2_1.CWLDefaultLocation"
   ],
+  "shaclShapes": {},
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultTypedConditional/context.jsonld",
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultTypedConditional/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultTypedConditional/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDefaultTypedConditional/schema.yaml",
-  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultTypedConditional/context.jsonld",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDefaultTypedConditional/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultTypedConditional/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDefaultTypedConditional/",
-  "rdfData": [],
   "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLDefaultTypedConditional/",
   "description": "Validate that the 'default' value, if specified, is of same type as the CWL 'type'.\nThis avoids over-accepting anything that does not match the intended type.\nHowever, validation limits itself to data literals and arrays.\nNested type and multi-type definitions will validate against 'Any'.\n",
-  "annotatedSchema": "$comment: 'Validate that the ''default'' value, if specified, is of same type as the\n  CWL ''type''.\n\n  This avoids over-accepting anything that does not match the intended type.\n\n  However, validation limits itself to data literals and arrays.\n\n  Nested type and multi-type definitions will validate against ''Any''.\n\n  '\n$defs:\n  AnyType:\n    type:\n    - boolean\n    - number\n    - string\n    - array\n    - object\nallOf:\n- $comment: Object structure with minimally 'type' and 'default'. Otherwise, no point\n    to continue testing.\n  properties:\n    default:\n      $ref: '#/$defs/AnyType'\n    type:\n      $ref: '#/$defs/AnyType'\n  required:\n  - type\n  type: object\n- $comment: Explicit null.\n  if:\n    properties:\n      type:\n        const: 'null'\n  then:\n    properties:\n      default:\n        type: 'null'\n- $comment: Required string.\n  if:\n    properties:\n      type:\n        const: string\n  then:\n    properties:\n      default:\n        type: string\n- $comment: Optional string.\n  if:\n    properties:\n      type:\n        const: string?\n  then:\n    properties:\n      default:\n        type:\n        - string\n        - 'null'\n- $comment: Required boolean.\n  if:\n    properties:\n      type:\n        const: boolean\n  then:\n    properties:\n      default:\n        type: boolean\n- $comment: Optional boolean.\n  if:\n    properties:\n      type:\n        enum:\n        - double?\n        - float?\n        - int?\n        - integer?\n        - long?\n  then:\n    properties:\n      default:\n        type:\n        - number\n        - 'null'\n- $comment: Required numeric.\n  if:\n    properties:\n      type:\n        enum:\n        - double\n        - float\n        - int\n        - integer\n        - long\n  then:\n    properties:\n      default:\n        type: number\n- $comment: Optional numeric.\n  if:\n    properties:\n      type:\n        enum:\n        - double?\n        - float?\n        - int?\n        - integer?\n        - long?\n  then:\n    properties:\n      default:\n        type:\n        - number\n        - 'null'\n- $comment: Required enum.\n  if:\n    properties:\n      symbols:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeSymbols/schema.yaml\n      type:\n        const: enum\n  then:\n    properties:\n      default:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeSymbolValues/schema.yaml\n- $comment: Optional enum.\n  if:\n    properties:\n      symbols:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeSymbols/schema.yaml\n      type:\n        const: enum?\n  then:\n    properties:\n      default:\n        oneOf:\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeSymbolValues/schema.yaml\n        - type: 'null'\n- $comment: Required File or Directory.\n  if:\n    properties:\n      type:\n        enum:\n        - Directory\n        - File\n  then:\n    properties:\n      default:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultLocation/schema.yaml\n- $comment: Optional File or Directory.\n  if:\n    properties:\n      type:\n        enum:\n        - Directory?\n        - File?\n  then:\n    properties:\n      default:\n        oneOf:\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultLocation/schema.yaml\n        - type: 'null'\n- $comment: Required array of string.\n  if:\n    oneOf:\n    - properties:\n        type:\n          const: string[]\n    - properties:\n        items:\n          const: string\n        type:\n          const: array\n  then:\n    properties:\n      default:\n        items:\n          type: string\n        type: array\n- $comment: Required array of boolean.\n  if:\n    oneOf:\n    - properties:\n        type:\n          const: boolean[]\n    - properties:\n        items:\n          const: boolean\n        type:\n          const: array\n  then:\n    properties:\n      default:\n        items:\n          type: boolean\n        type: array\n- $comment: Required array of numeric.\n  if:\n    oneOf:\n    - properties:\n        type:\n          enum:\n          - double[]\n          - float[]\n          - int[]\n          - integer[]\n          - long[]\n    - properties:\n        items:\n          enum:\n          - double\n          - float\n          - int\n          - integer\n          - long\n        type:\n          const: array\n  then:\n    properties:\n      default:\n        items:\n          type: number\n        type: array\n- $comment: Required anything (single).\n  if:\n    properties:\n      type:\n        const: Any\n  then:\n    properties:\n      default:\n        $comment: Match anything.\n        $ref: '#/$defs/AnyType'\n- $comment: Required array of anything.\n  if:\n    properties:\n      type:\n        const: Any[]\n  then:\n    properties:\n      default:\n        $comment: Match anything as long as under array.\n        items:\n          $ref: '#/$defs/AnyType'\n        type: array\n",
+  "examples": [
+    {
+      "title": "String default matching a string type",
+      "base-uri": "https://example.org/",
+      "content": "A `string`-typed input whose `default` is a plain string literal, adapted from\n[`paramref_arguments_inputs.cwl`](https://github.com/common-workflow-language/cwl-v1.2/blob/main/tests/paramref_arguments_inputs.cwl).\nThe `string` branch of the conditional requires `default` to be a JSON string.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDefaultTypedConditional/example_1_1.json",
+          "sizeBytes": 41,
+          "code": "{\n  \"type\": \"string\",\n  \"default\": \"z\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDefaultTypedConditional/example_1_1.jsonld",
+          "sizeBytes": 169,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultTypedConditional/context.jsonld\",\n  \"type\": \"string\",\n  \"default\": \"z\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDefaultTypedConditional/example_1_1.ttl",
+          "sizeBytes": 112,
+          "code": "@prefix sld: <https://w3id.org/cwl/salad#> .\n\n[] sld:default \"z\" ;\n    sld:type <https://example.org/string> .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "File default matching a File type",
+      "base-uri": "https://example.org/",
+      "content": "A `File`-typed input whose `default` is a literal File object, adapted from\n[`bwa-mem-tool.cwl`](https://github.com/common-workflow-language/cwl-v1.2/blob/main/tests/bwa-mem-tool.cwl).\nThe `File`/`Directory` branch of the conditional requires `default` to match\n[CWLDefaultLocation](bblocks://ogc.cwl.v1_2_1.CWLDefaultLocation).\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDefaultTypedConditional/example_2_1.json",
+          "sizeBytes": 88,
+          "code": "{\n  \"type\": \"File\",\n  \"default\": {\n    \"class\": \"File\",\n    \"location\": \"args.py\"\n  }\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDefaultTypedConditional/example_2_1.jsonld",
+          "sizeBytes": 216,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultTypedConditional/context.jsonld\",\n  \"type\": \"File\",\n  \"default\": {\n    \"class\": \"File\",\n    \"location\": \"args.py\"\n  }\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDefaultTypedConditional/example_2_1.ttl",
+          "sizeBytes": 198,
+          "code": "@prefix sld: <https://w3id.org/cwl/salad#> .\n\n<https://example.org/args.py> a <https://example.org/File> .\n\n[] sld:default <https://example.org/args.py> ;\n    sld:type <https://example.org/File> .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$comment: 'Validate that the ''default'' value, if specified, is of same type as the\n  CWL ''type''.\n\n  This avoids over-accepting anything that does not match the intended type.\n\n  However, validation limits itself to data literals and arrays.\n\n  Nested type and multi-type definitions will validate against ''Any''.\n\n  '\n$defs:\n  AnyType:\n    type:\n    - boolean\n    - number\n    - string\n    - array\n    - object\nallOf:\n- $comment: Object structure with minimally 'type' and 'default'. Otherwise, no point\n    to continue testing.\n  properties:\n    default:\n      $ref: '#/$defs/AnyType'\n      x-jsonld-id: https://w3id.org/cwl/salad#default\n    type:\n      $ref: '#/$defs/AnyType'\n      x-jsonld-id: https://w3id.org/cwl/salad#type\n      x-jsonld-type: '@vocab'\n  required:\n  - type\n  type: object\n- $comment: Explicit null.\n  if:\n    properties:\n      type:\n        const: 'null'\n  then:\n    properties:\n      default:\n        type: 'null'\n        x-jsonld-id: https://w3id.org/cwl/salad#default\n- $comment: Required string.\n  if:\n    properties:\n      type:\n        const: string\n  then:\n    properties:\n      default:\n        type: string\n        x-jsonld-id: https://w3id.org/cwl/salad#default\n- $comment: Optional string.\n  if:\n    properties:\n      type:\n        const: string?\n  then:\n    properties:\n      default:\n        type:\n        - string\n        - 'null'\n        x-jsonld-id: https://w3id.org/cwl/salad#default\n- $comment: Required boolean.\n  if:\n    properties:\n      type:\n        const: boolean\n  then:\n    properties:\n      default:\n        type: boolean\n        x-jsonld-id: https://w3id.org/cwl/salad#default\n- $comment: Optional boolean.\n  if:\n    properties:\n      type:\n        enum:\n        - double?\n        - float?\n        - int?\n        - integer?\n        - long?\n  then:\n    properties:\n      default:\n        type:\n        - number\n        - 'null'\n        x-jsonld-id: https://w3id.org/cwl/salad#default\n- $comment: Required numeric.\n  if:\n    properties:\n      type:\n        enum:\n        - double\n        - float\n        - int\n        - integer\n        - long\n  then:\n    properties:\n      default:\n        type: number\n        x-jsonld-id: https://w3id.org/cwl/salad#default\n- $comment: Optional numeric.\n  if:\n    properties:\n      type:\n        enum:\n        - double?\n        - float?\n        - int?\n        - integer?\n        - long?\n  then:\n    properties:\n      default:\n        type:\n        - number\n        - 'null'\n        x-jsonld-id: https://w3id.org/cwl/salad#default\n- $comment: Required enum.\n  if:\n    properties:\n      symbols:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeSymbols/schema.yaml\n      type:\n        const: enum\n  then:\n    properties:\n      default:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeSymbolValues/schema.yaml\n        x-jsonld-id: https://w3id.org/cwl/salad#default\n- $comment: Optional enum.\n  if:\n    properties:\n      symbols:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeSymbols/schema.yaml\n      type:\n        const: enum?\n  then:\n    properties:\n      default:\n        oneOf:\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeSymbolValues/schema.yaml\n        - type: 'null'\n        x-jsonld-id: https://w3id.org/cwl/salad#default\n- $comment: Required File or Directory.\n  if:\n    properties:\n      type:\n        enum:\n        - Directory\n        - File\n  then:\n    properties:\n      default:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultLocation/schema.yaml\n        x-jsonld-id: https://w3id.org/cwl/salad#default\n- $comment: Optional File or Directory.\n  if:\n    properties:\n      type:\n        enum:\n        - Directory?\n        - File?\n  then:\n    properties:\n      default:\n        oneOf:\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultLocation/schema.yaml\n        - type: 'null'\n        x-jsonld-id: https://w3id.org/cwl/salad#default\n- $comment: Required array of string.\n  if:\n    oneOf:\n    - properties:\n        type:\n          const: string[]\n    - properties:\n        items:\n          const: string\n        type:\n          const: array\n  then:\n    properties:\n      default:\n        items:\n          type: string\n        type: array\n        x-jsonld-id: https://w3id.org/cwl/salad#default\n- $comment: Required array of boolean.\n  if:\n    oneOf:\n    - properties:\n        type:\n          const: boolean[]\n    - properties:\n        items:\n          const: boolean\n        type:\n          const: array\n  then:\n    properties:\n      default:\n        items:\n          type: boolean\n        type: array\n        x-jsonld-id: https://w3id.org/cwl/salad#default\n- $comment: Required array of numeric.\n  if:\n    oneOf:\n    - properties:\n        type:\n          enum:\n          - double[]\n          - float[]\n          - int[]\n          - integer[]\n          - long[]\n    - properties:\n        items:\n          enum:\n          - double\n          - float\n          - int\n          - integer\n          - long\n        type:\n          const: array\n  then:\n    properties:\n      default:\n        items:\n          type: number\n        type: array\n        x-jsonld-id: https://w3id.org/cwl/salad#default\n- $comment: Required anything (single).\n  if:\n    properties:\n      type:\n        const: Any\n  then:\n    properties:\n      default:\n        $comment: Match anything.\n        $ref: '#/$defs/AnyType'\n        x-jsonld-id: https://w3id.org/cwl/salad#default\n- $comment: Required array of anything.\n  if:\n    properties:\n      type:\n        const: Any[]\n  then:\n    properties:\n      default:\n        $comment: Match anything as long as under array.\n        items:\n          $ref: '#/$defs/AnyType'\n        type: array\n        x-jsonld-id: https://w3id.org/cwl/salad#default\nx-jsonld-prefixes:\n  sld: https://w3id.org/cwl/salad#\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLDefaultTypedConditional"
 }

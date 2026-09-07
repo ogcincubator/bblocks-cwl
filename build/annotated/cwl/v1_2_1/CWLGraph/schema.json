@@ -19,7 +19,8 @@
           },
           "maxItems": 1,
           "minItems": 1,
-          "title": "CWLGraphList"
+          "title": "CWLGraphList",
+          "x-jsonld-id": "@graph"
         }
       },
       "required": [

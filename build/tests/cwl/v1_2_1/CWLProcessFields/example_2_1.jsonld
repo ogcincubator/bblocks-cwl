@@ -1,0 +1,19 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLProcessFields/context.jsonld",
+  "id": "tool-id",
+  "inputs": {
+    "in": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "out": {
+      "type": "string"
+    }
+  },
+  "hints": {
+    "DockerRequirement": {
+      "dockerPull": "python:3.11-slim"
+    }
+  }
+}

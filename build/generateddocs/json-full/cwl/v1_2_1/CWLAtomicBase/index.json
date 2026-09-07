@@ -4,30 +4,25 @@
   "itemIdentifier": "ogc.cwl.v1_2_1.CWLAtomicBase",
   "name": "CWLAtomicBase",
   "itemClass": "schema",
-  "abstract": "Direct CWL definition instead of the graph representation.",
+  "abstract": "Direct CWL definition instead of the graph representation. Shared by the root CommandLineTool/ExpressionTool document and its nested-in-step form; not typically profiled on its own.",
+  "isProfileOf": [
+    "ogc.cwl.v1_2_1.CWLProcessFields"
+  ],
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.674167",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
   "tags": [
-    "cwl"
+    "cwl",
+    "shared-fragment"
+  ],
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.CWLOntology",
+    "ogc.cwl.v1_2_1.CWLProcessFields"
   ],
   "shaclShapes": {},
-  "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLIntent",
-    "ogc.cwl.v1_2_1.CWLScatterMethod",
-    "ogc.cwl.v1_2_1.CWLCommand",
-    "ogc.cwl.v1_2_1.CWLExpression",
-    "ogc.cwl.v1_2_1.CWLHints",
-    "ogc.cwl.v1_2_1.CWLInputsDefinition",
-    "ogc.cwl.v1_2_1.CWLIdentifier",
-    "ogc.cwl.v1_2_1.CWLRequirements",
-    "ogc.cwl.v1_2_1.CWLOutputsDefinition",
-    "ogc.cwl.v1_2_1.CWLArguments",
-    "ogc.cwl.v1_2_1.CWLScatter"
-  ],
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLAtomicBase/context.jsonld",
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLAtomicBase/schema.yaml",
@@ -35,10 +30,63 @@
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLAtomicBase/schema.yaml",
   "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLAtomicBase/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLAtomicBase/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLAtomicBase/",
-  "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "description: Direct CWL definition instead of the graph representation.\nproperties:\n  arguments:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLArguments/schema.yaml\n  baseCommand:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLCommand/schema.yaml\n  class:\n    description: CWL class specification. This is used to differentiate between single\n      Application Package (AP)definitions and Workflow that chains multiple packages.\n    enum:\n    - CommandLineTool\n    - ExpressionTool\n    title: Class\n    type: string\n  hints:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLHints/schema.yaml\n  id:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLIdentifier/schema.yaml\n  inputs:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputsDefinition/schema.yaml\n  intent:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLIntent/schema.yaml\n  outputs:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputsDefinition/schema.yaml\n  requirements:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLRequirements/schema.yaml\n  scatter:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLScatter/schema.yaml\n  scatterMethod:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLScatterMethod/schema.yaml\n  stderr:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    description: 'Destination of the error stream.\n\n      Typically, an expression referring to a desired file name or provided by a CWL\n      input reference.\n\n      '\n    x-jsonld-id: https://w3id.org/cwl/cwl#stderr\n  stdin:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    description: \"Source of the input stream. \\nTypically, an expression referring\n      to an existing file name or an input of the CWL document.\\n\"\n    x-jsonld-id: https://w3id.org/cwl/cwl#stdin\n  stdout:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    description: 'Destination of the output stream.\n\n      Typically, an expression referring to a desired file name or provided by a CWL\n      input reference.\n\n      '\n    x-jsonld-id: https://w3id.org/cwl/cwl#stdout\nrequired:\n- class\n- inputs\n- outputs\ntitle: CWL atomic definition\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLAtomicBase/",
+  "examples": [
+    {
+      "title": "CommandLineTool at the document root",
+      "base-uri": "https://example.org/",
+      "content": "A `CommandLineTool` defined directly at the document root, without the `$graph` wrapper \u2014 the\ntypical shape for a single-tool Application Package. No `id` is needed since there is nothing\nelse in the document to cross-reference it.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLAtomicBase/example_1_1.json",
+          "sizeBytes": 346,
+          "code": "{\n  \"class\": \"CommandLineTool\",\n  \"baseCommand\": [\"echo\", \"first\"],\n  \"inputs\": {\n    \"in\": {\n      \"type\": \"Any\"\n    }\n  },\n  \"outputs\": {\n    \"out\": {\n      \"type\": \"string\",\n      \"outputBinding\": {\n        \"glob\": \"out.txt\",\n        \"loadContents\": true,\n        \"outputEval\": \"$(self[0].contents)\"\n      }\n    }\n  },\n  \"stdout\": \"out.txt\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLAtomicBase/example_1_1.jsonld",
+          "sizeBytes": 473,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLAtomicBase/context.jsonld\",\n  \"class\": \"CommandLineTool\",\n  \"baseCommand\": [\n    \"echo\",\n    \"first\"\n  ],\n  \"inputs\": {\n    \"in\": {\n      \"type\": \"Any\"\n    }\n  },\n  \"outputs\": {\n    \"out\": {\n      \"type\": \"string\",\n      \"outputBinding\": {\n        \"glob\": \"out.txt\",\n        \"loadContents\": true,\n        \"outputEval\": \"$(self[0].contents)\"\n      }\n    }\n  },\n  \"stdout\": \"out.txt\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLAtomicBase/example_1_1.ttl",
+          "sizeBytes": 606,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#CommandOutputBinding/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://example.org/in> sld:type <https://example.org/Any> .\n\n<https://example.org/out> cwl:outputBinding [ ns1:glob \"out.txt\" ] ;\n    sld:type xsd:string .\n\n[] a cwl:CommandLineTool ;\n    cwl:baseCommand ( \"echo\" \"first\" ) ;\n    cwl:inputs <https://example.org/in> ;\n    cwl:outputs <https://example.org/out> ;\n    cwl:stdout \"out.txt\" .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "ExpressionTool with no inputs",
+      "base-uri": "https://example.org/",
+      "content": "An `ExpressionTool` computing its output purely from an inline expression, with an empty\n`inputs` list.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLAtomicBase/example_2_1.json",
+          "sizeBytes": 127,
+          "code": "{\n  \"class\": \"ExpressionTool\",\n  \"inputs\": [],\n  \"outputs\": {\n    \"output\": \"Any\"\n  },\n  \"expression\": \"$({'output': null})\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLAtomicBase/example_2_1.jsonld",
+          "sizeBytes": 242,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLAtomicBase/context.jsonld\",\n  \"class\": \"ExpressionTool\",\n  \"inputs\": [],\n  \"outputs\": {\n    \"output\": \"Any\"\n  },\n  \"expression\": \"$({'output': null})\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLAtomicBase/example_2_1.ttl",
+          "sizeBytes": 95,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n\n[] a cwl:ExpressionTool ;\n    cwl:outputs \"Any\" .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "description: Direct CWL definition instead of the graph representation.\nallOf:\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLProcessFields/schema.yaml\n- properties:\n    class:\n      description: CWL class specification. This is used to differentiate between\n        single Application Package (AP)definitions and Workflow that chains multiple\n        packages.\n      enum:\n      - CommandLineTool\n      - ExpressionTool\n      title: Class\n      type: string\n      x-jsonld-id: '@type'\n  required:\n  - class\ntitle: CWL atomic definition\ntype: object\nx-jsonld-extra-terms:\n  CommandLineTool: https://w3id.org/cwl/cwl#CommandLineTool\n  ExpressionTool: https://w3id.org/cwl/cwl#ExpressionTool\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLAtomicBase"
 }

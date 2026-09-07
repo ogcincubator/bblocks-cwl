@@ -1,0 +1,7 @@
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+@prefix ns1: <https://w3id.org/cwl/cwl#CommandOutputBinding/> .
+@prefix sld: <https://w3id.org/cwl/salad#> .
+
+<https://example.org/output_file> cwl:outputBinding [ ns1:glob "output.txt" ] ;
+    sld:type cwl:File .
+

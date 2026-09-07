@@ -7,17 +7,18 @@
   "abstract": "Defines how to specify the input for the command.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.680825",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
   "tags": [
     "cwl"
   ],
-  "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLExpression"
+    "ogc.cwl.v1_2_1.CWLExpression",
+    "ogc.cwl.v1_2_1.CWLOntology"
   ],
+  "shaclShapes": {},
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InputBinding/context.jsonld",
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InputBinding/schema.yaml",
@@ -25,9 +26,63 @@
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/InputBinding/schema.yaml",
   "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/InputBinding/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InputBinding/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/InputBinding/",
-  "rdfData": [],
   "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/InputBinding/",
+  "description": "`InputBinding` (CWL's `CommandLineBinding`) controls how the value of an input parameter \u2014 or of an\nentry in `CommandLineTool.arguments` \u2014 is turned into one or more command-line arguments.\n\nWhen it is nested under an input parameter's `inputBinding`, the term \"value\" below refers to the\ncorresponding value in the input object. For a binding listed directly under `arguments`, \"value\"\ninstead refers to the result of evaluating `valueFrom`.\n\nThe binding behavior depends on the data type of the (effective) value:\n\n- **string**: add `prefix` and the string to the command line.\n- **number**: add `prefix` and the decimal representation to the command line.\n- **boolean**: if `true`, add `prefix` to the command line; if `false`, add nothing.\n- **File**: add `prefix` and the file's `path` to the command line.\n- **Directory**: add `prefix` and the directory's `path` to the command line.\n- **array**: if `itemSeparator` is given, join the array into a single string with `itemSeparator`\n  and add `prefix` followed by that string; otherwise add `prefix` and then recursively process each\n  element. An empty array adds nothing.\n- **object**: add `prefix` only, then recursively add the object's fields that themselves carry an\n  `inputBinding`.\n- **null**: add nothing.\n\nIf there is a mismatch between the type declared by the input schema and the effective value \u2014 for\nexample because a [CWLExpression](bblocks://ogc.cwl.v1_2_1.CWLExpression) evaluated to something\nelse \u2014 implementations must follow the data type of the effective value, not the declared schema\ntype.\n\n## Fields\n\n- **`position`** \u2014 the sort key used to order arguments on the assembled command line (default `0`).\n  May itself be a [CWLExpression](bblocks://ogc.cwl.v1_2_1.CWLExpression); in that case `self` is the\n  value of the bound input parameter (with any declared default already applied), and the expression\n  must evaluate to an integer or `null`.\n- **`prefix`** \u2014 a literal string prepended to the value, e.g. `-o`.\n- **`itemSeparator`** \u2014 for array values, joins the items into a single command-line argument instead\n  of emitting one argument per item.\n- **`valueFrom`** \u2014 a constant string, or a [CWLExpression](bblocks://ogc.cwl.v1_2_1.CWLExpression) that\n  computes the actual value to bind. If the associated input parameter's value is `null`, `valueFrom`\n  is not evaluated and nothing is added to the command line. This field is required when the binding\n  appears under `arguments` rather than under an input parameter.\n- **`shellQuote`** \u2014 only meaningful when\n  [ShellCommandRequirement](bblocks://ogc.cwl.v1_2_1.requirements.ShellCommandRequirement) is in effect for the\n  tool; controls whether the value is shell-quoted (default `true`). Set to `false` to deliberately\n  inject shell metacharacters, e.g. for pipes and redirections.\n\nNote that CWL also defines a `separate` field (default `true`, controlling whether `prefix` and the\nvalue are emitted as separate command-line arguments or concatenated into one) which is not currently\npart of this block's schema.\n",
+  "examples": [
+    {
+      "title": "Fixed positional argument",
+      "base-uri": "https://example.org/",
+      "content": "Binds an input parameter as a positional command-line argument, using `position` to control\nwhere it lands among the assembled arguments. This is the most common form, adapted from a CWL\nconformance test that copies a file with `cat`.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/InputBinding/example_1_1.json",
+          "sizeBytes": 20,
+          "code": "{\n  \"position\": 1\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/InputBinding/example_1_1.jsonld",
+          "sizeBytes": 134,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InputBinding/context.jsonld\",\n  \"position\": 1\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/InputBinding/example_1_1.ttl",
+          "sizeBytes": 135,
+          "code": "@prefix ns1: <https://w3id.org/cwl/cwl#CommandLineBinding/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] ns1:position 1 .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Prefixed, array-valued argument with a computed position",
+      "base-uri": "https://example.org/",
+      "content": "Binds an array-valued input as a single argument by joining its items with `itemSeparator`, adds\na `prefix` before it, and computes the argument's `position` with a\n[CWLExpression](bblocks://ogc.cwl.v1_2_1.CWLExpression) instead of a literal integer.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/InputBinding/example_2_1.json",
+          "sizeBytes": 107,
+          "code": "{\n  \"position\": \"$(inputs.priority)\",\n  \"prefix\": \"-I\",\n  \"itemSeparator\": \",\",\n  \"valueFrom\": \"$(self)\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/InputBinding/example_2_1.jsonld",
+          "sizeBytes": 221,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InputBinding/context.jsonld\",\n  \"position\": \"$(inputs.priority)\",\n  \"prefix\": \"-I\",\n  \"itemSeparator\": \",\",\n  \"valueFrom\": \"$(self)\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/InputBinding/example_2_1.ttl",
+          "sizeBytes": 226,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#CommandLineBinding/> .\n\n[] ns1:itemSeparator \",\" ;\n    ns1:position \"$(inputs.priority)\" ;\n    ns1:prefix \"-I\" ;\n    cwl:valueFrom \"$(self)\" .\n\n"
+        }
+      ]
+    }
+  ],
   "annotatedSchema": "additionalProperties: false\ndescription: Defines how to specify the input for the command.\nproperties:\n  itemSeparator:\n    type: string\n    x-jsonld-id: https://w3id.org/cwl/cwl#CommandLineBinding/itemSeparator\n  position:\n    oneOf:\n    - type: integer\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#CommandLineBinding/position\n  prefix:\n    type: string\n    x-jsonld-id: https://w3id.org/cwl/cwl#CommandLineBinding/prefix\n  shellQuote:\n    type: boolean\n    x-jsonld-id: https://w3id.org/cwl/cwl#CommandLineBinding/shellQuote\n  valueFrom:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#valueFrom\ntitle: Input Binding\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/InputBinding"

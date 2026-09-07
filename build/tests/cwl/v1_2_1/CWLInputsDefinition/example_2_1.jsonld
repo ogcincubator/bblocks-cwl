@@ -1,0 +1,23 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputsDefinition/context.jsonld",
+  "@graph": [
+    {
+      "id": "message",
+      "type": "string",
+      "inputBinding": {
+        "position": 1
+      }
+    },
+    {
+      "id": "scattered_message",
+      "type": "string",
+      "inputBinding": {
+        "position": 2
+      }
+    },
+    {
+      "id": "file1",
+      "type": "File"
+    }
+  ]
+}

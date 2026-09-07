@@ -1,0 +1,46 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.requirements.StepInputExpressionRequirement",
+  "name": "StepInputExpressionRequirement",
+  "itemClass": "schema",
+  "abstract": "Indicates that the 'Workflow' must support the 'valueFrom' field of 'WorkflowStepInput'.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.688357",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "shaclShapes": {},
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/StepInputExpressionRequirement/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/StepInputExpressionRequirement/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/StepInputExpressionRequirement/schema.yaml",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/StepInputExpressionRequirement/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/StepInputExpressionRequirement/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/requirements/StepInputExpressionRequirement/",
+  "description": "`StepInputExpressionRequirement` declares that a workflow (or workflow step) supports the\n`valueFrom` field on a step's input mappings \u2014 see\n[CWLWorkflowStepIn](bblocks://ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepIn) and the shared\n`valueFrom` field it inherits from\n[CWLWorkflowStepInputBase](bblocks://ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepInputBase). Without this\nrequirement, `valueFrom` must not be used.\n\nWhen `valueFrom` is a CWL expression rather than a constant string, it is evaluated to compute\nthe step input's actual value. The expression is evaluated with `self` bound to the value(s)\nfrom the input's `source` field (or `null` if there is no `source`), and with `inputs` bound to\nthe step's input object after `source` values, `default`, and scattering have been applied. This\nlets a step input be derived or transformed from other values available to the step, rather than\nonly ever being copied straight from a `source`.\n",
+  "examples": [
+    {
+      "title": "Enabling StepInputExpressionRequirement on a Workflow",
+      "base-uri": "https://example.org/",
+      "content": "A `Workflow` requirements entry that enables the use of `valueFrom` expressions on\nworkflow step inputs, letting a step input's value be computed rather than only ever\ncopied from its `source`.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/StepInputExpressionRequirement/example_1_1.json",
+          "sizeBytes": 48,
+          "code": "{\n  \"class\": \"StepInputExpressionRequirement\"\n}\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "additionalProperties: false\ndescription: Indicates that the 'Workflow' must support the 'valueFrom' field of 'WorkflowStepInput'.\nproperties:\n  class:\n    description: CWL requirement class specification.\n    enum:\n    - StepInputExpressionRequirement\n    type: string\ntitle: StepInputExpressionRequirement\ntype: object\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/requirements/StepInputExpressionRequirement"
+}

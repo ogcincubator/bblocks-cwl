@@ -1,0 +1,9 @@
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sld: <https://w3id.org/cwl/salad#> .
+
+<https://example.org/file2> cwl:linkMerge "merge_flattened" ;
+    cwl:source <https://example.org/step_a/out>,
+        <https://example.org/step_b/out> ;
+    sld:default ( "fallback.txt" ) .
+

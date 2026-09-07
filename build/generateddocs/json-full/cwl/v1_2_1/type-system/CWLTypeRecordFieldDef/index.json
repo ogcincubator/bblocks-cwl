@@ -1,0 +1,91 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.type-system.CWLTypeRecordFieldDef",
+  "name": "CWLTypeRecordFieldDef",
+  "itemClass": "schema",
+  "abstract": "The definition of a single field within an\ninline CWL `record` type: its `type` and, for the list form of `fields`, its `name`. Also carries\nthe file-only and directory-only parameters (`format`, `secondaryFiles`, `loadListing`, ...), since a\nrecord field's type can itself be File- or Directory-typed.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.711487",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.CWLDirectoryOnlyParameters",
+    "ogc.cwl.v1_2_1.SchemaSaladOntology",
+    "ogc.cwl.v1_2_1.CWLFileOnlyParameters",
+    "ogc.cwl.v1_2_1.CWLType"
+  ],
+  "shaclShapes": {},
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/type-system/CWLTypeRecordFieldDef/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/type-system/CWLTypeRecordFieldDef/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/",
+  "description": "The definition of one field of an inline [type-system/CWLTypeRecordSchema](bblocks://ogc.cwl.v1_2_1.type-system.CWLTypeRecordSchema):\nits `type` (any [CWLType](bblocks://ogc.cwl.v1_2_1.CWLType)) and, depending on how the record's\n`fields` are written, an optional or required `name`.\n\n**`name` is conditionally required.** This schema alone only requires `type` \u2014 `name` is left\noptional here because the same field-definition shape is reused for both forms a record's `fields`\ncan take:\n\n- In the **map form** of `fields` (an object keyed by field name), the field's name is already\n  given by the map key, so repeating it as a `name` property would be redundant, and this schema\n  leaves it optional.\n- In the **list form** of `fields` (an array of field definitions), there is no key to imply the\n  name, so `name` must be present on each item. That requirement is layered on top of this schema \u2014\n  not built into it \u2014 by [type-system/CWLTypeRecordSchema](bblocks://ogc.cwl.v1_2_1.type-system.CWLTypeRecordSchema),\n  which combines this schema with a sibling `required: [name]` constraint specifically for the\n  list form. This keeps the field-definition schema reusable across both forms instead of forking\n  it into two near-identical copies.\n\nBecause a record field's `type` may itself resolve to `File` or `Directory` (directly, as an\noptional/array variant such as `File?`/`Directory[]`, or as part of a type union), this schema also\nconditionally admits the File-only parameters\n([CWLFileOnlyParameters](bblocks://ogc.cwl.v1_2_1.CWLFileOnlyParameters): `format`, `loadContents`,\n`secondaryFiles`, `streamable`) and the Directory-only parameter\n([CWLDirectoryOnlyParameters](bblocks://ogc.cwl.v1_2_1.CWLDirectoryOnlyParameters): `loadListing`) \u2014\nvia `if`/`then`/`else` conditional logic built directly into this schema, which disallows them\noutright for non-matching types.\n",
+  "examples": [
+    {
+      "title": "File-typed field with secondary files",
+      "base-uri": "https://example.org/",
+      "content": "A field definition used in the list form of a record's `fields`, so `name` is required.\nBecause its `type` resolves to `File`, the File-only parameters `secondaryFiles` become\navailable.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/example_1_1.json",
+          "sizeBytes": 67,
+          "code": "{\n  \"name\": \"ofoo\",\n  \"type\": \"File\",\n  \"secondaryFiles\": \".idx\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/example_1_1.jsonld",
+          "sizeBytes": 202,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/context.jsonld\",\n  \"name\": \"ofoo\",\n  \"type\": \"File\",\n  \"secondaryFiles\": \".idx\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/example_1_1.ttl",
+          "sizeBytes": 169,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n\n<https://example.org/ofoo> cwl:secondaryFiles \".idx\" ;\n    sld:type cwl:File .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Directory-typed field, map form",
+      "base-uri": "https://example.org/",
+      "content": "A field definition used inside the map form of a record's `fields` (so `name` is omitted \u2014\nit is implied by the map key). Because its `type` resolves to `Directory`, the\nDirectory-only `loadListing` parameter becomes available.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/example_2_1.json",
+          "sizeBytes": 59,
+          "code": "{\n  \"type\": \"Directory\",\n  \"loadListing\": \"deep_listing\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/example_2_1.jsonld",
+          "sizeBytes": 194,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/context.jsonld\",\n  \"type\": \"Directory\",\n  \"loadListing\": \"deep_listing\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/example_2_1.ttl",
+          "sizeBytes": 155,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n\n[] cwl:loadListing \"deep_listing\" ;\n    sld:type cwl:Directory .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "allOf:\n- properties:\n    name:\n      $comment: 'Required if list item. Otherwise, optional since it is the mapping\n        key.\n\n        This requirement is defined in ''CWLTypeRecordFieldsItem'' to allow reuse\n        of this schema.\n\n        '\n      type: string\n      x-jsonld-id: '@id'\n    type:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml\n      x-jsonld-id: https://w3id.org/cwl/salad#type\n      x-jsonld-type: '@vocab'\n  required:\n  - type\n  type: object\n- $comment: 'Explicitly disallow these parameters when non-File type is detected.\n\n    Otherwise, validate their schema definitions according to what is permitted.\n\n    '\n  description: Parameters that are only valid when 'type' or 'items' evaluates to\n    'File'.\n  else:\n    properties:\n      format:\n        not: true\n      loadContents:\n        not: true\n      secondaryFiles:\n        not: true\n      streamable:\n        not: true\n  if:\n    oneOf:\n    - $comment: Single required or optional 'File'.\n      properties:\n        type:\n          enum:\n          - File\n          - File?\n          - File[]\n          - File[]?\n    - $comment: Array of required or optional 'File'.\n      items:\n        oneOf:\n        - type: object\n          properties:\n            type:\n              enum:\n              - File\n              - File?\n        - contains:\n            properties:\n              type:\n                enum:\n                - File\n                - File?\n            type: array\n      type: array\n  then:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLFileOnlyParameters/schema.yaml\n  type: object\n- $comment: 'Explicitly disallow these parameters when non-Directory type is detected.\n\n    Otherwise, validate their schema definitions according to what is permitted.\n\n    '\n  description: Parameters that are only valid when 'type' or 'items' evaluates to\n    'Directory'.\n  else:\n    properties:\n      loadListing:\n        not: true\n  if:\n    oneOf:\n    - $comment: Single required or optional 'Directory'.\n      properties:\n        type:\n          enum:\n          - Directory\n          - Directory?\n          - Directory[]\n          - Directory[]?\n    - $comment: Array of required or optional 'Directory'.\n      items:\n        oneOf:\n        - type: object\n          properties:\n            type:\n              enum:\n              - Directory\n              - Directory?\n        - contains:\n            properties:\n              type:\n                enum:\n                - Directory\n                - Directory?\n            type: array\n      type: array\n  then:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDirectoryOnlyParameters/schema.yaml\n  type: object\nx-jsonld-prefixes:\n  sld: https://w3id.org/cwl/salad#\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/type-system/CWLTypeRecordFieldDef"
+}

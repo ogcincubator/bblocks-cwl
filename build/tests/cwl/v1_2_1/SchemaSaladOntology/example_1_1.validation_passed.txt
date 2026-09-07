@@ -1,0 +1,7 @@
+Validation report for ogc.cwl.v1_2_1.SchemaSaladOntology - Schema Salad Ontology
+Generated 2026-09-07T11:25:45.239461+00:00
+=== Files ===
+Using example_1_1.ttl from examples
+Output Turtle example_1_1.ttl created
+=== End Files ===
+

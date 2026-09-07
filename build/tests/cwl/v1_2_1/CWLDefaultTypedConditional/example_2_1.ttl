@@ -1,0 +1,7 @@
+@prefix sld: <https://w3id.org/cwl/salad#> .
+
+<https://example.org/args.py> a <https://example.org/File> .
+
+[] sld:default <https://example.org/args.py> ;
+    sld:type <https://example.org/File> .
+

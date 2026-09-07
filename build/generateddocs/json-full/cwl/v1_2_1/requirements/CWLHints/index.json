@@ -1,0 +1,102 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.requirements.CWLHints",
+  "name": "CWLHints",
+  "itemClass": "schema",
+  "abstract": "Non-failing additional hints that can help resolve extra requirements.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.676493",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.requirements.BuiltinRequirement",
+    "ogc.cwl.v1_2_1.requirements.CWLRequirementsMap",
+    "ogc.cwl.v1_2_1.CWLImport",
+    "ogc.cwl.v1_2_1.requirements.CWLHintsItem",
+    "ogc.cwl.v1_2_1.requirements.WPS1Requirement",
+    "ogc.cwl.v1_2_1.requirements.UnknownRequirement",
+    "ogc.cwl.v1_2_1.requirements.OGCAPIRequirement"
+  ],
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLHints/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLHints/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/CWLHints/schema.yaml",
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLHints/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLHints/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/CWLHints/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/requirements/CWLHints/",
+  "description": "Declares hints applying to either the runtime environment or the workflow engine that may be\nhelpful in executing a process. Structurally, `hints` accepts the same shapes as\n[CWLRequirements](bblocks://ogc.cwl.v1_2_1.requirements.CWLRequirements) \u2014 either a mapping keyed by `class`, or\na list of [CWLHintsItem](bblocks://ogc.cwl.v1_2_1.requirements.CWLHintsItem) entries (or `$import` directives)\neach carrying an explicit `class` \u2014 but the two fields differ in what a workflow engine must do\nwith them.\n\n`requirements` are mandatory: if an implementation cannot satisfy one, it must treat this as a\nfatal error and must not run the process (unless overridden at user option). `hints`, by contrast,\nare advisory: it is not an error if an implementation cannot satisfy all hints, though it may\nreport a warning. This makes `hints` the natural place to carry optional or non-standard,\nimplementation-specific extensions \u2014 such as this register's own\n[OGCAPIRequirement](bblocks://ogc.cwl.v1_2_1.requirements.OGCAPIRequirement) and `WPS1Requirement`, which tell\nan OGC-aware runner to delegate execution to a remote OGC API - Processes or WPS-1 provider \u2014\nwithout breaking engines that don't recognize them, since any unrecognized `class` still falls\nback to `UnknownRequirement`.\n",
+  "examples": [
+    {
+      "title": "Hints as a list",
+      "base-uri": "https://example.org/",
+      "content": "A `CommandLineTool`'s `hints` given as a list, adapted from the CWL conformance test\n`bwa-mem-tool.cwl`. Each entry needs an explicit `class` because, unlike the mapping form,\nnothing else identifies which hint it is. Since hints are advisory, an engine that cannot\nhonor `ResourceRequirement`'s `coresMin` should still attempt to run the tool.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/CWLHints/example_1_1.json",
+          "sizeBytes": 153,
+          "code": "[\n  {\n    \"class\": \"ResourceRequirement\",\n    \"coresMin\": 2\n  },\n  {\n    \"class\": \"DockerRequirement\",\n    \"dockerPull\": \"docker.io/python:3-slim\"\n  }\n]\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/CWLHints/example_1_1.jsonld",
+          "sizeBytes": 310,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLHints/context.jsonld\",\n  \"@graph\": [\n    {\n      \"class\": \"ResourceRequirement\",\n      \"coresMin\": 2\n    },\n    {\n      \"class\": \"DockerRequirement\",\n      \"dockerPull\": \"docker.io/python:3-slim\"\n    }\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/CWLHints/example_1_1.ttl",
+          "sizeBytes": 349,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#DockerRequirement/> .\n@prefix ns2: <https://w3id.org/cwl/cwl#ResourceRequirement/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a cwl:ResourceRequirement ;\n    ns2:coresMin 2 .\n\n[] a cwl:DockerRequirement ;\n    ns1:dockerPull \"docker.io/python:3-slim\" .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Hints as a map with an OGC-specific hint",
+      "base-uri": "https://example.org/",
+      "content": "`hints` given as a mapping keyed by `class`, using this register's non-standard\n[OGCAPIRequirement](bblocks://ogc.cwl.v1_2_1.requirements.OGCAPIRequirement) to hint that the process\nshould be delegated to a remote OGC API - Processes provider. Because it is a hint rather\nthan a requirement, an engine unaware of `OGCAPIRequirement` may ignore it instead of\nrejecting the process outright.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/CWLHints/example_2_1.json",
+          "sizeBytes": 97,
+          "code": "{\n  \"OGCAPIRequirement\": {\n    \"process\": \"https://example.org/ogcapi/processes/reproject\"\n  }\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/CWLHints/example_2_1.jsonld",
+          "sizeBytes": 259,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLHints/context.jsonld\",\n  \"@graph\": [\n    {\n      \"class\": \"OGCAPIRequirement\",\n      \"process\": \"https://example.org/ogcapi/processes/reproject\"\n    }\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/CWLHints/example_2_1.ttl",
+          "sizeBytes": 80,
+          "code": "@prefix ogccwl: <https://w3id.org/ogc/cwl/> .\n\n[] a ogccwl:OGCAPIRequirement .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "description: Non-failing additional hints that can help resolve extra requirements.\n$defs:\n  CWLHintsMap:\n    anyOf:\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLRequirementsMap/schema.yaml\n    - additionalProperties:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/UnknownRequirement/schema.yaml\n      properties:\n        BuiltinRequirement:\n          $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/BuiltinRequirement/schema.yaml\n        OGCAPIRequirement:\n          $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/OGCAPIRequirement/schema.yaml\n        WPS1Requirement:\n          $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/WPS1Requirement/schema.yaml\n      type: object\n    title: CWLHintsMap\n  CWLHintsList:\n    items:\n      oneOf:\n      - allOf:\n        - $comment: 'When using the list representation, ''class'' is required to\n            indicate which one is being represented.\n\n            When using the mapping representation, ''class'' is optional since it''s\n            the key, but it must match by name.\n\n            '\n          required:\n          - class\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLHintsItem/schema.yaml\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLImport/schema.yaml\n    title: CWLHintsList\n    type: array\noneOf:\n- $ref: '#/$defs/CWLHintsMap'\n- $ref: '#/$defs/CWLHintsList'\ntitle: CWLHints\n",
+  "semanticUplift": {
+    "additionalSteps": [
+      {
+        "type": "jq",
+        "code": "if type == \"object\" then\n  to_entries | map({class: .key} + .value)\nelse . end\n",
+        "stage": "pre"
+      }
+    ]
+  },
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/requirements/CWLHints"
+}

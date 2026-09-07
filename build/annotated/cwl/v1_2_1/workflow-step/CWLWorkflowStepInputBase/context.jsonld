@@ -1,0 +1,12 @@
+{
+  "@context": {
+    "linkMerge": "cwl:linkMerge",
+    "source": {
+      "@id": "cwl:source",
+      "@type": "@id"
+    },
+    "valueFrom": "cwl:valueFrom",
+    "cwl": "https://w3id.org/cwl/cwl#",
+    "@version": 1.1
+  }
+}

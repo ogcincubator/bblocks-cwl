@@ -1,0 +1,5 @@
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+
+[] a <https://example.org/InitialWorkDirRequirement> ;
+    cwl:listing [ ] .
+

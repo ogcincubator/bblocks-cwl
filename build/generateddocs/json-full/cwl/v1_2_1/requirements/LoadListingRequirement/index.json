@@ -1,0 +1,89 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.requirements.LoadListingRequirement",
+  "name": "LoadListingRequirement",
+  "itemClass": "schema",
+  "abstract": "Specify the desired behavior for loading the listing field of a 'Directory' object for use by expressions\n(see also: https://www.commonwl.org/v1.2/CommandLineTool.html#LoadListingRequirement).\n",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.686079",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.CWLOntology",
+    "ogc.cwl.v1_2_1.LoadListingEnum"
+  ],
+  "shaclShapes": {},
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/LoadListingRequirement/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/LoadListingRequirement/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/LoadListingRequirement/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/LoadListingRequirement/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/LoadListingRequirement/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/LoadListingRequirement/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/LoadListingRequirement/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/requirements/LoadListingRequirement/",
+  "description": "`LoadListingRequirement` lets a `CommandLineTool` or `Workflow` set a default for how deeply\n`Directory` inputs are enumerated before their `listing` field becomes available to expressions\n(e.g. `inputs.d.listing`). The allowed behaviors are the three\n[LoadListingEnum](bblocks://ogc.cwl.v1_2_1.LoadListingEnum) values: `no_listing`, `shallow_listing`,\nand `deep_listing`.\n\nWithout this requirement, an implementation defaults to `no_listing` \u2014 a `Directory` object's\n`listing` is left unset unless something asks for it. `LoadListingRequirement` can raise that\ndefault for the whole process, but the setting is layered: an individual input parameter's own\n`loadListing` field (part of `LoadContents`) always takes precedence over the process-wide\nrequirement, which in turn only applies when no per-parameter value is given. In order of\nprecedence:\n\n1. `loadListing` on an individual input parameter\n2. The process's `LoadListingRequirement`\n3. The implicit default, `no_listing`\n\nLoading a listing \u2014 especially `deep_listing`, which recurses into every subdirectory \u2014 can be\ncostly for large or deeply nested directory trees, so tools should only request the depth of\nlisting their expressions actually need.\n",
+  "examples": [
+    {
+      "title": "Deep directory listing requirement",
+      "base-uri": "https://example.org/",
+      "content": "A `CommandLineTool` requirement asking the implementation to recursively load the full\ndirectory listing of every `Directory` input, so nested subdirectories are also enumerated\nfor use in expressions.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/LoadListingRequirement/example_1_1.json",
+          "sizeBytes": 73,
+          "code": "{\n  \"class\": \"LoadListingRequirement\",\n  \"loadListing\": \"deep_listing\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/LoadListingRequirement/example_1_1.jsonld",
+          "sizeBytes": 210,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/LoadListingRequirement/context.jsonld\",\n  \"class\": \"LoadListingRequirement\",\n  \"loadListing\": \"deep_listing\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/LoadListingRequirement/example_1_1.ttl",
+          "sizeBytes": 134,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n\n[] a <https://example.org/LoadListingRequirement> ;\n    cwl:loadListing \"deep_listing\" .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Shallow directory listing requirement",
+      "base-uri": "https://example.org/",
+      "content": "A requirement asking the implementation to load only the top-level entries of each\n`Directory` input's listing, without recursing into subdirectories.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/LoadListingRequirement/example_2_1.json",
+          "sizeBytes": 76,
+          "code": "{\n  \"class\": \"LoadListingRequirement\",\n  \"loadListing\": \"shallow_listing\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/LoadListingRequirement/example_2_1.jsonld",
+          "sizeBytes": 213,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/LoadListingRequirement/context.jsonld\",\n  \"class\": \"LoadListingRequirement\",\n  \"loadListing\": \"shallow_listing\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/LoadListingRequirement/example_2_1.ttl",
+          "sizeBytes": 137,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n\n[] a <https://example.org/LoadListingRequirement> ;\n    cwl:loadListing \"shallow_listing\" .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "additionalProperties: false\ndescription: 'Specify the desired behavior for loading the listing field of a ''Directory''\n  object for use by expressions\n\n  (see also: https://www.commonwl.org/v1.2/CommandLineTool.html#LoadListingRequirement).\n\n  '\nproperties:\n  class:\n    enum:\n    - LoadListingRequirement\n    type: string\n    x-jsonld-id: '@type'\n  loadListing:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/LoadListingEnum/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#loadListing\nrequired:\n- loadListing\ntitle: LoadListingRequirement\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/requirements/LoadListingRequirement"
+}

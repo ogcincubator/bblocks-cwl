@@ -1,0 +1,3 @@
+path	@id	schema
+/class	@type	/github/workspace/build/annotated/cwl/v1_2_1/requirements/NetworkAccessRequirement/schema.yaml
+/networkAccess	https://w3id.org/cwl/cwl#NetworkAccess/networkAccess	/github/workspace/build/annotated/cwl/v1_2_1/requirements/NetworkAccessRequirement/schema.yaml

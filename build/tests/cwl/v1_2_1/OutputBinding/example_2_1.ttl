@@ -1,0 +1,4 @@
+@prefix ns1: <https://w3id.org/cwl/cwl#CommandOutputBinding/> .
+
+[] ns1:glob "$(inputs.indir.basename)/*" .
+

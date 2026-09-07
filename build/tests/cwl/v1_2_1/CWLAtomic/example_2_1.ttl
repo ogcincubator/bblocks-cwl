@@ -1,0 +1,29 @@
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+@prefix ns1: <https://w3id.org/cwl/cwl#CommandOutputBinding/> .
+@prefix ns2: <https://w3id.org/cwl/cwl#CommandLineBinding/> .
+@prefix ns3: <https://w3id.org/cwl/cwl#DockerRequirement/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sld: <https://w3id.org/cwl/salad#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/file1> rdfs:label "Input File" ;
+    rdfs:comment "The file that will be copied using 'cat'" ;
+    cwl:inputBinding [ ns2:position 1 ] ;
+    sld:type cwl:File .
+
+<https://example.org/output_file> cwl:outputBinding [ ns1:glob "output.txt" ] ;
+    sld:type cwl:File .
+
+[] a cwl:CommandLineTool ;
+    rdfs:comment "Print the contents of a file to stdout using 'cat' running in a docker container." ;
+    schema:keywords "cat",
+        "docker" ;
+    cwl:baseCommand ( "cat" ) ;
+    cwl:hints [ a cwl:DockerRequirement ;
+            ns3:dockerPull "docker.io/debian:stable-slim" ] ;
+    cwl:inputs <https://example.org/file1> ;
+    cwl:outputs <https://example.org/output_file> ;
+    cwl:stdout "output.txt" .
+

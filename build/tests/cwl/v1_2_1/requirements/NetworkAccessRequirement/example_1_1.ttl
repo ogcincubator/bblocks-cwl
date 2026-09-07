@@ -1,0 +1,6 @@
+@prefix ns1: <https://w3id.org/cwl/cwl#NetworkAccess/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a <https://example.org/NetworkAccess> ;
+    ns1:networkAccess true .
+

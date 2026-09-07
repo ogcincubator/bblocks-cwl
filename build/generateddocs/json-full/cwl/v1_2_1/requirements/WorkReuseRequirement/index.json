@@ -1,0 +1,88 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.requirements.WorkReuseRequirement",
+  "name": "WorkReuseRequirement",
+  "itemClass": "schema",
+  "abstract": "For implementations that support reusing output from past work\n(on the assumption that same code and same input produce same results),\ncontrol whether to enable or disable the reuse behavior for a particular tool\nor step (to accommodate situations where that assumption is incorrect).\n\nA reused step is not executed but instead returns the same output as the original execution.\n\nIf 'WorkReuse' is not specified, correct tools should assume it is enabled by default.\n",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.687743",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.CWLExpression",
+    "ogc.cwl.v1_2_1.CWLOntology"
+  ],
+  "shaclShapes": {},
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/WorkReuseRequirement/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/WorkReuseRequirement/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/WorkReuseRequirement/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/WorkReuseRequirement/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/WorkReuseRequirement/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/WorkReuseRequirement/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/WorkReuseRequirement/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/requirements/WorkReuseRequirement/",
+  "examples": [
+    {
+      "title": "Disabling work reuse",
+      "base-uri": "https://example.org/",
+      "content": "A `CommandLineTool` that disables output reuse, forcing re-execution on every run \u2014 adapted\nfrom the CWL v1.2 conformance test suite, where this is combined with a `ToolTimeLimit` to\ntest that a re-run is not skipped by reuse of a previous (successful) execution.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/WorkReuseRequirement/example_1_1.json",
+          "sizeBytes": 51,
+          "code": "{\n  \"class\": \"WorkReuse\",\n  \"enableReuse\": false\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/WorkReuseRequirement/example_1_1.jsonld",
+          "sizeBytes": 186,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/WorkReuseRequirement/context.jsonld\",\n  \"class\": \"WorkReuse\",\n  \"enableReuse\": false\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/WorkReuseRequirement/example_1_1.ttl",
+          "sizeBytes": 173,
+          "code": "@prefix ns1: <https://w3id.org/cwl/cwl#WorkReuse/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a <https://example.org/WorkReuse> ;\n    ns1:enableReuse false .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Work reuse controlled by an expression",
+      "base-uri": "https://example.org/",
+      "content": "`enableReuse` may also be a [CWLExpression](bblocks://ogc.cwl.v1_2_1.CWLExpression), evaluated\nat runtime, when combined with `InlineJavascriptRequirement`.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/WorkReuseRequirement/example_2_1.json",
+          "sizeBytes": 70,
+          "code": "{\n  \"class\": \"WorkReuse\",\n  \"enableReuse\": \"$(inputs.allowCaching)\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/WorkReuseRequirement/example_2_1.jsonld",
+          "sizeBytes": 205,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/WorkReuseRequirement/context.jsonld\",\n  \"class\": \"WorkReuse\",\n  \"enableReuse\": \"$(inputs.allowCaching)\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/WorkReuseRequirement/example_2_1.ttl",
+          "sizeBytes": 141,
+          "code": "@prefix ns1: <https://w3id.org/cwl/cwl#WorkReuse/> .\n\n[] a <https://example.org/WorkReuse> ;\n    ns1:enableReuse \"$(inputs.allowCaching)\" .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "additionalProperties: false\ndescription: 'For implementations that support reusing output from past work\n\n  (on the assumption that same code and same input produce same results),\n\n  control whether to enable or disable the reuse behavior for a particular tool\n\n  or step (to accommodate situations where that assumption is incorrect).\n\n\n  A reused step is not executed but instead returns the same output as the original\n  execution.\n\n\n  If ''WorkReuse'' is not specified, correct tools should assume it is enabled by\n  default.\n\n  '\nproperties:\n  class:\n    $comment: Not 'WorkReuseRequirement'.\n    enum:\n    - WorkReuse\n    type: string\n    x-jsonld-id: '@type'\n  enableReuse:\n    description: 'Indicates if reuse is enabled for this tool.\n\n\n      Can be an expression when combined with ''InlineJavascriptRequirement''\n\n      (see also: https://www.commonwl.org/v1.2/CommandLineTool.html#Expression).\n\n      '\n    oneOf:\n    - type: boolean\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    title: EnableReuseValue\n    x-jsonld-id: https://w3id.org/cwl/cwl#WorkReuse/enableReuse\nrequired:\n- enableReuse\ntitle: WorkReuseRequirement\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/requirements/WorkReuseRequirement"
+}

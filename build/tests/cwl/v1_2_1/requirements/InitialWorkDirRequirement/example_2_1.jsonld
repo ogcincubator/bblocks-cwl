@@ -1,0 +1,15 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/context.jsonld",
+  "class": "InitialWorkDirRequirement",
+  "listing": [
+    {
+      "entry": "$(inputs.infile)",
+      "entryname": "bob.txt",
+      "writable": true
+    },
+    {
+      "class": "File",
+      "location": "https://example.org/data/reference.txt"
+    }
+  ]
+}

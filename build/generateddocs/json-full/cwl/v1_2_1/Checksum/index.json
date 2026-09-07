@@ -4,10 +4,10 @@
   "itemIdentifier": "ogc.cwl.v1_2_1.Checksum",
   "name": "Checksum",
   "itemClass": "schema",
-  "abstract": "Checksum",
+  "abstract": "An optional hash code for validating file integrity. Currently must be in\nthe form `sha1$<hexadecimal string>`, using the SHA-1 algorithm.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.709969",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -21,9 +21,24 @@
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/Checksum/schema.yaml",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/Checksum/",
-  "rdfData": [],
   "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/Checksum/",
   "description": "Minimal pattern check to know which hash algorithm to apply,\nbut don't check too harshly for the rest (length, allowed characters, etc.).\n",
+  "examples": [
+    {
+      "title": "SHA-1 checksum of a File",
+      "base-uri": "https://example.org/",
+      "content": "The `checksum` field of a `File` object, prefixed with the hash algorithm identifier (`sha1$`)\nfollowed by the hexadecimal SHA-1 digest of the file's contents.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/Checksum/example_1_1.json",
+          "sizeBytes": 48,
+          "code": "\"sha1$959e6b13ecc44e1af7c94cc76ff6a5eb5b4c6f76\"\n"
+        }
+      ]
+    }
+  ],
   "annotatedSchema": "$comment: 'Minimal pattern check to know which hash algorithm to apply,\n\n  but don''t check too harshly for the rest (length, allowed characters, etc.).\n\n  '\npattern: ^[a-z0-9\\-]+\\$[\\w\\-.]+$\ntype: string\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/Checksum"

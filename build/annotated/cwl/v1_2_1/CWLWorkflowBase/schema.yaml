@@ -1,25 +1,37 @@
 $defs:
   CWLWorkflowStepMap:
     additionalProperties:
-      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepObject/schema.yaml
+      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepObject/schema.yaml
     type: object
   CWLWorkflowStepList:
     items:
-      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepItem/schema.yaml
+      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepItem/schema.yaml
     type: array
 properties:
   hints:
     $comment: Technically a different subset, but lots of redefinitions to be done.
-    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLHints/schema.yaml
+    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLHints/schema.yaml
+    x-jsonld-id: https://w3id.org/cwl/cwl#hints
+    x-jsonld-container: '@type'
   inputs:
     $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputsDefinition/schema.yaml
+    x-jsonld-id: https://w3id.org/cwl/cwl#inputs
+    x-jsonld-container: '@id'
   outputs:
     $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputsDefinition/schema.yaml
+    x-jsonld-id: https://w3id.org/cwl/cwl#outputs
+    x-jsonld-container: '@id'
   requirements:
     $comment: Technically a different subset, but lots of redefinitions to be done.
-    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLRequirements/schema.yaml
+    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLRequirements/schema.yaml
+    x-jsonld-id: https://w3id.org/cwl/cwl#requirements
+    x-jsonld-container: '@type'
   steps:
     oneOf:
     - $ref: '#/$defs/CWLWorkflowStepMap'
     - $ref: '#/$defs/CWLWorkflowStepList'
+    x-jsonld-id: https://w3id.org/cwl/cwl#Workflow/steps
+    x-jsonld-container: '@id'
 type: object
+x-jsonld-prefixes:
+  cwl: https://w3id.org/cwl/cwl#

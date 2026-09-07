@@ -1,0 +1,6 @@
+{
+  "position": "$(inputs.priority)",
+  "prefix": "-I",
+  "itemSeparator": ",",
+  "valueFrom": "$(self)"
+}

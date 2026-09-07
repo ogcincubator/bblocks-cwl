@@ -7,24 +7,91 @@
   "abstract": "Field type definition.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.707051",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
   "tags": [
     "cwl"
   ],
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.CWLOntology",
+    "ogc.cwl.v1_2_1.SchemaSaladOntology"
+  ],
   "shaclShapes": {},
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeDefinition/context.jsonld",
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeDefinition/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeDefinition/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeDefinition/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeDefinition/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTypeDefinition/",
-  "rdfData": [],
   "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLTypeDefinition/",
   "description": "Note that 'Any' is equivalent to any of the non-null types.\nTherefore, a nullable 'Any' explicitly specified by 'Any?' or its array-nullable form 'Any[]?' are not equivalent.\n",
-  "annotatedSchema": "$comment: 'Note that ''Any'' is equivalent to any of the non-null types.\n\n  Therefore, a nullable ''Any'' explicitly specified by ''Any?'' or its array-nullable\n  form ''Any[]?'' are not equivalent.\n\n  '\ndescription: Field type definition.\nenum:\n- 'null'\n- Any\n- Any?\n- Any[]\n- Any[]?\n- Directory\n- Directory?\n- Directory[]\n- Directory[]?\n- File\n- File?\n- File[]\n- File[]?\n- boolean\n- boolean?\n- boolean[]\n- boolean[]?\n- double\n- double?\n- double[]\n- double[]?\n- enum?\n- enum[]\n- enum[]?\n- float\n- float?\n- float[]\n- float[]?\n- int\n- int?\n- int[]\n- int[]?\n- integer\n- integer?\n- integer[]\n- integer[]?\n- long\n- long?\n- long[]\n- long[]?\n- string\n- string?\n- string[]\n- string[]?\nsummary: CWL type string definition.\ntitle: CWL type string definition\ntype: string\n",
+  "examples": [
+    {
+      "title": "File type",
+      "base-uri": "https://example.org/",
+      "content": "A required `File` parameter type.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLTypeDefinition/example_1_1.json",
+          "sizeBytes": 7,
+          "code": "\"File\"\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLTypeDefinition/example_1_1.jsonld",
+          "sizeBytes": 184,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeDefinition/context.jsonld\",\n  \"http://www.w3.org/1999/02/22-rdf-syntax-ns#value\": \"File\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLTypeDefinition/example_1_1.ttl",
+          "sizeBytes": 85,
+          "code": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n\n[] rdf:value \"File\" .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Optional array of strings",
+      "base-uri": "https://example.org/",
+      "content": "A nullable array of strings, combining the array (`[]`) and nullable (`?`) suffixes.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLTypeDefinition/example_2_1.json",
+          "sizeBytes": 12,
+          "code": "\"string[]?\"\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLTypeDefinition/example_2_1.jsonld",
+          "sizeBytes": 189,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeDefinition/context.jsonld\",\n  \"http://www.w3.org/1999/02/22-rdf-syntax-ns#value\": \"string[]?\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLTypeDefinition/example_2_1.ttl",
+          "sizeBytes": 90,
+          "code": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n\n[] rdf:value \"string[]?\" .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$comment: 'Note that ''Any'' is equivalent to any of the non-null types.\n\n  Therefore, a nullable ''Any'' explicitly specified by ''Any?'' or its array-nullable\n  form ''Any[]?'' are not equivalent.\n\n  '\ndescription: Field type definition.\nenum:\n- 'null'\n- Any\n- Any?\n- Any[]\n- Any[]?\n- Directory\n- Directory?\n- Directory[]\n- Directory[]?\n- File\n- File?\n- File[]\n- File[]?\n- boolean\n- boolean?\n- boolean[]\n- boolean[]?\n- double\n- double?\n- double[]\n- double[]?\n- enum?\n- enum[]\n- enum[]?\n- float\n- float?\n- float[]\n- float[]?\n- int\n- int?\n- int[]\n- int[]?\n- integer\n- integer?\n- integer[]\n- integer[]?\n- long\n- long?\n- long[]\n- long[]?\n- string\n- string?\n- string[]\n- string[]?\nsummary: CWL type string definition.\ntitle: CWL type string definition\ntype: string\nx-jsonld-extra-terms:\n  'null': https://w3id.org/cwl/salad#null\n  boolean: http://www.w3.org/2001/XMLSchema#boolean\n  int: http://www.w3.org/2001/XMLSchema#int\n  integer: http://www.w3.org/2001/XMLSchema#int\n  long: http://www.w3.org/2001/XMLSchema#long\n  float: http://www.w3.org/2001/XMLSchema#float\n  double: http://www.w3.org/2001/XMLSchema#double\n  string: http://www.w3.org/2001/XMLSchema#string\n  File: https://w3id.org/cwl/cwl#File\n  Directory: https://w3id.org/cwl/cwl#Directory\nx-jsonld-prefixes:\n  sld: https://w3id.org/cwl/salad#\n  xsd: http://www.w3.org/2001/XMLSchema#\n  cwl: https://w3id.org/cwl/cwl#\n",
+  "semanticUplift": {
+    "additionalSteps": [
+      {
+        "type": "jq",
+        "code": "if (type==\"string\" or type==\"number\" or type==\"boolean\" or type==\"null\") then\n  {\"http://www.w3.org/1999/02/22-rdf-syntax-ns#value\": .}\nelif (type==\"array\" and all(.[]; type==\"string\" or type==\"number\" or type==\"boolean\" or type==\"null\")) then\n  {\"http://www.w3.org/1999/02/22-rdf-syntax-ns#value\": {\"@list\": .}}\nelse\n  .\nend\n",
+        "stage": "pre"
+      }
+    ]
+  },
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLTypeDefinition"
 }

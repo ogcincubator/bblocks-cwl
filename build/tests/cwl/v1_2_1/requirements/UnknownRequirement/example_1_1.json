@@ -1,0 +1,5 @@
+{
+  "class": "acme:CustomRequirement",
+  "acme:priority": "high",
+  "acme:retries": 3
+}

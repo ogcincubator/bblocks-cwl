@@ -1,0 +1,5 @@
+{
+  "loadContents": true,
+  "streamable": true,
+  "secondaryFiles": "^.bai?"
+}

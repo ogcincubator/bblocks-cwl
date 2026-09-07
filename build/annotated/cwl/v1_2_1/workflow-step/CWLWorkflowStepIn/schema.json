@@ -1,0 +1,45 @@
+{
+  "description": "Mapping of Workflow step inputs to nested CWL tool definitions inputs or outputs.",
+  "$defs": {
+    "CWLWorkflowStepInMap": {
+      "additionalProperties": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          {
+            "allOf": [
+              {
+                "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepInputBase/schema.json"
+              },
+              {
+                "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepInputDefault/schema.json"
+              }
+            ]
+          }
+        ]
+      },
+      "type": "object"
+    },
+    "CWLWorkflowStepInList": {
+      "items": {
+        "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepInItem/schema.json"
+      },
+      "type": "array"
+    }
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/CWLWorkflowStepInMap"
+    },
+    {
+      "$ref": "#/$defs/CWLWorkflowStepInList"
+    }
+  ]
+}

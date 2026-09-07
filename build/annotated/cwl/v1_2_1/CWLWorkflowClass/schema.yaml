@@ -3,4 +3,9 @@ properties:
     enum:
     - Workflow
     type: string
+    x-jsonld-id: '@type'
 type: object
+x-jsonld-extra-terms:
+  Workflow: https://w3id.org/cwl/cwl#Workflow
+x-jsonld-prefixes:
+  cwl: https://w3id.org/cwl/cwl#

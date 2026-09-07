@@ -1,0 +1,46 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.requirements.MultipleInputFeatureRequirement",
+  "name": "MultipleInputFeatureRequirement",
+  "itemClass": "schema",
+  "abstract": "Indicates that the 'Workflow' must support multiple inbound data links listed in the 'source'\nfield of 'WorkflowStepInput'.\n",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.688115",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "shaclShapes": {},
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/MultipleInputFeatureRequirement/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/MultipleInputFeatureRequirement/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/MultipleInputFeatureRequirement/schema.yaml",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/MultipleInputFeatureRequirement/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/MultipleInputFeatureRequirement/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/requirements/MultipleInputFeatureRequirement/",
+  "description": "Without this requirement, a [`WorkflowStepInput`](bblocks://ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepInputBase)'s\n`source` field must reference a single upstream parameter. Declaring\n`MultipleInputFeatureRequirement` lifts that restriction, allowing `source` to list an array of\nupstream parameters whose values are merged into the sink input.\n\nThe merge behavior is controlled by the sink input's `linkMerge` field\n(see [`LinkMergeMethod`](bblocks://ogc.cwl.v1_2_1.LinkMergeMethod)): `merge_nested` (the default)\nwraps the value from each link into one entry of a list, while `merge_flattened` concatenates\narray-valued links into a single flat list. If `linkMerge` is left unset and `source` lists more\nthan one upstream parameter, `merge_nested` applies; if `source` lists only one, the input takes\nthat single value directly, unwrapped.\n",
+  "examples": [
+    {
+      "title": "Enabling multiple inbound data links",
+      "base-uri": "https://example.org/",
+      "content": "Adapted from the CWL conformance test `count-lines7-wf.cwl`: a `Workflow` declares\n`MultipleInputFeatureRequirement` so that a step input's `source` field\n(see [CWLWorkflowStepInputBase](bblocks://ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepInputBase)) can list\nmore than one upstream parameter, merged according to `linkMerge`.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/MultipleInputFeatureRequirement/example_1_1.json",
+          "sizeBytes": 49,
+          "code": "{\n  \"class\": \"MultipleInputFeatureRequirement\"\n}\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "additionalProperties: false\ndescription: 'Indicates that the ''Workflow'' must support multiple inbound data links\n  listed in the ''source''\n\n  field of ''WorkflowStepInput''.\n\n  '\nproperties:\n  class:\n    description: CWL requirement class specification.\n    enum:\n    - MultipleInputFeatureRequirement\n    type: string\ntitle: MultipleInputFeatureRequirement\ntype: object\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/requirements/MultipleInputFeatureRequirement"
+}

@@ -1,0 +1,5 @@
+@prefix ns1: <https://w3id.org/cwl/cwl#SoftwarePackage/> .
+
+[] ns1:package "screed" ;
+    ns1:version "1.0" .
+

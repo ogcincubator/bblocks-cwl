@@ -1,0 +1,18 @@
+{
+  "id": "tool-id",
+  "inputs": {
+    "in": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "out": {
+      "type": "string"
+    }
+  },
+  "hints": {
+    "DockerRequirement": {
+      "dockerPull": "python:3.11-slim"
+    }
+  }
+}

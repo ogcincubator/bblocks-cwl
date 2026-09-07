@@ -11,6 +11,7 @@ allOf:
       maxItems: 1
       minItems: 1
       title: CWLGraphList
+      x-jsonld-id: '@graph'
   required:
   - $graph
   type: object

@@ -1,0 +1,88 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.requirements.ToolTimeLimitRequirement",
+  "name": "ToolTimeLimitRequirement",
+  "itemClass": "schema",
+  "abstract": "Set an upper limit on the execution time of a CommandLineTool.\n\nA CommandLineTool whose execution duration exceeds the time limit may be preemptively\nterminated and considered failed. May also be used by batch systems to make scheduling decisions.\n\nThe execution duration excludes external operations, such as staging of files,\npulling a docker image etc., and only counts wall-time for the execution of the command line itself.\n",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.687380",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.CWLExpression",
+    "ogc.cwl.v1_2_1.CWLOntology"
+  ],
+  "shaclShapes": {},
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ToolTimeLimitRequirement/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ToolTimeLimitRequirement/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ToolTimeLimitRequirement/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/ToolTimeLimitRequirement/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/ToolTimeLimitRequirement/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ToolTimeLimitRequirement/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/ToolTimeLimitRequirement/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/requirements/ToolTimeLimitRequirement/",
+  "examples": [
+    {
+      "title": "Fixed time limit in seconds",
+      "base-uri": "https://example.org/",
+      "content": "A `CommandLineTool` requirement that terminates execution if it runs for more than 3 seconds\nof wall-clock time.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/ToolTimeLimitRequirement/example_1_1.json",
+          "sizeBytes": 49,
+          "code": "{\n  \"class\": \"ToolTimeLimit\",\n  \"timelimit\": 3\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/ToolTimeLimitRequirement/example_1_1.jsonld",
+          "sizeBytes": 188,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ToolTimeLimitRequirement/context.jsonld\",\n  \"class\": \"ToolTimeLimit\",\n  \"timelimit\": 3\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/ToolTimeLimitRequirement/example_1_1.ttl",
+          "sizeBytes": 175,
+          "code": "@prefix ns1: <https://w3id.org/cwl/cwl#ToolTimeLimit/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a <https://example.org/ToolTimeLimit> ;\n    ns1:timelimit 3 .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Time limit computed from a CWL expression",
+      "base-uri": "https://example.org/",
+      "content": "The `timelimit` field may also be set to a [CWLExpression](bblocks://ogc.cwl.v1_2_1.CWLExpression),\nevaluated at runtime, instead of a fixed number of seconds. This requires\n`InlineJavascriptRequirement` to also be present in the enclosing process.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/ToolTimeLimitRequirement/example_2_1.json",
+          "sizeBytes": 58,
+          "code": "{\n  \"class\": \"ToolTimeLimit\",\n  \"timelimit\": \"$(1 + 2)\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/ToolTimeLimitRequirement/example_2_1.jsonld",
+          "sizeBytes": 197,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ToolTimeLimitRequirement/context.jsonld\",\n  \"class\": \"ToolTimeLimit\",\n  \"timelimit\": \"$(1 + 2)\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/ToolTimeLimitRequirement/example_2_1.ttl",
+          "sizeBytes": 133,
+          "code": "@prefix ns1: <https://w3id.org/cwl/cwl#ToolTimeLimit/> .\n\n[] a <https://example.org/ToolTimeLimit> ;\n    ns1:timelimit \"$(1 + 2)\" .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "additionalProperties: false\ndescription: 'Set an upper limit on the execution time of a CommandLineTool.\n\n\n  A CommandLineTool whose execution duration exceeds the time limit may be preemptively\n\n  terminated and considered failed. May also be used by batch systems to make scheduling\n  decisions.\n\n\n  The execution duration excludes external operations, such as staging of files,\n\n  pulling a docker image etc., and only counts wall-time for the execution of the\n  command line itself.\n\n  '\nproperties:\n  class:\n    $comment: not 'ToolTimeLimitRequirement'\n    enum:\n    - ToolTimeLimit\n    type: string\n    x-jsonld-id: '@type'\n  timelimit:\n    description: 'The time limit, in seconds.\n\n\n      A time limit of zero means no time limit.\n\n      Negative time limits are an error.\n\n      '\n    oneOf:\n    - minimum: 0.0\n      type: number\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    title: TimeLimitValue\n    x-jsonld-id: https://w3id.org/cwl/cwl#ToolTimeLimit/timelimit\nrequired:\n- timelimit\ntitle: ToolTimeLimitRequirement\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/requirements/ToolTimeLimitRequirement"
+}

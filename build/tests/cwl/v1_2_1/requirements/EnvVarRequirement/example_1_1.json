@@ -1,0 +1,6 @@
+{
+  "class": "EnvVarRequirement",
+  "envDef": {
+    "TEST_ENV": "$(inputs.in)"
+  }
+}

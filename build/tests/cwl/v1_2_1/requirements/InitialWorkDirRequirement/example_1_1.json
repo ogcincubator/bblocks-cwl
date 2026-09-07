@@ -1,0 +1,9 @@
+{
+  "class": "InitialWorkDirRequirement",
+  "listing": [
+    {
+      "entryname": "example.conf",
+      "entry": "CONFIGVAR=$(inputs.message)\n"
+    }
+  ]
+}

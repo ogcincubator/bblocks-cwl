@@ -1,0 +1,5 @@
+{
+  "type": "int?",
+  "default": 10,
+  "doc": "Threshold value used to filter results"
+}

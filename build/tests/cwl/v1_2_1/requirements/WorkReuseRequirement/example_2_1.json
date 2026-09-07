@@ -1,0 +1,4 @@
+{
+  "class": "WorkReuse",
+  "enableReuse": "$(inputs.allowCaching)"
+}

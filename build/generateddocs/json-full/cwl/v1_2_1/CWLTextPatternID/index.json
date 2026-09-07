@@ -7,7 +7,7 @@
   "abstract": "Generic identifier name pattern.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.678852",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -21,9 +21,37 @@
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTextPatternID/schema.yaml",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLTextPatternID/",
-  "rdfData": [],
   "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLTextPatternID/",
   "description": "Identifier with text pattern that can allow additional non-ASCII characters depending on regex implementation.\nThe identifier allows a '#' or a relative 'sub/part#ref' prefix, to support references to other definitions\nin the CWL document, such as when using 'SchemaDefRequirement'.\n\nJSON spec regex does not include '\\w' in its default subset to allow all word-like unicode characters\n(see reference: https://json-schema.org/understanding-json-schema/reference/regular_expressions.html).\n\nSince support is implementation specific, add both the ASCII-only and '\\w' representation simultaneously\nand let the parser reading this document apply whichever is more relevant or supported\n(see discussion: https://github.com/common-workflow-language/cwl-v1.2/pull/256#discussion_r1234037814).\n",
+  "examples": [
+    {
+      "title": "Local fragment identifier",
+      "base-uri": "https://example.org/",
+      "content": "A short local identifier, as used for an `id` field within a single (non-packed) CWL document.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLTextPatternID/example_1_1.json",
+          "sizeBytes": 7,
+          "code": "\"main\"\n"
+        }
+      ]
+    },
+    {
+      "title": "Fragment reference into a sub-part",
+      "base-uri": "https://example.org/",
+      "content": "An identifier referencing a sub-part definition through a `#` fragment prefix, such as an entry\ndefined under `SchemaDefRequirement`.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLTextPatternID/example_2_1.json",
+          "sizeBytes": 15,
+          "code": "\"sub/part#ref\"\n"
+        }
+      ]
+    }
+  ],
   "annotatedSchema": "$comment: 'Identifier with text pattern that can allow additional non-ASCII characters\n  depending on regex implementation.\n\n  The identifier allows a ''#'' or a relative ''sub/part#ref'' prefix, to support\n  references to other definitions\n\n  in the CWL document, such as when using ''SchemaDefRequirement''.\n\n\n  JSON spec regex does not include ''\\w'' in its default subset to allow all word-like\n  unicode characters\n\n  (see reference: https://json-schema.org/understanding-json-schema/reference/regular_expressions.html).\n\n\n  Since support is implementation specific, add both the ASCII-only and ''\\w'' representation\n  simultaneously\n\n  and let the parser reading this document apply whichever is more relevant or supported\n\n  (see discussion: https://github.com/common-workflow-language/cwl-v1.2/pull/256#discussion_r1234037814).\n\n  '\ndescription: Generic identifier name pattern.\npattern: ^([A-Za-z0-9\\w]+(/[A-Za-z0-9\\w]+)*)?[#.]?[A-Za-z0-9\\w]+(?:[-_.][A-Za-z0-9\\w]+)*$\ntype: string\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLTextPatternID"

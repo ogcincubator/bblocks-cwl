@@ -1,0 +1,98 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepIn",
+  "name": "CWLWorkflowStepIn",
+  "itemClass": "schema",
+  "abstract": "Mapping of Workflow step inputs to nested CWL tool definitions inputs or outputs.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.708164",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepInputBase",
+    "ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepInItem",
+    "ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepInputDefault"
+  ],
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepIn/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepIn/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/workflow-step/CWLWorkflowStepIn/schema.yaml",
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepIn/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepIn/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/workflow-step/CWLWorkflowStepIn/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepIn/",
+  "description": "A Workflow step's `in` field connects the step's input parameters to values coming from the\nworkflow's own inputs, from other steps' outputs, or from literal defaults. CWL allows `in` to be\nwritten in two equivalent forms, captured here as a `oneOf`:\n\n- **Map form** (`CWLWorkflowStepInMap`): an object keyed by input parameter name, where each value\n  is either a bare `source` string, a list of `source` strings, or a full input object (see\n  [CWLWorkflowStepInputBase](bblocks://ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepInputBase) and\n  [CWLWorkflowStepInputDefault](bblocks://ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepInputDefault)).\n- **List form** (`CWLWorkflowStepInList`): an array of\n  [CWLWorkflowStepInItem](bblocks://ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepInItem) objects, each of which\n  carries its own `id` alongside the same wiring fields.\n\n## Merging multiple inbound data links\n\nIf a step input's `source` names more than one upstream parameter, the values are combined\naccording to `linkMerge`\n(see [LinkMergeMethod](bblocks://ogc.cwl.v1_2_1.LinkMergeMethod)): `merge_nested` (the default)\nwraps each linked value into one entry of a result list, while `merge_flattened` concatenates\narray-valued sources and appends scalar-valued sources into a single flat list. If `linkMerge` is\nnot specified and `source` has only one entry, the input takes that entry's value directly, without\nbeing wrapped in a list.\n\nCWL also defines a `pickValue` field for this purpose \u2014 evaluated after `linkMerge` and before\n`scatter`/`valueFrom` \u2014 to select non-null values among several inbound links\n(`first_non_null`, `the_only_non_null`, `all_non_null`); this is particularly useful alongside\nconditional (`when`) steps, whose skipped runs produce `null`. This register's schema does not\ncurrently model `pickValue` as a validated property.\n\n## Other wiring fields\n\n- `valueFrom` (see [CWLExpression](bblocks://ogc.cwl.v1_2_1.CWLExpression)): overrides or computes\n  the final input value, optionally as a CWL parameter-reference expression evaluated against the\n  `source` value (`self`) once `MultipleInputFeatureRequirement`/`StepInputExpressionRequirement`\n  requirements are satisfied.\n- `default` (see [CWLDefault](bblocks://ogc.cwl.v1_2_1.CWLDefault)): the value used when `source` is\n  absent, or when the value it produces is `null`; applied before scattering or evaluating\n  `valueFrom`.\n",
+  "examples": [
+    {
+      "title": "Map form, with plain and object-valued sources",
+      "base-uri": "https://example.org/",
+      "content": "A step's `in` written as a map: `file1` is wired with a bare `source` string, while `file2`\nand `file3` are wired with full input objects that also request how multiple inbound links\nare merged. Adapted from CWL's `count-lines12-wf.cwl` and `conflict-wf.cwl` test fixtures.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepIn/example_1_1.json",
+          "sizeBytes": 207,
+          "code": "{\n  \"file1\": \"input_file\",\n  \"file2\": {\n    \"source\": [\"step_a/out\", \"step_b/out\"],\n    \"linkMerge\": \"merge_flattened\"\n  },\n  \"file3\": {\n    \"source\": \"step_c/out\",\n    \"valueFrom\": \"$(self.basename)\"\n  }\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepIn/example_1_1.jsonld",
+          "sizeBytes": 460,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepIn/context.jsonld\",\n  \"@graph\": [\n    {\n      \"id\": \"file1\",\n      \"source\": \"input_file\"\n    },\n    {\n      \"id\": \"file2\",\n      \"source\": [\n        \"step_a/out\",\n        \"step_b/out\"\n      ],\n      \"linkMerge\": \"merge_flattened\"\n    },\n    {\n      \"id\": \"file3\",\n      \"source\": \"step_c/out\",\n      \"valueFrom\": \"$(self.basename)\"\n    }\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepIn/example_1_1.ttl",
+          "sizeBytes": 388,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n\n<https://example.org/file1> cwl:source <https://example.org/input_file> .\n\n<https://example.org/file2> cwl:linkMerge \"merge_flattened\" ;\n    cwl:source <https://example.org/step_a/out>,\n        <https://example.org/step_b/out> .\n\n<https://example.org/file3> cwl:source <https://example.org/step_c/out> ;\n    cwl:valueFrom \"$(self.basename)\" .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "List form, one entry per step input",
+      "base-uri": "https://example.org/",
+      "content": "The same kind of wiring expressed as a list, where each entry supplies its own `id` alongside\n`source`/`linkMerge`/`default`.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepIn/example_2_1.json",
+          "sizeBytes": 196,
+          "code": "[\n  {\n    \"id\": \"file1\",\n    \"source\": \"input_file\"\n  },\n  {\n    \"id\": \"file2\",\n    \"source\": [\"step_a/out\", \"step_b/out\"],\n    \"linkMerge\": \"merge_flattened\",\n    \"default\": \"fallback.txt\"\n  }\n]\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepIn/example_2_1.jsonld",
+          "sizeBytes": 391,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepIn/context.jsonld\",\n  \"@graph\": [\n    {\n      \"id\": \"file1\",\n      \"source\": \"input_file\"\n    },\n    {\n      \"id\": \"file2\",\n      \"source\": [\n        \"step_a/out\",\n        \"step_b/out\"\n      ],\n      \"linkMerge\": \"merge_flattened\",\n      \"default\": \"fallback.txt\"\n    }\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepIn/example_2_1.ttl",
+          "sizeBytes": 417,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n\n<https://example.org/file1> cwl:source <https://example.org/input_file> .\n\n<https://example.org/file2> cwl:linkMerge \"merge_flattened\" ;\n    cwl:source <https://example.org/step_a/out>,\n        <https://example.org/step_b/out> ;\n    sld:default ( \"fallback.txt\" ) .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "description: Mapping of Workflow step inputs to nested CWL tool definitions inputs\n  or outputs.\n$defs:\n  CWLWorkflowStepInMap:\n    additionalProperties:\n      oneOf:\n      - type: string\n      - items:\n          type: string\n        type: array\n      - allOf:\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepInputBase/schema.yaml\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepInputDefault/schema.yaml\n    type: object\n  CWLWorkflowStepInList:\n    items:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepInItem/schema.yaml\n    type: array\noneOf:\n- $ref: '#/$defs/CWLWorkflowStepInMap'\n- $ref: '#/$defs/CWLWorkflowStepInList'\n",
+  "semanticUplift": {
+    "additionalSteps": [
+      {
+        "type": "jq",
+        "code": "if type == \"object\" then\n  to_entries | map({id: .key} + (if (.value | type) == \"object\" then .value else {source: .value} end))\nelse . end\n",
+        "stage": "pre"
+      }
+    ]
+  },
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/workflow-step/CWLWorkflowStepIn"
+}

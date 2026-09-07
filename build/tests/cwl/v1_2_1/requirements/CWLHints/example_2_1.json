@@ -1,0 +1,5 @@
+{
+  "OGCAPIRequirement": {
+    "process": "https://example.org/ogcapi/processes/reproject"
+  }
+}

@@ -1,0 +1,11 @@
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+@prefix ns1: <https://w3id.org/cwl/cwl#DockerRequirement/> .
+@prefix ns2: <https://w3id.org/cwl/cwl#ResourceRequirement/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a cwl:ResourceRequirement ;
+    ns2:coresMin 2 .
+
+[] a cwl:DockerRequirement ;
+    ns1:dockerPull "docker.io/python:3-slim" .
+

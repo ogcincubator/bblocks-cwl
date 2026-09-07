@@ -1,2 +1,2 @@
-path	@id
-/loadListing	https://w3id.org/cwl/cwl#loadListing
+path	@id	schema
+/loadListing	https://w3id.org/cwl/cwl#loadListing	/github/workspace/build/annotated/cwl/v1_2_1/CWLDirectoryOnlyParameters/schema.yaml

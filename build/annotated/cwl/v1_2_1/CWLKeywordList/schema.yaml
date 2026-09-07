@@ -1,7 +1,0 @@
-description: Keywords applied to the process for search and categorization purposes.
-items:
-  minLength: 1
-  title: keyword
-  type: string
-title: KeywordList
-type: array

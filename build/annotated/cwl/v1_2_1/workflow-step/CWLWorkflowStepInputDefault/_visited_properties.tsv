@@ -1,0 +1,7 @@
+path	@id	schema
+/default	https://w3id.org/cwl/salad#default	/github/workspace/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepInputDefault/schema.yaml
+/default/_oneOf/2/basename	https://w3id.org/cwl/cwl#basename	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultLocation/schema.yaml
+/default/_oneOf/2/class	@type	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultLocation/schema.yaml
+/default/_oneOf/2/location	@id	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultLocation/schema.yaml
+/default/_oneOf/2/nameroot	https://w3id.org/cwl/cwl#File/nameroot	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultLocation/schema.yaml
+/default/_oneOf/2/path	https://w3id.org/cwl/cwl#path	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultLocation/schema.yaml

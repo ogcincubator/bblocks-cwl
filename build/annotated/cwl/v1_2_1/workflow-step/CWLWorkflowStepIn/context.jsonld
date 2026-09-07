@@ -1,0 +1,29 @@
+{
+  "@context": {
+    "linkMerge": "cwl:linkMerge",
+    "source": {
+      "@id": "cwl:source",
+      "@type": "@id"
+    },
+    "valueFrom": "cwl:valueFrom",
+    "default": {
+      "@context": {
+        "basename": "cwl:basename",
+        "class": "@type",
+        "location": "@id",
+        "nameroot": "cwl:File/nameroot",
+        "path": {
+          "@id": "cwl:path",
+          "@type": "@id"
+        }
+      },
+      "@id": "sld:default",
+      "@container": "@list"
+    },
+    "id": "@id",
+    "cwl": "https://w3id.org/cwl/cwl#",
+    "sld": "https://w3id.org/cwl/salad#",
+    "dct": "http://purl.org/dc/terms/",
+    "@version": 1.1
+  }
+}

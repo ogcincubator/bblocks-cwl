@@ -1,0 +1,15 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordSchema/context.jsonld",
+  "type": "record",
+  "name": "a",
+  "fields": [
+    {
+      "name": "b",
+      "type": "int"
+    },
+    {
+      "name": "c",
+      "type": "int"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+@prefix ogccwl: <https://w3id.org/ogc/cwl/> .
+
+[] a ogccwl:OGCAPIRequirement .
+

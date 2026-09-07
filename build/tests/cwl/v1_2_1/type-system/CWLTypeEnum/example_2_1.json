@@ -1,0 +1,7 @@
+{
+  "type": "enum",
+  "name": "InlineJavascriptRequirement_class",
+  "symbols": [
+    "cwl:InlineJavascriptRequirement"
+  ]
+}

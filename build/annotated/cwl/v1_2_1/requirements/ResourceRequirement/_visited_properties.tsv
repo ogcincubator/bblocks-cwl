@@ -1,0 +1,10 @@
+path	@id	schema
+/class	@type	/github/workspace/build/annotated/cwl/v1_2_1/requirements/ResourceRequirement/schema.yaml
+/coresMin	https://w3id.org/cwl/cwl#ResourceRequirement/coresMin	/github/workspace/build/annotated/cwl/v1_2_1/requirements/ResourceRequirement/schema.yaml
+/coresMax	https://w3id.org/cwl/cwl#ResourceRequirement/coresMax	/github/workspace/build/annotated/cwl/v1_2_1/requirements/ResourceRequirement/schema.yaml
+/ramMin	https://w3id.org/cwl/cwl#ResourceRequirement/ramMin	/github/workspace/build/annotated/cwl/v1_2_1/requirements/ResourceRequirement/schema.yaml
+/ramMax	https://w3id.org/cwl/cwl#ResourceRequirement/ramMax	/github/workspace/build/annotated/cwl/v1_2_1/requirements/ResourceRequirement/schema.yaml
+/outdirMin	https://w3id.org/cwl/cwl#ResourceRequirement/outdirMin	/github/workspace/build/annotated/cwl/v1_2_1/requirements/ResourceRequirement/schema.yaml
+/outdirMax	https://w3id.org/cwl/cwl#ResourceRequirement/outdirMax	/github/workspace/build/annotated/cwl/v1_2_1/requirements/ResourceRequirement/schema.yaml
+/tmpdirMin	https://w3id.org/cwl/cwl#ResourceRequirement/tmpdirMin	/github/workspace/build/annotated/cwl/v1_2_1/requirements/ResourceRequirement/schema.yaml
+/tmpdirMax	https://w3id.org/cwl/cwl#ResourceRequirement/tmpdirMax	/github/workspace/build/annotated/cwl/v1_2_1/requirements/ResourceRequirement/schema.yaml

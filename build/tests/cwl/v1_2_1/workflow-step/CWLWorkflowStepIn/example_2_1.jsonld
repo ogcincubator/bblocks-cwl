@@ -1,0 +1,18 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepIn/context.jsonld",
+  "@graph": [
+    {
+      "id": "file1",
+      "source": "input_file"
+    },
+    {
+      "id": "file2",
+      "source": [
+        "step_a/out",
+        "step_b/out"
+      ],
+      "linkMerge": "merge_flattened",
+      "default": "fallback.txt"
+    }
+  ]
+}

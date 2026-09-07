@@ -1,0 +1,14 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/EnvVarRequirement/context.jsonld",
+  "class": "EnvVarRequirement",
+  "envDef": [
+    {
+      "envName": "LC_ALL",
+      "envValue": "en_US.UTF-8"
+    },
+    {
+      "envName": "DATA_DIR",
+      "envValue": "$(inputs.data_dir.path)"
+    }
+  ]
+}

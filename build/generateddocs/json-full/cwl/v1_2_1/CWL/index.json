@@ -4,10 +4,10 @@
   "itemIdentifier": "ogc.cwl.v1_2_1.CWL",
   "name": "CWL",
   "itemClass": "schema",
-  "abstract": "CWL",
+  "abstract": "The root of the register: a Common Workflow Language v1.2.1 Application Package document.\n\nA CWL document is one of three top-level forms: a single CommandLineTool/ExpressionTool/Workflow\ndefinition (`CWLAtomic`), the same wrapped as a nested `run` definition inside a Workflow step\n(`CWLAtomicNested`), or a `$graph`-wrapped document (`CWLGraph`).",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.672484",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -17,9 +17,9 @@
   "highlighted": true,
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLAtomic",
     "ogc.cwl.v1_2_1.CWLWorkflow",
-    "ogc.cwl.v1_2_1.CWLGraph"
+    "ogc.cwl.v1_2_1.CWLGraph",
+    "ogc.cwl.v1_2_1.CWLAtomic"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWL/schema.yaml",
@@ -27,9 +27,62 @@
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWL/schema.yaml",
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWL/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWL/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWL/",
-  "rdfData": [],
   "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWL/",
+  "examples": [
+    {
+      "title": "Atomic CommandLineTool document",
+      "base-uri": "https://example.org/",
+      "content": "A complete, top-level CWL document describing a single `CommandLineTool` \u2014 one of the\nthree top-level forms a `CWL` document can take\n([CWLAtomic](bblocks://ogc.cwl.v1_2_1.CWLAtomic)). Adapted from the CWL v1.2 conformance\ntest suite.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWL/example_1_1.json",
+          "sizeBytes": 333,
+          "code": "{\n  \"cwlVersion\": \"v1.2\",\n  \"class\": \"CommandLineTool\",\n  \"baseCommand\": [\"cat\"],\n  \"inputs\": [\n    {\n      \"id\": \"file1\",\n      \"type\": \"File\"\n    }\n  ],\n  \"outputs\": [\n    {\n      \"id\": \"output\",\n      \"type\": \"File\",\n      \"outputBinding\": { \"glob\": \"output\" }\n    }\n  ],\n  \"stdin\": \"$(inputs.file1.path)\",\n  \"stdout\": \"output\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWL/example_1_1.jsonld",
+          "sizeBytes": 460,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWL/context.jsonld\",\n  \"cwlVersion\": \"v1.2\",\n  \"class\": \"CommandLineTool\",\n  \"baseCommand\": [\n    \"cat\"\n  ],\n  \"inputs\": [\n    {\n      \"id\": \"file1\",\n      \"type\": \"File\"\n    }\n  ],\n  \"outputs\": [\n    {\n      \"id\": \"output\",\n      \"type\": \"File\",\n      \"outputBinding\": {\n        \"glob\": \"output\"\n      }\n    }\n  ],\n  \"stdin\": \"$(inputs.file1.path)\",\n  \"stdout\": \"output\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWL/example_1_1.ttl",
+          "sizeBytes": 576,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#CommandOutputBinding/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n\n<https://example.org/file1> sld:type cwl:File .\n\n<https://example.org/output> cwl:outputBinding [ ns1:glob \"output\" ] ;\n    sld:type cwl:File .\n\n[] a cwl:CommandLineTool ;\n    cwl:baseCommand ( \"cat\" ) ;\n    cwl:inputs <https://example.org/file1> ;\n    cwl:outputs <https://example.org/output> ;\n    cwl:stdin \"$(inputs.file1.path)\" ;\n    cwl:stdout \"output\" .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Workflow document with an embedded step",
+      "base-uri": "https://example.org/",
+      "content": "A top-level `Workflow` document ([CWLWorkflow](bblocks://ogc.cwl.v1_2_1.CWLWorkflow)) with\na single step whose `run` value is a `CommandLineTool` inlined directly in place\n([CWLAtomicNested](bblocks://ogc.cwl.v1_2_1.CWLAtomicNested)), rather than referenced by\nfile or URL.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWL/example_2_1.json",
+          "sizeBytes": 861,
+          "code": "{\n  \"cwlVersion\": \"v1.2\",\n  \"class\": \"Workflow\",\n  \"label\": \"Count lines in a file\",\n  \"inputs\": [\n    {\n      \"id\": \"input_file\",\n      \"type\": \"File\"\n    }\n  ],\n  \"outputs\": [\n    {\n      \"id\": \"count_output\",\n      \"type\": \"File\",\n      \"outputSource\": \"count_lines/output\"\n    }\n  ],\n  \"steps\": {\n    \"count_lines\": {\n      \"in\": {\n        \"file1\": \"input_file\"\n      },\n      \"out\": [\"output\"],\n      \"run\": {\n        \"class\": \"CommandLineTool\",\n        \"baseCommand\": [\"wc\", \"-l\"],\n        \"inputs\": [\n          {\n            \"id\": \"file1\",\n            \"type\": \"File\",\n            \"inputBinding\": { \"position\": 1 }\n          }\n        ],\n        \"outputs\": [\n          {\n            \"id\": \"output\",\n            \"type\": \"File\",\n            \"outputBinding\": { \"glob\": \"output.txt\" }\n          }\n        ],\n        \"stdout\": \"output.txt\"\n      }\n    }\n  }\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWL/example_2_1.jsonld",
+          "sizeBytes": 1064,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWL/context.jsonld\",\n  \"cwlVersion\": \"v1.2\",\n  \"class\": \"Workflow\",\n  \"label\": \"Count lines in a file\",\n  \"inputs\": [\n    {\n      \"id\": \"input_file\",\n      \"type\": \"File\"\n    }\n  ],\n  \"outputs\": [\n    {\n      \"id\": \"count_output\",\n      \"type\": \"File\",\n      \"outputSource\": \"count_lines/output\"\n    }\n  ],\n  \"steps\": {\n    \"count_lines\": {\n      \"in\": {\n        \"file1\": \"input_file\"\n      },\n      \"out\": [\n        \"output\"\n      ],\n      \"run\": {\n        \"class\": \"CommandLineTool\",\n        \"baseCommand\": [\n          \"wc\",\n          \"-l\"\n        ],\n        \"inputs\": [\n          {\n            \"id\": \"file1\",\n            \"type\": \"File\",\n            \"inputBinding\": {\n              \"position\": 1\n            }\n          }\n        ],\n        \"outputs\": [\n          {\n            \"id\": \"output\",\n            \"type\": \"File\",\n            \"outputBinding\": {\n              \"glob\": \"output.txt\"\n            }\n          }\n        ],\n        \"stdout\": \"output.txt\"\n      }\n    }\n  }\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWL/example_2_1.ttl",
+          "sizeBytes": 1281,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#Workflow/> .\n@prefix ns2: <https://w3id.org/cwl/cwl#CommandOutputBinding/> .\n@prefix ns3: <https://w3id.org/cwl/cwl#CommandLineBinding/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://example.org/count_lines> cwl:in \"input_file\" ;\n    cwl:out <https://example.org/output> ;\n    cwl:run [ a cwl:CommandLineTool ;\n            cwl:baseCommand ( \"wc\" \"-l\" ) ;\n            cwl:inputs <https://example.org/file1> ;\n            cwl:outputs <https://example.org/output> ;\n            cwl:stdout \"output.txt\" ] .\n\n<https://example.org/count_output> sld:type cwl:File .\n\n<https://example.org/file1> cwl:inputBinding [ ns3:position 1 ] ;\n    sld:type cwl:File .\n\n<https://example.org/input_file> sld:type cwl:File .\n\n<https://example.org/output> cwl:outputBinding [ ns2:glob \"output.txt\" ] ;\n    sld:type cwl:File .\n\n[] a cwl:Workflow ;\n    rdfs:label \"Count lines in a file\" ;\n    ns1:steps <https://example.org/count_lines> ;\n    cwl:inputs <https://example.org/input_file> ;\n    cwl:outputs <https://example.org/count_output> .\n\n"
+        }
+      ]
+    }
+  ],
   "annotatedSchema": "oneOf:\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLAtomic/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLGraph/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflow/schema.yaml\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWL"

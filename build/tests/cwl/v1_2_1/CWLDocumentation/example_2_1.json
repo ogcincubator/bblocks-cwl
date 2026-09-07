@@ -1,0 +1,7 @@
+{
+  "label": "align-and-sort",
+  "doc": [
+    "Aligns reads against a reference genome using bwa-mem.",
+    "Sorts the resulting alignment with samtools sort before returning it."
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "@context": {
+    "class": "@type",
+    "dockerFile": "cwl:DockerRequirement/dockerFile",
+    "dockerImageId": "cwl:DockerRequirement/dockerImageId",
+    "dockerImport": "cwl:DockerRequirement/dockerImport",
+    "dockerLoad": "cwl:DockerRequirement/dockerLoad",
+    "dockerOutputDirectory": "cwl:DockerRequirement/dockerOutputDirectory",
+    "dockerPull": "cwl:DockerRequirement/dockerPull",
+    "packages": {
+      "@context": {
+        "package": "cwl:SoftwarePackage/package",
+        "specs": {
+          "@id": "cwl:SoftwarePackage/specs",
+          "@type": "@id"
+        },
+        "version": "cwl:SoftwarePackage/version"
+      },
+      "@id": "cwl:SoftwareRequirement/packages",
+      "@container": "@id"
+    },
+    "envDef": {
+      "@context": {
+        "envName": "cwl:EnvironmentDef/envName",
+        "envValue": "cwl:EnvironmentDef/envValue"
+      },
+      "@id": "cwl:EnvVarRequirement/envDef",
+      "@container": "@id"
+    },
+    "types": {
+      "@context": {
+        "type": {
+          "@id": "sld:type",
+          "@type": "@vocab"
+        },
+        "fields": {
+          "@context": {
+            "format": {
+              "@id": "cwl:format",
+              "@type": "@id"
+            },
+            "loadContents": "cwl:loadContents",
+            "secondaryFiles": "cwl:secondaryFiles",
+            "streamable": "cwl:FieldBase/streamable"
+          },
+          "@id": "sld:fields",
+          "@container": "@id"
+        },
+        "name": "@id",
+        "items": {
+          "@id": "sld:items",
+          "@type": "@vocab"
+        }
+      },
+      "@id": "cwl:SchemaDefRequirement/types"
+    },
+    "writable": "cwl:Dirent/writable",
+    "checksum": "cwl:File/checksum",
+    "size": "cwl:File/size",
+    "listing": "cwl:listing",
+    "expressionLib": "cwl:InlineJavascriptRequirement/expressionLib",
+    "inplaceUpdate": "cwl:InplaceUpdateRequirement/inplaceUpdate",
+    "loadListing": "cwl:loadListing",
+    "networkAccess": "cwl:NetworkAccess/networkAccess",
+    "coresMin": "cwl:ResourceRequirement/coresMin",
+    "coresMax": "cwl:ResourceRequirement/coresMax",
+    "ramMin": "cwl:ResourceRequirement/ramMin",
+    "ramMax": "cwl:ResourceRequirement/ramMax",
+    "outdirMin": "cwl:ResourceRequirement/outdirMin",
+    "outdirMax": "cwl:ResourceRequirement/outdirMax",
+    "tmpdirMin": "cwl:ResourceRequirement/tmpdirMin",
+    "tmpdirMax": "cwl:ResourceRequirement/tmpdirMax",
+    "timelimit": "cwl:ToolTimeLimit/timelimit",
+    "enableReuse": "cwl:WorkReuse/enableReuse",
+    "null": "sld:null",
+    "boolean": "xsd:boolean",
+    "int": "xsd:int",
+    "integer": "xsd:int",
+    "long": "xsd:long",
+    "float": "xsd:float",
+    "double": "xsd:double",
+    "string": "xsd:string",
+    "File": "cwl:File",
+    "Directory": "cwl:Directory",
+    "cwl": "https://w3id.org/cwl/cwl#",
+    "sld": "https://w3id.org/cwl/salad#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "@version": 1.1
+  }
+}

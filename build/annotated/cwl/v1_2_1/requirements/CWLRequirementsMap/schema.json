@@ -1,0 +1,86 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "DockerRequirement": {
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/DockerRequirement/schema.json",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#DockerRequirement"
+    },
+    "EnvVarRequirement": {
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/EnvVarRequirement/schema.json",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#EnvVarRequirement"
+    },
+    "InitialWorkDirRequirement": {
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/schema.json",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#InitialWorkDirRequirement"
+    },
+    "InlineJavascriptRequirement": {
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InlineJavascriptRequirement/schema.json",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#InlineJavascriptRequirement"
+    },
+    "InplaceUpdateRequirement": {
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InplaceUpdateRequirement/schema.json",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#InplaceUpdateRequirement"
+    },
+    "LoadListingRequirement": {
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/LoadListingRequirement/schema.json",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#LoadListingRequirement"
+    },
+    "MultipleInputFeatureRequirement": {
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/MultipleInputFeatureRequirement/schema.json",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#MultipleInputFeatureRequirement"
+    },
+    "NetworkAccess": {
+      "$comment": "Not 'NetworkAccessRequirement'",
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/NetworkAccessRequirement/schema.json",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#NetworkAccess"
+    },
+    "ResourceRequirement": {
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ResourceRequirement/schema.json",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#ResourceRequirement"
+    },
+    "ScatterFeatureRequirement": {
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ScatterFeatureRequirement/schema.json",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#ScatterFeatureRequirement"
+    },
+    "SchemaDefRequirement": {
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/SchemaDefRequirement/schema.json",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#SchemaDefRequirement"
+    },
+    "ShellCommandRequirement": {
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ShellCommandRequirement/schema.json",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#ShellCommandRequirement"
+    },
+    "SoftwareRequirement": {
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/SoftwareRequirement/schema.json",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#SoftwareRequirement"
+    },
+    "StepInputExpressionRequirement": {
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/StepInputExpressionRequirement/schema.json",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#StepInputExpressionRequirement"
+    },
+    "SubworkflowFeatureRequirement": {
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/SubworkflowFeatureRequirement/schema.json",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#SubworkflowFeatureRequirement"
+    },
+    "ToolTimeLimit": {
+      "$comment": "Not 'ToolTimeLimitRequirement'.",
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ToolTimeLimitRequirement/schema.json",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#ToolTimeLimit"
+    },
+    "WorkReuse": {
+      "$comment": "Not 'WorkReuseRequirement'.",
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/WorkReuseRequirement/schema.json",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#WorkReuse"
+    },
+    "cwltool:CUDARequirement": {
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/cwltool-CUDARequirement/schema.json",
+      "x-jsonld-id": "http://commonwl.org/cwltool#CUDARequirement"
+    }
+  },
+  "title": "CWLRequirementsMap",
+  "type": "object",
+  "x-jsonld-prefixes": {
+    "cwl": "https://w3id.org/cwl/cwl#",
+    "cwltool": "http://commonwl.org/cwltool#"
+  }
+}

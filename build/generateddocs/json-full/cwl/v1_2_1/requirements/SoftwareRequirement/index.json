@@ -1,0 +1,89 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.requirements.SoftwareRequirement",
+  "name": "SoftwareRequirement",
+  "itemClass": "schema",
+  "abstract": "A list of software packages that should be configured in the\nprocess's execution environment.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.683997",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.SoftwarePackage",
+    "ogc.cwl.v1_2_1.CWLOntology"
+  ],
+  "shaclShapes": {},
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/SoftwareRequirement/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/SoftwareRequirement/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/SoftwareRequirement/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/SoftwareRequirement/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/SoftwareRequirement/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/SoftwareRequirement/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/SoftwareRequirement/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/requirements/SoftwareRequirement/",
+  "description": "The `packages` property lists the software the process's execution environment must provide. It\naccepts two equivalent shapes:\n\n- an array of [SoftwarePackage](bblocks://ogc.cwl.v1_2_1.SoftwarePackage) objects, each naming a\n  package and optionally its compatible version(s) and identifying IRIs; or\n- an object mapping each package name directly to either its `specs`/`version` list (a bare array\n  of strings) or a full [SoftwarePackage](bblocks://ogc.cwl.v1_2_1.SoftwarePackage) object.\n\nThe two forms carry the same information: in the map form, the object key stands in for the\npackage's `package` field, so it does not need to be repeated inside the value.\n\nImplementations are not required to enforce that the requested software is actually present in the\nexecution environment; `SoftwareRequirement` only records what versions and packages are known to\nbe usable, leaving actual configuration/resolution up to the runtime.\n",
+  "examples": [
+    {
+      "title": "Packages listed as an array",
+      "base-uri": "https://example.org/",
+      "content": "`packages` given as an array of [SoftwarePackage](bblocks://ogc.cwl.v1_2_1.SoftwarePackage)\nobjects.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/SoftwareRequirement/example_1_1.json",
+          "sizeBytes": 220,
+          "code": "{\n  \"class\": \"SoftwareRequirement\",\n  \"packages\": [\n    {\n      \"package\": \"screed\",\n      \"version\": [ \"1.0\" ]\n    },\n    {\n      \"package\": \"bowtie\",\n      \"specs\": [ \"https://packages.debian.org/bowtie\" ]\n    }\n  ]\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/SoftwareRequirement/example_1_1.jsonld",
+          "sizeBytes": 382,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/SoftwareRequirement/context.jsonld\",\n  \"class\": \"SoftwareRequirement\",\n  \"packages\": [\n    {\n      \"package\": \"screed\",\n      \"version\": [\n        \"1.0\"\n      ]\n    },\n    {\n      \"package\": \"bowtie\",\n      \"specs\": [\n        \"https://packages.debian.org/bowtie\"\n      ]\n    }\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/SoftwareRequirement/example_1_1.ttl",
+          "sizeBytes": 344,
+          "code": "@prefix ns1: <https://w3id.org/cwl/cwl#SoftwarePackage/> .\n@prefix ns2: <https://w3id.org/cwl/cwl#SoftwareRequirement/> .\n\n[] a <https://example.org/SoftwareRequirement> ;\n    ns2:packages [ ns1:package \"bowtie\" ;\n            ns1:specs <https://packages.debian.org/bowtie> ],\n        [ ns1:package \"screed\" ;\n            ns1:version \"1.0\" ] .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Packages listed as a name-keyed map",
+      "base-uri": "https://example.org/",
+      "content": "`packages` given as an object keyed by package name, where each value is either a bare\nlist of specification IRIs/versions or a full\n[SoftwarePackage](bblocks://ogc.cwl.v1_2_1.SoftwarePackage) object.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/SoftwareRequirement/example_2_1.json",
+          "sizeBytes": 193,
+          "code": "{\n  \"class\": \"SoftwareRequirement\",\n  \"packages\": {\n    \"sourmash\": [ \"https://doi.org/10.21105/joss.00027\" ],\n    \"screed\": {\n      \"package\": \"screed\",\n      \"version\": [ \"1.0\" ]\n    }\n  }\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/SoftwareRequirement/example_2_1.jsonld",
+          "sizeBytes": 351,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/SoftwareRequirement/context.jsonld\",\n  \"class\": \"SoftwareRequirement\",\n  \"packages\": {\n    \"sourmash\": [\n      \"https://doi.org/10.21105/joss.00027\"\n    ],\n    \"screed\": {\n      \"package\": \"screed\",\n      \"version\": [\n        \"1.0\"\n      ]\n    }\n  }\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/SoftwareRequirement/example_2_1.ttl",
+          "sizeBytes": 345,
+          "code": "@prefix ns1: <https://w3id.org/cwl/cwl#SoftwarePackage/> .\n@prefix ns2: <https://w3id.org/cwl/cwl#SoftwareRequirement/> .\n\n<https://example.org/screed> ns1:package \"screed\" ;\n    ns1:version \"1.0\" .\n\n[] a <https://example.org/SoftwareRequirement> ;\n    ns2:packages <https://example.org/screed>,\n        \"https://doi.org/10.21105/joss.00027\" .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "additionalProperties: false\nproperties:\n  class:\n    enum:\n    - SoftwareRequirement\n    type: string\n    x-jsonld-id: '@type'\n  packages:\n    oneOf:\n    - items:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/SoftwarePackage/schema.yaml\n      type: array\n    - additionalProperties:\n        oneOf:\n        - items:\n            type: string\n          type: array\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/SoftwarePackage/schema.yaml\n      description: Mapping of 'package' name to its specifications.\n      type: object\n    x-jsonld-id: https://w3id.org/cwl/cwl#SoftwareRequirement/packages\n    x-jsonld-container: '@id'\nrequired:\n- packages\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/requirements/SoftwareRequirement"
+}

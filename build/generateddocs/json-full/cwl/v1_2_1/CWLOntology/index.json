@@ -1,0 +1,45 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.CWLOntology",
+  "name": "CWL Ontology",
+  "itemClass": "model",
+  "abstract": "The RDFS vocabulary/ontology for the Common Workflow Language (CWL) v1.2, published by the CWL\nproject at `https://w3id.org/cwl/cwl#` (`cwl:`). It defines an `rdfs:Class` for every CWL document\ntype (`Workflow`, `CommandLineTool`, `DockerRequirement`, ...) and their `rdfs:subClassOf` relations,\nand is the vocabulary the rest of this register's blocks bind their properties to via `context.jsonld`.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-08-18T19:19:38.980748",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/cwl.ttl",
+  "version": "1.2.1",
+  "tags": [
+    "cwl",
+    "ontology",
+    "vocabulary"
+  ],
+  "concept": [
+    "https://w3id.org/cwl/cwl#"
+  ],
+  "shaclShapes": {},
+  "ontology": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOntology/ontology.ttl",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOntology/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLOntology/",
+  "description": "This is the vocabulary that every other block in this register binds its schema properties and\n`class`-discriminated types to, via `context.jsonld` \u2014 the `cwl:` prefix used throughout this register's\nJSON-LD contexts (e.g. `cwl:DockerRequirement`, `cwl:Workflow`) resolves to `https://w3id.org/cwl/cwl#`,\nthe namespace this block declares.\n\nThe ontology only asserts `rdfs:Class`/`rdfs:subClassOf` triples \u2014 it does not declare `rdf:Property`\naxioms for CWL's fields, since schema-salad does not generate them for CWL's own vocabulary (unlike\n[Schema Salad's own metaschema](bblocks://ogc.cwl.v1_2_1.SchemaSaladOntology), which does declare\nproperties for its `JsonldPredicate` and `NamedType` classes).\n\nPublished upstream by the CWL project at `https://www.commonwl.org/v1.2/cwl.ttl`, dereferenceable via\nthe persistent identifier `https://w3id.org/cwl/cwl`. That upstream file has a syntax defect \u2014 schema-salad's\nTurtle serializer emits `@prefix @base: <https://w3id.org/cwl/cwl#> .`, and `@base` is a reserved Turtle\nkeyword, not a legal prefix name, so the file as published does not parse as valid Turtle. `ontology.ttl`\nin this block is the same content with that prefix renamed to `cwl:`.\n",
+  "examples": [
+    {
+      "title": "DockerRequirement's place in the class hierarchy",
+      "content": "An excerpt of the ontology showing how `cwl:DockerRequirement` relates to the rest of the\nvocabulary: it is one of several `rdfs:subClassOf cwl:ProcessRequirement`, the abstract class\nshared by every `requirements`/`hints` entry.\n",
+      "snippets": [
+        {
+          "language": "turtle",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLOntology/example_1_1.ttl",
+          "sizeBytes": 304,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\ncwl:ProcessRequirement a rdfs:Class .\n\ncwl:DockerRequirement a rdfs:Class ;\n    rdfs:subClassOf cwl:ProcessRequirement .\n\ncwl:EnvVarRequirement a rdfs:Class ;\n    rdfs:subClassOf cwl:ProcessRequirement .\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/CWLOntology"
+}

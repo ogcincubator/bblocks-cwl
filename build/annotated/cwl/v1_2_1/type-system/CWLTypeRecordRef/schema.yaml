@@ -1,0 +1,28 @@
+$comment: Avoid 'oneOf' conflict of valid strings between this CWL record reference
+  and the generic CWL types.
+allOf:
+- not:
+    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeDefinition/schema.yaml
+- not:
+    enum:
+    - stdin
+    type: string
+- not:
+    enum:
+    - stdout
+    type: string
+- not:
+    enum:
+    - stderr
+    type: string
+- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordRefPattern/schema.yaml
+description: 'An IRI with minimally a ''{Record}'' identifier to look for a schema
+  definition locally or remotely.
+
+
+  The identifier resolution is performed accordingly to the specified reference and
+  as described in
+
+  https://www.commonwl.org/v1.2/SchemaSalad.html#Identifier_resolution.
+
+  '

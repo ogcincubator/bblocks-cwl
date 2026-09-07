@@ -4,20 +4,20 @@
   "itemIdentifier": "ogc.cwl.v1_2_1.CWLMetadata",
   "name": "CWLMetadata",
   "itemClass": "schema",
-  "abstract": "CWLMetadata",
+  "abstract": "Shared document-level metadata fields: `s:keywords` (for search and\ncategorization) and the process/document `version`.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.673719",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
   "tags": [
     "cwl"
   ],
-  "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLKeywordList"
+    "ogc.cwl.v1_2_1.CWLOntology"
   ],
+  "shaclShapes": {},
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLMetadata/context.jsonld",
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLMetadata/schema.yaml",
@@ -25,10 +25,64 @@
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLMetadata/schema.yaml",
   "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLMetadata/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLMetadata/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLMetadata/",
-  "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "properties:\n  s:keywords:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLKeywordList/schema.yaml\n  version:\n    description: Version of the process.\n    example: 1.2.3\n    pattern: ^\\d+(\\.\\d+(\\.\\d+(\\.[A-Za-z0-9\\-_]+)*)*)*$\n    title: version\n    type: string\n    x-jsonld-id: https://w3id.org/cwl/cwl#SoftwarePackage/version\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLMetadata/",
+  "description": "A mixin of document-level metadata fields shared by CWL's top-level process types\n([CommandLineTool](bblocks://ogc.cwl.v1_2_1.CWLAtomic), [Workflow](bblocks://ogc.cwl.v1_2_1.CWLWorkflow),\n[ExpressionTool](bblocks://ogc.cwl.v1_2_1.CWLAtomic)) and their nested/graph-embedded counterparts\n([CWLAtomicNested](bblocks://ogc.cwl.v1_2_1.CWLAtomicNested),\n[CWLGraphItem](bblocks://ogc.cwl.v1_2_1.CWLGraphItem)). It groups:\n\n- `s:keywords` \u2014 an array of non-empty, free-text terms used for search and categorization, drawn\n  from the schema.org `Thing/keywords` property that `CommonWorkflowLanguage.yml` mixes into every\n  process.\n- `version` \u2014 the process/document's own version string, distinct from\n  [CWLVersion](bblocks://ogc.cwl.v1_2_1.CWLVersion)'s `cwlVersion` (which declares which version of\n  the *CWL standard itself* a document conforms to). This `version` is the process author's own\n  release identifier for the tool or workflow being described.\n\nKeeping these fields in one reusable block avoids repeating the same two properties across every\nplace a CWL document can declare a process, and lets a profile constrain both fields uniformly.\n",
+  "examples": [
+    {
+      "title": "Keywords and version on a workflow",
+      "base-uri": "https://example.org/",
+      "content": "Document-level metadata attached to a `Workflow`, giving reviewers a way to search and\ncategorize it and to track the workflow author's own release of it, independent of which\nversion of the CWL standard it is written against.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLMetadata/example_1_1.json",
+          "sizeBytes": 83,
+          "code": "{\n  \"s:keywords\": [\"geospatial\", \"reprojection\", \"raster\"],\n  \"version\": \"1.2.0\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLMetadata/example_1_1.jsonld",
+          "sizeBytes": 212,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLMetadata/context.jsonld\",\n  \"s:keywords\": [\n    \"geospatial\",\n    \"reprojection\",\n    \"raster\"\n  ],\n  \"version\": \"1.2.0\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLMetadata/example_1_1.ttl",
+          "sizeBytes": 203,
+          "code": "@prefix ns1: <https://w3id.org/cwl/cwl#SoftwarePackage/> .\n@prefix schema: <https://schema.org/> .\n\n[] schema:keywords \"geospatial\",\n        \"raster\",\n        \"reprojection\" ;\n    ns1:version \"1.2.0\" .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Version only",
+      "base-uri": "https://example.org/",
+      "content": "Both fields are optional and independent \u2014 a process may declare only its own release\nversion without keywords. The `version` pattern also accepts a dotted pre-release/build\nsuffix, as in `1.4.2.rc1`.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLMetadata/example_2_1.json",
+          "sizeBytes": 29,
+          "code": "{\n  \"version\": \"1.4.2.rc1\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLMetadata/example_2_1.jsonld",
+          "sizeBytes": 142,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLMetadata/context.jsonld\",\n  \"version\": \"1.4.2.rc1\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLMetadata/example_2_1.ttl",
+          "sizeBytes": 90,
+          "code": "@prefix ns1: <https://w3id.org/cwl/cwl#SoftwarePackage/> .\n\n[] ns1:version \"1.4.2.rc1\" .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "properties:\n  s:keywords:\n    description: Keywords applied to the process for search and categorization purposes.\n    items:\n      minLength: 1\n      title: keyword\n      type: string\n    title: KeywordList\n    type: array\n    x-jsonld-id: https://schema.org/keywords\n  version:\n    description: Version of the process.\n    example: 1.2.3\n    pattern: ^\\d+(\\.\\d+(\\.\\d+(\\.[A-Za-z0-9\\-_]+)*)*)*$\n    title: version\n    type: string\n    x-jsonld-id: https://w3id.org/cwl/cwl#SoftwarePackage/version\ntype: object\nx-jsonld-prefixes:\n  s: https://schema.org/\n  cwl: https://w3id.org/cwl/cwl#\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLMetadata"
 }

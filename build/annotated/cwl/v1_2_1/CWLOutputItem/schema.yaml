@@ -10,6 +10,7 @@ properties:
   id:
     $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLIdentifier/schema.yaml
     description: Identifier of the CWL output.
+    x-jsonld-id: '@id'
   outputBinding:
     $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/OutputBinding/schema.yaml
     x-jsonld-id: https://w3id.org/cwl/cwl#outputBinding
@@ -18,6 +19,8 @@ properties:
     - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml
     - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputStdOut/schema.yaml
     - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputStdErr/schema.yaml
+    x-jsonld-id: https://w3id.org/cwl/salad#type
+    x-jsonld-type: '@vocab'
 required:
 - type
 - id
@@ -25,3 +28,4 @@ title: CWLOutputItem
 type: object
 x-jsonld-prefixes:
   cwl: https://w3id.org/cwl/cwl#
+  sld: https://w3id.org/cwl/salad#

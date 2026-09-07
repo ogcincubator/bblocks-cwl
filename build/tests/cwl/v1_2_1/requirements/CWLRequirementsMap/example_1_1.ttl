@@ -1,0 +1,6 @@
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+@prefix ns1: <https://w3id.org/cwl/cwl#DockerRequirement/> .
+
+[] cwl:DockerRequirement [ ns1:dockerPull "docker.io/debian:stable-slim" ] ;
+    cwl:ShellCommandRequirement [ ] .
+

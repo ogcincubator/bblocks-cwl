@@ -7,7 +7,7 @@
   "abstract": "Reference to the process identifier.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.675825",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -24,8 +24,37 @@
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLIdentifier/schema.yaml",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLIdentifier/",
-  "rdfData": [],
   "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLIdentifier/",
+  "description": "A CWL process identifier accepts exactly two syntactic forms:\n\n- a standard **UUID** (e.g. `550e8400-e29b-41d4-a716-446655440000`), or\n- a string matching the [CWLTextPatternID](bblocks://ogc.cwl.v1_2_1.CWLTextPatternID) pattern, which\n  covers the plain names, dotted names, and `#`/`sub/part#ref`-style fragment references that CWL\n  documents actually use for `id` fields (e.g. `main`, `touch.cwl#name`, `sub/part#ref`).\n\nThis block is kept independent from the generic [`ogc.ogc-utils.iri-or-curie`](bblocks://ogc.ogc-utils.iri-or-curie)\nblock used elsewhere in this register (e.g. by [ReferenceURL](bblocks://ogc.cwl.v1_2_1.ReferenceURL)):\nCWL process identifiers are not IRIs or CURIEs \u2014 they are local, often fragment-based names scoped to\na single CWL document (or to a packed document made up of several), and the UUID/text-pattern\nalternation here matches exactly what the upstream CWL schema allows, no more and no less.\n",
+  "examples": [
+    {
+      "title": "UUID-form identifier",
+      "base-uri": "https://example.org/",
+      "content": "A process identifier expressed as a standard UUID.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLIdentifier/example_1_1.json",
+          "sizeBytes": 39,
+          "code": "\"550e8400-e29b-41d4-a716-446655440000\"\n"
+        }
+      ]
+    },
+    {
+      "title": "Text-pattern identifier with fragment reference",
+      "base-uri": "https://example.org/",
+      "content": "A process identifier following the [CWLTextPatternID](bblocks://ogc.cwl.v1_2_1.CWLTextPatternID)\npattern, referencing a sub-part definition inside a CWL document (as used, for example, by\n`SchemaDefRequirement`).\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLIdentifier/example_2_1.json",
+          "sizeBytes": 15,
+          "code": "\"sub/part#ref\"\n"
+        }
+      ]
+    }
+  ],
   "annotatedSchema": "anyOf:\n- description: Unique identifier.\n  format: uuid\n  pattern: ^[a-f0-9]{8}(?:-?[a-f0-9]{4}){3}-?[a-f0-9]{12}$\n  title: UUID\n  type: string\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTextPatternID/schema.yaml\ndescription: Reference to the process identifier.\ntitle: CWLIdentifier\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLIdentifier"

@@ -1,0 +1,18 @@
+properties:
+  linkMerge:
+    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/LinkMergeMethod/schema.yaml
+    x-jsonld-id: https://w3id.org/cwl/cwl#linkMerge
+  source:
+    oneOf:
+    - type: string
+    - items:
+        type: string
+      type: array
+    x-jsonld-id: https://w3id.org/cwl/cwl#source
+    x-jsonld-type: '@id'
+  valueFrom:
+    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml
+    x-jsonld-id: https://w3id.org/cwl/cwl#valueFrom
+type: object
+x-jsonld-prefixes:
+  cwl: https://w3id.org/cwl/cwl#

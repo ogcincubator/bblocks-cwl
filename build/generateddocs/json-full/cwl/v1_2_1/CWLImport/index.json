@@ -7,7 +7,7 @@
   "abstract": "Represents an '$import' directive that should point toward another compatible CWL file to import where specified.\nThe contents of the imported file should be relevant contextually where it is being imported.\n",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.681564",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -20,10 +20,39 @@
     "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLImport/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLImport/schema.yaml",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLImport/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLImport/",
-  "rdfData": [],
   "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLImport/",
   "description": "The schema validation of the CWL will not itself perform the '$import' to resolve and validate its contents.\nTherefore, the complete schema will not be validated entirely, and could still be partially malformed.\nTo ensure proper and exhaustive validation of a CWL definition with this schema, all '$import' directives\nshould be resolved and extended beforehand.\n",
+  "examples": [
+    {
+      "title": "Importing a schema definition file",
+      "base-uri": "https://example.org/",
+      "content": "A `CommandLineTool` requirement that imports an external schema definition document, as\nused in practice to share custom type definitions across CWL files (e.g. via\n[SchemaDefRequirement](bblocks://ogc.cwl.v1_2_1.requirements.SchemaDefRequirement)).\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLImport/example_1_1.json",
+          "sizeBytes": 38,
+          "code": "{\n  \"$import\": \"schemadef-type.yml\"\n}\n"
+        }
+      ]
+    },
+    {
+      "title": "Importing a set of output parameters",
+      "base-uri": "https://example.org/",
+      "content": "An `outputs` section can itself be replaced wholesale by an `$import` directive, pulling\nin a document fragment defined elsewhere.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLImport/example_2_1.json",
+          "sizeBytes": 34,
+          "code": "{\n  \"$import\": \"params_inc.yml\"\n}\n"
+        }
+      ]
+    }
+  ],
   "annotatedSchema": "$comment: 'The schema validation of the CWL will not itself perform the ''$import''\n  to resolve and validate its contents.\n\n  Therefore, the complete schema will not be validated entirely, and could still be\n  partially malformed.\n\n  To ensure proper and exhaustive validation of a CWL definition with this schema,\n  all ''$import'' directives\n\n  should be resolved and extended beforehand.\n\n  '\nadditionalProperties: false\ndescription: 'Represents an ''$import'' directive that should point toward another\n  compatible CWL file to import where specified.\n\n  The contents of the imported file should be relevant contextually where it is being\n  imported.\n\n  '\nproperties:\n  $import:\n    type: string\nrequired:\n- $import\ntype: object\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLImport"

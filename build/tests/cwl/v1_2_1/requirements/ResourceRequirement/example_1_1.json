@@ -1,0 +1,7 @@
+{
+  "class": "ResourceRequirement",
+  "coresMin": 2,
+  "coresMax": 4,
+  "ramMin": 512,
+  "tmpdirMax": 1024
+}

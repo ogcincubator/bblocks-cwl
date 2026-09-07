@@ -1,0 +1,15 @@
+{
+  "in": {
+    "echo_in1": "inp1",
+    "echo_in2": "inp2"
+  },
+  "out": [
+    "echo_out"
+  ],
+  "scatter": [
+    "echo_in1",
+    "echo_in2"
+  ],
+  "scatterMethod": "dotproduct",
+  "run": "#echo"
+}

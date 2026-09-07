@@ -1,0 +1,5 @@
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+
+[] a <https://example.org/File> ;
+    cwl:path <https://example.org/special_file> .
+

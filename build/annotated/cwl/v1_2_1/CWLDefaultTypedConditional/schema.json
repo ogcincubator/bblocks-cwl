@@ -16,10 +16,13 @@
       "$comment": "Object structure with minimally 'type' and 'default'. Otherwise, no point to continue testing.",
       "properties": {
         "default": {
-          "$ref": "#/$defs/AnyType"
+          "$ref": "#/$defs/AnyType",
+          "x-jsonld-id": "https://w3id.org/cwl/salad#default"
         },
         "type": {
-          "$ref": "#/$defs/AnyType"
+          "$ref": "#/$defs/AnyType",
+          "x-jsonld-id": "https://w3id.org/cwl/salad#type",
+          "x-jsonld-type": "@vocab"
         }
       },
       "required": [
@@ -39,7 +42,8 @@
       "then": {
         "properties": {
           "default": {
-            "type": "null"
+            "type": "null",
+            "x-jsonld-id": "https://w3id.org/cwl/salad#default"
           }
         }
       }
@@ -56,7 +60,8 @@
       "then": {
         "properties": {
           "default": {
-            "type": "string"
+            "type": "string",
+            "x-jsonld-id": "https://w3id.org/cwl/salad#default"
           }
         }
       }
@@ -76,7 +81,8 @@
             "type": [
               "string",
               "null"
-            ]
+            ],
+            "x-jsonld-id": "https://w3id.org/cwl/salad#default"
           }
         }
       }
@@ -93,7 +99,8 @@
       "then": {
         "properties": {
           "default": {
-            "type": "boolean"
+            "type": "boolean",
+            "x-jsonld-id": "https://w3id.org/cwl/salad#default"
           }
         }
       }
@@ -119,7 +126,8 @@
             "type": [
               "number",
               "null"
-            ]
+            ],
+            "x-jsonld-id": "https://w3id.org/cwl/salad#default"
           }
         }
       }
@@ -142,7 +150,8 @@
       "then": {
         "properties": {
           "default": {
-            "type": "number"
+            "type": "number",
+            "x-jsonld-id": "https://w3id.org/cwl/salad#default"
           }
         }
       }
@@ -168,7 +177,8 @@
             "type": [
               "number",
               "null"
-            ]
+            ],
+            "x-jsonld-id": "https://w3id.org/cwl/salad#default"
           }
         }
       }
@@ -178,7 +188,7 @@
       "if": {
         "properties": {
           "symbols": {
-            "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeSymbols/schema.json"
+            "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeSymbols/schema.json"
           },
           "type": {
             "const": "enum"
@@ -188,7 +198,8 @@
       "then": {
         "properties": {
           "default": {
-            "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeSymbolValues/schema.json"
+            "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeSymbolValues/schema.json",
+            "x-jsonld-id": "https://w3id.org/cwl/salad#default"
           }
         }
       }
@@ -198,7 +209,7 @@
       "if": {
         "properties": {
           "symbols": {
-            "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeSymbols/schema.json"
+            "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeSymbols/schema.json"
           },
           "type": {
             "const": "enum?"
@@ -210,12 +221,13 @@
           "default": {
             "oneOf": [
               {
-                "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeSymbolValues/schema.json"
+                "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeSymbolValues/schema.json"
               },
               {
                 "type": "null"
               }
-            ]
+            ],
+            "x-jsonld-id": "https://w3id.org/cwl/salad#default"
           }
         }
       }
@@ -235,7 +247,8 @@
       "then": {
         "properties": {
           "default": {
-            "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultLocation/schema.json"
+            "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultLocation/schema.json",
+            "x-jsonld-id": "https://w3id.org/cwl/salad#default"
           }
         }
       }
@@ -262,7 +275,8 @@
               {
                 "type": "null"
               }
-            ]
+            ],
+            "x-jsonld-id": "https://w3id.org/cwl/salad#default"
           }
         }
       }
@@ -296,7 +310,8 @@
             "items": {
               "type": "string"
             },
-            "type": "array"
+            "type": "array",
+            "x-jsonld-id": "https://w3id.org/cwl/salad#default"
           }
         }
       }
@@ -330,7 +345,8 @@
             "items": {
               "type": "boolean"
             },
-            "type": "array"
+            "type": "array",
+            "x-jsonld-id": "https://w3id.org/cwl/salad#default"
           }
         }
       }
@@ -376,7 +392,8 @@
             "items": {
               "type": "number"
             },
-            "type": "array"
+            "type": "array",
+            "x-jsonld-id": "https://w3id.org/cwl/salad#default"
           }
         }
       }
@@ -394,7 +411,8 @@
         "properties": {
           "default": {
             "$comment": "Match anything.",
-            "$ref": "#/$defs/AnyType"
+            "$ref": "#/$defs/AnyType",
+            "x-jsonld-id": "https://w3id.org/cwl/salad#default"
           }
         }
       }
@@ -415,10 +433,14 @@
             "items": {
               "$ref": "#/$defs/AnyType"
             },
-            "type": "array"
+            "type": "array",
+            "x-jsonld-id": "https://w3id.org/cwl/salad#default"
           }
         }
       }
     }
-  ]
+  ],
+  "x-jsonld-prefixes": {
+    "sld": "https://w3id.org/cwl/salad#"
+  }
 }

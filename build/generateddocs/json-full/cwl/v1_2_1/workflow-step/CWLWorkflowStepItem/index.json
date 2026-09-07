@@ -1,0 +1,65 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepItem",
+  "name": "CWLWorkflowStepItem",
+  "itemClass": "schema",
+  "abstract": "A single Workflow step given in the list form of `steps`, where the step's `id` is\ncarried as an explicit field alongside `run`/`in`/`out`/`when`/`scatter` rather than being the map\nkey; see `CWLWorkflowStepObject` for the shape shared with the map form.",
+  "isProfileOf": [
+    "ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepObject"
+  ],
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.692088",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepId",
+    "ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepObject"
+  ],
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepItem/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepItem/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/workflow-step/CWLWorkflowStepItem/schema.yaml",
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepItem/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepItem/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/workflow-step/CWLWorkflowStepItem/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepItem/",
+  "examples": [
+    {
+      "title": "Step in list form",
+      "base-uri": "https://example.org/",
+      "content": "The same kind of scattered step as in [CWLWorkflowStepObject](bblocks://ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepObject),\nbut written as an entry of a `steps` list, so the step's `id` is carried as an explicit field\nrather than being the map key.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepItem/example_1_1.json",
+          "sizeBytes": 215,
+          "code": "{\n  \"id\": \"step1\",\n  \"in\": {\n    \"echo_in1\": \"inp1\",\n    \"echo_in2\": \"inp2\"\n  },\n  \"out\": [\n    \"echo_out\"\n  ],\n  \"scatter\": [\n    \"echo_in1\",\n    \"echo_in2\"\n  ],\n  \"scatterMethod\": \"dotproduct\",\n  \"run\": \"#echo\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepItem/example_1_1.jsonld",
+          "sizeBytes": 350,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepItem/context.jsonld\",\n  \"id\": \"step1\",\n  \"in\": {\n    \"echo_in1\": \"inp1\",\n    \"echo_in2\": \"inp2\"\n  },\n  \"out\": [\n    \"echo_out\"\n  ],\n  \"scatter\": [\n    \"echo_in1\",\n    \"echo_in2\"\n  ],\n  \"scatterMethod\": \"dotproduct\",\n  \"run\": \"#echo\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepItem/example_1_1.ttl",
+          "sizeBytes": 394,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n\n<https://example.org/step1> cwl:in \"inp1\",\n        \"inp2\" ;\n    cwl:out <https://example.org/echo_out> ;\n    cwl:run <https://example.org/#echo> ;\n    cwl:scatter ( <https://example.org/echo_in1> <https://example.org/echo_in2> ) ;\n    cwl:scatterMethod <https://example.org/dotproduct> .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "allOf:\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepId/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepObject/schema.yaml\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/workflow-step/CWLWorkflowStepItem"
+}

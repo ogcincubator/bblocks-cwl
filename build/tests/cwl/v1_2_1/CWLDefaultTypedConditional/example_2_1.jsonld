@@ -1,0 +1,8 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultTypedConditional/context.jsonld",
+  "type": "File",
+  "default": {
+    "class": "File",
+    "location": "args.py"
+  }
+}

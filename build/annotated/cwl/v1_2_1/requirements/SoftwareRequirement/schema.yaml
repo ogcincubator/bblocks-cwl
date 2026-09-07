@@ -1,0 +1,27 @@
+additionalProperties: false
+properties:
+  class:
+    enum:
+    - SoftwareRequirement
+    type: string
+    x-jsonld-id: '@type'
+  packages:
+    oneOf:
+    - items:
+        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/SoftwarePackage/schema.yaml
+      type: array
+    - additionalProperties:
+        oneOf:
+        - items:
+            type: string
+          type: array
+        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/SoftwarePackage/schema.yaml
+      description: Mapping of 'package' name to its specifications.
+      type: object
+    x-jsonld-id: https://w3id.org/cwl/cwl#SoftwareRequirement/packages
+    x-jsonld-container: '@id'
+required:
+- packages
+type: object
+x-jsonld-prefixes:
+  cwl: https://w3id.org/cwl/cwl#

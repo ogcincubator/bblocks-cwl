@@ -1,0 +1,88 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepInItem",
+  "name": "CWLWorkflowStepInItem",
+  "itemClass": "schema",
+  "abstract": "A single entry of a Workflow step's `in` mapping, in its\nlist form: combines the step-input id, the common wiring fields (`source`, `linkMerge`,\n`valueFrom`), and the optional `default` value used when a source produces no data.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.711950",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepId",
+    "ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepInputBase",
+    "ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepInputDefault"
+  ],
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepInItem/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepInItem/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/workflow-step/CWLWorkflowStepInItem/schema.yaml",
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepInItem/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepInItem/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/workflow-step/CWLWorkflowStepInItem/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepInItem/",
+  "examples": [
+    {
+      "title": "Simple single-source input",
+      "base-uri": "https://example.org/",
+      "content": "A step input identified by `id`, wired to a single upstream parameter via `source`.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepInItem/example_1_1.json",
+          "sizeBytes": 46,
+          "code": "{\n  \"id\": \"file1\",\n  \"source\": \"input_file\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepInItem/example_1_1.jsonld",
+          "sizeBytes": 183,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepInItem/context.jsonld\",\n  \"id\": \"file1\",\n  \"source\": \"input_file\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepInItem/example_1_1.ttl",
+          "sizeBytes": 119,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n\n<https://example.org/file1> cwl:source <https://example.org/input_file> .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Merged multi-source input with a default",
+      "base-uri": "https://example.org/",
+      "content": "A step input fed by two upstream data links, flattened via `linkMerge`, with a `default`\nvalue used when no data is produced by any source.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepInItem/example_2_1.json",
+          "sizeBytes": 125,
+          "code": "{\n  \"id\": \"file2\",\n  \"source\": [\"step_a/out\", \"step_b/out\"],\n  \"linkMerge\": \"merge_flattened\",\n  \"default\": \"fallback.txt\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepInItem/example_2_1.jsonld",
+          "sizeBytes": 274,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepInItem/context.jsonld\",\n  \"id\": \"file2\",\n  \"source\": [\n    \"step_a/out\",\n    \"step_b/out\"\n  ],\n  \"linkMerge\": \"merge_flattened\",\n  \"default\": \"fallback.txt\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepInItem/example_2_1.ttl",
+          "sizeBytes": 342,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n\n<https://example.org/file2> cwl:linkMerge \"merge_flattened\" ;\n    cwl:source <https://example.org/step_a/out>,\n        <https://example.org/step_b/out> ;\n    sld:default ( \"fallback.txt\" ) .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "allOf:\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepId/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepInputBase/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepInputDefault/schema.yaml\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/workflow-step/CWLWorkflowStepInItem"
+}

@@ -1,0 +1,14 @@
+{
+  "format": "http://edamontology.org/format_1929",
+  "streamable": false,
+  "secondaryFiles": [
+    {
+      "pattern": ".fai",
+      "required": true
+    },
+    {
+      "pattern": ".crai",
+      "required": false
+    }
+  ]
+}

@@ -3,9 +3,33 @@
 
 `ogc.cwl.v1_2_1.LoadListingEnum` *v1.2.1*
 
-LoadListingEnum
+The allowed values for `loadListing`, controlling how deeply a
+Directory's contents are enumerated for use in expressions: `no_listing` (don't load it),
+`shallow_listing` (top level only), or `deep_listing` (recurse into subdirectories).
 
 [*Status*](http://www.opengis.net/def/status): Under development
+
+## Examples
+
+### Deep listing
+Requesting a fully recursive directory listing, so subdirectories are also expanded for use
+in expressions.
+
+#### json
+```json
+"deep_listing"
+
+```
+
+
+### No listing
+Suppressing the directory listing entirely, so `listing` is left unset on the `Directory` object.
+
+#### json
+```json
+"no_listing"
+
+```
 
 ## Schema
 

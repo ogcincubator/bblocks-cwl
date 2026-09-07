@@ -13,13 +13,17 @@ properties:
     - File
     - Directory
     type: string
+    x-jsonld-id: '@type'
   location:
     type: string
+    x-jsonld-id: '@id'
   nameroot:
     type: string
     x-jsonld-id: https://w3id.org/cwl/cwl#File/nameroot
   path:
     type: string
+    x-jsonld-id: https://w3id.org/cwl/cwl#path
+    x-jsonld-type: '@id'
 required:
 - class
 type: object

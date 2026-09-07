@@ -1,0 +1,4 @@
+{
+  "class": "DockerRequirement",
+  "dockerPull": "docker.io/python:3-slim"
+}

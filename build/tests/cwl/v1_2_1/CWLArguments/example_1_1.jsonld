@@ -1,0 +1,9 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLArguments/context.jsonld",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": {
+    "@list": [
+      "bwa",
+      "mem"
+    ]
+  }
+}

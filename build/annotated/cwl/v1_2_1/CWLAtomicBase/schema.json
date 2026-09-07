@@ -1,68 +1,33 @@
 {
   "description": "Direct CWL definition instead of the graph representation.",
-  "properties": {
-    "arguments": {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLArguments/schema.json"
+  "allOf": [
+    {
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLProcessFields/schema.json"
     },
-    "baseCommand": {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLCommand/schema.json"
-    },
-    "class": {
-      "description": "CWL class specification. This is used to differentiate between single Application Package (AP)definitions and Workflow that chains multiple packages.",
-      "enum": [
-        "CommandLineTool",
-        "ExpressionTool"
-      ],
-      "title": "Class",
-      "type": "string"
-    },
-    "hints": {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLHints/schema.json"
-    },
-    "id": {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLIdentifier/schema.json"
-    },
-    "inputs": {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputsDefinition/schema.json"
-    },
-    "intent": {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLIntent/schema.json"
-    },
-    "outputs": {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputsDefinition/schema.json"
-    },
-    "requirements": {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLRequirements/schema.json"
-    },
-    "scatter": {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLScatter/schema.json"
-    },
-    "scatterMethod": {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLScatterMethod/schema.json"
-    },
-    "stderr": {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.json",
-      "description": "Destination of the error stream.\nTypically, an expression referring to a desired file name or provided by a CWL input reference.\n",
-      "x-jsonld-id": "https://w3id.org/cwl/cwl#stderr"
-    },
-    "stdin": {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.json",
-      "description": "Source of the input stream. \nTypically, an expression referring to an existing file name or an input of the CWL document.\n",
-      "x-jsonld-id": "https://w3id.org/cwl/cwl#stdin"
-    },
-    "stdout": {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.json",
-      "description": "Destination of the output stream.\nTypically, an expression referring to a desired file name or provided by a CWL input reference.\n",
-      "x-jsonld-id": "https://w3id.org/cwl/cwl#stdout"
+    {
+      "properties": {
+        "class": {
+          "description": "CWL class specification. This is used to differentiate between single Application Package (AP)definitions and Workflow that chains multiple packages.",
+          "enum": [
+            "CommandLineTool",
+            "ExpressionTool"
+          ],
+          "title": "Class",
+          "type": "string",
+          "x-jsonld-id": "@type"
+        }
+      },
+      "required": [
+        "class"
+      ]
     }
-  },
-  "required": [
-    "class",
-    "inputs",
-    "outputs"
   ],
   "title": "CWL atomic definition",
   "type": "object",
+  "x-jsonld-extra-terms": {
+    "CommandLineTool": "https://w3id.org/cwl/cwl#CommandLineTool",
+    "ExpressionTool": "https://w3id.org/cwl/cwl#ExpressionTool"
+  },
   "x-jsonld-prefixes": {
     "cwl": "https://w3id.org/cwl/cwl#"
   }

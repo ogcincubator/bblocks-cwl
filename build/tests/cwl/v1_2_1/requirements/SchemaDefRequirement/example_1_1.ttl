@@ -1,0 +1,16 @@
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+@prefix ns1: <https://w3id.org/cwl/cwl#SchemaDefRequirement/> .
+@prefix sld: <https://w3id.org/cwl/salad#> .
+
+<https://example.org/SequencingRun> sld:fields <https://example.org/reads>,
+        "Species" ;
+    sld:type <https://example.org/record> .
+
+<https://example.org/Species> sld:type <https://example.org/enum> .
+
+<https://example.org/reads> sld:type cwl:File .
+
+[] a <https://example.org/SchemaDefRequirement> ;
+    ns1:types <https://example.org/SequencingRun>,
+        <https://example.org/Species> .
+

@@ -1,0 +1,15 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/SoftwareRequirement/context.jsonld",
+  "class": "SoftwareRequirement",
+  "packages": {
+    "sourmash": [
+      "https://doi.org/10.21105/joss.00027"
+    ],
+    "screed": {
+      "package": "screed",
+      "version": [
+        "1.0"
+      ]
+    }
+  }
+}

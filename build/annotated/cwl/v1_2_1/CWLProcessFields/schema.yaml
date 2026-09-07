@@ -1,0 +1,77 @@
+description: "The process-definition fields shared by every shape a CWL CommandLineTool/ExpressionTool/Workflow\ndocument
+  can take, regardless of how the document is packaged (directly at the root, embedded
+  as a\nstep's inline `run`, or as an entry of a `$graph` array) \u2014 everything
+  except `class` itself, since\nwhich `class` values are legal differs by packaging
+  (a `$graph` entry additionally allows\n`Workflow`, which a standalone atomic document
+  does not).\n"
+properties:
+  arguments:
+    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLArguments/schema.yaml
+    x-jsonld-id: https://w3id.org/cwl/cwl#arguments
+    x-jsonld-container: '@list'
+  baseCommand:
+    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLCommand/schema.yaml
+    x-jsonld-id: https://w3id.org/cwl/cwl#baseCommand
+    x-jsonld-container: '@list'
+  hints:
+    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLHints/schema.yaml
+    x-jsonld-id: https://w3id.org/cwl/cwl#hints
+    x-jsonld-container: '@type'
+  id:
+    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLIdentifier/schema.yaml
+    x-jsonld-id: '@id'
+  inputs:
+    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputsDefinition/schema.yaml
+    x-jsonld-id: https://w3id.org/cwl/cwl#inputs
+    x-jsonld-container: '@id'
+  intent:
+    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLIntent/schema.yaml
+    x-jsonld-id: https://w3id.org/cwl/cwl#Process/intent
+    x-jsonld-type: '@id'
+  outputs:
+    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputsDefinition/schema.yaml
+    x-jsonld-id: https://w3id.org/cwl/cwl#outputs
+    x-jsonld-container: '@id'
+  requirements:
+    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLRequirements/schema.yaml
+    x-jsonld-id: https://w3id.org/cwl/cwl#requirements
+    x-jsonld-container: '@type'
+  scatter:
+    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLScatter/schema.yaml
+    x-jsonld-id: https://w3id.org/cwl/cwl#scatter
+    x-jsonld-type: '@id'
+    x-jsonld-container: '@list'
+  scatterMethod:
+    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLScatterMethod/schema.yaml
+    x-jsonld-id: https://w3id.org/cwl/cwl#scatterMethod
+    x-jsonld-type: '@vocab'
+  stderr:
+    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml
+    description: 'Destination of the error stream.
+
+      Typically, an expression referring to a desired file name or provided by a CWL
+      input reference.
+
+      '
+    x-jsonld-id: https://w3id.org/cwl/cwl#stderr
+  stdin:
+    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml
+    description: "Source of the input stream. \nTypically, an expression referring
+      to an existing file name or an input of the CWL document.\n"
+    x-jsonld-id: https://w3id.org/cwl/cwl#stdin
+  stdout:
+    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml
+    description: 'Destination of the output stream.
+
+      Typically, an expression referring to a desired file name or provided by a CWL
+      input reference.
+
+      '
+    x-jsonld-id: https://w3id.org/cwl/cwl#stdout
+required:
+- inputs
+- outputs
+title: CWL process fields
+type: object
+x-jsonld-prefixes:
+  cwl: https://w3id.org/cwl/cwl#

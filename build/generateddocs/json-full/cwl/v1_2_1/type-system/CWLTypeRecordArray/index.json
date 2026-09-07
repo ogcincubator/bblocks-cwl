@@ -1,0 +1,88 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.type-system.CWLTypeRecordArray",
+  "name": "CWLTypeRecordArray",
+  "itemClass": "schema",
+  "abstract": "A CWL type definition for an array whose elements\nare all of the same, further-specified CWL type: `type: array` plus an `items` type.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.693637",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.SchemaSaladOntology",
+    "ogc.cwl.v1_2_1.CWLType"
+  ],
+  "shaclShapes": {},
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordArray/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordArray/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordArray/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/type-system/CWLTypeRecordArray/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/type-system/CWLTypeRecordArray/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordArray/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/type-system/CWLTypeRecordArray/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordArray/",
+  "examples": [
+    {
+      "title": "Array of File inputs",
+      "base-uri": "https://example.org/",
+      "content": "A CWL `CommandLineTool` input declared as an array of `File` items, adapted from the\n`reads` input of [bwa-mem-tool.cwl](https://github.com/common-workflow-language/common-workflow-language/blob/main/v1.2/v1.2/bwa-mem-tool.cwl).\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordArray/example_1_1.json",
+          "sizeBytes": 41,
+          "code": "{\n  \"type\": \"array\",\n  \"items\": \"File\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordArray/example_1_1.jsonld",
+          "sizeBytes": 173,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordArray/context.jsonld\",\n  \"type\": \"array\",\n  \"items\": \"File\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordArray/example_1_1.ttl",
+          "sizeBytes": 157,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n\n[] sld:items cwl:File ;\n    sld:type <https://example.org/array> .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Array of integer values",
+      "base-uri": "https://example.org/",
+      "content": "A CWL input declared as an array of `int` items, adapted from the `min_std_max_min`\ninput of [bwa-mem-tool.cwl](https://github.com/common-workflow-language/common-workflow-language/blob/main/v1.2/v1.2/bwa-mem-tool.cwl).\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordArray/example_2_1.json",
+          "sizeBytes": 40,
+          "code": "{\n  \"type\": \"array\",\n  \"items\": \"int\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordArray/example_2_1.jsonld",
+          "sizeBytes": 172,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordArray/context.jsonld\",\n  \"type\": \"array\",\n  \"items\": \"int\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordArray/example_2_1.ttl",
+          "sizeBytes": 164,
+          "code": "@prefix sld: <https://w3id.org/cwl/salad#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] sld:items xsd:int ;\n    sld:type <https://example.org/array> .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "properties:\n  items:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/salad#items\n    x-jsonld-type: '@vocab'\n  type:\n    enum:\n    - array\n    type: string\n    x-jsonld-id: https://w3id.org/cwl/salad#type\n    x-jsonld-type: '@vocab'\nrequired:\n- type\n- items\ntype: object\nx-jsonld-prefixes:\n  sld: https://w3id.org/cwl/salad#\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/type-system/CWLTypeRecordArray"
+}

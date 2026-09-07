@@ -1,0 +1,7 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/EnvVarRequirement/context.jsonld",
+  "class": "EnvVarRequirement",
+  "envDef": {
+    "TEST_ENV": "$(inputs.in)"
+  }
+}

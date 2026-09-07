@@ -1,15 +1,45 @@
 {
   "allOf": [
     {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputItemBase/schema.json"
-    },
-    {
       "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultTypedConditional/schema.json"
     },
     {
       "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/schema.json"
     }
   ],
+  "additionalProperties": {},
   "description": "Input specification. Note that multiple formats are supported and\nnot all specification variants or parameters are presented here. Please refer\nto official CWL documentation for more details (https://www.commonwl.org).\n",
-  "title": "Input"
+  "properties": {
+    "id": {
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLIdentifier/schema.json",
+      "description": "Identifier of the CWL input.",
+      "x-jsonld-id": "@id"
+    },
+    "inputBinding": {
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InputBinding/schema.json",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#inputBinding"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.json"
+        },
+        {
+          "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputStdIn/schema.json"
+        }
+      ],
+      "x-jsonld-id": "https://w3id.org/cwl/salad#type",
+      "x-jsonld-type": "@vocab"
+    }
+  },
+  "required": [
+    "type",
+    "id"
+  ],
+  "title": "Input",
+  "type": "object",
+  "x-jsonld-prefixes": {
+    "cwl": "https://w3id.org/cwl/cwl#",
+    "sld": "https://w3id.org/cwl/salad#"
+  }
 }

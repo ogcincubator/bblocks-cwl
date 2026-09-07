@@ -1,0 +1,28 @@
+{
+  "additionalProperties": false,
+  "description": "Hint indicating that the Application Package corresponds to an\nOGC API - Processes provider that should be remotely executed and monitored\nby this instance. (note: can only be an 'hint' as it is unofficial CWL specification).\n",
+  "properties": {
+    "class": {
+      "enum": [
+        "OGCAPIRequirement"
+      ],
+      "type": "string",
+      "x-jsonld-id": "@type"
+    },
+    "process": {
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ReferenceURL/schema.json",
+      "description": "Process location."
+    }
+  },
+  "required": [
+    "process"
+  ],
+  "title": "OGCAPIRequirement",
+  "type": "object",
+  "x-jsonld-extra-terms": {
+    "OGCAPIRequirement": "https://w3id.org/ogc/cwl/OGCAPIRequirement"
+  },
+  "x-jsonld-prefixes": {
+    "ogccwl": "https://w3id.org/ogc/cwl/"
+  }
+}

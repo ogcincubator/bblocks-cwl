@@ -1,0 +1,5 @@
+@prefix ns1: <https://w3id.org/cwl/cwl#WorkReuse/> .
+
+[] a <https://example.org/WorkReuse> ;
+    ns1:enableReuse "$(inputs.allowCaching)" .
+

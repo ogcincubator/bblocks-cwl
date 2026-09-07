@@ -1,0 +1,8 @@
+{
+  "class": "ExpressionTool",
+  "inputs": [],
+  "outputs": {
+    "output": "Any"
+  },
+  "expression": "$({'output': null})"
+}

@@ -1,0 +1,3 @@
+path	@id	schema
+/class	@type	/github/workspace/build/annotated/cwl/v1_2_1/requirements/OGCAPIRequirement/schema.yaml
+/process		/github/workspace/build/annotated/cwl/v1_2_1/requirements/OGCAPIRequirement/schema.yaml

@@ -1,0 +1,46 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.requirements.SubworkflowFeatureRequirement",
+  "name": "SubworkflowFeatureRequirement",
+  "itemClass": "schema",
+  "abstract": "Indicates that the 'Workflow' must support nested workflows in the 'run' field of 'WorkflowStep'.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.688588",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "shaclShapes": {},
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/SubworkflowFeatureRequirement/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/SubworkflowFeatureRequirement/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/SubworkflowFeatureRequirement/schema.yaml",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/SubworkflowFeatureRequirement/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/SubworkflowFeatureRequirement/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/requirements/SubworkflowFeatureRequirement/",
+  "description": "To specify a nested workflow as part of a workflow step, `SubworkflowFeatureRequirement` must be\nspecified in the workflow or workflow step `requirements`. When present, it indicates that the\nworkflow platform must support another `Workflow` document as the value of the `run` field of a\n[CWLWorkflowStepObject](bblocks://ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepObject), rather than only a\n`CommandLineTool` or `ExpressionTool`.\n\nIt is a fatal error if a workflow directly or indirectly invokes itself as a subworkflow \u2014 recursive\nworkflows are not allowed.\n\n`SubworkflowFeatureRequirement` is one of the two standard extensions to core workflow semantics, the\nother being `ScatterFeatureRequirement`.\n",
+  "examples": [
+    {
+      "title": "Enabling subworkflows on a Workflow",
+      "base-uri": "https://example.org/",
+      "content": "A `Workflow` declares `SubworkflowFeatureRequirement` so that one of its steps may use\nanother `Workflow` document as its `run` process, i.e. a nested subworkflow.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/SubworkflowFeatureRequirement/example_1_1.json",
+          "sizeBytes": 47,
+          "code": "{\n  \"class\": \"SubworkflowFeatureRequirement\"\n}\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "additionalProperties: false\ndescription: Indicates that the 'Workflow' must support nested workflows in the 'run'\n  field of 'WorkflowStep'.\nproperties:\n  class:\n    description: CWL requirement class specification.\n    enum:\n    - SubworkflowFeatureRequirement\n    type: string\ntitle: SubworkflowFeatureRequirement\ntype: object\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/requirements/SubworkflowFeatureRequirement"
+}

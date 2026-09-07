@@ -1,0 +1,64 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.requirements.WPS1Requirement",
+  "name": "WPS1Requirement",
+  "itemClass": "schema",
+  "abstract": "Hint indicating that the Application Package corresponds to a\nWPS-1 provider process that should be remotely executed and monitored by this\ninstance. (note: can only be an ''hint'' as it is unofficial CWL specification).\n",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.698000",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.ReferenceURL",
+    "ogc.cwl.v1_2_1.CWLTextPatternID"
+  ],
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/WPS1Requirement/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/WPS1Requirement/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/WPS1Requirement/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/WPS1Requirement/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/WPS1Requirement/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/WPS1Requirement/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/WPS1Requirement/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/requirements/WPS1Requirement/",
+  "description": "`WPS1Requirement` is an OGC-specific extension to the CWL requirement/hint vocabulary; it has no\nupstream CWL specification counterpart. It marks a workflow step whose actual computation is not run\nby the CWL runner itself but delegated to a remote [WPS 1.0](https://www.ogc.org/standard/wps/) process,\nidentified by two properties: `provider` (the WPS endpoint URL, i.e. the base URL to which\n`Execute`/`GetCapabilities`/`DescribeProcess` requests are sent) and `process` (the WPS process\nidentifier to invoke at that endpoint, as used in the `Identifier` element of a WPS `Execute` request).\nThe runner is expected to submit a WPS `Execute` request against that process and poll for completion,\nrather than executing the step's `baseCommand`/`run` locally.\n\nBecause this class is not part of the official CWL v1.2.1 specification, it can only ever appear as a\n*hint* \u2014 inside a [CWLHintsItem](bblocks://ogc.cwl.v1_2_1.requirements.CWLHintsItem) \u2014 never as a *requirement* (a\nstandards-conformant CWL processor is free to ignore hints it does not understand, but must reject a\ndocument containing an unrecognized requirement). See also\n[OGCAPIRequirement](bblocks://ogc.cwl.v1_2_1.requirements.OGCAPIRequirement) for the equivalent hint targeting a\nmodern OGC API - Processes provider instead.\n",
+  "examples": [
+    {
+      "title": "WPS 1.0 backing for a workflow step",
+      "base-uri": "https://example.org/",
+      "content": "A `WPS1Requirement` hint attached to a workflow step, indicating that the step's\nexecution should be delegated to a remote WPS 1.0 provider, identifying both the\nprovider endpoint and the process identifier to invoke on it.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/WPS1Requirement/example_1_1.json",
+          "sizeBytes": 105,
+          "code": "{\n  \"class\": \"WPS1Requirement\",\n  \"provider\": \"https://example.org/wps\",\n  \"process\": \"FloodDetection\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/WPS1Requirement/example_1_1.jsonld",
+          "sizeBytes": 235,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/WPS1Requirement/context.jsonld\",\n  \"class\": \"WPS1Requirement\",\n  \"provider\": \"https://example.org/wps\",\n  \"process\": \"FloodDetection\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/WPS1Requirement/example_1_1.ttl",
+          "sizeBytes": 78,
+          "code": "@prefix ogccwl: <https://w3id.org/ogc/cwl/> .\n\n[] a ogccwl:WPS1Requirement .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "additionalProperties: false\ndescription: 'Hint indicating that the Application Package corresponds to a\n\n  WPS-1 provider process that should be remotely executed and monitored by this\n\n  instance. (note: can only be an ''''hint'''' as it is unofficial CWL specification).\n\n  '\nproperties:\n  class:\n    enum:\n    - WPS1Requirement\n    type: string\n    x-jsonld-id: '@type'\n  process:\n    $comment: Process identifier of the remote WPS provider.\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTextPatternID/schema.yaml\n  provider:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ReferenceURL/schema.yaml\n    description: WPS provider endpoint.\nrequired:\n- process\n- provider\ntitle: WPS1Requirement\ntype: object\nx-jsonld-extra-terms:\n  WPS1Requirement: https://w3id.org/ogc/cwl/WPS1Requirement\nx-jsonld-prefixes:\n  ogccwl: https://w3id.org/ogc/cwl/\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/requirements/WPS1Requirement"
+}

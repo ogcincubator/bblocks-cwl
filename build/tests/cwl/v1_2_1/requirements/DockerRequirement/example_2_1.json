@@ -1,0 +1,5 @@
+{
+  "class": "DockerRequirement",
+  "dockerPull": "docker.io/debian:stable-slim",
+  "dockerOutputDirectory": "/other"
+}

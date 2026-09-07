@@ -1,0 +1,5 @@
+@prefix ns1: <https://w3id.org/cwl/cwl#NetworkAccess/> .
+
+[] a <https://example.org/NetworkAccess> ;
+    ns1:networkAccess "$(inputs.allow_network)" .
+

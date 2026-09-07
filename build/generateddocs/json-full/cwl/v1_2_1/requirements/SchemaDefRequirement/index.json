@@ -1,0 +1,92 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.requirements.SchemaDefRequirement",
+  "name": "SchemaDefRequirement",
+  "itemClass": "schema",
+  "abstract": "An array of named `enum`/`record` type definitions available\nfor reuse via IRI reference from `inputs`/`outputs` type fields. Definitions are processed in the\norder listed, so later definitions may refer to earlier ones.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.684906",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.CWLImport",
+    "ogc.cwl.v1_2_1.type-system.CWLTypeRecordArray",
+    "ogc.cwl.v1_2_1.type-system.CWLTypeRecordSchema",
+    "ogc.cwl.v1_2_1.type-system.CWLTypeEnum",
+    "ogc.cwl.v1_2_1.CWLOntology"
+  ],
+  "shaclShapes": {},
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/SchemaDefRequirement/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/SchemaDefRequirement/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/SchemaDefRequirement/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/SchemaDefRequirement/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/SchemaDefRequirement/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/SchemaDefRequirement/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/SchemaDefRequirement/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/requirements/SchemaDefRequirement/",
+  "description": "Type definitions may only use the `enum` and `record` forms \u2014 see\n[type-system/CWLTypeEnum](bblocks://ogc.cwl.v1_2_1.type-system.CWLTypeEnum) and\n[type-system/CWLTypeRecordSchema](bblocks://ogc.cwl.v1_2_1.type-system.CWLTypeRecordSchema) \u2014 or an\narray whose `items` resolve to one of those, via\n[type-system/CWLTypeRecordArray](bblocks://ogc.cwl.v1_2_1.type-system.CWLTypeRecordArray). Each entry\nmay instead be an [CWLImport](bblocks://ogc.cwl.v1_2_1.CWLImport) (`$import`) directive, so a set of\nshared type definitions can be kept in a separate file and reused across multiple CWL documents rather\nthan repeated inline.\n\nOnce declared here, a definition can be referenced by IRI from an `inputs`/`outputs` `type` field\nelsewhere in the document, instead of being written out inline at the point of use.\n",
+  "examples": [
+    {
+      "title": "Inline enum and record type definitions",
+      "base-uri": "https://example.org/",
+      "content": "Declares a reusable `Species` enum and a `SequencingRun` record whose `organism` field refers\nback to it by name; `SequencingRun` can then be used as a `type` elsewhere in the document's\n`inputs`/`outputs`.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/SchemaDefRequirement/example_1_1.json",
+          "sizeBytes": 343,
+          "code": "{\n  \"class\": \"SchemaDefRequirement\",\n  \"types\": [\n    {\n      \"type\": \"enum\",\n      \"name\": \"Species\",\n      \"symbols\": [\"human\", \"mouse\", \"zebrafish\"]\n    },\n    {\n      \"type\": \"record\",\n      \"name\": \"SequencingRun\",\n      \"fields\": {\n        \"organism\": \"Species\",\n        \"reads\": {\n          \"type\": \"File\"\n        }\n      }\n    }\n  ]\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/SchemaDefRequirement/example_1_1.jsonld",
+          "sizeBytes": 510,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/SchemaDefRequirement/context.jsonld\",\n  \"class\": \"SchemaDefRequirement\",\n  \"types\": [\n    {\n      \"type\": \"enum\",\n      \"name\": \"Species\",\n      \"symbols\": [\n        \"human\",\n        \"mouse\",\n        \"zebrafish\"\n      ]\n    },\n    {\n      \"type\": \"record\",\n      \"name\": \"SequencingRun\",\n      \"fields\": {\n        \"organism\": \"Species\",\n        \"reads\": {\n          \"type\": \"File\"\n        }\n      }\n    }\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/SchemaDefRequirement/example_1_1.ttl",
+          "sizeBytes": 554,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#SchemaDefRequirement/> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n\n<https://example.org/SequencingRun> sld:fields <https://example.org/reads>,\n        \"Species\" ;\n    sld:type <https://example.org/record> .\n\n<https://example.org/Species> sld:type <https://example.org/enum> .\n\n<https://example.org/reads> sld:type cwl:File .\n\n[] a <https://example.org/SchemaDefRequirement> ;\n    ns1:types <https://example.org/SequencingRun>,\n        <https://example.org/Species> .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Type definitions shared via $import",
+      "base-uri": "https://example.org/",
+      "content": "Instead of writing type definitions inline, an entry can be an `$import` directive pointing to\na file holding a shared set of `enum`/`record` definitions reused across multiple CWL documents.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/SchemaDefRequirement/example_2_1.json",
+          "sizeBytes": 107,
+          "code": "{\n  \"class\": \"SchemaDefRequirement\",\n  \"types\": [\n    {\n      \"$import\": \"types/readgroup.yml\"\n    }\n  ]\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/SchemaDefRequirement/example_2_1.jsonld",
+          "sizeBytes": 242,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/SchemaDefRequirement/context.jsonld\",\n  \"class\": \"SchemaDefRequirement\",\n  \"types\": [\n    {\n      \"$import\": \"types/readgroup.yml\"\n    }\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/SchemaDefRequirement/example_2_1.ttl",
+          "sizeBytes": 136,
+          "code": "@prefix ns1: <https://w3id.org/cwl/cwl#SchemaDefRequirement/> .\n\n[] a <https://example.org/SchemaDefRequirement> ;\n    ns1:types [ ] .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "additionalProperties: false\nproperties:\n  class:\n    enum:\n    - SchemaDefRequirement\n    type: string\n    x-jsonld-id: '@type'\n  types:\n    items:\n      oneOf:\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeEnum/schema.yaml\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordSchema/schema.yaml\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordArray/schema.yaml\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLImport/schema.yaml\n    type: array\n    x-jsonld-id: https://w3id.org/cwl/cwl#SchemaDefRequirement/types\nrequired:\n- types\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/requirements/SchemaDefRequirement"
+}

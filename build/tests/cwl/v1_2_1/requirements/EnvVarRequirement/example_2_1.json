@@ -1,0 +1,13 @@
+{
+  "class": "EnvVarRequirement",
+  "envDef": [
+    {
+      "envName": "LC_ALL",
+      "envValue": "en_US.UTF-8"
+    },
+    {
+      "envName": "DATA_DIR",
+      "envValue": "$(inputs.data_dir.path)"
+    }
+  ]
+}

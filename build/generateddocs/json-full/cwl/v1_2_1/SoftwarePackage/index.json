@@ -4,20 +4,21 @@
   "itemIdentifier": "ogc.cwl.v1_2_1.SoftwarePackage",
   "name": "SoftwarePackage",
   "itemClass": "schema",
-  "abstract": "SoftwarePackage",
+  "abstract": "A single software package entry within a `SoftwareRequirement`:\nthe package name, optionally the compatible version(s), and optionally one or more IRIs identifying\nresources for installing or enabling it (e.g. a Debian or Conda package page), which implementations\nmay resolve to a concrete install action.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.692582",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
   "tags": [
     "cwl"
   ],
-  "shaclShapes": {},
   "dependsOn": [
+    "ogc.cwl.v1_2_1.CWLOntology",
     "ogc.cwl.v1_2_1.ReferenceURL"
   ],
+  "shaclShapes": {},
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/SoftwarePackage/context.jsonld",
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/SoftwarePackage/schema.yaml",
@@ -25,10 +26,64 @@
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/SoftwarePackage/schema.yaml",
   "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/SoftwarePackage/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/SoftwarePackage/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/SoftwarePackage/",
-  "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "additionalProperties: false\nproperties:\n  package:\n    type: string\n    x-jsonld-id: https://w3id.org/cwl/cwl#SoftwarePackage/package\n  specs:\n    items:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ReferenceURL/schema.yaml\n    type: array\n  version:\n    items:\n      type: string\n    type: array\n    x-jsonld-id: https://w3id.org/cwl/cwl#SoftwarePackage/version\nrequired:\n- package\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/SoftwarePackage/",
+  "description": "Each field plays a distinct role:\n\n- `package` \u2014 the software's name. If the name alone is ambiguous (common, inconsistent across\n  package managers, etc.) it should be paired with one or more identifiers in `specs`.\n- `version` \u2014 the version(s) of the software known to be compatible with the process.\n- `specs` \u2014 one or more [ReferenceURL](bblocks://ogc.cwl.v1_2_1.ReferenceURL) IRIs identifying\n  resources for installing or enabling the named package. Implementations may resolve these IRIs\n  to a concrete install action, or fall back to using just the `package` name on a best-effort\n  basis.\n\nFor example, the IRI `https://packages.debian.org/bowtie` could be resolved with\n`apt-get install bowtie`, while `https://anaconda.org/bioconda/bowtie` could be resolved with\n`conda install -c bioconda bowtie`. IRIs can also be system-independent, mapping to a specific\nsoftware concept rather than a particular package manager entry.\n\nA `SoftwarePackage` normally appears as an item of\n[SoftwareRequirement](bblocks://ogc.cwl.v1_2_1.requirements.SoftwareRequirement)'s `packages` property.\n",
+  "examples": [
+    {
+      "title": "Package identified by name and version only",
+      "base-uri": "https://example.org/",
+      "content": "A `SoftwarePackage` entry naming a tool and the version(s) known to work, with no\ninstallation IRIs.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/SoftwarePackage/example_1_1.json",
+          "sizeBytes": 50,
+          "code": "{\n  \"package\": \"screed\",\n  \"version\": [ \"1.0\" ]\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/SoftwarePackage/example_1_1.jsonld",
+          "sizeBytes": 173,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/SoftwarePackage/context.jsonld\",\n  \"package\": \"screed\",\n  \"version\": [\n    \"1.0\"\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/SoftwarePackage/example_1_1.ttl",
+          "sizeBytes": 111,
+          "code": "@prefix ns1: <https://w3id.org/cwl/cwl#SoftwarePackage/> .\n\n[] ns1:package \"screed\" ;\n    ns1:version \"1.0\" .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Package identified by an installation IRI",
+      "base-uri": "https://example.org/",
+      "content": "A `SoftwarePackage` entry that pins down an ambiguous package name using a `specs` IRI\nresolving to a package repository entry.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/SoftwarePackage/example_2_1.json",
+          "sizeBytes": 79,
+          "code": "{\n  \"package\": \"bowtie\",\n  \"specs\": [ \"https://packages.debian.org/bowtie\" ]\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/SoftwarePackage/example_2_1.jsonld",
+          "sizeBytes": 202,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/SoftwarePackage/context.jsonld\",\n  \"package\": \"bowtie\",\n  \"specs\": [\n    \"https://packages.debian.org/bowtie\"\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/SoftwarePackage/example_2_1.ttl",
+          "sizeBytes": 140,
+          "code": "@prefix ns1: <https://w3id.org/cwl/cwl#SoftwarePackage/> .\n\n[] ns1:package \"bowtie\" ;\n    ns1:specs <https://packages.debian.org/bowtie> .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "additionalProperties: false\nproperties:\n  package:\n    type: string\n    x-jsonld-id: https://w3id.org/cwl/cwl#SoftwarePackage/package\n  specs:\n    items:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ReferenceURL/schema.yaml\n    type: array\n    x-jsonld-id: https://w3id.org/cwl/cwl#SoftwarePackage/specs\n    x-jsonld-type: '@id'\n  version:\n    items:\n      type: string\n    type: array\n    x-jsonld-id: https://w3id.org/cwl/cwl#SoftwarePackage/version\nrequired:\n- package\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/SoftwarePackage"
 }

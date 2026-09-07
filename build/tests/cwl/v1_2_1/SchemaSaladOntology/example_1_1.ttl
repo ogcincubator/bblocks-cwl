@@ -1,0 +1,13 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sld: <https://w3id.org/cwl/salad#> .
+
+sld:RecordSchema a rdfs:Class .
+
+sld:SaladRecordSchema a rdfs:Class ;
+    rdfs:subClassOf sld:NamedType,
+        sld:RecordSchema .
+
+<https://w3id.org/cwl/salad#SaladRecordSchema/abstract> a rdf:Property ;
+    rdfs:domain sld:SaladRecordSchema .
+

@@ -1,0 +1,17 @@
+{
+  "class": "SoftwareRequirement",
+  "packages": [
+    {
+      "package": "screed",
+      "version": [
+        "1.0"
+      ]
+    },
+    {
+      "package": "bowtie",
+      "specs": [
+        "https://packages.debian.org/bowtie"
+      ]
+    }
+  ]
+}

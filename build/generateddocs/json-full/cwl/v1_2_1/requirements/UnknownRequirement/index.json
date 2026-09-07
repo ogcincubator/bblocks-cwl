@@ -1,0 +1,46 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.requirements.UnknownRequirement",
+  "name": "UnknownRequirement",
+  "itemClass": "schema",
+  "abstract": "Generic schema to allow alternative CWL requirements/hints not explicitly defined in schemas.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.698355",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "shaclShapes": {},
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/UnknownRequirement/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/UnknownRequirement/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/UnknownRequirement/schema.yaml",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/UnknownRequirement/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/UnknownRequirement/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/requirements/UnknownRequirement/",
+  "description": "`UnknownRequirement` is the catch-all fallback branch used inside\n[CWLRequirementsItem](bblocks://ogc.cwl.v1_2_1.requirements.CWLRequirementsItem) and\n[CWLHintsItem](bblocks://ogc.cwl.v1_2_1.requirements.CWLHintsItem) for any requirement/hint `class` that this\nregister does not model with a dedicated block \u2014 most commonly vendor-prefixed extension classes such\nas `cwltool:LoadListingRequirement`-style custom classes or arbitrary `x:`/`acme:`-prefixed identifiers\nthat a particular CWL implementation defines on its own. Its schema only fixes the shape of `class`\n(excluding the identifiers already covered by the 18 standard CWL requirement/hint classes) and\notherwise leaves the object open (`additionalProperties: {}`), since the actual content of a\nvendor-specific requirement is implementation-defined and unknown to this register.\n\nNote: the `class` exclusion list currently only excludes the 18 standard CWL classes; it does not yet\nexclude this register's own OGC-specific hint classes (`BuiltinRequirement`,\n[OGCAPIRequirement](bblocks://ogc.cwl.v1_2_1.requirements.OGCAPIRequirement),\n[WPS1Requirement](bblocks://ogc.cwl.v1_2_1.requirements.WPS1Requirement)), so a bare object using one of those three\n`class` values currently matches both its dedicated branch and this fallback branch when validated\nthrough the `CWLHintsItem`/`CWLRequirementsItem` `oneOf`. This is a known schema issue tracked\nseparately and is not fixed here.\n",
+  "examples": [
+    {
+      "title": "Vendor-specific extension requirement",
+      "base-uri": "https://example.org/",
+      "content": "A vendor-prefixed requirement/hint class (here, an invented `acme:CustomRequirement`)\nthat falls outside the standard CWL requirement classes and this register's own\nOGC-specific hints. `UnknownRequirement` acts as the catch-all extension point that\naccepts such vendor-defined classes with arbitrary additional properties.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/UnknownRequirement/example_1_1.json",
+          "sizeBytes": 88,
+          "code": "{\n  \"class\": \"acme:CustomRequirement\",\n  \"acme:priority\": \"high\",\n  \"acme:retries\": 3\n}\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "additionalProperties: {}\ndescription: Generic schema to allow alternative CWL requirements/hints not explicitly\n  defined in schemas.\nproperties:\n  class:\n    description: CWL requirement class specification.\n    example: UnknownRequirement\n    not:\n      enum:\n      - cwltool:CUDARequirement\n      - DockerRequirement\n      - SoftwareRequirement\n      - ShellCommandRequirement\n      - EnvVarRequirement\n      - SchemaDefRequirement\n      - InitialWorkDirRequirement\n      - InlineJavascriptRequirement\n      - InplaceUpdateRequirement\n      - LoadListingRequirement\n      - NetworkAccess\n      - ResourceRequirement\n      - ScatterFeatureRequirement\n      - ToolTimeLimit\n      - WorkReuse\n      - MultipleInputFeatureRequirement\n      - StepInputExpressionRequirement\n      - SubworkflowFeatureRequirement\n      - BuiltinRequirement\n      - OGCAPIRequirement\n      - WPS1Requirement\n    title: Requirement Class Identifier\n    type: string\ntype: object\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/requirements/UnknownRequirement"
+}

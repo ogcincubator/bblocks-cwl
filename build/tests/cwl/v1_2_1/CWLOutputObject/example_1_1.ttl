@@ -1,0 +1,9 @@
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+@prefix ns1: <https://w3id.org/cwl/cwl#CommandOutputBinding/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sld: <https://w3id.org/cwl/salad#> .
+
+[] rdfs:comment "The output file produced by the tool." ;
+    cwl:outputBinding [ ns1:glob "output.txt" ] ;
+    sld:type cwl:File .
+

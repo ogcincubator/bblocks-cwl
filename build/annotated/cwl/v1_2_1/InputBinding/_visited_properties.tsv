@@ -1,6 +1,6 @@
-path	@id
-/itemSeparator	https://w3id.org/cwl/cwl#CommandLineBinding/itemSeparator
-/position	https://w3id.org/cwl/cwl#CommandLineBinding/position
-/prefix	https://w3id.org/cwl/cwl#CommandLineBinding/prefix
-/shellQuote	https://w3id.org/cwl/cwl#CommandLineBinding/shellQuote
-/valueFrom	https://w3id.org/cwl/cwl#valueFrom
+path	@id	schema
+/itemSeparator	https://w3id.org/cwl/cwl#CommandLineBinding/itemSeparator	/github/workspace/build/annotated/cwl/v1_2_1/InputBinding/schema.yaml
+/position	https://w3id.org/cwl/cwl#CommandLineBinding/position	/github/workspace/build/annotated/cwl/v1_2_1/InputBinding/schema.yaml
+/prefix	https://w3id.org/cwl/cwl#CommandLineBinding/prefix	/github/workspace/build/annotated/cwl/v1_2_1/InputBinding/schema.yaml
+/shellQuote	https://w3id.org/cwl/cwl#CommandLineBinding/shellQuote	/github/workspace/build/annotated/cwl/v1_2_1/InputBinding/schema.yaml
+/valueFrom	https://w3id.org/cwl/cwl#valueFrom	/github/workspace/build/annotated/cwl/v1_2_1/InputBinding/schema.yaml

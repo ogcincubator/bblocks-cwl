@@ -1,13 +1,43 @@
 {
   "allOf": [
     {
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLProcessFields/schema.json"
+    },
+    {
       "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLMetadata/schema.json"
     },
     {
       "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/schema.json"
     },
     {
-      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLGraphItemBase/schema.json"
+      "properties": {
+        "class": {
+          "description": "CWL class specification. This is used to differentiate between single Application Package (AP)definitions and Workflow that chains multiple packages.",
+          "enum": [
+            "CommandLineTool",
+            "ExpressionTool",
+            "Workflow"
+          ],
+          "title": "Class",
+          "type": "string",
+          "x-jsonld-id": "@type"
+        }
+      },
+      "required": [
+        "class",
+        "id"
+      ],
+      "type": "object"
     }
-  ]
+  ],
+  "additionalProperties": {},
+  "title": "CWLGraphItem",
+  "x-jsonld-extra-terms": {
+    "CommandLineTool": "https://w3id.org/cwl/cwl#CommandLineTool",
+    "ExpressionTool": "https://w3id.org/cwl/cwl#ExpressionTool",
+    "Workflow": "https://w3id.org/cwl/cwl#Workflow"
+  },
+  "x-jsonld-prefixes": {
+    "cwl": "https://w3id.org/cwl/cwl#"
+  }
 }

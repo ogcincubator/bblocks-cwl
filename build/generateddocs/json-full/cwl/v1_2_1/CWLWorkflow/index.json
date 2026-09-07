@@ -4,10 +4,13 @@
   "itemIdentifier": "ogc.cwl.v1_2_1.CWLWorkflow",
   "name": "CWLWorkflow",
   "itemClass": "schema",
-  "abstract": "CWLWorkflow",
+  "abstract": "A complete, top-level CWL Workflow document (`class: Workflow`).\nCombines the `Workflow`-specific structure (steps, inputs, outputs, requirements, hints) with the\ndocument-level fields that only apply at the root of a CWL file: `cwlVersion`, metadata, and\ndocumentation.",
+  "isProfileOf": [
+    "ogc.cwl.v1_2_1.CWLWorkflowBase"
+  ],
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.673295",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -18,9 +21,9 @@
   "dependsOn": [
     "ogc.cwl.v1_2_1.CWLWorkflowBase",
     "ogc.cwl.v1_2_1.CWLVersion",
-    "ogc.cwl.v1_2_1.CWLDocumentation",
     "ogc.cwl.v1_2_1.CWLWorkflowClass",
-    "ogc.cwl.v1_2_1.CWLMetadata"
+    "ogc.cwl.v1_2_1.CWLMetadata",
+    "ogc.cwl.v1_2_1.CWLDocumentation"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflow/schema.yaml",
@@ -28,9 +31,38 @@
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflow/schema.yaml",
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflow/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflow/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflow/",
-  "rdfData": [],
   "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLWorkflow/",
+  "description": "A workflow describes a set of steps and the dependencies between those steps. When a step\nproduces output that will be consumed by a second step, the first step is a dependency of the\nsecond step.\n\nWhen there is a dependency, the workflow engine must execute the preceding step and wait for it\nto successfully produce output before executing the dependent step. If two steps are defined in\nthe workflow graph that are not directly or indirectly dependent, these steps are independent,\nand may execute in any order or execute concurrently. A workflow is complete when all steps have\nbeen executed.\n\nDependencies between parameters are expressed using the `source` field on workflow step input\nparameters and the `outputSource` field on workflow output parameters. The `source` field on\neach workflow step input parameter expresses the data links that contribute to the value of the\nstep input parameter (the \"sink\"). A workflow step can only begin execution when every data link\nconnected to a step has been fulfilled. The `outputSource` field on each workflow output\nparameter expresses the data links that contribute to the value of the workflow output parameter;\nworkflow execution cannot complete successfully until every data link connected to an output\nparameter has been fulfilled.\n\nA completed step must result in one of `success`, `temporaryFailure` or `permanentFailure`\nstates. An implementation may choose to retry a step execution which resulted in\n`temporaryFailure`, and may choose to either continue running other steps of a workflow or\nterminate immediately upon `permanentFailure`. If any step of a workflow execution results in\n`permanentFailure`, the workflow status is `permanentFailure`; if one or more steps result in\n`temporaryFailure` and all other steps complete `success` or are not executed, the workflow\nstatus is `temporaryFailure`; if all workflow steps are executed and complete with `success`,\nthe workflow status is `success`.\n\nThis block represents a complete, top-level CWL Workflow document as it appears at the root of a\n`.cwl` file: the `class: Workflow` discriminator\n([CWLWorkflowClass](bblocks://ogc.cwl.v1_2_1.CWLWorkflowClass)) and workflow structure \u2014 `inputs`,\n`outputs`, `steps`, `requirements` and `hints`\n([CWLWorkflowBase](bblocks://ogc.cwl.v1_2_1.CWLWorkflowBase)) \u2014 combined with the document-level\nfields that only apply at the root of a CWL file: `cwlVersion`\n([CWLVersion](bblocks://ogc.cwl.v1_2_1.CWLVersion)), metadata\n([CWLMetadata](bblocks://ogc.cwl.v1_2_1.CWLMetadata)), and documentation\n([CWLDocumentation](bblocks://ogc.cwl.v1_2_1.CWLDocumentation)). A workflow's own steps can, in\nturn, nest another workflow definition in their `run` field \u2014 see\n[CWLWorkflowStepObject](bblocks://ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepObject) \u2014 which reuses\n`CWLWorkflowClass` and `CWLWorkflowBase` but not `CWLVersion`, since `cwlVersion` is only declared\nonce, at the document root.\n\n[ScatterFeatureRequirement](bblocks://ogc.cwl.v1_2_1.requirements.ScatterFeatureRequirement) and\n[SubworkflowFeatureRequirement](bblocks://ogc.cwl.v1_2_1.requirements.SubworkflowFeatureRequirement) are\navailable as standard extensions to core workflow semantics, letting a step fan out over an array\ninput or run a nested workflow, respectively.\n",
+  "examples": [
+    {
+      "title": "Two-step counting workflow",
+      "base-uri": "https://example.org/",
+      "content": "A minimal workflow that runs a nested sub-workflow to count lines in the input\nfile, then exposes that count as a workflow output, adapted from the CWL v1.2\nconformance test suite.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLWorkflow/example_1_1.json",
+          "sizeBytes": 582,
+          "code": "{\n  \"cwlVersion\": \"v1.2\",\n  \"class\": \"Workflow\",\n  \"label\": \"Count lines via a nested sub-workflow\",\n  \"doc\": \"Runs a nested sub-workflow that counts lines in the input file.\",\n  \"requirements\": [\n    {\n      \"class\": \"SubworkflowFeatureRequirement\"\n    }\n  ],\n  \"inputs\": {\n    \"file1\": \"File\"\n  },\n  \"outputs\": {\n    \"count_output\": {\n      \"type\": \"int\",\n      \"outputSource\": \"step1/count_output\"\n    }\n  },\n  \"steps\": {\n    \"step1\": {\n      \"run\": \"count-lines1-wf.cwl\",\n      \"in\": {\n        \"file1\": \"file1\"\n      },\n      \"out\": [\n        \"count_output\"\n      ]\n    }\n  }\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLWorkflow/example_1_1.jsonld",
+          "sizeBytes": 695,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflow/context.jsonld\",\n  \"cwlVersion\": \"v1.2\",\n  \"class\": \"Workflow\",\n  \"label\": \"Count lines via a nested sub-workflow\",\n  \"doc\": \"Runs a nested sub-workflow that counts lines in the input file.\",\n  \"requirements\": [\n    {\n      \"class\": \"SubworkflowFeatureRequirement\"\n    }\n  ],\n  \"inputs\": {\n    \"file1\": \"File\"\n  },\n  \"outputs\": {\n    \"count_output\": {\n      \"type\": \"int\",\n      \"outputSource\": \"step1/count_output\"\n    }\n  },\n  \"steps\": {\n    \"step1\": {\n      \"run\": \"count-lines1-wf.cwl\",\n      \"in\": {\n        \"file1\": \"file1\"\n      },\n      \"out\": [\n        \"count_output\"\n      ]\n    }\n  }\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLWorkflow/example_1_1.ttl",
+          "sizeBytes": 801,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#Workflow/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://example.org/step1> cwl:in \"file1\" ;\n    cwl:out <https://example.org/count_output> ;\n    cwl:run <https://example.org/count-lines1-wf.cwl> .\n\n<https://example.org/count_output> sld:type xsd:int .\n\n[] a cwl:Workflow ;\n    rdfs:label \"Count lines via a nested sub-workflow\" ;\n    rdfs:comment \"Runs a nested sub-workflow that counts lines in the input file.\" ;\n    ns1:steps <https://example.org/step1> ;\n    cwl:inputs \"File\" ;\n    cwl:outputs <https://example.org/count_output> ;\n    cwl:requirements [ a cwl:SubworkflowFeatureRequirement ] .\n\n"
+        }
+      ]
+    }
+  ],
   "annotatedSchema": "allOf:\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLVersion/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLMetadata/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowClass/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowBase/schema.yaml\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLWorkflow"

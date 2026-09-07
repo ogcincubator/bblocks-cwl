@@ -1,0 +1,6 @@
+{
+  "type": "Directory[]",
+  "outputBinding": {
+    "glob": "outdir/*"
+  }
+}

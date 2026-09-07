@@ -1,0 +1,10 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLRequirements/context.jsonld",
+  "DockerRequirement": {
+    "dockerPull": "docker.io/debian:stable-slim"
+  },
+  "ResourceRequirement": {
+    "coresMin": 1.25,
+    "coresMax": 1.75
+  }
+}

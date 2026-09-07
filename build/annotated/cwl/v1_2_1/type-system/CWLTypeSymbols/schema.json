@@ -1,0 +1,8 @@
+{
+  "items": {
+    "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeSymbolValues/schema.json"
+  },
+  "summary": "Allowed values composing the enum.",
+  "title": "CWLTypeSymbols",
+  "type": "array"
+}

@@ -1,0 +1,7 @@
+{
+  "count_output": {
+    "type": "int",
+    "outputSource": "step2/output"
+  },
+  "classification": "string"
+}

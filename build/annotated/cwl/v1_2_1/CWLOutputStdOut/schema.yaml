@@ -1,8 +1,31 @@
+description: 'Indicates that the data pushed to the standard output stream by the
+  command will be redirected
+
+  to this CWL output.
+
+
+  Can be defined for only one output. If combined with ''stdout'' at the root of the
+  CWL document,
+
+  that definition will indicate the desired name of the output file where the output
+  stream will
+
+  be written to. A random name will be applied for the file of this output unless
+  otherwise
+
+  specified.
+
+  '
 oneOf:
-- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputStdOutDefinition/schema.yaml
+- enum:
+  - stdout
+  type: string
 - properties:
     type:
-      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputStdOutDefinition/schema.yaml
+      enum:
+      - stdout
+      type: string
   required:
   - type
   type: object
+title: CWLOutputStdOut

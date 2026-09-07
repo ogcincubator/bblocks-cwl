@@ -1,0 +1,4 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://example.org/count_output> dcterms:identifier "count_output" .
+

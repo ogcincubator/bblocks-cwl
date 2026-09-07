@@ -1,0 +1,10 @@
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<https://example.org/step1> cwl:in "inp1",
+        "inp2" ;
+    cwl:out <https://example.org/echo_out> ;
+    cwl:run <https://example.org/#echo> ;
+    cwl:scatter ( <https://example.org/echo_in1> <https://example.org/echo_in2> ) ;
+    cwl:scatterMethod <https://example.org/dotproduct> .
+

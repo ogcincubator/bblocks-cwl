@@ -1,0 +1,88 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.requirements.InlineJavascriptRequirement",
+  "name": "InlineJavascriptRequirement",
+  "itemClass": "schema",
+  "abstract": "Indicates that the workflow platform must support inline Javascript expressions.\n\nIf this requirement is not present, the workflow platform must not perform expression interpolation\n(see also: https://www.commonwl.org/v1.2/CommandLineTool.html#InlineJavascriptRequirement).\n",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.685446",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.CWLOntology"
+  ],
+  "shaclShapes": {},
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InlineJavascriptRequirement/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InlineJavascriptRequirement/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InlineJavascriptRequirement/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/InlineJavascriptRequirement/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/InlineJavascriptRequirement/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InlineJavascriptRequirement/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/InlineJavascriptRequirement/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/requirements/InlineJavascriptRequirement/",
+  "description": "Indicates that the workflow platform must support inline Javascript expressions. If this requirement\nis not present, the workflow platform must not perform expression interpolation\n(see [CWLExpression](bblocks://ogc.cwl.v1_2_1.CWLExpression)).\n\n## `expressionLib`\n\nThe `expressionLib` field lists additional code fragments that are inserted before executing any\nexpression code, allowing function definitions that may then be called from CWL expressions. Each\nentry is either a literal string of Javascript source, or an object with a single `$include` field\nnaming an external file to be inlined verbatim.\n\nSee also: the\n[CWL v1.2 CommandLineTool spec \u2014 InlineJavascriptRequirement](https://www.commonwl.org/v1.2/CommandLineTool.html#InlineJavascriptRequirement).\n",
+  "examples": [
+    {
+      "title": "Expression library defined inline",
+      "base-uri": "https://example.org/",
+      "content": "An `InlineJavascriptRequirement` that supplies a single Javascript function definition as a\nliteral string in `expressionLib`, making it callable from later CWL expressions\n(adapted from the CWL conformance test `js-expr-req-wf.cwl`).\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/InlineJavascriptRequirement/example_1_1.json",
+          "sizeBytes": 106,
+          "code": "{\n  \"class\": \"InlineJavascriptRequirement\",\n  \"expressionLib\": [\n    \"function foo() { return 2; }\"\n  ]\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/InlineJavascriptRequirement/example_1_1.jsonld",
+          "sizeBytes": 248,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InlineJavascriptRequirement/context.jsonld\",\n  \"class\": \"InlineJavascriptRequirement\",\n  \"expressionLib\": [\n    \"function foo() { return 2; }\"\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/InlineJavascriptRequirement/example_1_1.ttl",
+          "sizeBytes": 185,
+          "code": "@prefix ns1: <https://w3id.org/cwl/cwl#InlineJavascriptRequirement/> .\n\n[] a <https://example.org/InlineJavascriptRequirement> ;\n    ns1:expressionLib \"function foo() { return 2; }\" .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Expression library combining an included file and an inline fragment",
+      "base-uri": "https://example.org/",
+      "content": "An `InlineJavascriptRequirement` whose `expressionLib` mixes an external Javascript file,\nreferenced via `$include`, with an inline function definition that depends on it\n(adapted from the CWL conformance test `template-tool.cwl`).\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/InlineJavascriptRequirement/example_2_1.json",
+          "sizeBytes": 201,
+          "code": "{\n  \"class\": \"InlineJavascriptRequirement\",\n  \"expressionLib\": [\n    { \"$include\": \"underscore.js\" },\n    \"var t = function(s) { return _.template(s, {variable: 'data'})({'inputs': inputs}); };\"\n  ]\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/InlineJavascriptRequirement/example_2_1.jsonld",
+          "sizeBytes": 353,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InlineJavascriptRequirement/context.jsonld\",\n  \"class\": \"InlineJavascriptRequirement\",\n  \"expressionLib\": [\n    {\n      \"$include\": \"underscore.js\"\n    },\n    \"var t = function(s) { return _.template(s, {variable: 'data'})({'inputs': inputs}); };\"\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/InlineJavascriptRequirement/example_2_1.ttl",
+          "sizeBytes": 256,
+          "code": "@prefix ns1: <https://w3id.org/cwl/cwl#InlineJavascriptRequirement/> .\n\n[] a <https://example.org/InlineJavascriptRequirement> ;\n    ns1:expressionLib [ ],\n        \"var t = function(s) { return _.template(s, {variable: 'data'})({'inputs': inputs}); };\" .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "additionalProperties: false\ndescription: 'Indicates that the workflow platform must support inline Javascript\n  expressions.\n\n\n  If this requirement is not present, the workflow platform must not perform expression\n  interpolation\n\n  (see also: https://www.commonwl.org/v1.2/CommandLineTool.html#InlineJavascriptRequirement).\n\n  '\nproperties:\n  class:\n    enum:\n    - InlineJavascriptRequirement\n    type: string\n    x-jsonld-id: '@type'\n  expressionLib:\n    description: 'Additional code fragments that will also be inserted before executing\n      the expression code.\n\n      Allows for function definitions that may be called from CWL expressions.\n\n      '\n    items:\n      oneOf:\n      - type: string\n      - additionalProperties: false\n        properties:\n          $include:\n            type: string\n        required:\n        - $include\n        type: object\n      title: exp_lib\n    title: InlineJavascriptLibraries\n    type: array\n    x-jsonld-id: https://w3id.org/cwl/cwl#InlineJavascriptRequirement/expressionLib\nrequired:\n- expressionLib\ntitle: InlineJavascriptRequirement\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/requirements/InlineJavascriptRequirement"
+}

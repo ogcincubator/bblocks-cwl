@@ -4,20 +4,21 @@
   "itemIdentifier": "ogc.cwl.v1_2_1.CWLDirectoryOnlyParameters",
   "name": "CWLDirectoryOnlyParameters",
   "itemClass": "schema",
-  "abstract": "CWLDirectoryOnlyParameters",
+  "abstract": "Parameters that only apply to Directory-typed (or\nDirectory-array-typed) inputs/outputs: `loadListing`, controlling whether/how deeply the directory's\ncontents are enumerated for use in expressions.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.714311",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
   "tags": [
     "cwl"
   ],
-  "shaclShapes": {},
   "dependsOn": [
+    "ogc.cwl.v1_2_1.CWLOntology",
     "ogc.cwl.v1_2_1.LoadListingEnum"
   ],
+  "shaclShapes": {},
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDirectoryOnlyParameters/context.jsonld",
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDirectoryOnlyParameters/schema.yaml",
@@ -25,9 +26,63 @@
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDirectoryOnlyParameters/schema.yaml",
   "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDirectoryOnlyParameters/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDirectoryOnlyParameters/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDirectoryOnlyParameters/",
-  "rdfData": [],
   "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLDirectoryOnlyParameters/",
+  "description": "`loadListing` is only meaningful for an input/output whose `type` (or array `items`) resolves to\n`Directory`: it controls whether, and how deeply, the runtime populates the `listing` field of the\ncorresponding `Directory` object for use by expressions. It has no effect on `File`-typed parameters \u2014\nsee [CWLFileOnlyParameters](bblocks://ogc.cwl.v1_2_1.CWLFileOnlyParameters) for the parameters that\napply there instead.\n\nThe allowed values are defined by [LoadListingEnum](bblocks://ogc.cwl.v1_2_1.LoadListingEnum):\n`no_listing`, `shallow_listing`, or `deep_listing`.\n\nIf `loadListing` is not set on a given parameter, the effective value is resolved in this order of\nprecedence:\n\n1. `loadListing` on the individual parameter itself;\n2. otherwise, the value inherited from a\n   [LoadListingRequirement](bblocks://ogc.cwl.v1_2_1.requirements.LoadListingRequirement) in effect for the step;\n3. otherwise, `no_listing` by default.\n\nThis block only declares the `loadListing` property itself; the conditional logic that restricts its\nuse to `Directory`-typed parameters lives in\n[type-system/CWLTypeRecordFieldDef](bblocks://ogc.cwl.v1_2_1.type-system.CWLTypeRecordFieldDef).\n",
+  "examples": [
+    {
+      "title": "Directory input requesting a shallow listing",
+      "base-uri": "https://example.org/",
+      "content": "A `CommandLineTool` input parameter of type `Directory` that requests a shallow\n(top-level only) directory listing, adapted from the CWL conformance test\n`listing_shallow2.cwl`.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDirectoryOnlyParameters/example_1_1.json",
+          "sizeBytes": 62,
+          "code": "{\n  \"type\": \"Directory\",\n  \"loadListing\": \"shallow_listing\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDirectoryOnlyParameters/example_1_1.jsonld",
+          "sizeBytes": 190,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDirectoryOnlyParameters/context.jsonld\",\n  \"type\": \"Directory\",\n  \"loadListing\": \"shallow_listing\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDirectoryOnlyParameters/example_1_1.ttl",
+          "sizeBytes": 84,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n\n[] cwl:loadListing \"shallow_listing\" .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Directory input requesting a deep listing",
+      "base-uri": "https://example.org/",
+      "content": "A `Directory`-typed input parameter that requests a full recursive listing,\nadapted from the CWL conformance test `listing_deep2.cwl`.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDirectoryOnlyParameters/example_2_1.json",
+          "sizeBytes": 59,
+          "code": "{\n  \"type\": \"Directory\",\n  \"loadListing\": \"deep_listing\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDirectoryOnlyParameters/example_2_1.jsonld",
+          "sizeBytes": 187,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDirectoryOnlyParameters/context.jsonld\",\n  \"type\": \"Directory\",\n  \"loadListing\": \"deep_listing\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDirectoryOnlyParameters/example_2_1.ttl",
+          "sizeBytes": 81,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n\n[] cwl:loadListing \"deep_listing\" .\n\n"
+        }
+      ]
+    }
+  ],
   "annotatedSchema": "properties:\n  loadListing:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/LoadListingEnum/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#loadListing\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLDirectoryOnlyParameters"

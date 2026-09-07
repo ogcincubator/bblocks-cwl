@@ -1,0 +1,4 @@
+{
+  "class": "acme:GPUAcceleration",
+  "gpuCount": 1
+}

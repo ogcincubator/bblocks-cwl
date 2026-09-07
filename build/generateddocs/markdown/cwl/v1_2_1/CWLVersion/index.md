@@ -3,15 +3,42 @@
 
 `ogc.cwl.v1_2_1.CWLVersion` *v1.2.1*
 
-CWLVersion
+The `cwlVersion` field: declares which published version of the CWL
+standard a document conforms to. Required once at the root of every CWL document.
 
 [*Status*](http://www.opengis.net/def/status): Under development
+
+## Examples
+
+### CWL v1.2 document
+The `cwlVersion` field as it appears at the root of a CWL v1.2 document, adapted from the CWL
+conformance test `count-lines7-wf.cwl`.
+
+#### json
+```json
+{
+  "cwlVersion": "v1.2"
+}
+
+```
+
+
+### CWL v1.0 document
+A document declaring conformance to an earlier published CWL standard version.
+
+#### json
+```json
+{
+  "cwlVersion": "v1.0"
+}
+
+```
 
 ## Schema
 
 ```yaml
 properties:
-  clwVersion:
+  cwlVersion:
     description: CWL version of the described application package.
     pattern: ^v\d+(\.\d+(\.\d+)*)*$
     title: cwlVersion

@@ -1,0 +1,4 @@
+path	@id	schema
+/linkMerge	https://w3id.org/cwl/cwl#linkMerge	/github/workspace/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepInputBase/schema.yaml
+/source	https://w3id.org/cwl/cwl#source	/github/workspace/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepInputBase/schema.yaml
+/valueFrom	https://w3id.org/cwl/cwl#valueFrom	/github/workspace/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepInputBase/schema.yaml

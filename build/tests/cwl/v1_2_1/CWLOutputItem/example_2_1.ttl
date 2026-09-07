@@ -1,0 +1,4 @@
+@prefix sld: <https://w3id.org/cwl/salad#> .
+
+<https://example.org/result> sld:type <https://example.org/stdout> .
+

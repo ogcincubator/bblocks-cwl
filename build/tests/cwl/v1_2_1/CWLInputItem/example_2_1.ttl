@@ -1,0 +1,7 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sld: <https://w3id.org/cwl/salad#> .
+
+<https://example.org/message> rdfs:comment "Message to print" ;
+    sld:default "hello world" ;
+    sld:type <https://example.org/string> .
+

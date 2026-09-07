@@ -1,0 +1,8 @@
+{
+  "type": "record",
+  "name": "irec",
+  "fields": {
+    "ifoo": "File",
+    "ibar": "File"
+  }
+}

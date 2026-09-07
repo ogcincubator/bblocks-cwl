@@ -7,7 +7,7 @@
   "abstract": "One or more input identifier of an application step within a Workflow\nwere an array-based input to that Workflow should be scattered across multiple\ninstances of the step application.\n",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.677961",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -24,8 +24,37 @@
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLScatter/schema.yaml",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLScatter/",
-  "rdfData": [],
   "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLScatter/",
+  "description": "To use scatter/gather, [ScatterFeatureRequirement](bblocks://ogc.cwl.v1_2_1.requirements.ScatterFeatureRequirement)\nmust be specified in the workflow or workflow step requirements.\n\nA \"scatter\" operation specifies that the associated workflow step or subworkflow should execute\nseparately over a list of input elements. Each job making up a scatter operation is independent and\nmay be executed concurrently.\n\nThe `scatter` field specifies one or more input parameters which will be scattered. An input\nparameter may be listed more than once. The declared type of each input parameter implicitly\nbecomes an array of items of the input parameter type. If a parameter is listed more than once, it\nbecomes a nested array. As a result, upstream parameters which are connected to scattered parameters\nmust be arrays.\n\nAll output parameter types are also implicitly wrapped in arrays. Each job in the scatter results in\nan entry in the output array.\n\nIf any scattered parameter's runtime value is an empty array, all outputs are set to empty arrays and\nno work is done for the step, according to applicable scattering rules.\n\nIf `scatter` declares more than one input parameter, [CWLScatterMethod](bblocks://ogc.cwl.v1_2_1.CWLScatterMethod)\ndescribes how to decompose the input into a discrete set of jobs.\n",
+  "examples": [
+    {
+      "title": "Scattering over a single input",
+      "base-uri": "https://example.org/",
+      "content": "A workflow step scatters over a single input parameter, running one job per\nelement of `file1`.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLScatter/example_1_1.json",
+          "sizeBytes": 8,
+          "code": "\"file1\"\n"
+        }
+      ]
+    },
+    {
+      "title": "Scattering over multiple inputs",
+      "base-uri": "https://example.org/",
+      "content": "A workflow step scatters over two input parameters at once. Combined with a\n[CWLScatterMethod](bblocks://ogc.cwl.v1_2_1.CWLScatterMethod) of `dotproduct`, the two\narrays are aligned and one job is created per pair of elements.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLScatter/example_2_1.json",
+          "sizeBytes": 25,
+          "code": "[\"echo_in1\", \"echo_in2\"]\n"
+        }
+      ]
+    }
+  ],
   "annotatedSchema": "description: 'One or more input identifier of an application step within a Workflow\n\n  were an array-based input to that Workflow should be scattered across multiple\n\n  instances of the step application.\n\n  '\noneOf:\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLIdentifier/schema.yaml\n- items:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLIdentifier/schema.yaml\n  title: CWLScatterMulti\n  type: array\ntitle: CWLScatter\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLScatter"

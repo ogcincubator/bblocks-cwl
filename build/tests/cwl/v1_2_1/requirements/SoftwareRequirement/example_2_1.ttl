@@ -1,0 +1,10 @@
+@prefix ns1: <https://w3id.org/cwl/cwl#SoftwarePackage/> .
+@prefix ns2: <https://w3id.org/cwl/cwl#SoftwareRequirement/> .
+
+<https://example.org/screed> ns1:package "screed" ;
+    ns1:version "1.0" .
+
+[] a <https://example.org/SoftwareRequirement> ;
+    ns2:packages <https://example.org/screed>,
+        "https://doi.org/10.21105/joss.00027" .
+

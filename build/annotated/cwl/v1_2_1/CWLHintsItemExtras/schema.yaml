@@ -1,5 +1,0 @@
-oneOf:
-- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/BuiltinRequirement/schema.yaml
-- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/OGCAPIRequirement/schema.yaml
-- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/WPS1Requirement/schema.yaml
-- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/UnknownRequirement/schema.yaml

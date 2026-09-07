@@ -1,0 +1,65 @@
+{
+  "$defs": {
+    "CWLTypeRecordFieldsMap": {
+      "additionalProperties": {
+        "oneOf": [
+          {
+            "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.json"
+          },
+          {
+            "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.json"
+          }
+        ]
+      },
+      "type": "object"
+    },
+    "CWLTypeRecordFieldsList": {
+      "items": {
+        "allOf": [
+          {
+            "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.json"
+          },
+          {
+            "required": [
+              "name"
+            ]
+          }
+        ]
+      },
+      "type": "array"
+    }
+  },
+  "properties": {
+    "fields": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/CWLTypeRecordFieldsMap"
+        },
+        {
+          "$ref": "#/$defs/CWLTypeRecordFieldsList"
+        }
+      ],
+      "x-jsonld-id": "https://w3id.org/cwl/salad#fields",
+      "x-jsonld-container": "@id"
+    },
+    "name": {
+      "type": "string",
+      "x-jsonld-id": "@id"
+    },
+    "type": {
+      "enum": [
+        "record"
+      ],
+      "type": "string",
+      "x-jsonld-id": "https://w3id.org/cwl/salad#type",
+      "x-jsonld-type": "@vocab"
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "type": "object",
+  "x-jsonld-prefixes": {
+    "sld": "https://w3id.org/cwl/salad#"
+  }
+}

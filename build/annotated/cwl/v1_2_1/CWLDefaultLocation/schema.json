@@ -22,17 +22,21 @@
         "File",
         "Directory"
       ],
-      "type": "string"
+      "type": "string",
+      "x-jsonld-id": "@type"
     },
     "location": {
-      "type": "string"
+      "type": "string",
+      "x-jsonld-id": "@id"
     },
     "nameroot": {
       "type": "string",
       "x-jsonld-id": "https://w3id.org/cwl/cwl#File/nameroot"
     },
     "path": {
-      "type": "string"
+      "type": "string",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#path",
+      "x-jsonld-type": "@id"
     }
   },
   "required": [

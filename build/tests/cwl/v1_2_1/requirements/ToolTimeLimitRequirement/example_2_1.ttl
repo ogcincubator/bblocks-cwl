@@ -1,0 +1,5 @@
+@prefix ns1: <https://w3id.org/cwl/cwl#ToolTimeLimit/> .
+
+[] a <https://example.org/ToolTimeLimit> ;
+    ns1:timelimit "$(1 + 2)" .
+

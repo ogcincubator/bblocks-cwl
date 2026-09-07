@@ -1,0 +1,90 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.type-system.CWLTypeRecordSchema",
+  "name": "CWLTypeRecordSchema",
+  "itemClass": "schema",
+  "abstract": "An inline CWL `record` type definition: `type:\nrecord`, an optional `name`, and its `fields`, given either as a map keyed by field name or as a\nlist of field definitions (each of which must then carry its own `name`).",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.693426",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.SchemaSaladOntology",
+    "ogc.cwl.v1_2_1.type-system.CWLTypeRecordFieldDef",
+    "ogc.cwl.v1_2_1.CWLType"
+  ],
+  "shaclShapes": {},
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordSchema/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordSchema/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordSchema/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/type-system/CWLTypeRecordSchema/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/type-system/CWLTypeRecordSchema/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordSchema/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/type-system/CWLTypeRecordSchema/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordSchema/",
+  "description": "A CWL `record` is schema-salad's structured type: a set of named `fields`, each with its own\n`type`, that together describe a compound value (analogous to a `struct` or an object type).\nRecords may be declared inline wherever a [CWLType](bblocks://ogc.cwl.v1_2_1.CWLType) is expected \u2014\ne.g. as the `type` of a `CommandLineTool` input or output \u2014 or given a `name` and referenced from\nelsewhere by an IRI (see [type-system/CWLTypeRecordRef](bblocks://ogc.cwl.v1_2_1.type-system.CWLTypeRecordRef)).\n\nThe `fields` themselves \u2014 each a [type-system/CWLTypeRecordFieldDef](bblocks://ogc.cwl.v1_2_1.type-system.CWLTypeRecordFieldDef) \u2014\ncan be written in two equivalent forms:\n\n- **Map form**: an object whose keys are the field names and whose values are each field's type\n  (either a bare [CWLType](bblocks://ogc.cwl.v1_2_1.CWLType), or a full field definition when\n  additional parameters such as `format` or `secondaryFiles` are needed). The field's `name` is\n  implied by its key and must not be repeated inside the value.\n- **List form**: an array of field definitions, each of which must carry its own `name` property\n  since there is no map key to imply it.\n\nBoth forms are accepted anywhere a `record`'s `fields` are expected; this block's schema expresses\nthat as a `oneOf` between the two shapes.\n",
+  "examples": [
+    {
+      "title": "Record with fields given as a map",
+      "base-uri": "https://example.org/",
+      "content": "A `record` input type whose `fields` are written in map form: each key is a field name and\neach value is that field's `type`, adapted from CWL's `record-output.cwl` conformance test.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordSchema/example_1_1.json",
+          "sizeBytes": 99,
+          "code": "{\n  \"type\": \"record\",\n  \"name\": \"irec\",\n  \"fields\": {\n    \"ifoo\": \"File\",\n    \"ibar\": \"File\"\n  }\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordSchema/example_1_1.jsonld",
+          "sizeBytes": 232,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordSchema/context.jsonld\",\n  \"type\": \"record\",\n  \"name\": \"irec\",\n  \"fields\": {\n    \"ifoo\": \"File\",\n    \"ibar\": \"File\"\n  }\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordSchema/example_1_1.ttl",
+          "sizeBytes": 138,
+          "code": "@prefix sld: <https://w3id.org/cwl/salad#> .\n\n<https://example.org/irec> sld:fields \"File\" ;\n    sld:type <https://example.org/record> .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Record with fields given as a list",
+      "base-uri": "https://example.org/",
+      "content": "The same kind of `record` type, but with `fields` written in list form \u2014 here each field\ndefinition must carry its own `name`, since there is no map key to imply it.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordSchema/example_2_1.json",
+          "sizeBytes": 160,
+          "code": "{\n  \"type\": \"record\",\n  \"name\": \"a\",\n  \"fields\": [\n    {\n      \"name\": \"b\",\n      \"type\": \"int\"\n    },\n    {\n      \"name\": \"c\",\n      \"type\": \"int\"\n    }\n  ]\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordSchema/example_2_1.jsonld",
+          "sizeBytes": 293,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordSchema/context.jsonld\",\n  \"type\": \"record\",\n  \"name\": \"a\",\n  \"fields\": [\n    {\n      \"name\": \"b\",\n      \"type\": \"int\"\n    },\n    {\n      \"name\": \"c\",\n      \"type\": \"int\"\n    }\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordSchema/example_2_1.ttl",
+          "sizeBytes": 324,
+          "code": "@prefix sld: <https://w3id.org/cwl/salad#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://example.org/a> sld:fields <https://example.org/b>,\n        <https://example.org/c> ;\n    sld:type <https://example.org/record> .\n\n<https://example.org/b> sld:type xsd:int .\n\n<https://example.org/c> sld:type xsd:int .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$defs:\n  CWLTypeRecordFieldsMap:\n    additionalProperties:\n      oneOf:\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.yaml\n    type: object\n  CWLTypeRecordFieldsList:\n    items:\n      allOf:\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.yaml\n      - required:\n        - name\n    type: array\nproperties:\n  fields:\n    oneOf:\n    - $ref: '#/$defs/CWLTypeRecordFieldsMap'\n    - $ref: '#/$defs/CWLTypeRecordFieldsList'\n    x-jsonld-id: https://w3id.org/cwl/salad#fields\n    x-jsonld-container: '@id'\n  name:\n    type: string\n    x-jsonld-id: '@id'\n  type:\n    enum:\n    - record\n    type: string\n    x-jsonld-id: https://w3id.org/cwl/salad#type\n    x-jsonld-type: '@vocab'\nrequired:\n- type\ntype: object\nx-jsonld-prefixes:\n  sld: https://w3id.org/cwl/salad#\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/type-system/CWLTypeRecordSchema"
+}

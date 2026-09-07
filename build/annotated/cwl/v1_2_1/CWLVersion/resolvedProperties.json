@@ -1,0 +1,1 @@
+{"defs":{},"properties":[{"path":["cwlVersion"],"title":"cwlVersion","description":"CWL version of the described application package.","required":true,"schema_type":"string","sources":["bblocks://ogc.cwl.v1_2_1.CWLVersion"]}]}

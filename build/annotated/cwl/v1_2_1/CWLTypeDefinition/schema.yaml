@@ -53,3 +53,18 @@ enum:
 summary: CWL type string definition.
 title: CWL type string definition
 type: string
+x-jsonld-extra-terms:
+  'null': https://w3id.org/cwl/salad#null
+  boolean: http://www.w3.org/2001/XMLSchema#boolean
+  int: http://www.w3.org/2001/XMLSchema#int
+  integer: http://www.w3.org/2001/XMLSchema#int
+  long: http://www.w3.org/2001/XMLSchema#long
+  float: http://www.w3.org/2001/XMLSchema#float
+  double: http://www.w3.org/2001/XMLSchema#double
+  string: http://www.w3.org/2001/XMLSchema#string
+  File: https://w3id.org/cwl/cwl#File
+  Directory: https://w3id.org/cwl/cwl#Directory
+x-jsonld-prefixes:
+  sld: https://w3id.org/cwl/salad#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  cwl: https://w3id.org/cwl/cwl#

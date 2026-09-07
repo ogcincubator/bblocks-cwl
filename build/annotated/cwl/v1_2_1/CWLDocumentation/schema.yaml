@@ -5,6 +5,7 @@ properties:
     - items:
         type: string
       type: array
+    x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#comment
   label:
     type: string
     x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#label

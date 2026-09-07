@@ -1,0 +1,71 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepId",
+  "name": "CWLWorkflowStepId",
+  "itemClass": "schema",
+  "abstract": "The `id` field required on a Workflow step when `steps` is given\nas a list rather than a map: identifies the step within the workflow.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.704756",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.CWLIdentifier"
+  ],
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepId/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepId/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepId/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/workflow-step/CWLWorkflowStepId/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/workflow-step/CWLWorkflowStepId/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepId/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/workflow-step/CWLWorkflowStepId/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepId/",
+  "examples": [
+    {
+      "title": "Step identifier",
+      "base-uri": "https://example.org/",
+      "content": "The `id` field of a workflow step given in the list form of `steps`.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepId/example_1_1.json",
+          "sizeBytes": 20,
+          "code": "{\n  \"id\": \"step1\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepId/example_1_1.jsonld",
+          "sizeBytes": 182,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepId/context.jsonld\",\n  \"id\": \"step1\",\n  \"dct:identifier\": \"step1\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepId/example_1_1.ttl",
+          "sizeBytes": 106,
+          "code": "@prefix dcterms: <http://purl.org/dc/terms/> .\n\n<https://example.org/step1> dcterms:identifier \"step1\" .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "properties:\n  id:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLIdentifier/schema.yaml\n    x-jsonld-id: '@id'\nrequired:\n- id\ntype: object\nx-jsonld-prefixes:\n  dct: http://purl.org/dc/terms/\n",
+  "semanticUplift": {
+    "additionalSteps": [
+      {
+        "type": "jq",
+        "code": "walk(if type == \"object\" and has(\"id\") and (has(\"dct:identifier\")|not)\n     then . + {\"dct:identifier\": .id}\n     else . end)\n",
+        "stage": "pre"
+      }
+    ]
+  },
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/workflow-step/CWLWorkflowStepId"
+}

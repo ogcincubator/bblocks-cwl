@@ -18,6 +18,29 @@ listed in the order that the input arrays are listed in the scatter field.
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
+## Examples
+
+### Cartesian product over two scattered inputs
+A `WorkflowStep` scatters over two input arrays using `flat_crossproduct`, so a job is run
+for every combination of the two inputs, with the results flattened to a single-level array.
+
+#### json
+```json
+"flat_crossproduct"
+
+```
+
+
+### Aligned inputs (dotproduct)
+When scattered input arrays are already aligned element-by-element, `dotproduct` takes one
+element from each array per job instead of computing every combination.
+
+#### json
+```json
+"dotproduct"
+
+```
+
 ## Schema
 
 ```yaml

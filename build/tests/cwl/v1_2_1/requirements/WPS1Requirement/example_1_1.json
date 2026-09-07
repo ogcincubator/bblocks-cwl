@@ -1,0 +1,5 @@
+{
+  "class": "WPS1Requirement",
+  "provider": "https://example.org/wps",
+  "process": "FloodDetection"
+}

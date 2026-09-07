@@ -1,0 +1,5 @@
+@prefix sld: <https://w3id.org/cwl/salad#> .
+
+[] sld:default "z" ;
+    sld:type <https://example.org/string> .
+

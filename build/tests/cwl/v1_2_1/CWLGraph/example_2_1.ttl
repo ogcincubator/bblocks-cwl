@@ -1,0 +1,5 @@
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+
+<https://example.org/main> a cwl:ExpressionTool ;
+    cwl:outputs "Any" .
+

@@ -1,0 +1,60 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.type-system.IdentifierArray",
+  "name": "IdentifierArray",
+  "itemClass": "schema",
+  "abstract": "An array of one or more CWL identifiers, used e.g. when\n`scatter` lists more than one input parameter to fan a Workflow step out over.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.711343",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.CWLTextPatternID"
+  ],
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/IdentifierArray/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/IdentifierArray/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/type-system/IdentifierArray/schema.yaml",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/type-system/IdentifierArray/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/type-system/IdentifierArray/",
+  "examples": [
+    {
+      "title": "Scattering over two input parameters",
+      "base-uri": "https://example.org/",
+      "content": "A `scatter` value listing two Workflow step input parameter names, causing the step to fan out\nover both (combined per `scatterMethod`, e.g. `nested_crossproduct`).\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/IdentifierArray/example_1_1.json",
+          "sizeBytes": 25,
+          "code": "[\"echo_in1\", \"echo_in2\"]\n"
+        }
+      ]
+    },
+    {
+      "title": "Single-item identifier array",
+      "base-uri": "https://example.org/",
+      "content": "A `scatter` value with a single input parameter name. `IdentifierArray` requires at least one\nitem, so a single-element array is still valid (as opposed to using the bare\n`CWLTextPatternID` alternative for that case).\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/IdentifierArray/example_2_1.json",
+          "sizeBytes": 22,
+          "code": "[\"scattered_message\"]\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "items:\n  $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTextPatternID/schema.yaml\nminItems: 1\ntitle: IdentifierArray\ntype: array\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/type-system/IdentifierArray"
+}

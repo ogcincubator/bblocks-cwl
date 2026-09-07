@@ -1,0 +1,9 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLArguments/context.jsonld",
+  "@graph": [
+    {
+      "position": 2,
+      "valueFrom": "$(runtime.outdir)"
+    }
+  ]
+}

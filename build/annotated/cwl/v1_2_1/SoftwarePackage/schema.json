@@ -9,7 +9,9 @@
       "items": {
         "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ReferenceURL/schema.json"
       },
-      "type": "array"
+      "type": "array",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#SoftwarePackage/specs",
+      "x-jsonld-type": "@id"
     },
     "version": {
       "items": {

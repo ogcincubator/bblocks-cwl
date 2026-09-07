@@ -1,0 +1,4 @@
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+
+[] cwl:source <https://example.org/step_a/out> .
+

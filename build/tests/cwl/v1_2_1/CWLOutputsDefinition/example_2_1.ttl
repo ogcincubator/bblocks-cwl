@@ -1,0 +1,7 @@
+@prefix sld: <https://w3id.org/cwl/salad#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/classification> sld:type xsd:string .
+
+<https://example.org/count_output> sld:type xsd:int .
+

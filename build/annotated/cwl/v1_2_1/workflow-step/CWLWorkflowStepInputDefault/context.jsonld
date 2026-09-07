@@ -1,0 +1,21 @@
+{
+  "@context": {
+    "default": {
+      "@context": {
+        "basename": "cwl:basename",
+        "class": "@type",
+        "location": "@id",
+        "nameroot": "cwl:File/nameroot",
+        "path": {
+          "@id": "cwl:path",
+          "@type": "@id"
+        }
+      },
+      "@id": "sld:default",
+      "@container": "@list"
+    },
+    "cwl": "https://w3id.org/cwl/cwl#",
+    "sld": "https://w3id.org/cwl/salad#",
+    "@version": 1.1
+  }
+}

@@ -7,7 +7,7 @@
   "abstract": "An item quantity that can also represent a proportion of use by resources.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.706192",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -21,9 +21,37 @@
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/ResourceQuantityOrFractional/schema.yaml",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/ResourceQuantityOrFractional/",
-  "rdfData": [],
   "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/ResourceQuantityOrFractional/",
   "description": "Technically should be minimum=1, but fractional for scheduling algorithms are allowed.\nThere is no way to distinguish between float/long simultaneously in JSON schema (multi-match oneOf).\nTherefore, only validate that it is greater than zero.\n",
+  "examples": [
+    {
+      "title": "Whole number quantity",
+      "base-uri": "https://example.org/",
+      "content": "A plain integer quantity, e.g. as used for `ResourceRequirement`'s `ramMin` (in mebibytes).\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/ResourceQuantityOrFractional/example_1_1.json",
+          "sizeBytes": 4,
+          "code": "512\n"
+        }
+      ]
+    },
+    {
+      "title": "Fractional quantity",
+      "base-uri": "https://example.org/",
+      "content": "A fractional quantity, adapted from the CWL conformance test `cores_float.cwl`, where a\n`ResourceRequirement.coresMin` of `1.25` signals a scheduler that up to 3 jobs can share a\n4-core node (4 / 1.25 ~ 3).\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/ResourceQuantityOrFractional/example_2_1.json",
+          "sizeBytes": 5,
+          "code": "1.25\n"
+        }
+      ]
+    }
+  ],
   "annotatedSchema": "$comment: 'Technically should be minimum=1, but fractional for scheduling algorithms\n  are allowed.\n\n  There is no way to distinguish between float/long simultaneously in JSON schema\n  (multi-match oneOf).\n\n  Therefore, only validate that it is greater than zero.\n\n  '\ndefault: 1\ndescription: An item quantity that can also represent a proportion of use by resources.\nexclusiveMinimum: 0\ntype: number\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/ResourceQuantityOrFractional"

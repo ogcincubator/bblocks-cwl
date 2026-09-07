@@ -4,15 +4,18 @@
   "itemIdentifier": "ogc.cwl.v1_2_1.CWLDefaultLocation",
   "name": "CWLDefaultLocation",
   "itemClass": "schema",
-  "abstract": "CWLDefaultLocation",
+  "abstract": "The shape of a `default` value for a File- or Directory-typed\ninput: a literal File or Directory object, identified by a `path` or `location` and optionally\n`basename`/`nameroot`, used when no value is provided for the input at execution time.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.706716",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
   "tags": [
     "cwl"
+  ],
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.CWLOntology"
   ],
   "shaclShapes": {},
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultLocation/context.jsonld",
@@ -22,10 +25,64 @@
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDefaultLocation/schema.yaml",
   "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDefaultLocation/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultLocation/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDefaultLocation/",
-  "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "additionalProperties: false\noneOf:\n- required:\n  - path\n- required:\n  - location\nproperties:\n  basename:\n    type: string\n    x-jsonld-id: https://w3id.org/cwl/cwl#basename\n  class:\n    enum:\n    - File\n    - Directory\n    type: string\n  location:\n    type: string\n  nameroot:\n    type: string\n    x-jsonld-id: https://w3id.org/cwl/cwl#File/nameroot\n  path:\n    type: string\nrequired:\n- class\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLDefaultLocation/",
+  "description": "A CWL [`File`](https://www.commonwl.org/v1.2/Workflow.html#File) or\n[`Directory`](https://www.commonwl.org/v1.2/Workflow.html#Directory) object identifies the resource it\nrepresents through one of two mutually-non-exclusive but here XOR-constrained properties:\n\n- `location` \u2014 an IRI that uniquely identifies the file or directory. Implementations must support the\n  `file://` scheme and may support others (e.g. `http://`); a relative reference is resolved against the\n  IRI of the document it appears in.\n- `path` \u2014 a filesystem path available on the same host as the CWL runner (for inputs) or the runtime\n  environment of a tool execution (for outputs).\n\nThis block requires exactly one of the two (`oneOf: [{required: [path]}, {required: [location]}]`),\nalongside the mandatory `class` (`File` or `Directory`) and the optional `basename`/`nameroot`\nproperties, which name the file as staged on disk when it differs from the resource name.\n\nIt intentionally omits every other `File`/`Directory` field (`checksum`, `size`, `secondaryFiles`,\n`listing`, `contents`, \u2026) that only matter once a value is materialized at runtime \u2014 a `default` is a\nliteral value supplied at authoring time, not a description of a staged file, so those fields have no\nrole here.\n\nThis shape is reused across the register wherever a *literal* `File`/`Directory` default value is\nneeded: as a `default` value branch in [CWLDefault](bblocks://ogc.cwl.v1_2_1.CWLDefault), and as the\n`default` shape enforced for `File`/`Directory`-typed inputs by\n[CWLDefaultTypedConditional](bblocks://ogc.cwl.v1_2_1.CWLDefaultTypedConditional).\n",
+  "examples": [
+    {
+      "title": "File identified by location",
+      "base-uri": "https://example.org/",
+      "content": "A literal File object identified by a `location` IRI, adapted from\n[`bwa-mem-tool.cwl`](https://github.com/common-workflow-language/cwl-v1.2/blob/main/tests/bwa-mem-tool.cwl).\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDefaultLocation/example_1_1.json",
+          "sizeBytes": 47,
+          "code": "{\n  \"class\": \"File\",\n  \"location\": \"args.py\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDefaultLocation/example_1_1.jsonld",
+          "sizeBytes": 167,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultLocation/context.jsonld\",\n  \"class\": \"File\",\n  \"location\": \"args.py\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDefaultLocation/example_1_1.ttl",
+          "sizeBytes": 63,
+          "code": "\n<https://example.org/args.py> a <https://example.org/File> .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "File identified by path",
+      "base-uri": "https://example.org/",
+      "content": "A literal File object identified by a filesystem `path`, adapted from\n[`dynresreq-workflow-inputdefault.cwl`](https://github.com/common-workflow-language/cwl-v1.2/blob/main/tests/dynresreq-workflow-inputdefault.cwl).\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDefaultLocation/example_2_1.json",
+          "sizeBytes": 48,
+          "code": "{\n  \"class\": \"File\",\n  \"path\": \"special_file\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDefaultLocation/example_2_1.jsonld",
+          "sizeBytes": 168,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultLocation/context.jsonld\",\n  \"class\": \"File\",\n  \"path\": \"special_file\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDefaultLocation/example_2_1.ttl",
+          "sizeBytes": 129,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n\n[] a <https://example.org/File> ;\n    cwl:path <https://example.org/special_file> .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "additionalProperties: false\noneOf:\n- required:\n  - path\n- required:\n  - location\nproperties:\n  basename:\n    type: string\n    x-jsonld-id: https://w3id.org/cwl/cwl#basename\n  class:\n    enum:\n    - File\n    - Directory\n    type: string\n    x-jsonld-id: '@type'\n  location:\n    type: string\n    x-jsonld-id: '@id'\n  nameroot:\n    type: string\n    x-jsonld-id: https://w3id.org/cwl/cwl#File/nameroot\n  path:\n    type: string\n    x-jsonld-id: https://w3id.org/cwl/cwl#path\n    x-jsonld-type: '@id'\nrequired:\n- class\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLDefaultLocation"
 }

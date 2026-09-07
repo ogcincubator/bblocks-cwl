@@ -4,10 +4,13 @@
   "itemIdentifier": "ogc.cwl.v1_2_1.ReferenceURL",
   "name": "ReferenceURL",
   "itemClass": "schema",
-  "abstract": "ReferenceURL",
+  "abstract": "A web-resolvable reference URL (http(s) or ftp) pointing to\ndocumentation, a package repository, or similar external resource associated with a requirement or\nsoftware package.",
+  "isProfileOf": [
+    "ogc.ogc-utils.iri-or-curie"
+  ],
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.705091",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -15,15 +18,47 @@
     "cwl"
   ],
   "shaclShapes": {},
+  "dependsOn": [
+    "ogc.ogc-utils.iri-or-curie"
+  ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ReferenceURL/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ReferenceURL/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/ReferenceURL/schema.yaml",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/ReferenceURL/",
-  "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "format: url\npattern: ^((?:http|ftp)s?:\\/\\/)?(?!.*\\/\\/.*$)(?:(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\\.)+(?:[A-Za-z]{2,6}\\.?|[A-Za-z0-9-]{2,}\\.?)|localhost|\\[[a-f0-9:]+\\]|\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})(?::\\d+)?(?:\\/?|[/?]\\S+)$\ntype: string\n",
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/ReferenceURL/",
+  "description": "This block profiles the generic [`ogc.ogc-utils.iri-or-curie`](bblocks://ogc.ogc-utils.iri-or-curie)\nblock, adding the `format`/`pattern` constraints from the upstream CWL schema that narrow an\notherwise-generic IRI/CURIE string down to something that actually looks like a resolvable web\naddress: an optional `http`, `https`, or `ftp`(`s`) scheme followed by a host (domain name,\n`localhost`, IPv4, or bracketed IPv6 literal), an optional port, and an optional path/query.\n\nIt is used wherever the upstream CWL schema points to external resources rather than in-document\nidentifiers \u2014 for example the `specs` array of [SoftwarePackage](bblocks://ogc.cwl.v1_2_1.SoftwarePackage),\nwhich lists URLs identifying a piece of software in package repositories such as\n[Anaconda.org](https://anaconda.org) or [Debian packages](https://packages.debian.org).\n",
+  "examples": [
+    {
+      "title": "Package repository URL",
+      "base-uri": "https://example.org/",
+      "content": "A URL pointing to a software package's entry in a package repository, as used in the `specs`\narray of [SoftwarePackage](bblocks://ogc.cwl.v1_2_1.SoftwarePackage).\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/ReferenceURL/example_1_1.json",
+          "sizeBytes": 41,
+          "code": "\"https://anaconda.org/bioconda/samtools\"\n"
+        }
+      ]
+    },
+    {
+      "title": "Documentation URL",
+      "base-uri": "https://example.org/",
+      "content": "A URL pointing to external documentation associated with a requirement.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/ReferenceURL/example_2_1.json",
+          "sizeBytes": 46,
+          "code": "\"https://www.commonwl.org/v1.2/Workflow.html\"\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "allOf:\n- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml\n- format: url\n  pattern: ^((?:http|ftp)s?:\\/\\/)?(?!.*\\/\\/.*$)(?:(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\\.)+(?:[A-Za-z]{2,6}\\.?|[A-Za-z0-9-]{2,}\\.?)|localhost|\\[[a-f0-9:]+\\]|\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3})(?::\\d+)?(?:\\/?|[/?]\\S+)$\n  type: string\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/ReferenceURL"
 }

@@ -1,0 +1,23 @@
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+@prefix ns1: <https://w3id.org/cwl/cwl#CommandOutputBinding/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sld: <https://w3id.org/cwl/salad#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/echo> a cwl:CommandLineTool ;
+    cwl:arguments ( "-n" "foo" ) ;
+    cwl:baseCommand ( "echo" ) ;
+    cwl:inputs <https://example.org/echo_in1>,
+        <https://example.org/echo_in2> ;
+    cwl:outputs <https://example.org/echo_out> ;
+    cwl:stdout "step1_out" .
+
+<https://example.org/echo_in1> cwl:inputBinding [ ] ;
+    sld:type xsd:string .
+
+<https://example.org/echo_in2> cwl:inputBinding [ ] ;
+    sld:type xsd:string .
+
+<https://example.org/echo_out> cwl:outputBinding [ ns1:glob "step1_out" ] ;
+    sld:type xsd:string .
+

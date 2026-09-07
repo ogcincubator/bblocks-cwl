@@ -1,0 +1,27 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLProcessFields/context.jsonld",
+  "baseCommand": [
+    "echo",
+    "first"
+  ],
+  "arguments": [
+    "-n",
+    "foo"
+  ],
+  "inputs": {
+    "in": {
+      "type": "Any"
+    }
+  },
+  "outputs": {
+    "out": {
+      "type": "string",
+      "outputBinding": {
+        "glob": "out.txt",
+        "loadContents": true,
+        "outputEval": "$(self[0].contents)"
+      }
+    }
+  },
+  "stdout": "out.txt"
+}

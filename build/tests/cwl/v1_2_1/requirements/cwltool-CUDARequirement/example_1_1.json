@@ -1,0 +1,10 @@
+{
+  "class": "cwltool:CUDARequirement",
+  "cudaVersionMin": "1.0",
+  "cudaComputeCapability": [
+    "1.0",
+    "2.0",
+    "3.0"
+  ],
+  "cudaDeviceCountMin": 2
+}

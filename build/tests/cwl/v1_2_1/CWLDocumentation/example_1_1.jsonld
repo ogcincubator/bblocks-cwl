@@ -1,0 +1,5 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/context.jsonld",
+  "label": "cat3-nodocker.cwl",
+  "doc": "Print the contents of a file to stdout using 'cat'."
+}

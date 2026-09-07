@@ -1,0 +1,6 @@
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+
+[] cwl:in "file1" ;
+    cwl:out <https://example.org/output> ;
+    cwl:run <https://example.org/wc-tool.cwl> .
+

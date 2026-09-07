@@ -1,0 +1,63 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.requirements.BuiltinRequirement",
+  "name": "BuiltinRequirement",
+  "itemClass": "schema",
+  "abstract": "Hint indicating that the Application Package corresponds to a\nbuiltin process of this instance. (note: can only be an 'hint'\nas it is unofficial CWL specification).\n",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.697405",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.CWLTextPatternID"
+  ],
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/BuiltinRequirement/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/BuiltinRequirement/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/BuiltinRequirement/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/BuiltinRequirement/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/BuiltinRequirement/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/BuiltinRequirement/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/BuiltinRequirement/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/requirements/BuiltinRequirement/",
+  "description": "This is an OGC-specific extension hint, not part of the core CWL v1.2 specification. It marks a\nworkflow step's Application Package as corresponding to a process the executing instance already\nimplements natively \u2014 a \"builtin\" \u2014 rather than one that must be run from a container image\n(see [DockerRequirement](bblocks://ogc.cwl.v1_2_1.requirements.DockerRequirement)) or delegated to a remote\nexecution backend. Because this is unofficial, `class: BuiltinRequirement` may only be used under\n`hints`, never under `requirements` \u2014 a correct engine unaware of it must reject an unrecognized\nclass under `requirements` as fatal, but may safely ignore it under `hints` \u2014 see\n[CWLHints](bblocks://ogc.cwl.v1_2_1.requirements.CWLHints).\n\n`BuiltinRequirement` is one of three such OGC-specific hints an instance can use to say how a step's\nApplication Package should actually be executed, alongside\n[OGCAPIRequirement](bblocks://ogc.cwl.v1_2_1.requirements.OGCAPIRequirement) (delegate to a remote OGC API -\nProcesses offering) and [WPS1Requirement](bblocks://ogc.cwl.v1_2_1.requirements.WPS1Requirement) (delegate to a\nremote WPS-1 provider process). Unlike those two, `BuiltinRequirement` names a process already known\nto the local instance rather than a remote one, so its `process` property is a plain identifier\n(`CWLTextPatternID`) rather than a `ReferenceURL` to an external endpoint.\n",
+  "examples": [
+    {
+      "title": "Builtin process hint for a natively-implemented step",
+      "base-uri": "https://example.org/",
+      "content": "A `BuiltinRequirement` hint indicating that a workflow step corresponds to a process\nalready implemented natively by this instance, identified by process ID, rather than\nrequiring a container image or delegation to a remote execution backend.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/BuiltinRequirement/example_1_1.json",
+          "sizeBytes": 76,
+          "code": "{\n  \"class\": \"BuiltinRequirement\",\n  \"process\": \"eoepca.processes.buffer\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/BuiltinRequirement/example_1_1.jsonld",
+          "sizeBytes": 209,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/BuiltinRequirement/context.jsonld\",\n  \"class\": \"BuiltinRequirement\",\n  \"process\": \"eoepca.processes.buffer\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/BuiltinRequirement/example_1_1.ttl",
+          "sizeBytes": 81,
+          "code": "@prefix ogccwl: <https://w3id.org/ogc/cwl/> .\n\n[] a ogccwl:BuiltinRequirement .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "additionalProperties: false\ndescription: 'Hint indicating that the Application Package corresponds to a\n\n  builtin process of this instance. (note: can only be an ''hint''\n\n  as it is unofficial CWL specification).\n\n  '\nproperties:\n  class:\n    enum:\n    - BuiltinRequirement\n    type: string\n    x-jsonld-id: '@type'\n  process:\n    $comment: Builtin process identifier.\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTextPatternID/schema.yaml\nrequired:\n- process\n- class\ntitle: BuiltinRequirement\ntype: object\nx-jsonld-extra-terms:\n  BuiltinRequirement: https://w3id.org/ogc/cwl/BuiltinRequirement\nx-jsonld-prefixes:\n  ogccwl: https://w3id.org/ogc/cwl/\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/requirements/BuiltinRequirement"
+}

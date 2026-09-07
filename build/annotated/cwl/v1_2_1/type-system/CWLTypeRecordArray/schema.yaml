@@ -1,0 +1,17 @@
+properties:
+  items:
+    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml
+    x-jsonld-id: https://w3id.org/cwl/salad#items
+    x-jsonld-type: '@vocab'
+  type:
+    enum:
+    - array
+    type: string
+    x-jsonld-id: https://w3id.org/cwl/salad#type
+    x-jsonld-type: '@vocab'
+required:
+- type
+- items
+type: object
+x-jsonld-prefixes:
+  sld: https://w3id.org/cwl/salad#

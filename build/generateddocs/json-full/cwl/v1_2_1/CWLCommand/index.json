@@ -7,7 +7,7 @@
   "abstract": "Command called in the docker image or on shell according to requirements\nand hints specifications. Can be omitted if already defined in the docker\nimage.\n",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.676693",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -21,8 +21,37 @@
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLCommand/schema.yaml",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLCommand/",
-  "rdfData": [],
   "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLCommand/",
+  "description": "If an array, the first element is the program to execute and any subsequent elements are mandatory\ncommand line arguments that always precede any bindings contributed by `inputBinding` or\n[CWLArguments](bblocks://ogc.cwl.v1_2_1.CWLArguments).\n\nIf `baseCommand` is omitted, or is an empty array, the first element of the command line produced\nafter processing input and argument bindings is used as the program to execute instead.\n\nIf the program name includes a path separator it must be an absolute path; otherwise, the runner\nsearches the `$PATH` of the runtime environment (e.g. inside the Docker container specified by a\n`DockerRequirement`) to resolve it to an absolute path.\n",
+  "examples": [
+    {
+      "title": "Simple string command",
+      "base-uri": "https://example.org/",
+      "content": "A `CommandLineTool` invoking a single executable with no arguments baked\ninto `baseCommand` itself, e.g. `cat`.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLCommand/example_1_1.json",
+          "sizeBytes": 6,
+          "code": "\"cat\"\n"
+        }
+      ]
+    },
+    {
+      "title": "Command with mandatory leading arguments",
+      "base-uri": "https://example.org/",
+      "content": "A `baseCommand` given as an array. The first element (`cp`) is the\nprogram to execute, and the remaining element (`-r`) is a mandatory\nargument that always appears immediately after it on the command line,\nbefore any bindings contributed by inputs or\n[CWLArguments](bblocks://ogc.cwl.v1_2_1.CWLArguments).\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLCommand/example_2_1.json",
+          "sizeBytes": 13,
+          "code": "[\"cp\", \"-r\"]\n"
+        }
+      ]
+    }
+  ],
   "annotatedSchema": "description: 'Command called in the docker image or on shell according to requirements\n\n  and hints specifications. Can be omitted if already defined in the docker\n\n  image.\n\n  '\noneOf:\n- title: String command.\n  type: string\n- additionalProperties: false\n  items:\n    title: cmd\n    type: string\n  title: Command Parts\n  type: array\ntitle: CWLCommand\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLCommand"

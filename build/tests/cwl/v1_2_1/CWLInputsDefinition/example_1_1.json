@@ -1,0 +1,20 @@
+[
+  {
+    "id": "reference",
+    "type": "File",
+    "inputBinding": {
+      "position": 2
+    }
+  },
+  {
+    "id": "reads",
+    "type": {
+      "type": "array",
+      "items": "File"
+    },
+    "inputBinding": {
+      "position": 3,
+      "prefix": "-XXX"
+    }
+  }
+]

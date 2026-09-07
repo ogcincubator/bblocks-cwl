@@ -1,0 +1,10 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/context.jsonld",
+  "class": "InitialWorkDirRequirement",
+  "listing": [
+    {
+      "entryname": "example.conf",
+      "entry": "CONFIGVAR=$(inputs.message)\n"
+    }
+  ]
+}

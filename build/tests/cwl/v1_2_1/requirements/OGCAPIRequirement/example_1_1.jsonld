@@ -1,0 +1,5 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/OGCAPIRequirement/context.jsonld",
+  "class": "OGCAPIRequirement",
+  "process": "https://example.org/ogcapi/processes/flood-detection"
+}

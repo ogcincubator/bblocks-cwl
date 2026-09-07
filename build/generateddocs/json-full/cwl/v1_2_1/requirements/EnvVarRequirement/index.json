@@ -1,0 +1,89 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.requirements.EnvVarRequirement",
+  "name": "EnvVarRequirement",
+  "itemClass": "schema",
+  "abstract": "Defines a list of environment variables to set in the tool's\nexecution environment.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.684530",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.CWLExpression",
+    "ogc.cwl.v1_2_1.CWLOntology"
+  ],
+  "shaclShapes": {},
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/EnvVarRequirement/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/EnvVarRequirement/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/EnvVarRequirement/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/EnvVarRequirement/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/EnvVarRequirement/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/EnvVarRequirement/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/EnvVarRequirement/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/requirements/EnvVarRequirement/",
+  "description": "Define a list of environment variables which will be set in the execution environment of the tool.\nEach entry is an [`EnvironmentDef`](#EnvironmentDef): an `envName` (the variable name) paired with an\n`envValue`, which may be a literal string or a [CWLExpression](bblocks://ogc.cwl.v1_2_1.CWLExpression)\nevaluated at runtime \u2014 for example, to forward the value of an input parameter, or the result of\nexecuting an expression such as building a configuration value from a template. Expression evaluation\nrequires `InlineJavascriptRequirement` to also be in effect.\n\n`envDef` accepts two equivalent representations:\n\n- An array of `EnvironmentDef` objects, each with explicit `envName`/`envValue` properties.\n- A mapping of `envName` to `envValue` (either the value directly, or a nested `EnvironmentDef`-like\n  object) \u2014 a shorthand JSON-LD map form of the same data.\n\n## Interaction with other requirements\n\nIf `EnvVarRequirement` is specified alongside a\n[DockerRequirement](bblocks://ogc.cwl.v1_2_1.requirements.DockerRequirement), the environment variables must be\nprovided to Docker using `--env` or `--env-file`, and interact with the container's preexisting\nenvironment as defined by Docker.\n\nSee also: the [CWL v1.2 CommandLineTool spec \u2014 EnvVarRequirement](https://www.commonwl.org/v1.2/CommandLineTool.html#EnvVarRequirement).\n",
+  "examples": [
+    {
+      "title": "Environment variable set from an input parameter",
+      "base-uri": "https://example.org/",
+      "content": "A single environment variable, `TEST_ENV`, whose value is a\n[CWLExpression](bblocks://ogc.cwl.v1_2_1.CWLExpression) that forwards an input parameter, using\nthe shorthand mapping form of `envDef` (`envName` -> `envValue`).\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/EnvVarRequirement/example_1_1.json",
+          "sizeBytes": 85,
+          "code": "{\n  \"class\": \"EnvVarRequirement\",\n  \"envDef\": {\n    \"TEST_ENV\": \"$(inputs.in)\"\n  }\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/EnvVarRequirement/example_1_1.jsonld",
+          "sizeBytes": 217,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/EnvVarRequirement/context.jsonld\",\n  \"class\": \"EnvVarRequirement\",\n  \"envDef\": {\n    \"TEST_ENV\": \"$(inputs.in)\"\n  }\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/EnvVarRequirement/example_1_1.ttl",
+          "sizeBytes": 142,
+          "code": "@prefix ns1: <https://w3id.org/cwl/cwl#EnvVarRequirement/> .\n\n[] a <https://example.org/EnvVarRequirement> ;\n    ns1:envDef \"$(inputs.in)\" .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Multiple environment variables as an explicit array",
+      "base-uri": "https://example.org/",
+      "content": "Two environment variables declared as an array of `EnvironmentDef` objects, mixing a literal\nvalue and an expression-derived value.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/EnvVarRequirement/example_2_1.json",
+          "sizeBytes": 211,
+          "code": "{\n  \"class\": \"EnvVarRequirement\",\n  \"envDef\": [\n    {\n      \"envName\": \"LC_ALL\",\n      \"envValue\": \"en_US.UTF-8\"\n    },\n    {\n      \"envName\": \"DATA_DIR\",\n      \"envValue\": \"$(inputs.data_dir.path)\"\n    }\n  ]\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/EnvVarRequirement/example_2_1.jsonld",
+          "sizeBytes": 343,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/EnvVarRequirement/context.jsonld\",\n  \"class\": \"EnvVarRequirement\",\n  \"envDef\": [\n    {\n      \"envName\": \"LC_ALL\",\n      \"envValue\": \"en_US.UTF-8\"\n    },\n    {\n      \"envName\": \"DATA_DIR\",\n      \"envValue\": \"$(inputs.data_dir.path)\"\n    }\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/EnvVarRequirement/example_2_1.ttl",
+          "sizeBytes": 340,
+          "code": "@prefix ns1: <https://w3id.org/cwl/cwl#EnvironmentDef/> .\n@prefix ns2: <https://w3id.org/cwl/cwl#EnvVarRequirement/> .\n\n[] a <https://example.org/EnvVarRequirement> ;\n    ns2:envDef [ ns1:envName \"DATA_DIR\" ;\n            ns1:envValue \"$(inputs.data_dir.path)\" ],\n        [ ns1:envName \"LC_ALL\" ;\n            ns1:envValue \"en_US.UTF-8\" ] .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$defs:\n  EnvironmentDef:\n    additionalProperties: false\n    properties:\n      envName:\n        minLength: 1\n        type: string\n        x-jsonld-id: https://w3id.org/cwl/cwl#EnvironmentDef/envName\n      envValue:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n        x-jsonld-id: https://w3id.org/cwl/cwl#EnvironmentDef/envValue\n    required:\n    - envName\n    - envValue\n    type: object\nadditionalProperties: false\nproperties:\n  class:\n    enum:\n    - EnvVarRequirement\n    type: string\n    x-jsonld-id: '@type'\n  envDef:\n    oneOf:\n    - items:\n        $ref: '#/$defs/EnvironmentDef'\n      type: array\n    - additionalProperties:\n        oneOf:\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n          description: The 'envValue' specified directly\n        - $ref: '#/$defs/EnvironmentDef'\n      description: Mapping of 'envName' to environment value or definition.\n      type: object\n    x-jsonld-id: https://w3id.org/cwl/cwl#EnvVarRequirement/envDef\n    x-jsonld-container: '@id'\nrequired:\n- envDef\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/requirements/EnvVarRequirement"
+}

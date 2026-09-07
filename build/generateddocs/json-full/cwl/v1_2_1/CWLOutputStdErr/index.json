@@ -4,10 +4,10 @@
   "itemIdentifier": "ogc.cwl.v1_2_1.CWLOutputStdErr",
   "name": "CWLOutputStdErr",
   "itemClass": "schema",
-  "abstract": "CWLOutputStdErr",
+  "abstract": "Redirects the command's standard error stream to a CWL output (the 'stderr' shorthand or its equivalent 'type: stderr' object form).",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.691253",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -15,18 +15,45 @@
     "cwl"
   ],
   "shaclShapes": {},
-  "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLOutputStdErrDefinition"
-  ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputStdErr/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputStdErr/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputStdErr/schema.yaml",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputStdErr/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputStdErr/",
-  "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "oneOf:\n- description: 'Indicates that the data pushed to the standard error stream by the\n    command will be redirected to this CWL output.\n\n    Can be defined for only one output. If combined with ''stderr'' at the root of\n    the CWL document, that definition\n\n    will indicate the desired name of the output file where the error stream will\n    be written to.  A random name will\n\n    be applied for the file of this output unless otherwise specified.\n\n    '\n  enum:\n  - stderr\n  type: string\n- properties:\n    type:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputStdErrDefinition/schema.yaml\n  required:\n  - type\n  type: object\n",
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLOutputStdErr/",
+  "description": "This type is only valid for a `CommandLineTool` output that has no\n[OutputBinding](bblocks://ogc.cwl.v1_2_1.OutputBinding) of its own \u2014 the glob pattern used to pick up\nthe captured stream is derived instead, either from the root document's `stderr` field or, if that is\nabsent, from a randomly generated filename.\n\n```yaml\noutputs:\n  an_output_name:\n    type: stderr\n\nstderr: a_stderr_file\n```\n\nis equivalent to declaring the output as a `File` that is both marked `streamable` and whose\n`outputBinding.glob` matches the root `stderr` filename:\n\n```yaml\noutputs:\n  an_output_name:\n    type: File\n    streamable: true\n    outputBinding:\n      glob: a_stderr_file\n\nstderr: a_stderr_file\n```\n",
+  "examples": [
+    {
+      "title": "Shorthand string form",
+      "base-uri": "https://example.org/",
+      "content": "The `stderr` shorthand, as used for the `output_file` output of the CWL conformance test\n[`stderr-shortcut.cwl`](https://github.com/common-workflow-language/cwl-v1.2/blob/main/tests/stderr-shortcut.cwl),\nwhich captures the command's standard error stream into that output.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLOutputStdErr/example_1_1.json",
+          "sizeBytes": 9,
+          "code": "\"stderr\"\n"
+        }
+      ]
+    },
+    {
+      "title": "Object form",
+      "base-uri": "https://example.org/",
+      "content": "The equivalent explicit object form of the same `stderr` type declaration.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLOutputStdErr/example_2_1.json",
+          "sizeBytes": 23,
+          "code": "{\n  \"type\": \"stderr\"\n}\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "description: 'Indicates that the data pushed to the standard error stream by the command\n  will be redirected\n\n  to this CWL output.\n\n\n  Can be defined for only one output. If combined with ''stderr'' at the root of the\n  CWL document,\n\n  that definition will indicate the desired name of the output file where the error\n  stream will\n\n  be written to. A random name will be applied for the file of this output unless\n  otherwise\n\n  specified.\n\n  '\noneOf:\n- enum:\n  - stderr\n  type: string\n- properties:\n    type:\n      enum:\n      - stderr\n      type: string\n  required:\n  - type\n  type: object\ntitle: CWLOutputStdErr\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLOutputStdErr"
 }

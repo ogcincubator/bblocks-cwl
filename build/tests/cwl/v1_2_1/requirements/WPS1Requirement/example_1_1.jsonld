@@ -1,0 +1,6 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/WPS1Requirement/context.jsonld",
+  "class": "WPS1Requirement",
+  "provider": "https://example.org/wps",
+  "process": "FloodDetection"
+}

@@ -1,0 +1,8 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/context.jsonld",
+  "label": "align-and-sort",
+  "doc": [
+    "Aligns reads against a reference genome using bwa-mem.",
+    "Sorts the resulting alignment with samtools sort before returning it."
+  ]
+}

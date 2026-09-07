@@ -1,0 +1,100 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.CWLProcessFields",
+  "name": "CWLProcessFields",
+  "itemClass": "schema",
+  "abstract": "The process-definition fields (`inputs`, `outputs`, `requirements`, `hints`,\n`baseCommand`, `arguments`, `stdin`/`stdout`/`stderr`, `scatter`, `scatterMethod`, `intent`, `id`)\nshared by every packaging shape a CWL CommandLineTool/ExpressionTool/Workflow can take, excluding\n`class` itself since the legal `class` values differ by packaging. Not typically profiled on its\nown.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-08-18T00:00:00.000000",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl",
+    "shared-fragment"
+  ],
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.CWLExpression",
+    "ogc.cwl.v1_2_1.requirements.CWLRequirements",
+    "ogc.cwl.v1_2_1.CWLIdentifier",
+    "ogc.cwl.v1_2_1.CWLScatter",
+    "ogc.cwl.v1_2_1.requirements.CWLHints",
+    "ogc.cwl.v1_2_1.CWLIntent",
+    "ogc.cwl.v1_2_1.CWLScatterMethod",
+    "ogc.cwl.v1_2_1.CWLInputsDefinition",
+    "ogc.cwl.v1_2_1.CWLOutputsDefinition",
+    "ogc.cwl.v1_2_1.CWLCommand",
+    "ogc.cwl.v1_2_1.CWLOntology",
+    "ogc.cwl.v1_2_1.CWLArguments"
+  ],
+  "shaclShapes": {},
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLProcessFields/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLProcessFields/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLProcessFields/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLProcessFields/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLProcessFields/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLProcessFields/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLProcessFields/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLProcessFields/",
+  "description": "The process-definition fields common to every packaging shape a CWL CommandLineTool, ExpressionTool,\nor Workflow can take: at the document root\n([CWLAtomicBase](bblocks://ogc.cwl.v1_2_1.CWLAtomicBase)), embedded inline as a step's `run` value, or\nas an entry of a `$graph` array ([CWLGraphItem](bblocks://ogc.cwl.v1_2_1.CWLGraphItem)).\n\nThis block deliberately excludes `class` \u2014 the property that discriminates which kind of process a\ndocument describes \u2014 because which `class` values are legal differs by packaging: a `$graph` entry\nmay declare `class: Workflow` alongside `CommandLineTool`/`ExpressionTool`, while a standalone atomic\ndocument only allows the latter two. Each consumer of this block layers its own `class` property (with\nits own enum) and its own `required` list on top via `allOf`, rather than this block hard-coding one\nset of allowed values that every consumer would then be stuck with.\n\nFactoring these fields out here, instead of each consumer repeating the same property list, keeps the\ntwo shapes from drifting out of sync with each other as the schema evolves.\n",
+  "examples": [
+    {
+      "title": "Fields of a command-line process",
+      "base-uri": "https://example.org/",
+      "content": "The shared fields as they appear on a `CommandLineTool`-shaped process, regardless of whether\nit ends up validated as a root document, a nested step `run`, or a `$graph` entry \u2014 `class` is\nadded separately by whichever of those wraps this block.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLProcessFields/example_1_1.json",
+          "sizeBytes": 346,
+          "code": "{\n  \"baseCommand\": [\"echo\", \"first\"],\n  \"arguments\": [\"-n\", \"foo\"],\n  \"inputs\": {\n    \"in\": {\n      \"type\": \"Any\"\n    }\n  },\n  \"outputs\": {\n    \"out\": {\n      \"type\": \"string\",\n      \"outputBinding\": {\n        \"glob\": \"out.txt\",\n        \"loadContents\": true,\n        \"outputEval\": \"$(self[0].contents)\"\n      }\n    }\n  },\n  \"stdout\": \"out.txt\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLProcessFields/example_1_1.jsonld",
+          "sizeBytes": 488,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLProcessFields/context.jsonld\",\n  \"baseCommand\": [\n    \"echo\",\n    \"first\"\n  ],\n  \"arguments\": [\n    \"-n\",\n    \"foo\"\n  ],\n  \"inputs\": {\n    \"in\": {\n      \"type\": \"Any\"\n    }\n  },\n  \"outputs\": {\n    \"out\": {\n      \"type\": \"string\",\n      \"outputBinding\": {\n        \"glob\": \"out.txt\",\n        \"loadContents\": true,\n        \"outputEval\": \"$(self[0].contents)\"\n      }\n    }\n  },\n  \"stdout\": \"out.txt\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLProcessFields/example_1_1.ttl",
+          "sizeBytes": 613,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#CommandOutputBinding/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://example.org/in> sld:type <https://example.org/Any> .\n\n<https://example.org/out> cwl:outputBinding [ ns1:glob \"out.txt\" ] ;\n    sld:type xsd:string .\n\n[] cwl:arguments ( \"-n\" \"foo\" ) ;\n    cwl:baseCommand ( \"echo\" \"first\" ) ;\n    cwl:inputs <https://example.org/in> ;\n    cwl:outputs <https://example.org/out> ;\n    cwl:stdout \"out.txt\" .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Fields of a $graph-only process, referenced by id",
+      "base-uri": "https://example.org/",
+      "content": "A minimal fragment showing the fields that matter most for a process meant to be referenced by\n`id` from elsewhere in the same document (e.g. a `Workflow` step's `run: \"#tool-id\"`), such as\ninside a [CWLGraphItem](bblocks://ogc.cwl.v1_2_1.CWLGraphItem).\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLProcessFields/example_2_1.json",
+          "sizeBytes": 234,
+          "code": "{\n  \"id\": \"tool-id\",\n  \"inputs\": {\n    \"in\": {\n      \"type\": \"string\"\n    }\n  },\n  \"outputs\": {\n    \"out\": {\n      \"type\": \"string\"\n    }\n  },\n  \"hints\": {\n    \"DockerRequirement\": {\n      \"dockerPull\": \"python:3.11-slim\"\n    }\n  }\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLProcessFields/example_2_1.jsonld",
+          "sizeBytes": 352,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLProcessFields/context.jsonld\",\n  \"id\": \"tool-id\",\n  \"inputs\": {\n    \"in\": {\n      \"type\": \"string\"\n    }\n  },\n  \"outputs\": {\n    \"out\": {\n      \"type\": \"string\"\n    }\n  },\n  \"hints\": {\n    \"DockerRequirement\": {\n      \"dockerPull\": \"python:3.11-slim\"\n    }\n  }\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLProcessFields/example_2_1.ttl",
+          "sizeBytes": 503,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#DockerRequirement/> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://example.org/tool-id> cwl:hints [ a cwl:DockerRequirement ;\n            ns1:dockerPull \"python:3.11-slim\" ] ;\n    cwl:inputs <https://example.org/in> ;\n    cwl:outputs <https://example.org/out> .\n\n<https://example.org/in> sld:type xsd:string .\n\n<https://example.org/out> sld:type xsd:string .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "description: \"The process-definition fields shared by every shape a CWL CommandLineTool/ExpressionTool/Workflow\\ndocument\n  can take, regardless of how the document is packaged (directly at the root, embedded\n  as a\\nstep's inline `run`, or as an entry of a `$graph` array) \\u2014 everything\n  except `class` itself, since\\nwhich `class` values are legal differs by packaging\n  (a `$graph` entry additionally allows\\n`Workflow`, which a standalone atomic document\n  does not).\\n\"\nproperties:\n  arguments:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLArguments/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#arguments\n    x-jsonld-container: '@list'\n  baseCommand:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLCommand/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#baseCommand\n    x-jsonld-container: '@list'\n  hints:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLHints/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#hints\n    x-jsonld-container: '@type'\n  id:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLIdentifier/schema.yaml\n    x-jsonld-id: '@id'\n  inputs:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputsDefinition/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#inputs\n    x-jsonld-container: '@id'\n  intent:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLIntent/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#Process/intent\n    x-jsonld-type: '@id'\n  outputs:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputsDefinition/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#outputs\n    x-jsonld-container: '@id'\n  requirements:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLRequirements/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#requirements\n    x-jsonld-container: '@type'\n  scatter:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLScatter/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#scatter\n    x-jsonld-type: '@id'\n    x-jsonld-container: '@list'\n  scatterMethod:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLScatterMethod/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#scatterMethod\n    x-jsonld-type: '@vocab'\n  stderr:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    description: 'Destination of the error stream.\n\n      Typically, an expression referring to a desired file name or provided by a CWL\n      input reference.\n\n      '\n    x-jsonld-id: https://w3id.org/cwl/cwl#stderr\n  stdin:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    description: \"Source of the input stream. \\nTypically, an expression referring\n      to an existing file name or an input of the CWL document.\\n\"\n    x-jsonld-id: https://w3id.org/cwl/cwl#stdin\n  stdout:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    description: 'Destination of the output stream.\n\n      Typically, an expression referring to a desired file name or provided by a CWL\n      input reference.\n\n      '\n    x-jsonld-id: https://w3id.org/cwl/cwl#stdout\nrequired:\n- inputs\n- outputs\ntitle: CWL process fields\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/CWLProcessFields"
+}

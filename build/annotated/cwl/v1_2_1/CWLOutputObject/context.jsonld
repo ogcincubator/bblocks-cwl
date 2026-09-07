@@ -1,7 +1,47 @@
 {
   "@context": {
+    "doc": "http://www.w3.org/2000/01/rdf-schema#comment",
     "label": "http://www.w3.org/2000/01/rdf-schema#label",
+    "outputBinding": {
+      "@context": {
+        "glob": "cwl:CommandOutputBinding/glob"
+      },
+      "@id": "cwl:outputBinding"
+    },
+    "type": {
+      "@context": {
+        "fields": {
+          "@context": {
+            "format": {
+              "@id": "cwl:format",
+              "@type": "@id"
+            },
+            "loadContents": "cwl:loadContents",
+            "secondaryFiles": "cwl:secondaryFiles",
+            "streamable": "cwl:FieldBase/streamable",
+            "loadListing": "cwl:loadListing"
+          },
+          "@id": "sld:fields",
+          "@container": "@id"
+        },
+        "name": "@id"
+      },
+      "@id": "sld:type",
+      "@type": "@vocab"
+    },
+    "null": "sld:null",
+    "boolean": "xsd:boolean",
+    "int": "xsd:int",
+    "integer": "xsd:int",
+    "long": "xsd:long",
+    "float": "xsd:float",
+    "double": "xsd:double",
+    "string": "xsd:string",
+    "File": "cwl:File",
+    "Directory": "cwl:Directory",
     "cwl": "https://w3id.org/cwl/cwl#",
+    "sld": "https://w3id.org/cwl/salad#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
     "@version": 1.1
   }
 }

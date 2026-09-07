@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "class": "@type",
+    "envDef": {
+      "@context": {
+        "envName": "cwl:EnvironmentDef/envName",
+        "envValue": "cwl:EnvironmentDef/envValue"
+      },
+      "@id": "cwl:EnvVarRequirement/envDef",
+      "@container": "@id"
+    },
+    "cwl": "https://w3id.org/cwl/cwl#",
+    "@version": 1.1
+  }
+}

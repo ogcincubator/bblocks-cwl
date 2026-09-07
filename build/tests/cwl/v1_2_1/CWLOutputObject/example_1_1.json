@@ -1,0 +1,7 @@
+{
+  "type": "File",
+  "outputBinding": {
+    "glob": "output.txt"
+  },
+  "doc": "The output file produced by the tool."
+}

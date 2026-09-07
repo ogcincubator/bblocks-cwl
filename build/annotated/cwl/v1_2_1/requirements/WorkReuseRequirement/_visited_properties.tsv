@@ -1,0 +1,3 @@
+path	@id	schema
+/class	@type	/github/workspace/build/annotated/cwl/v1_2_1/requirements/WorkReuseRequirement/schema.yaml
+/enableReuse	https://w3id.org/cwl/cwl#WorkReuse/enableReuse	/github/workspace/build/annotated/cwl/v1_2_1/requirements/WorkReuseRequirement/schema.yaml

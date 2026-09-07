@@ -1,0 +1,14 @@
+{
+  "cwlVersion": "v1.2",
+  "$graph": [
+    {
+      "class": "ExpressionTool",
+      "id": "main",
+      "inputs": [],
+      "outputs": {
+        "output": "Any"
+      },
+      "expression": "$({'output': null})"
+    }
+  ]
+}

@@ -60,14 +60,17 @@
           },
           "type": "array"
         }
-      ]
+      ],
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#format",
+      "x-jsonld-type": "@id"
     },
     "loadContents": {
       "type": "boolean",
       "x-jsonld-id": "https://w3id.org/cwl/cwl#loadContents"
     },
     "secondaryFiles": {
-      "$ref": "#/$defs/CWLTypeRecordSecondaryFiles"
+      "$ref": "#/$defs/CWLTypeRecordSecondaryFiles",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#secondaryFiles"
     },
     "streamable": {
       "type": "boolean",

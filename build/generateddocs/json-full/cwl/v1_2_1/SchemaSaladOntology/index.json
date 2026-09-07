@@ -1,0 +1,46 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.SchemaSaladOntology",
+  "name": "Schema Salad Ontology",
+  "itemClass": "model",
+  "abstract": "The RDFS vocabulary/ontology for Schema Salad, the schema language CWL is defined in, published\nalongside CWL v1.2 at `https://w3id.org/cwl/salad#` (`sld:`). It defines the metaschema classes used\nto describe CWL's own record/enum/array schemas (`RecordSchema`, `EnumSchema`, `JsonldPredicate`, ...),\ndistinct from the CWL document vocabulary itself (see [CWL Ontology](bblocks://ogc.cwl.v1_2_1.CWLOntology)).",
+  "status": "under-development",
+  "dateTimeAddition": "2026-08-18T19:19:38.980748",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/salad.ttl",
+  "version": "1.2.1",
+  "tags": [
+    "cwl",
+    "schema-salad",
+    "ontology",
+    "vocabulary"
+  ],
+  "concept": [
+    "https://w3id.org/cwl/salad#"
+  ],
+  "shaclShapes": {},
+  "ontology": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/SchemaSaladOntology/ontology.ttl",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/SchemaSaladOntology/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/SchemaSaladOntology/",
+  "description": "[Schema Salad](https://www.commonwl.org/v1.2/SchemaSalad.html) is the schema language the CWL\nspecification itself is written in \u2014 it is what lets a CWL document's `class` field, `$import`/`$include`\ndirectives, and `jsonldPredicate`-annotated fields resolve the way they do. This block publishes its\nmetaschema vocabulary, distinct from the [CWL document vocabulary](bblocks://ogc.cwl.v1_2_1.CWLOntology)\n(`cwl:`) that the rest of this register binds to: `sld:RecordSchema`, `sld:EnumSchema`,\n`sld:JsonldPredicate`, `sld:NamedType`, and related classes/properties used to describe schema-salad\nschemas themselves, rather than CWL documents that conform to such a schema.\n\nPublished upstream by the CWL project at `https://www.commonwl.org/v1.2/salad.ttl`, dereferenceable via\nthe persistent identifier `https://w3id.org/cwl/salad`. Like the\n[CWL Ontology](bblocks://ogc.cwl.v1_2_1.CWLOntology) block's upstream file, the published Turtle has the\nsame `@prefix @base: ...` syntax defect; `ontology.ttl` in this block renames that prefix to `sld:` so it\nparses.\n",
+  "examples": [
+    {
+      "title": "RecordSchema and its named-field subtype",
+      "content": "An excerpt of the metaschema vocabulary: `sld:SaladRecordSchema`, the schema-salad construct\nused to define CWL's record types (e.g. `DockerRequirement`), is a subclass of the more general\n`sld:RecordSchema`, and carries an `sld:abstract` property used to mark mixin base types.\n",
+      "snippets": [
+        {
+          "language": "turtle",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/SchemaSaladOntology/example_1_1.ttl",
+          "sizeBytes": 409,
+          "code": "@prefix sld: <https://w3id.org/cwl/salad#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\nsld:RecordSchema a rdfs:Class .\n\nsld:SaladRecordSchema a rdfs:Class ;\n    rdfs:subClassOf sld:RecordSchema,\n        sld:NamedType .\n\n<https://w3id.org/cwl/salad#SaladRecordSchema/abstract> a rdf:Property ;\n    rdfs:domain sld:SaladRecordSchema .\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/SchemaSaladOntology"
+}

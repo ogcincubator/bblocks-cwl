@@ -13,6 +13,29 @@ Technically should be minimum=1, but fractional for scheduling algorithms are al
 There is no way to distinguish between float/long simultaneously in JSON schema (multi-match oneOf).
 Therefore, only validate that it is greater than zero.
 
+## Examples
+
+### Whole number quantity
+A plain integer quantity, e.g. as used for `ResourceRequirement`'s `ramMin` (in mebibytes).
+
+#### json
+```json
+512
+
+```
+
+
+### Fractional quantity
+A fractional quantity, adapted from the CWL conformance test `cores_float.cwl`, where a
+`ResourceRequirement.coresMin` of `1.25` signals a scheduler that up to 3 jobs can share a
+4-core node (4 / 1.25 ~ 3).
+
+#### json
+```json
+1.25
+
+```
+
 ## Schema
 
 ```yaml

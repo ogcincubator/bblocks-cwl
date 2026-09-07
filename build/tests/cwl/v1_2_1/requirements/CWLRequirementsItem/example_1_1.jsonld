@@ -1,0 +1,5 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLRequirementsItem/context.jsonld",
+  "class": "DockerRequirement",
+  "dockerPull": "docker.io/debian:stable-slim"
+}

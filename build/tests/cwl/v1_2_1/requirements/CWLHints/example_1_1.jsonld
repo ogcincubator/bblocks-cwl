@@ -1,0 +1,13 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLHints/context.jsonld",
+  "@graph": [
+    {
+      "class": "ResourceRequirement",
+      "coresMin": 2
+    },
+    {
+      "class": "DockerRequirement",
+      "dockerPull": "docker.io/python:3-slim"
+    }
+  ]
+}

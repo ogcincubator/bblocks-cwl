@@ -1,0 +1,1 @@
+{"defs":{},"properties":[{"path":["class"],"id":"@type","required":true,"schema_type":"string","enum":["BuiltinRequirement"],"sources":["bblocks://ogc.cwl.v1_2_1.requirements.BuiltinRequirement"],"effectiveId":"@type"},{"path":["process"],"required":true,"sources":["bblocks://ogc.cwl.v1_2_1.requirements.BuiltinRequirement"]}]}

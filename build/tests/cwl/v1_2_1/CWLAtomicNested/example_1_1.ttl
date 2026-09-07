@@ -1,0 +1,19 @@
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+@prefix ns1: <https://w3id.org/cwl/cwl#CommandLineBinding/> .
+@prefix ns2: <https://w3id.org/cwl/cwl#CommandOutputBinding/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sld: <https://w3id.org/cwl/salad#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/file1> cwl:inputBinding [ ns1:position 1 ] ;
+    sld:type cwl:File .
+
+<https://example.org/output> cwl:outputBinding [ ns2:glob "output.txt" ] ;
+    sld:type cwl:File .
+
+[] a cwl:CommandLineTool ;
+    cwl:baseCommand ( "wc" "-l" ) ;
+    cwl:inputs <https://example.org/file1> ;
+    cwl:outputs <https://example.org/output> ;
+    cwl:stdout "output.txt" .
+

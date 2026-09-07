@@ -1,0 +1,8 @@
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+@prefix ns1: <https://w3id.org/cwl/cwl#FieldBase/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] ns1:streamable true ;
+    cwl:loadContents true ;
+    cwl:secondaryFiles "^.bai?" .
+

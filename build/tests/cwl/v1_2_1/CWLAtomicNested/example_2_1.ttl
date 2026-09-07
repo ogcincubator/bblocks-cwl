@@ -1,0 +1,14 @@
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sld: <https://w3id.org/cwl/salad#> .
+
+<https://example.org/file_list> sld:type [ sld:type <https://example.org/array> ] .
+
+<https://example.org/first_file> sld:type cwl:File .
+
+[] a cwl:ExpressionTool ;
+    rdfs:label "Pick first file from a list" ;
+    rdfs:comment "Returns the first file from a list of input files." ;
+    cwl:inputs <https://example.org/file_list> ;
+    cwl:outputs <https://example.org/first_file> .
+

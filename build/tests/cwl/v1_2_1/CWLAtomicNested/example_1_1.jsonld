@@ -1,0 +1,27 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLAtomicNested/context.jsonld",
+  "class": "CommandLineTool",
+  "baseCommand": [
+    "wc",
+    "-l"
+  ],
+  "inputs": [
+    {
+      "id": "file1",
+      "type": "File",
+      "inputBinding": {
+        "position": 1
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "output",
+      "type": "File",
+      "outputBinding": {
+        "glob": "output.txt"
+      }
+    }
+  ],
+  "stdout": "output.txt"
+}

@@ -7,7 +7,7 @@
   "abstract": "All outputs produced by the Application Package.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.677375",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -16,12 +16,12 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
+    "ogc.cwl.v1_2_1.CWLOutputStdErr",
     "ogc.cwl.v1_2_1.CWLOutputItem",
-    "ogc.cwl.v1_2_1.CWLOutputObject",
     "ogc.cwl.v1_2_1.CWLImport",
-    "ogc.cwl.v1_2_1.CWLType",
+    "ogc.cwl.v1_2_1.CWLOutputObject",
     "ogc.cwl.v1_2_1.CWLOutputStdOut",
-    "ogc.cwl.v1_2_1.CWLOutputStdErr"
+    "ogc.cwl.v1_2_1.CWLType"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputsDefinition/schema.yaml",
@@ -29,10 +29,73 @@
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputsDefinition/schema.yaml",
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputsDefinition/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputsDefinition/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputsDefinition/",
-  "rdfData": [],
   "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLOutputsDefinition/",
+  "description": "The `outputs` field of a CWL `Process` (a `CommandLineTool`, `Workflow`, or `ExpressionTool`),\ndefining the parameters representing the output of the process. It is used both to generate the\nprocess's output object and to validate it. CWL allows this field to be written in either of two\nequivalent shapes, plus an `$import` escape hatch:\n\n- **List form** (`CWLOutputList`) \u2014 an array of\n  [CWLOutputItem](bblocks://ogc.cwl.v1_2_1.CWLOutputItem) objects, each carrying its own `id`\n  alongside `type` and the other output properties. This is the more verbose but unambiguous form.\n- **Map form** (`CWLOutputMap`) \u2014 an object whose keys are the output identifiers and whose values\n  are either a bare [CWLType](bblocks://ogc.cwl.v1_2_1.CWLType) shorthand (e.g. `\"File\"`), a full\n  [CWLOutputObject](bblocks://ogc.cwl.v1_2_1.CWLOutputObject), or a `stdout`/`stderr` shorthand (see\n  [CWLOutputStdOut](bblocks://ogc.cwl.v1_2_1.CWLOutputStdOut) /\n  [CWLOutputStdErr](bblocks://ogc.cwl.v1_2_1.CWLOutputStdErr)). This is the more compact form\n  typically seen in hand-written CWL documents.\n- An `$import` directive (see [CWLImport](bblocks://ogc.cwl.v1_2_1.CWLImport)), pointing to an\n  external file that supplies the outputs definition. The schema explicitly excludes documents that\n  would otherwise also match the map form from matching as a plain map, to avoid the two branches\n  overlapping on a generic `$import`-only mapping key.\n\nOnly one of these three shapes may be used for a given `outputs` field; a CWL processor accepts\nwhichever the document uses and treats them as equivalent.\n",
+  "examples": [
+    {
+      "title": "Outputs as a list",
+      "base-uri": "https://example.org/",
+      "content": "Outputs written in list form, where each entry is a\n[CWLOutputItem](bblocks://ogc.cwl.v1_2_1.CWLOutputItem) with its own `id`.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLOutputsDefinition/example_1_1.json",
+          "sizeBytes": 113,
+          "code": "[\n  {\n    \"id\": \"output_file\",\n    \"type\": \"File\",\n    \"outputBinding\": {\n      \"glob\": \"output.txt\"\n    }\n  }\n]\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLOutputsDefinition/example_1_1.jsonld",
+          "sizeBytes": 267,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputsDefinition/context.jsonld\",\n  \"@graph\": [\n    {\n      \"id\": \"output_file\",\n      \"type\": \"File\",\n      \"outputBinding\": {\n        \"glob\": \"output.txt\"\n      }\n    }\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLOutputsDefinition/example_1_1.ttl",
+          "sizeBytes": 258,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#CommandOutputBinding/> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n\n<https://example.org/output_file> cwl:outputBinding [ ns1:glob \"output.txt\" ] ;\n    sld:type cwl:File .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Outputs as a map",
+      "base-uri": "https://example.org/",
+      "content": "The same outputs written in the more compact map form, keyed by output identifier. Values may\nbe a bare type shorthand, as with `classification` below, or a full\n[CWLOutputObject](bblocks://ogc.cwl.v1_2_1.CWLOutputObject), as with `count_output`.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLOutputsDefinition/example_2_1.json",
+          "sizeBytes": 112,
+          "code": "{\n  \"count_output\": {\n    \"type\": \"int\",\n    \"outputSource\": \"step2/output\"\n  },\n  \"classification\": \"string\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLOutputsDefinition/example_2_1.jsonld",
+          "sizeBytes": 308,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputsDefinition/context.jsonld\",\n  \"@graph\": [\n    {\n      \"id\": \"count_output\",\n      \"type\": \"int\",\n      \"outputSource\": \"step2/output\"\n    },\n    {\n      \"id\": \"classification\",\n      \"type\": \"string\"\n    }\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLOutputsDefinition/example_2_1.ttl",
+          "sizeBytes": 212,
+          "code": "@prefix sld: <https://w3id.org/cwl/salad#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://example.org/classification> sld:type xsd:string .\n\n<https://example.org/count_output> sld:type xsd:int .\n\n"
+        }
+      ]
+    }
+  ],
   "annotatedSchema": "description: All outputs produced by the Application Package.\n$defs:\n  CWLOutputList:\n    description: Package outputs defined as items.\n    items:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputItem/schema.yaml\n    title: CWLOutputList\n    type: array\n  CWLOutputMap:\n    additionalProperties:\n      oneOf:\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputObject/schema.yaml\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputStdOut/schema.yaml\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputStdErr/schema.yaml\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLImport/schema.yaml\n    description: Package outputs defined as mapping.\n    properties: {}\n    required: []\n    title: CWLOutputMap\n    type: object\noneOf:\n- $ref: '#/$defs/CWLOutputList'\n- $comment: Avoid 'oneOf' conflict of generic mapping key strings as output identifier\n    matching against '$import'.\n  allOf:\n  - $ref: '#/$defs/CWLOutputMap'\n  - not:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLImport/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLImport/schema.yaml\ntitle: CWLOutputsDefinition\n",
+  "semanticUplift": {
+    "additionalSteps": [
+      {
+        "type": "jq",
+        "code": "if type == \"object\" then\n  to_entries | map({id: .key} + (if (.value | type) == \"object\" then .value else {type: .value} end))\nelse . end\n",
+        "stage": "pre"
+      }
+    ]
+  },
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLOutputsDefinition"
 }

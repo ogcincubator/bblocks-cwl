@@ -1,0 +1,1 @@
+{"defs":{},"properties":[{"path":["symbols"],"required":true,"sources":["bblocks://ogc.cwl.v1_2_1.type-system.CWLTypeEnum"]},{"path":["type"],"title":"type","required":true,"schema_type":"string","enum":["enum"],"sources":["bblocks://ogc.cwl.v1_2_1.type-system.CWLTypeEnum"]}]}

@@ -1,0 +1,11 @@
+@prefix sld: <https://w3id.org/cwl/salad#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/a> sld:fields <https://example.org/b>,
+        <https://example.org/c> ;
+    sld:type <https://example.org/record> .
+
+<https://example.org/b> sld:type xsd:int .
+
+<https://example.org/c> sld:type xsd:int .
+

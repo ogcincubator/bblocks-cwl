@@ -1,0 +1,21 @@
+{
+  "class": "ExpressionTool",
+  "label": "Pick first file from a list",
+  "doc": "Returns the first file from a list of input files.",
+  "inputs": [
+    {
+      "id": "file_list",
+      "type": {
+        "type": "array",
+        "items": "File"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "first_file",
+      "type": "File"
+    }
+  ],
+  "expression": "$({'first_file': inputs.file_list[0]})"
+}

@@ -1,7 +1,0 @@
-{
-  "@context": {
-    "networkAccess": "cwl:NetworkAccess/networkAccess",
-    "cwl": "https://w3id.org/cwl/cwl#",
-    "@version": 1.1
-  }
-}

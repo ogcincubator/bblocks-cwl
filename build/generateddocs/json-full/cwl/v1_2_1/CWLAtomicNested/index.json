@@ -4,10 +4,13 @@
   "itemIdentifier": "ogc.cwl.v1_2_1.CWLAtomicNested",
   "name": "CWLAtomicNested",
   "itemClass": "schema",
-  "abstract": "CWLAtomicNested",
+  "abstract": "Same shape as `CWLAtomic`, for use when a CommandLineTool,\nExpressionTool, or Workflow definition is embedded inline as the `run` value of a Workflow step,\ninstead of being referenced by file or URL. `cwlVersion` is not repeated here, since it is only\ndeclared once at the document root.",
+  "isProfileOf": [
+    "ogc.cwl.v1_2_1.CWLAtomicBase"
+  ],
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.710771",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -17,8 +20,8 @@
   "shaclShapes": {},
   "dependsOn": [
     "ogc.cwl.v1_2_1.CWLAtomicBase",
-    "ogc.cwl.v1_2_1.CWLDocumentation",
-    "ogc.cwl.v1_2_1.CWLMetadata"
+    "ogc.cwl.v1_2_1.CWLMetadata",
+    "ogc.cwl.v1_2_1.CWLDocumentation"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLAtomicNested/schema.yaml",
@@ -26,10 +29,63 @@
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLAtomicNested/schema.yaml",
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLAtomicNested/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLAtomicNested/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLAtomicNested/",
-  "rdfData": [],
   "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLAtomicNested/",
   "description": "Same as 'CWLAtomic', but 'cwlVersion' not repeated (only at root).",
+  "examples": [
+    {
+      "title": "CommandLineTool embedded as a workflow step's run value",
+      "base-uri": "https://example.org/",
+      "content": "A `CommandLineTool` definition inlined directly as the `run` value of a Workflow step,\nrather than referenced by file or URL. Note there is no `cwlVersion` field, since it is\nonly declared once at the document root (see [CWLAtomic](bblocks://ogc.cwl.v1_2_1.CWLAtomic)\nfor the equivalent top-level form, which does carry it).\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLAtomicNested/example_1_1.json",
+          "sizeBytes": 328,
+          "code": "{\n  \"class\": \"CommandLineTool\",\n  \"baseCommand\": [\"wc\", \"-l\"],\n  \"inputs\": [\n    {\n      \"id\": \"file1\",\n      \"type\": \"File\",\n      \"inputBinding\": { \"position\": 1 }\n    }\n  ],\n  \"outputs\": [\n    {\n      \"id\": \"output\",\n      \"type\": \"File\",\n      \"outputBinding\": { \"glob\": \"output.txt\" }\n    }\n  ],\n  \"stdout\": \"output.txt\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLAtomicNested/example_1_1.jsonld",
+          "sizeBytes": 485,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLAtomicNested/context.jsonld\",\n  \"class\": \"CommandLineTool\",\n  \"baseCommand\": [\n    \"wc\",\n    \"-l\"\n  ],\n  \"inputs\": [\n    {\n      \"id\": \"file1\",\n      \"type\": \"File\",\n      \"inputBinding\": {\n        \"position\": 1\n      }\n    }\n  ],\n  \"outputs\": [\n    {\n      \"id\": \"output\",\n      \"type\": \"File\",\n      \"outputBinding\": {\n        \"glob\": \"output.txt\"\n      }\n    }\n  ],\n  \"stdout\": \"output.txt\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLAtomicNested/example_1_1.ttl",
+          "sizeBytes": 704,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#CommandLineBinding/> .\n@prefix ns2: <https://w3id.org/cwl/cwl#CommandOutputBinding/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://example.org/file1> cwl:inputBinding [ ns1:position 1 ] ;\n    sld:type cwl:File .\n\n<https://example.org/output> cwl:outputBinding [ ns2:glob \"output.txt\" ] ;\n    sld:type cwl:File .\n\n[] a cwl:CommandLineTool ;\n    cwl:baseCommand ( \"wc\" \"-l\" ) ;\n    cwl:inputs <https://example.org/file1> ;\n    cwl:outputs <https://example.org/output> ;\n    cwl:stdout \"output.txt\" .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "ExpressionTool embedded as a workflow step's run value",
+      "base-uri": "https://example.org/",
+      "content": "An `ExpressionTool` inlined as a step's `run` value, used here to pick the first file out\nof an array-typed input.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLAtomicNested/example_2_1.json",
+          "sizeBytes": 381,
+          "code": "{\n  \"class\": \"ExpressionTool\",\n  \"label\": \"Pick first file from a list\",\n  \"doc\": \"Returns the first file from a list of input files.\",\n  \"inputs\": [\n    {\n      \"id\": \"file_list\",\n      \"type\": { \"type\": \"array\", \"items\": \"File\" }\n    }\n  ],\n  \"outputs\": [\n    {\n      \"id\": \"first_file\",\n      \"type\": \"File\"\n    }\n  ],\n  \"expression\": \"$({'first_file': inputs.file_list[0]})\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLAtomicNested/example_2_1.jsonld",
+          "sizeBytes": 520,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLAtomicNested/context.jsonld\",\n  \"class\": \"ExpressionTool\",\n  \"label\": \"Pick first file from a list\",\n  \"doc\": \"Returns the first file from a list of input files.\",\n  \"inputs\": [\n    {\n      \"id\": \"file_list\",\n      \"type\": {\n        \"type\": \"array\",\n        \"items\": \"File\"\n      }\n    }\n  ],\n  \"outputs\": [\n    {\n      \"id\": \"first_file\",\n      \"type\": \"File\"\n    }\n  ],\n  \"expression\": \"$({'first_file': inputs.file_list[0]})\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLAtomicNested/example_2_1.ttl",
+          "sizeBytes": 530,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n\n<https://example.org/file_list> sld:type [ sld:type <https://example.org/array> ] .\n\n<https://example.org/first_file> sld:type cwl:File .\n\n[] a cwl:ExpressionTool ;\n    rdfs:label \"Pick first file from a list\" ;\n    rdfs:comment \"Returns the first file from a list of input files.\" ;\n    cwl:inputs <https://example.org/file_list> ;\n    cwl:outputs <https://example.org/first_file> .\n\n"
+        }
+      ]
+    }
+  ],
   "annotatedSchema": "$comment: Same as 'CWLAtomic', but 'cwlVersion' not repeated (only at root).\nallOf:\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLMetadata/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLAtomicBase/schema.yaml\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLAtomicNested"

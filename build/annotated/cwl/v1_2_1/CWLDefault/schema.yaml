@@ -1,16 +1,34 @@
 $defs:
+  AnyLiteralType:
+    oneOf:
+    - type: number
+    - type: boolean
+    - type: string
+    title: AnyLiteralType
   AnyLiteralList:
     items:
-      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/AnyLiteralType/schema.yaml
+      $ref: '#/$defs/AnyLiteralType'
     title: AnyLiteralList
     type: array
+  CWLDefaultObject:
+    additionalProperties: {}
+    not:
+      $comment: Avoid false-positive match of default File or Directory location definition.
+      properties:
+        class:
+          enum:
+          - File
+          - Directory
+          type: string
+    title: CWLDefaultObject
+    type: object
 description: Default value of input if not provided for task execution.
 oneOf:
-- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/AnyLiteralType/schema.yaml
+- $ref: '#/$defs/AnyLiteralType'
 - $ref: '#/$defs/AnyLiteralList'
 - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultLocation/schema.yaml
-- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultObject/schema.yaml
+- $ref: '#/$defs/CWLDefaultObject'
 - items:
-    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultObject/schema.yaml
+    $ref: '#/$defs/CWLDefaultObject'
   type: array
 title: CWLDefault

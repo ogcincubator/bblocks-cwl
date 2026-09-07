@@ -1,0 +1,10 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepInItem/context.jsonld",
+  "id": "file2",
+  "source": [
+    "step_a/out",
+    "step_b/out"
+  ],
+  "linkMerge": "merge_flattened",
+  "default": "fallback.txt"
+}

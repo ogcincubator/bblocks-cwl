@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "class": "@type",
+    "coresMin": "cwl:ResourceRequirement/coresMin",
+    "coresMax": "cwl:ResourceRequirement/coresMax",
+    "ramMin": "cwl:ResourceRequirement/ramMin",
+    "ramMax": "cwl:ResourceRequirement/ramMax",
+    "outdirMin": "cwl:ResourceRequirement/outdirMin",
+    "outdirMax": "cwl:ResourceRequirement/outdirMax",
+    "tmpdirMin": "cwl:ResourceRequirement/tmpdirMin",
+    "tmpdirMax": "cwl:ResourceRequirement/tmpdirMax",
+    "cwl": "https://w3id.org/cwl/cwl#",
+    "@version": 1.1
+  }
+}

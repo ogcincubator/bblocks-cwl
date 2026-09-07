@@ -1,0 +1,14 @@
+{
+  "type": "record",
+  "name": "a",
+  "fields": [
+    {
+      "name": "b",
+      "type": "int"
+    },
+    {
+      "name": "c",
+      "type": "int"
+    }
+  ]
+}

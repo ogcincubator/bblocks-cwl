@@ -1,0 +1,4 @@
+{
+  "class": "BuiltinRequirement",
+  "process": "eoepca.processes.buffer"
+}

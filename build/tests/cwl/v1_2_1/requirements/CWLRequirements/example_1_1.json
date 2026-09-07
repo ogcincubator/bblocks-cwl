@@ -1,0 +1,12 @@
+[
+  {
+    "class": "DockerRequirement",
+    "dockerPull": "docker.io/debian:stable-slim"
+  },
+  {
+    "class": "InlineJavascriptRequirement",
+    "expressionLib": [
+      "function foo() { return 1; }"
+    ]
+  }
+]

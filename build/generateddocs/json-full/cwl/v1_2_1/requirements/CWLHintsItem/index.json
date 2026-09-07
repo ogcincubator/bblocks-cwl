@@ -1,0 +1,91 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.requirements.CWLHintsItem",
+  "name": "CWLHintsItem",
+  "itemClass": "schema",
+  "abstract": "A single entry of a process's `hints` list: any one of the\nrequirement/hint classes this register models (the standard CWL requirements, plus the\nOGC-AP/WPS1/builtin hint classes), or `UnknownRequirement` as a fallback for any other\n`class`-discriminated hint not otherwise recognized. Unlike `requirements`, an unsatisfied hint\nmust not cause a workflow engine to reject the process. Kept as its own reusable, `$ref`-able union\nso downstream profiles can narrow the set of accepted hint classes without depending on\n`extensionPoints`.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.689639",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.requirements.BuiltinRequirement",
+    "ogc.cwl.v1_2_1.requirements.CWLRequirementsItem",
+    "ogc.cwl.v1_2_1.requirements.WPS1Requirement",
+    "ogc.cwl.v1_2_1.requirements.UnknownRequirement",
+    "ogc.cwl.v1_2_1.requirements.OGCAPIRequirement"
+  ],
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLHintsItem/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLHintsItem/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/CWLHintsItem/schema.yaml",
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLHintsItem/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLHintsItem/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/CWLHintsItem/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/requirements/CWLHintsItem/",
+  "description": "For any new items added, ensure they are added under 'class' of 'UnknownRequirement' as well.\nOtherwise, insufficiently restrictive classes could cause multiple matches, failing the 'oneOf' condition.\n",
+  "examples": [
+    {
+      "title": "A standard requirement class used as a hint",
+      "base-uri": "https://example.org/",
+      "content": "Any of the standard [CWLRequirements](bblocks://ogc.cwl.v1_2_1.requirements.CWLRequirements) classes \u2014\nhere `DockerRequirement` \u2014 can also appear as a `hints` entry, in which case an\nimplementation that cannot satisfy it should warn rather than fail the process.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/CWLHintsItem/example_1_1.json",
+          "sizeBytes": 78,
+          "code": "{\n  \"class\": \"DockerRequirement\",\n  \"dockerPull\": \"docker.io/python:3-slim\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/CWLHintsItem/example_1_1.jsonld",
+          "sizeBytes": 205,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLHintsItem/context.jsonld\",\n  \"class\": \"DockerRequirement\",\n  \"dockerPull\": \"docker.io/python:3-slim\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/CWLHintsItem/example_1_1.ttl",
+          "sizeBytes": 157,
+          "code": "@prefix ns1: <https://w3id.org/cwl/cwl#DockerRequirement/> .\n\n[] a <https://example.org/DockerRequirement> ;\n    ns1:dockerPull \"docker.io/python:3-slim\" .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "An unrecognized hint class",
+      "base-uri": "https://example.org/",
+      "content": "A vendor- or implementation-specific hint whose `class` this register does not model\nexplicitly falls back to `UnknownRequirement`, which accepts any `class` not already claimed\nby one of the other alternatives (the standard requirement classes, or this register's\n`BuiltinRequirement`/[OGCAPIRequirement](bblocks://ogc.cwl.v1_2_1.requirements.OGCAPIRequirement)/`WPS1Requirement`\nhints).\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/CWLHintsItem/example_2_1.json",
+          "sizeBytes": 55,
+          "code": "{\n  \"class\": \"acme:GPUAcceleration\",\n  \"gpuCount\": 1\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/CWLHintsItem/example_2_1.jsonld",
+          "sizeBytes": 182,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLHintsItem/context.jsonld\",\n  \"class\": \"acme:GPUAcceleration\",\n  \"gpuCount\": 1\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/CWLHintsItem/example_2_1.ttl",
+          "sizeBytes": 32,
+          "code": "\n[] a <acme:GPUAcceleration> .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$comment: 'For any new items added, ensure they are added under ''class'' of ''UnknownRequirement''\n  as well.\n\n  Otherwise, insufficiently restrictive classes could cause multiple matches, failing\n  the ''oneOf'' condition.\n\n  '\noneOf:\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLRequirementsItem/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/BuiltinRequirement/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/OGCAPIRequirement/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/WPS1Requirement/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/UnknownRequirement/schema.yaml\ntitle: CWLHintsItem\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/requirements/CWLHintsItem"
+}

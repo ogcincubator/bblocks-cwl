@@ -1,0 +1,7 @@
+@prefix ns1: <https://w3id.org/cwl/cwl#ResourceRequirement/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a <https://example.org/ResourceRequirement> ;
+    ns1:coresMax 1.75e+00 ;
+    ns1:coresMin 1.25e+00 .
+

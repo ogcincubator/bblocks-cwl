@@ -1,6 +1,6 @@
 {
   "properties": {
-    "clwVersion": {
+    "cwlVersion": {
       "description": "CWL version of the described application package.",
       "pattern": "^v\\d+(\\.\\d+(\\.\\d+)*)*$",
       "title": "cwlVersion",

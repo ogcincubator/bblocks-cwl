@@ -1,0 +1,30 @@
+{
+  "id": "main",
+  "class": "Workflow",
+  "inputs": {
+    "inp1": "string[]",
+    "inp2": "string[]"
+  },
+  "steps": {
+    "step1": {
+      "in": {
+        "echo_in1": "inp1",
+        "echo_in2": "inp2"
+      },
+      "out": [
+        "echo_out"
+      ],
+      "run": "#echo"
+    }
+  },
+  "outputs": [
+    {
+      "id": "out",
+      "outputSource": "step1/echo_out",
+      "type": {
+        "type": "array",
+        "items": "string"
+      }
+    }
+  ]
+}

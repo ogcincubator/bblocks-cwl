@@ -1,0 +1,9 @@
+@prefix ns1: <https://w3id.org/cwl/cwl#SoftwarePackage/> .
+@prefix ns2: <https://w3id.org/cwl/cwl#SoftwareRequirement/> .
+
+[] a <https://example.org/SoftwareRequirement> ;
+    ns2:packages [ ns1:package "bowtie" ;
+            ns1:specs <https://packages.debian.org/bowtie> ],
+        [ ns1:package "screed" ;
+            ns1:version "1.0" ] .
+

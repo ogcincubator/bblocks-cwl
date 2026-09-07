@@ -4,20 +4,21 @@
   "itemIdentifier": "ogc.cwl.v1_2_1.CWLFileOnlyParameters",
   "name": "CWLFileOnlyParameters",
   "itemClass": "schema",
-  "abstract": "CWLFileOnlyParameters",
+  "abstract": "Parameters that only apply to File-typed (or File-array-typed)\ninputs/outputs: `format` (the file's content format/media type, as an IRI or CWL expression),\n`streamable`, `loadContents` (whether to load the first 64 KiB of file content for use in\nexpressions), and `secondaryFiles` (associated files expected alongside the primary one).",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.714105",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
   "tags": [
     "cwl"
   ],
-  "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLExpression"
+    "ogc.cwl.v1_2_1.CWLExpression",
+    "ogc.cwl.v1_2_1.CWLOntology"
   ],
+  "shaclShapes": {},
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLFileOnlyParameters/context.jsonld",
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLFileOnlyParameters/schema.yaml",
@@ -25,10 +26,64 @@
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLFileOnlyParameters/schema.yaml",
   "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLFileOnlyParameters/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLFileOnlyParameters/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLFileOnlyParameters/",
-  "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "$defs:\n  CWLTypeRecordSecondaryFiles:\n    oneOf:\n    - $comment: Either an expression or the regex pattern directly.\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    - $ref: '#/$defs/CWLTypeRecordSecondaryFileSchema'\n    - items:\n        $comment: Either an expression or the regex pattern directly.\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n      type: array\n    - items:\n        $ref: '#/$defs/CWLTypeRecordSecondaryFileSchema'\n      type: array\n  CWLTypeRecordSecondaryFileSchema:\n    additionalProperties: false\n    properties:\n      pattern:\n        $comment: Either an expression or the regex pattern directly.\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n      required:\n        oneOf:\n        - type: boolean\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    required:\n    - pattern\n    type: object\nproperties:\n  format:\n    oneOf:\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    - items:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n      type: array\n  loadContents:\n    type: boolean\n    x-jsonld-id: https://w3id.org/cwl/cwl#loadContents\n  secondaryFiles:\n    $ref: '#/$defs/CWLTypeRecordSecondaryFiles'\n  streamable:\n    type: boolean\n    x-jsonld-id: https://w3id.org/cwl/cwl#FieldBase/streamable\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLFileOnlyParameters/",
+  "description": "These four fields only have meaning when the `type` (or `items`, for arrays) of the input/output\nparameter they belong to resolves to `File`; on any other type they are meaningless and should be\nabsent. Applying them is enforced separately by\n[type-system/CWLTypeRecordFieldDef](bblocks://ogc.cwl.v1_2_1.type-system.CWLTypeRecordFieldDef), which\nuses an `if`/`then`/`else` conditional on the parameter's `type`/`items` to require this schema when\n`File` is detected and forbid these properties otherwise. The directory-typed counterparts \u2014\n`loadListing` (see [LoadListingRequirement](bblocks://ogc.cwl.v1_2_1.requirements.LoadListingRequirement)) \u2014 are\ncovered separately by\n[CWLDirectoryOnlyParameters](bblocks://ogc.cwl.v1_2_1.CWLDirectoryOnlyParameters).\n\n- **`format`** \u2014 the IRI of a concept node (preferably from an ontology) representing the file's\n  content format/media type, or a CWL expression that evaluates to one. Reasoning about format\n  compatibility is done by checking that an input file's format is the same as, `owl:equivalentClass`\n  of, or `rdfs:subClassOf` the format required by the input parameter.\n- **`secondaryFiles`** \u2014 one or more patterns (or expressions) describing additional files or\n  directories that must be staged alongside the primary file, such as an index file or an external\n  reference. A plain (non-expression) pattern string is applied to the primary file's path: a\n  trailing `?` marks the secondary file optional, and each leading `^` strips one file extension from\n  the path before the remainder of the pattern is appended.\n- **`streamable`** \u2014 when `true`, indicates the file is read or written sequentially without seeking,\n  which an implementation may use to decide whether it can stream the file's contents through a named\n  pipe. Defaults to `false`.\n- **`loadContents`** \u2014 when `true`, requires the file to be a UTF-8 text file of 64 KiB or smaller;\n  the implementation reads its entire contents into the `contents` field of the File object so it is\n  available to expressions. It is a fatal error if the file exceeds the 64 KiB limit.\n",
+  "examples": [
+    {
+      "title": "Indexed FASTA input with required and optional secondary files",
+      "base-uri": "https://example.org/",
+      "content": "A `File`-typed input declaring its content format and a list of secondary files with\nexplicit `pattern`/`required` schemas, adapted from the CWL v1.2 conformance test\n`docker-array-secondaryfiles.cwl`.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLFileOnlyParameters/example_1_1.json",
+          "sizeBytes": 227,
+          "code": "{\n  \"format\": \"http://edamontology.org/format_1929\",\n  \"streamable\": false,\n  \"secondaryFiles\": [\n    {\n      \"pattern\": \".fai\",\n      \"required\": true\n    },\n    {\n      \"pattern\": \".crai\",\n      \"required\": false\n    }\n  ]\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLFileOnlyParameters/example_1_1.jsonld",
+          "sizeBytes": 350,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLFileOnlyParameters/context.jsonld\",\n  \"format\": \"http://edamontology.org/format_1929\",\n  \"streamable\": false,\n  \"secondaryFiles\": [\n    {\n      \"pattern\": \".fai\",\n      \"required\": true\n    },\n    {\n      \"pattern\": \".crai\",\n      \"required\": false\n    }\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLFileOnlyParameters/example_1_1.ttl",
+          "sizeBytes": 272,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#FieldBase/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] ns1:streamable false ;\n    cwl:format <http://edamontology.org/format_1929> ;\n    cwl:secondaryFiles [ ],\n        [ ] .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Streamed file loaded for use in an expression",
+      "base-uri": "https://example.org/",
+      "content": "A `File`-typed input whose contents are read (subject to the 64 KiB `loadContents` limit)\nand made available to CWL expressions, with a single secondary file declared using the\nshorthand string form (`^` strips one extension, trailing `?` marks it optional).\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLFileOnlyParameters/example_2_1.json",
+          "sizeBytes": 79,
+          "code": "{\n  \"loadContents\": true,\n  \"streamable\": true,\n  \"secondaryFiles\": \"^.bai?\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLFileOnlyParameters/example_2_1.jsonld",
+          "sizeBytes": 202,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLFileOnlyParameters/context.jsonld\",\n  \"loadContents\": true,\n  \"streamable\": true,\n  \"secondaryFiles\": \"^.bai?\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLFileOnlyParameters/example_2_1.ttl",
+          "sizeBytes": 236,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#FieldBase/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] ns1:streamable true ;\n    cwl:loadContents true ;\n    cwl:secondaryFiles \"^.bai?\" .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$defs:\n  CWLTypeRecordSecondaryFiles:\n    oneOf:\n    - $comment: Either an expression or the regex pattern directly.\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    - $ref: '#/$defs/CWLTypeRecordSecondaryFileSchema'\n    - items:\n        $comment: Either an expression or the regex pattern directly.\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n      type: array\n    - items:\n        $ref: '#/$defs/CWLTypeRecordSecondaryFileSchema'\n      type: array\n  CWLTypeRecordSecondaryFileSchema:\n    additionalProperties: false\n    properties:\n      pattern:\n        $comment: Either an expression or the regex pattern directly.\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n      required:\n        oneOf:\n        - type: boolean\n        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    required:\n    - pattern\n    type: object\nproperties:\n  format:\n    oneOf:\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    - items:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n      type: array\n    x-jsonld-id: https://w3id.org/cwl/cwl#format\n    x-jsonld-type: '@id'\n  loadContents:\n    type: boolean\n    x-jsonld-id: https://w3id.org/cwl/cwl#loadContents\n  secondaryFiles:\n    $ref: '#/$defs/CWLTypeRecordSecondaryFiles'\n    x-jsonld-id: https://w3id.org/cwl/cwl#secondaryFiles\n  streamable:\n    type: boolean\n    x-jsonld-id: https://w3id.org/cwl/cwl#FieldBase/streamable\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLFileOnlyParameters"
 }

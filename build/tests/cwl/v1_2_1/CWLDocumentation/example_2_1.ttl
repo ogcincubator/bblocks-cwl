@@ -1,0 +1,6 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+[] rdfs:label "align-and-sort" ;
+    rdfs:comment "Aligns reads against a reference genome using bwa-mem.",
+        "Sorts the resulting alignment with samtools sort before returning it." .
+

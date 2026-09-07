@@ -1,0 +1,4 @@
+path	@id	schema
+/class	@type	/github/workspace/build/annotated/cwl/v1_2_1/requirements/WPS1Requirement/schema.yaml
+/process		/github/workspace/build/annotated/cwl/v1_2_1/requirements/WPS1Requirement/schema.yaml
+/provider		/github/workspace/build/annotated/cwl/v1_2_1/requirements/WPS1Requirement/schema.yaml

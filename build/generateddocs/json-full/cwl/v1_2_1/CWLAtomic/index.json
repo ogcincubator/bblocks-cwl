@@ -4,10 +4,13 @@
   "itemIdentifier": "ogc.cwl.v1_2_1.CWLAtomic",
   "name": "CWLAtomic",
   "itemClass": "schema",
-  "abstract": "CWLAtomic",
+  "abstract": "A complete, top-level CWL document describing a single CommandLineTool,\nExpressionTool, or Workflow. Combines the process/workflow-specific fields (class, inputs, outputs,\nrequirements, hints, ...) with the document-level fields that only apply at the root of a CWL file:\n`cwlVersion`, `s:keywords`/authorship-style metadata, and `label`/`doc`.",
+  "isProfileOf": [
+    "ogc.cwl.v1_2_1.CWLAtomicBase"
+  ],
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.672835",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -17,9 +20,9 @@
   "shaclShapes": {},
   "dependsOn": [
     "ogc.cwl.v1_2_1.CWLAtomicBase",
+    "ogc.cwl.v1_2_1.CWLMetadata",
     "ogc.cwl.v1_2_1.CWLVersion",
-    "ogc.cwl.v1_2_1.CWLDocumentation",
-    "ogc.cwl.v1_2_1.CWLMetadata"
+    "ogc.cwl.v1_2_1.CWLDocumentation"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLAtomic/schema.yaml",
@@ -27,9 +30,62 @@
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLAtomic/schema.yaml",
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLAtomic/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLAtomic/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLAtomic/",
-  "rdfData": [],
   "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLAtomic/",
+  "examples": [
+    {
+      "title": "Simple CommandLineTool with list-form inputs and outputs",
+      "base-uri": "https://example.org/",
+      "content": "A minimal `CommandLineTool` document that pipes a file through `cat`, adapted from the\nCWL v1.2 conformance test suite. `inputs` and `outputs` are given as arrays of items, each\nidentified by its own `id`.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLAtomic/example_1_1.json",
+          "sizeBytes": 333,
+          "code": "{\n  \"cwlVersion\": \"v1.2\",\n  \"class\": \"CommandLineTool\",\n  \"baseCommand\": [\"cat\"],\n  \"inputs\": [\n    {\n      \"id\": \"file1\",\n      \"type\": \"File\"\n    }\n  ],\n  \"outputs\": [\n    {\n      \"id\": \"output\",\n      \"type\": \"File\",\n      \"outputBinding\": { \"glob\": \"output\" }\n    }\n  ],\n  \"stdin\": \"$(inputs.file1.path)\",\n  \"stdout\": \"output\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLAtomic/example_1_1.jsonld",
+          "sizeBytes": 466,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLAtomic/context.jsonld\",\n  \"cwlVersion\": \"v1.2\",\n  \"class\": \"CommandLineTool\",\n  \"baseCommand\": [\n    \"cat\"\n  ],\n  \"inputs\": [\n    {\n      \"id\": \"file1\",\n      \"type\": \"File\"\n    }\n  ],\n  \"outputs\": [\n    {\n      \"id\": \"output\",\n      \"type\": \"File\",\n      \"outputBinding\": {\n        \"glob\": \"output\"\n      }\n    }\n  ],\n  \"stdin\": \"$(inputs.file1.path)\",\n  \"stdout\": \"output\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLAtomic/example_1_1.ttl",
+          "sizeBytes": 576,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#CommandOutputBinding/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n\n<https://example.org/file1> sld:type cwl:File .\n\n<https://example.org/output> cwl:outputBinding [ ns1:glob \"output\" ] ;\n    sld:type cwl:File .\n\n[] a cwl:CommandLineTool ;\n    cwl:baseCommand ( \"cat\" ) ;\n    cwl:inputs <https://example.org/file1> ;\n    cwl:outputs <https://example.org/output> ;\n    cwl:stdin \"$(inputs.file1.path)\" ;\n    cwl:stdout \"output\" .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Dockerized CommandLineTool with mapping-form inputs and outputs",
+      "base-uri": "https://example.org/",
+      "content": "The same kind of tool as above, but with `inputs`/`outputs` given as an object keyed by\nidentifier instead of an array, and a [DockerRequirement](bblocks://ogc.cwl.v1_2_1.requirements.DockerRequirement)\ndeclared under `hints` to pin the execution container.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLAtomic/example_2_1.json",
+          "sizeBytes": 643,
+          "code": "{\n  \"cwlVersion\": \"v1.2\",\n  \"class\": \"CommandLineTool\",\n  \"doc\": \"Print the contents of a file to stdout using 'cat' running in a docker container.\",\n  \"s:keywords\": [\"cat\", \"docker\"],\n  \"hints\": {\n    \"DockerRequirement\": {\n      \"dockerPull\": \"docker.io/debian:stable-slim\"\n    }\n  },\n  \"inputs\": {\n    \"file1\": {\n      \"type\": \"File\",\n      \"label\": \"Input File\",\n      \"doc\": \"The file that will be copied using 'cat'\",\n      \"inputBinding\": { \"position\": 1 }\n    }\n  },\n  \"outputs\": {\n    \"output_file\": {\n      \"type\": \"File\",\n      \"outputBinding\": { \"glob\": \"output.txt\" }\n    }\n  },\n  \"baseCommand\": \"cat\",\n  \"stdout\": \"output.txt\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLAtomic/example_2_1.jsonld",
+          "sizeBytes": 794,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLAtomic/context.jsonld\",\n  \"cwlVersion\": \"v1.2\",\n  \"class\": \"CommandLineTool\",\n  \"doc\": \"Print the contents of a file to stdout using 'cat' running in a docker container.\",\n  \"s:keywords\": [\n    \"cat\",\n    \"docker\"\n  ],\n  \"hints\": {\n    \"DockerRequirement\": {\n      \"dockerPull\": \"docker.io/debian:stable-slim\"\n    }\n  },\n  \"inputs\": {\n    \"file1\": {\n      \"type\": \"File\",\n      \"label\": \"Input File\",\n      \"doc\": \"The file that will be copied using 'cat'\",\n      \"inputBinding\": {\n        \"position\": 1\n      }\n    }\n  },\n  \"outputs\": {\n    \"output_file\": {\n      \"type\": \"File\",\n      \"outputBinding\": {\n        \"glob\": \"output.txt\"\n      }\n    }\n  },\n  \"baseCommand\": \"cat\",\n  \"stdout\": \"output.txt\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLAtomic/example_2_1.ttl",
+          "sizeBytes": 1212,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#CommandOutputBinding/> .\n@prefix ns2: <https://w3id.org/cwl/cwl#CommandLineBinding/> .\n@prefix ns3: <https://w3id.org/cwl/cwl#DockerRequirement/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix schema: <https://schema.org/> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://example.org/file1> rdfs:label \"Input File\" ;\n    rdfs:comment \"The file that will be copied using 'cat'\" ;\n    cwl:inputBinding [ ns2:position 1 ] ;\n    sld:type cwl:File .\n\n<https://example.org/output_file> cwl:outputBinding [ ns1:glob \"output.txt\" ] ;\n    sld:type cwl:File .\n\n[] a cwl:CommandLineTool ;\n    rdfs:comment \"Print the contents of a file to stdout using 'cat' running in a docker container.\" ;\n    schema:keywords \"cat\",\n        \"docker\" ;\n    cwl:baseCommand ( \"cat\" ) ;\n    cwl:hints [ a cwl:DockerRequirement ;\n            ns3:dockerPull \"docker.io/debian:stable-slim\" ] ;\n    cwl:inputs <https://example.org/file1> ;\n    cwl:outputs <https://example.org/output_file> ;\n    cwl:stdout \"output.txt\" .\n\n"
+        }
+      ]
+    }
+  ],
   "annotatedSchema": "allOf:\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLVersion/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLMetadata/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLAtomicBase/schema.yaml\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLAtomic"

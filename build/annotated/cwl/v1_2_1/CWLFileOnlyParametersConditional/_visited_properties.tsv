@@ -1,7 +1,0 @@
-path	@id
-/format	
-/loadContents	https://w3id.org/cwl/cwl#loadContents
-/secondaryFiles	
-/secondaryFiles/pattern	
-/secondaryFiles/required	
-/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable

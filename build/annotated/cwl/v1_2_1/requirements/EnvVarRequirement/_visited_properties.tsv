@@ -1,0 +1,5 @@
+path	@id	schema
+/class	@type	/github/workspace/build/annotated/cwl/v1_2_1/requirements/EnvVarRequirement/schema.yaml
+/envDef	https://w3id.org/cwl/cwl#EnvVarRequirement/envDef	/github/workspace/build/annotated/cwl/v1_2_1/requirements/EnvVarRequirement/schema.yaml
+/envDef/_oneOf/0/envName	https://w3id.org/cwl/cwl#EnvironmentDef/envName	/github/workspace/build/annotated/cwl/v1_2_1/requirements/EnvVarRequirement/schema.yaml
+/envDef/_oneOf/0/envValue	https://w3id.org/cwl/cwl#EnvironmentDef/envValue	/github/workspace/build/annotated/cwl/v1_2_1/requirements/EnvVarRequirement/schema.yaml

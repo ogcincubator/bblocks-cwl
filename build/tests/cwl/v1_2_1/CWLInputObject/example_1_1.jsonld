@@ -1,0 +1,7 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputObject/context.jsonld",
+  "type": "File",
+  "inputBinding": {
+    "position": 2
+  }
+}

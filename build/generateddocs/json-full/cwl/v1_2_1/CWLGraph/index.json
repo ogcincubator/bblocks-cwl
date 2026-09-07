@@ -4,10 +4,10 @@
   "itemIdentifier": "ogc.cwl.v1_2_1.CWLGraph",
   "name": "CWLGraph",
   "itemClass": "schema",
-  "abstract": "CWLGraph",
+  "abstract": "A CWL document using the `$graph` form: instead of a single process or\nworkflow definition at the document root, the root carries a `$graph` array (in this register,\nconstrained to exactly one entry) of process/workflow definitions, plus the shared `cwlVersion` and\ndocument-level metadata/documentation fields.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.673077",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -17,20 +17,75 @@
   "shaclShapes": {},
   "dependsOn": [
     "ogc.cwl.v1_2_1.CWLGraphItem",
+    "ogc.cwl.v1_2_1.CWLMetadata",
     "ogc.cwl.v1_2_1.CWLVersion",
-    "ogc.cwl.v1_2_1.CWLDocumentation",
-    "ogc.cwl.v1_2_1.CWLMetadata"
+    "ogc.cwl.v1_2_1.CWLDocumentation"
   ],
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLGraph/context.jsonld",
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLGraph/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLGraph/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLGraph/schema.yaml",
-  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLGraph/context.jsonld",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLGraph/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLGraph/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLGraph/",
-  "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "allOf:\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLVersion/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLMetadata/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/schema.yaml\n- additionalProperties: {}\n  properties:\n    $graph:\n      type: array\n      items:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLGraphItem/schema.yaml\n      maxItems: 1\n      minItems: 1\n      title: CWLGraphList\n  required:\n  - $graph\n  type: object\ntitle: CWLGraph\n",
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLGraph/",
+  "description": "A `$graph` document is one of the two ways the CWL specification defines for \"packing\" a workflow\ntogether with the processes of each of its steps into a single file (the other being embedding, where\neach step's process object is copied directly into its `run` field). A `$graph` document has no process\nobject at its root; instead the root carries a [`$graph`](https://www.commonwl.org/v1.2/SchemaSalad.html#Document_graph)\narray of process objects (see [CWLGraphItem](bblocks://ogc.cwl.v1_2_1.CWLGraphItem)), each of which\n**must** carry an `id`, alongside the shared `cwlVersion` and document-level metadata/documentation\nfields that apply to every process object in the array (all of them validate and execute as the\n`cwlVersion` declared at this top level).\n\nWithin the array, a `Workflow` step's `run` field cross-references another process object elsewhere in\nthe same `$graph` by its `id`, rather than embedding it inline. When a packed document is executed\nwithout a fragment identifier picking out a specific process, the runner falls back to the process\nobject with `id` `#main` (or `main`).\n\nThis register constrains the array to exactly one entry (`minItems`/`maxItems`: 1), reflecting the\ncommon convention where a `$graph` document packages a single `Workflow` alongside no other\ncross-referenced processes, or a single standalone `CommandLineTool`/`ExpressionTool` wrapped in `$graph`\nform rather than declared at the document root. See [CWL](bblocks://ogc.cwl.v1_2_1.CWL) for the\ndocument-root schema that chooses between this `$graph` form and a direct, non-graph process\ndefinition.\n",
+  "examples": [
+    {
+      "title": "Packed CommandLineTool in $graph form",
+      "base-uri": "https://example.org/",
+      "content": "A single `CommandLineTool` packaged using the `$graph` form instead of being declared directly\nat the document root. The process object still requires an `id`, since it lives inside `$graph`.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLGraph/example_1_1.json",
+          "sizeBytes": 511,
+          "code": "{\n  \"cwlVersion\": \"v1.2\",\n  \"$graph\": [\n    {\n      \"class\": \"CommandLineTool\",\n      \"id\": \"main\",\n      \"inputs\": {\n        \"in\": {\n          \"type\": \"Any\",\n          \"inputBinding\": {}\n        }\n      },\n      \"outputs\": {\n        \"out\": {\n          \"type\": \"string\",\n          \"outputBinding\": {\n            \"glob\": \"out.txt\",\n            \"loadContents\": true,\n            \"outputEval\": \"$(self[0].contents)\"\n          }\n        }\n      },\n      \"baseCommand\": \"echo\",\n      \"stdout\": \"out.txt\"\n    }\n  ]\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLGraph/example_1_1.jsonld",
+          "sizeBytes": 621,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLGraph/context.jsonld\",\n  \"cwlVersion\": \"v1.2\",\n  \"$graph\": [\n    {\n      \"class\": \"CommandLineTool\",\n      \"id\": \"main\",\n      \"inputs\": {\n        \"in\": {\n          \"type\": \"Any\",\n          \"inputBinding\": {}\n        }\n      },\n      \"outputs\": {\n        \"out\": {\n          \"type\": \"string\",\n          \"outputBinding\": {\n            \"glob\": \"out.txt\",\n            \"loadContents\": true,\n            \"outputEval\": \"$(self[0].contents)\"\n          }\n        }\n      },\n      \"baseCommand\": \"echo\",\n      \"stdout\": \"out.txt\"\n    }\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLGraph/example_1_1.ttl",
+          "sizeBytes": 649,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#CommandOutputBinding/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://example.org/main> a cwl:CommandLineTool ;\n    cwl:baseCommand ( \"echo\" ) ;\n    cwl:inputs <https://example.org/in> ;\n    cwl:outputs <https://example.org/out> ;\n    cwl:stdout \"out.txt\" .\n\n<https://example.org/in> cwl:inputBinding [ ] ;\n    sld:type <https://example.org/Any> .\n\n<https://example.org/out> cwl:outputBinding [ ns1:glob \"out.txt\" ] ;\n    sld:type xsd:string .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Packed ExpressionTool in $graph form",
+      "base-uri": "https://example.org/",
+      "content": "A single `ExpressionTool` packaged using the `$graph` form.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLGraph/example_2_1.json",
+          "sizeBytes": 225,
+          "code": "{\n  \"cwlVersion\": \"v1.2\",\n  \"$graph\": [\n    {\n      \"class\": \"ExpressionTool\",\n      \"id\": \"main\",\n      \"inputs\": [],\n      \"outputs\": {\n        \"output\": \"Any\"\n      },\n      \"expression\": \"$({'output': null})\"\n    }\n  ]\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLGraph/example_2_1.jsonld",
+          "sizeBytes": 335,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLGraph/context.jsonld\",\n  \"cwlVersion\": \"v1.2\",\n  \"$graph\": [\n    {\n      \"class\": \"ExpressionTool\",\n      \"id\": \"main\",\n      \"inputs\": [],\n      \"outputs\": {\n        \"output\": \"Any\"\n      },\n      \"expression\": \"$({'output': null})\"\n    }\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLGraph/example_2_1.ttl",
+          "sizeBytes": 119,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n\n<https://example.org/main> a cwl:ExpressionTool ;\n    cwl:outputs \"Any\" .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "allOf:\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLVersion/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLMetadata/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/schema.yaml\n- additionalProperties: {}\n  properties:\n    $graph:\n      type: array\n      items:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLGraphItem/schema.yaml\n      maxItems: 1\n      minItems: 1\n      title: CWLGraphList\n      x-jsonld-id: '@graph'\n  required:\n  - $graph\n  type: object\ntitle: CWLGraph\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLGraph"
 }

@@ -4,10 +4,10 @@
   "itemIdentifier": "ogc.cwl.v1_2_1.CWLDocumentation",
   "name": "CWLDocumentation",
   "itemClass": "schema",
-  "abstract": "CWLDocumentation",
+  "abstract": "Shared human-readable documentation fields: a short `label` and a\nlonger free-text or multi-line `doc` description.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.673945",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -22,10 +22,64 @@
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDocumentation/schema.yaml",
   "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDocumentation/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLDocumentation/",
-  "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "properties:\n  doc:\n    oneOf:\n    - type: string\n    - items:\n        type: string\n      type: array\n  label:\n    type: string\n    x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#label\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLDocumentation/",
+  "description": "A mixin of the two human-readable documentation fields that CWL attaches to processes, workflow\nsteps, inputs, and outputs alike:\n\n- `label` \u2014 a short, single-line, human-readable name for the object it annotates. Maps to\n  `rdfs:label`.\n- `doc` \u2014 a longer free-text description, either a single string or an array of strings (rendered as\n  separate paragraphs) for documentation split across multiple entries.\n\nBoth fields are purely descriptive: they carry no execution semantics and do not affect how a CWL\ndocument runs. This block is reused across the process types\n([CWLAtomic](bblocks://ogc.cwl.v1_2_1.CWLAtomic), [CWLWorkflow](bblocks://ogc.cwl.v1_2_1.CWLWorkflow),\n[CWLAtomicNested](bblocks://ogc.cwl.v1_2_1.CWLAtomicNested),\n[CWLGraphItem](bblocks://ogc.cwl.v1_2_1.CWLGraphItem)) as well as individual\n[CWLInputObject](bblocks://ogc.cwl.v1_2_1.CWLInputObject) and\n[CWLOutputObject](bblocks://ogc.cwl.v1_2_1.CWLOutputObject) entries, so every documentable element of\na CWL document uses the same `label`/`doc` shape.\n",
+  "examples": [
+    {
+      "title": "Label and single-string doc",
+      "base-uri": "https://example.org/",
+      "content": "A short `label` alongside a single-string `doc`, adapted from the CWL conformance test\n`cat3-nodocker.cwl`.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDocumentation/example_1_1.json",
+          "sizeBytes": 99,
+          "code": "{\n  \"label\": \"cat3-nodocker.cwl\",\n  \"doc\": \"Print the contents of a file to stdout using 'cat'.\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDocumentation/example_1_1.jsonld",
+          "sizeBytes": 217,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/context.jsonld\",\n  \"label\": \"cat3-nodocker.cwl\",\n  \"doc\": \"Print the contents of a file to stdout using 'cat'.\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDocumentation/example_1_1.ttl",
+          "sizeBytes": 167,
+          "code": "@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\n[] rdfs:label \"cat3-nodocker.cwl\" ;\n    rdfs:comment \"Print the contents of a file to stdout using 'cat'.\" .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Doc as an array of strings",
+      "base-uri": "https://example.org/",
+      "content": "`doc` may instead be given as an array of strings, rendered as separate paragraphs \u2014 useful\nwhen documentation is authored in multiple parts.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDocumentation/example_2_1.json",
+          "sizeBytes": 186,
+          "code": "{\n  \"label\": \"align-and-sort\",\n  \"doc\": [\n    \"Aligns reads against a reference genome using bwa-mem.\",\n    \"Sorts the resulting alignment with samtools sort before returning it.\"\n  ]\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDocumentation/example_2_1.jsonld",
+          "sizeBytes": 304,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/context.jsonld\",\n  \"label\": \"align-and-sort\",\n  \"doc\": [\n    \"Aligns reads against a reference genome using bwa-mem.\",\n    \"Sorts the resulting alignment with samtools sort before returning it.\"\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLDocumentation/example_2_1.ttl",
+          "sizeBytes": 248,
+          "code": "@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\n[] rdfs:label \"align-and-sort\" ;\n    rdfs:comment \"Aligns reads against a reference genome using bwa-mem.\",\n        \"Sorts the resulting alignment with samtools sort before returning it.\" .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "properties:\n  doc:\n    oneOf:\n    - type: string\n    - items:\n        type: string\n      type: array\n    x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#comment\n  label:\n    type: string\n    x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#label\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLDocumentation"
 }

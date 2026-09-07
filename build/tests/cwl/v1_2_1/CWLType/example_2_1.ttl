@@ -1,0 +1,4 @@
+@prefix sld: <https://w3id.org/cwl/salad#> .
+
+[] sld:type <https://example.org/array> .
+

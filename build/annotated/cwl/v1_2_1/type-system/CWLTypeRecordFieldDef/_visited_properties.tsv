@@ -1,0 +1,29 @@
+path	@id	schema
+/name	@id	/github/workspace/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.yaml
+/type	https://w3id.org/cwl/salad#type	/github/workspace/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.yaml
+/type/_oneOf/0/_oneOf/1/items		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml
+/type/_oneOf/0/_oneOf/1/type		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml
+/type/_oneOf/0/_oneOf/2/symbols		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeEnum/schema.yaml
+/type/_oneOf/0/_oneOf/2/type		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeEnum/schema.yaml
+/type/_oneOf/0/_oneOf/4/fields	https://w3id.org/cwl/salad#fields	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordSchema/schema.yaml
+/type/_oneOf/0/_oneOf/4/fields/_oneOf/0/_oneOf/1/name	@id	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.yaml
+/type/_oneOf/0/_oneOf/4/fields/_oneOf/0/_oneOf/1/type	https://w3id.org/cwl/salad#type	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.yaml
+/type/_oneOf/0/_oneOf/4/fields/_oneOf/0/_oneOf/1/_then/format	https://w3id.org/cwl/cwl#format	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLFileOnlyParameters/schema.yaml
+/type/_oneOf/0/_oneOf/4/fields/_oneOf/0/_oneOf/1/_then/loadContents	https://w3id.org/cwl/cwl#loadContents	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLFileOnlyParameters/schema.yaml
+/type/_oneOf/0/_oneOf/4/fields/_oneOf/0/_oneOf/1/_then/secondaryFiles	https://w3id.org/cwl/cwl#secondaryFiles	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLFileOnlyParameters/schema.yaml
+/type/_oneOf/0/_oneOf/4/fields/_oneOf/0/_oneOf/1/_then/secondaryFiles/_oneOf/1/pattern		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLFileOnlyParameters/schema.yaml
+/type/_oneOf/0/_oneOf/4/fields/_oneOf/0/_oneOf/1/_then/secondaryFiles/_oneOf/1/required		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLFileOnlyParameters/schema.yaml
+/type/_oneOf/0/_oneOf/4/fields/_oneOf/0/_oneOf/1/_then/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLFileOnlyParameters/schema.yaml
+/type/_oneOf/0/_oneOf/4/fields/_oneOf/0/_oneOf/1/_else/format		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.yaml
+/type/_oneOf/0/_oneOf/4/fields/_oneOf/0/_oneOf/1/_else/loadContents		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.yaml
+/type/_oneOf/0/_oneOf/4/fields/_oneOf/0/_oneOf/1/_else/secondaryFiles		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.yaml
+/type/_oneOf/0/_oneOf/4/fields/_oneOf/0/_oneOf/1/_else/streamable		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.yaml
+/type/_oneOf/0/_oneOf/4/fields/_oneOf/0/_oneOf/1/_then/loadListing	https://w3id.org/cwl/cwl#loadListing	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDirectoryOnlyParameters/schema.yaml
+/type/_oneOf/0/_oneOf/4/fields/_oneOf/0/_oneOf/1/_else/loadListing		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.yaml
+/type/_oneOf/0/_oneOf/4/name	@id	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordSchema/schema.yaml
+/type/_oneOf/0/_oneOf/4/type	https://w3id.org/cwl/salad#type	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordSchema/schema.yaml
+/_else/format		/github/workspace/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.yaml
+/_else/loadContents		/github/workspace/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.yaml
+/_else/secondaryFiles		/github/workspace/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.yaml
+/_else/streamable		/github/workspace/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.yaml
+/_else/loadListing		/github/workspace/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.yaml

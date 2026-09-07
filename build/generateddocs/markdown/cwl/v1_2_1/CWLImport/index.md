@@ -16,6 +16,34 @@ Therefore, the complete schema will not be validated entirely, and could still b
 To ensure proper and exhaustive validation of a CWL definition with this schema, all '$import' directives
 should be resolved and extended beforehand.
 
+## Examples
+
+### Importing a schema definition file
+A `CommandLineTool` requirement that imports an external schema definition document, as
+used in practice to share custom type definitions across CWL files (e.g. via
+[SchemaDefRequirement](bblocks://ogc.cwl.v1_2_1.requirements.SchemaDefRequirement)).
+
+#### json
+```json
+{
+  "$import": "schemadef-type.yml"
+}
+
+```
+
+
+### Importing a set of output parameters
+An `outputs` section can itself be replaced wholesale by an `$import` directive, pulling
+in a document fragment defined elsewhere.
+
+#### json
+```json
+{
+  "$import": "params_inc.yml"
+}
+
+```
+
 ## Schema
 
 ```yaml

@@ -4,35 +4,66 @@
   "itemIdentifier": "ogc.cwl.v1_2_1.CWLWorkflowBase",
   "name": "CWLWorkflowBase",
   "itemClass": "schema",
-  "abstract": "CWLWorkflowBase",
+  "abstract": "Workflow-specific properties (inputs, outputs, steps, requirements, hints), shared by the root Workflow document and its nested-in-step form; not typically profiled on its own.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.675327",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
   "tags": [
-    "cwl"
+    "cwl",
+    "shared-fragment"
+  ],
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.requirements.CWLRequirements",
+    "ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepItem",
+    "ogc.cwl.v1_2_1.requirements.CWLHints",
+    "ogc.cwl.v1_2_1.CWLInputsDefinition",
+    "ogc.cwl.v1_2_1.CWLOutputsDefinition",
+    "ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepObject",
+    "ogc.cwl.v1_2_1.CWLOntology"
   ],
   "shaclShapes": {},
-  "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLInputsDefinition",
-    "ogc.cwl.v1_2_1.CWLHints",
-    "ogc.cwl.v1_2_1.CWLRequirements",
-    "ogc.cwl.v1_2_1.CWLOutputsDefinition",
-    "ogc.cwl.v1_2_1.CWLWorkflowStepItem",
-    "ogc.cwl.v1_2_1.CWLWorkflowStepObject"
-  ],
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowBase/context.jsonld",
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowBase/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowBase/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowBase/schema.yaml",
-  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowBase/context.jsonld",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowBase/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowBase/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLWorkflowBase/",
-  "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "$defs:\n  CWLWorkflowStepMap:\n    additionalProperties:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepObject/schema.yaml\n    type: object\n  CWLWorkflowStepList:\n    items:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowStepItem/schema.yaml\n    type: array\nproperties:\n  hints:\n    $comment: Technically a different subset, but lots of redefinitions to be done.\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLHints/schema.yaml\n  inputs:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputsDefinition/schema.yaml\n  outputs:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputsDefinition/schema.yaml\n  requirements:\n    $comment: Technically a different subset, but lots of redefinitions to be done.\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLRequirements/schema.yaml\n  steps:\n    oneOf:\n    - $ref: '#/$defs/CWLWorkflowStepMap'\n    - $ref: '#/$defs/CWLWorkflowStepList'\ntype: object\n",
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLWorkflowBase/",
+  "examples": [
+    {
+      "title": "Workflow structure with inputs, outputs and a single step",
+      "base-uri": "https://example.org/",
+      "content": "The `inputs`, `outputs` and `steps` fields shared by both a root\n[CWLWorkflow](bblocks://ogc.cwl.v1_2_1.CWLWorkflow) document and a nested workflow\ndeclared in a step's `run` field, adapted from the CWL v1.2 conformance test suite.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLWorkflowBase/example_1_1.json",
+          "sizeBytes": 323,
+          "code": "{\n  \"inputs\": {\n    \"file1\": \"File\"\n  },\n  \"outputs\": {\n    \"count_output\": {\n      \"type\": \"int\",\n      \"outputSource\": \"step1/count_output\"\n    }\n  },\n  \"steps\": {\n    \"step1\": {\n      \"run\": \"count-lines1-wf.cwl\",\n      \"in\": {\n        \"file1\": \"file1\"\n      },\n      \"out\": [\n        \"count_output\"\n      ]\n    }\n  }\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLWorkflowBase/example_1_1.jsonld",
+          "sizeBytes": 440,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflowBase/context.jsonld\",\n  \"inputs\": {\n    \"file1\": \"File\"\n  },\n  \"outputs\": {\n    \"count_output\": {\n      \"type\": \"int\",\n      \"outputSource\": \"step1/count_output\"\n    }\n  },\n  \"steps\": {\n    \"step1\": {\n      \"run\": \"count-lines1-wf.cwl\",\n      \"in\": {\n        \"file1\": \"file1\"\n      },\n      \"out\": [\n        \"count_output\"\n      ]\n    }\n  }\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLWorkflowBase/example_1_1.ttl",
+          "sizeBytes": 519,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#Workflow/> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://example.org/step1> cwl:in \"file1\" ;\n    cwl:out <https://example.org/count_output> ;\n    cwl:run <https://example.org/count-lines1-wf.cwl> .\n\n<https://example.org/count_output> sld:type xsd:int .\n\n[] ns1:steps <https://example.org/step1> ;\n    cwl:inputs \"File\" ;\n    cwl:outputs <https://example.org/count_output> .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$defs:\n  CWLWorkflowStepMap:\n    additionalProperties:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepObject/schema.yaml\n    type: object\n  CWLWorkflowStepList:\n    items:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepItem/schema.yaml\n    type: array\nproperties:\n  hints:\n    $comment: Technically a different subset, but lots of redefinitions to be done.\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLHints/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#hints\n    x-jsonld-container: '@type'\n  inputs:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputsDefinition/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#inputs\n    x-jsonld-container: '@id'\n  outputs:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputsDefinition/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#outputs\n    x-jsonld-container: '@id'\n  requirements:\n    $comment: Technically a different subset, but lots of redefinitions to be done.\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLRequirements/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#requirements\n    x-jsonld-container: '@type'\n  steps:\n    oneOf:\n    - $ref: '#/$defs/CWLWorkflowStepMap'\n    - $ref: '#/$defs/CWLWorkflowStepList'\n    x-jsonld-id: https://w3id.org/cwl/cwl#Workflow/steps\n    x-jsonld-container: '@id'\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLWorkflowBase"
 }

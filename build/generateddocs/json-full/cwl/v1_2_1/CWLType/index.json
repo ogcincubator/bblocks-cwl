@@ -4,10 +4,10 @@
   "itemIdentifier": "ogc.cwl.v1_2_1.CWLType",
   "name": "CWLType",
   "itemClass": "schema",
-  "abstract": "CWLType",
+  "abstract": "The set of types a CWL input or output parameter may declare: the CWL\nprimitive/File/Directory types, an inline enum, an inline record, a reference to a named type\n(record or enum) defined elsewhere, an array of one of these, or an array combining several of\nthese (a type union).",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.690093",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -16,10 +16,10 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLTypeRecordSchema",
-    "ogc.cwl.v1_2_1.CWLTypeEnum",
-    "ogc.cwl.v1_2_1.CWLTypeRecordRef",
-    "ogc.cwl.v1_2_1.CWLTypeDefinition"
+    "ogc.cwl.v1_2_1.CWLTypeDefinition",
+    "ogc.cwl.v1_2_1.type-system.CWLTypeEnum",
+    "ogc.cwl.v1_2_1.type-system.CWLTypeRecordRef",
+    "ogc.cwl.v1_2_1.type-system.CWLTypeRecordSchema"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml",
@@ -27,10 +27,73 @@
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLType/schema.yaml",
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLType/",
-  "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "$defs:\n  CWLTypeBase:\n    oneOf:\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeDefinition/schema.yaml\n    - $ref: '#/$defs/CWLTypeArray'\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeEnum/schema.yaml\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordRef/schema.yaml\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeRecordSchema/schema.yaml\n    title: CWLTypeBase\n  CWLTypeList:\n    items:\n      $ref: '#/$defs/CWLTypeBase'\n    summary: Combination of allowed CWL types.\n    title: CWLTypeList\n    type: array\n  CWLTypeArray:\n    additionalProperties: {}\n    properties:\n      items:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml\n      type:\n        enum:\n        - array\n        example: array\n        title: type\n        type: string\n    required:\n    - type\n    - items\n    summary: CWL type as list of items.\n    title: CWLTypeArray\n    type: object\noneOf:\n- $ref: '#/$defs/CWLTypeBase'\n- $ref: '#/$defs/CWLTypeList'\ntitle: CWL Type\n",
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLType/",
+  "description": "`CWLType` is the schema used everywhere a CWL document declares the `type` of an input parameter,\noutput parameter, or record field. A value conforming to `CWLType` is one of:\n\n- a [CWLTypeDefinition](bblocks://ogc.cwl.v1_2_1.CWLTypeDefinition) string \u2014 a CWL primitive\n  (`string`, `int`, `boolean`, ...), `File`, `Directory`, `Any`, or one of their `?` (nullable) or\n  `[]` (array) suffixed forms;\n- an inline enum schema (`type: enum` with a `symbols` list);\n- an inline record schema (`type: record` with `fields`);\n- a reference to a named record or enum type defined elsewhere in the document (an identifier/CURIE\n  string, e.g. `\"#MyRecord\"`);\n- an array of one of the above (`type: array` with an `items` schema), for a homogeneous array type;\n- or a JSON array combining several of these alternatives, forming a **type union** \u2014 the field\n  accepts a value matching any one of the listed types (schema-salad's \"convenience\" `type` array\n  syntax, e.g. `type: [File, \"null\"]` for an optional `File`).\n\nBecause `enum` constraints intersect cleanly under JSON Schema's `allOf`, `CWLType` (together with\n[CWLTypeDefinition](bblocks://ogc.cwl.v1_2_1.CWLTypeDefinition)) is this register's primary entry\npoint for **profiling** CWL type declarations \u2014 e.g. a platform that only wants to accept\n`File`/`Directory`/`string`/`int`/`float` and arrays thereof, and reject `enum`/`record` types, can\nnarrow `CWLTypeDefinition`'s enum to that subset with a plain `allOf` profile, without having to\nreconstruct any of the surrounding union/array machinery.\n\nSee also: [CWL Type](https://www.commonwl.org/v1.2/Workflow.html#CWLType) in the CWL specification.\n",
+  "examples": [
+    {
+      "title": "Optional File parameter (type union)",
+      "base-uri": "https://example.org/",
+      "content": "A type union combining a plain type name with the special `\"null\"` type, the schema-salad\nidiom for making a parameter optional (equivalent to the shorthand `File?`).\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLType/example_1_1.json",
+          "sizeBytes": 17,
+          "code": "[\"null\", \"File\"]\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLType/example_1_1.jsonld",
+          "sizeBytes": 221,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/context.jsonld\",\n  \"http://www.w3.org/1999/02/22-rdf-syntax-ns#value\": {\n    \"@list\": [\n      \"null\",\n      \"File\"\n    ]\n  }\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLType/example_1_1.ttl",
+          "sizeBytes": 96,
+          "code": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n\n[] rdf:value ( \"null\" \"File\" ) .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Array of Files",
+      "base-uri": "https://example.org/",
+      "content": "An inline array type declaring a parameter that accepts a list of `File` values.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLType/example_2_1.json",
+          "sizeBytes": 41,
+          "code": "{\n  \"type\": \"array\",\n  \"items\": \"File\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLType/example_2_1.jsonld",
+          "sizeBytes": 150,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/context.jsonld\",\n  \"type\": \"array\",\n  \"items\": \"File\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLType/example_2_1.ttl",
+          "sizeBytes": 89,
+          "code": "@prefix sld: <https://w3id.org/cwl/salad#> .\n\n[] sld:type <https://example.org/array> .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$defs:\n  CWLTypeBase:\n    oneOf:\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTypeDefinition/schema.yaml\n    - $ref: '#/$defs/CWLTypeArray'\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeEnum/schema.yaml\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordRef/schema.yaml\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordSchema/schema.yaml\n    title: CWLTypeBase\n  CWLTypeList:\n    items:\n      $ref: '#/$defs/CWLTypeBase'\n    summary: Combination of allowed CWL types.\n    title: CWLTypeList\n    type: array\n  CWLTypeArray:\n    additionalProperties: {}\n    properties:\n      items:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml\n      type:\n        enum:\n        - array\n        example: array\n        title: type\n        type: string\n    required:\n    - type\n    - items\n    summary: CWL type as list of items.\n    title: CWLTypeArray\n    type: object\noneOf:\n- $ref: '#/$defs/CWLTypeBase'\n- $ref: '#/$defs/CWLTypeList'\ntitle: CWL Type\n",
+  "semanticUplift": {
+    "additionalSteps": [
+      {
+        "type": "jq",
+        "code": "if (type==\"string\" or type==\"number\" or type==\"boolean\" or type==\"null\") then\n  {\"http://www.w3.org/1999/02/22-rdf-syntax-ns#value\": .}\nelif (type==\"array\" and all(.[]; type==\"string\" or type==\"number\" or type==\"boolean\" or type==\"null\")) then\n  {\"http://www.w3.org/1999/02/22-rdf-syntax-ns#value\": {\"@list\": .}}\nelse\n  .\nend\n",
+        "stage": "pre"
+      }
+    ]
+  },
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLType"
 }

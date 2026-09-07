@@ -1,0 +1,88 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.requirements.NetworkAccessRequirement",
+  "name": "NetworkAccessRequirement",
+  "itemClass": "schema",
+  "abstract": "`cwltool` extension hint/requirement indicating whether a\nprocess needs outgoing network access. If not specified or false, tools must not assume network\naccess beyond localhost; if true, the tool may make outgoing connections, though implementations may\nstill apply their own security policies. Does not imply a publicly routable address or inbound\nconnections.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.686363",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.CWLExpression",
+    "ogc.cwl.v1_2_1.CWLOntology"
+  ],
+  "shaclShapes": {},
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/NetworkAccessRequirement/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/NetworkAccessRequirement/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/NetworkAccessRequirement/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/NetworkAccessRequirement/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/NetworkAccessRequirement/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/NetworkAccessRequirement/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/NetworkAccessRequirement/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/requirements/NetworkAccessRequirement/",
+  "examples": [
+    {
+      "title": "Tool requiring outgoing network access",
+      "base-uri": "https://example.org/",
+      "content": "A `CommandLineTool` that downloads a resource over HTTP needs to declare that it requires\noutgoing network access, since implementations must otherwise assume the tool is isolated from\nthe network except for `localhost`.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/NetworkAccessRequirement/example_1_1.json",
+          "sizeBytes": 56,
+          "code": "{\n  \"class\": \"NetworkAccess\",\n  \"networkAccess\": true\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/NetworkAccessRequirement/example_1_1.jsonld",
+          "sizeBytes": 195,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/NetworkAccessRequirement/context.jsonld\",\n  \"class\": \"NetworkAccess\",\n  \"networkAccess\": true\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/NetworkAccessRequirement/example_1_1.ttl",
+          "sizeBytes": 182,
+          "code": "@prefix ns1: <https://w3id.org/cwl/cwl#NetworkAccess/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a <https://example.org/NetworkAccess> ;\n    ns1:networkAccess true .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Network access conditional on a runtime expression",
+      "base-uri": "https://example.org/",
+      "content": "`networkAccess` may also be given as a CWL expression (requires\n`InlineJavascriptRequirement`), letting the requirement depend on an input parameter rather\nthan being hard-coded.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/NetworkAccessRequirement/example_2_1.json",
+          "sizeBytes": 77,
+          "code": "{\n  \"class\": \"NetworkAccess\",\n  \"networkAccess\": \"$(inputs.allow_network)\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/NetworkAccessRequirement/example_2_1.jsonld",
+          "sizeBytes": 216,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/NetworkAccessRequirement/context.jsonld\",\n  \"class\": \"NetworkAccess\",\n  \"networkAccess\": \"$(inputs.allow_network)\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/NetworkAccessRequirement/example_2_1.ttl",
+          "sizeBytes": 152,
+          "code": "@prefix ns1: <https://w3id.org/cwl/cwl#NetworkAccess/> .\n\n[] a <https://example.org/NetworkAccess> ;\n    ns1:networkAccess \"$(inputs.allow_network)\" .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "additionalProperties: false\nproperties:\n  class:\n    $comment: Not 'NetworkAccessRequirement'\n    enum:\n    - NetworkAccess\n    type: string\n    x-jsonld-id: '@type'\n  networkAccess:\n    description: Indicate whether a process requires outgoing IPv4/IPv6 network access.\n    example: true\n    oneOf:\n    - type: boolean\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    title: NetworkAccess\n    x-jsonld-id: https://w3id.org/cwl/cwl#NetworkAccess/networkAccess\nrequired:\n- networkAccess\ntitle: NetworkAccessRequirement\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/requirements/NetworkAccessRequirement"
+}

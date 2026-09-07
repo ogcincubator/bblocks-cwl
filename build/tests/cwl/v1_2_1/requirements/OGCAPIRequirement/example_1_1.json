@@ -1,0 +1,4 @@
+{
+  "class": "OGCAPIRequirement",
+  "process": "https://example.org/ogcapi/processes/flood-detection"
+}

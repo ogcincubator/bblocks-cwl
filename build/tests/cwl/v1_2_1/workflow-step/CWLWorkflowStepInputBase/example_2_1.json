@@ -1,0 +1,8 @@
+{
+  "source": [
+    "step_a/out",
+    "step_b/out"
+  ],
+  "linkMerge": "merge_flattened",
+  "valueFrom": "$(self.length)"
+}

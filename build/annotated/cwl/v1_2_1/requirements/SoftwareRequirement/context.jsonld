@@ -1,0 +1,19 @@
+{
+  "@context": {
+    "class": "@type",
+    "packages": {
+      "@context": {
+        "package": "cwl:SoftwarePackage/package",
+        "specs": {
+          "@id": "cwl:SoftwarePackage/specs",
+          "@type": "@id"
+        },
+        "version": "cwl:SoftwarePackage/version"
+      },
+      "@id": "cwl:SoftwareRequirement/packages",
+      "@container": "@id"
+    },
+    "cwl": "https://w3id.org/cwl/cwl#",
+    "@version": 1.1
+  }
+}

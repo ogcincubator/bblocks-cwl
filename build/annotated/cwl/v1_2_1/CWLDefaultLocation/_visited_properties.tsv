@@ -1,6 +1,6 @@
-path	@id
-/basename	https://w3id.org/cwl/cwl#basename
-/class	
-/location	
-/nameroot	https://w3id.org/cwl/cwl#File/nameroot
-/path	
+path	@id	schema
+/basename	https://w3id.org/cwl/cwl#basename	/github/workspace/build/annotated/cwl/v1_2_1/CWLDefaultLocation/schema.yaml
+/class	@type	/github/workspace/build/annotated/cwl/v1_2_1/CWLDefaultLocation/schema.yaml
+/location	@id	/github/workspace/build/annotated/cwl/v1_2_1/CWLDefaultLocation/schema.yaml
+/nameroot	https://w3id.org/cwl/cwl#File/nameroot	/github/workspace/build/annotated/cwl/v1_2_1/CWLDefaultLocation/schema.yaml
+/path	https://w3id.org/cwl/cwl#path	/github/workspace/build/annotated/cwl/v1_2_1/CWLDefaultLocation/schema.yaml

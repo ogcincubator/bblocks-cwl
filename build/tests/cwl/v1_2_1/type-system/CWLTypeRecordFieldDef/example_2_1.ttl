@@ -1,0 +1,6 @@
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+@prefix sld: <https://w3id.org/cwl/salad#> .
+
+[] cwl:loadListing "deep_listing" ;
+    sld:type cwl:Directory .
+

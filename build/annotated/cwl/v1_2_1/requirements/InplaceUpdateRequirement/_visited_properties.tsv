@@ -1,0 +1,3 @@
+path	@id	schema
+/class	@type	/github/workspace/build/annotated/cwl/v1_2_1/requirements/InplaceUpdateRequirement/schema.yaml
+/inplaceUpdate	https://w3id.org/cwl/cwl#InplaceUpdateRequirement/inplaceUpdate	/github/workspace/build/annotated/cwl/v1_2_1/requirements/InplaceUpdateRequirement/schema.yaml

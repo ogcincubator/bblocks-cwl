@@ -1,0 +1,87 @@
+{
+  "title": "Validation report for ogc.cwl.v1_2_1.type-system.CWLTypeEnum - CWLTypeEnum",
+  "bblockName": "CWLTypeEnum",
+  "bblockId": "ogc.cwl.v1_2_1.type-system.CWLTypeEnum",
+  "generated": "2026-09-07T11:25:45.959566+00:00",
+  "result": true,
+  "items": [
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/cwl/v1_2_1/type-system/CWLTypeEnum/example_1_1.json",
+        "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeEnum/example_1_1.json",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_1_1.json from examples"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/cwl/v1_2_1/type-system/CWLTypeEnum/example_2_1.json",
+        "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeEnum/example_2_1.json",
+        "exampleIndex": 2,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example_2_1.json from examples"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "counts": {
+    "total": 2,
+    "passed": 2,
+    "failed": 0
+  }
+}

@@ -1,0 +1,20 @@
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+@prefix ns1: <https://w3id.org/cwl/cwl#Workflow/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sld: <https://w3id.org/cwl/salad#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/step1> cwl:in "file1" ;
+    cwl:out <https://example.org/count_output> ;
+    cwl:run <https://example.org/count-lines1-wf.cwl> .
+
+<https://example.org/count_output> sld:type xsd:int .
+
+[] a cwl:Workflow ;
+    rdfs:label "Count lines via a nested sub-workflow" ;
+    rdfs:comment "Runs a nested sub-workflow that counts lines in the input file." ;
+    ns1:steps <https://example.org/step1> ;
+    cwl:inputs "File" ;
+    cwl:outputs <https://example.org/count_output> ;
+    cwl:requirements [ a cwl:SubworkflowFeatureRequirement ] .
+

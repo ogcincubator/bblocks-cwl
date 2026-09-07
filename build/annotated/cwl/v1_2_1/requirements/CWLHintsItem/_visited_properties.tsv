@@ -1,0 +1,92 @@
+path	@id	schema
+/_oneOf/0/_oneOf/0/class		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/cwltool-CUDARequirement/schema.yaml
+/_oneOf/0/_oneOf/0/cudaComputeCapability		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/cwltool-CUDARequirement/schema.yaml
+/_oneOf/0/_oneOf/0/cudaDeviceCountMax		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/cwltool-CUDARequirement/schema.yaml
+/_oneOf/0/_oneOf/0/cudaDeviceCountMin		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/cwltool-CUDARequirement/schema.yaml
+/_oneOf/0/_oneOf/0/cudaVersionMin		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/cwltool-CUDARequirement/schema.yaml
+/_oneOf/0/_oneOf/1/class	@type	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/DockerRequirement/schema.yaml
+/_oneOf/0/_oneOf/1/dockerFile	https://w3id.org/cwl/cwl#DockerRequirement/dockerFile	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/DockerRequirement/schema.yaml
+/_oneOf/0/_oneOf/1/dockerImageId	https://w3id.org/cwl/cwl#DockerRequirement/dockerImageId	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/DockerRequirement/schema.yaml
+/_oneOf/0/_oneOf/1/dockerImport	https://w3id.org/cwl/cwl#DockerRequirement/dockerImport	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/DockerRequirement/schema.yaml
+/_oneOf/0/_oneOf/1/dockerLoad	https://w3id.org/cwl/cwl#DockerRequirement/dockerLoad	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/DockerRequirement/schema.yaml
+/_oneOf/0/_oneOf/1/dockerOutputDirectory	https://w3id.org/cwl/cwl#DockerRequirement/dockerOutputDirectory	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/DockerRequirement/schema.yaml
+/_oneOf/0/_oneOf/1/dockerPull	https://w3id.org/cwl/cwl#DockerRequirement/dockerPull	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/DockerRequirement/schema.yaml
+/_oneOf/0/_oneOf/2/class	@type	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/SoftwareRequirement/schema.yaml
+/_oneOf/0/_oneOf/2/packages	https://w3id.org/cwl/cwl#SoftwareRequirement/packages	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/SoftwareRequirement/schema.yaml
+/_oneOf/0/_oneOf/2/packages/_oneOf/0/package	https://w3id.org/cwl/cwl#SoftwarePackage/package	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/SoftwarePackage/schema.yaml
+/_oneOf/0/_oneOf/2/packages/_oneOf/0/specs	https://w3id.org/cwl/cwl#SoftwarePackage/specs	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/SoftwarePackage/schema.yaml
+/_oneOf/0/_oneOf/2/packages/_oneOf/0/version	https://w3id.org/cwl/cwl#SoftwarePackage/version	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/SoftwarePackage/schema.yaml
+/_oneOf/0/_oneOf/3/class		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ShellCommandRequirement/schema.yaml
+/_oneOf/0/_oneOf/4/class	@type	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/EnvVarRequirement/schema.yaml
+/_oneOf/0/_oneOf/4/envDef	https://w3id.org/cwl/cwl#EnvVarRequirement/envDef	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/EnvVarRequirement/schema.yaml
+/_oneOf/0/_oneOf/4/envDef/_oneOf/0/envName	https://w3id.org/cwl/cwl#EnvironmentDef/envName	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/EnvVarRequirement/schema.yaml
+/_oneOf/0/_oneOf/4/envDef/_oneOf/0/envValue	https://w3id.org/cwl/cwl#EnvironmentDef/envValue	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/EnvVarRequirement/schema.yaml
+/_oneOf/0/_oneOf/5/class	@type	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/SchemaDefRequirement/schema.yaml
+/_oneOf/0/_oneOf/5/types	https://w3id.org/cwl/cwl#SchemaDefRequirement/types	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/SchemaDefRequirement/schema.yaml
+/_oneOf/0/_oneOf/5/types/_oneOf/0/symbols		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeEnum/schema.yaml
+/_oneOf/0/_oneOf/5/types/_oneOf/0/type		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeEnum/schema.yaml
+/_oneOf/0/_oneOf/5/types/_oneOf/1/fields	https://w3id.org/cwl/salad#fields	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordSchema/schema.yaml
+/_oneOf/0/_oneOf/5/types/_oneOf/1/fields/_oneOf/0/_oneOf/0/_oneOf/0/_oneOf/1/items		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml
+/_oneOf/0/_oneOf/5/types/_oneOf/1/fields/_oneOf/0/_oneOf/0/_oneOf/0/_oneOf/1/type		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml
+/_oneOf/0/_oneOf/5/types/_oneOf/1/fields/_oneOf/0/_oneOf/1/name	@id	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.yaml
+/_oneOf/0/_oneOf/5/types/_oneOf/1/fields/_oneOf/0/_oneOf/1/type	https://w3id.org/cwl/salad#type	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.yaml
+/_oneOf/0/_oneOf/5/types/_oneOf/1/fields/_oneOf/0/_oneOf/1/_then/format	https://w3id.org/cwl/cwl#format	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLFileOnlyParameters/schema.yaml
+/_oneOf/0/_oneOf/5/types/_oneOf/1/fields/_oneOf/0/_oneOf/1/_then/loadContents	https://w3id.org/cwl/cwl#loadContents	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLFileOnlyParameters/schema.yaml
+/_oneOf/0/_oneOf/5/types/_oneOf/1/fields/_oneOf/0/_oneOf/1/_then/secondaryFiles	https://w3id.org/cwl/cwl#secondaryFiles	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLFileOnlyParameters/schema.yaml
+/_oneOf/0/_oneOf/5/types/_oneOf/1/fields/_oneOf/0/_oneOf/1/_then/secondaryFiles/_oneOf/1/pattern		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLFileOnlyParameters/schema.yaml
+/_oneOf/0/_oneOf/5/types/_oneOf/1/fields/_oneOf/0/_oneOf/1/_then/secondaryFiles/_oneOf/1/required		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLFileOnlyParameters/schema.yaml
+/_oneOf/0/_oneOf/5/types/_oneOf/1/fields/_oneOf/0/_oneOf/1/_then/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLFileOnlyParameters/schema.yaml
+/_oneOf/0/_oneOf/5/types/_oneOf/1/fields/_oneOf/0/_oneOf/1/_else/format		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.yaml
+/_oneOf/0/_oneOf/5/types/_oneOf/1/fields/_oneOf/0/_oneOf/1/_else/loadContents		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.yaml
+/_oneOf/0/_oneOf/5/types/_oneOf/1/fields/_oneOf/0/_oneOf/1/_else/secondaryFiles		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.yaml
+/_oneOf/0/_oneOf/5/types/_oneOf/1/fields/_oneOf/0/_oneOf/1/_else/streamable		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.yaml
+/_oneOf/0/_oneOf/5/types/_oneOf/1/fields/_oneOf/0/_oneOf/1/_then/loadListing	https://w3id.org/cwl/cwl#loadListing	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDirectoryOnlyParameters/schema.yaml
+/_oneOf/0/_oneOf/5/types/_oneOf/1/fields/_oneOf/0/_oneOf/1/_else/loadListing		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/schema.yaml
+/_oneOf/0/_oneOf/5/types/_oneOf/1/name	@id	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordSchema/schema.yaml
+/_oneOf/0/_oneOf/5/types/_oneOf/1/type	https://w3id.org/cwl/salad#type	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordSchema/schema.yaml
+/_oneOf/0/_oneOf/5/types/_oneOf/2/items	https://w3id.org/cwl/salad#items	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordArray/schema.yaml
+/_oneOf/0/_oneOf/5/types/_oneOf/2/type	https://w3id.org/cwl/salad#type	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordArray/schema.yaml
+/_oneOf/0/_oneOf/5/types/_oneOf/3/$import		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLImport/schema.yaml
+/_oneOf/0/_oneOf/6/class	@type	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/schema.yaml
+/_oneOf/0/_oneOf/6/listing	https://w3id.org/cwl/cwl#listing	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/schema.yaml
+/_oneOf/0/_oneOf/6/listing/_oneOf/1/_oneOf/2/entry		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/schema.yaml
+/_oneOf/0/_oneOf/6/listing/_oneOf/1/_oneOf/2/entryname		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/schema.yaml
+/_oneOf/0/_oneOf/6/listing/_oneOf/1/_oneOf/2/writable	https://w3id.org/cwl/cwl#Dirent/writable	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/schema.yaml
+/_oneOf/0/_oneOf/6/listing/_oneOf/1/_oneOf/3/checksum	https://w3id.org/cwl/cwl#File/checksum	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/schema.yaml
+/_oneOf/0/_oneOf/6/listing/_oneOf/1/_oneOf/3/class	@type	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/schema.yaml
+/_oneOf/0/_oneOf/6/listing/_oneOf/1/_oneOf/3/location		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/schema.yaml
+/_oneOf/0/_oneOf/6/listing/_oneOf/1/_oneOf/3/size	https://w3id.org/cwl/cwl#File/size	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InitialWorkDirRequirement/schema.yaml
+/_oneOf/0/_oneOf/7/class	@type	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InlineJavascriptRequirement/schema.yaml
+/_oneOf/0/_oneOf/7/expressionLib	https://w3id.org/cwl/cwl#InlineJavascriptRequirement/expressionLib	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InlineJavascriptRequirement/schema.yaml
+/_oneOf/0/_oneOf/7/expressionLib/_oneOf/1/$include		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InlineJavascriptRequirement/schema.yaml
+/_oneOf/0/_oneOf/8/class	@type	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InplaceUpdateRequirement/schema.yaml
+/_oneOf/0/_oneOf/8/inplaceUpdate	https://w3id.org/cwl/cwl#InplaceUpdateRequirement/inplaceUpdate	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/InplaceUpdateRequirement/schema.yaml
+/_oneOf/0/_oneOf/9/class	@type	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/LoadListingRequirement/schema.yaml
+/_oneOf/0/_oneOf/9/loadListing	https://w3id.org/cwl/cwl#loadListing	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/LoadListingRequirement/schema.yaml
+/_oneOf/0/_oneOf/10/class	@type	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/NetworkAccessRequirement/schema.yaml
+/_oneOf/0/_oneOf/10/networkAccess	https://w3id.org/cwl/cwl#NetworkAccess/networkAccess	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/NetworkAccessRequirement/schema.yaml
+/_oneOf/0/_oneOf/11/class	@type	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ResourceRequirement/schema.yaml
+/_oneOf/0/_oneOf/11/coresMin	https://w3id.org/cwl/cwl#ResourceRequirement/coresMin	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ResourceRequirement/schema.yaml
+/_oneOf/0/_oneOf/11/coresMax	https://w3id.org/cwl/cwl#ResourceRequirement/coresMax	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ResourceRequirement/schema.yaml
+/_oneOf/0/_oneOf/11/ramMin	https://w3id.org/cwl/cwl#ResourceRequirement/ramMin	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ResourceRequirement/schema.yaml
+/_oneOf/0/_oneOf/11/ramMax	https://w3id.org/cwl/cwl#ResourceRequirement/ramMax	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ResourceRequirement/schema.yaml
+/_oneOf/0/_oneOf/11/outdirMin	https://w3id.org/cwl/cwl#ResourceRequirement/outdirMin	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ResourceRequirement/schema.yaml
+/_oneOf/0/_oneOf/11/outdirMax	https://w3id.org/cwl/cwl#ResourceRequirement/outdirMax	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ResourceRequirement/schema.yaml
+/_oneOf/0/_oneOf/11/tmpdirMin	https://w3id.org/cwl/cwl#ResourceRequirement/tmpdirMin	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ResourceRequirement/schema.yaml
+/_oneOf/0/_oneOf/11/tmpdirMax	https://w3id.org/cwl/cwl#ResourceRequirement/tmpdirMax	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ResourceRequirement/schema.yaml
+/_oneOf/0/_oneOf/12/class		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ScatterFeatureRequirement/schema.yaml
+/_oneOf/0/_oneOf/13/class	@type	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ToolTimeLimitRequirement/schema.yaml
+/_oneOf/0/_oneOf/13/timelimit	https://w3id.org/cwl/cwl#ToolTimeLimit/timelimit	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ToolTimeLimitRequirement/schema.yaml
+/_oneOf/0/_oneOf/14/class	@type	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/WorkReuseRequirement/schema.yaml
+/_oneOf/0/_oneOf/14/enableReuse	https://w3id.org/cwl/cwl#WorkReuse/enableReuse	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/WorkReuseRequirement/schema.yaml
+/_oneOf/0/_oneOf/15/class		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/MultipleInputFeatureRequirement/schema.yaml
+/_oneOf/0/_oneOf/16/class		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/StepInputExpressionRequirement/schema.yaml
+/_oneOf/0/_oneOf/17/class		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/SubworkflowFeatureRequirement/schema.yaml
+/_oneOf/1/class	@type	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/BuiltinRequirement/schema.yaml
+/_oneOf/1/process		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/BuiltinRequirement/schema.yaml
+/_oneOf/2/class	@type	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/OGCAPIRequirement/schema.yaml
+/_oneOf/2/process		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/OGCAPIRequirement/schema.yaml
+/_oneOf/3/class	@type	https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/WPS1Requirement/schema.yaml
+/_oneOf/3/process		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/WPS1Requirement/schema.yaml
+/_oneOf/3/provider		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/WPS1Requirement/schema.yaml
+/_oneOf/4/class		https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/UnknownRequirement/schema.yaml

@@ -1,0 +1,14 @@
+{
+  "class": "InitialWorkDirRequirement",
+  "listing": [
+    {
+      "entry": "$(inputs.infile)",
+      "entryname": "bob.txt",
+      "writable": true
+    },
+    {
+      "class": "File",
+      "location": "https://example.org/data/reference.txt"
+    }
+  ]
+}

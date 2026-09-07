@@ -1,0 +1,21 @@
+{
+  "$comment": "For any new items added, ensure they are added under 'class' of 'UnknownRequirement' as well.\nOtherwise, insufficiently restrictive classes could cause multiple matches, failing the 'oneOf' condition.\n",
+  "oneOf": [
+    {
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLRequirementsItem/schema.json"
+    },
+    {
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/BuiltinRequirement/schema.json"
+    },
+    {
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/OGCAPIRequirement/schema.json"
+    },
+    {
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/WPS1Requirement/schema.json"
+    },
+    {
+      "$ref": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/UnknownRequirement/schema.json"
+    }
+  ],
+  "title": "CWLHintsItem"
+}

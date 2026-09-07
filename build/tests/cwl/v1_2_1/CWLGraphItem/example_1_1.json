@@ -1,0 +1,30 @@
+{
+  "id": "echo",
+  "class": "CommandLineTool",
+  "inputs": {
+    "echo_in1": {
+      "type": "string",
+      "inputBinding": {}
+    },
+    "echo_in2": {
+      "type": "string",
+      "inputBinding": {}
+    }
+  },
+  "outputs": {
+    "echo_out": {
+      "type": "string",
+      "outputBinding": {
+        "glob": "step1_out",
+        "loadContents": true,
+        "outputEval": "$(self[0].contents)"
+      }
+    }
+  },
+  "baseCommand": "echo",
+  "arguments": [
+    "-n",
+    "foo"
+  ],
+  "stdout": "step1_out"
+}

@@ -1,0 +1,4 @@
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+
+<https://example.org/file1> cwl:source <https://example.org/input_file> .
+

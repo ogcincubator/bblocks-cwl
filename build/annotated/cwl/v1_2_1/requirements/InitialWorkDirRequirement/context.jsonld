@@ -1,0 +1,11 @@
+{
+  "@context": {
+    "writable": "cwl:Dirent/writable",
+    "checksum": "cwl:File/checksum",
+    "size": "cwl:File/size",
+    "class": "@type",
+    "listing": "cwl:listing",
+    "cwl": "https://w3id.org/cwl/cwl#",
+    "@version": 1.1
+  }
+}

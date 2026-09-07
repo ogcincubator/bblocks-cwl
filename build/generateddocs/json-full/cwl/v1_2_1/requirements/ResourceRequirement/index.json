@@ -1,0 +1,90 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.requirements.ResourceRequirement",
+  "name": "ResourceRequirement",
+  "itemClass": "schema",
+  "abstract": "Specify basic hardware resource requirements for a CommandLineTool: minimum/maximum CPU cores, RAM, and output/temporary directory storage.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.686613",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.CWLExpression",
+    "ogc.cwl.v1_2_1.ResourceQuantityOrFractional",
+    "ogc.cwl.v1_2_1.CWLOntology"
+  ],
+  "shaclShapes": {},
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ResourceRequirement/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ResourceRequirement/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ResourceRequirement/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/ResourceRequirement/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/ResourceRequirement/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ResourceRequirement/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/requirements/ResourceRequirement/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/requirements/ResourceRequirement/",
+  "description": "Specify basic hardware resource requirements.\n\n\"min\" is the minimum amount of a resource that must be reserved to schedule a job. If \"min\"\ncannot be satisfied, the job should not be run.\n\n\"max\" is the maximum amount of a resource that the job shall be allocated. If a node has\nsufficient resources, multiple jobs may be scheduled on a single node provided each job's \"max\"\nresource requirements are met. If a job attempts to exceed its resource allocation, an\nimplementation may deny additional resources, which may result in job failure.\n\nIf both \"min\" and \"max\" are specified, an implementation may choose to allocate any amount\nbetween \"min\" and \"max\", with the actual allocation provided in the `runtime` object.\n\nIf \"min\" is specified but \"max\" is not, then \"max\" == \"min\". If \"max\" is specified but \"min\" is\nnot, then \"min\" == \"max\".\n\nIt is an error if max < min. It is an error if the value of any of these fields is negative.\n\nIf neither \"min\" nor \"max\" is specified for a resource, the defaults are: 1 core, 256 MiB RAM,\n1024 MiB output directory storage, 1024 MiB temporary directory storage.\n\nSee also: [CWL v1.2 CommandLineTool spec \u2014 ResourceRequirement](https://www.commonwl.org/v1.2/CommandLineTool.html#ResourceRequirement).\n",
+  "examples": [
+    {
+      "title": "Fixed numeric resource limits",
+      "base-uri": "https://example.org/",
+      "content": "A `ResourceRequirement` reserving between 2 and 4 CPU cores, at least 512 MiB of RAM, and up\nto 1 GiB of temporary directory storage, adapted from the CWL conformance tests\n`bwa-mem-tool.cwl` and `storage_float.cwl`.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/ResourceRequirement/example_1_1.json",
+          "sizeBytes": 109,
+          "code": "{\n  \"class\": \"ResourceRequirement\",\n  \"coresMin\": 2,\n  \"coresMax\": 4,\n  \"ramMin\": 512,\n  \"tmpdirMax\": 1024\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/ResourceRequirement/example_1_1.jsonld",
+          "sizeBytes": 243,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ResourceRequirement/context.jsonld\",\n  \"class\": \"ResourceRequirement\",\n  \"coresMin\": 2,\n  \"coresMax\": 4,\n  \"ramMin\": 512,\n  \"tmpdirMax\": 1024\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/ResourceRequirement/example_1_1.ttl",
+          "sizeBytes": 253,
+          "code": "@prefix ns1: <https://w3id.org/cwl/cwl#ResourceRequirement/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a <https://example.org/ResourceRequirement> ;\n    ns1:coresMax 4 ;\n    ns1:coresMin 2 ;\n    ns1:ramMin 512 ;\n    ns1:tmpdirMax 1024 .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Resource limits computed from an expression",
+      "base-uri": "https://example.org/",
+      "content": "Adapted from the CWL conformance test `dynresreq.cwl`. `coresMin` and `coresMax` are\ncomputed at runtime with a parameter reference expression instead of a fixed number, here\nsizing the reservation to the size of an input file (requires\n`InlineJavascriptRequirement` to be in effect for expression evaluation).\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/ResourceRequirement/example_2_1.json",
+          "sizeBytes": 127,
+          "code": "{\n  \"class\": \"ResourceRequirement\",\n  \"coresMin\": \"$(inputs.special_file.size)\",\n  \"coresMax\": \"$(inputs.special_file.size)\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/ResourceRequirement/example_2_1.jsonld",
+          "sizeBytes": 261,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/ResourceRequirement/context.jsonld\",\n  \"class\": \"ResourceRequirement\",\n  \"coresMin\": \"$(inputs.special_file.size)\",\n  \"coresMax\": \"$(inputs.special_file.size)\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/ResourceRequirement/example_2_1.ttl",
+          "sizeBytes": 212,
+          "code": "@prefix ns1: <https://w3id.org/cwl/cwl#ResourceRequirement/> .\n\n[] a <https://example.org/ResourceRequirement> ;\n    ns1:coresMax \"$(inputs.special_file.size)\" ;\n    ns1:coresMin \"$(inputs.special_file.size)\" .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "additionalProperties: false\ndescription: 'Specify basic hardware resource requirements.\n\n\n  \"min\" is the minimum amount of a resource that must be reserved to\n\n  schedule a job. If \"min\" cannot be satisfied, the job should not\n\n  be run.\n\n\n  \"max\" is the maximum amount of a resource that the job shall be\n\n  allocated. If a node has sufficient resources, multiple jobs may\n\n  be scheduled on a single node provided each job''s \"max\" resource\n\n  requirements are met. If a job attempts to exceed its resource\n\n  allocation, an implementation may deny additional resources, which\n\n  may result in job failure.\n\n\n  If both \"min\" and \"max\" are specified, an implementation may\n\n  choose to allocate any amount between \"min\" and \"max\", with the\n\n  actual allocation provided in the `runtime` object.\n\n\n  If \"min\" is specified but \"max\" is not, then \"max\" == \"min\"\n\n  If \"max\" is specified by \"min\" is not, then \"min\" == \"max\".\n\n\n  It is an error if max < min.\n\n\n  It is an error if the value of any of these fields is negative.\n\n\n  If neither \"min\" nor \"max\" is specified for a resource, use the default values below\n\n  (see also: https://www.commonwl.org/v1.2/CommandLineTool.html#ResourceRequirement).\n\n  '\nproperties:\n  class:\n    enum:\n    - ResourceRequirement\n    type: string\n    x-jsonld-id: '@type'\n  coresMin:\n    default: 1\n    description: 'Minimum reserved number of CPU cores (default is 1).\n\n\n      May be a fractional value to indicate to a scheduling algorithm that one core\n      can be allocated to\n\n      multiple jobs. For example, a value of 0.25 indicates that up to 4 jobs\n\n      may run in parallel on 1 core. A value of 1.25 means that up to 3 jobs\n\n      can run on a 4 core system (4/1.25 ~ 3).\n\n\n      Processes can only share a core allocation if the sum of each of their ''ramMax'',\n      ''tmpdirMax'', and\n\n      ''outdirMax'' requests also do not exceed the capacity of the node.\n\n\n      Processes sharing a core must have the same level of isolation (typically a\n      container\n\n      or VM) that they would normally have.\n\n\n      The reported number of CPU cores reserved for the process, which is available\n      to expressions\n\n      on the ''CommandLineTool'' as ''runtime.cores'', must be a non-zero integer,\n      and may be calculated by\n\n      rounding up the cores request to the next whole number.\n\n\n      Scheduling systems may allocate fractional CPU resources by setting quotas or\n      scheduling weights.\n\n      Scheduling systems that do not support fractional CPUs may round up the request\n      to the next whole number.\n\n      '\n    oneOf:\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ResourceQuantityOrFractional/schema.yaml\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#ResourceRequirement/coresMin\n  coresMax:\n    description: 'Maximum reserved number of CPU cores.\n\n      See ''coresMin'' for discussion about fractional CPU requests.\n\n      '\n    oneOf:\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ResourceQuantityOrFractional/schema.yaml\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#ResourceRequirement/coresMax\n  ramMin:\n    default: 256\n    description: 'Minimum reserved RAM in mebibytes (2**20) (default is 256).\n\n\n      May be a fractional value. If so, the actual RAM request must be rounded up\n\n      to the next whole number.\n\n\n      The reported amount of RAM reserved for the process, which is available to\n\n      expressions on the ''CommandLineTool'' as ''runtime.ram'', must be a non-zero\n      integer.\n\n      '\n    oneOf:\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ResourceQuantityOrFractional/schema.yaml\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#ResourceRequirement/ramMin\n  ramMax:\n    description: 'Maximum reserved RAM in mebibytes (2**20).\n\n      See ''ramMin'' for discussion about fractional RAM requests.\n\n      '\n    oneOf:\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ResourceQuantityOrFractional/schema.yaml\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#ResourceRequirement/ramMax\n  outdirMin:\n    default: 1024\n    description: 'Minimum reserved filesystem based storage for the designated output\n\n      directory in mebibytes (2**20).\n\n\n      May be a fractional value. If so, the actual storage request must be rounded\n\n      up to the next whole number.\n\n\n      The reported amount of storage reserved for the process, which is available\n\n      to expressions on the ''CommandLineTool'' as ''runtime.outdirSize'', must be\n      a non-zero integer.\n\n      '\n    oneOf:\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ResourceQuantityOrFractional/schema.yaml\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#ResourceRequirement/outdirMin\n  outdirMax:\n    description: 'Maximum reserved filesystem based storage for the designated output\n\n      directory in mebibytes (2**20).\n\n      See ''outdirMin'' for discussion about fractional storage requests.\n\n      '\n    oneOf:\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ResourceQuantityOrFractional/schema.yaml\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#ResourceRequirement/outdirMax\n  tmpdirMin:\n    default: 1024\n    description: 'Minimum reserved filesystem based storage for the designated temporary\n\n      directory in mebibytes (2**20).\n\n\n      May be a fractional value. If so, the actual storage request must be rounded\n\n      up to the next whole number.\n\n\n      The reported amount of storage reserved for the process, which is available\n\n      to expressions on the ''CommandLineTool'' as ''runtime.tmpdirSize'', must be\n      a non-zero integer.\n\n      '\n    oneOf:\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ResourceQuantityOrFractional/schema.yaml\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#ResourceRequirement/tmpdirMin\n  tmpdirMax:\n    description: 'Maximum reserved filesystem based storage for the designated temporary\n\n      directory in mebibytes (2**20).\n\n      See ''tmpdirMin'' for discussion about fractional storage requests.\n\n      '\n    oneOf:\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/ResourceQuantityOrFractional/schema.yaml\n    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLExpression/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/cwl#ResourceRequirement/tmpdirMax\ntitle: ResourceRequirement\ntype: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/requirements/ResourceRequirement"
+}

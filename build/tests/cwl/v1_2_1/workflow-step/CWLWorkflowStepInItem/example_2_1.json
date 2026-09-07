@@ -1,0 +1,9 @@
+{
+  "id": "file2",
+  "source": [
+    "step_a/out",
+    "step_b/out"
+  ],
+  "linkMerge": "merge_flattened",
+  "default": "fallback.txt"
+}

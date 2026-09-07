@@ -1,7 +1,0 @@
-{
-  "@context": {
-    "enableReuse": "cwl:WorkReuse/enableReuse",
-    "cwl": "https://w3id.org/cwl/cwl#",
-    "@version": 1.1
-  }
-}

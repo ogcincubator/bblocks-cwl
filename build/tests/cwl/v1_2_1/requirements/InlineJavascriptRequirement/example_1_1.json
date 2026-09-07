@@ -1,0 +1,6 @@
+{
+  "class": "InlineJavascriptRequirement",
+  "expressionLib": [
+    "function foo() { return 2; }"
+  ]
+}

@@ -1,0 +1,9 @@
+@prefix ns1: <https://w3id.org/cwl/cwl#EnvironmentDef/> .
+@prefix ns2: <https://w3id.org/cwl/cwl#EnvVarRequirement/> .
+
+[] a <https://example.org/EnvVarRequirement> ;
+    ns2:envDef [ ns1:envName "DATA_DIR" ;
+            ns1:envValue "$(inputs.data_dir.path)" ],
+        [ ns1:envName "LC_ALL" ;
+            ns1:envValue "en_US.UTF-8" ] .
+

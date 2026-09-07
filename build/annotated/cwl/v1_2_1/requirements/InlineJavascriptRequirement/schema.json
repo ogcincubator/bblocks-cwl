@@ -1,0 +1,47 @@
+{
+  "additionalProperties": false,
+  "description": "Indicates that the workflow platform must support inline Javascript expressions.\n\nIf this requirement is not present, the workflow platform must not perform expression interpolation\n(see also: https://www.commonwl.org/v1.2/CommandLineTool.html#InlineJavascriptRequirement).\n",
+  "properties": {
+    "class": {
+      "enum": [
+        "InlineJavascriptRequirement"
+      ],
+      "type": "string",
+      "x-jsonld-id": "@type"
+    },
+    "expressionLib": {
+      "description": "Additional code fragments that will also be inserted before executing the expression code.\nAllows for function definitions that may be called from CWL expressions.\n",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "$include": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "$include"
+            ],
+            "type": "object"
+          }
+        ],
+        "title": "exp_lib"
+      },
+      "title": "InlineJavascriptLibraries",
+      "type": "array",
+      "x-jsonld-id": "https://w3id.org/cwl/cwl#InlineJavascriptRequirement/expressionLib"
+    }
+  },
+  "required": [
+    "expressionLib"
+  ],
+  "title": "InlineJavascriptRequirement",
+  "type": "object",
+  "x-jsonld-prefixes": {
+    "cwl": "https://w3id.org/cwl/cwl#"
+  }
+}

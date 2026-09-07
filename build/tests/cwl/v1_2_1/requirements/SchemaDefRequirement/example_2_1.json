@@ -1,0 +1,8 @@
+{
+  "class": "SchemaDefRequirement",
+  "types": [
+    {
+      "$import": "types/readgroup.yml"
+    }
+  ]
+}

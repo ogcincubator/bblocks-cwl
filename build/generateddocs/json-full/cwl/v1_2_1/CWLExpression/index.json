@@ -7,7 +7,7 @@
   "abstract": "When combined with 'InlineJavascriptRequirement', this field allows runtime parameter references\n(see also: https://www.commonwl.org/v1.2/CommandLineTool.html#Expression).\n",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.677718",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -21,9 +21,37 @@
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLExpression/schema.yaml",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLExpression/",
-  "rdfData": [],
   "validationPassed": true,
-  "description": "Whenever this option is applicable for a parameter, any other 'normal' string should not be specified.\nFor JSON schema validation, there is no easy way to distinguish them unless using complicated string patterns.\n",
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLExpression/",
+  "description": "A `CWLExpression` is a string value that embeds a **parameter reference** (`$(...)`) or, when\n[InlineJavascriptRequirement](bblocks://ogc.cwl.v1_2_1.requirements.InlineJavascriptRequirement) is declared, a full\n**expression** (`$(...)` or `${...}`), to be resolved by the workflow platform at runtime rather than\ntaken as a literal string.\n\nAny field documented as accepting the pseudo-type `Expression` \u2014 for example `valueFrom` in an input\nbinding, or an argument on a `CommandLineTool` \u2014 accepts a `CWLExpression` string.\n\n## Parameter references\n\nParameter references (`$(...)`) are supported unconditionally, without needing\n`InlineJavascriptRequirement`. They use a small, JavaScript-like syntax restricted to symbol lookups,\ndotted/bracketed field access, and array indexing (e.g. `$(inputs.myfile.basename)`,\n`$(inputs.d.listing[0].path)`), and are designed so implementations can resolve them without embedding a\nfull JavaScript engine. The root namespace always provides `inputs` (the current process's input\nobject), `self` (a field-specific contextual value), and `runtime` (execution configuration details).\n\n## Expressions\n\nExpressions (`$(...)` or `${...}`) are arbitrary ECMAScript 5.1 code \u2014 an expression or a function body,\nrespectively \u2014 evaluated in a sandboxed context that must return a JSON-compatible value (`null`,\nstring, number, boolean, array, or object). They are an optional CWL feature: a document may only use\nthem if it declares [InlineJavascriptRequirement](bblocks://ogc.cwl.v1_2_1.requirements.InlineJavascriptRequirement),\nwhich is also where any shared `expressionLib` helper code is declared.\n\n## String interpolation\n\nIf a reference or expression is embedded within surrounding non-whitespace text (rather than being the\nfield's entire value), the field's effective value becomes a string: the surrounding text with each\n`$(...)`/`${...}` replaced by the textual JSON representation of its result. If the reference or\nexpression *is* the field's entire value (no other non-whitespace characters), the field's effective\nvalue is the referenced/computed value itself, preserving its original type (e.g. a boolean or object,\nnot just a string).\n\nSee also: [Parameter references](https://www.commonwl.org/v1.2/Workflow.html#Parameter_references) and\n[Expressions](https://www.commonwl.org/v1.2/Workflow.html#Expressions) in the CWL specification.\n",
+  "examples": [
+    {
+      "title": "Parameter reference",
+      "base-uri": "https://example.org/",
+      "content": "A parameter reference resolving to the `basename` field of an input `File` parameter named\n`myfile`. Since the reference is the field's entire value, the effective value preserves the\nreferenced value's original type rather than being converted to a string.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLExpression/example_1_1.json",
+          "sizeBytes": 28,
+          "code": "\"$(inputs.myfile.basename)\"\n"
+        }
+      ]
+    },
+    {
+      "title": "Inline JavaScript expression",
+      "base-uri": "https://example.org/",
+      "content": "A full JavaScript expression (requires `InlineJavascriptRequirement`) computing a value from\ntwo input parameters.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLExpression/example_2_1.json",
+          "sizeBytes": 25,
+          "code": "\"$(inputs.a + inputs.b)\"\n"
+        }
+      ]
+    }
+  ],
   "annotatedSchema": "$comment: 'Whenever this option is applicable for a parameter, any other ''normal''\n  string should not be specified.\n\n  For JSON schema validation, there is no easy way to distinguish them unless using\n  complicated string patterns.\n\n  '\ndescription: 'When combined with ''InlineJavascriptRequirement'', this field allows\n  runtime parameter references\n\n  (see also: https://www.commonwl.org/v1.2/CommandLineTool.html#Expression).\n\n  '\ntitle: CWLExpression\ntype: string\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLExpression"

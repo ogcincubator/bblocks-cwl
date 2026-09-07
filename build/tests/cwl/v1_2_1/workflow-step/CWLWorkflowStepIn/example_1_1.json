@@ -1,0 +1,14 @@
+{
+  "file1": "input_file",
+  "file2": {
+    "source": [
+      "step_a/out",
+      "step_b/out"
+    ],
+    "linkMerge": "merge_flattened"
+  },
+  "file3": {
+    "source": "step_c/out",
+    "valueFrom": "$(self.basename)"
+  }
+}

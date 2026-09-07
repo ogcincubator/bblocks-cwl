@@ -1,0 +1,26 @@
+additionalProperties: false
+description: 'Hint indicating that the Application Package corresponds to a
+
+  builtin process of this instance. (note: can only be an ''hint''
+
+  as it is unofficial CWL specification).
+
+  '
+properties:
+  class:
+    enum:
+    - BuiltinRequirement
+    type: string
+    x-jsonld-id: '@type'
+  process:
+    $comment: Builtin process identifier.
+    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLTextPatternID/schema.yaml
+required:
+- process
+- class
+title: BuiltinRequirement
+type: object
+x-jsonld-extra-terms:
+  BuiltinRequirement: https://w3id.org/ogc/cwl/BuiltinRequirement
+x-jsonld-prefixes:
+  ogccwl: https://w3id.org/ogc/cwl/

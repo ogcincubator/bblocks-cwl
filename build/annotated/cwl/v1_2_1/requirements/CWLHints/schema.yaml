@@ -1,0 +1,37 @@
+description: Non-failing additional hints that can help resolve extra requirements.
+$defs:
+  CWLHintsMap:
+    anyOf:
+    - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLRequirementsMap/schema.yaml
+    - additionalProperties:
+        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/UnknownRequirement/schema.yaml
+      properties:
+        BuiltinRequirement:
+          $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/BuiltinRequirement/schema.yaml
+        OGCAPIRequirement:
+          $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/OGCAPIRequirement/schema.yaml
+        WPS1Requirement:
+          $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/WPS1Requirement/schema.yaml
+      type: object
+    title: CWLHintsMap
+  CWLHintsList:
+    items:
+      oneOf:
+      - allOf:
+        - $comment: 'When using the list representation, ''class'' is required to
+            indicate which one is being represented.
+
+            When using the mapping representation, ''class'' is optional since it''s
+            the key, but it must match by name.
+
+            '
+          required:
+          - class
+        - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/CWLHintsItem/schema.yaml
+      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLImport/schema.yaml
+    title: CWLHintsList
+    type: array
+oneOf:
+- $ref: '#/$defs/CWLHintsMap'
+- $ref: '#/$defs/CWLHintsList'
+title: CWLHints

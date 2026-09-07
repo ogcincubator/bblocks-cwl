@@ -1,0 +1,5 @@
+@prefix ns1: <https://w3id.org/cwl/cwl#DockerRequirement/> .
+
+[] a <https://example.org/DockerRequirement> ;
+    ns1:dockerPull "docker.io/python:3-slim" .
+

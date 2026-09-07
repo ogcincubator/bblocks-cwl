@@ -1,0 +1,14 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputsDefinition/context.jsonld",
+  "@graph": [
+    {
+      "id": "count_output",
+      "type": "int",
+      "outputSource": "step2/output"
+    },
+    {
+      "id": "classification",
+      "type": "string"
+    }
+  ]
+}

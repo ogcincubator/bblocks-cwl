@@ -20,6 +20,28 @@ Since support is implementation specific, add both the ASCII-only and '\w' repre
 and let the parser reading this document apply whichever is more relevant or supported
 (see discussion: https://github.com/common-workflow-language/cwl-v1.2/pull/256#discussion_r1234037814).
 
+## Examples
+
+### Local fragment identifier
+A short local identifier, as used for an `id` field within a single (non-packed) CWL document.
+
+#### json
+```json
+"main"
+
+```
+
+
+### Fragment reference into a sub-part
+An identifier referencing a sub-part definition through a `#` fragment prefix, such as an entry
+defined under `SchemaDefRequirement`.
+
+#### json
+```json
+"sub/part#ref"
+
+```
+
 ## Schema
 
 ```yaml

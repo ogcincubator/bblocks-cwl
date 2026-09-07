@@ -1,0 +1,8 @@
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+@prefix ns1: <https://w3id.org/cwl/cwl#CommandLineBinding/> .
+
+[] ns1:itemSeparator "," ;
+    ns1:position "$(inputs.priority)" ;
+    ns1:prefix "-I" ;
+    cwl:valueFrom "$(self)" .
+

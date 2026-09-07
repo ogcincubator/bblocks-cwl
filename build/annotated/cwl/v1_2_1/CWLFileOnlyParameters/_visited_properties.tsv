@@ -1,7 +1,7 @@
-path	@id
-/format	
-/loadContents	https://w3id.org/cwl/cwl#loadContents
-/secondaryFiles	
-/secondaryFiles/pattern	
-/secondaryFiles/required	
-/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable
+path	@id	schema
+/format	https://w3id.org/cwl/cwl#format	/github/workspace/build/annotated/cwl/v1_2_1/CWLFileOnlyParameters/schema.yaml
+/loadContents	https://w3id.org/cwl/cwl#loadContents	/github/workspace/build/annotated/cwl/v1_2_1/CWLFileOnlyParameters/schema.yaml
+/secondaryFiles	https://w3id.org/cwl/cwl#secondaryFiles	/github/workspace/build/annotated/cwl/v1_2_1/CWLFileOnlyParameters/schema.yaml
+/secondaryFiles/_oneOf/1/pattern		/github/workspace/build/annotated/cwl/v1_2_1/CWLFileOnlyParameters/schema.yaml
+/secondaryFiles/_oneOf/1/required		/github/workspace/build/annotated/cwl/v1_2_1/CWLFileOnlyParameters/schema.yaml
+/streamable	https://w3id.org/cwl/cwl#FieldBase/streamable	/github/workspace/build/annotated/cwl/v1_2_1/CWLFileOnlyParameters/schema.yaml

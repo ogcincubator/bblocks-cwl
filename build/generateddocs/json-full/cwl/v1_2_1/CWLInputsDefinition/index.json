@@ -7,7 +7,7 @@
   "abstract": "All inputs available to the Application Package.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.677093",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -17,9 +17,9 @@
   "shaclShapes": {},
   "dependsOn": [
     "ogc.cwl.v1_2_1.CWLInputItem",
-    "ogc.cwl.v1_2_1.CWLInputStdIn",
-    "ogc.cwl.v1_2_1.CWLImport",
     "ogc.cwl.v1_2_1.CWLInputObject",
+    "ogc.cwl.v1_2_1.CWLImport",
+    "ogc.cwl.v1_2_1.CWLInputStdIn",
     "ogc.cwl.v1_2_1.CWLType"
   ],
   "schema": {
@@ -28,10 +28,73 @@
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputsDefinition/schema.yaml",
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputsDefinition/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputsDefinition/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputsDefinition/",
-  "rdfData": [],
   "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLInputsDefinition/",
+  "description": "Defines the input parameters of a `CommandLineTool` or `Workflow`. A process is ready to run when all\nof its required input parameters are associated with concrete values; the schema declared for each\nparameter is used both to validate a submitted input object and to build a user interface for\nconstructing one. If an input parameter is missing from the input object it must be treated as `null`\n(or as the parameter's `default`, if one is provided) for the purposes of validation and expression\nevaluation.\n\nCWL accepts two equivalent notations for this field, reflected in this schema as a `oneOf`:\n\n- a **list** of [CWLInputItem](bblocks://ogc.cwl.v1_2_1.CWLInputItem) objects, each carrying its own\n  `id`; or\n- a **map** keyed by input identifier, whose values are either a bare\n  [CWLType](bblocks://ogc.cwl.v1_2_1.CWLType) shorthand, a nested\n  [CWLInputObject](bblocks://ogc.cwl.v1_2_1.CWLInputObject), an input redirected from standard input\n  (`CWLInputStdIn`), or an `$import` directive (`CWLImport`) pulling in externally-defined inputs.\n\nThe map form is additionally constrained to not itself look like an `$import` directive, since a\ngeneric mapping of identifier strings to values could otherwise be ambiguous with the `$import` key.\n",
+  "examples": [
+    {
+      "title": "Inputs as a list",
+      "base-uri": "https://example.org/",
+      "content": "Inputs declared as a list of identified items, adapted from the CWL `binding-test.cwl`\nconformance test.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLInputsDefinition/example_1_1.json",
+          "sizeBytes": 269,
+          "code": "[\n  {\n    \"id\": \"reference\",\n    \"type\": \"File\",\n    \"inputBinding\": {\n      \"position\": 2\n    }\n  },\n  {\n    \"id\": \"reads\",\n    \"type\": {\n      \"type\": \"array\",\n      \"items\": \"File\"\n    },\n    \"inputBinding\": {\n      \"position\": 3,\n      \"prefix\": \"-XXX\"\n    }\n  }\n]\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLInputsDefinition/example_1_1.jsonld",
+          "sizeBytes": 444,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputsDefinition/context.jsonld\",\n  \"@graph\": [\n    {\n      \"id\": \"reference\",\n      \"type\": \"File\",\n      \"inputBinding\": {\n        \"position\": 2\n      }\n    },\n    {\n      \"id\": \"reads\",\n      \"type\": {\n        \"type\": \"array\",\n        \"items\": \"File\"\n      },\n      \"inputBinding\": {\n        \"position\": 3,\n        \"prefix\": \"-XXX\"\n      }\n    }\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLInputsDefinition/example_1_1.ttl",
+          "sizeBytes": 452,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#CommandLineBinding/> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://example.org/reads> cwl:inputBinding [ ns1:position 3 ;\n            ns1:prefix \"-XXX\" ] ;\n    sld:type [ sld:type <https://example.org/array> ] .\n\n<https://example.org/reference> cwl:inputBinding [ ns1:position 2 ] ;\n    sld:type cwl:File .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Inputs as a map",
+      "base-uri": "https://example.org/",
+      "content": "Inputs declared as a map keyed by identifier, adapted from the CWL\n`scatter-valueFrom-tool.cwl` conformance test. Map values may be a nested input object, or\na bare type shorthand as with `count-lines17-wf.cwl`'s single-input form.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLInputsDefinition/example_2_1.json",
+          "sizeBytes": 212,
+          "code": "{\n  \"message\": {\n    \"type\": \"string\",\n    \"inputBinding\": {\n      \"position\": 1\n    }\n  },\n  \"scattered_message\": {\n    \"type\": \"string\",\n    \"inputBinding\": {\n      \"position\": 2\n    }\n  },\n  \"file1\": \"File\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLInputsDefinition/example_2_1.jsonld",
+          "sizeBytes": 435,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputsDefinition/context.jsonld\",\n  \"@graph\": [\n    {\n      \"id\": \"message\",\n      \"type\": \"string\",\n      \"inputBinding\": {\n        \"position\": 1\n      }\n    },\n    {\n      \"id\": \"scattered_message\",\n      \"type\": \"string\",\n      \"inputBinding\": {\n        \"position\": 2\n      }\n    },\n    {\n      \"id\": \"file1\",\n      \"type\": \"File\"\n    }\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLInputsDefinition/example_2_1.ttl",
+          "sizeBytes": 451,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#CommandLineBinding/> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://example.org/file1> sld:type cwl:File .\n\n<https://example.org/message> cwl:inputBinding [ ns1:position 1 ] ;\n    sld:type xsd:string .\n\n<https://example.org/scattered_message> cwl:inputBinding [ ns1:position 2 ] ;\n    sld:type xsd:string .\n\n"
+        }
+      ]
+    }
+  ],
   "annotatedSchema": "description: All inputs available to the Application Package.\n$defs:\n  CWLInputMap:\n    additionalProperties:\n      oneOf:\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputObject/schema.yaml\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputStdIn/schema.yaml\n      - $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLImport/schema.yaml\n    description: Package inputs defined as mapping.\n    properties: {}\n    required: []\n    title: CWLInputMap\n    type: object\n  CWLInputList:\n    description: Package inputs defined as items.\n    items:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputItem/schema.yaml\n    title: CWLInputList\n    type: array\noneOf:\n- $ref: '#/$defs/CWLInputList'\n- $comment: Avoid 'oneOf' conflict of generic mapping key strings as input identifier\n    matching against '$import'.\n  allOf:\n  - $ref: '#/$defs/CWLInputMap'\n  - not:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLImport/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLImport/schema.yaml\ntitle: CWLInputsDefinition\n",
+  "semanticUplift": {
+    "additionalSteps": [
+      {
+        "type": "jq",
+        "code": "if type == \"object\" then\n  to_entries | map({id: .key} + (if (.value | type) == \"object\" then .value else {type: .value} end))\nelse . end\n",
+        "stage": "pre"
+      }
+    ]
+  },
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLInputsDefinition"
 }

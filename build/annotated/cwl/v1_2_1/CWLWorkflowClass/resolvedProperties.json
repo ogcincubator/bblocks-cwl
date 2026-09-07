@@ -1,0 +1,1 @@
+{"defs":{},"properties":[{"path":["class"],"id":"@type","schema_type":"string","enum":["Workflow"],"sources":["bblocks://ogc.cwl.v1_2_1.CWLWorkflowClass"],"effectiveId":"@type"}]}

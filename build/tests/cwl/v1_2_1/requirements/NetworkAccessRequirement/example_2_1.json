@@ -1,0 +1,4 @@
+{
+  "class": "NetworkAccess",
+  "networkAccess": "$(inputs.allow_network)"
+}

@@ -1,6 +1,0 @@
-path	@id
-/class	
-/packages	
-/packages/package	https://w3id.org/cwl/cwl#SoftwarePackage/package
-/packages/specs	
-/packages/version	https://w3id.org/cwl/cwl#SoftwarePackage/version

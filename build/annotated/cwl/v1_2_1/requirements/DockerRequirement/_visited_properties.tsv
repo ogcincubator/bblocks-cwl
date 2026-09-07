@@ -1,0 +1,8 @@
+path	@id	schema
+/class	@type	/github/workspace/build/annotated/cwl/v1_2_1/requirements/DockerRequirement/schema.yaml
+/dockerFile	https://w3id.org/cwl/cwl#DockerRequirement/dockerFile	/github/workspace/build/annotated/cwl/v1_2_1/requirements/DockerRequirement/schema.yaml
+/dockerImageId	https://w3id.org/cwl/cwl#DockerRequirement/dockerImageId	/github/workspace/build/annotated/cwl/v1_2_1/requirements/DockerRequirement/schema.yaml
+/dockerImport	https://w3id.org/cwl/cwl#DockerRequirement/dockerImport	/github/workspace/build/annotated/cwl/v1_2_1/requirements/DockerRequirement/schema.yaml
+/dockerLoad	https://w3id.org/cwl/cwl#DockerRequirement/dockerLoad	/github/workspace/build/annotated/cwl/v1_2_1/requirements/DockerRequirement/schema.yaml
+/dockerOutputDirectory	https://w3id.org/cwl/cwl#DockerRequirement/dockerOutputDirectory	/github/workspace/build/annotated/cwl/v1_2_1/requirements/DockerRequirement/schema.yaml
+/dockerPull	https://w3id.org/cwl/cwl#DockerRequirement/dockerPull	/github/workspace/build/annotated/cwl/v1_2_1/requirements/DockerRequirement/schema.yaml

@@ -1,0 +1,5 @@
+@prefix ns1: <https://w3id.org/cwl/cwl#SchemaDefRequirement/> .
+
+[] a <https://example.org/SchemaDefRequirement> ;
+    ns1:types [ ] .
+

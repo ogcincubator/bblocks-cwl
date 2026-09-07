@@ -4,23 +4,24 @@
   "itemIdentifier": "ogc.cwl.v1_2_1.CWLInputObject",
   "name": "CWLInputObject",
   "itemClass": "schema",
-  "abstract": "CWLInputObject",
+  "abstract": "The type/parameter definition of a single CWL input when expressed\nas a nested object (as opposed to a bare type shorthand): `type`, an optional `inputBinding`, plus\nthe shared default-type-consistency and documentation fields.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.690237",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
   "tags": [
     "cwl"
   ],
-  "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.InputBinding",
     "ogc.cwl.v1_2_1.CWLDefaultTypedConditional",
-    "ogc.cwl.v1_2_1.CWLType",
-    "ogc.cwl.v1_2_1.CWLDocumentation"
+    "ogc.cwl.v1_2_1.InputBinding",
+    "ogc.cwl.v1_2_1.CWLOntology",
+    "ogc.cwl.v1_2_1.CWLDocumentation",
+    "ogc.cwl.v1_2_1.CWLType"
   ],
+  "shaclShapes": {},
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputObject/context.jsonld",
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputObject/schema.yaml",
@@ -28,9 +29,63 @@
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputObject/schema.yaml",
   "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputObject/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputObject/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLInputObject/",
-  "rdfData": [],
   "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLInputObject/",
+  "description": "This is the nested-object form used to describe a single input parameter of a `CommandLineTool` or\n`Workflow` when more than a bare type is needed. It is one of the value shapes accepted for an entry\nof the map form of [CWLInputsDefinition](bblocks://ogc.cwl.v1_2_1.CWLInputsDefinition) \u2014 the identifier\nitself comes from the surrounding map key rather than from a property on this object (contrast with\n[CWLInputItem](bblocks://ogc.cwl.v1_2_1.CWLInputItem), the list-form entry, which carries its own `id`).\n\nAt minimum a [CWLType](bblocks://ogc.cwl.v1_2_1.CWLType) is required, specifying the valid type(s) of\ndata that may be assigned to the parameter. Beyond that, this object may declare:\n\n- an [InputBinding](bblocks://ogc.cwl.v1_2_1.InputBinding), describing how the parameter's value is\n  turned into a command line argument (position, prefix, item separator, etc.);\n- a `default` value, applied when the parameter is missing from the input object or explicitly `null`,\n  before any expressions (such as `valueFrom`) are evaluated \u2014 its shape is cross-checked against the\n  declared `type` (see [CWLDefaultTypedConditional](bblocks://ogc.cwl.v1_2_1.CWLDefaultTypedConditional));\n- documentation fields (`doc`, `label`) shared with other CWL elements\n  (see [CWLDocumentation](bblocks://ogc.cwl.v1_2_1.CWLDocumentation)).\n\nA process is ready to run once every required input parameter is associated with a concrete value; the\ninput parameters' schemas are also what a runner or UI uses to validate \u2014 or build a form for \u2014 the\ninput object supplied at invocation time.\n",
+  "examples": [
+    {
+      "title": "File input with command-line binding",
+      "base-uri": "https://example.org/",
+      "content": "A single required `File` input, positioned on the command line, adapted from the\n`reference` input of the CWL `binding-test.cwl` conformance test.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLInputObject/example_1_1.json",
+          "sizeBytes": 64,
+          "code": "{\n  \"type\": \"File\",\n  \"inputBinding\": {\n    \"position\": 2\n  }\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLInputObject/example_1_1.jsonld",
+          "sizeBytes": 180,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputObject/context.jsonld\",\n  \"type\": \"File\",\n  \"inputBinding\": {\n    \"position\": 2\n  }\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLInputObject/example_1_1.ttl",
+          "sizeBytes": 268,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#CommandLineBinding/> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] cwl:inputBinding [ ns1:position 2 ] ;\n    sld:type cwl:File .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Optional numeric input with a default",
+      "base-uri": "https://example.org/",
+      "content": "An optional integer input with a default value used when the parameter is omitted from\nthe input object. The `default` value's type must be consistent with the declared `type`.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLInputObject/example_2_1.json",
+          "sizeBytes": 89,
+          "code": "{\n  \"type\": \"int?\",\n  \"default\": 10,\n  \"doc\": \"Threshold value used to filter results\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLInputObject/example_2_1.jsonld",
+          "sizeBytes": 205,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputObject/context.jsonld\",\n  \"type\": \"int?\",\n  \"default\": 10,\n  \"doc\": \"Threshold value used to filter results\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLInputObject/example_2_1.ttl",
+          "sizeBytes": 275,
+          "code": "@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] rdfs:comment \"Threshold value used to filter results\" ;\n    sld:default 10 ;\n    sld:type <https://example.org/int> .\n\n"
+        }
+      ]
+    }
+  ],
   "annotatedSchema": "$defs:\n  CWLInputObjectBase:\n    additionalProperties: {}\n    properties:\n      inputBinding:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/InputBinding/schema.yaml\n        additionalProperties: {}\n        x-jsonld-id: https://w3id.org/cwl/cwl#inputBinding\n      type:\n        $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml\n    required:\n    - type\n    type: object\nallOf:\n- $ref: '#/$defs/CWLInputObjectBase'\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefaultTypedConditional/schema.yaml\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/schema.yaml\nsummary: CWL type definition with parameters.\ntitle: CWLInputObject\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLInputObject"

@@ -1,0 +1,5 @@
+@prefix ns1: <https://w3id.org/cwl/cwl#InlineJavascriptRequirement/> .
+
+[] a <https://example.org/InlineJavascriptRequirement> ;
+    ns1:expressionLib "function foo() { return 2; }" .
+

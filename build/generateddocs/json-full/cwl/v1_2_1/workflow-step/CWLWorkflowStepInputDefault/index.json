@@ -1,0 +1,90 @@
+
+
+{
+  "itemIdentifier": "ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepInputDefault",
+  "name": "CWLWorkflowStepInputDefault",
+  "itemClass": "schema",
+  "abstract": "The 'default' property for a workflow step input, shared by the step input's list and map representations; not typically profiled on its own.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.713753",
+  "dateOfLastChange": "2026-09-07",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl",
+    "shared-fragment"
+  ],
+  "dependsOn": [
+    "ogc.cwl.v1_2_1.SchemaSaladOntology",
+    "ogc.cwl.v1_2_1.CWLDefault"
+  ],
+  "shaclShapes": {},
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepInputDefault/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepInputDefault/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepInputDefault/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/workflow-step/CWLWorkflowStepInputDefault/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/workflow-step/CWLWorkflowStepInputDefault/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepInputDefault/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/workflow-step/CWLWorkflowStepInputDefault/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepInputDefault/",
+  "description": "CWL 'type' is not specified at this level for step inputs\n(it is provided by the mapped input of the nested tool instead).\nTherefore, cannot validate against 'CWLDefaultTypedConditional'.\n",
+  "examples": [
+    {
+      "title": "Literal default value",
+      "base-uri": "https://example.org/",
+      "content": "A workflow step input that falls back to a literal string value when no\n`source` is connected or the connected source produces `null`.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepInputDefault/example_1_1.json",
+          "sizeBytes": 28,
+          "code": "{\n  \"default\": \"step1dir\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepInputDefault/example_1_1.jsonld",
+          "sizeBytes": 171,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepInputDefault/context.jsonld\",\n  \"default\": \"step1dir\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepInputDefault/example_1_1.ttl",
+          "sizeBytes": 140,
+          "code": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n\n[] sld:default ( \"step1dir\" ) .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Default value as a list",
+      "base-uri": "https://example.org/",
+      "content": "A workflow step input defaulting to a list of literal values.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepInputDefault/example_2_1.json",
+          "sizeBytes": 33,
+          "code": "{\n  \"default\": [\"a\", \"b\", \"c\"]\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepInputDefault/example_2_1.jsonld",
+          "sizeBytes": 192,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/workflow-step/CWLWorkflowStepInputDefault/context.jsonld\",\n  \"default\": [\n    \"a\",\n    \"b\",\n    \"c\"\n  ]\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/workflow-step/CWLWorkflowStepInputDefault/example_2_1.ttl",
+          "sizeBytes": 141,
+          "code": "@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n\n[] sld:default ( \"a\" \"b\" \"c\" ) .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$comment: 'CWL ''type'' is not specified at this level for step inputs\n\n  (it is provided by the mapped input of the nested tool instead).\n\n  Therefore, cannot validate against ''CWLDefaultTypedConditional''.\n\n  '\nproperties:\n  default:\n    $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDefault/schema.yaml\n    x-jsonld-id: https://w3id.org/cwl/salad#default\n    x-jsonld-container: '@list'\ntype: object\nx-jsonld-prefixes:\n  sld: https://w3id.org/cwl/salad#\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
+  "gitPath": "_sources/v1_2_1/workflow-step/CWLWorkflowStepInputDefault"
+}

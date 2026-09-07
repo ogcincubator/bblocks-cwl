@@ -1,0 +1,15 @@
+{
+  "message": {
+    "type": "string",
+    "inputBinding": {
+      "position": 1
+    }
+  },
+  "scattered_message": {
+    "type": "string",
+    "inputBinding": {
+      "position": 2
+    }
+  },
+  "file1": "File"
+}

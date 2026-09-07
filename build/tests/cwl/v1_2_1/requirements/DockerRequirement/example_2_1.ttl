@@ -1,0 +1,6 @@
+@prefix ns1: <https://w3id.org/cwl/cwl#DockerRequirement/> .
+
+[] a <https://example.org/DockerRequirement> ;
+    ns1:dockerOutputDirectory "/other" ;
+    ns1:dockerPull "docker.io/debian:stable-slim" .
+

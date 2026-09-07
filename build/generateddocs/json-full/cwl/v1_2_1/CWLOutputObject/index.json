@@ -4,32 +4,89 @@
   "itemIdentifier": "ogc.cwl.v1_2_1.CWLOutputObject",
   "name": "CWLOutputObject",
   "itemClass": "schema",
-  "abstract": "CWLOutputObject",
+  "abstract": "The type/parameter definition of a single CWL output when\nexpressed as a nested object (as opposed to a bare type shorthand): `type`, an optional\n`outputBinding`, plus the shared documentation fields.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.690989",
-  "dateOfLastChange": "2026-01-13",
+  "dateOfLastChange": "2026-09-07",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
   "tags": [
     "cwl"
   ],
-  "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLType",
+    "ogc.cwl.v1_2_1.OutputBinding",
+    "ogc.cwl.v1_2_1.SchemaSaladOntology",
+    "ogc.cwl.v1_2_1.CWLOntology",
     "ogc.cwl.v1_2_1.CWLDocumentation",
-    "ogc.cwl.v1_2_1.OutputBinding"
+    "ogc.cwl.v1_2_1.CWLType"
   ],
+  "shaclShapes": {},
+  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputObject/context.jsonld",
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputObject/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputObject/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputObject/schema.yaml",
-  "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputObject/context.jsonld",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputObject/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputObject/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-cwl/_sources/v1_2_1/CWLOutputObject/",
-  "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "allOf:\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/schema.yaml\n- additionalProperties: {}\n  properties:\n    outputBinding:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/OutputBinding/schema.yaml\n    type:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml\n  required:\n  - type\n  summary: CWL type definition with parameters.\n  title: CWLOutputObject\n  type: object\n",
+  "testOutputs": "https://github.com/ogcincubator/bblocks-cwl/blob/master/build/tests/cwl/v1_2_1/CWLOutputObject/",
+  "description": "An output parameter of a `CommandLineTool` or `Workflow`, expressed as a nested object rather than\nusing the bare [CWLType](bblocks://ogc.cwl.v1_2_1.CWLType) shorthand. This is the value shape used\nwherever an output is written as a mapping under its identifier \u2014 for example as an entry of a\n[CWLOutputsDefinition](bblocks://ogc.cwl.v1_2_1.CWLOutputsDefinition) expressed in map form \u2014 so the\nidentifier itself is carried externally as the map key rather than as a property of this object.\n\nThe `type` property (required) specifies the valid type(s) of data that may be assigned to the\noutput, following the same [CWLType](bblocks://ogc.cwl.v1_2_1.CWLType) type system used across CWL \u2014\na primitive (`File`, `Directory`, `string`, ...), an array of a type, a nullable type, or an inline\nrecord/enum schema.\n\nThe optional `outputBinding` property describes how the value of the output is generated or\nextracted, typically by globbing files produced by the process on disk \u2014 see\n[OutputBinding](bblocks://ogc.cwl.v1_2_1.OutputBinding). It is not required: `type: stdout`/`type:\nstderr` outputs (see [CWLOutputStdOut](bblocks://ogc.cwl.v1_2_1.CWLOutputStdOut) and\n[CWLOutputStdErr](bblocks://ogc.cwl.v1_2_1.CWLOutputStdErr)) capture the process's standard streams\ndirectly and need no `outputBinding` of their own.\n\n`CWLOutputObject` also mixes in [CWLDocumentation](bblocks://ogc.cwl.v1_2_1.CWLDocumentation), so\n`doc` and `label` may be used to document the parameter for humans and tooling.\n\nThe full CWL specification additionally defines `secondaryFiles`, `format`, and `streamable` on\noutput parameters (for describing companion files, the output's media type, and whether it may be\nread as a stream). These are not modeled as explicit properties here, but the schema's open\n`additionalProperties` still allows them to appear on an instance.\n",
+  "examples": [
+    {
+      "title": "File output located with a glob pattern",
+      "base-uri": "https://example.org/",
+      "content": "A `File` output whose value is retrieved from disk after the tool runs, using\n`outputBinding.glob` to locate it.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLOutputObject/example_1_1.json",
+          "sizeBytes": 122,
+          "code": "{\n  \"type\": \"File\",\n  \"outputBinding\": {\n    \"glob\": \"output.txt\"\n  },\n  \"doc\": \"The output file produced by the tool.\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLOutputObject/example_1_1.jsonld",
+          "sizeBytes": 239,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputObject/context.jsonld\",\n  \"type\": \"File\",\n  \"outputBinding\": {\n    \"glob\": \"output.txt\"\n  },\n  \"doc\": \"The output file produced by the tool.\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLOutputObject/example_1_1.ttl",
+          "sizeBytes": 342,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#CommandOutputBinding/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n\n[] rdfs:comment \"The output file produced by the tool.\" ;\n    cwl:outputBinding [ ns1:glob \"output.txt\" ] ;\n    sld:type cwl:File .\n\n"
+        }
+      ]
+    },
+    {
+      "title": "Array of Directory outputs",
+      "base-uri": "https://example.org/",
+      "content": "An output whose type is an array of `Directory`, matching every directory produced under\n`outdir/`.\n",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLOutputObject/example_2_1.json",
+          "sizeBytes": 77,
+          "code": "{\n  \"type\": \"Directory[]\",\n  \"outputBinding\": {\n    \"glob\": \"outdir/*\"\n  }\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLOutputObject/example_2_1.jsonld",
+          "sizeBytes": 194,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLOutputObject/context.jsonld\",\n  \"type\": \"Directory[]\",\n  \"outputBinding\": {\n    \"glob\": \"outdir/*\"\n  }\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLOutputObject/example_2_1.ttl",
+          "sizeBytes": 250,
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#CommandOutputBinding/> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n\n[] cwl:outputBinding [ ns1:glob \"outdir/*\" ] ;\n    sld:type <https://example.org/Directory[]> .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "allOf:\n- $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLDocumentation/schema.yaml\n- additionalProperties: {}\n  properties:\n    outputBinding:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/OutputBinding/schema.yaml\n      x-jsonld-id: https://w3id.org/cwl/cwl#outputBinding\n    type:\n      $ref: https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml\n      x-jsonld-id: https://w3id.org/cwl/salad#type\n      x-jsonld-type: '@vocab'\n  required:\n  - type\n  summary: CWL type definition with parameters.\n  title: CWLOutputObject\n  type: object\nx-jsonld-prefixes:\n  cwl: https://w3id.org/cwl/cwl#\n  sld: https://w3id.org/cwl/salad#\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-cwl",
   "gitPath": "_sources/v1_2_1/CWLOutputObject"
 }

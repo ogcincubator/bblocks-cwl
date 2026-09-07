@@ -1,0 +1,9 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/SchemaDefRequirement/context.jsonld",
+  "class": "SchemaDefRequirement",
+  "types": [
+    {
+      "$import": "types/readgroup.yml"
+    }
+  ]
+}

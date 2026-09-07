@@ -1,0 +1,7 @@
+{
+  "id": "output_file",
+  "type": "File",
+  "outputBinding": {
+    "glob": "output.txt"
+  }
+}

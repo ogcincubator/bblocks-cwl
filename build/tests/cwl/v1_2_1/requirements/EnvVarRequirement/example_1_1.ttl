@@ -1,0 +1,5 @@
+@prefix ns1: <https://w3id.org/cwl/cwl#EnvVarRequirement/> .
+
+[] a <https://example.org/EnvVarRequirement> ;
+    ns1:envDef "$(inputs.in)" .
+

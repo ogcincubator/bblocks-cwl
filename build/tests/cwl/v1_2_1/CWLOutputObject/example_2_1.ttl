@@ -1,0 +1,7 @@
+@prefix cwl: <https://w3id.org/cwl/cwl#> .
+@prefix ns1: <https://w3id.org/cwl/cwl#CommandOutputBinding/> .
+@prefix sld: <https://w3id.org/cwl/salad#> .
+
+[] cwl:outputBinding [ ns1:glob "outdir/*" ] ;
+    sld:type <https://example.org/Directory[]> .
+

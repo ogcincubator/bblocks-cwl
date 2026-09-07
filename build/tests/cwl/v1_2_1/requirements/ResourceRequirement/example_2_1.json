@@ -1,0 +1,5 @@
+{
+  "class": "ResourceRequirement",
+  "coresMin": "$(inputs.special_file.size)",
+  "coresMax": "$(inputs.special_file.size)"
+}

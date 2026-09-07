@@ -1,0 +1,6 @@
+@prefix ns1: <https://w3id.org/cwl/cwl#ResourceRequirement/> .
+
+[] a <https://example.org/ResourceRequirement> ;
+    ns1:coresMax "$(inputs.special_file.size)" ;
+    ns1:coresMin "$(inputs.special_file.size)" .
+
