@@ -1,0 +1,20 @@
+examples:
+  - title: Scattering over two input parameters
+    base-uri: https://example.org/
+    content: |
+      A `scatter` value listing two Workflow step input parameter names, causing the step to fan out
+      over both (combined per `scatterMethod`, e.g. `nested_crossproduct`).
+    snippets:
+      - language: json
+        code: |
+          ["echo_in1", "echo_in2"]
+  - title: Single-item identifier array
+    base-uri: https://example.org/
+    content: |
+      A `scatter` value with a single input parameter name. `IdentifierArray` requires at least one
+      item, so a single-element array is still valid (as opposed to using the bare
+      `CWLTextPatternID` alternative for that case).
+    snippets:
+      - language: json
+        code: |
+          ["scattered_message"]

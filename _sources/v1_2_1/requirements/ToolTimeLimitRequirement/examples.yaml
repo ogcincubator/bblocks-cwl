@@ -1,0 +1,26 @@
+examples:
+  - title: Fixed time limit in seconds
+    base-uri: https://example.org/
+    content: |
+      A `CommandLineTool` requirement that terminates execution if it runs for more than 3 seconds
+      of wall-clock time.
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "ToolTimeLimit",
+            "timelimit": 3
+          }
+  - title: Time limit computed from a CWL expression
+    base-uri: https://example.org/
+    content: |
+      The `timelimit` field may also be set to a [CWLExpression](bblocks://ogc.cwl.v1_2_1.CWLExpression),
+      evaluated at runtime, instead of a fixed number of seconds. This requires
+      `InlineJavascriptRequirement` to also be present in the enclosing process.
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "ToolTimeLimit",
+            "timelimit": "$(1 + 2)"
+          }

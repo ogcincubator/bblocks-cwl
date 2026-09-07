@@ -1,0 +1,26 @@
+examples:
+  - title: Deep directory listing requirement
+    base-uri: https://example.org/
+    content: |
+      A `CommandLineTool` requirement asking the implementation to recursively load the full
+      directory listing of every `Directory` input, so nested subdirectories are also enumerated
+      for use in expressions.
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "LoadListingRequirement",
+            "loadListing": "deep_listing"
+          }
+  - title: Shallow directory listing requirement
+    base-uri: https://example.org/
+    content: |
+      A requirement asking the implementation to load only the top-level entries of each
+      `Directory` input's listing, without recursing into subdirectories.
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "LoadListingRequirement",
+            "loadListing": "shallow_listing"
+          }

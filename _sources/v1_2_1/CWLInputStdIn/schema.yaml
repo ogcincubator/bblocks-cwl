@@ -1,3 +1,19 @@
+description: |
+  Indicates that the value passed to this CWL input will be redirected to the standard input
+  stream of the command.
+
+  Can be defined for only one input and must not be combined with 'stdin' at the root of the CWL
+  document.
 oneOf:
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLInputStdInDefinition
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLInputStdInObjectType
+- enum:
+  - stdin
+  type: string
+- properties:
+    type:
+      enum:
+      - stdin
+      type: string
+  required:
+  - type
+  type: object
+title: CWLInputStdIn

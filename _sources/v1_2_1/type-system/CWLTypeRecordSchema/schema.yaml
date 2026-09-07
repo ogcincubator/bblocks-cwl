@@ -1,0 +1,29 @@
+$defs:
+  CWLTypeRecordFieldsMap:
+    additionalProperties:
+      oneOf:
+        - $ref: bblocks://ogc.cwl.v1_2_1.CWLType
+        - $ref: bblocks://ogc.cwl.v1_2_1.type-system.CWLTypeRecordFieldDef
+    type: object
+
+  CWLTypeRecordFieldsList:
+    items:
+      allOf:
+        - $ref: bblocks://ogc.cwl.v1_2_1.type-system.CWLTypeRecordFieldDef
+        - required:
+            - name
+    type: array
+properties:
+  fields:
+    oneOf:
+      - $ref: '#/$defs/CWLTypeRecordFieldsMap'
+      - $ref: '#/$defs/CWLTypeRecordFieldsList'
+  name:
+    type: string
+  type:
+    enum:
+    - record
+    type: string
+required:
+- type
+type: object

@@ -1,7 +1,8 @@
 {
   "name": "CWLAtomicBase",
   "itemClass": "schema",
-  "abstract": "Direct CWL definition instead of the graph representation.",
+  "abstract": "Direct CWL definition instead of the graph representation. Shared by the root CommandLineTool/ExpressionTool document and its nested-in-step form; not typically profiled on its own.",
+  "isProfileOf": "bblocks://ogc.cwl.v1_2_1.CWLProcessFields",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.674167",
   "dateOfLastChange": "2025-09-29",
@@ -9,6 +10,10 @@
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
   "tags": [
-    "cwl"
+    "cwl",
+    "shared-fragment"
+  ],
+  "dependsOn": [
+    "bblocks://ogc.cwl.v1_2_1.CWLOntology"
   ]
 }

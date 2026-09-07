@@ -1,0 +1,25 @@
+examples:
+  - title: File identified by location
+    base-uri: https://example.org/
+    content: |
+      A literal File object identified by a `location` IRI, adapted from
+      [`bwa-mem-tool.cwl`](https://github.com/common-workflow-language/cwl-v1.2/blob/main/tests/bwa-mem-tool.cwl).
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "File",
+            "location": "args.py"
+          }
+  - title: File identified by path
+    base-uri: https://example.org/
+    content: |
+      A literal File object identified by a filesystem `path`, adapted from
+      [`dynresreq-workflow-inputdefault.cwl`](https://github.com/common-workflow-language/cwl-v1.2/blob/main/tests/dynresreq-workflow-inputdefault.cwl).
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "File",
+            "path": "special_file"
+          }

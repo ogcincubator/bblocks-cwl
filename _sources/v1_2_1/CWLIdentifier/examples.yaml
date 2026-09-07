@@ -1,0 +1,19 @@
+examples:
+  - title: UUID-form identifier
+    base-uri: https://example.org/
+    content: |
+      A process identifier expressed as a standard UUID.
+    snippets:
+      - language: json
+        code: |
+          "550e8400-e29b-41d4-a716-446655440000"
+  - title: Text-pattern identifier with fragment reference
+    base-uri: https://example.org/
+    content: |
+      A process identifier following the [CWLTextPatternID](bblocks://ogc.cwl.v1_2_1.CWLTextPatternID)
+      pattern, referencing a sub-part definition inside a CWL document (as used, for example, by
+      `SchemaDefRequirement`).
+    snippets:
+      - language: json
+        code: |
+          "sub/part#ref"

@@ -1,0 +1,21 @@
+examples:
+  - title: Optional File parameter (type union)
+    base-uri: https://example.org/
+    content: |
+      A type union combining a plain type name with the special `"null"` type, the schema-salad
+      idiom for making a parameter optional (equivalent to the shorthand `File?`).
+    snippets:
+      - language: json
+        code: |
+          ["null", "File"]
+  - title: Array of Files
+    base-uri: https://example.org/
+    content: |
+      An inline array type declaring a parameter that accepts a list of `File` values.
+    snippets:
+      - language: json
+        code: |
+          {
+            "type": "array",
+            "items": "File"
+          }

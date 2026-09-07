@@ -1,0 +1,38 @@
+examples:
+  - title: Requirements as a list
+    base-uri: https://example.org/
+    content: |
+      A `CommandLineTool` running inside a Docker container, with inline Javascript
+      expressions enabled. Each list item names its own `class`.
+    snippets:
+      - language: json
+        code: |
+          [
+            {
+              "class": "DockerRequirement",
+              "dockerPull": "docker.io/debian:stable-slim"
+            },
+            {
+              "class": "InlineJavascriptRequirement",
+              "expressionLib": [
+                "function foo() { return 1; }"
+              ]
+            }
+          ]
+  - title: Requirements as a map
+    base-uri: https://example.org/
+    content: |
+      The same kind of declaration, using the equivalent map form: the requirement
+      class name becomes the property key, so `class` does not need to be repeated.
+    snippets:
+      - language: json
+        code: |
+          {
+            "DockerRequirement": {
+              "dockerPull": "docker.io/debian:stable-slim"
+            },
+            "ResourceRequirement": {
+              "coresMin": 1.25,
+              "coresMax": 1.75
+            }
+          }

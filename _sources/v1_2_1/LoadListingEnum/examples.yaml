@@ -1,0 +1,18 @@
+examples:
+  - title: Deep listing
+    base-uri: https://example.org/
+    content: |
+      Requesting a fully recursive directory listing, so subdirectories are also expanded for use
+      in expressions.
+    snippets:
+      - language: json
+        code: |
+          "deep_listing"
+  - title: No listing
+    base-uri: https://example.org/
+    content: |
+      Suppressing the directory listing entirely, so `listing` is left unset on the `Directory` object.
+    snippets:
+      - language: json
+        code: |
+          "no_listing"

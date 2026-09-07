@@ -1,0 +1,40 @@
+examples:
+  - title: Record with fields given as a map
+    base-uri: https://example.org/
+    content: |
+      A `record` input type whose `fields` are written in map form: each key is a field name and
+      each value is that field's `type`, adapted from CWL's `record-output.cwl` conformance test.
+    snippets:
+      - language: json
+        code: |
+          {
+            "type": "record",
+            "name": "irec",
+            "fields": {
+              "ifoo": "File",
+              "ibar": "File"
+            }
+          }
+
+  - title: Record with fields given as a list
+    base-uri: https://example.org/
+    content: |
+      The same kind of `record` type, but with `fields` written in list form — here each field
+      definition must carry its own `name`, since there is no map key to imply it.
+    snippets:
+      - language: json
+        code: |
+          {
+            "type": "record",
+            "name": "a",
+            "fields": [
+              {
+                "name": "b",
+                "type": "int"
+              },
+              {
+                "name": "c",
+                "type": "int"
+              }
+            ]
+          }

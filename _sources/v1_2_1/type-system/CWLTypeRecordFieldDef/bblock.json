@@ -1,0 +1,17 @@
+{
+  "name": "CWLTypeRecordFieldDef",
+  "itemClass": "schema",
+  "abstract": "The definition of a single field within an\ninline CWL `record` type: its `type` and, for the list form of `fields`, its `name`. Also carries\nthe file-only and directory-only parameters (`format`, `secondaryFiles`, `loadListing`, ...), since a\nrecord field's type can itself be File- or Directory-typed.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.711487",
+  "dateOfLastChange": "2025-09-29",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "dependsOn": [
+    "bblocks://ogc.cwl.v1_2_1.SchemaSaladOntology"
+  ]
+}

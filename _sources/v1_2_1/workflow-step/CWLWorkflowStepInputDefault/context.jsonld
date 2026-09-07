@@ -1,0 +1,9 @@
+{
+  "@context": {
+    "sld": "https://w3id.org/cwl/salad#",
+    "default": {
+      "@id": "sld:default",
+      "@container": "@list"
+    }
+  }
+}

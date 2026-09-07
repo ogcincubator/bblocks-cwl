@@ -1,0 +1,15 @@
+examples:
+  - title: WPS 1.0 backing for a workflow step
+    base-uri: https://example.org/
+    content: |
+      A `WPS1Requirement` hint attached to a workflow step, indicating that the step's
+      execution should be delegated to a remote WPS 1.0 provider, identifying both the
+      provider endpoint and the process identifier to invoke on it.
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "WPS1Requirement",
+            "provider": "https://example.org/wps",
+            "process": "FloodDetection"
+          }

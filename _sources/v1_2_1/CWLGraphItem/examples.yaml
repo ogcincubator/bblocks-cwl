@@ -1,0 +1,74 @@
+examples:
+  - title: CommandLineTool graph item
+    base-uri: https://example.org/
+    content: |
+      A `CommandLineTool` process object as it appears inside a `$graph` array — note the required
+      `id`, which lets other process objects in the same document reference it (e.g. from a
+      `Workflow` step's `run` field).
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "echo",
+            "class": "CommandLineTool",
+            "inputs": {
+              "echo_in1": {
+                "type": "string",
+                "inputBinding": {}
+              },
+              "echo_in2": {
+                "type": "string",
+                "inputBinding": {}
+              }
+            },
+            "outputs": {
+              "echo_out": {
+                "type": "string",
+                "outputBinding": {
+                  "glob": "step1_out",
+                  "loadContents": true,
+                  "outputEval": "$(self[0].contents)"
+                }
+              }
+            },
+            "baseCommand": "echo",
+            "arguments": ["-n", "foo"],
+            "stdout": "step1_out"
+          }
+  - title: Workflow graph item referencing another graph item
+    base-uri: https://example.org/
+    content: |
+      A `Workflow` process object inside the same `$graph` array as the `echo` `CommandLineTool`
+      above, with a step that runs it by reference (`run: "#echo"`) and an output sourced from that
+      step.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "main",
+            "class": "Workflow",
+            "inputs": {
+              "inp1": "string[]",
+              "inp2": "string[]"
+            },
+            "steps": {
+              "step1": {
+                "in": {
+                  "echo_in1": "inp1",
+                  "echo_in2": "inp2"
+                },
+                "out": ["echo_out"],
+                "run": "#echo"
+              }
+            },
+            "outputs": [
+              {
+                "id": "out",
+                "outputSource": "step1/echo_out",
+                "type": {
+                  "type": "array",
+                  "items": "string"
+                }
+              }
+            ]
+          }

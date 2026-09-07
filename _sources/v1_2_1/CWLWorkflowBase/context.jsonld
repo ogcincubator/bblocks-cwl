@@ -1,0 +1,25 @@
+{
+  "@context": {
+    "cwl": "https://w3id.org/cwl/cwl#",
+    "hints": {
+      "@id": "cwl:hints",
+      "@container": "@type"
+    },
+    "inputs": {
+      "@id": "cwl:inputs",
+      "@container": "@id"
+    },
+    "outputs": {
+      "@id": "cwl:outputs",
+      "@container": "@id"
+    },
+    "requirements": {
+      "@id": "cwl:requirements",
+      "@container": "@type"
+    },
+    "steps": {
+      "@id": "cwl:Workflow/steps",
+      "@container": "@id"
+    }
+  }
+}

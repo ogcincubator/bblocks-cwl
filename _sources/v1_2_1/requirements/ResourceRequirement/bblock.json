@@ -1,0 +1,17 @@
+{
+  "name": "ResourceRequirement",
+  "itemClass": "schema",
+  "abstract": "Specify basic hardware resource requirements for a CommandLineTool: minimum/maximum CPU cores, RAM, and output/temporary directory storage.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.686613",
+  "dateOfLastChange": "2025-09-29",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ],
+  "dependsOn": [
+    "bblocks://ogc.cwl.v1_2_1.CWLOntology"
+  ]
+}

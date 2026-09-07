@@ -1,0 +1,14 @@
+examples:
+  - title: Enabling in-place updates
+    base-uri: https://example.org/
+    content: |
+      An `InplaceUpdateRequirement` enabling destructive, in-place modification of a writable file or
+      directory staged by `InitialWorkDirRequirement`, as an execution-time optimization
+      (adapted from the CWL conformance tests `updatedir_inplace.cwl` and `updateval_inplace.cwl`).
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "InplaceUpdateRequirement",
+            "inplaceUpdate": true
+          }

@@ -1,0 +1,27 @@
+examples:
+  - title: Tool requiring outgoing network access
+    base-uri: https://example.org/
+    content: |
+      A `CommandLineTool` that downloads a resource over HTTP needs to declare that it requires
+      outgoing network access, since implementations must otherwise assume the tool is isolated from
+      the network except for `localhost`.
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "NetworkAccess",
+            "networkAccess": true
+          }
+  - title: Network access conditional on a runtime expression
+    base-uri: https://example.org/
+    content: |
+      `networkAccess` may also be given as a CWL expression (requires
+      `InlineJavascriptRequirement`), letting the requirement depend on an input parameter rather
+      than being hard-coded.
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "NetworkAccess",
+            "networkAccess": "$(inputs.allow_network)"
+          }

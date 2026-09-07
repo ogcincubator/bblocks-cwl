@@ -1,0 +1,22 @@
+examples:
+  - title: Literal default value
+    base-uri: https://example.org/
+    content: |
+      A workflow step input that falls back to a literal string value when no
+      `source` is connected or the connected source produces `null`.
+    snippets:
+      - language: json
+        code: |
+          {
+            "default": "step1dir"
+          }
+  - title: Default value as a list
+    base-uri: https://example.org/
+    content: |
+      A workflow step input defaulting to a list of literal values.
+    snippets:
+      - language: json
+        code: |
+          {
+            "default": ["a", "b", "c"]
+          }

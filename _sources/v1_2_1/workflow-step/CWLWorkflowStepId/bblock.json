@@ -1,0 +1,14 @@
+{
+  "name": "CWLWorkflowStepId",
+  "itemClass": "schema",
+  "abstract": "The `id` field required on a Workflow step when `steps` is given\nas a list rather than a map: identifies the step within the workflow.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.704756",
+  "dateOfLastChange": "2025-09-29",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ]
+}

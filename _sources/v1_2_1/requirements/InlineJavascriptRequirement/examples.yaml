@@ -1,0 +1,33 @@
+examples:
+  - title: Expression library defined inline
+    base-uri: https://example.org/
+    content: |
+      An `InlineJavascriptRequirement` that supplies a single Javascript function definition as a
+      literal string in `expressionLib`, making it callable from later CWL expressions
+      (adapted from the CWL conformance test `js-expr-req-wf.cwl`).
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "InlineJavascriptRequirement",
+            "expressionLib": [
+              "function foo() { return 2; }"
+            ]
+          }
+
+  - title: Expression library combining an included file and an inline fragment
+    base-uri: https://example.org/
+    content: |
+      An `InlineJavascriptRequirement` whose `expressionLib` mixes an external Javascript file,
+      referenced via `$include`, with an inline function definition that depends on it
+      (adapted from the CWL conformance test `template-tool.cwl`).
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "InlineJavascriptRequirement",
+            "expressionLib": [
+              { "$include": "underscore.js" },
+              "var t = function(s) { return _.template(s, {variable: 'data'})({'inputs': inputs}); };"
+            ]
+          }

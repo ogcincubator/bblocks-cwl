@@ -1,7 +1,7 @@
 {
   "name": "CWLWorkflowBase",
   "itemClass": "schema",
-  "abstract": "CWLWorkflowBase",
+  "abstract": "Workflow-specific properties (inputs, outputs, steps, requirements, hints), shared by the root Workflow document and its nested-in-step form; not typically profiled on its own.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.675327",
   "dateOfLastChange": "2025-09-29",
@@ -9,6 +9,10 @@
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
   "tags": [
-    "cwl"
+    "cwl",
+    "shared-fragment"
+  ],
+  "dependsOn": [
+    "bblocks://ogc.cwl.v1_2_1.CWLOntology"
   ]
 }

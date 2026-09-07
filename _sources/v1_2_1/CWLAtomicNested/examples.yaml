@@ -1,0 +1,56 @@
+examples:
+  - title: CommandLineTool embedded as a workflow step's run value
+    base-uri: https://example.org/
+    content: |
+      A `CommandLineTool` definition inlined directly as the `run` value of a Workflow step,
+      rather than referenced by file or URL. Note there is no `cwlVersion` field, since it is
+      only declared once at the document root (see [CWLAtomic](bblocks://ogc.cwl.v1_2_1.CWLAtomic)
+      for the equivalent top-level form, which does carry it).
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "CommandLineTool",
+            "baseCommand": ["wc", "-l"],
+            "inputs": [
+              {
+                "id": "file1",
+                "type": "File",
+                "inputBinding": { "position": 1 }
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "type": "File",
+                "outputBinding": { "glob": "output.txt" }
+              }
+            ],
+            "stdout": "output.txt"
+          }
+  - title: ExpressionTool embedded as a workflow step's run value
+    base-uri: https://example.org/
+    content: |
+      An `ExpressionTool` inlined as a step's `run` value, used here to pick the first file out
+      of an array-typed input.
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "ExpressionTool",
+            "label": "Pick first file from a list",
+            "doc": "Returns the first file from a list of input files.",
+            "inputs": [
+              {
+                "id": "file_list",
+                "type": { "type": "array", "items": "File" }
+              }
+            ],
+            "outputs": [
+              {
+                "id": "first_file",
+                "type": "File"
+              }
+            ],
+            "expression": "$({'first_file': inputs.file_list[0]})"
+          }

@@ -1,7 +1,8 @@
 {
   "name": "ReferenceURL",
   "itemClass": "schema",
-  "abstract": "ReferenceURL",
+  "abstract": "A web-resolvable reference URL (http(s) or ftp) pointing to\ndocumentation, a package repository, or similar external resource associated with a requirement or\nsoftware package.",
+  "isProfileOf": "bblocks://ogc.ogc-utils.iri-or-curie",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.705091",
   "dateOfLastChange": "2025-09-29",

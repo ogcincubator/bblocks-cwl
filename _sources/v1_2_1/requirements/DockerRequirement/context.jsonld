@@ -1,0 +1,12 @@
+{
+  "@context": {
+    "cwl": "https://w3id.org/cwl/cwl#",
+    "class": "@type",
+    "dockerFile": "https://w3id.org/cwl/cwl#DockerRequirement/dockerFile",
+    "dockerImageId": "https://w3id.org/cwl/cwl#DockerRequirement/dockerImageId",
+    "dockerImport": "https://w3id.org/cwl/cwl#DockerRequirement/dockerImport",
+    "dockerLoad": "https://w3id.org/cwl/cwl#DockerRequirement/dockerLoad",
+    "dockerOutputDirectory": "https://w3id.org/cwl/cwl#DockerRequirement/dockerOutputDirectory",
+    "dockerPull": "https://w3id.org/cwl/cwl#DockerRequirement/dockerPull"
+  }
+}

@@ -1,0 +1,21 @@
+examples:
+  - title: Shorthand string form
+    base-uri: https://example.org/
+    content: |
+      The `stdin` shorthand, as used for the `file1` input of the CWL conformance test
+      [`cat-tool-shortcut.cwl`](https://github.com/common-workflow-language/cwl-v1.2/blob/main/tests/cat-tool-shortcut.cwl),
+      which pipes the input file's contents into the command's standard input.
+    snippets:
+      - language: json
+        code: |
+          "stdin"
+  - title: Object form
+    base-uri: https://example.org/
+    content: |
+      The equivalent explicit object form of the same `stdin` type declaration.
+    snippets:
+      - language: json
+        code: |
+          {
+            "type": "stdin"
+          }

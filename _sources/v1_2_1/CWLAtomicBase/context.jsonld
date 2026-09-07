@@ -1,8 +1,8 @@
 {
   "@context": {
     "cwl": "https://w3id.org/cwl/cwl#",
-    "stderr": "cwl:stderr",
-    "stdin": "cwl:stdin",
-    "stdout": "cwl:stdout"
+    "class": "@type",
+    "CommandLineTool": "cwl:CommandLineTool",
+    "ExpressionTool": "cwl:ExpressionTool"
   }
 }

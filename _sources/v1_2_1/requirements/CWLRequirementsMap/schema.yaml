@@ -1,0 +1,43 @@
+additionalProperties: false
+properties:
+  DockerRequirement:
+    $ref: bblocks://ogc.cwl.v1_2_1.requirements.DockerRequirement
+  EnvVarRequirement:
+    $ref: bblocks://ogc.cwl.v1_2_1.requirements.EnvVarRequirement
+  InitialWorkDirRequirement:
+    $ref: bblocks://ogc.cwl.v1_2_1.requirements.InitialWorkDirRequirement
+  InlineJavascriptRequirement:
+    $ref: bblocks://ogc.cwl.v1_2_1.requirements.InlineJavascriptRequirement
+  InplaceUpdateRequirement:
+    $ref: bblocks://ogc.cwl.v1_2_1.requirements.InplaceUpdateRequirement
+  LoadListingRequirement:
+    $ref: bblocks://ogc.cwl.v1_2_1.requirements.LoadListingRequirement
+  MultipleInputFeatureRequirement:
+    $ref: bblocks://ogc.cwl.v1_2_1.requirements.MultipleInputFeatureRequirement
+  NetworkAccess:
+    $comment: Not 'NetworkAccessRequirement'
+    $ref: bblocks://ogc.cwl.v1_2_1.requirements.NetworkAccessRequirement
+  ResourceRequirement:
+    $ref: bblocks://ogc.cwl.v1_2_1.requirements.ResourceRequirement
+  ScatterFeatureRequirement:
+    $ref: bblocks://ogc.cwl.v1_2_1.requirements.ScatterFeatureRequirement
+  SchemaDefRequirement:
+    $ref: bblocks://ogc.cwl.v1_2_1.requirements.SchemaDefRequirement
+  ShellCommandRequirement:
+    $ref: bblocks://ogc.cwl.v1_2_1.requirements.ShellCommandRequirement
+  SoftwareRequirement:
+    $ref: bblocks://ogc.cwl.v1_2_1.requirements.SoftwareRequirement
+  StepInputExpressionRequirement:
+    $ref: bblocks://ogc.cwl.v1_2_1.requirements.StepInputExpressionRequirement
+  SubworkflowFeatureRequirement:
+    $ref: bblocks://ogc.cwl.v1_2_1.requirements.SubworkflowFeatureRequirement
+  ToolTimeLimit:
+    $comment: Not 'ToolTimeLimitRequirement'.
+    $ref: bblocks://ogc.cwl.v1_2_1.requirements.ToolTimeLimitRequirement
+  WorkReuse:
+    $comment: Not 'WorkReuseRequirement'.
+    $ref: bblocks://ogc.cwl.v1_2_1.requirements.WorkReuseRequirement
+  cwltool:CUDARequirement:
+    $ref: bblocks://ogc.cwl.v1_2_1.requirements.cwltool-CUDARequirement
+title: CWLRequirementsMap
+type: object

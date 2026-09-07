@@ -1,0 +1,9 @@
+{
+  "@context": {
+    "cwl": "https://w3id.org/cwl/cwl#",
+    "class": "@type",
+    "CommandLineTool": "cwl:CommandLineTool",
+    "ExpressionTool": "cwl:ExpressionTool",
+    "Workflow": "cwl:Workflow"
+  }
+}

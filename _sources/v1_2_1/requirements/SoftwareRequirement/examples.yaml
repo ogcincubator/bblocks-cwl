@@ -1,0 +1,41 @@
+examples:
+  - title: Packages listed as an array
+    base-uri: https://example.org/
+    content: |
+      `packages` given as an array of [SoftwarePackage](bblocks://ogc.cwl.v1_2_1.SoftwarePackage)
+      objects.
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "SoftwareRequirement",
+            "packages": [
+              {
+                "package": "screed",
+                "version": [ "1.0" ]
+              },
+              {
+                "package": "bowtie",
+                "specs": [ "https://packages.debian.org/bowtie" ]
+              }
+            ]
+          }
+  - title: Packages listed as a name-keyed map
+    base-uri: https://example.org/
+    content: |
+      `packages` given as an object keyed by package name, where each value is either a bare
+      list of specification IRIs/versions or a full
+      [SoftwarePackage](bblocks://ogc.cwl.v1_2_1.SoftwarePackage) object.
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "SoftwareRequirement",
+            "packages": {
+              "sourmash": [ "https://doi.org/10.21105/joss.00027" ],
+              "screed": {
+                "package": "screed",
+                "version": [ "1.0" ]
+              }
+            }
+          }

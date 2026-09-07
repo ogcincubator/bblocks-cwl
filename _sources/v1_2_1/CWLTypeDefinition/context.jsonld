@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "cwl": "https://w3id.org/cwl/cwl#",
+    "sld": "https://w3id.org/cwl/salad#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "null": "sld:null",
+    "boolean": "xsd:boolean",
+    "int": "xsd:int",
+    "integer": "xsd:int",
+    "long": "xsd:long",
+    "float": "xsd:float",
+    "double": "xsd:double",
+    "string": "xsd:string",
+    "File": "cwl:File",
+    "Directory": "cwl:Directory"
+  }
+}

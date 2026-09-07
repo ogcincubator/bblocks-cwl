@@ -1,0 +1,23 @@
+{
+  "@context": {
+    "cwl": "https://w3id.org/cwl/cwl#",
+    "cwltool": "http://commonwl.org/cwltool#",
+    "DockerRequirement": "cwl:DockerRequirement",
+    "EnvVarRequirement": "cwl:EnvVarRequirement",
+    "InitialWorkDirRequirement": "cwl:InitialWorkDirRequirement",
+    "InlineJavascriptRequirement": "cwl:InlineJavascriptRequirement",
+    "InplaceUpdateRequirement": "cwl:InplaceUpdateRequirement",
+    "LoadListingRequirement": "cwl:LoadListingRequirement",
+    "MultipleInputFeatureRequirement": "cwl:MultipleInputFeatureRequirement",
+    "NetworkAccess": "cwl:NetworkAccess",
+    "ResourceRequirement": "cwl:ResourceRequirement",
+    "ScatterFeatureRequirement": "cwl:ScatterFeatureRequirement",
+    "SchemaDefRequirement": "cwl:SchemaDefRequirement",
+    "ShellCommandRequirement": "cwl:ShellCommandRequirement",
+    "SoftwareRequirement": "cwl:SoftwareRequirement",
+    "StepInputExpressionRequirement": "cwl:StepInputExpressionRequirement",
+    "SubworkflowFeatureRequirement": "cwl:SubworkflowFeatureRequirement",
+    "ToolTimeLimit": "cwl:ToolTimeLimit",
+    "WorkReuse": "cwl:WorkReuse"
+  }
+}

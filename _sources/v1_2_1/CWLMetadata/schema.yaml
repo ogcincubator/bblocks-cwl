@@ -1,6 +1,12 @@
 properties:
   s:keywords:
-    $ref: bblocks://ogc.cwl.v1_2_1.CWLKeywordList
+    description: Keywords applied to the process for search and categorization purposes.
+    items:
+      minLength: 1
+      title: keyword
+      type: string
+    title: KeywordList
+    type: array
   version:
     description: Version of the process.
     example: 1.2.3

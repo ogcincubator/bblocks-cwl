@@ -1,0 +1,17 @@
+examples:
+  - title: File type
+    base-uri: https://example.org/
+    content: |
+      A required `File` parameter type.
+    snippets:
+      - language: json
+        code: |
+          "File"
+  - title: Optional array of strings
+    base-uri: https://example.org/
+    content: |
+      A nullable array of strings, combining the array (`[]`) and nullable (`?`) suffixes.
+    snippets:
+      - language: json
+        code: |
+          "string[]?"

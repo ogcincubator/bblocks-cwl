@@ -1,4 +1,20 @@
 allOf:
+- $ref: bblocks://ogc.cwl.v1_2_1.CWLProcessFields
 - $ref: bblocks://ogc.cwl.v1_2_1.CWLMetadata
 - $ref: bblocks://ogc.cwl.v1_2_1.CWLDocumentation
-- $ref: bblocks://ogc.cwl.v1_2_1.CWLGraphItemBase
+- properties:
+    class:
+      description: CWL class specification. This is used to differentiate between single
+        Application Package (AP)definitions and Workflow that chains multiple packages.
+      enum:
+      - CommandLineTool
+      - ExpressionTool
+      - Workflow
+      title: Class
+      type: string
+  required:
+  - class
+  - id
+  type: object
+additionalProperties: {}
+title: CWLGraphItem

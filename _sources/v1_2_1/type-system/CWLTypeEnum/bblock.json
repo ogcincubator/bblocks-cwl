@@ -1,0 +1,14 @@
+{
+  "name": "CWLTypeEnum",
+  "itemClass": "schema",
+  "abstract": "An inline CWL `enum` type definition: `type: enum` plus its\nallowed `symbols`.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.693164",
+  "dateOfLastChange": "2025-09-29",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ]
+}

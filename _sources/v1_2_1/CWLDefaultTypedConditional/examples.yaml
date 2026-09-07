@@ -1,0 +1,31 @@
+examples:
+  - title: String default matching a string type
+    base-uri: https://example.org/
+    content: |
+      A `string`-typed input whose `default` is a plain string literal, adapted from
+      [`paramref_arguments_inputs.cwl`](https://github.com/common-workflow-language/cwl-v1.2/blob/main/tests/paramref_arguments_inputs.cwl).
+      The `string` branch of the conditional requires `default` to be a JSON string.
+    snippets:
+      - language: json
+        code: |
+          {
+            "type": "string",
+            "default": "z"
+          }
+  - title: File default matching a File type
+    base-uri: https://example.org/
+    content: |
+      A `File`-typed input whose `default` is a literal File object, adapted from
+      [`bwa-mem-tool.cwl`](https://github.com/common-workflow-language/cwl-v1.2/blob/main/tests/bwa-mem-tool.cwl).
+      The `File`/`Directory` branch of the conditional requires `default` to match
+      [CWLDefaultLocation](bblocks://ogc.cwl.v1_2_1.CWLDefaultLocation).
+    snippets:
+      - language: json
+        code: |
+          {
+            "type": "File",
+            "default": {
+              "class": "File",
+              "location": "args.py"
+            }
+          }

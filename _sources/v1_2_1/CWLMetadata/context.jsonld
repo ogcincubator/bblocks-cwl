@@ -1,6 +1,8 @@
 {
   "@context": {
     "cwl": "https://w3id.org/cwl/cwl#",
+    "s": "https://schema.org/",
+    "s:keywords": "s:keywords",
     "version": "https://w3id.org/cwl/cwl#SoftwarePackage/version"
   }
 }

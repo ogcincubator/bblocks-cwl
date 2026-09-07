@@ -1,0 +1,14 @@
+{
+  "name": "CWLWorkflowStepInItem",
+  "itemClass": "schema",
+  "abstract": "A single entry of a Workflow step's `in` mapping, in its\nlist form: combines the step-input id, the common wiring fields (`source`, `linkMerge`,\n`valueFrom`), and the optional `default` value used when a source produces no data.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.711950",
+  "dateOfLastChange": "2025-09-29",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ]
+}

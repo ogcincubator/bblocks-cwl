@@ -1,7 +1,7 @@
 {
   "name": "CWLType",
   "itemClass": "schema",
-  "abstract": "CWLType",
+  "abstract": "The set of types a CWL input or output parameter may declare: the CWL\nprimitive/File/Directory types, an inline enum, an inline record, a reference to a named type\n(record or enum) defined elsewhere, an array of one of these, or an array combining several of\nthese (a type union).",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.690093",
   "dateOfLastChange": "2025-09-29",

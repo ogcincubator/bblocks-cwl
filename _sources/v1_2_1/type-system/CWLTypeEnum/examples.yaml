@@ -1,0 +1,26 @@
+examples:
+  - title: Inline enum type for a species input
+    base-uri: https://example.org/
+    content: |
+      An inline `enum` type definition restricting a `CommandLineTool` input field to a fixed set of
+      species names, adapted from the CWL conformance test `anon_enum_inside_array.cwl`.
+    snippets:
+      - language: json
+        code: |
+          {
+            "type": "enum",
+            "symbols": ["homo_sapiens", "mus_musculus"]
+          }
+  - title: Inline enum type fixing a requirement's class
+    base-uri: https://example.org/
+    content: |
+      CWL also uses inline `enum` types to pin a `class` field to a single permissible value, as seen
+      in `InlineJavascriptRequirement`.
+    snippets:
+      - language: json
+        code: |
+          {
+            "type": "enum",
+            "name": "InlineJavascriptRequirement_class",
+            "symbols": ["cwl:InlineJavascriptRequirement"]
+          }

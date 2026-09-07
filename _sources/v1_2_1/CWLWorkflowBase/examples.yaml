@@ -1,0 +1,32 @@
+examples:
+  - title: Workflow structure with inputs, outputs and a single step
+    base-uri: https://example.org/
+    content: |
+      The `inputs`, `outputs` and `steps` fields shared by both a root
+      [CWLWorkflow](bblocks://ogc.cwl.v1_2_1.CWLWorkflow) document and a nested workflow
+      declared in a step's `run` field, adapted from the CWL v1.2 conformance test suite.
+    snippets:
+      - language: json
+        code: |
+          {
+            "inputs": {
+              "file1": "File"
+            },
+            "outputs": {
+              "count_output": {
+                "type": "int",
+                "outputSource": "step1/count_output"
+              }
+            },
+            "steps": {
+              "step1": {
+                "run": "count-lines1-wf.cwl",
+                "in": {
+                  "file1": "file1"
+                },
+                "out": [
+                  "count_output"
+                ]
+              }
+            }
+          }

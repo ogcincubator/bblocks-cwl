@@ -1,0 +1,14 @@
+examples:
+  - title: OGC API - Processes backing for a workflow step
+    base-uri: https://example.org/
+    content: |
+      An `OGCAPIRequirement` hint attached to a workflow step, indicating that the step's
+      execution should be delegated to a remote OGC API - Processes process offering rather
+      than run locally.
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "OGCAPIRequirement",
+            "process": "https://example.org/ogcapi/processes/flood-detection"
+          }

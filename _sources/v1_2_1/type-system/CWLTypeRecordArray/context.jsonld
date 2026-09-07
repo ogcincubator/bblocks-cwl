@@ -1,0 +1,13 @@
+{
+  "@context": {
+    "sld": "https://w3id.org/cwl/salad#",
+    "items": {
+      "@id": "sld:items",
+      "@type": "@vocab"
+    },
+    "type": {
+      "@id": "sld:type",
+      "@type": "@vocab"
+    }
+  }
+}

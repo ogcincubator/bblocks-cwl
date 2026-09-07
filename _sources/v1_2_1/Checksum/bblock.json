@@ -1,7 +1,7 @@
 {
   "name": "Checksum",
   "itemClass": "schema",
-  "abstract": "Checksum",
+  "abstract": "An optional hash code for validating file integrity. Currently must be in\nthe form `sha1$<hexadecimal string>`, using the SHA-1 algorithm.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.709969",
   "dateOfLastChange": "2025-09-29",

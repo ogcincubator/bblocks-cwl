@@ -1,0 +1,19 @@
+examples:
+  - title: Cartesian product over two scattered inputs
+    base-uri: https://example.org/
+    content: |
+      A `WorkflowStep` scatters over two input arrays using `flat_crossproduct`, so a job is run
+      for every combination of the two inputs, with the results flattened to a single-level array.
+    snippets:
+      - language: json
+        code: |
+          "flat_crossproduct"
+  - title: Aligned inputs (dotproduct)
+    base-uri: https://example.org/
+    content: |
+      When scattered input arrays are already aligned element-by-element, `dotproduct` takes one
+      element from each array per job instead of computing every combination.
+    snippets:
+      - language: json
+        code: |
+          "dotproduct"

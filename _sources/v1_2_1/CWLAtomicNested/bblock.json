@@ -1,7 +1,8 @@
 {
   "name": "CWLAtomicNested",
   "itemClass": "schema",
-  "abstract": "CWLAtomicNested",
+  "abstract": "Same shape as `CWLAtomic`, for use when a CommandLineTool,\nExpressionTool, or Workflow definition is embedded inline as the `run` value of a Workflow step,\ninstead of being referenced by file or URL. `cwlVersion` is not repeated here, since it is only\ndeclared once at the document root.",
+  "isProfileOf": "bblocks://ogc.cwl.v1_2_1.CWLAtomicBase",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.710771",
   "dateOfLastChange": "2025-09-29",

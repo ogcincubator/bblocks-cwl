@@ -1,7 +1,7 @@
 {
   "name": "CWLMetadata",
   "itemClass": "schema",
-  "abstract": "CWLMetadata",
+  "abstract": "Shared document-level metadata fields: `s:keywords` (for search and\ncategorization) and the process/document `version`.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.673719",
   "dateOfLastChange": "2025-09-29",
@@ -10,5 +10,8 @@
   "version": "1.2.1",
   "tags": [
     "cwl"
+  ],
+  "dependsOn": [
+    "bblocks://ogc.cwl.v1_2_1.CWLOntology"
   ]
 }

@@ -1,7 +1,8 @@
 {
   "name": "CWLAtomic",
   "itemClass": "schema",
-  "abstract": "CWLAtomic",
+  "abstract": "A complete, top-level CWL document describing a single CommandLineTool,\nExpressionTool, or Workflow. Combines the process/workflow-specific fields (class, inputs, outputs,\nrequirements, hints, ...) with the document-level fields that only apply at the root of a CWL file:\n`cwlVersion`, `s:keywords`/authorship-style metadata, and `label`/`doc`.",
+  "isProfileOf": "bblocks://ogc.cwl.v1_2_1.CWLAtomicBase",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.672835",
   "dateOfLastChange": "2025-09-29",

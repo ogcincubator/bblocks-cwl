@@ -1,0 +1,18 @@
+{
+  "name": "CWLRequirementsMap",
+  "itemClass": "schema",
+  "abstract": "Map-form (keyed by requirement class name) of the requirement types accepted by 'requirements'/'hints', shared between CWLRequirements and CWLHints; not typically profiled on its own.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.679204",
+  "dateOfLastChange": "2025-09-29",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl",
+    "shared-fragment"
+  ],
+  "dependsOn": [
+    "bblocks://ogc.cwl.v1_2_1.CWLOntology"
+  ]
+}

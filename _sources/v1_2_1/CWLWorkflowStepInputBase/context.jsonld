@@ -1,7 +1,0 @@
-{
-  "@context": {
-    "cwl": "https://w3id.org/cwl/cwl#",
-    "linkMerge": "cwl:linkMerge",
-    "valueFrom": "cwl:valueFrom"
-  }
-}

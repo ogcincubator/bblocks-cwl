@@ -1,0 +1,30 @@
+examples:
+  - title: A standard requirement class used as a hint
+    base-uri: https://example.org/
+    content: |
+      Any of the standard [CWLRequirements](bblocks://ogc.cwl.v1_2_1.requirements.CWLRequirements) classes —
+      here `DockerRequirement` — can also appear as a `hints` entry, in which case an
+      implementation that cannot satisfy it should warn rather than fail the process.
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "DockerRequirement",
+            "dockerPull": "docker.io/python:3-slim"
+          }
+
+  - title: An unrecognized hint class
+    base-uri: https://example.org/
+    content: |
+      A vendor- or implementation-specific hint whose `class` this register does not model
+      explicitly falls back to `UnknownRequirement`, which accepts any `class` not already claimed
+      by one of the other alternatives (the standard requirement classes, or this register's
+      `BuiltinRequirement`/[OGCAPIRequirement](bblocks://ogc.cwl.v1_2_1.requirements.OGCAPIRequirement)/`WPS1Requirement`
+      hints).
+    snippets:
+      - language: json
+        code: |
+          {
+            "class": "acme:GPUAcceleration",
+            "gpuCount": 1
+          }

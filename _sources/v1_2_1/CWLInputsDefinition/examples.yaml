@@ -1,0 +1,53 @@
+examples:
+  - title: Inputs as a list
+    base-uri: https://example.org/
+    content: |
+      Inputs declared as a list of identified items, adapted from the CWL `binding-test.cwl`
+      conformance test.
+    snippets:
+      - language: json
+        code: |
+          [
+            {
+              "id": "reference",
+              "type": "File",
+              "inputBinding": {
+                "position": 2
+              }
+            },
+            {
+              "id": "reads",
+              "type": {
+                "type": "array",
+                "items": "File"
+              },
+              "inputBinding": {
+                "position": 3,
+                "prefix": "-XXX"
+              }
+            }
+          ]
+  - title: Inputs as a map
+    base-uri: https://example.org/
+    content: |
+      Inputs declared as a map keyed by identifier, adapted from the CWL
+      `scatter-valueFrom-tool.cwl` conformance test. Map values may be a nested input object, or
+      a bare type shorthand as with `count-lines17-wf.cwl`'s single-input form.
+    snippets:
+      - language: json
+        code: |
+          {
+            "message": {
+              "type": "string",
+              "inputBinding": {
+                "position": 1
+              }
+            },
+            "scattered_message": {
+              "type": "string",
+              "inputBinding": {
+                "position": 2
+              }
+            },
+            "file1": "File"
+          }

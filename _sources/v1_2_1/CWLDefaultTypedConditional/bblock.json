@@ -1,7 +1,7 @@
 {
   "name": "CWLDefaultTypedConditional",
   "itemClass": "schema",
-  "abstract": "CWLDefaultTypedConditional",
+  "abstract": "Validates that a `default` value, if given alongside a\n`type`, actually matches that declared type (e.g. a `default` for `type: boolean` must be a JSON\nboolean, one for an `enum` type must be one of its `symbols`, one for `File`/`Directory` must be a\nliteral file/directory object). Limits itself to data literals and arrays; nested or multi-type\n`type` definitions validate against `Any` instead of being over-constrained.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.699245",
   "dateOfLastChange": "2025-09-29",
@@ -10,5 +10,8 @@
   "version": "1.2.1",
   "tags": [
     "cwl"
+  ],
+  "dependsOn": [
+    "bblocks://ogc.cwl.v1_2_1.SchemaSaladOntology"
   ]
 }

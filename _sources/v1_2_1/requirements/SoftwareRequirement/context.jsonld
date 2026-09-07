@@ -1,0 +1,10 @@
+{
+  "@context": {
+    "cwl": "https://w3id.org/cwl/cwl#",
+    "class": "@type",
+    "packages": {
+      "@id": "cwl:SoftwareRequirement/packages",
+      "@container": "@id"
+    }
+  }
+}

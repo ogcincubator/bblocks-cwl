@@ -1,0 +1,14 @@
+{
+  "name": "cwltool:CUDARequirement",
+  "itemClass": "schema",
+  "abstract": "`cwltool` extension requirement declaring that a process\nneeds NVIDIA CUDA (GPU hardware acceleration): minimum CUDA SDK version, required compute\ncapability, and the minimum/maximum number of GPU devices to request.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-09-29T14:14:37.682851",
+  "dateOfLastChange": "2025-09-29",
+  "register": "ogc-building-block-register",
+  "link": "https://www.commonwl.org/v1.2/Workflow.html",
+  "version": "1.2.1",
+  "tags": [
+    "cwl"
+  ]
+}

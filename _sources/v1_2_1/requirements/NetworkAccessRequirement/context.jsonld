@@ -1,0 +1,7 @@
+{
+  "@context": {
+    "cwl": "https://w3id.org/cwl/cwl#",
+    "class": "@type",
+    "networkAccess": "https://w3id.org/cwl/cwl#NetworkAccess/networkAccess"
+  }
+}

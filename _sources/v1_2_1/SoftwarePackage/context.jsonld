@@ -2,6 +2,10 @@
   "@context": {
     "cwl": "https://w3id.org/cwl/cwl#",
     "package": "https://w3id.org/cwl/cwl#SoftwarePackage/package",
+    "specs": {
+      "@id": "cwl:SoftwarePackage/specs",
+      "@type": "@id"
+    },
     "version": "https://w3id.org/cwl/cwl#SoftwarePackage/version"
   }
 }
