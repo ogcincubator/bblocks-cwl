@@ -7,7 +7,7 @@
   "abstract": "The `cwlVersion` field: declares which published version of the CWL\nstandard a document conforms to. Required once at the root of every CWL document.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.673508",
-  "dateOfLastChange": "2026-09-07",
+  "dateOfLastChange": "2026-09-09",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",

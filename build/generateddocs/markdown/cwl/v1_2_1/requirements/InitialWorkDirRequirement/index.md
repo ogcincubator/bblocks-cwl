@@ -148,8 +148,8 @@ may modify it in place, alongside a plain `File` object staged as-is.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 [] a <https://example.org/InitialWorkDirRequirement> ;
-    cwl:listing [ ns1:writable true ],
-        [ a <https://example.org/File> ] .
+    cwl:listing [ a <https://example.org/File> ],
+        [ ns1:writable true ] .
 
 
 ```

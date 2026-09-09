@@ -7,7 +7,7 @@
   "abstract": "A CWL type definition for an array whose elements\nare all of the same, further-specified CWL type: `type: array` plus an `items` type.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.693637",
-  "dateOfLastChange": "2026-09-07",
+  "dateOfLastChange": "2026-09-09",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -15,8 +15,8 @@
     "cwl"
   ],
   "dependsOn": [
-    "ogc.cwl.v1_2_1.SchemaSaladOntology",
-    "ogc.cwl.v1_2_1.CWLType"
+    "ogc.cwl.v1_2_1.CWLType",
+    "ogc.cwl.v1_2_1.SchemaSaladOntology"
   ],
   "shaclShapes": {},
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordArray/context.jsonld",

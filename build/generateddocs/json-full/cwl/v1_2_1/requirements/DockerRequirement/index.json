@@ -7,7 +7,7 @@
   "abstract": "Indicates that a CommandLineTool or ExpressionTool should be run\nin a Docker or Docker-compatible (e.g. Singularity, udocker) container, and specifies how to fetch\nor build the image (`dockerPull`, `dockerImport`, `dockerLoad`, or `dockerFile`). If listed under\n`hints`, the platform may run the tool in the container; if listed under `requirements`, it must.\nSee the [CWL v1.2 CommandLineTool spec \u2014 DockerRequirement](https://www.commonwl.org/v1.2/CommandLineTool.html#DockerRequirement)\nfor the full behavior, including bind-mount and entrypoint handling.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.683513",
-  "dateOfLastChange": "2026-09-07",
+  "dateOfLastChange": "2026-09-09",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",

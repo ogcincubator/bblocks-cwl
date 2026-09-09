@@ -10,7 +10,7 @@
   ],
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.673295",
-  "dateOfLastChange": "2026-09-07",
+  "dateOfLastChange": "2026-09-09",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -20,10 +20,10 @@
   "shaclShapes": {},
   "dependsOn": [
     "ogc.cwl.v1_2_1.CWLWorkflowBase",
-    "ogc.cwl.v1_2_1.CWLVersion",
     "ogc.cwl.v1_2_1.CWLWorkflowClass",
     "ogc.cwl.v1_2_1.CWLMetadata",
-    "ogc.cwl.v1_2_1.CWLDocumentation"
+    "ogc.cwl.v1_2_1.CWLDocumentation",
+    "ogc.cwl.v1_2_1.CWLVersion"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLWorkflow/schema.yaml",

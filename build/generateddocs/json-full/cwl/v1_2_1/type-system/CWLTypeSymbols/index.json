@@ -7,7 +7,7 @@
   "abstract": "The `symbols` list of an `enum` type: the set of allowed\nvalues composing the enum.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.705236",
-  "dateOfLastChange": "2026-09-07",
+  "dateOfLastChange": "2026-09-09",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",

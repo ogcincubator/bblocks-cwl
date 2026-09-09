@@ -7,7 +7,7 @@
   "abstract": "The RDFS vocabulary/ontology for Schema Salad, the schema language CWL is defined in, published\nalongside CWL v1.2 at `https://w3id.org/cwl/salad#` (`sld:`). It defines the metaschema classes used\nto describe CWL's own record/enum/array schemas (`RecordSchema`, `EnumSchema`, `JsonldPredicate`, ...),\ndistinct from the CWL document vocabulary itself (see [CWL Ontology](bblocks://ogc.cwl.v1_2_1.CWLOntology)).",
   "status": "under-development",
   "dateTimeAddition": "2026-08-18T19:19:38.980748",
-  "dateOfLastChange": "2026-09-07",
+  "dateOfLastChange": "2026-09-09",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/salad.ttl",
   "version": "1.2.1",

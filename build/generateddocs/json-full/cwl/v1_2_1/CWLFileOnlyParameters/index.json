@@ -7,7 +7,7 @@
   "abstract": "Parameters that only apply to File-typed (or File-array-typed)\ninputs/outputs: `format` (the file's content format/media type, as an IRI or CWL expression),\n`streamable`, `loadContents` (whether to load the first 64 KiB of file content for use in\nexpressions), and `secondaryFiles` (associated files expected alongside the primary one).",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.714105",
-  "dateOfLastChange": "2026-09-07",
+  "dateOfLastChange": "2026-09-09",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",

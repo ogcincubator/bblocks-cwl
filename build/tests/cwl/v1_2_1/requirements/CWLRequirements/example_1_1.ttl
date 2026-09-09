@@ -2,9 +2,9 @@
 @prefix ns1: <https://w3id.org/cwl/cwl#InlineJavascriptRequirement/> .
 @prefix ns2: <https://w3id.org/cwl/cwl#DockerRequirement/> .
 
-[] a cwl:InlineJavascriptRequirement ;
-    ns1:expressionLib "function foo() { return 1; }" .
-
 [] a cwl:DockerRequirement ;
     ns2:dockerPull "docker.io/debian:stable-slim" .
+
+[] a cwl:InlineJavascriptRequirement ;
+    ns1:expressionLib "function foo() { return 1; }" .
 

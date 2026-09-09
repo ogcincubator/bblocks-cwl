@@ -7,7 +7,7 @@
   "abstract": "A list of software packages that should be configured in the\nprocess's execution environment.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.683997",
-  "dateOfLastChange": "2026-09-07",
+  "dateOfLastChange": "2026-09-09",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -15,8 +15,8 @@
     "cwl"
   ],
   "dependsOn": [
-    "ogc.cwl.v1_2_1.SoftwarePackage",
-    "ogc.cwl.v1_2_1.CWLOntology"
+    "ogc.cwl.v1_2_1.CWLOntology",
+    "ogc.cwl.v1_2_1.SoftwarePackage"
   ],
   "shaclShapes": {},
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/requirements/SoftwareRequirement/context.jsonld",
@@ -53,7 +53,7 @@
           "language": "ttl",
           "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/SoftwareRequirement/example_1_1.ttl",
           "sizeBytes": 344,
-          "code": "@prefix ns1: <https://w3id.org/cwl/cwl#SoftwarePackage/> .\n@prefix ns2: <https://w3id.org/cwl/cwl#SoftwareRequirement/> .\n\n[] a <https://example.org/SoftwareRequirement> ;\n    ns2:packages [ ns1:package \"bowtie\" ;\n            ns1:specs <https://packages.debian.org/bowtie> ],\n        [ ns1:package \"screed\" ;\n            ns1:version \"1.0\" ] .\n\n"
+          "code": "@prefix ns1: <https://w3id.org/cwl/cwl#SoftwarePackage/> .\n@prefix ns2: <https://w3id.org/cwl/cwl#SoftwareRequirement/> .\n\n[] a <https://example.org/SoftwareRequirement> ;\n    ns2:packages [ ns1:package \"screed\" ;\n            ns1:version \"1.0\" ],\n        [ ns1:package \"bowtie\" ;\n            ns1:specs <https://packages.debian.org/bowtie> ] .\n\n"
         }
       ]
     },
@@ -78,7 +78,7 @@
           "language": "ttl",
           "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/SoftwareRequirement/example_2_1.ttl",
           "sizeBytes": 345,
-          "code": "@prefix ns1: <https://w3id.org/cwl/cwl#SoftwarePackage/> .\n@prefix ns2: <https://w3id.org/cwl/cwl#SoftwareRequirement/> .\n\n<https://example.org/screed> ns1:package \"screed\" ;\n    ns1:version \"1.0\" .\n\n[] a <https://example.org/SoftwareRequirement> ;\n    ns2:packages <https://example.org/screed>,\n        \"https://doi.org/10.21105/joss.00027\" .\n\n"
+          "code": "@prefix ns1: <https://w3id.org/cwl/cwl#SoftwareRequirement/> .\n@prefix ns2: <https://w3id.org/cwl/cwl#SoftwarePackage/> .\n\n<https://example.org/screed> ns2:package \"screed\" ;\n    ns2:version \"1.0\" .\n\n[] a <https://example.org/SoftwareRequirement> ;\n    ns1:packages <https://example.org/screed>,\n        \"https://doi.org/10.21105/joss.00027\" .\n\n"
         }
       ]
     }

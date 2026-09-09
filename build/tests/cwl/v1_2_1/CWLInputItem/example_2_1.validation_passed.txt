@@ -1,5 +1,5 @@
 Validation report for ogc.cwl.v1_2_1.CWLInputItem - CWLInputItem
-Generated 2026-09-07T11:25:46.218176+00:00
+Generated 2026-09-09T13:27:27.888142+00:00
 === Files ===
 Using example_2_1.json from examples
 JSON-LD context is present - uplifting

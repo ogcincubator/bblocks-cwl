@@ -84,11 +84,11 @@ expressions enabled. Each list item names its own `class`.
 @prefix ns1: <https://w3id.org/cwl/cwl#InlineJavascriptRequirement/> .
 @prefix ns2: <https://w3id.org/cwl/cwl#DockerRequirement/> .
 
-[] a cwl:InlineJavascriptRequirement ;
-    ns1:expressionLib "function foo() { return 1; }" .
-
 [] a cwl:DockerRequirement ;
     ns2:dockerPull "docker.io/debian:stable-slim" .
+
+[] a cwl:InlineJavascriptRequirement ;
+    ns1:expressionLib "function foo() { return 1; }" .
 
 
 ```
@@ -129,13 +129,13 @@ class name becomes the property key, so `class` does not need to be repeated.
 #### ttl
 ```ttl
 @prefix cwl: <https://w3id.org/cwl/cwl#> .
-@prefix ns1: <https://w3id.org/cwl/cwl#ResourceRequirement/> .
-@prefix ns2: <https://w3id.org/cwl/cwl#DockerRequirement/> .
+@prefix ns1: <https://w3id.org/cwl/cwl#DockerRequirement/> .
+@prefix ns2: <https://w3id.org/cwl/cwl#ResourceRequirement/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-[] cwl:DockerRequirement [ ns2:dockerPull "docker.io/debian:stable-slim" ] ;
-    cwl:ResourceRequirement [ ns1:coresMax 1.75e+00 ;
-            ns1:coresMin 1.25e+00 ] .
+[] cwl:DockerRequirement [ ns1:dockerPull "docker.io/debian:stable-slim" ] ;
+    cwl:ResourceRequirement [ ns2:coresMax 1.75e+00 ;
+            ns2:coresMin 1.25e+00 ] .
 
 
 ```

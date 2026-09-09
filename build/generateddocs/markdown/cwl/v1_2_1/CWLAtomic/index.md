@@ -173,9 +173,9 @@ declared under `hints` to pin the execution container.
 #### ttl
 ```ttl
 @prefix cwl: <https://w3id.org/cwl/cwl#> .
-@prefix ns1: <https://w3id.org/cwl/cwl#CommandOutputBinding/> .
-@prefix ns2: <https://w3id.org/cwl/cwl#CommandLineBinding/> .
-@prefix ns3: <https://w3id.org/cwl/cwl#DockerRequirement/> .
+@prefix ns1: <https://w3id.org/cwl/cwl#CommandLineBinding/> .
+@prefix ns2: <https://w3id.org/cwl/cwl#DockerRequirement/> .
+@prefix ns3: <https://w3id.org/cwl/cwl#CommandOutputBinding/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
@@ -184,10 +184,10 @@ declared under `hints` to pin the execution container.
 
 <https://example.org/file1> rdfs:label "Input File" ;
     rdfs:comment "The file that will be copied using 'cat'" ;
-    cwl:inputBinding [ ns2:position 1 ] ;
+    cwl:inputBinding [ ns1:position 1 ] ;
     sld:type cwl:File .
 
-<https://example.org/output_file> cwl:outputBinding [ ns1:glob "output.txt" ] ;
+<https://example.org/output_file> cwl:outputBinding [ ns3:glob "output.txt" ] ;
     sld:type cwl:File .
 
 [] a cwl:CommandLineTool ;
@@ -196,7 +196,7 @@ declared under `hints` to pin the execution container.
         "docker" ;
     cwl:baseCommand ( "cat" ) ;
     cwl:hints [ a cwl:DockerRequirement ;
-            ns3:dockerPull "docker.io/debian:stable-slim" ] ;
+            ns2:dockerPull "docker.io/debian:stable-slim" ] ;
     cwl:inputs <https://example.org/file1> ;
     cwl:outputs <https://example.org/output_file> ;
     cwl:stdout "output.txt" .

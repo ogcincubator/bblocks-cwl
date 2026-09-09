@@ -7,7 +7,7 @@
   "abstract": "Explicit requirement to execute the application package.",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.676308",
-  "dateOfLastChange": "2026-09-07",
+  "dateOfLastChange": "2026-09-09",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -53,7 +53,7 @@
           "language": "ttl",
           "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/CWLRequirements/example_1_1.ttl",
           "sizeBytes": 353,
-          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#InlineJavascriptRequirement/> .\n@prefix ns2: <https://w3id.org/cwl/cwl#DockerRequirement/> .\n\n[] a cwl:InlineJavascriptRequirement ;\n    ns1:expressionLib \"function foo() { return 1; }\" .\n\n[] a cwl:DockerRequirement ;\n    ns2:dockerPull \"docker.io/debian:stable-slim\" .\n\n"
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#InlineJavascriptRequirement/> .\n@prefix ns2: <https://w3id.org/cwl/cwl#DockerRequirement/> .\n\n[] a cwl:DockerRequirement ;\n    ns2:dockerPull \"docker.io/debian:stable-slim\" .\n\n[] a cwl:InlineJavascriptRequirement ;\n    ns1:expressionLib \"function foo() { return 1; }\" .\n\n"
         }
       ]
     },
@@ -78,7 +78,7 @@
           "language": "ttl",
           "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/CWLRequirements/example_2_1.ttl",
           "sizeBytes": 389,
-          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#ResourceRequirement/> .\n@prefix ns2: <https://w3id.org/cwl/cwl#DockerRequirement/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] cwl:DockerRequirement [ ns2:dockerPull \"docker.io/debian:stable-slim\" ] ;\n    cwl:ResourceRequirement [ ns1:coresMax 1.75e+00 ;\n            ns1:coresMin 1.25e+00 ] .\n\n"
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#DockerRequirement/> .\n@prefix ns2: <https://w3id.org/cwl/cwl#ResourceRequirement/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] cwl:DockerRequirement [ ns1:dockerPull \"docker.io/debian:stable-slim\" ] ;\n    cwl:ResourceRequirement [ ns2:coresMax 1.75e+00 ;\n            ns2:coresMin 1.25e+00 ] .\n\n"
         }
       ]
     }

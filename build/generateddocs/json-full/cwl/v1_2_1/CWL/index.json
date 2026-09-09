@@ -7,7 +7,7 @@
   "abstract": "The root of the register: a Common Workflow Language v1.2.1 Application Package document.\n\nA CWL document is one of three top-level forms: a single CommandLineTool/ExpressionTool/Workflow\ndefinition (`CWLAtomic`), the same wrapped as a nested `run` definition inside a Workflow step\n(`CWLAtomicNested`), or a `$graph`-wrapped document (`CWLGraph`).",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.672484",
-  "dateOfLastChange": "2026-09-07",
+  "dateOfLastChange": "2026-09-09",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -17,9 +17,9 @@
   "highlighted": true,
   "shaclShapes": {},
   "dependsOn": [
+    "ogc.cwl.v1_2_1.CWLAtomic",
     "ogc.cwl.v1_2_1.CWLWorkflow",
-    "ogc.cwl.v1_2_1.CWLGraph",
-    "ogc.cwl.v1_2_1.CWLAtomic"
+    "ogc.cwl.v1_2_1.CWLGraph"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWL/schema.yaml",
@@ -78,7 +78,7 @@
           "language": "ttl",
           "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWL/example_2_1.ttl",
           "sizeBytes": 1281,
-          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#Workflow/> .\n@prefix ns2: <https://w3id.org/cwl/cwl#CommandOutputBinding/> .\n@prefix ns3: <https://w3id.org/cwl/cwl#CommandLineBinding/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://example.org/count_lines> cwl:in \"input_file\" ;\n    cwl:out <https://example.org/output> ;\n    cwl:run [ a cwl:CommandLineTool ;\n            cwl:baseCommand ( \"wc\" \"-l\" ) ;\n            cwl:inputs <https://example.org/file1> ;\n            cwl:outputs <https://example.org/output> ;\n            cwl:stdout \"output.txt\" ] .\n\n<https://example.org/count_output> sld:type cwl:File .\n\n<https://example.org/file1> cwl:inputBinding [ ns3:position 1 ] ;\n    sld:type cwl:File .\n\n<https://example.org/input_file> sld:type cwl:File .\n\n<https://example.org/output> cwl:outputBinding [ ns2:glob \"output.txt\" ] ;\n    sld:type cwl:File .\n\n[] a cwl:Workflow ;\n    rdfs:label \"Count lines in a file\" ;\n    ns1:steps <https://example.org/count_lines> ;\n    cwl:inputs <https://example.org/input_file> ;\n    cwl:outputs <https://example.org/count_output> .\n\n"
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#Workflow/> .\n@prefix ns2: <https://w3id.org/cwl/cwl#CommandLineBinding/> .\n@prefix ns3: <https://w3id.org/cwl/cwl#CommandOutputBinding/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://example.org/count_lines> cwl:in \"input_file\" ;\n    cwl:out <https://example.org/output> ;\n    cwl:run [ a cwl:CommandLineTool ;\n            cwl:baseCommand ( \"wc\" \"-l\" ) ;\n            cwl:inputs <https://example.org/file1> ;\n            cwl:outputs <https://example.org/output> ;\n            cwl:stdout \"output.txt\" ] .\n\n<https://example.org/count_output> sld:type cwl:File .\n\n<https://example.org/file1> cwl:inputBinding [ ns2:position 1 ] ;\n    sld:type cwl:File .\n\n<https://example.org/input_file> sld:type cwl:File .\n\n<https://example.org/output> cwl:outputBinding [ ns3:glob \"output.txt\" ] ;\n    sld:type cwl:File .\n\n[] a cwl:Workflow ;\n    rdfs:label \"Count lines in a file\" ;\n    ns1:steps <https://example.org/count_lines> ;\n    cwl:inputs <https://example.org/input_file> ;\n    cwl:outputs <https://example.org/count_output> .\n\n"
         }
       ]
     }

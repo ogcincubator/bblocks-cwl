@@ -7,7 +7,7 @@
   "abstract": "Defines a list of files and subdirectories that must be\nstaged by the workflow platform prior to executing the command line tool, normally within the\ndesignated output directory (though containers may stage them elsewhere).",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.685221",
-  "dateOfLastChange": "2026-09-07",
+  "dateOfLastChange": "2026-09-09",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -15,8 +15,8 @@
     "cwl"
   ],
   "dependsOn": [
-    "ogc.cwl.v1_2_1.Checksum",
     "ogc.cwl.v1_2_1.CWLExpression",
+    "ogc.cwl.v1_2_1.Checksum",
     "ogc.cwl.v1_2_1.CWLOntology"
   ],
   "shaclShapes": {},
@@ -79,7 +79,7 @@
           "language": "ttl",
           "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/InitialWorkDirRequirement/example_2_1.ttl",
           "sizeBytes": 283,
-          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#Dirent/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a <https://example.org/InitialWorkDirRequirement> ;\n    cwl:listing [ ns1:writable true ],\n        [ a <https://example.org/File> ] .\n\n"
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#Dirent/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a <https://example.org/InitialWorkDirRequirement> ;\n    cwl:listing [ a <https://example.org/File> ],\n        [ ns1:writable true ] .\n\n"
         }
       ]
     }

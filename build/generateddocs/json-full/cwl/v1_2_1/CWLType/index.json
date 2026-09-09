@@ -7,7 +7,7 @@
   "abstract": "The set of types a CWL input or output parameter may declare: the CWL\nprimitive/File/Directory types, an inline enum, an inline record, a reference to a named type\n(record or enum) defined elsewhere, an array of one of these, or an array combining several of\nthese (a type union).",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.690093",
-  "dateOfLastChange": "2026-09-07",
+  "dateOfLastChange": "2026-09-09",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -16,10 +16,10 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLTypeDefinition",
-    "ogc.cwl.v1_2_1.type-system.CWLTypeEnum",
+    "ogc.cwl.v1_2_1.type-system.CWLTypeRecordSchema",
     "ogc.cwl.v1_2_1.type-system.CWLTypeRecordRef",
-    "ogc.cwl.v1_2_1.type-system.CWLTypeRecordSchema"
+    "ogc.cwl.v1_2_1.CWLTypeDefinition",
+    "ogc.cwl.v1_2_1.type-system.CWLTypeEnum"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLType/schema.yaml",

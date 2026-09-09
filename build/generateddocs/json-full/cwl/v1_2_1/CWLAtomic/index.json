@@ -10,7 +10,7 @@
   ],
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.672835",
-  "dateOfLastChange": "2026-09-07",
+  "dateOfLastChange": "2026-09-09",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -19,10 +19,10 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.cwl.v1_2_1.CWLAtomicBase",
-    "ogc.cwl.v1_2_1.CWLMetadata",
     "ogc.cwl.v1_2_1.CWLVersion",
-    "ogc.cwl.v1_2_1.CWLDocumentation"
+    "ogc.cwl.v1_2_1.CWLDocumentation",
+    "ogc.cwl.v1_2_1.CWLMetadata",
+    "ogc.cwl.v1_2_1.CWLAtomicBase"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLAtomic/schema.yaml",
@@ -81,7 +81,7 @@
           "language": "ttl",
           "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLAtomic/example_2_1.ttl",
           "sizeBytes": 1212,
-          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#CommandOutputBinding/> .\n@prefix ns2: <https://w3id.org/cwl/cwl#CommandLineBinding/> .\n@prefix ns3: <https://w3id.org/cwl/cwl#DockerRequirement/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix schema: <https://schema.org/> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://example.org/file1> rdfs:label \"Input File\" ;\n    rdfs:comment \"The file that will be copied using 'cat'\" ;\n    cwl:inputBinding [ ns2:position 1 ] ;\n    sld:type cwl:File .\n\n<https://example.org/output_file> cwl:outputBinding [ ns1:glob \"output.txt\" ] ;\n    sld:type cwl:File .\n\n[] a cwl:CommandLineTool ;\n    rdfs:comment \"Print the contents of a file to stdout using 'cat' running in a docker container.\" ;\n    schema:keywords \"cat\",\n        \"docker\" ;\n    cwl:baseCommand ( \"cat\" ) ;\n    cwl:hints [ a cwl:DockerRequirement ;\n            ns3:dockerPull \"docker.io/debian:stable-slim\" ] ;\n    cwl:inputs <https://example.org/file1> ;\n    cwl:outputs <https://example.org/output_file> ;\n    cwl:stdout \"output.txt\" .\n\n"
+          "code": "@prefix cwl: <https://w3id.org/cwl/cwl#> .\n@prefix ns1: <https://w3id.org/cwl/cwl#CommandLineBinding/> .\n@prefix ns2: <https://w3id.org/cwl/cwl#DockerRequirement/> .\n@prefix ns3: <https://w3id.org/cwl/cwl#CommandOutputBinding/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix schema: <https://schema.org/> .\n@prefix sld: <https://w3id.org/cwl/salad#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://example.org/file1> rdfs:label \"Input File\" ;\n    rdfs:comment \"The file that will be copied using 'cat'\" ;\n    cwl:inputBinding [ ns1:position 1 ] ;\n    sld:type cwl:File .\n\n<https://example.org/output_file> cwl:outputBinding [ ns3:glob \"output.txt\" ] ;\n    sld:type cwl:File .\n\n[] a cwl:CommandLineTool ;\n    rdfs:comment \"Print the contents of a file to stdout using 'cat' running in a docker container.\" ;\n    schema:keywords \"cat\",\n        \"docker\" ;\n    cwl:baseCommand ( \"cat\" ) ;\n    cwl:hints [ a cwl:DockerRequirement ;\n            ns2:dockerPull \"docker.io/debian:stable-slim\" ] ;\n    cwl:inputs <https://example.org/file1> ;\n    cwl:outputs <https://example.org/output_file> ;\n    cwl:stdout \"output.txt\" .\n\n"
         }
       ]
     }

@@ -7,7 +7,7 @@
   "abstract": "Input specification. Note that multiple formats are supported and\nnot all specification variants or parameters are presented here. Please refer\nto official CWL documentation for more details (https://www.commonwl.org).\n",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.689863",
-  "dateOfLastChange": "2026-09-07",
+  "dateOfLastChange": "2026-09-09",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -16,13 +16,13 @@
   ],
   "dependsOn": [
     "ogc.cwl.v1_2_1.CWLIdentifier",
-    "ogc.cwl.v1_2_1.CWLDefaultTypedConditional",
-    "ogc.cwl.v1_2_1.SchemaSaladOntology",
-    "ogc.cwl.v1_2_1.InputBinding",
-    "ogc.cwl.v1_2_1.CWLOntology",
+    "ogc.cwl.v1_2_1.CWLType",
     "ogc.cwl.v1_2_1.CWLInputStdIn",
     "ogc.cwl.v1_2_1.CWLDocumentation",
-    "ogc.cwl.v1_2_1.CWLType"
+    "ogc.cwl.v1_2_1.CWLOntology",
+    "ogc.cwl.v1_2_1.CWLDefaultTypedConditional",
+    "ogc.cwl.v1_2_1.SchemaSaladOntology",
+    "ogc.cwl.v1_2_1.InputBinding"
   ],
   "shaclShapes": {},
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/CWLInputItem/context.jsonld",

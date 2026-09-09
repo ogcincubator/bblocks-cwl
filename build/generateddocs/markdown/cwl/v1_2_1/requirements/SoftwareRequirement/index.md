@@ -77,10 +77,10 @@ objects.
 @prefix ns2: <https://w3id.org/cwl/cwl#SoftwareRequirement/> .
 
 [] a <https://example.org/SoftwareRequirement> ;
-    ns2:packages [ ns1:package "bowtie" ;
-            ns1:specs <https://packages.debian.org/bowtie> ],
-        [ ns1:package "screed" ;
-            ns1:version "1.0" ] .
+    ns2:packages [ ns1:package "screed" ;
+            ns1:version "1.0" ],
+        [ ns1:package "bowtie" ;
+            ns1:specs <https://packages.debian.org/bowtie> ] .
 
 
 ```
@@ -127,14 +127,14 @@ list of specification IRIs/versions or a full
 
 #### ttl
 ```ttl
-@prefix ns1: <https://w3id.org/cwl/cwl#SoftwarePackage/> .
-@prefix ns2: <https://w3id.org/cwl/cwl#SoftwareRequirement/> .
+@prefix ns1: <https://w3id.org/cwl/cwl#SoftwareRequirement/> .
+@prefix ns2: <https://w3id.org/cwl/cwl#SoftwarePackage/> .
 
-<https://example.org/screed> ns1:package "screed" ;
-    ns1:version "1.0" .
+<https://example.org/screed> ns2:package "screed" ;
+    ns2:version "1.0" .
 
 [] a <https://example.org/SoftwareRequirement> ;
-    ns2:packages <https://example.org/screed>,
+    ns1:packages <https://example.org/screed>,
         "https://doi.org/10.21105/joss.00027" .
 
 

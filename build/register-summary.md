@@ -170,6 +170,12 @@ Generic schema to allow alternative CWL requirements/hints not explicitly define
 needs NVIDIA CUDA (GPU hardware acceleration): minimum CUDA SDK version, required compute
 capability, and the minimum/maximum number of GPU devices to request.
 
+### `ogc.cwl.v1_2_1.requirements.SubworkflowFeatureRequirement` — SubworkflowFeatureRequirement
+
+**Type:** schema
+
+Indicates that the 'Workflow' must support nested workflows in the 'run' field of 'WorkflowStep'.
+
 ### `ogc.cwl.v1_2_1.requirements.ShellCommandRequirement` — ShellCommandRequirement
 
 **Type:** schema
@@ -178,12 +184,6 @@ Modifies CommandLineTool execution to generate a single
 shell command-line string: each item in `arguments` is joined with spaces and shell-quoted, unless
 its `CommandLineBinding` sets `shellQuote: false` — in which case it is joined unquoted, allowing
 shell metacharacters such as `|` for pipes.
-
-### `ogc.cwl.v1_2_1.requirements.StepInputExpressionRequirement` — StepInputExpressionRequirement
-
-**Type:** schema
-
-Indicates that the 'Workflow' must support the 'valueFrom' field of 'WorkflowStepInput'.
 
 ### `ogc.cwl.v1_2_1.requirements.ScatterFeatureRequirement` — ScatterFeatureRequirement
 
@@ -194,11 +194,11 @@ input elements. Each job making up a scatter operation is independent and may be
 (see also: https://www.commonwl.org/v1.2/Workflow.html#WorkflowStep).
 
 
-### `ogc.cwl.v1_2_1.requirements.SubworkflowFeatureRequirement` — SubworkflowFeatureRequirement
+### `ogc.cwl.v1_2_1.requirements.StepInputExpressionRequirement` — StepInputExpressionRequirement
 
 **Type:** schema
 
-Indicates that the 'Workflow' must support nested workflows in the 'run' field of 'WorkflowStep'.
+Indicates that the 'Workflow' must support the 'valueFrom' field of 'WorkflowStepInput'.
 
 ### `ogc.cwl.v1_2_1.requirements.MultipleInputFeatureRequirement` — MultipleInputFeatureRequirement
 
@@ -472,15 +472,6 @@ literal file/directory object). Limits itself to data literals and arrays; neste
 An inline CWL `enum` type definition: `type: enum` plus its
 allowed `symbols`.
 
-### `ogc.cwl.v1_2_1.type-system.CWLTypeRecordFieldDef` — CWLTypeRecordFieldDef
-
-**Type:** schema
-
-The definition of a single field within an
-inline CWL `record` type: its `type` and, for the list form of `fields`, its `name`. Also carries
-the file-only and directory-only parameters (`format`, `secondaryFiles`, `loadListing`, ...), since a
-record field's type can itself be File- or Directory-typed.
-
 ### `ogc.cwl.v1_2_1.CWLArguments` — CWLArguments
 
 **Type:** schema
@@ -516,13 +507,14 @@ process's execution environment.
 
 The 'default' property for a workflow step input, shared by the step input's list and map representations; not typically profiled on its own.
 
-### `ogc.cwl.v1_2_1.type-system.CWLTypeRecordSchema` — CWLTypeRecordSchema
+### `ogc.cwl.v1_2_1.CWLType` — CWLType
 
 **Type:** schema
 
-An inline CWL `record` type definition: `type:
-record`, an optional `name`, and its `fields`, given either as a map keyed by field name or as a
-list of field definitions (each of which must then carry its own `name`).
+The set of types a CWL input or output parameter may declare: the CWL
+primitive/File/Directory types, an inline enum, an inline record, a reference to a named type
+(record or enum) defined elsewhere, an array of one of these, or an array combining several of
+these (a type union).
 
 ### `ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepOut` — CWLWorkflowStepOut
 
@@ -537,21 +529,6 @@ Mapping of Workflow step inputs to nested CWL tool definitions inputs or outputs
 A single entry of a Workflow step's `in` mapping, in its
 list form: combines the step-input id, the common wiring fields (`source`, `linkMerge`,
 `valueFrom`), and the optional `default` value used when a source produces no data.
-
-### `ogc.cwl.v1_2_1.CWLType` — CWLType
-
-**Type:** schema
-
-The set of types a CWL input or output parameter may declare: the CWL
-primitive/File/Directory types, an inline enum, an inline record, a reference to a named type
-(record or enum) defined elsewhere, an array of one of these, or an array combining several of
-these (a type union).
-
-### `ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepIn` — CWLWorkflowStepIn
-
-**Type:** schema
-
-Mapping of Workflow step inputs to nested CWL tool definitions inputs or outputs.
 
 ### `ogc.cwl.v1_2_1.CWLInputItem` — CWLInputItem
 
@@ -594,6 +571,21 @@ expressed as a nested object (as opposed to a bare type shorthand): `type`, an o
 A CWL type definition for an array whose elements
 are all of the same, further-specified CWL type: `type: array` plus an `items` type.
 
+### `ogc.cwl.v1_2_1.type-system.CWLTypeRecordFieldDef` — CWLTypeRecordFieldDef
+
+**Type:** schema
+
+The definition of a single field within an
+inline CWL `record` type: its `type` and, for the list form of `fields`, its `name`. Also carries
+the file-only and directory-only parameters (`format`, `secondaryFiles`, `loadListing`, ...), since a
+record field's type can itself be File- or Directory-typed.
+
+### `ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepIn` — CWLWorkflowStepIn
+
+**Type:** schema
+
+Mapping of Workflow step inputs to nested CWL tool definitions inputs or outputs.
+
 ### `ogc.cwl.v1_2_1.CWLInputsDefinition` — CWLInputsDefinition
 
 **Type:** schema
@@ -605,6 +597,14 @@ All inputs available to the Application Package.
 **Type:** schema
 
 All outputs produced by the Application Package.
+
+### `ogc.cwl.v1_2_1.type-system.CWLTypeRecordSchema` — CWLTypeRecordSchema
+
+**Type:** schema
+
+An inline CWL `record` type definition: `type:
+record`, an optional `name`, and its `fields`, given either as a map keyed by field name or as a
+list of field definitions (each of which must then carry its own `name`).
 
 ### `ogc.cwl.v1_2_1.requirements.SchemaDefRequirement` — SchemaDefRequirement
 

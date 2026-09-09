@@ -7,7 +7,7 @@
   "abstract": "Redirects the command's standard error stream to a CWL output (the 'stderr' shorthand or its equivalent 'type: stderr' object form).",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.691253",
-  "dateOfLastChange": "2026-09-07",
+  "dateOfLastChange": "2026-09-09",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",

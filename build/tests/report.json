@@ -10,7 +10,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLVersion - CWLVersion",
       "bblockName": "CWLVersion",
       "bblockId": "ogc.cwl.v1_2_1.CWLVersion",
-      "generated": "2026-09-07T11:25:45.205356+00:00",
+      "generated": "2026-09-09T13:27:26.799947+00:00",
       "result": true,
       "items": [
         {
@@ -97,7 +97,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLDocumentation - CWLDocumentation",
       "bblockName": "CWLDocumentation",
       "bblockId": "ogc.cwl.v1_2_1.CWLDocumentation",
-      "generated": "2026-09-07T11:25:45.219033+00:00",
+      "generated": "2026-09-09T13:27:26.812415+00:00",
       "result": true,
       "items": [
         {
@@ -222,7 +222,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLOntology - CWL Ontology",
       "bblockName": "CWL Ontology",
       "bblockId": "ogc.cwl.v1_2_1.CWLOntology",
-      "generated": "2026-09-07T11:25:45.225574+00:00",
+      "generated": "2026-09-09T13:27:26.818125+00:00",
       "result": true,
       "items": [
         {
@@ -269,7 +269,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLCommand - CWLCommand",
       "bblockName": "CWLCommand",
       "bblockId": "ogc.cwl.v1_2_1.CWLCommand",
-      "generated": "2026-09-07T11:25:45.233776+00:00",
+      "generated": "2026-09-09T13:27:26.824520+00:00",
       "result": true,
       "items": [
         {
@@ -356,7 +356,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.SchemaSaladOntology - Schema Salad Ontology",
       "bblockName": "Schema Salad Ontology",
       "bblockId": "ogc.cwl.v1_2_1.SchemaSaladOntology",
-      "generated": "2026-09-07T11:25:45.239511+00:00",
+      "generated": "2026-09-09T13:27:26.829702+00:00",
       "result": true,
       "items": [
         {
@@ -403,7 +403,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.type-system.CWLTypeSymbolValues - CWLTypeSymbolValues",
       "bblockName": "CWLTypeSymbolValues",
       "bblockId": "ogc.cwl.v1_2_1.type-system.CWLTypeSymbolValues",
-      "generated": "2026-09-07T11:25:45.245934+00:00",
+      "generated": "2026-09-09T13:27:26.835764+00:00",
       "result": true,
       "items": [
         {
@@ -490,7 +490,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.LoadListingEnum - LoadListingEnum",
       "bblockName": "LoadListingEnum",
       "bblockId": "ogc.cwl.v1_2_1.LoadListingEnum",
-      "generated": "2026-09-07T11:25:45.251874+00:00",
+      "generated": "2026-09-09T13:27:26.841399+00:00",
       "result": true,
       "items": [
         {
@@ -577,7 +577,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLExpression - CWLExpression",
       "bblockName": "CWLExpression",
       "bblockId": "ogc.cwl.v1_2_1.CWLExpression",
-      "generated": "2026-09-07T11:25:45.257814+00:00",
+      "generated": "2026-09-09T13:27:26.846993+00:00",
       "result": true,
       "items": [
         {
@@ -664,7 +664,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLTextPatternID - CWLTextPatternID",
       "bblockName": "CWLTextPatternID",
       "bblockId": "ogc.cwl.v1_2_1.CWLTextPatternID",
-      "generated": "2026-09-07T11:25:45.263861+00:00",
+      "generated": "2026-09-09T13:27:26.852488+00:00",
       "result": true,
       "items": [
         {
@@ -751,7 +751,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLImport - CWLImport",
       "bblockName": "CWLImport",
       "bblockId": "ogc.cwl.v1_2_1.CWLImport",
-      "generated": "2026-09-07T11:25:45.271026+00:00",
+      "generated": "2026-09-09T13:27:26.858734+00:00",
       "result": true,
       "items": [
         {
@@ -838,7 +838,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLInputStdIn - CWLInputStdIn",
       "bblockName": "CWLInputStdIn",
       "bblockId": "ogc.cwl.v1_2_1.CWLInputStdIn",
-      "generated": "2026-09-07T11:25:45.278563+00:00",
+      "generated": "2026-09-09T13:27:26.865461+00:00",
       "result": true,
       "items": [
         {
@@ -925,7 +925,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLIntent - CWLIntent",
       "bblockName": "CWLIntent",
       "bblockId": "ogc.cwl.v1_2_1.CWLIntent",
-      "generated": "2026-09-07T11:25:45.285217+00:00",
+      "generated": "2026-09-09T13:27:26.871421+00:00",
       "result": true,
       "items": [
         {
@@ -1012,7 +1012,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLOutputStdErr - CWLOutputStdErr",
       "bblockName": "CWLOutputStdErr",
       "bblockId": "ogc.cwl.v1_2_1.CWLOutputStdErr",
-      "generated": "2026-09-07T11:25:45.292346+00:00",
+      "generated": "2026-09-09T13:27:26.878007+00:00",
       "result": true,
       "items": [
         {
@@ -1099,7 +1099,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLOutputStdOut - CWLOutputStdOut",
       "bblockName": "CWLOutputStdOut",
       "bblockId": "ogc.cwl.v1_2_1.CWLOutputStdOut",
-      "generated": "2026-09-07T11:25:45.299788+00:00",
+      "generated": "2026-09-09T13:27:26.884812+00:00",
       "result": true,
       "items": [
         {
@@ -1186,7 +1186,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLScatterMethod - CWLScatterMethod",
       "bblockName": "CWLScatterMethod",
       "bblockId": "ogc.cwl.v1_2_1.CWLScatterMethod",
-      "generated": "2026-09-07T11:25:45.305578+00:00",
+      "generated": "2026-09-09T13:27:26.890450+00:00",
       "result": true,
       "items": [
         {
@@ -1273,7 +1273,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.Checksum - Checksum",
       "bblockName": "Checksum",
       "bblockId": "ogc.cwl.v1_2_1.Checksum",
-      "generated": "2026-09-07T11:25:45.310786+00:00",
+      "generated": "2026-09-09T13:27:26.895512+00:00",
       "result": true,
       "items": [
         {
@@ -1324,7 +1324,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.LinkMergeMethod - LinkMergeMethod",
       "bblockName": "LinkMergeMethod",
       "bblockId": "ogc.cwl.v1_2_1.LinkMergeMethod",
-      "generated": "2026-09-07T11:25:45.316315+00:00",
+      "generated": "2026-09-09T13:27:26.900904+00:00",
       "result": true,
       "items": [
         {
@@ -1411,7 +1411,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.ResourceQuantityOrFractional - ResourceQuantityOrFractional",
       "bblockName": "ResourceQuantityOrFractional",
       "bblockId": "ogc.cwl.v1_2_1.ResourceQuantityOrFractional",
-      "generated": "2026-09-07T11:25:45.321956+00:00",
+      "generated": "2026-09-09T13:27:26.906616+00:00",
       "result": true,
       "items": [
         {
@@ -1498,7 +1498,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.requirements.UnknownRequirement - UnknownRequirement",
       "bblockName": "UnknownRequirement",
       "bblockId": "ogc.cwl.v1_2_1.requirements.UnknownRequirement",
-      "generated": "2026-09-07T11:25:45.328584+00:00",
+      "generated": "2026-09-09T13:27:26.913092+00:00",
       "result": true,
       "items": [
         {
@@ -1549,7 +1549,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.requirements.cwltool-CUDARequirement - cwltool:CUDARequirement",
       "bblockName": "cwltool:CUDARequirement",
       "bblockId": "ogc.cwl.v1_2_1.requirements.cwltool-CUDARequirement",
-      "generated": "2026-09-07T11:25:45.337834+00:00",
+      "generated": "2026-09-09T13:27:26.921297+00:00",
       "result": true,
       "items": [
         {
@@ -1632,164 +1632,11 @@
         "failed": 0
       }
     },
-    "ogc.cwl.v1_2_1.requirements.ShellCommandRequirement": {
-      "title": "Validation report for ogc.cwl.v1_2_1.requirements.ShellCommandRequirement - ShellCommandRequirement",
-      "bblockName": "ShellCommandRequirement",
-      "bblockId": "ogc.cwl.v1_2_1.requirements.ShellCommandRequirement",
-      "generated": "2026-09-07T11:25:45.344166+00:00",
-      "result": true,
-      "items": [
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/cwl/v1_2_1/requirements/ShellCommandRequirement/example_1_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/ShellCommandRequirement/example_1_1.json",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_1_1.json from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 1,
-        "passed": 1,
-        "failed": 0
-      }
-    },
-    "ogc.cwl.v1_2_1.requirements.StepInputExpressionRequirement": {
-      "title": "Validation report for ogc.cwl.v1_2_1.requirements.StepInputExpressionRequirement - StepInputExpressionRequirement",
-      "bblockName": "StepInputExpressionRequirement",
-      "bblockId": "ogc.cwl.v1_2_1.requirements.StepInputExpressionRequirement",
-      "generated": "2026-09-07T11:25:45.350196+00:00",
-      "result": true,
-      "items": [
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/cwl/v1_2_1/requirements/StepInputExpressionRequirement/example_1_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/StepInputExpressionRequirement/example_1_1.json",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_1_1.json from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 1,
-        "passed": 1,
-        "failed": 0
-      }
-    },
-    "ogc.cwl.v1_2_1.requirements.ScatterFeatureRequirement": {
-      "title": "Validation report for ogc.cwl.v1_2_1.requirements.ScatterFeatureRequirement - ScatterFeatureRequirement",
-      "bblockName": "ScatterFeatureRequirement",
-      "bblockId": "ogc.cwl.v1_2_1.requirements.ScatterFeatureRequirement",
-      "generated": "2026-09-07T11:25:45.356367+00:00",
-      "result": true,
-      "items": [
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/cwl/v1_2_1/requirements/ScatterFeatureRequirement/example_1_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/ScatterFeatureRequirement/example_1_1.json",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_1_1.json from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 1,
-        "passed": 1,
-        "failed": 0
-      }
-    },
     "ogc.cwl.v1_2_1.requirements.SubworkflowFeatureRequirement": {
       "title": "Validation report for ogc.cwl.v1_2_1.requirements.SubworkflowFeatureRequirement - SubworkflowFeatureRequirement",
       "bblockName": "SubworkflowFeatureRequirement",
       "bblockId": "ogc.cwl.v1_2_1.requirements.SubworkflowFeatureRequirement",
-      "generated": "2026-09-07T11:25:45.362346+00:00",
+      "generated": "2026-09-09T13:27:26.927341+00:00",
       "result": true,
       "items": [
         {
@@ -1836,11 +1683,164 @@
         "failed": 0
       }
     },
+    "ogc.cwl.v1_2_1.requirements.ShellCommandRequirement": {
+      "title": "Validation report for ogc.cwl.v1_2_1.requirements.ShellCommandRequirement - ShellCommandRequirement",
+      "bblockName": "ShellCommandRequirement",
+      "bblockId": "ogc.cwl.v1_2_1.requirements.ShellCommandRequirement",
+      "generated": "2026-09-09T13:27:26.932829+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/cwl/v1_2_1/requirements/ShellCommandRequirement/example_1_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/ShellCommandRequirement/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_1_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.requirements.ScatterFeatureRequirement": {
+      "title": "Validation report for ogc.cwl.v1_2_1.requirements.ScatterFeatureRequirement - ScatterFeatureRequirement",
+      "bblockName": "ScatterFeatureRequirement",
+      "bblockId": "ogc.cwl.v1_2_1.requirements.ScatterFeatureRequirement",
+      "generated": "2026-09-09T13:27:26.938805+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/cwl/v1_2_1/requirements/ScatterFeatureRequirement/example_1_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/ScatterFeatureRequirement/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_1_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.requirements.StepInputExpressionRequirement": {
+      "title": "Validation report for ogc.cwl.v1_2_1.requirements.StepInputExpressionRequirement - StepInputExpressionRequirement",
+      "bblockName": "StepInputExpressionRequirement",
+      "bblockId": "ogc.cwl.v1_2_1.requirements.StepInputExpressionRequirement",
+      "generated": "2026-09-09T13:27:26.944372+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/cwl/v1_2_1/requirements/StepInputExpressionRequirement/example_1_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/requirements/StepInputExpressionRequirement/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_1_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      }
+    },
     "ogc.cwl.v1_2_1.requirements.MultipleInputFeatureRequirement": {
       "title": "Validation report for ogc.cwl.v1_2_1.requirements.MultipleInputFeatureRequirement - MultipleInputFeatureRequirement",
       "bblockName": "MultipleInputFeatureRequirement",
       "bblockId": "ogc.cwl.v1_2_1.requirements.MultipleInputFeatureRequirement",
-      "generated": "2026-09-07T11:25:45.368300+00:00",
+      "generated": "2026-09-09T13:27:26.950068+00:00",
       "result": true,
       "items": [
         {
@@ -1891,7 +1891,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.type-system.CWLTypeRecordRefPattern - CWLTypeRecordRefPattern",
       "bblockName": "CWLTypeRecordRefPattern",
       "bblockId": "ogc.cwl.v1_2_1.type-system.CWLTypeRecordRefPattern",
-      "generated": "2026-09-07T11:25:45.373874+00:00",
+      "generated": "2026-09-09T13:27:26.955519+00:00",
       "result": true,
       "items": [
         {
@@ -1978,7 +1978,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.ReferenceURL - ReferenceURL",
       "bblockName": "ReferenceURL",
       "bblockId": "ogc.cwl.v1_2_1.ReferenceURL",
-      "generated": "2026-09-07T11:25:45.401805+00:00",
+      "generated": "2026-09-09T13:27:27.052336+00:00",
       "result": true,
       "items": [
         {
@@ -2065,7 +2065,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLDefaultLocation - CWLDefaultLocation",
       "bblockName": "CWLDefaultLocation",
       "bblockId": "ogc.cwl.v1_2_1.CWLDefaultLocation",
-      "generated": "2026-09-07T11:25:45.413993+00:00",
+      "generated": "2026-09-09T13:27:27.063974+00:00",
       "result": true,
       "items": [
         {
@@ -2190,7 +2190,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLMetadata - CWLMetadata",
       "bblockName": "CWLMetadata",
       "bblockId": "ogc.cwl.v1_2_1.CWLMetadata",
-      "generated": "2026-09-07T11:25:45.424880+00:00",
+      "generated": "2026-09-09T13:27:27.074370+00:00",
       "result": true,
       "items": [
         {
@@ -2315,7 +2315,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLWorkflowClass - CWLWorkflowClass",
       "bblockName": "CWLWorkflowClass",
       "bblockId": "ogc.cwl.v1_2_1.CWLWorkflowClass",
-      "generated": "2026-09-07T11:25:45.433089+00:00",
+      "generated": "2026-09-09T13:27:27.082304+00:00",
       "result": true,
       "items": [
         {
@@ -2385,7 +2385,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.requirements.DockerRequirement - DockerRequirement",
       "bblockName": "DockerRequirement",
       "bblockId": "ogc.cwl.v1_2_1.requirements.DockerRequirement",
-      "generated": "2026-09-07T11:25:45.444379+00:00",
+      "generated": "2026-09-09T13:27:27.092962+00:00",
       "result": true,
       "items": [
         {
@@ -2510,7 +2510,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.requirements.InlineJavascriptRequirement - InlineJavascriptRequirement",
       "bblockName": "InlineJavascriptRequirement",
       "bblockId": "ogc.cwl.v1_2_1.requirements.InlineJavascriptRequirement",
-      "generated": "2026-09-07T11:25:45.456724+00:00",
+      "generated": "2026-09-09T13:27:27.104523+00:00",
       "result": true,
       "items": [
         {
@@ -2635,7 +2635,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.requirements.InplaceUpdateRequirement - InplaceUpdateRequirement",
       "bblockName": "InplaceUpdateRequirement",
       "bblockId": "ogc.cwl.v1_2_1.requirements.InplaceUpdateRequirement",
-      "generated": "2026-09-07T11:25:45.465870+00:00",
+      "generated": "2026-09-09T13:27:27.113398+00:00",
       "result": true,
       "items": [
         {
@@ -2705,7 +2705,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLTypeDefinition - CWLTypeDefinition",
       "bblockName": "CWLTypeDefinition",
       "bblockId": "ogc.cwl.v1_2_1.CWLTypeDefinition",
-      "generated": "2026-09-07T11:25:45.483130+00:00",
+      "generated": "2026-09-09T13:27:27.130075+00:00",
       "result": true,
       "items": [
         {
@@ -2850,7 +2850,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.type-system.CWLTypeSymbols - CWLTypeSymbols",
       "bblockName": "CWLTypeSymbols",
       "bblockId": "ogc.cwl.v1_2_1.type-system.CWLTypeSymbols",
-      "generated": "2026-09-07T11:25:45.490080+00:00",
+      "generated": "2026-09-09T13:27:27.136674+00:00",
       "result": true,
       "items": [
         {
@@ -2901,7 +2901,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLDirectoryOnlyParameters - CWLDirectoryOnlyParameters",
       "bblockName": "CWLDirectoryOnlyParameters",
       "bblockId": "ogc.cwl.v1_2_1.CWLDirectoryOnlyParameters",
-      "generated": "2026-09-07T11:25:45.499739+00:00",
+      "generated": "2026-09-09T13:27:27.184100+00:00",
       "result": true,
       "items": [
         {
@@ -3026,7 +3026,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.requirements.LoadListingRequirement - LoadListingRequirement",
       "bblockName": "LoadListingRequirement",
       "bblockId": "ogc.cwl.v1_2_1.requirements.LoadListingRequirement",
-      "generated": "2026-09-07T11:25:45.552353+00:00",
+      "generated": "2026-09-09T13:27:27.195104+00:00",
       "result": true,
       "items": [
         {
@@ -3151,7 +3151,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLFileOnlyParameters - CWLFileOnlyParameters",
       "bblockName": "CWLFileOnlyParameters",
       "bblockId": "ogc.cwl.v1_2_1.CWLFileOnlyParameters",
-      "generated": "2026-09-07T11:25:45.569385+00:00",
+      "generated": "2026-09-09T13:27:27.209566+00:00",
       "result": true,
       "items": [
         {
@@ -3276,7 +3276,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.InputBinding - InputBinding",
       "bblockName": "InputBinding",
       "bblockId": "ogc.cwl.v1_2_1.InputBinding",
-      "generated": "2026-09-07T11:25:45.581682+00:00",
+      "generated": "2026-09-09T13:27:27.220750+00:00",
       "result": true,
       "items": [
         {
@@ -3401,7 +3401,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.OutputBinding - OutputBinding",
       "bblockName": "OutputBinding",
       "bblockId": "ogc.cwl.v1_2_1.OutputBinding",
-      "generated": "2026-09-07T11:25:45.592637+00:00",
+      "generated": "2026-09-09T13:27:27.231199+00:00",
       "result": true,
       "items": [
         {
@@ -3526,7 +3526,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.requirements.EnvVarRequirement - EnvVarRequirement",
       "bblockName": "EnvVarRequirement",
       "bblockId": "ogc.cwl.v1_2_1.requirements.EnvVarRequirement",
-      "generated": "2026-09-07T11:25:45.607379+00:00",
+      "generated": "2026-09-09T13:27:27.244676+00:00",
       "result": true,
       "items": [
         {
@@ -3651,7 +3651,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.requirements.NetworkAccessRequirement - NetworkAccessRequirement",
       "bblockName": "NetworkAccessRequirement",
       "bblockId": "ogc.cwl.v1_2_1.requirements.NetworkAccessRequirement",
-      "generated": "2026-09-07T11:25:45.619112+00:00",
+      "generated": "2026-09-09T13:27:27.255835+00:00",
       "result": true,
       "items": [
         {
@@ -3776,7 +3776,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.requirements.ToolTimeLimitRequirement - ToolTimeLimitRequirement",
       "bblockName": "ToolTimeLimitRequirement",
       "bblockId": "ogc.cwl.v1_2_1.requirements.ToolTimeLimitRequirement",
-      "generated": "2026-09-07T11:25:45.631003+00:00",
+      "generated": "2026-09-09T13:27:27.266975+00:00",
       "result": true,
       "items": [
         {
@@ -3901,7 +3901,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.requirements.WorkReuseRequirement - WorkReuseRequirement",
       "bblockName": "WorkReuseRequirement",
       "bblockId": "ogc.cwl.v1_2_1.requirements.WorkReuseRequirement",
-      "generated": "2026-09-07T11:25:45.642871+00:00",
+      "generated": "2026-09-09T13:27:27.278147+00:00",
       "result": true,
       "items": [
         {
@@ -4026,7 +4026,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLIdentifier - CWLIdentifier",
       "bblockName": "CWLIdentifier",
       "bblockId": "ogc.cwl.v1_2_1.CWLIdentifier",
-      "generated": "2026-09-07T11:25:45.650578+00:00",
+      "generated": "2026-09-09T13:27:27.285365+00:00",
       "result": true,
       "items": [
         {
@@ -4113,7 +4113,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.requirements.BuiltinRequirement - BuiltinRequirement",
       "bblockName": "BuiltinRequirement",
       "bblockId": "ogc.cwl.v1_2_1.requirements.BuiltinRequirement",
-      "generated": "2026-09-07T11:25:45.659251+00:00",
+      "generated": "2026-09-09T13:27:27.293563+00:00",
       "result": true,
       "items": [
         {
@@ -4183,7 +4183,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.type-system.IdentifierArray - IdentifierArray",
       "bblockName": "IdentifierArray",
       "bblockId": "ogc.cwl.v1_2_1.type-system.IdentifierArray",
-      "generated": "2026-09-07T11:25:45.666129+00:00",
+      "generated": "2026-09-09T13:27:27.300157+00:00",
       "result": true,
       "items": [
         {
@@ -4270,7 +4270,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.requirements.InitialWorkDirRequirement - InitialWorkDirRequirement",
       "bblockName": "InitialWorkDirRequirement",
       "bblockId": "ogc.cwl.v1_2_1.requirements.InitialWorkDirRequirement",
-      "generated": "2026-09-07T11:25:45.683290+00:00",
+      "generated": "2026-09-09T13:27:27.315500+00:00",
       "result": true,
       "items": [
         {
@@ -4395,7 +4395,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepInputBase - CWLWorkflowStepInputBase",
       "bblockName": "CWLWorkflowStepInputBase",
       "bblockId": "ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepInputBase",
-      "generated": "2026-09-07T11:25:45.695492+00:00",
+      "generated": "2026-09-09T13:27:27.326810+00:00",
       "result": true,
       "items": [
         {
@@ -4520,7 +4520,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.requirements.ResourceRequirement - ResourceRequirement",
       "bblockName": "ResourceRequirement",
       "bblockId": "ogc.cwl.v1_2_1.requirements.ResourceRequirement",
-      "generated": "2026-09-07T11:25:45.713669+00:00",
+      "generated": "2026-09-09T13:27:27.342972+00:00",
       "result": true,
       "items": [
         {
@@ -4645,7 +4645,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.SoftwarePackage - SoftwarePackage",
       "bblockName": "SoftwarePackage",
       "bblockId": "ogc.cwl.v1_2_1.SoftwarePackage",
-      "generated": "2026-09-07T11:25:45.745759+00:00",
+      "generated": "2026-09-09T13:27:27.423478+00:00",
       "result": true,
       "items": [
         {
@@ -4770,7 +4770,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.requirements.OGCAPIRequirement - OGCAPIRequirement",
       "bblockName": "OGCAPIRequirement",
       "bblockId": "ogc.cwl.v1_2_1.requirements.OGCAPIRequirement",
-      "generated": "2026-09-07T11:25:45.777132+00:00",
+      "generated": "2026-09-09T13:27:27.526669+00:00",
       "result": true,
       "items": [
         {
@@ -4840,7 +4840,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.requirements.WPS1Requirement - WPS1Requirement",
       "bblockName": "WPS1Requirement",
       "bblockId": "ogc.cwl.v1_2_1.requirements.WPS1Requirement",
-      "generated": "2026-09-07T11:25:45.883943+00:00",
+      "generated": "2026-09-09T13:27:27.624344+00:00",
       "result": true,
       "items": [
         {
@@ -4910,7 +4910,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLDefault - CWLDefault",
       "bblockName": "CWLDefault",
       "bblockId": "ogc.cwl.v1_2_1.CWLDefault",
-      "generated": "2026-09-07T11:25:45.907082+00:00",
+      "generated": "2026-09-09T13:27:27.644413+00:00",
       "result": true,
       "items": [
         {
@@ -5055,7 +5055,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.type-system.CWLTypeRecordRef - CWLTypeRecordRef",
       "bblockName": "CWLTypeRecordRef",
       "bblockId": "ogc.cwl.v1_2_1.type-system.CWLTypeRecordRef",
-      "generated": "2026-09-07T11:25:45.916822+00:00",
+      "generated": "2026-09-09T13:27:27.653529+00:00",
       "result": true,
       "items": [
         {
@@ -5142,7 +5142,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLDefaultTypedConditional - CWLDefaultTypedConditional",
       "bblockName": "CWLDefaultTypedConditional",
       "bblockId": "ogc.cwl.v1_2_1.CWLDefaultTypedConditional",
-      "generated": "2026-09-07T11:25:45.951156+00:00",
+      "generated": "2026-09-09T13:27:27.683571+00:00",
       "result": true,
       "items": [
         {
@@ -5267,7 +5267,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.type-system.CWLTypeEnum - CWLTypeEnum",
       "bblockName": "CWLTypeEnum",
       "bblockId": "ogc.cwl.v1_2_1.type-system.CWLTypeEnum",
-      "generated": "2026-09-07T11:25:45.959566+00:00",
+      "generated": "2026-09-09T13:27:27.691351+00:00",
       "result": true,
       "items": [
         {
@@ -5350,136 +5350,11 @@
         "failed": 0
       }
     },
-    "ogc.cwl.v1_2_1.type-system.CWLTypeRecordFieldDef": {
-      "title": "Validation report for ogc.cwl.v1_2_1.type-system.CWLTypeRecordFieldDef - CWLTypeRecordFieldDef",
-      "bblockName": "CWLTypeRecordFieldDef",
-      "bblockId": "ogc.cwl.v1_2_1.type-system.CWLTypeRecordFieldDef",
-      "generated": "2026-09-07T11:25:45.984184+00:00",
-      "result": true,
-      "items": [
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/example_1_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/example_1_1.json",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_1_1.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_1_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_1_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_1_1.ttl",
-                  "size": 2,
-                  "isError": false,
-                  "message": "Output Turtle example_1_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/example_2_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/example_2_1.json",
-            "exampleIndex": 2,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_2_1.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_2_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_2_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_2_1.ttl",
-                  "size": 2,
-                  "isError": false,
-                  "message": "Output Turtle example_2_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 2,
-        "passed": 2,
-        "failed": 0
-      }
-    },
     "ogc.cwl.v1_2_1.CWLArguments": {
       "title": "Validation report for ogc.cwl.v1_2_1.CWLArguments - CWLArguments",
       "bblockName": "CWLArguments",
       "bblockId": "ogc.cwl.v1_2_1.CWLArguments",
-      "generated": "2026-09-07T11:25:46.003657+00:00",
+      "generated": "2026-09-09T13:27:27.708286+00:00",
       "result": true,
       "items": [
         {
@@ -5624,7 +5499,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLScatter - CWLScatter",
       "bblockName": "CWLScatter",
       "bblockId": "ogc.cwl.v1_2_1.CWLScatter",
-      "generated": "2026-09-07T11:25:46.011653+00:00",
+      "generated": "2026-09-09T13:27:27.715821+00:00",
       "result": true,
       "items": [
         {
@@ -5711,7 +5586,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepId - CWLWorkflowStepId",
       "bblockName": "CWLWorkflowStepId",
       "bblockId": "ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepId",
-      "generated": "2026-09-07T11:25:46.025532+00:00",
+      "generated": "2026-09-09T13:27:27.728518+00:00",
       "result": true,
       "items": [
         {
@@ -5791,7 +5666,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.requirements.SoftwareRequirement - SoftwareRequirement",
       "bblockName": "SoftwareRequirement",
       "bblockId": "ogc.cwl.v1_2_1.requirements.SoftwareRequirement",
-      "generated": "2026-09-07T11:25:46.069811+00:00",
+      "generated": "2026-09-09T13:27:27.795052+00:00",
       "result": true,
       "items": [
         {
@@ -5916,7 +5791,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepInputDefault - CWLWorkflowStepInputDefault",
       "bblockName": "CWLWorkflowStepInputDefault",
       "bblockId": "ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepInputDefault",
-      "generated": "2026-09-07T11:25:46.084273+00:00",
+      "generated": "2026-09-09T13:27:27.808358+00:00",
       "result": true,
       "items": [
         {
@@ -6037,19 +5912,19 @@
         "failed": 0
       }
     },
-    "ogc.cwl.v1_2_1.type-system.CWLTypeRecordSchema": {
-      "title": "Validation report for ogc.cwl.v1_2_1.type-system.CWLTypeRecordSchema - CWLTypeRecordSchema",
-      "bblockName": "CWLTypeRecordSchema",
-      "bblockId": "ogc.cwl.v1_2_1.type-system.CWLTypeRecordSchema",
-      "generated": "2026-09-07T11:25:46.103952+00:00",
+    "ogc.cwl.v1_2_1.CWLType": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLType - CWLType",
+      "bblockName": "CWLType",
+      "bblockId": "ogc.cwl.v1_2_1.CWLType",
+      "generated": "2026-09-09T13:27:27.831847+00:00",
       "result": true,
       "items": [
         {
           "source": {
             "type": "EXAMPLE",
             "requireFail": false,
-            "filename": "build/tests/cwl/v1_2_1/type-system/CWLTypeRecordSchema/example_1_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordSchema/example_1_1.json",
+            "filename": "build/tests/cwl/v1_2_1/CWLType/example_1_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLType/example_1_1.json",
             "exampleIndex": 1,
             "snippetIndex": 1,
             "language": "application/json"
@@ -6079,7 +5954,7 @@
                   "op": "ttl-create",
                   "empty": false,
                   "filename": "example_1_1.ttl",
-                  "size": 2,
+                  "size": 5,
                   "isError": false,
                   "message": "Output Turtle example_1_1.ttl created"
                 }
@@ -6096,6 +5971,16 @@
                   "message": "Validation passed"
                 }
               ]
+            },
+            {
+              "name": "SEMANTIC_UPLIFT",
+              "title": "Semantic Uplift",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Running pre-uplift jq transform step from inline code"
+                }
+              ]
             }
           ]
         },
@@ -6103,8 +5988,8 @@
           "source": {
             "type": "EXAMPLE",
             "requireFail": false,
-            "filename": "build/tests/cwl/v1_2_1/type-system/CWLTypeRecordSchema/example_2_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordSchema/example_2_1.json",
+            "filename": "build/tests/cwl/v1_2_1/CWLType/example_2_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLType/example_2_1.json",
             "exampleIndex": 2,
             "snippetIndex": 1,
             "language": "application/json"
@@ -6134,7 +6019,7 @@
                   "op": "ttl-create",
                   "empty": false,
                   "filename": "example_2_1.ttl",
-                  "size": 5,
+                  "size": 1,
                   "isError": false,
                   "message": "Output Turtle example_2_1.ttl created"
                 }
@@ -6149,6 +6034,16 @@
                   "result": true,
                   "isError": false,
                   "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SEMANTIC_UPLIFT",
+              "title": "Semantic Uplift",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Running pre-uplift jq transform step from inline code"
                 }
               ]
             }
@@ -6166,7 +6061,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepOut - CWLWorkflowStepOut",
       "bblockName": "CWLWorkflowStepOut",
       "bblockId": "ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepOut",
-      "generated": "2026-09-07T11:25:46.127606+00:00",
+      "generated": "2026-09-09T13:27:27.853503+00:00",
       "result": true,
       "items": [
         {
@@ -6319,7 +6214,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepInItem - CWLWorkflowStepInItem",
       "bblockName": "CWLWorkflowStepInItem",
       "bblockId": "ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepInItem",
-      "generated": "2026-09-07T11:25:46.142508+00:00",
+      "generated": "2026-09-09T13:27:27.867136+00:00",
       "result": true,
       "items": [
         {
@@ -6440,19 +6335,19 @@
         "failed": 0
       }
     },
-    "ogc.cwl.v1_2_1.CWLType": {
-      "title": "Validation report for ogc.cwl.v1_2_1.CWLType - CWLType",
-      "bblockName": "CWLType",
-      "bblockId": "ogc.cwl.v1_2_1.CWLType",
-      "generated": "2026-09-07T11:25:46.168339+00:00",
+    "ogc.cwl.v1_2_1.CWLInputItem": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLInputItem - CWLInputItem",
+      "bblockName": "CWLInputItem",
+      "bblockId": "ogc.cwl.v1_2_1.CWLInputItem",
+      "generated": "2026-09-09T13:27:27.888193+00:00",
       "result": true,
       "items": [
         {
           "source": {
             "type": "EXAMPLE",
             "requireFail": false,
-            "filename": "build/tests/cwl/v1_2_1/CWLType/example_1_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLType/example_1_1.json",
+            "filename": "build/tests/cwl/v1_2_1/CWLInputItem/example_1_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLInputItem/example_1_1.json",
             "exampleIndex": 1,
             "snippetIndex": 1,
             "language": "application/json"
@@ -6482,7 +6377,7 @@
                   "op": "ttl-create",
                   "empty": false,
                   "filename": "example_1_1.ttl",
-                  "size": 5,
+                  "size": 3,
                   "isError": false,
                   "message": "Output Turtle example_1_1.ttl created"
                 }
@@ -6499,14 +6394,129 @@
                   "message": "Validation passed"
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/cwl/v1_2_1/CWLInputItem/example_2_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLInputItem/example_2_1.json",
+            "exampleIndex": 2,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
             {
-              "name": "SEMANTIC_UPLIFT",
-              "title": "Semantic Uplift",
+              "name": "FILES",
+              "title": "Files",
               "entries": [
                 {
                   "isError": false,
-                  "message": "Running pre-uplift jq transform step from inline code"
+                  "message": "Using example_2_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_2_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_2_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_2_1.ttl",
+                  "size": 3,
+                  "isError": false,
+                  "message": "Output Turtle example_2_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLInputObject": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLInputObject - CWLInputObject",
+      "bblockName": "CWLInputObject",
+      "bblockId": "ogc.cwl.v1_2_1.CWLInputObject",
+      "generated": "2026-09-09T13:27:27.908543+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/cwl/v1_2_1/CWLInputObject/example_1_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLInputObject/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_1_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_1_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_1_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_1_1.ttl",
+                  "size": 3,
+                  "isError": false,
+                  "message": "Output Turtle example_1_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
                 }
               ]
             }
@@ -6516,8 +6526,133 @@
           "source": {
             "type": "EXAMPLE",
             "requireFail": false,
-            "filename": "build/tests/cwl/v1_2_1/CWLType/example_2_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLType/example_2_1.json",
+            "filename": "build/tests/cwl/v1_2_1/CWLInputObject/example_2_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLInputObject/example_2_1.json",
+            "exampleIndex": 2,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_2_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_2_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_2_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_2_1.ttl",
+                  "size": 3,
+                  "isError": false,
+                  "message": "Output Turtle example_2_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLOutputItem": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLOutputItem - CWLOutputItem",
+      "bblockName": "CWLOutputItem",
+      "bblockId": "ogc.cwl.v1_2_1.CWLOutputItem",
+      "generated": "2026-09-09T13:27:27.924162+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/cwl/v1_2_1/CWLOutputItem/example_1_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLOutputItem/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_1_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_1_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_1_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_1_1.ttl",
+                  "size": 3,
+                  "isError": false,
+                  "message": "Output Turtle example_1_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/cwl/v1_2_1/CWLOutputItem/example_2_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLOutputItem/example_2_1.json",
             "exampleIndex": 2,
             "snippetIndex": 1,
             "language": "application/json"
@@ -6564,14 +6699,379 @@
                   "message": "Validation passed"
                 }
               ]
-            },
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.CWLOutputObject": {
+      "title": "Validation report for ogc.cwl.v1_2_1.CWLOutputObject - CWLOutputObject",
+      "bblockName": "CWLOutputObject",
+      "bblockId": "ogc.cwl.v1_2_1.CWLOutputObject",
+      "generated": "2026-09-09T13:27:27.939157+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/cwl/v1_2_1/CWLOutputObject/example_1_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLOutputObject/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
             {
-              "name": "SEMANTIC_UPLIFT",
-              "title": "Semantic Uplift",
+              "name": "FILES",
+              "title": "Files",
               "entries": [
                 {
                   "isError": false,
-                  "message": "Running pre-uplift jq transform step from inline code"
+                  "message": "Using example_1_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_1_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_1_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_1_1.ttl",
+                  "size": 4,
+                  "isError": false,
+                  "message": "Output Turtle example_1_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/cwl/v1_2_1/CWLOutputObject/example_2_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLOutputObject/example_2_1.json",
+            "exampleIndex": 2,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_2_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_2_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_2_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_2_1.ttl",
+                  "size": 3,
+                  "isError": false,
+                  "message": "Output Turtle example_2_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.type-system.CWLTypeRecordArray": {
+      "title": "Validation report for ogc.cwl.v1_2_1.type-system.CWLTypeRecordArray - CWLTypeRecordArray",
+      "bblockName": "CWLTypeRecordArray",
+      "bblockId": "ogc.cwl.v1_2_1.type-system.CWLTypeRecordArray",
+      "generated": "2026-09-09T13:27:27.952558+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/cwl/v1_2_1/type-system/CWLTypeRecordArray/example_1_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordArray/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_1_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_1_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_1_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_1_1.ttl",
+                  "size": 2,
+                  "isError": false,
+                  "message": "Output Turtle example_1_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/cwl/v1_2_1/type-system/CWLTypeRecordArray/example_2_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordArray/example_2_1.json",
+            "exampleIndex": 2,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_2_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_2_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_2_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_2_1.ttl",
+                  "size": 2,
+                  "isError": false,
+                  "message": "Output Turtle example_2_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0
+      }
+    },
+    "ogc.cwl.v1_2_1.type-system.CWLTypeRecordFieldDef": {
+      "title": "Validation report for ogc.cwl.v1_2_1.type-system.CWLTypeRecordFieldDef - CWLTypeRecordFieldDef",
+      "bblockName": "CWLTypeRecordFieldDef",
+      "bblockId": "ogc.cwl.v1_2_1.type-system.CWLTypeRecordFieldDef",
+      "generated": "2026-09-09T13:27:27.974599+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/example_1_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_1_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_1_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_1_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_1_1.ttl",
+                  "size": 2,
+                  "isError": false,
+                  "message": "Output Turtle example_1_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/example_2_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordFieldDef/example_2_1.json",
+            "exampleIndex": 2,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_2_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_2_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_2_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_2_1.ttl",
+                  "size": 2,
+                  "isError": false,
+                  "message": "Output Turtle example_2_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
                 }
               ]
             }
@@ -6589,7 +7089,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepIn - CWLWorkflowStepIn",
       "bblockName": "CWLWorkflowStepIn",
       "bblockId": "ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepIn",
-      "generated": "2026-09-07T11:25:46.194523+00:00",
+      "generated": "2026-09-09T13:27:27.998089+00:00",
       "result": true,
       "items": [
         {
@@ -6730,636 +7230,11 @@
         "failed": 0
       }
     },
-    "ogc.cwl.v1_2_1.CWLInputItem": {
-      "title": "Validation report for ogc.cwl.v1_2_1.CWLInputItem - CWLInputItem",
-      "bblockName": "CWLInputItem",
-      "bblockId": "ogc.cwl.v1_2_1.CWLInputItem",
-      "generated": "2026-09-07T11:25:46.218231+00:00",
-      "result": true,
-      "items": [
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/cwl/v1_2_1/CWLInputItem/example_1_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLInputItem/example_1_1.json",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_1_1.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_1_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_1_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_1_1.ttl",
-                  "size": 3,
-                  "isError": false,
-                  "message": "Output Turtle example_1_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/cwl/v1_2_1/CWLInputItem/example_2_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLInputItem/example_2_1.json",
-            "exampleIndex": 2,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_2_1.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_2_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_2_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_2_1.ttl",
-                  "size": 3,
-                  "isError": false,
-                  "message": "Output Turtle example_2_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 2,
-        "passed": 2,
-        "failed": 0
-      }
-    },
-    "ogc.cwl.v1_2_1.CWLInputObject": {
-      "title": "Validation report for ogc.cwl.v1_2_1.CWLInputObject - CWLInputObject",
-      "bblockName": "CWLInputObject",
-      "bblockId": "ogc.cwl.v1_2_1.CWLInputObject",
-      "generated": "2026-09-07T11:25:46.240184+00:00",
-      "result": true,
-      "items": [
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/cwl/v1_2_1/CWLInputObject/example_1_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLInputObject/example_1_1.json",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_1_1.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_1_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_1_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_1_1.ttl",
-                  "size": 3,
-                  "isError": false,
-                  "message": "Output Turtle example_1_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/cwl/v1_2_1/CWLInputObject/example_2_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLInputObject/example_2_1.json",
-            "exampleIndex": 2,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_2_1.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_2_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_2_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_2_1.ttl",
-                  "size": 3,
-                  "isError": false,
-                  "message": "Output Turtle example_2_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 2,
-        "passed": 2,
-        "failed": 0
-      }
-    },
-    "ogc.cwl.v1_2_1.CWLOutputItem": {
-      "title": "Validation report for ogc.cwl.v1_2_1.CWLOutputItem - CWLOutputItem",
-      "bblockName": "CWLOutputItem",
-      "bblockId": "ogc.cwl.v1_2_1.CWLOutputItem",
-      "generated": "2026-09-07T11:25:46.257455+00:00",
-      "result": true,
-      "items": [
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/cwl/v1_2_1/CWLOutputItem/example_1_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLOutputItem/example_1_1.json",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_1_1.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_1_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_1_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_1_1.ttl",
-                  "size": 3,
-                  "isError": false,
-                  "message": "Output Turtle example_1_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/cwl/v1_2_1/CWLOutputItem/example_2_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLOutputItem/example_2_1.json",
-            "exampleIndex": 2,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_2_1.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_2_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_2_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_2_1.ttl",
-                  "size": 1,
-                  "isError": false,
-                  "message": "Output Turtle example_2_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 2,
-        "passed": 2,
-        "failed": 0
-      }
-    },
-    "ogc.cwl.v1_2_1.CWLOutputObject": {
-      "title": "Validation report for ogc.cwl.v1_2_1.CWLOutputObject - CWLOutputObject",
-      "bblockName": "CWLOutputObject",
-      "bblockId": "ogc.cwl.v1_2_1.CWLOutputObject",
-      "generated": "2026-09-07T11:25:46.273868+00:00",
-      "result": true,
-      "items": [
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/cwl/v1_2_1/CWLOutputObject/example_1_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLOutputObject/example_1_1.json",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_1_1.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_1_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_1_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_1_1.ttl",
-                  "size": 4,
-                  "isError": false,
-                  "message": "Output Turtle example_1_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/cwl/v1_2_1/CWLOutputObject/example_2_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/CWLOutputObject/example_2_1.json",
-            "exampleIndex": 2,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_2_1.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_2_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_2_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_2_1.ttl",
-                  "size": 3,
-                  "isError": false,
-                  "message": "Output Turtle example_2_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 2,
-        "passed": 2,
-        "failed": 0
-      }
-    },
-    "ogc.cwl.v1_2_1.type-system.CWLTypeRecordArray": {
-      "title": "Validation report for ogc.cwl.v1_2_1.type-system.CWLTypeRecordArray - CWLTypeRecordArray",
-      "bblockName": "CWLTypeRecordArray",
-      "bblockId": "ogc.cwl.v1_2_1.type-system.CWLTypeRecordArray",
-      "generated": "2026-09-07T11:25:46.288118+00:00",
-      "result": true,
-      "items": [
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/cwl/v1_2_1/type-system/CWLTypeRecordArray/example_1_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordArray/example_1_1.json",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_1_1.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_1_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_1_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_1_1.ttl",
-                  "size": 2,
-                  "isError": false,
-                  "message": "Output Turtle example_1_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/cwl/v1_2_1/type-system/CWLTypeRecordArray/example_2_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordArray/example_2_1.json",
-            "exampleIndex": 2,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_2_1.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_2_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_2_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_2_1.ttl",
-                  "size": 2,
-                  "isError": false,
-                  "message": "Output Turtle example_2_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 2,
-        "passed": 2,
-        "failed": 0
-      }
-    },
     "ogc.cwl.v1_2_1.CWLInputsDefinition": {
       "title": "Validation report for ogc.cwl.v1_2_1.CWLInputsDefinition - CWLInputsDefinition",
       "bblockName": "CWLInputsDefinition",
       "bblockId": "ogc.cwl.v1_2_1.CWLInputsDefinition",
-      "generated": "2026-09-07T11:25:46.325378+00:00",
+      "generated": "2026-09-09T13:27:28.031613+00:00",
       "result": true,
       "items": [
         {
@@ -7504,7 +7379,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLOutputsDefinition - CWLOutputsDefinition",
       "bblockName": "CWLOutputsDefinition",
       "bblockId": "ogc.cwl.v1_2_1.CWLOutputsDefinition",
-      "generated": "2026-09-07T11:25:46.354022+00:00",
+      "generated": "2026-09-09T13:27:28.056803+00:00",
       "result": true,
       "items": [
         {
@@ -7645,11 +7520,136 @@
         "failed": 0
       }
     },
+    "ogc.cwl.v1_2_1.type-system.CWLTypeRecordSchema": {
+      "title": "Validation report for ogc.cwl.v1_2_1.type-system.CWLTypeRecordSchema - CWLTypeRecordSchema",
+      "bblockName": "CWLTypeRecordSchema",
+      "bblockId": "ogc.cwl.v1_2_1.type-system.CWLTypeRecordSchema",
+      "generated": "2026-09-09T13:27:28.074797+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/cwl/v1_2_1/type-system/CWLTypeRecordSchema/example_1_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordSchema/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_1_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_1_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_1_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_1_1.ttl",
+                  "size": 2,
+                  "isError": false,
+                  "message": "Output Turtle example_1_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/cwl/v1_2_1/type-system/CWLTypeRecordSchema/example_2_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-cwl/build/tests/cwl/v1_2_1/type-system/CWLTypeRecordSchema/example_2_1.json",
+            "exampleIndex": 2,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_2_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_2_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_2_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_2_1.ttl",
+                  "size": 5,
+                  "isError": false,
+                  "message": "Output Turtle example_2_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0
+      }
+    },
     "ogc.cwl.v1_2_1.requirements.SchemaDefRequirement": {
       "title": "Validation report for ogc.cwl.v1_2_1.requirements.SchemaDefRequirement - SchemaDefRequirement",
       "bblockName": "SchemaDefRequirement",
       "bblockId": "ogc.cwl.v1_2_1.requirements.SchemaDefRequirement",
-      "generated": "2026-09-07T11:25:46.375873+00:00",
+      "generated": "2026-09-09T13:27:28.093835+00:00",
       "result": true,
       "items": [
         {
@@ -7774,7 +7774,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.requirements.CWLRequirementsItem - CWLRequirementsItem",
       "bblockName": "CWLRequirementsItem",
       "bblockId": "ogc.cwl.v1_2_1.requirements.CWLRequirementsItem",
-      "generated": "2026-09-07T11:25:46.398595+00:00",
+      "generated": "2026-09-09T13:27:28.114229+00:00",
       "result": true,
       "items": [
         {
@@ -7899,7 +7899,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.requirements.CWLRequirementsMap - CWLRequirementsMap",
       "bblockName": "CWLRequirementsMap",
       "bblockId": "ogc.cwl.v1_2_1.requirements.CWLRequirementsMap",
-      "generated": "2026-09-07T11:25:46.414105+00:00",
+      "generated": "2026-09-09T13:27:28.127945+00:00",
       "result": true,
       "items": [
         {
@@ -7969,7 +7969,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.requirements.CWLHintsItem - CWLHintsItem",
       "bblockName": "CWLHintsItem",
       "bblockId": "ogc.cwl.v1_2_1.requirements.CWLHintsItem",
-      "generated": "2026-09-07T11:25:46.433965+00:00",
+      "generated": "2026-09-09T13:27:28.145807+00:00",
       "result": true,
       "items": [
         {
@@ -8094,7 +8094,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.requirements.CWLRequirements - CWLRequirements",
       "bblockName": "CWLRequirements",
       "bblockId": "ogc.cwl.v1_2_1.requirements.CWLRequirements",
-      "generated": "2026-09-07T11:25:46.456312+00:00",
+      "generated": "2026-09-09T13:27:28.165936+00:00",
       "result": true,
       "items": [
         {
@@ -8219,7 +8219,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.requirements.CWLHints - CWLHints",
       "bblockName": "CWLHints",
       "bblockId": "ogc.cwl.v1_2_1.requirements.CWLHints",
-      "generated": "2026-09-07T11:25:46.507664+00:00",
+      "generated": "2026-09-09T13:27:28.289226+00:00",
       "result": true,
       "items": [
         {
@@ -8364,7 +8364,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLProcessFields - CWLProcessFields",
       "bblockName": "CWLProcessFields",
       "bblockId": "ogc.cwl.v1_2_1.CWLProcessFields",
-      "generated": "2026-09-07T11:25:46.545937+00:00",
+      "generated": "2026-09-09T13:27:28.323405+00:00",
       "result": true,
       "items": [
         {
@@ -8489,7 +8489,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLAtomicBase - CWLAtomicBase",
       "bblockName": "CWLAtomicBase",
       "bblockId": "ogc.cwl.v1_2_1.CWLAtomicBase",
-      "generated": "2026-09-07T11:25:46.576890+00:00",
+      "generated": "2026-09-09T13:27:28.351121+00:00",
       "result": true,
       "items": [
         {
@@ -8614,7 +8614,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLGraphItem - CWLGraphItem",
       "bblockName": "CWLGraphItem",
       "bblockId": "ogc.cwl.v1_2_1.CWLGraphItem",
-      "generated": "2026-09-07T11:25:46.614003+00:00",
+      "generated": "2026-09-09T13:27:28.383932+00:00",
       "result": true,
       "items": [
         {
@@ -8739,7 +8739,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLAtomic - CWLAtomic",
       "bblockName": "CWLAtomic",
       "bblockId": "ogc.cwl.v1_2_1.CWLAtomic",
-      "generated": "2026-09-07T11:25:46.652116+00:00",
+      "generated": "2026-09-09T13:27:28.417621+00:00",
       "result": true,
       "items": [
         {
@@ -8864,7 +8864,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLAtomicNested - CWLAtomicNested",
       "bblockName": "CWLAtomicNested",
       "bblockId": "ogc.cwl.v1_2_1.CWLAtomicNested",
-      "generated": "2026-09-07T11:25:46.685106+00:00",
+      "generated": "2026-09-09T13:27:28.446996+00:00",
       "result": true,
       "items": [
         {
@@ -8989,7 +8989,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLGraph - CWLGraph",
       "bblockName": "CWLGraph",
       "bblockId": "ogc.cwl.v1_2_1.CWLGraph",
-      "generated": "2026-09-07T11:25:46.718952+00:00",
+      "generated": "2026-09-09T13:27:28.477297+00:00",
       "result": true,
       "items": [
         {
@@ -9114,7 +9114,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepObject - CWLWorkflowStepObject",
       "bblockName": "CWLWorkflowStepObject",
       "bblockId": "ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepObject",
-      "generated": "2026-09-07T11:25:46.743767+00:00",
+      "generated": "2026-09-09T13:27:28.499575+00:00",
       "result": true,
       "items": [
         {
@@ -9239,7 +9239,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepItem - CWLWorkflowStepItem",
       "bblockName": "CWLWorkflowStepItem",
       "bblockId": "ogc.cwl.v1_2_1.workflow-step.CWLWorkflowStepItem",
-      "generated": "2026-09-07T11:25:46.761638+00:00",
+      "generated": "2026-09-09T13:27:28.516056+00:00",
       "result": true,
       "items": [
         {
@@ -9309,7 +9309,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLWorkflowBase - CWLWorkflowBase",
       "bblockName": "CWLWorkflowBase",
       "bblockId": "ogc.cwl.v1_2_1.CWLWorkflowBase",
-      "generated": "2026-09-07T11:25:46.789952+00:00",
+      "generated": "2026-09-09T13:27:28.541816+00:00",
       "result": true,
       "items": [
         {
@@ -9379,7 +9379,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWLWorkflow - CWLWorkflow",
       "bblockName": "CWLWorkflow",
       "bblockId": "ogc.cwl.v1_2_1.CWLWorkflow",
-      "generated": "2026-09-07T11:25:46.826451+00:00",
+      "generated": "2026-09-09T13:27:28.574839+00:00",
       "result": true,
       "items": [
         {
@@ -9449,7 +9449,7 @@
       "title": "Validation report for ogc.cwl.v1_2_1.CWL - CWL",
       "bblockName": "CWL",
       "bblockId": "ogc.cwl.v1_2_1.CWL",
-      "generated": "2026-09-07T11:25:46.874264+00:00",
+      "generated": "2026-09-09T13:27:28.652084+00:00",
       "result": true,
       "items": [
         {

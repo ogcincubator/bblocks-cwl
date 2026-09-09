@@ -7,7 +7,7 @@
   "abstract": "An inline CWL `record` type definition: `type:\nrecord`, an optional `name`, and its `fields`, given either as a map keyed by field name or as a\nlist of field definitions (each of which must then carry its own `name`).",
   "status": "under-development",
   "dateTimeAddition": "2025-09-29T14:14:37.693426",
-  "dateOfLastChange": "2026-09-07",
+  "dateOfLastChange": "2026-09-09",
   "register": "ogc-building-block-register",
   "link": "https://www.commonwl.org/v1.2/Workflow.html",
   "version": "1.2.1",
@@ -16,8 +16,8 @@
   ],
   "dependsOn": [
     "ogc.cwl.v1_2_1.SchemaSaladOntology",
-    "ogc.cwl.v1_2_1.type-system.CWLTypeRecordFieldDef",
-    "ogc.cwl.v1_2_1.CWLType"
+    "ogc.cwl.v1_2_1.CWLType",
+    "ogc.cwl.v1_2_1.type-system.CWLTypeRecordFieldDef"
   ],
   "shaclShapes": {},
   "ldContext": "https://ogcincubator.github.io/bblocks-cwl/build/annotated/cwl/v1_2_1/type-system/CWLTypeRecordSchema/context.jsonld",
